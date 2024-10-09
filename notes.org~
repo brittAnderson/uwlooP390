@@ -1,0 +1,23 @@
+Something to use in the new course: 
+https://www.science.org/doi/10.1126/science.adk4858 ?
+
+How to access and use large datasets?
+* Ideas
+** Open Science practices?
+   - [[https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in][10 strategies for open science]]
+   - [[https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf][Jupyter notebooks in Psychology]]
+   - [[https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012170][10 rules for lab notebooks (electronic)]]
+   - [[https://www.science.org/content/article/how-keep-lab-notebook][How to keep a lab notebook]]
+   - [[https://www.nature.com/articles/d41586-018-05895-3][Pick an electronic lab notebook]]
+   - [[https://labfolder.com/electronic-lab-notebook-eln-research-guide/][Lab notebook 2023 guide]]
+** Fair principles for research
+   - [[https://www.go-fair.org/fair-principles/][Fair principles]]
+   - [[https://www.nature.com/articles/sdata201618][Fair guiding principles]]
+** Databases and management
+   - [[https://www.dataversity.net/what-is-database-management/][What is it]]
+   - [[https://learning-oreilly-com.proxy.lib.uwaterloo.ca/library/view/getting-started-with/9781803241005/B18270_01.xhtml#_idTextAnchor015][A book on DuckDB - database stuff]]
+** Datascience
+   - [[https://medium.com/@fareedkhandev/complete-roadmap-of-data-science-for-non-cs-cs-students-equivalent-to-a-degree-1a0a810360c0][one person's roadmap for non-cs grads]]
+** IDEs
+*** VSCode
+    - [[https://code.visualstudio.com/docs/introvideos/basics][Basics video]]
