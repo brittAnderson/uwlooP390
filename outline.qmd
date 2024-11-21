@@ -1,0 +1,82 @@
+---
+title: "Psych 390"
+author:
+  - name: Britt Anderson
+    id: ba
+    email: britt@uwaterloo.ca
+    affiliation: 
+      - name: University of Waterloo
+        city: Waterloo
+        province: ON
+        url: brittlab.uwaterloo.ca
+format:
+  html:
+    code-fold: true
+  pdf:
+    pdf-engine: pdflatex
+jupyter: python3
+---
+
+# Purpose
+
+To learn how to approach the computer as a tool for facilitating research skills.
+
+## Skills to support
+
+1.  Finding, collecting, commentating, and integrating relevant research literature.
+2.  Sharing and tracking data, manuscripts, analyses, results, and a finished poster or manuscript
+3.  In support of the above how do you find, install, and maintain software?
+4.  Large data handling
+5.  Writing up your research
+
+# Course Time/Place
+
+PSYCH 390 Thursday 14:30 — 17:30 [PHY](https://maps.app.goo.gl/zp7p9FnLQX2vpSfx6) 313
+
+# Instructor
+
+Britt Anderson, PhD & MD
+
+**Office:** PAS 4039 **email:** [britt\@uwaterloo.ca](mailto:britt@uwaterloo.ca) **Office Hours:** by appointment
+
+# Boilerplate
+
+## **Academic integrity**:
+
+In order to maintain a culture of academic integrity, members of the University of Waterloo community are expected to promote honesty, trust, fairness, respect and responsibility. \[Check [the Office of Academic Integrity](https://uwaterloo.ca/academic-integrity/) for more information.
+
+## **Grievance:**
+
+A student who believes that a decision affecting some aspect of their university life has been unfair or unreasonable may have grounds for initiating a grievance. Read [Policy 70, Student Petitions and Grievances, Section 4](https://uwaterloo.ca/secretariat/node/75). When in doubt, please be certain to contact the department’s administrative assistant who will provide further assistance.
+
+## **Discipline:**
+
+A student is expected to know what constitutes academic integrity to avoid committing an academic offence, and to take responsibility for their actions. \[Check [the Office of Academic Integrity](https://uwaterloo.ca/academic-integrity/) for more information.\] A student who is unsure whether an action constitutes an offence, or who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about “rules” for group work/collaboration should seek guidance from the course instructor, academic advisor, or the undergraduate associate dean. For information on categories of offences and types of penalties, students should refer to [Policy 71, Student Discipline](https://uwaterloo.ca/secretariat/node/72). For typical penalties, check [Guidelines for the Assessment of Penalties](https://uwaterloo.ca/secretariat/guidelines/guidelines-assessment-penalties).
+
+## **Appeals:**
+
+A decision made or penalty imposed under [Policy 70, Student Petitions and Grievances](https://uwaterloo.ca/secretariat/node/75) (other than a petition) or [Policy 71, Student Discipline](https://uwaterloo.ca/secretariat/node/72) may be appealed if there is a ground. A student who believes they have a ground for an appeal should refer to [Policy 72, Student Appeals](https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72).
+
+## **Note for students with disabilities:**
+
+[AccessAbility Services](https://uwaterloo.ca/accessability-services/), located in Needles Hall, Room 1401, collaborates with all academic departments to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with AccessAbility Services at the beginning of each academic term.
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```

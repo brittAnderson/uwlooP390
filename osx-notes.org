@@ -1,0 +1,54 @@
+* Just a place for some notes for installing things on Mac
+
+* Emacs
+  I used homebrew awhile ago for this and forgot the details.
+  
+** init files
+   Seems to live at ~/home/britt/.emacs.d/init.el~
+
+   Added these lines and restarted to get the basic package set up working.
+
+   #+begin_src emacs-lisp :eval never
+     (require 'package)
+     (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+     (package-initialize)
+     (require 'use-package)
+     (setq use-package-always-ensure t)
+   #+end_src
+
+** pdf-mode
+   Do a ~package-list-packages~ to get a refesh and install (mark with an "i") the =pdf-tools= package from melpa. Then you "x" to execute the installation. Afterwards you need to run ~M-x pdf-tools-install~. This can take awhile.
+
+** keys and keyboards
+   Several emacs shortcuts conflict with defaults on mac. You can change these in the system utilities for keyboard shortcuts. Just search them out as they arise and turn off the mac ones. The ctrl key is ^ in their printed list. 
+** orgmode related
+   1. for exporting html needed to install package ~htmlize~.
+** emacs
+   There is a quarto editing mode which I installed through the packaging tools. 
+* Quarto
+  Find the download [[https://quarto.org/docs/get-started/][here]].
+  The demo needs ~matplotlib~ and ~plotly~.
+  So, you need python which I got from brew. ~brew install python-matplotlib~ will pull in a lot of other libraries as well.
+  There are some tricky steps here. Plotly is not easily gotten via homebrew, and I did not want to mix up my system by also using pip now that I was working hard under homebrew. This brings up the idea of virtual environments. That is generally a good idea, especially with python in my opinion. While doing some searching I came across ~pipx~ that seems to try and do both. Allow you to install via homebrew (the pipx) and then use pipx to create virtual environments that can isolate the libraries, but expose the binaries.
+  #+begin_src sh :eval never
+    brew install pipx
+    pipx ensurepath
+    sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
+    brew update && brew upgrade pipx.
+  #+end_src
+
+  Then, because I could not get plotly in homebrew, I created a *venv*.
+
+  #+begin_src python :eval never
+    python3 -m venv /Users/britt/p390venv
+    cd p390venv
+    source bin/activate
+    pip install plotly
+  #+end_src
+    I needed to end up also doing pip install for matplotlib and jupyter from within the venv. Then I simply cut and pasted the demo document and followed their recommendation.
+
+    The file can be found [[file:~/p390venv/test-quarto/test.qmd][here]].
+
+    And the command was =quarto render test.qmd --to html=.
+
+    And if you ~brew install texlive~ then export to pdf works well too. 
