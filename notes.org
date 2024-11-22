@@ -16,6 +16,7 @@ How to access and use large datasets?
      2. [[https://dev.to/stevealila/3-typical-ways-to-store-data-using-javascript-1m1f][How to store data with JS]]
 **** Web Assembly
      1. [[https://www.nature.com/articles/d41586-024-00725-1][Nature Blog]]
+     2. Demonstration [[https://jperkel.github.io/][site]] working with wasm and R.
 ** Open Science practices?
    - [[https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in][10 strategies for open science]]
    - [[https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf][Jupyter notebooks in Psychology]]
@@ -49,28 +50,49 @@ How to access and use large datasets?
    Part of the motivation for the above is the need to work with larger volumes of data than we may use in our current labs. [[https://www.nature.com/articles/s41597-022-01872-8][Here]] a description of some [[https://zenodo.org/records/7249732][online psychology data]] that we could use for our course work. 
 
    There are some supplied [[https://github.com/pauljaffe/lumos-ncpt-tools/blob/main/demo.ipynb][tools]] for looking at these data that run in notebooks.
+
+   Challenges for reproducibility[fn:1] include the state of date and computational tools. See this [[https://www.nature.com/articles/d41586-018-05990-5][nature blog]] post. 
 ** IDEs
 *** VSCode
     - [[https://code.visualstudio.com/docs/introvideos/basics][Basics video]]
     - [[https://code.visualstudio.com/docs/languages/r][Using VSCode with R]]
     - [[https://code.visualstudio.com/docs/languages/python][Using VSCode with Python]]
+      - What is "pip"?
+    - [[https://quarto.org/docs/tools/text-editors.html][Text Editor Page from Quarto Site]]
 ** Servers and more: [[https://www.apachefriends.org/index.html][XAMPP]]
    Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like [[https://www.apachefriends.org/download.html][XAMPP]] might be a good resource. 
 ** Sharing The Results
 *** Reproducible Report Authoring
 *** Scientific Publishing
+    - [[https://coko.foundation/articles/single-source-publishing.html][Single authored system thoughts]]
+      Maybe a blog to be read and discussed?
     - [[https://quarto.org/][Quarto]] (the former RStudio people)
       - [[https://quarto.org/docs/journals/][journal formats]]
 	try the Elsevier format for this course. A lot of psych journals are Elsevier owned.
       - a [[https://jjallaire.quarto.pub/reproducible-manuscripts-with-quarto/#/title-slide][presentation]]
+	- How to make a [[https://quarto.org/docs/presentations/revealjs/][presentation]] using Quarto and Javascript and the Reveal.js library.
       - Someone [[https://danielroelfs.com/blog/sql-notebooks-with-quarto/][showing how]] to connect an sql database to quarto.
       - A curated [[https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file][list]] of Quarto related stuff
-    - [[https://coko.foundaiton/articles/single-source-publishing.html][Single authored system thoughts]]
-      Maybe a blog to be read and discussed?
-    - Make a website/blog for your work or lab?
+      - [[https://quarto.org/docs/guide/][Quarto Guide]]
+      - Make a website/blog for your work or lab?
       - Quarto provides an option. For example: [[https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/][here]]
-    - [[https://quarto.org/docs/get-started/][Getting Started Blog]]
-    - [[https://quarto.org/docs/guide/][Quarto Guide]]
+      - [[https://quarto.org/docs/get-started/][Getting Started Blog]]
+      - Writing in LaTeX with Quarto - the [[https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file][extension]].
+	- [[https://mark-wang.com/blog/2022/latex/][related]].
+      - [[https://github.com/quarto-ext/typst-templates/tree/main/poster][Poster]] with Quarto
+    - [[https://www.overleaf.com/][Overleaf]]
+      you have access to the full account through your university email.
+      [[https://www.nature.com/srep/author-instructions/submission-guidelines][Nature]] will let you submit your article as an overleaf template.
+      - using [[https://www.overleaf.com/learn/latex/Knitr][knitr]] with overleaf.
+      - Can you [[https://www.overleaf.com/latex/templates?q=poster][make a scientific poster]] with overleaf?
+    - Reference Management
+      - What is [[https://www.crossref.org/]]?
+      - What is a [[https://www.doi.org/][doi]]
+      - What is an [[https://orcid.org/][ORCID]]?
+      - [[https://www.zotero.org/][Zotero]]
+	- [[https://www.overleaf.com/learn/how-to/How_to_link_your_Overleaf_account_to_Mendeley_and_Zotero][Link]] zotero to overleaf
+	- [[https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero][Link]] zotero to quarto
+
 ** Programming Experiments
    All the pygame stuff of course, but also javascript
    [[https://flowingdata.com/2020/08/27/two-js-for-two-dimensional-drawing-and-animation-in-modern-web-browsers/][Two.js overview]]
@@ -80,3 +102,17 @@ How to access and use large datasets?
 *** Probably need to deal with npm and node.js (the package manager).
     [[https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager][Introductory blog post]]
    [[https://nullprogram.com/blog/2024/11/10/][Run your own large language model]]
+   - [[https://community.amd.com/t5/ai/running-llms-locally-on-amd-gpus-with-ollama/ba-p/713266][using an AMD GPU locally]]
+* Knowledge Management ([[https://en.wikipedia.org/wiki/Zettelkasten][Zettlekasten)]]
+  1. [[https://github.com/org-roam/org-roam][Org-roam]]
+  2. [[https://github.com/dendronhq/dendron][Dendron]] - works with VS Code
+  3. [[https://obsidian.md/][Obsidian]]
+* Things that I may need reminding about.
+** Python interpreter and venv in VS Code
+   There may be a global python on a machine, but there may be other versions installed that are not compatible. If this is the case you need to go into the venv and find the ~.../bin/python..~. You do this through the =command palette= of vs code. Look for python select interpreter and navigate to the one you need. A couple of webpages helped me with this:
+   1. [[https://stackoverflow.com/questions/66869413/visual-studio-code-does-not-detect-virtual-environments][Stackoverflow Question]]
+   2. [[https://quarto.org/docs/projects/virtual-environments.html][Quarto on virtual environments]]
+   3. 
+* Footnotes
+
+[fn:1] What is the difference between "replicability" and "reproducibility"? 
