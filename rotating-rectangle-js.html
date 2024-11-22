@@ -1,0 +1,21 @@
+<script src="two.min.js"></script>
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="js/two.min.js"></script>
+  </head>
+  <body>
+    <script>
+      var two = new Two({
+        fullscreen: true,
+        autostart: true
+      }).appendTo(document.body);
+      var rect = two.makeRectangle(two.width / 2, two.height / 2, 50 ,50);
+      two.bind('update', function() {
+        rect.rotation += 0.01;
+      });
+    </script>
+  </body>
+</html>
