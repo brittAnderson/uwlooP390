@@ -43,9 +43,9 @@ Britt Anderson, PhD & MD
 
 ## Cost of Learning Materials
 
-Students need to have access to a laptop for in course programming exercises. This does not need to be purchased for the course, but it does need to be available, and it is presumed that all students currently enrolled in advanced undergraduate studies have access to a computer. The cost is $0.00.
+Students need to have access to a laptop for in course programming exercises. This does not need to be purchased for the course, but it does need to be available, and it is presumed that all students currently enrolled in advanced undergraduate studies have access to a computer. The cost is \$0.00.
 
-The computer must run a full operating system (OSX/Windows/Linux). Phones and tablets running iOS or Android will not be sufficient. 
+The computer must run a full operating system (OSX/Windows/Linux). Phones and tablets running iOS or Android will not be sufficient.
 
 ## **Academic integrity**:
 
