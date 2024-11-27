@@ -2,15 +2,17 @@ project:
   type: book
 
 book:
-  title: "p390"
+  title: "Psych 390"
   author: "Britt Anderson"
   date: "Winter 2025"
+  sidebar: 
+    search: true  
   chapters:
     - index.qmd
     - intro.qmd
     - c2.qmd
     - summary.qmd
-    - references.qmd
+    
 
 bibliography: references.bib
 
