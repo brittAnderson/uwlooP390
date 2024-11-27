@@ -1,5 +1,6 @@
 # Introduction
 
-This is a book created from markdown and executable code.
+This is a book created for PSYCH390 at the [the University of Waterloo](https://uwaterloo.ca)
 
-See @knuth84 for additional discussion of literate programming.
+
+See  for additional discussion of literate programming.
