@@ -112,7 +112,7 @@ How to access and use large datasets?
    There may be a global python on a machine, but there may be other versions installed that are not compatible. If this is the case you need to go into the venv and find the ~.../bin/python..~. You do this through the =command palette= of vs code. Look for python select interpreter and navigate to the one you need. A couple of webpages helped me with this:
    1. [[https://stackoverflow.com/questions/66869413/visual-studio-code-does-not-detect-virtual-environments][Stackoverflow Question]]
    2. [[https://quarto.org/docs/projects/virtual-environments.html][Quarto on virtual environments]]
-   3. 
+   3. [[https://r4ds.hadley.nz/quarto][Hadley's Notes on Quarto]]
 * Footnotes
 
 [fn:1] What is the difference between "replicability" and "reproducibility"? 
