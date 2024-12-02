@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "Psych 390"
+  author: "Britt Anderson"
+  date: "Winter 2025"
+  sidebar: 
+    search: true  
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - c2.qmd
+    - summary.qmd
+    
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+

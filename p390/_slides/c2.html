@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jane Doe">
+<meta name="dcterms.date" content="2024-01-07">
 
 <title>test</title>
 <style>
@@ -20,91 +22,281 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="test_files/libs/clipboard/clipboard.min.js"></script>
-<script src="test_files/libs/quarto-html/quarto.js"></script>
-<script src="test_files/libs/quarto-html/popper.min.js"></script>
-<script src="test_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="test_files/libs/quarto-html/anchor.min.js"></script>
-<link href="test_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="test_files/libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="test_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="test_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="test_files/libs/bootstrap/bootstrap-e19dc0c07aeef78048e587c3f1edba7a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="c2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="c2_files/libs/quarto-html/quarto.js"></script>
+<script src="c2_files/libs/quarto-html/popper.min.js"></script>
+<script src="c2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="c2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="c2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="c2_files/libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="c2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="c2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="c2_files/libs/bootstrap/bootstrap-e19dc0c07aeef78048e587c3f1edba7a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="c2.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
 
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
-
-
-
-
-<section id="heading-one" class="level1">
-<h1>Heading one</h1>
-<p>A test of some <em>test</em>.</p>
-<section id="air-quality" class="level2">
-<h2 class="anchored" data-anchor-id="air-quality">Air Quality</h2>
-<p><a href="#fig-airquality" class="quarto-xref">Figure&nbsp;1</a> further explores the impact of temperature on ozone level.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-airquality" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-airquality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="test_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img" width="672">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">test</h1>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-airquality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Temperature and ozone level.
-</figcaption>
-</figure>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jane Doe </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 7, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="how-can-we-use-computers-to-facilitate-our-psychological-research" class="level1">
+<h1>How can we use computers to facilitate our psychological research?</h1>
+<div class="callout callout-style-default callout-tip callout-titled" title="Class Question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Class Question
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>What are the conceptual stages of a research project and how might computers help?</p>
 </div>
+</div>
+<p>Ignore for the moment the specific content of a psychological research project. That is whether it is a study on attention or memory. Let’s consider abstractly what are the components of a psychological research project?</p>
+<section id="break-it-down" class="level3">
+<h3 class="anchored" data-anchor-id="break-it-down">Break it down</h3>
+<section id="preliminaries" class="level4">
+<h4 class="anchored" data-anchor-id="preliminaries">Preliminaries</h4>
+<p>How do you decide what to do? Look up and read the prior literature.</p>
+<ol type="1">
+<li>How do you find what to read?</li>
+<li>How do you keep track of what you have read?</li>
+<li>How do you organize your notes on what you have read?</li>
+<li>How do you integrate and connect your notes and readings so as to discover new connections or ideas?</li>
+<li>How to you make sure you can correctly cite the articles you have read when it comes to writing up your research proposal or research result.</li>
+</ol>
+<p>How do you protect yourself against a change in databases or death of a harddrive?</p>
+</section>
+<section id="doing-the-research" class="level4">
+<h4 class="anchored" data-anchor-id="doing-the-research">Doing the research</h4>
+<p>What skills are needed for this?</p>
+<ol type="1">
+<li>Program an experiment</li>
+<li>Language? Python; Javascript; other
+<ol type="1">
+<li>How do you make stuff appear on a computer screen?</li>
+<li>How do you verify the timing?</li>
+</ol></li>
+<li>How do you make sure you can find the version of the experiment if you need to share it or re-use it.</li>
+<li>There is a new tool in the lab with drivers and hardware. Can you download and install the necessary software?</li>
+<li>What happens to the data?
+<ol type="1">
+<li>How do you store it?</li>
+<li>How do you search it?</li>
+<li>What if it is big?</li>
+<li>What if it needs to be shared?</li>
+</ol></li>
+</ol>
+</section>
+<section id="analyzing-the-research" class="level4">
+<h4 class="anchored" data-anchor-id="analyzing-the-research">Analyzing the Research</h4>
+<ol type="1">
+<li>How do you organize the data?</li>
+<li>Working on a big data project?
+<ol type="1">
+<li>How do you get the data?</li>
+<li>Can you set up a database?</li>
+<li>Search it?</li>
+</ol></li>
+<li>How do you do statistics?
+<ol type="1">
+<li>What is the tool?</li>
+<li>Could you write your own analysis?</li>
+</ol></li>
+</ol>
+</section>
+<section id="diseminating-the-research" class="level4">
+<h4 class="anchored" data-anchor-id="diseminating-the-research">Diseminating the Research</h4>
+<ol type="1">
+<li>What is the tool you use for writing your research?</li>
+<li>What is reproducibility?</li>
+<li>Does your writing tool support it?</li>
+<li>How do you make sure others can re-run your analyses?</li>
+<li>How do you make sure that you can easily adapt your analyses and make sure the right figures are included when you update the data? Or that the p-values in the text are also adapted?</li>
+<li>How do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?</li>
+</ol>
+</section>
+</section>
+<section id="open-research" class="level3">
+<h3 class="anchored" data-anchor-id="open-research">Open Research</h3>
+<ul>
+<li>What is “open research”?</li>
+<li>Should research be open?</li>
+<li>How many of your labs are following these practices?</li>
+</ul>
+</section>
+<section id="open-science-practices" class="level3">
+<h3 class="anchored" data-anchor-id="open-science-practices">Open Science practices?</h3>
+<ul>
+<li><a href="https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in">10 strategies for open science</a></li>
+<li><a href="https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf">Jupyter notebooks in Psychology</a></li>
+<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012170">10 rules for lab notebooks (electronic)</a></li>
+<li><a href="https://www.science.org/content/article/how-keep-lab-notebook">How to keep a lab notebook</a></li>
+<li><a href="https://www.nature.com/articles/d41586-018-05895-3">Pick an electronic lab notebook</a></li>
+<li><a href="https://labfolder.com/electronic-lab-notebook-eln-research-guide/">Lab notebook 2023 guide</a></li>
+</ul>
+</section>
+<section id="fair-principles-for-research" class="level3">
+<h3 class="anchored" data-anchor-id="fair-principles-for-research">Fair principles for research</h3>
+<ul>
+<li><a href="https://www.go-fair.org/fair-principles/">Fair principles</a></li>
+<li><a href="https://www.nature.com/articles/sdata201618">Fair guiding principles</a></li>
+<li>A class activity to figure out what Fair stands for and then discuss the specific terms and see if we agree. We can then use those principles to evaluate our research tools.</li>
+</ul>
+</section>
+<section id="coding" class="level3">
+<h3 class="anchored" data-anchor-id="coding">Coding</h3>
+<p>So for a lot of this we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tool?</p>
+</section>
+<section id="languages" class="level3">
+<h3 class="anchored" data-anchor-id="languages">Languages</h3>
+<section id="things-to-consider" class="level4">
+<h4 class="anchored" data-anchor-id="things-to-consider">Things to consider?</h4>
+<p>Will it do what I need it to now?</p>
+<ul>
+<li>Is SPSS a good language for statistics?</li>
+<li>Is R a good language for statistics?</li>
+<li>Is Python a good language for statistics?</li>
+<li>Is R a good language for coding a web app?</li>
+<li>Is R a good language for coding an in-lab visual experiment?</li>
+<li>Should you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?</li>
+</ul>
+<p>Break up class to do some quick research and make a case for each. Goal is to help them see the diversity of what is out there. One of the ideas is the Swiss Army Knife idea. It is a pretty handy to thing to have, but is it the best tool for anything?</p>
+<ul>
+<li>Future proofing.</li>
+<li>If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices? Another possible classroom exercise.</li>
+<li>documentation</li>
+<li>small functions</li>
+<li>avoid spaghetti</li>
+<li>use libraries</li>
+</ul>
+</section>
+</section>
+<section id="ide" class="level3">
+<h3 class="anchored" data-anchor-id="ide">IDE</h3>
+<ul>
+<li>Who are you writing code for? Human or Machine?</li>
+<li>What is an IDE? What makes for a good IDE? #### Using an IDE</li>
+</ul>
+<p>For this course we will default to <a href="https://code.visualstudio.com/">VSCode</a>, because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an <a href="https://vscodium.com/">opensource build</a> of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in <a href="https://www.gnu.org/software/emacs/">Emacs</a>.</p>
+<section id="vscode" class="level4">
+<h4 class="anchored" data-anchor-id="vscode">VSCode</h4>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/introvideos/basics">Basics video</a></li>
+<li><a href="https://code.visualstudio.com/docs/languages/r">Using VSCode with R</a></li>
+<li><a href="https://code.visualstudio.com/docs/languages/python">Using VSCode with Python</a></li>
+</ul>
+<p><em>Exercise</em> Install VSCode</p>
+</section>
+<section id="jupyter-notebooks" class="level4">
+<h4 class="anchored" data-anchor-id="jupyter-notebooks">Jupyter Notebooks</h4>
+<p>What are jupyter notebooks? Are jupyter notebooks ide’s? What are their purpose? What languages to they support?</p>
+</section>
+<section id="quarto" class="level4">
+<h4 class="anchored" data-anchor-id="quarto">Quarto</h4>
+<p>What is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?</p>
+</section>
+</section>
+<section id="in-lab-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="in-lab-experiments">In Lab Experiments</h3>
+<ul>
+<li>Making stuff appear on monitors.</li>
+<li>What is OpenGL?</li>
+<li>Use pygame to make some simple visual experiments.</li>
+<li>Have a beauty contest the following week to see what people have been able to make?</li>
+<li>Make sure that people are using <a href="https://python.land/virtual-environments/virtualenv">venv</a></li>
+</ul>
+</section>
+<section id="online-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="online-experiments">Online Experiments</h3>
+<p>Running a server for testing and more? <a href="https://www.apachefriends.org/index.html">XAMPP</a> Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like <a href="https://www.apachefriends.org/download.html">XAMPP</a> might be a good resource. <strong>Exercise</strong> to download and get the XAMPP server running? Need to expand this. An exercise with <a href="https://code.visualstudio.com/Docs/languages/javascript">JavaScript</a>? This <a href="https://www.geeksforgeeks.org/how-to-display-images-in-javascript/">site</a> has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?</p>
+</section>
+<section id="databases-and-management" class="level3">
+<h3 class="anchored" data-anchor-id="databases-and-management">Databases and management</h3>
+<ul>
+<li><a href="https://www.dataversity.net/what-is-database-management/">What is it</a></li>
+<li><a href="https://learning-oreilly-com.proxy.lib.uwaterloo.ca/library/view/getting-started-with/9781803241005/B18270_01.xhtml#_idTextAnchor015">A book on DuckDB - database stuff</a></li>
+<li><a href="https://mariadb.org/">MariaDB</a> This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is <a href="https://www.simplified.guide/mysql-mariadb/import-csv">one example</a> how. A <a href="https://kinsta.com/blog/mariadb-vs-postgresql/">blog</a> that compares MariaDB to SQL. A <a href="https://mariadb.com/kb/en/mariadb-basics/">quickie tutorial</a>.</li>
+<li>Why would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.</li>
+<li><em>Exercise</em> Download MariaDB</li>
+</ul>
+</section>
+<section id="sharing-the-results" class="level3">
+<h3 class="anchored" data-anchor-id="sharing-the-results">Sharing The Results</h3>
+</section>
+<section id="reproducible-report-authoring" class="level3">
+<h3 class="anchored" data-anchor-id="reproducible-report-authoring">Reproducible Report Authoring</h3>
+</section>
+<section id="scientific-publishing" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-publishing">Scientific Publishing</h3>
+<ul>
+<li><a href="https://quarto.org/">Quarto</a> (the former RStudio people)
+<ul>
+<li><a href="https://quarto.org/docs/journals/">journal formats</a> try the Elsevier format for this course. A lot of psych journals are Elsevier owned.</li>
+</ul></li>
+<li>a <a href="https://jjallaire.quarto.pub/reproducible-manuscripts-with-quarto/#/title-slide">presentation</a></li>
+<li>Someone <a href="https://danielroelfs.com/blog/sql-notebooks-with-quarto/">showing how</a> to connect an sql database to quarto.</li>
+<li>A curated <a href="https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file">list</a> of Quarto related stuff</li>
+<li><a href="https://coko.foundaiton/articles/single-source-publishing.html">Single authored system thoughts</a> Maybe a blog to be read and discussed?</li>
+<li>Make a website/blog for your work or lab?
+<ul>
+<li>Quarto provides an option. For example: <a href="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/">here</a></li>
+</ul></li>
+<li>Why not just write in LaTeX? For that matter what is LaTeX?</li>
+</ul>
+</section>
+<section id="miscellaneous-readings-and-topics" class="level3">
+<h3 class="anchored" data-anchor-id="miscellaneous-readings-and-topics">Miscellaneous Readings and Topics</h3>
+</section>
+<section id="datascience" class="level3">
+<h3 class="anchored" data-anchor-id="datascience">Datascience</h3>
+<ul>
+<li><a href="https://medium.com/@fareedkhandev/complete-roadmap-of-data-science-for-non-cs-cs-students-equivalent-to-a-degree-1a0a810360c0">one person’s roadmap for non-cs grads</a></li>
+</ul>
+</section>
+<section id="grant-funding" class="level3">
+<h3 class="anchored" data-anchor-id="grant-funding">Grant Funding</h3>
+<p>At the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?</p>
 </section>
 </section>
 
