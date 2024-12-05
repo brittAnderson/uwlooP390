@@ -1,4 +1,4 @@
-* Beginning Discussion
+* Discussion to start off the first day.
   Ignore for the moment the specific content of a psychological research project. That is whether it is a study on attention or memory. Let's consider abstractly what are the components of a psychological research project?
 ** Break it down
 *** Preliminaries
@@ -39,22 +39,48 @@
        2. How do you make sure others can re-run your analyses?
        3. How do you make sure that you can easily adapt your analyses and make sure the right figures are included when you update the data? Or that the p-values in the text are also adapted?
        4. How do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?
-    
+
+This would be a good point to pause and go over some of the more concrete matters of the course and look at the syllabus and learn. Give the students a chance to ask some questions.
+
+After a short break we can talk about open research. 
+
 * Open Research
   - What is "open research"?
   - Should research be open?
   - How many of your labs are following these practices?
 ** Open Science practices?
    - [[https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in][10 strategies for open science]]
+
+* Things that need to be done to be able to do the first homework.
+1. Get VS Code
+2. Get Quarto
+
+That is probably enough for Day 1
+
+* Discussion Day 2
+
+See if anyone has thoughts about the open science article they read and how they are being put to use in the labs they work in.
+
+Discussion about VS code and quarto. People who need help can be paired up. 
+   
+After a break we can return to some discussion on. 
+** Fair principles for research
+   - [[https://www.go-fair.org/fair-principles/][Fair principles]]
+   - [[https://www.nature.com/articles/sdata201618][Fair guiding principles]]
+   
+Then I will share with them some of these links for lab notebooks.
+
+** Lab Notebooks
    - [[https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf][Jupyter notebooks in Psychology]]
    - [[https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012170][10 rules for lab notebooks (electronic)]]
    - [[https://www.science.org/content/article/how-keep-lab-notebook][How to keep a lab notebook]]
    - [[https://www.nature.com/articles/d41586-018-05895-3][Pick an electronic lab notebook]]
    - [[https://labfolder.com/electronic-lab-notebook-eln-research-guide/][Lab notebook 2023 guide]]
-** Fair principles for research
-   - [[https://www.go-fair.org/fair-principles/][Fair principles]]
-   - [[https://www.nature.com/articles/sdata201618][Fair guiding principles]]
-   - A class activity to figure out what Fair stands for and then discuss the specific terms and see if we agree. We can then use those principles to evaluate our research tools. 
+
+- A class activity to figure out what Fair stands for and then discuss the specific terms and see if we agree. We can then use those principles to evaluate our research tools. 
+
+
+
 * Coding
   So for a lot of this we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tool?
 ** Languages
