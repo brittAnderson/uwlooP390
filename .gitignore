@@ -2,3 +2,4 @@ testing/
 !testing/test.py
 venv/
 *~
+exampleSyllabi/
