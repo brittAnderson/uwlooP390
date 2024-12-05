@@ -5,12 +5,19 @@ book:
   title: "Psych 390"
   author: "Britt Anderson"
   date: "Winter 2025"
+  cover-image: p390cover.png
   sidebar: 
     search: true  
   chapters:
     - index.qmd
     - intro.qmd
     - c2.qmd
+    - c3.qmd
+    - cQuarto.qmd
+    - c4.qmd
+    - cBiblio.qmd
+    - cServer.qmd
+    - cSciPub.qmd
     - summary.qmd
     
 
