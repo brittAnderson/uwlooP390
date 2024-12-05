@@ -67,22 +67,4 @@ A decision made or penalty imposed under [Policy 70, Student Petitions and Griev
 
 [AccessAbility Services](https://uwaterloo.ca/accessability-services/), located in Needles Hall, Room 1401, collaborates with all academic departments to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with AccessAbility Services at the beginning of each academic term.
 
-For a demonstration of a line plot on a polar axis, see @fig-polar.
 
-```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
