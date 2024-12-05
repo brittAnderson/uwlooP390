@@ -2,5 +2,6 @@
 
 This is a book created for PSYCH390 at the [the University of Waterloo](https://uwaterloo.ca)
 
+We will try to write this book together with each week or so getting its own chapter. You should be able to edit the files in this book yourself to add and correct things. We will learn more about that in the weeks ahead. 
 
-See  for additional discussion of literate programming.
+

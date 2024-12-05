@@ -1,0 +1,30 @@
+# Testing Your Javascript
+
+## Run your own server locally
+
+Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about. 
+
+### XAMPP
+
+[XAMMP](https://www.apachefriends.org/index.html\)
+
+#### Downloading 
+
+[Download link](https://www.apachefriends.org/download.html\)
+
+
+### In Lab Experiments
+
+-   Making stuff appear on monitors.
+-   What is OpenGL?
+-   Use pygame to make some simple visual experiments.
+-   Have a beauty contest the following week to see what people have been able to make?
+-   Make sure that people are using [venv](https://python.land/virtual-environments/virtualenv)
+
+### Online Experiments
+
+An exercise with [JavaScript](https://code.visualstudio.com/Docs/languages/javascript)? This [site](https://www.geeksforgeeks.org/how-to-display-images-in-javascript/) has a simple bit of code for throwing an image on the screen. 
+
+Can you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE
+
+

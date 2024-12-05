@@ -1,0 +1,74 @@
+# Open Research Practices Continued
+
+::: {.callout-tip title="Class Question"}
+What are the **Fair** principles for research?
+:::
+
+Take a few minutes and see if you can determine what "Fair" stands. Then we can see if we agree. We can then use those principles to evaluate our research tools.
+
+## Fair Principles
+
+-   [Fair principles](https://www.go-fair.org/fair-principles/)
+-   [Fair guiding principles](https://www.nature.com/articles/sdata201618)
+-   
+
+## Lab Notebooks
+
+I will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.
+
+-   [Jupyter notebooks in Psychology](https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf)
+-   [10 rules for lab notebooks (electronic)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012170)
+-   [How to keep a lab notebook](https://www.science.org/content/article/how-keep-lab-notebook)
+-   [Pick an electronic lab notebook](https://www.nature.com/articles/d41586-018-05895-3)
+-   [Lab notebook 2023 guide](https://labfolder.com/electronic-lab-notebook-eln-research-guide/)
+
+## Bibliographic Tools and Exercises
+
+This would make sense to be discussed next since it fits with our outline of the process that commences with reading and cross referencing knowledge. However, we do not yet have available the tools that we will need to manage this, so we will defer this for now until ADDLINKHERE.
+
+## IDEs and Writing up your Research
+
+::: {.callout-tip title="Class Question"}
+What does IDE stand for and what are examples of IDEs?
+:::
+
+### VSCode
+
+There are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the [IDE popularity](https://survey.stackoverflow.co/2023/#most-popular-technologies-new-collab-tools) contest is Microsoft's Visual Studio Code.
+
+Since I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:
+
+1.  Locate code/programs on the internet
+
+2.  Download and install that program to your computer
+
+3.  Locate the help to begin to use the tool without formal instruction.
+
+:::{.callout-tip title="In-class Exercise} 
+Locate, download, install, and verify you can start VS Code.
+
+:::
+
+#### Some helpful links to get you started
+
+- [Basics Video](https://code.visualstudio.com/docs/introvideos/basics)
+- [Using VSCode with Python](https://code.visualstudio.com/docs/languages/python)
+- [Using VSCode with R](https://code.visualstudio.com/docs/languages/r)
+- [Text Editor Page from Quarto Site](https://quarto.org/docs/tools/text-editors.html)
+  - What is "pip"? And why will you need to know?
+
+### Overleaf
+
+VS Code is far from your only option. For technical writing and collaboration many scientists rely on [Overleaf](https://www.overleaf.com). 
+
+Nature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines\) from an Overleaf template.
+
+Don't forget to do the overleaf homework assignment. 
+
+But know that you always have choices. You can [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file\) ([see also](https://mark-wang.com/blog/2022/latex/)). 
+
+::: {.callout-tip title="Classroom Discussion"}
+What is [single source](https://coko.foundation/articles/single-source-publishing.html) publishing? How does this idea impact your preference for tools like Overleaf and Quarto?
+
+:::
+

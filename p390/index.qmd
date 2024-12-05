@@ -2,4 +2,8 @@
 
 This is a Quarto book.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+I will be using Quarto in this class (PSYCH390 W2025) to help us practice writing reproducible code and papers. As well as how to prepare pleasing professional output from a single document. 
+
+To learn more about Quarto books from the Quarto people visit <https://quarto.org/docs/books>.
+
+To learn more about how we are going to use it stay tuned. 

@@ -1,0 +1,38 @@
+# What are some of the challenges that computational tools pose for reproducibility?
+:::{.callout-tip title="Classroom Exercise"}
+Read and discuss: [A toolkit for transparency ... ](https://www.nature.com/articles/d41586-018-05990-5).
+
+:::
+
+# Knowledge Management ([[https://en.wikipedia.org/wiki/Zettelkasten][Zettlekasten)]]
+  1. [Org-roam](https://github.com/org-roam/org-roam)
+  2. [Dendron](https://github.com/dendronhq/dendron) - works with VS Code
+  3. [Obsidian](https://obsidian.md/)
+
+# Reference Management 
+- What is [Crossref](https://www.crossref.org/)?
+- What is a [doi](https://www.doi.org/)?
+- What is an [orcid](https://orcid.org/)? 
+- What is [zotero](https://www.zotero.org/)?
+- What is [csl](https://citationstyles.org/)?
+
+:::{.callout-tip title="Classroom Exercise"}
+Locate and download the csl file for the current APA style and also for one at least one other non-apa style.
+
+:::
+
+## Using References With Quatro and VS Code 
+
+
+## Using References With Overleaf
+VS Code is not your only option. Overleaf also use ".bib" files to hold references, though some of the other syntax is different. 
+
+Here are some links to get you started with references in overleaf.
+1. [Linking Overleaf and Zotero](https://www.overleaf.com/learn/how-to/How_to_link_your_Overleaf_account_to_Mendeley_and_Zotero)
+2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero\)
+
+## Poster Presentations ? (MOVE THIS SECTION)
+[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster\)
+
+[LaTeX and Knitr in Overleaf](https://www.overleaf.com/learn/latex/Knitr)\]\[knitr\]\] with overleaf. 
+[A scientific poster with Overleaf?](https://www.overleaf.com/latex/templates?q=poster)

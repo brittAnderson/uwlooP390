@@ -1,8 +1,10 @@
 # The role of the computer as a tool in psychological research
 
+To begin learning how to use the computer as a tool for our research we have to first be clear on what that means. Before we go into specific tools let's discuss the research process so we can better detect where there are opportunities for us to use computers and software to aid our work. 
+
 :::{.callout-tip title="Class Question"}
 
-Ignore for the moment the specific content of a psychological research project. That is whether it is a study on attention or memory. Let's consider abstractly what are the components of a psychological research project? And then how can computers help us to do our research better?
+Ignore for the moment the specific content of a psychological research project. That is whether it is a study on attention or memory. Let's consider abstractly what are the components of a psychological research project? And then how can computers help us to do our research better? For right now we will focus on the stages of research and the tools we are now using, if any, and then we will return to the particular research stages for developing our experience with particular research tools. 
 
 :::
 
@@ -57,129 +59,16 @@ What skills are needed for this?
 6.  How do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?
 
 ### Make Your Research Open
+:::{.callout-tip title="Class Question"}
 
 -   What is "open research"?
 -   Should research be open?
 -   How many of your labs are following these practices?
 
+:::
+
 What are Open Science practices?
 
--   [10 strategies for open science](https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in)
--   [Jupyter notebooks in Psychology](https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf)
--   [10 rules for lab notebooks (electronic)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012170)
--   [How to keep a lab notebook](https://www.science.org/content/article/how-keep-lab-notebook)
--   [Pick an electronic lab notebook](https://www.nature.com/articles/d41586-018-05895-3)
--   [Lab notebook 2023 guide](https://labfolder.com/electronic-lab-notebook-eln-research-guide/)
+A recommended reading: [10 strategies for open science](https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in)
 
-What are the **Fair** principles for research
-
--   [Fair principles](https://www.go-fair.org/fair-principles/)
--   [Fair guiding principles](https://www.nature.com/articles/sdata201618)
--   A class activity to figure out what Fair stands for and then discuss the specific terms and see if we agree. We can then use those principles to evaluate our research tools.
-
-### Coding
-
-For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?
-
-#### Languages
-
-What should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.
-
--   Is SPSS a good language for statistics?
--   Is R a good language for statistics?
--   Is Python a good language for statistics?
--   Is R a good language for coding a web app?
--   Is R a good language for coding an in-lab visual experiment?
--   Should you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?
-
-::: {.content-hidden}
-Break up class to do some quick research and make a case for each. Goal is to help them see the diversity of what is out there. One of the ideas is the Swiss Army Knife idea. It is a pretty handy to thing to have, but is it the best tool for anything?
-
-:::
-
-How do you *future proof*?
--   If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices? 
-
-::: {.content-hidden} 
-Another possible classroom exercise.
--   documentation
--   small functions
--   avoid spaghetti
--   use libraries
-
-:::
-
-### IDEs
-
--   Who are you writing code for? Human or Machine?
--   What is an IDE? What makes for a good IDE?
-
-#### Using an IDE
-
-For this course we will default to [VSCode](https://code.visualstudio.com/), because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an [opensource build](https://vscodium.com/) of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in [Emacs](https://www.gnu.org/software/emacs/).
-
-#### VSCode
-
-{{< video https://www.youtube.com/embed/B-s71n0dHUk?si=y3fy80M0mGxGLwr5
-    title="Learn Visual Studio Code in 7 Minutes"
->}}
-
--   [Basics video](https://code.visualstudio.com/docs/introvideos/basics)
--   [Using VSCode with R](https://code.visualstudio.com/docs/languages/r)
--   [Using VSCode with Python](https://code.visualstudio.com/docs/languages/python)
-
-*Exercise* Install VSCode
-
-#### Jupyter Notebooks
-
-What are jupyter notebooks? Are jupyter notebooks ide's? What are their purpose? What languages to they support?
-
-#### Quarto
-
-What is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?
-
-### In Lab Experiments
-
--   Making stuff appear on monitors.
--   What is OpenGL?
--   Use pygame to make some simple visual experiments.
--   Have a beauty contest the following week to see what people have been able to make?
--   Make sure that people are using [venv](https://python.land/virtual-environments/virtualenv)
-
-### Online Experiments
-
-Running a server for testing and more? [XAMPP](https://www.apachefriends.org/index.html) Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like [XAMPP](https://www.apachefriends.org/download.html) might be a good resource. **Exercise** to download and get the XAMPP server running? Need to expand this. An exercise with [JavaScript](https://code.visualstudio.com/Docs/languages/javascript)? This [site](https://www.geeksforgeeks.org/how-to-display-images-in-javascript/) has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?
-
-### Databases and management
-
--   [What is it](https://www.dataversity.net/what-is-database-management/)
--   [A book on DuckDB - database stuff](https://learning-oreilly-com.proxy.lib.uwaterloo.ca/library/view/getting-started-with/9781803241005/B18270_01.xhtml#_idTextAnchor015)
--   [MariaDB](https://mariadb.org/) This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV's and read it into the database? This is [one example](https://www.simplified.guide/mysql-mariadb/import-csv) how. A [blog](https://kinsta.com/blog/mariadb-vs-postgresql/) that compares MariaDB to SQL. A [quickie tutorial](https://mariadb.com/kb/en/mariadb-basics/).
--   Why would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.
--   *Exercise* Download MariaDB
-
-### Sharing The Results
-
-### Reproducible Report Authoring
-
-### Scientific Publishing
-
--   [Quarto](https://quarto.org/) (the former RStudio people)
-    -   [journal formats](https://quarto.org/docs/journals/) try the Elsevier format for this course. A lot of psych journals are Elsevier owned.
--   a [presentation](https://jjallaire.quarto.pub/reproducible-manuscripts-with-quarto/#/title-slide)
--   Someone [showing how](https://danielroelfs.com/blog/sql-notebooks-with-quarto/) to connect an sql database to quarto.
--   A curated [list](https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file) of Quarto related stuff
--   [Single authored system thoughts](https://coko.foundaiton/articles/single-source-publishing.html) Maybe a blog to be read and discussed?
--   Make a website/blog for your work or lab?
-    -   Quarto provides an option. For example: [here](https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/)
--   Why not just write in LaTeX? For that matter what is LaTeX?
-
-### Miscellaneous Readings and Topics
-
-### Datascience
-
--   [one person's roadmap for non-cs grads](https://medium.com/@fareedkhandev/complete-roadmap-of-data-science-for-non-cs-cs-students-equivalent-to-a-degree-1a0a810360c0)
-
-### Grant Funding
-
-At the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?
+And that is it for today.
