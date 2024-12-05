@@ -39,6 +39,44 @@ Britt Anderson, PhD & MD
 
 **Office:** PAS 4039 **email:** [britt\@uwaterloo.ca](mailto:britt@uwaterloo.ca) **Office Hours:** by appointment
 
+# Topics to be covered
+
+## Bibliography software and Zettlekasten
+
+## Programming language choices for experiments
+
+## Data Storage
+
+### Data sharing; Big Data; Data Re-use
+
+## Data Analysis
+
+### Statistical programming
+
+### Data Visualization
+
+## Research dissemination
+
+### Writing and sharing reproducible analyses and articles
+
+# Grades
+
+I know you are all concerned about grades, but I am not. It sometimes feels like University is a checklist: take the right number of courses and get the right numbers on your transcripts and you will win. But that is not the case. Success in your career depends on your being able to deploy what you have learned and being able to keep on learning. These meta-skills are the ones I am most interested in helping you progress with and there are no measurement tools that we can use in this course that will allow us to predict your future occupational success. The compromise is for me to emphasize and incentivize those practices that I have learned to be most correlated with professional success: persistence, self-learning, striving for excellence. That is why I try to grade less on what you produce than how you produce it. A spectacular fail may be worth more than a safe win at this stage of your career. That is the philosophy. How do we make this work in practice?
+
+I will give you frequent small assignments to demonstrate that you are keeping up and working on the material. I will assess your profile in class: do you come, are your interactive, are you prepared, and you collaborative; and I will provide a final project goal for you to try and stretch your wings and put in practice what you have learned.
+
+My experience is that I don't have to be a strict grader. The world is a far harder grader than I will ever be. You can easily find a way to get a good number in my class without learning a whole lot. That will be a very short term gain. I encourage you to be ambitious for yourselves. I hope that you will be more proud of what you have learned in this course than any particular pride in how it helps your GPA.
+
+## Details
+
+1.  Assignments - 60%
+
+2.  Participation - 10%
+
+3.  Final Project - 30%
+
+4.  Extra Credit Sona - 3%
+
 # Boilerplate
 
 ## Cost of Learning Materials
@@ -66,5 +104,3 @@ A decision made or penalty imposed under [Policy 70, Student Petitions and Griev
 ## **Note for students with disabilities:**
 
 [AccessAbility Services](https://uwaterloo.ca/accessability-services/), located in Needles Hall, Room 1401, collaborates with all academic departments to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with AccessAbility Services at the beginning of each academic term.
-
-
