@@ -1,0 +1,21 @@
+
+
+
+
+### Databases and management
+
+-   [What is it](https://www.dataversity.net/what-is-database-management/)
+-   [A book on DuckDB - database stuff](https://learning-oreilly-com.proxy.lib.uwaterloo.ca/library/view/getting-started-with/9781803241005/B18270_01.xhtml#_idTextAnchor015)
+-   [MariaDB](https://mariadb.org/) This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV's and read it into the database? This is [one example](https://www.simplified.guide/mysql-mariadb/import-csv) how. A [blog](https://kinsta.com/blog/mariadb-vs-postgresql/) that compares MariaDB to SQL. A [quickie tutorial](https://mariadb.com/kb/en/mariadb-basics/).
+-   Why would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.
+-   *Exercise* Download MariaDB
+
+
+
+### Datascience
+
+-   [one person's roadmap for non-cs grads](https://medium.com/@fareedkhandev/complete-roadmap-of-data-science-for-non-cs-cs-students-equivalent-to-a-degree-1a0a810360c0)
+
+### Grant Funding
+
+At the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?

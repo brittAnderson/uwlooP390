@@ -1,3 +1,7 @@
+#### Quarto
+
+What is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?
+
 
 ### Scientific Publishing
 

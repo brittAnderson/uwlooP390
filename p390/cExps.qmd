@@ -1,0 +1,11 @@
+### In Lab Experiments
+  - Making stuff appear on monitors.
+  - What is OpenGL?
+  - Use pygame to make some simple visual experiments.
+  - Have a beauty contest the following week to see what people have been able to make?
+  - Make sure that people are using [venv](https://python.land/virtual-environments/virtualenv)
+  
+### Online Experiments
+   Running a server for testing and more? [XAMPP](https://www.apachefriends.org/index.html)
+   Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like [XAMPP](https://www.apachefriends.org/download.html) might be a good resource. *Exercise* to download and get the XAMPP server running?
+  Need to expand this. An exercise with [JavaScript](https://code.visualstudio.com/Docs/languages/javascript)? This [site](https://www.geeksforgeeks.org/how-to-display-images-in-javascript/) has a simple bit of code for throwing an image on the screen.  Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?
