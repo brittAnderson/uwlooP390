@@ -11,13 +11,14 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - c2.qmd
-    - c3.qmd
+    - cCmpResTool.qmd
+    - cOpenResearch.qmd
+    - cCode.qmd
     - cQuarto.qmd
-    - c4.qmd
+    - cExps.qmd
     - cBiblio.qmd
     - cServer.qmd
-    - cSciPub.qmd
+    - cDatabase.qmd
     - summary.qmd
     
 
