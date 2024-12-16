@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – Psych 390</title>
+<title>cgit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,194 +20,143 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./cCmpResTool.html" rel="next">
-<link href="./index.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7580570a2e354cd56757c689413fca0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<script src="cGit_files/libs/clipboard/clipboard.min.js"></script>
+<script src="cGit_files/libs/quarto-html/quarto.js"></script>
+<script src="cGit_files/libs/quarto-html/popper.min.js"></script>
+<script src="cGit_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="cGit_files/libs/quarto-html/anchor.min.js"></script>
+<link href="cGit_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="cGit_files/libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="cGit_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="cGit_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="cGit_files/libs/bootstrap/bootstrap-e19dc0c07aeef78048e587c3f1edba7a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="fullcontent">
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Psych 390</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cCmpResTool.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The role of the computer as a tool in psychological research</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cOpenResearch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open Research Practices Continued</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cCode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Coding</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cQuarto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Quarto</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cExps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cBiblio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What are some of the challenges that computational tools pose for reproducibility?</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cServer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing Your Javascript</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cDatabase.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Databases and management</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
+<section id="version-control" class="level3">
+<h3 class="anchored" data-anchor-id="version-control">Version Control</h3>
+</section>
+<section id="getting-started---some-old-videos-on-git-from-psych363310" class="level3">
+<h3 class="anchored" data-anchor-id="getting-started---some-old-videos-on-git-from-psych363310">Getting Started - Some old videos on git from PSYCH363/310</h3>
+<p>A few years ago when I was teaching a more elementary version of some of this material (PSYCH363) I included some videos on git and using Github. Some components of these videos may be a bit out of date, and a few things about the interface have changed. Still they may be a reasonable starting point for those of you who feel you need a refresher on version control. Note that for PSYCH390 I am assuming you can either already use version control or figure it out on your own. I will give some class time for getting things working, but mostly you will have to pursue this on your own. The notes here are intended to be prompts and guides, but not to be comprehensive.</p>
+<p>You will notice that in the videos I talk a lot about Linux. We are not using that for this course so you can ignore those references. However, I do demonstrate the use in the <em>terminal</em>. That is available to all of you regardless of operating system. You will just have to find your own OS version of it.</p>
+<p>Frequenly you will see this referred to as a command line tool (“cli”). It is now easier to get <a href="https://cli.github.com/">this</a> this working on Windows and OSX than it used to be. For OSX you can also check out <strong>Homebrew</strong>. For the adventurous Windows user you can look at WSL2.</p>
+<section id="an-overview-of-git-and-github" class="level4">
+<h4 class="anchored" data-anchor-id="an-overview-of-git-and-github">An overview of git and Github</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/456349738" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+<section id="you-have-choices---other-version-control-system" class="level3">
+<h3 class="anchored" data-anchor-id="you-have-choices---other-version-control-system">You have choices - other version control system</h3>
+<ol type="1">
+<li><a href="https://www.mercurial-scm.org/">Mercurial</a></li>
+<li><a href="http://darcs.net/">Darcs</a></li>
+<li><a href="https://www.nongnu.org/cvs/">CVS</a></li>
+<li><a href="https://subversion.apache.org/">Subversion</a></li>
+<li><a href="https://pijul.org/">Pijul</a></li>
+</ol>
+<p>Each has their own fans. CVS and Subversion are more legacy options, but you will still see them occasionally. Darcs is more of an experiment than a broadly used system. Mercurial used to be the cool kid, but now seems eclipsed by <em>Pijul</em>. That is the one for experimental users.</p>
+</section>
+<section id="git-is-not-github" class="level3">
+<h3 class="anchored" data-anchor-id="git-is-not-github">Git is not Github</h3>
+<p>Git is the version control software. Github is a very popular place to host your publically accessible git repository, but it is far from your only option. You can host elsewhere.</p>
+<ol type="1">
+<li><a href="https://osf.io/">OSF.io</a> For scientists OSF.io seeks to make itself a way to host scientific projects and their data. Trivia question? Do I have any repositories on Osf.io?</li>
+<li><a href="https://sourceforge.net/">Sourceforge</a> An oldie, but still used.</li>
+<li><a href="https://bitbucket.org/">Bitbucket</a></li>
+<li>Gitlab The university provides you with a gitlab account: <a href="https://git.uwaterloo.ca" class="uri">https://git.uwaterloo.ca</a></li>
+<li><a href="https://codeberg.org/">Codeberg</a> If you believe in freedom and neck beards.</li>
+</ol>
+</section>
+<section id="things-you-should-do" class="level3">
+<h3 class="anchored" data-anchor-id="things-you-should-do">Things you should do</h3>
+<ol type="1">
+<li>Install git</li>
+<li>Get an account on github</li>
+<li>Fork the course repository</li>
+<li>Clone the course repository to your laptop</li>
+<li>Set up my version as an additional <strong>remote</strong>.</li>
+<li>See if you can make a “pull request” to me. You may find that you have to set up an <strong>ssh key</strong> in order to efficiently pull and push to Github. Github has very clear <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">instructions</a> on how to go about doing this.</li>
+</ol>
+</section>
+<section id="but-first" class="level3">
+<h3 class="anchored" data-anchor-id="but-first">But first</h3>
+<p>If you have not used git before you will have to configure git. It needs to know who you are and how to reach you at least.</p>
+<p>You can execute commands like this in your terminal:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"John Doe"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email johndoe@example.com</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>More on these configuration options can be found <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">in a nice online book</a>.</p>
+</section>
+<section id="understanding-git-and-the-workflow-in-pictures" class="level1">
+<h1>Understanding Git and the Workflow in Pictures</h1>
+<p>When starting to use git I found it very confusing to tell what was where and what direction things were going when I pushed and pulled. I found pictures helpful adjuncts to the prose descriptions. A few helpful illustrations to the distinction of clones, forks, pull, push, and pull request can be found <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/">here</a>.</p>
+<p>I also made a little video to try and illustrate some of these concepts a few years ago. Read for the gist and not for the specific examples.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/456349595" frameborder="0" title="another test" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<section id="principal-terms-to-learn-first" class="level3">
+<h3 class="anchored" data-anchor-id="principal-terms-to-learn-first">Principal Terms to Learn First</h3>
+<ul>
+<li><strong>Fork:</strong> A copy of one github repository to another <strong>github</strong> repository.</li>
+<li><strong>Clone:</strong> A copy of one <strong>git</strong> repository to another <strong>git</strong> repository. The first repository might be hosted on github, but the second one, the <em>cloned</em> one exists on a local machine. In your case this is probably your laptop.</li>
+<li><strong>Remote:</strong> This is a repository that you are following. You will typically <em>pull</em> from these, but your <em>push</em> permissions may be limited depending on the distinctions between forks and clones, and whether you own the remote or someone else does. You can have more than one remote.</li>
+<li><strong>Pull:</strong> the transfer of information and changes <strong>from</strong> one repository incorporated into another. This is how you get the new information from a remote transported to a local repository that you control.</li>
+<li><strong>Push:</strong> this is the transfer of information <strong>to</strong> a repository you control (or have permissions to push to) from another repository that you control. This is often from your local laptop version to the hosted repository (your fork) on github.</li>
+<li><strong>Pull Request:</strong> When you have information or changes that you think would be helpful to a remote you do <strong>not</strong> have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.</li>
+<li><strong>Branch:</strong> within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called <strong>master</strong>. And the principal repository that is the main, shared one is called <strong>origin</strong>. We will not be working with branches in our course, but those terms do show up in commands.</li>
+</ul>
+<p>All of these “<a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository">basics</a>” are covered in detail in the book Pro Git (available on line).</p>
+<p>Try to note when I use the word “g</p>
+</section>
+</section>
 
-
-</header>
-
-
-<p>This is a book created for PSYCH390 at the <a href="https://uwaterloo.ca">the University of Waterloo</a></p>
-<p>We will try to write this book together with each week or so getting its own chapter. You should be able to edit the files in this book yourself to add and correct things. We will learn more about that in the weeks ahead. As a first step see if you can clone the git repository for <a href="https://github.com/brittAnderson/uwloop390">course</a> course.</p>
-
-
-
-</main> <!-- /main -->
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -625,18 +574,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./cCmpResTool.html" class="pagination-link" aria-label="The role of the computer as a tool in psychological research">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The role of the computer as a tool in psychological research</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
