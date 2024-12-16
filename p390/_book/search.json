@@ -14,7 +14,7 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created for PSYCH390 at the the University of Waterloo\nWe will try to write this book together with each week or so getting its own chapter. You should be able to edit the files in this book yourself to add and correct things. We will learn more about that in the weeks ahead. As a first step see if you can clone the git repository for course course.",
+    "text": "This is a book created for PSYCH390 at the the University of Waterloo\nWe will try to write this book together with each week or so getting its own chapter. You should be able to edit the files in this book yourself to add and correct things. We will learn more about that in the weeks ahead. As a first step see if you can clone the git repository for course course.\nYou might find some of this older material in appendix A on using git useful for getting started.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -197,6 +197,94 @@
     "text": "In summary, I have not gotten to writing a summary yet.",
     "crumbs": [
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html",
+    "href": "cGit.html",
+    "title": "Appendix A — Version Control",
+    "section": "",
+    "text": "A.1 Getting Started - Some old videos on git from PSYCH363/310\nA few years ago when I was teaching a more elementary version of some of this material (PSYCH363) I included some videos on git and using Github. Some components of these videos may be a bit out of date, and a few things about the interface have changed. Still they may be a reasonable starting point for those of you who feel you need a refresher on version control. Note that for PSYCH390 I am assuming you can either already use version control or figure it out on your own. I will give some class time for getting things working, but mostly you will have to pursue this on your own. The notes here are intended to be prompts and guides, but not to be comprehensive.\nYou will notice that in the videos I talk a lot about Linux. We are not using that for this course so you can ignore those references. However, I do demonstrate the use in the terminal. That is available to all of you regardless of operating system. You will just have to find your own OS version of it.\nFrequenly you will see this referred to as a command line tool (“cli”). It is now easier to get this this working on Windows and OSX than it used to be. For OSX you can also check out Homebrew. For the adventurous Windows user you can look at WSL2.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#an-overview-of-git-and-github",
+    "href": "cGit.html#an-overview-of-git-and-github",
+    "title": "Appendix A — Version Control",
+    "section": "A.2 An overview of git and Github",
+    "text": "A.2 An overview of git and Github",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#you-have-choices---other-version-control-system",
+    "href": "cGit.html#you-have-choices---other-version-control-system",
+    "title": "Appendix A — Version Control",
+    "section": "A.3 You have choices - other version control system",
+    "text": "A.3 You have choices - other version control system\n\nMercurial\nDarcs\nCVS\nSubversion\nPijul\n\nEach has their own fans. CVS and Subversion are more legacy options, but you will still see them occasionally. Darcs is more of an experiment than a broadly used system. Mercurial used to be the cool kid, but now seems eclipsed by Pijul. That is the one for experimental users.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#git-is-not-github",
+    "href": "cGit.html#git-is-not-github",
+    "title": "Appendix A — Version Control",
+    "section": "A.4 Git is not Github",
+    "text": "A.4 Git is not Github\nGit is the version control software. Github is a very popular place to host your publically accessible git repository, but it is far from your only option. You can host elsewhere.\n\nOSF.io For scientists OSF.io seeks to make itself a way to host scientific projects and their data. Trivia question? Do I have any repositories on Osf.io?\nSourceforge An oldie, but still used.\nBitbucket\nGitlab The university provides you with a gitlab account: https://git.uwaterloo.ca\nCodeberg If you believe in freedom and neck beards.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#things-you-should-do",
+    "href": "cGit.html#things-you-should-do",
+    "title": "Appendix A — Version Control",
+    "section": "A.5 Things you should do",
+    "text": "A.5 Things you should do\n\nInstall git\nGet an account on github\nFork the course repository\nClone the course repository to your laptop\nSet up my version as an additional remote.\nSee if you can make a “pull request” to me. You may find that you have to set up an ssh key in order to efficiently pull and push to Github. Github has very clear instructions on how to go about doing this.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#but-first",
+    "href": "cGit.html#but-first",
+    "title": "Appendix A — Version Control",
+    "section": "A.6 But first",
+    "text": "A.6 But first\nIf you have not used git before you will have to configure git. It needs to know who you are and how to reach you at least.\nYou can execute commands like this in your terminal:\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nMore on these configuration options can be found in a nice online book.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#understanding-git-and-the-workflow-in-pictures",
+    "href": "cGit.html#understanding-git-and-the-workflow-in-pictures",
+    "title": "Appendix A — Version Control",
+    "section": "A.7 Understanding Git and the Workflow in Pictures",
+    "text": "A.7 Understanding Git and the Workflow in Pictures\nWhen starting to use git I found it very confusing to tell what was where and what direction things were going when I pushed and pulled. I found pictures helpful adjuncts to the prose descriptions. A few helpful illustrations to the distinction of clones, forks, pull, push, and pull request can be found here.\nI also made a little video to try and illustrate some of these concepts a few years ago. Read for the gist and not for the specific examples.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#principal-terms-to-learn-first",
+    "href": "cGit.html#principal-terms-to-learn-first",
+    "title": "Appendix A — Version Control",
+    "section": "A.8 Principal Terms to Learn First",
+    "text": "A.8 Principal Terms to Learn First\n\nFork: A copy of one github repository to another github repository.\nClone: A copy of one git repository to another git repository. The first repository might be hosted on github, but the second one, the cloned one exists on a local machine. In your case this is probably your laptop.\nRemote: This is a repository that you are following. You will typically pull from these, but your push permissions may be limited depending on the distinctions between forks and clones, and whether you own the remote or someone else does. You can have more than one remote.\nPull: the transfer of information and changes from one repository incorporated into another. This is how you get the new information from a remote transported to a local repository that you control.\nPush: this is the transfer of information to a repository you control (or have permissions to push to) from another repository that you control. This is often from your local laptop version to the hosted repository (your fork) on github.\nPull Request: When you have information or changes that you think would be helpful to a remote you do not have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.\nBranch: within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called master. And the principal repository that is the main, shared one is called origin. We will not be working with branches in our course, but those terms do show up in commands.\n\nAll of these “basics” are covered in detail in the book Pro Git (available on line).",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
     ]
   }
 ]

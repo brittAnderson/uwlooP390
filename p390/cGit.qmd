@@ -1,7 +1,7 @@
-### Version Control
+# Version Control {#sec-versionControl}
 
 
-### Getting Started - Some old videos on git from PSYCH363/310
+## Getting Started - Some old videos on git from PSYCH363/310
 
 A few years ago when I was teaching a more elementary version of some of this material (PSYCH363) I included some videos on git and using Github. Some components of these videos may be a bit out of date, and a few things about the interface  have changed. Still they may be a reasonable starting point for those of you who feel you need a refresher on version control. Note that for PSYCH390 I am assuming you can either already use version control or figure it out on your own. I will give some class time for getting things working, but mostly you will have to pursue this on your own. The notes here are intended to be prompts and guides, but not to be comprehensive.
 
@@ -9,13 +9,13 @@ You will notice that in the videos I talk a lot about Linux. We are not using th
 
 Frequenly you will see this referred to as a command line tool ("cli"). It is now easier to get [this](https://cli.github.com/) this working on Windows and OSX than it used to be. For OSX you can also check out **Homebrew**. For the adventurous Windows user you can look at WSL2.
 
-#### An overview of git and Github
+## An overview of git and Github
 
 {{< video https://vimeo.com/456349738 title = " A quick overview of Git and Github" >}}
 
 
 
-### You have choices - other version control system
+## You have choices - other version control system
 
 1. [Mercurial](https://www.mercurial-scm.org/)
 2. [Darcs](http://darcs.net/)
@@ -25,7 +25,7 @@ Frequenly you will see this referred to as a command line tool ("cli"). It is no
 
 Each has their own fans. CVS and Subversion are more legacy options, but you will still see them occasionally. Darcs is more of an experiment than a broadly used system. Mercurial used to be the cool kid, but now seems eclipsed by *Pijul*. That is the one for experimental users. 
 
-### Git is not Github
+## Git is not Github
 Git is the version control software. Github is a very popular place to host your publically accessible git repository, but it is far from your only option. You can host elsewhere. 
 
 1. [OSF.io](https://osf.io/)
@@ -38,7 +38,7 @@ Git is the version control software. Github is a very popular place to host your
 5. [Codeberg](https://codeberg.org/) If you believe in freedom and neck beards. 
 
 
-### Things you should do
+## Things you should do
 1. Install git
 2. Get an account on github
 3. Fork the course repository
@@ -48,7 +48,7 @@ Git is the version control software. Github is a very popular place to host your
    You may find that you have to set up an **ssh key** in order to efficiently pull and push to Github.
    Github has very clear [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) on how to go about doing this. 
 
-### But first
+## But first
 
 If you have not used git before you will have to configure git. It needs to know who you are and how to reach you at least. 
 
@@ -63,7 +63,7 @@ git config --global user.email johndoe@example.com
 More on these configuration options can be found [in a nice online book](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
 
 
-# Understanding Git and the Workflow in Pictures
+## Understanding Git and the Workflow in Pictures
 
 When starting to use git I found it very confusing to tell what was where and what direction things were going when I pushed and pulled. I found pictures helpful adjuncts to the prose descriptions. A few helpful illustrations to the distinction of clones, forks, pull, push, and pull request can be found [here](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/).
 
@@ -72,7 +72,7 @@ I also made a little video to try and illustrate some of these concepts a few ye
 
 {{< video https://vimeo.com/456349595 title = "another test" >}}
 
-### Principal Terms to Learn First
+## Principal Terms to Learn First
 
 -   **Fork:** A copy of one github repository to another **github** repository.
 -   **Clone:** A copy of one **git** repository to another **git** repository. 
