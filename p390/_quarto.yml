@@ -20,7 +20,9 @@ book:
     - cServer.qmd
     - cDatabase.qmd
     - summary.qmd
-    
+  appendices:
+    - cGit.qmd
+
 
 bibliography: references.bib
 
