@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Testing Your Javascript – Psych 390</title>
+<title>9&nbsp; Databases and management – Psych 390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cDatabase.html" rel="next">
-<link href="./cBiblio.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./cServer.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cServer.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing Your Javascript</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cDatabase.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Databases and management</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -156,13 +156,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cServer.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cServer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing Your Javascript</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cDatabase.html" class="sidebar-item-text sidebar-link">
+  <a href="./cDatabase.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Databases and management</span></span></a>
   </div>
 </li>
@@ -199,12 +199,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#run-your-own-server-locally" id="toc-run-your-own-server-locally" class="nav-link active" data-scroll-target="#run-your-own-server-locally"><span class="header-section-number">8.1</span> Run your own server locally</a>
-  <ul class="collapse">
-  <li><a href="#xampp" id="toc-xampp" class="nav-link" data-scroll-target="#xampp"><span class="header-section-number">8.1.1</span> XAMPP</a></li>
-  <li><a href="#in-lab-experiments" id="toc-in-lab-experiments" class="nav-link" data-scroll-target="#in-lab-experiments"><span class="header-section-number">8.1.2</span> In Lab Experiments</a></li>
-  <li><a href="#online-experiments" id="toc-online-experiments" class="nav-link" data-scroll-target="#online-experiments"><span class="header-section-number">8.1.3</span> Online Experiments</a></li>
-  </ul></li>
+  <li><a href="#datascience" id="toc-datascience" class="nav-link active" data-scroll-target="#datascience"><span class="header-section-number">9.0.1</span> Datascience</a></li>
+  <li><a href="#grant-funding" id="toc-grant-funding" class="nav-link" data-scroll-target="#grant-funding"><span class="header-section-number">9.0.2</span> Grant Funding</a></li>
   </ul>
 </nav>
     </div>
@@ -213,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing Your Javascript</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Databases and management</span></h1>
 </div>
 
 
@@ -230,34 +226,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="run-your-own-server-locally" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="run-your-own-server-locally"><span class="header-section-number">8.1</span> Run your own server locally</h2>
-<p>Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.</p>
-<section id="xampp" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="xampp"><span class="header-section-number">8.1.1</span> XAMPP</h3>
-<p><a href="https://www.apachefriends.org/index.html">XAMMP</a></p>
-<section id="downloading" class="level4" data-number="8.1.1.1">
-<h4 data-number="8.1.1.1" class="anchored" data-anchor-id="downloading"><span class="header-section-number">8.1.1.1</span> Downloading</h4>
-<p><a href="https://www.apachefriends.org/download.html">Download link</a></p>
-</section>
-</section>
-<section id="in-lab-experiments" class="level3" data-number="8.1.2">
-<h3 data-number="8.1.2" class="anchored" data-anchor-id="in-lab-experiments"><span class="header-section-number">8.1.2</span> In Lab Experiments</h3>
 <ul>
-<li>Making stuff appear on monitors.</li>
-<li>What is OpenGL?</li>
-<li>Use pygame to make some simple visual experiments.</li>
-<li>Have a beauty contest the following week to see what people have been able to make?</li>
-<li>Make sure that people are using <a href="https://python.land/virtual-environments/virtualenv">venv</a></li>
+<li><a href="https://www.dataversity.net/what-is-database-management/">What is it</a></li>
+<li><a href="https://learning-oreilly-com.proxy.lib.uwaterloo.ca/library/view/getting-started-with/9781803241005/B18270_01.xhtml#_idTextAnchor015">A book on DuckDB - database stuff</a></li>
+<li><a href="https://mariadb.org/">MariaDB</a> This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is <a href="https://www.simplified.guide/mysql-mariadb/import-csv">one example</a> how. A <a href="https://kinsta.com/blog/mariadb-vs-postgresql/">blog</a> that compares MariaDB to SQL. A <a href="https://mariadb.com/kb/en/mariadb-basics/">quickie tutorial</a>.</li>
+<li>Why would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.</li>
+<li><em>Exercise</em> Download MariaDB</li>
+</ul>
+<section id="datascience" class="level3" data-number="9.0.1">
+<h3 data-number="9.0.1" class="anchored" data-anchor-id="datascience"><span class="header-section-number">9.0.1</span> Datascience</h3>
+<ul>
+<li><a href="https://medium.com/@fareedkhandev/complete-roadmap-of-data-science-for-non-cs-cs-students-equivalent-to-a-degree-1a0a810360c0">one person’s roadmap for non-cs grads</a></li>
 </ul>
 </section>
-<section id="online-experiments" class="level3" data-number="8.1.3">
-<h3 data-number="8.1.3" class="anchored" data-anchor-id="online-experiments"><span class="header-section-number">8.1.3</span> Online Experiments</h3>
-<p>An exercise with <a href="https://code.visualstudio.com/Docs/languages/javascript">JavaScript</a>? This <a href="https://www.geeksforgeeks.org/how-to-display-images-in-javascript/">site</a> has a simple bit of code for throwing an image on the screen.</p>
-<p>Can you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE</p>
+<section id="grant-funding" class="level3" data-number="9.0.2">
+<h3 data-number="9.0.2" class="anchored" data-anchor-id="grant-funding"><span class="header-section-number">9.0.2</span> Grant Funding</h3>
+<p>At the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -680,13 +666,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cBiblio.html" class="pagination-link" aria-label="What are some of the challenges that computational tools pose for reproducibility?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What are some of the challenges that computational tools pose for reproducibility?</span></span>
+      <a href="./cServer.html" class="pagination-link" aria-label="Testing Your Javascript">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing Your Javascript</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cDatabase.html" class="pagination-link" aria-label="Databases and management">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Databases and management</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link" aria-label="Summary">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

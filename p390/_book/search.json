@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Psych 390",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nI will be using Quarto in this class (PSYCH390 W2025) to help us practice writing reproducible code and papers. As well as how to prepare pleasing professional output from a single document.\nTo learn more about Quarto books from the Quarto people visit https://quarto.org/docs/books.\nTo learn more about how we are going to use it stay tuned.",
+    "text": "Preface\nThis is a Quarto book. Quarto can be seen as a successor to RStudio and Rmd files. If you have not heard of those do not worry. If you have you will see that most things are quite similar.\nI will be using Quarto in this class (PSYCH390 W2025) to help us practice writing reproducible code and papers. There are many different systems that can accomplish the same goal and we will look at a few of them so that you are not anchored to any one system. But in order to have one shared experience and to move beyond the basics, at least a bit, we will use this tool.\nOne of the key lessons for learning to use your computer effectively as a research tool is learning how to do things generally; rather than mastering one particular variety of software we want to be able to figure out how to use whatever is the right tool for a particular application. Our needs may change as our science evolves, and the tools available to us will definitely change. You don’t want to be stuck 20 years from now using the software you learned in University. If you are, your science will suffer, and you will be less able to tackle the problems that interest you. Instead of doing the key experiment, you will be figuring out how to do the experiment that is most like, but not quite, the right one, but is as well as you can do with the old software you know how to use.\nTo learn more about Quarto books from the Quarto people visit https://quarto.org/docs/books.\nTo learn more about the specifics of how we are going to use Quarto, and what else we will experiment with along the way, stay tuned.",
     "crumbs": [
       "Preface"
     ]
@@ -14,14 +14,14 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created for PSYCH390 at the the University of Waterloo\nWe will try to write this book together with each week or so getting its own chapter. You should be able to edit the files in this book yourself to add and correct things. We will learn more about that in the weeks ahead.",
+    "text": "This is a book created for PSYCH390 at the the University of Waterloo\nWe will try to write this book together with each week or so getting its own chapter. You should be able to edit the files in this book yourself to add and correct things. We will learn more about that in the weeks ahead. As a first step see if you can clone the git repository for course course.\nYou might find some of this older material in appendix A on using git useful for getting started.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "c2.html",
-    "href": "c2.html",
+    "objectID": "cCmpResTool.html",
+    "href": "cCmpResTool.html",
     "title": "2  The role of the computer as a tool in psychological research",
     "section": "",
     "text": "2.1 Research Project Stages\nTo begin learning how to use the computer as a tool for our research we have to first be clear on what that means. Before we go into specific tools let’s discuss the research process so we can better detect where there are opportunities for us to use computers and software to aid our work.",
@@ -30,8 +30,8 @@
     ]
   },
   {
-    "objectID": "c2.html#research-project-stages",
-    "href": "c2.html#research-project-stages",
+    "objectID": "cCmpResTool.html#research-project-stages",
+    "href": "cCmpResTool.html#research-project-stages",
     "title": "2  The role of the computer as a tool in psychological research",
     "section": "",
     "text": "2.1.1 Preliminaries\nHow do you decide what it is you are going to do? Look up and read the prior literature.\n\nHow do you find what to read?\nHow do you keep track of what you have read?\nHow do you organize your notes on what you have read?\nHow do you integrate and connect your notes and readings so as to discover new connections or ideas?\nHow to you make sure you can correctly cite the articles you have read when it comes to writing up your research proposal or research result.\n\nHow do you protect yourself against a change in databases or death of a harddrive?\n\n\n2.1.2 Do the research\nWhat skills are needed for this?\n\nProgram an experiment\nLanguage? Python; Javascript; other\n\nHow do you make stuff appear on a computer screen?\nHow do you verify the timing?\n\nHow do you make sure you can find the version of the experiment if you need to share it or re-use it.\nThere is a new tool in the lab with drivers and hardware. Can you download and install the necessary software?\nWhat happens to the data?\n\nHow do you store it?\nHow do you search it?\nWhat if it is big?\nWhat if it needs to be shared?\n\n\n\n\n2.1.3 Analyzing the Research\n\nHow do you organize the data?\nWorking on a big data project?\n\nHow do you get the data?\nCan you set up a database?\nSearch it?\n\nHow do you do statistics?\n\nWhat is the tool?\nCould you write your own analysis?\n\n\n\n\n2.1.4 Diseminate the Research\n\nWhat is the tool you use for writing your research?\nWhat is reproducibility?\nDoes your writing tool support it?\nHow do you make sure others can re-run your analyses?\nHow do you make sure that you can easily adapt your analyses and make sure the right figures are included when you update the data? Or that the p-values in the text are also adapted?\nHow do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?\n\n\n\n2.1.5 Make Your Research Open\n\n\n\n\n\n\nClass Question\n\n\n\n\nWhat is “open research”?\nShould research be open?\nHow many of your labs are following these practices?\n\n\n\nWhat are Open Science practices?\nA recommended reading: 10 strategies for open science\nAnd that is it for today.",
@@ -40,8 +40,8 @@
     ]
   },
   {
-    "objectID": "c3.html",
-    "href": "c3.html",
+    "objectID": "cOpenResearch.html",
+    "href": "cOpenResearch.html",
     "title": "3  Open Research Practices Continued",
     "section": "",
     "text": "3.1 Fair Principles\nTake a few minutes and see if you can determine what “Fair” stands. Then we can see if we agree. We can then use those principles to evaluate our research tools.",
@@ -50,8 +50,8 @@
     ]
   },
   {
-    "objectID": "c3.html#fair-principles",
-    "href": "c3.html#fair-principles",
+    "objectID": "cOpenResearch.html#fair-principles",
+    "href": "cOpenResearch.html#fair-principles",
     "title": "3  Open Research Practices Continued",
     "section": "",
     "text": "Fair principles\nFair guiding principles",
@@ -60,8 +60,8 @@
     ]
   },
   {
-    "objectID": "c3.html#lab-notebooks",
-    "href": "c3.html#lab-notebooks",
+    "objectID": "cOpenResearch.html#lab-notebooks",
+    "href": "cOpenResearch.html#lab-notebooks",
     "title": "3  Open Research Practices Continued",
     "section": "3.2 Lab Notebooks",
     "text": "3.2 Lab Notebooks\nI will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.\n\nJupyter notebooks in Psychology\n10 rules for lab notebooks (electronic)\nHow to keep a lab notebook\nPick an electronic lab notebook\nLab notebook 2023 guide",
@@ -70,8 +70,8 @@
     ]
   },
   {
-    "objectID": "c3.html#bibliographic-tools-and-exercises",
-    "href": "c3.html#bibliographic-tools-and-exercises",
+    "objectID": "cOpenResearch.html#bibliographic-tools-and-exercises",
+    "href": "cOpenResearch.html#bibliographic-tools-and-exercises",
     "title": "3  Open Research Practices Continued",
     "section": "3.3 Bibliographic Tools and Exercises",
     "text": "3.3 Bibliographic Tools and Exercises\nThis would make sense to be discussed next since it fits with our outline of the process that commences with reading and cross referencing knowledge. However, we do not yet have available the tools that we will need to manage this, so we will defer this for now until ADDLINKHERE.",
@@ -80,113 +80,211 @@
     ]
   },
   {
-    "objectID": "c3.html#ides-and-writing-up-your-research",
-    "href": "c3.html#ides-and-writing-up-your-research",
+    "objectID": "cOpenResearch.html#ides-and-writing-up-your-research",
+    "href": "cOpenResearch.html#ides-and-writing-up-your-research",
     "title": "3  Open Research Practices Continued",
     "section": "3.4 IDEs and Writing up your Research",
-    "text": "3.4 IDEs and Writing up your Research\n\n\n\n\n\n\nClass Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n3.4.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n:::{.callout-tip title=“In-class Exercise} Locate, download, install, and verify you can start VS Code.\n:::\n\n3.4.1.1 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\n\n\n\n3.4.2 Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nDon’t forget to do the overleaf homework assignment.\nBut know that you always have choices. You can [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?",
+    "text": "3.4 IDEs and Writing up your Research\n\n\n\n\n\n\nClass Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n3.4.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n\n\n\n\n\n\nIn-class Exercise\n\n\n\nLocate, download, install, and verify you can start VS Code.\n\n\n\n3.4.1.1 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\n\n\n\n3.4.2 Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nDon’t forget to do the overleaf homework assignment.\nBut know that you always have choices. You can [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Open Research Practices Continued</span>"
     ]
   },
   {
-    "objectID": "cQuarto.html",
-    "href": "cQuarto.html",
-    "title": "4  Scientific Publishing",
+    "objectID": "cCode.html",
+    "href": "cCode.html",
+    "title": "4  Coding",
     "section": "",
-    "text": "Quarto (the former RStudio people)\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\n\na presentation\nSomeone showing how to connect an sql database to quarto.\nA curated list of Quarto related stuff\nMake a website/blog for your work or lab?\n\nQuarto provides an option. For example: here",
+    "text": "For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?\n\n4.0.0.1 Languages\nWhat should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.\n\nIs SPSS a good language for statistics?\nIs R a good language for statistics?\nIs Python a good language for statistics?\nIs R a good language for coding a web app?\nIs R a good language for coding an in-lab visual experiment?\nShould you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?\n\nHow do you future proof? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?\n\n\n4.0.1 IDEs\n\nWho are you writing code for? Human or Machine?\nWhat is an IDE? What makes for a good IDE?\n\n\n4.0.1.1 Using an IDE\nFor this course we will default to VSCode, because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an opensource build of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in Emacs.\n\n\n4.0.1.2 VSCode\n\n\nBasics video\nUsing VSCode with R\nUsing VSCode with Python\n\nExercise Install VSCode\n\n\n4.0.1.3 Jupyter Notebooks\nWhat are jupyter notebooks? Are jupyter notebooks ide’s? What are their purpose? What languages to they support?",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Scientific Publishing</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Coding</span>"
     ]
   },
   {
-    "objectID": "c4.html",
-    "href": "c4.html",
-    "title": "Psych 390",
+    "objectID": "cQuarto.html",
+    "href": "cQuarto.html",
+    "title": "5  Quarto",
     "section": "",
-    "text": "not much content here yet",
+    "text": "What is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?\n\n5.0.1 Scientific Publishing\n\nQuarto (the former RStudio people)\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\n\na presentation\nSomeone showing how to connect an sql database to quarto.\nA curated list of Quarto related stuff\nMake a website/blog for your work or lab?\n\nQuarto provides an option. For example: here",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>c4.html</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "cExps.html",
+    "href": "cExps.html",
+    "title": "6  In Lab Experiments",
+    "section": "",
+    "text": "Making stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n6.0.1 Online Experiments\nRunning a server for testing and more? XAMPP Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMPP might be a good resource. Exercise to download and get the XAMPP server running? Need to expand this. An exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>In Lab Experiments</span>"
     ]
   },
   {
     "objectID": "cBiblio.html",
     "href": "cBiblio.html",
-    "title": "6  What are some of the challenges that computational tools pose for reproducibility?",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
     "section": "",
-    "text": "7 Knowledge Management ([[https://en.wikipedia.org/wiki/Zettelkasten][Zettlekasten)]]",
+    "text": "8 Knowledge Management (Zettlekasten)",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#using-references-with-quatro-and-vs-code",
     "href": "cBiblio.html#using-references-with-quatro-and-vs-code",
-    "title": "6  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "8.1 Using References With Quatro and VS Code",
-    "text": "8.1 Using References With Quatro and VS Code",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "9.1 Using References With Quatro and VS Code",
+    "text": "9.1 Using References With Quatro and VS Code",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#using-references-with-overleaf",
     "href": "cBiblio.html#using-references-with-overleaf",
-    "title": "6  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "8.2 Using References With Overleaf",
-    "text": "8.2 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different.\nHere are some links to get you started with references in overleaf. 1. Linking Overleaf and Zotero 2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "9.2 Using References With Overleaf",
+    "text": "9.2 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different.\nHere are some links to get you started with references in overleaf. 1. Linking Overleaf and Zotero 2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#poster-presentations-move-this-section",
     "href": "cBiblio.html#poster-presentations-move-this-section",
-    "title": "6  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "8.3 Poster Presentations ? (MOVE THIS SECTION)",
-    "text": "8.3 Poster Presentations ? (MOVE THIS SECTION)\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "9.3 Poster Presentations ? (MOVE THIS SECTION)",
+    "text": "9.3 Poster Presentations ? (MOVE THIS SECTION)\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cServer.html",
     "href": "cServer.html",
-    "title": "7  Testing Your Javascript",
+    "title": "8  Testing Your Javascript",
     "section": "",
-    "text": "7.1 Run your own server locally\nRunning a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.",
+    "text": "8.1 Run your own server locally\nRunning a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Testing Your Javascript</span>"
     ]
   },
   {
     "objectID": "cServer.html#run-your-own-server-locally",
     "href": "cServer.html#run-your-own-server-locally",
-    "title": "7  Testing Your Javascript",
+    "title": "8  Testing Your Javascript",
     "section": "",
-    "text": "7.1.1 XAMPP\n[XAMMP](https://www.apachefriends.org/index.html)\n\n7.1.1.1 Downloading\n[Download link](https://www.apachefriends.org/download.html)\n\n\n\n7.1.2 In Lab Experiments\n\nMaking stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n\n7.1.3 Online Experiments\nAn exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen.\nCan you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE",
+    "text": "8.1.1 XAMPP\nXAMMP\n\n8.1.1.1 Downloading\nDownload link\n\n\n\n8.1.2 In Lab Experiments\n\nMaking stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n\n8.1.3 Online Experiments\nAn exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen.\nCan you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Testing Your Javascript</span>"
     ]
   },
   {
-    "objectID": "cSciPub.html",
-    "href": "cSciPub.html",
-    "title": "8  Coding",
+    "objectID": "cDatabase.html",
+    "href": "cDatabase.html",
+    "title": "9  Databases and management",
     "section": "",
-    "text": "For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?\n\n8.0.0.1 Languages\nWhat should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.\n\nIs SPSS a good language for statistics?\nIs R a good language for statistics?\nIs Python a good language for statistics?\nIs R a good language for coding a web app?\nIs R a good language for coding an in-lab visual experiment?\nShould you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?\n\nHow do you future proof? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?\n\n\n8.0.1 IDEs\n\nWho are you writing code for? Human or Machine?\nWhat is an IDE? What makes for a good IDE?\n\n\n8.0.1.1 Using an IDE\nFor this course we will default to VSCode, because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an opensource build of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in Emacs.\n\n\n8.0.1.2 VSCode\n\n\nBasics video\nUsing VSCode with R\nUsing VSCode with Python\n\nExercise Install VSCode\n\n\n8.0.1.3 Jupyter Notebooks\nWhat are jupyter notebooks? Are jupyter notebooks ide’s? What are their purpose? What languages to they support?\n\n\n8.0.1.4 Quarto\nWhat is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?\n\n\n\n8.0.2 Databases and management\n\nWhat is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n\n8.0.3 Sharing The Results\n\n\n8.0.4 Reproducible Report Authoring\n\n\n8.0.5 Miscellaneous Readings and Topics\n\n\n8.0.6 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n8.0.7 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
+    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n9.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n9.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Databases and management</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "9  Summary",
+    "title": "10  Summary",
     "section": "",
     "text": "In summary, I have not gotten to writing a summary yet.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html",
+    "href": "cGit.html",
+    "title": "Appendix A — Version Control",
+    "section": "",
+    "text": "A.1 Getting Started - Some old videos on git from PSYCH363/310\nA few years ago when I was teaching a more elementary version of some of this material (PSYCH363) I included some videos on git and using Github. Some components of these videos may be a bit out of date, and a few things about the interface have changed. Still they may be a reasonable starting point for those of you who feel you need a refresher on version control. Note that for PSYCH390 I am assuming you can either already use version control or figure it out on your own. I will give some class time for getting things working, but mostly you will have to pursue this on your own. The notes here are intended to be prompts and guides, but not to be comprehensive.\nYou will notice that in the videos I talk a lot about Linux. We are not using that for this course so you can ignore those references. However, I do demonstrate the use in the terminal. That is available to all of you regardless of operating system. You will just have to find your own OS version of it.\nFrequenly you will see this referred to as a command line tool (“cli”). It is now easier to get this this working on Windows and OSX than it used to be. For OSX you can also check out Homebrew. For the adventurous Windows user you can look at WSL2.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#an-overview-of-git-and-github",
+    "href": "cGit.html#an-overview-of-git-and-github",
+    "title": "Appendix A — Version Control",
+    "section": "A.2 An overview of git and Github",
+    "text": "A.2 An overview of git and Github",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#you-have-choices---other-version-control-system",
+    "href": "cGit.html#you-have-choices---other-version-control-system",
+    "title": "Appendix A — Version Control",
+    "section": "A.3 You have choices - other version control system",
+    "text": "A.3 You have choices - other version control system\n\nMercurial\nDarcs\nCVS\nSubversion\nPijul\n\nEach has their own fans. CVS and Subversion are more legacy options, but you will still see them occasionally. Darcs is more of an experiment than a broadly used system. Mercurial used to be the cool kid, but now seems eclipsed by Pijul. That is the one for experimental users.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#git-is-not-github",
+    "href": "cGit.html#git-is-not-github",
+    "title": "Appendix A — Version Control",
+    "section": "A.4 Git is not Github",
+    "text": "A.4 Git is not Github\nGit is the version control software. Github is a very popular place to host your publically accessible git repository, but it is far from your only option. You can host elsewhere.\n\nOSF.io For scientists OSF.io seeks to make itself a way to host scientific projects and their data. Trivia question? Do I have any repositories on Osf.io?\nSourceforge An oldie, but still used.\nBitbucket\nGitlab The university provides you with a gitlab account: https://git.uwaterloo.ca\nCodeberg If you believe in freedom and neck beards.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#things-you-should-do",
+    "href": "cGit.html#things-you-should-do",
+    "title": "Appendix A — Version Control",
+    "section": "A.5 Things you should do",
+    "text": "A.5 Things you should do\n\nInstall git\nGet an account on github\nFork the course repository\nClone the course repository to your laptop\nSet up my version as an additional remote.\nSee if you can make a “pull request” to me. You may find that you have to set up an ssh key in order to efficiently pull and push to Github. Github has very clear instructions on how to go about doing this.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#but-first",
+    "href": "cGit.html#but-first",
+    "title": "Appendix A — Version Control",
+    "section": "A.6 But first",
+    "text": "A.6 But first\nIf you have not used git before you will have to configure git. It needs to know who you are and how to reach you at least.\nYou can execute commands like this in your terminal:\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nMore on these configuration options can be found in a nice online book.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#understanding-git-and-the-workflow-in-pictures",
+    "href": "cGit.html#understanding-git-and-the-workflow-in-pictures",
+    "title": "Appendix A — Version Control",
+    "section": "A.7 Understanding Git and the Workflow in Pictures",
+    "text": "A.7 Understanding Git and the Workflow in Pictures\nWhen starting to use git I found it very confusing to tell what was where and what direction things were going when I pushed and pulled. I found pictures helpful adjuncts to the prose descriptions. A few helpful illustrations to the distinction of clones, forks, pull, push, and pull request can be found here.\nI also made a little video to try and illustrate some of these concepts a few years ago. Read for the gist and not for the specific examples.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#principal-terms-to-learn-first",
+    "href": "cGit.html#principal-terms-to-learn-first",
+    "title": "Appendix A — Version Control",
+    "section": "A.8 Principal Terms to Learn First",
+    "text": "A.8 Principal Terms to Learn First\n\nFork: A copy of one github repository to another github repository.\nClone: A copy of one git repository to another git repository. The first repository might be hosted on github, but the second one, the cloned one exists on a local machine. In your case this is probably your laptop.\nRemote: This is a repository that you are following. You will typically pull from these, but your push permissions may be limited depending on the distinctions between forks and clones, and whether you own the remote or someone else does. You can have more than one remote.\nPull: the transfer of information and changes from one repository incorporated into another. This is how you get the new information from a remote transported to a local repository that you control.\nPush: this is the transfer of information to a repository you control (or have permissions to push to) from another repository that you control. This is often from your local laptop version to the hosted repository (your fork) on github.\nPull Request: When you have information or changes that you think would be helpful to a remote you do not have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.\nBranch: within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called master. And the principal repository that is the main, shared one is called origin. We will not be working with branches in our course, but those terms do show up in commands.\n\nAll of these “basics” are covered in detail in the book Pro Git (available on line).",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
     ]
   }
 ]

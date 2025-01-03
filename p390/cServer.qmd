@@ -6,11 +6,11 @@ Running a lab now seems to require some familiarity with servers. And people who
 
 ### XAMPP
 
-[XAMMP](https://www.apachefriends.org/index.html\)
+[XAMMP](https://www.apachefriends.org/index.html)
 
 #### Downloading 
 
-[Download link](https://www.apachefriends.org/download.html\)
+[Download link](https://www.apachefriends.org/download.html)
 
 
 ### In Lab Experiments

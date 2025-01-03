@@ -44,7 +44,7 @@ Since I want you to learn to use your computer as a tool, and to continue to be 
 
 3.  Locate the help to begin to use the tool without formal instruction.
 
-:::{.callout-tip title="In-class Exercise} 
+:::{.callout-tip title="In-class Exercise"} 
 Locate, download, install, and verify you can start VS Code.
 
 :::

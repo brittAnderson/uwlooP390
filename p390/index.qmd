@@ -1,9 +1,11 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is a Quarto book. Quarto can be seen as a successor to RStudio and Rmd files. If you have not heard of those do not worry. If you have you will see that most things are quite similar. 
 
-I will be using Quarto in this class (PSYCH390 W2025) to help us practice writing reproducible code and papers. As well as how to prepare pleasing professional output from a single document. 
+I will be using Quarto in this class (PSYCH390 W2025) to help us practice writing reproducible code and papers. There are many different systems that can accomplish the same goal and we will look at a few of them so that you are not anchored to any one system. But in order to have one shared experience and to move beyond the basics, at least a bit, we will use this tool. 
+
+One of the key lessons for learning to use your computer effectively as a research tool is learning how to do things *generally*; rather than mastering one particular variety of software we want to be able to figure out how to use whatever is the right tool for a particular application. Our needs may change as our science evolves, and the tools available to us will definitely change. You don't want to be stuck 20 years from now using the software you learned in University. If you are, your science will suffer, and you will be less able to tackle the problems that interest you. Instead of doing the key experiment, you will be figuring out how to do the experiment that is most like, but not quite, the right one, but is as well as you can do with the old software you know how to use. 
 
 To learn more about Quarto books from the Quarto people visit <https://quarto.org/docs/books>.
 
-To learn more about how we are going to use it stay tuned. 
+To learn more about the specifics of how we are going to use Quarto, and what else we will experiment with along the way,  stay tuned. 

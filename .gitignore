@@ -4,3 +4,4 @@ venv/
 *~
 exampleSyllabi/
 backgroundAndExamples/
+.DS_Store
