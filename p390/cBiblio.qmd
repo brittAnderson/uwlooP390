@@ -36,3 +36,10 @@ Here are some links to get you started with references in overleaf.
 
 [LaTeX and Knitr in Overleaf](https://www.overleaf.com/learn/latex/Knitr)\]\[knitr\]\] with overleaf. 
 [A scientific poster with Overleaf?](https://www.overleaf.com/latex/templates?q=poster)
+
+# Finding Citations
+- [Semantic Scholar](https://www.semanticscholar.org/)
+- [OpenAlex](https://openalex.org/)
+- [Google Scholar](https://scholar.google.ca/)
+- [Consensus](https://consensus.app/)
+- [Undermind](https://www.undermind.ai/home/)
