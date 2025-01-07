@@ -180,23 +180,73 @@
     ]
   },
   {
+    "objectID": "cLLM.html",
+    "href": "cLLM.html",
+    "title": "9  Large Language Models",
+    "section": "",
+    "text": "9.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#how-to",
+    "href": "cLLM.html#how-to",
+    "title": "9  Large Language Models",
+    "section": "9.2 How to?",
+    "text": "9.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n9.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#how-to-1",
+    "href": "cLLM.html#how-to-1",
+    "title": "9  Large Language Models",
+    "section": "9.3 How-to",
+    "text": "9.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#using-llms-for-dynamic-research",
+    "href": "cLLM.html#using-llms-for-dynamic-research",
+    "title": "9  Large Language Models",
+    "section": "9.4 Using LLMs for Dynamic Research",
+    "text": "9.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#why-might-you-want-to-do-this",
+    "href": "cLLM.html#why-might-you-want-to-do-this",
+    "title": "9  Large Language Models",
+    "section": "9.5 Why Might You Want To Do This?",
+    "text": "9.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a RAG in this context?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
     "objectID": "cDatabase.html",
     "href": "cDatabase.html",
-    "title": "9  Databases and management",
+    "title": "10  Databases and management",
     "section": "",
-    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n9.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n9.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
+    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n10.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n10.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Databases and management</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Databases and management</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "10  Summary",
+    "title": "11  Summary",
     "section": "",
     "text": "In summary, I have not gotten to writing a summary yet.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {

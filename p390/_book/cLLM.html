@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Coding – Psych 390</title>
+<title>9&nbsp; Large Language Models – Psych 390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cQuarto.html" rel="next">
-<link href="./cOpenResearch.html" rel="prev">
+<link href="./cDatabase.html" rel="next">
+<link href="./cServer.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cCode.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Coding</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cLLM.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Large Language Models</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cCode.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cCode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Coding</span></span></a>
   </div>
 </li>
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cLLM.html" class="sidebar-item-text sidebar-link">
+  <a href="./cLLM.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Large Language Models</span></span></a>
   </div>
 </li>
@@ -205,7 +205,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#ides" id="toc-ides" class="nav-link active" data-scroll-target="#ides"><span class="header-section-number">4.0.1</span> IDEs</a></li>
+  <li><a href="#run-locally" id="toc-run-locally" class="nav-link active" data-scroll-target="#run-locally"><span class="header-section-number">9.1</span> Run locally</a></li>
+  <li><a href="#how-to" id="toc-how-to" class="nav-link" data-scroll-target="#how-to"><span class="header-section-number">9.2</span> How to?</a>
+  <ul class="collapse">
+  <li><a href="#key-features-of-gpt4all" id="toc-key-features-of-gpt4all" class="nav-link" data-scroll-target="#key-features-of-gpt4all"><span class="header-section-number">9.2.1</span> Key Features of GPT4ALL</a></li>
+  </ul></li>
+  <li><a href="#how-to-1" id="toc-how-to-1" class="nav-link" data-scroll-target="#how-to-1"><span class="header-section-number">9.3</span> How-to</a></li>
+  <li><a href="#using-llms-for-dynamic-research" id="toc-using-llms-for-dynamic-research" class="nav-link" data-scroll-target="#using-llms-for-dynamic-research"><span class="header-section-number">9.4</span> Using LLMs for Dynamic Research</a></li>
+  <li><a href="#why-might-you-want-to-do-this" id="toc-why-might-you-want-to-do-this" class="nav-link" data-scroll-target="#why-might-you-want-to-do-this"><span class="header-section-number">9.5</span> Why Might You Want To Do This?</a></li>
   </ul>
 </nav>
     </div>
@@ -214,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Coding</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Large Language Models</span></h1>
 </div>
 
 
@@ -231,46 +238,83 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?</p>
-<section id="languages" class="level4" data-number="4.0.0.1">
-<h4 data-number="4.0.0.1" class="anchored" data-anchor-id="languages"><span class="header-section-number">4.0.0.1</span> Languages</h4>
-<p>What should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.</p>
-<ul>
-<li>Is SPSS a good language for statistics?</li>
-<li>Is R a good language for statistics?</li>
-<li>Is Python a good language for statistics?</li>
-<li>Is R a good language for coding a web app?</li>
-<li>Is R a good language for coding an in-lab visual experiment?</li>
-<li>Should you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?</li>
-</ul>
-<p>How do you <em>future proof</em>? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?</p>
+<section id="run-locally" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="run-locally"><span class="header-section-number">9.1</span> Run locally</h2>
+<p>Why? Own your own data.</p>
+<p>Security and Privacy.</p>
+<p>Research applications you may not want participants’ data fed to openAI or other proprietary vendors.</p>
 </section>
-<section id="ides" class="level3" data-number="4.0.1">
-<h3 data-number="4.0.1" class="anchored" data-anchor-id="ides"><span class="header-section-number">4.0.1</span> IDEs</h3>
+<section id="how-to" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="how-to"><span class="header-section-number">9.2</span> How to?</h2>
+<p>There are many methods to running LLMs locally on your own hardward. I have chosen <a href="https://www.nomic.ai/gpt4all">GPT4All</a>. It can run under OSX, Windows, and Ubuntu (linux).</p>
+<section id="key-features-of-gpt4all" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="key-features-of-gpt4all"><span class="header-section-number">9.2.1</span> Key Features of GPT4ALL</h3>
+<p>According to the website https://getstream.io/blog/best-local-llm-tools/:</p>
+<p>GPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.</p>
 <ul>
-<li>Who are you writing code for? Human or Machine?</li>
-<li>What is an IDE? What makes for a good IDE?</li>
+<li><p>Privacy First: Keep private and sensitive chat information and prompts only on your machine.</p></li>
+<li><p>No Internet Required: It works completely offline.</p></li>
+<li><p>Models Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.</p></li>
+<li><p>Local Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.</p></li>
+<li><p>Customization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.</p></li>
+<li><p>Enterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.</p></li>
 </ul>
-<section id="using-an-ide" class="level4" data-number="4.0.1.1">
-<h4 data-number="4.0.1.1" class="anchored" data-anchor-id="using-an-ide"><span class="header-section-number">4.0.1.1</span> Using an IDE</h4>
-<p>For this course we will default to <a href="https://code.visualstudio.com/">VSCode</a>, because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an <a href="https://vscodium.com/">opensource build</a> of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in <a href="https://www.gnu.org/software/emacs/">Emacs</a>.</p>
+<p>It is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).</p>
 </section>
-<section id="vscode" class="level4" data-number="4.0.1.2">
-<h4 data-number="4.0.1.2" class="anchored" data-anchor-id="vscode"><span class="header-section-number">4.0.1.2</span> VSCode</h4>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/B-s71n0dHUk?si=y3fy80M0mGxGLwr5" title="Learn Visual Studio Code in 7 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<ul>
-<li><a href="https://code.visualstudio.com/docs/introvideos/basics">Basics video</a></li>
-<li><a href="https://code.visualstudio.com/docs/languages/r">Using VSCode with R</a></li>
-<li><a href="https://code.visualstudio.com/docs/languages/python">Using VSCode with Python</a></li>
-</ul>
-<p><em>Exercise</em> Install VSCode</p>
 </section>
-<section id="jupyter-notebooks" class="level4" data-number="4.0.1.3">
-<h4 data-number="4.0.1.3" class="anchored" data-anchor-id="jupyter-notebooks"><span class="header-section-number">4.0.1.3</span> Jupyter Notebooks</h4>
-<p>What are jupyter notebooks? Are jupyter notebooks ide’s? What are their purpose? What languages to they support?</p>
+<section id="how-to-1" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="how-to-1"><span class="header-section-number">9.3</span> How-to</h2>
+<p>From the GPT4all download page download the version for your operating system.</p>
+<p>Follow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.</p>
+<p>After you have successfully downloaded and installed the program checkout the <a href="https://docs.gpt4all.io/gpt4all_desktop/quickstart.html">quickstart guide</a>.</p>
+<ol type="1">
+<li>Start Chatting</li>
+<li>Install a Model</li>
+<li>I tried “Llama 3.2 1b Instruct”</li>
+<li>Load the model</li>
+<li>Start chatting</li>
+</ol>
+</section>
+<section id="using-llms-for-dynamic-research" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="using-llms-for-dynamic-research"><span class="header-section-number">9.4</span> Using LLMs for Dynamic Research</h2>
+<p>What are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.</p>
+<p>It is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use <a href="link">GET and POST</a> from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: <a href="https://medium.com/@kevinkoech265/curl-a-deep-dive-into-command-line-data-transfer-8361a85b177d">curl</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Classroom Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Classroom Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download and implement the above.</p>
+<p>Start the GPT4All Server</p>
+<p>See if you can get your GPT4All model to talk to another group’s model.</p>
+</div>
+</div>
+</section>
+<section id="why-might-you-want-to-do-this" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="why-might-you-want-to-do-this"><span class="header-section-number">9.5</span> Why Might You Want To Do This?</h2>
+<p><a href="https://www.science.org/doi/10.1126/science.adq1814">Durably reducing conspiracy beliefs through dialogues with AI</a></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/qD1fnYDTbHM" title="Embedding ChatGPT in Qualtrics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><a href="https://www.linkedin.com/pulse/integrate-chatgpt-openai-api-your-research-project-part-ding-wang-rdyec">This</a> LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Class Question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Class Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What is a RAG in this context?</p>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -693,13 +737,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cOpenResearch.html" class="pagination-link" aria-label="Open Research Practices Continued">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open Research Practices Continued</span></span>
+      <a href="./cServer.html" class="pagination-link" aria-label="Testing Your Javascript">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing Your Javascript</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cQuarto.html" class="pagination-link" aria-label="Quarto">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Quarto</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cDatabase.html" class="pagination-link" aria-label="Databases and management">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Databases and management</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

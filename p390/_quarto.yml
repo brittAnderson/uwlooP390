@@ -18,6 +18,7 @@ book:
     - cExps.qmd
     - cBiblio.qmd
     - cServer.qmd
+    - cLLM.qmd
     - cDatabase.qmd
     - summary.qmd
   appendices:

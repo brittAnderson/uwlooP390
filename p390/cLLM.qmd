@@ -1,0 +1,75 @@
+# Large Language Models
+
+
+## Run locally
+
+Why? Own your own data. 
+
+Security and Privacy.
+
+Research applications you may not want participants' data fed to openAI or other proprietary vendors. 
+
+## How to?
+
+There are many methods to running LLMs locally on your own hardward. I have chosen [GPT4All](https://www.nomic.ai/gpt4all). It can run under OSX, Windows, and Ubuntu (linux). 
+
+### Key Features of GPT4ALL
+
+According to the website https://getstream.io/blog/best-local-llm-tools/:
+
+GPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.
+
+- Privacy First: Keep private and sensitive chat information and prompts only on your machine.
+
+- No Internet Required: It works completely offline.
+
+- Models Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.
+
+- Local Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.
+
+- Customization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.
+
+- Enterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.
+ 
+It is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).
+
+## How-to
+From the GPT4all download page download the version for your operating system. 
+
+Follow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large. 
+
+After you have successfully downloaded and installed the program checkout the [quickstart guide](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html).
+
+1. Start Chatting
+2. Install a Model
+3. I tried "Llama 3.2 1b Instruct"
+4. Load the model
+5. Start chatting
+
+## Using LLMs for Dynamic Research
+
+What are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task. 
+
+It is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use [GET and POST](link) from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: [curl](https://medium.com/@kevinkoech265/curl-a-deep-dive-into-command-line-data-transfer-8361a85b177d).
+
+::: {.callout-tip title="Classroom Exercise"}
+Download and implement the above.
+
+Start the GPT4All Server
+
+See if you can get your GPT4All model to talk to another group's model.
+:::
+
+## Why Might You Want To Do This?
+
+[Durably reducing conspiracy beliefs through dialogues with AI](https://www.science.org/doi/10.1126/science.adq1814)
+
+{{< video https://www.youtube.com/watch?v=qD1fnYDTbHM title = "Embedding ChatGPT in Qualtrics" 
+>}}
+
+[This](https://www.linkedin.com/pulse/integrate-chatgpt-openai-api-your-research-project-part-ding-wang-rdyec) LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?
+
+
+::: {.callout-tip title="Class Question"}
+What is a RAG in this context?
+::: 
