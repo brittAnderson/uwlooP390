@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Coding – Psych 390</title>
+<title>Quarto Basics – Psych 390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cQuarto.html" rel="next">
-<link href="./cOpenResearch.html" rel="prev">
+<link href="./cGit.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cCode.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Coding</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cGit.html">Appendices</a></li><li class="breadcrumb-item"><a href="./cOSX.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Quarto Basics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -132,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cCode.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cCode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Coding</span></span></a>
   </div>
 </li>
@@ -195,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cOSX.html" class="sidebar-item-text sidebar-link">
+  <a href="./cOSX.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Quarto Basics</span></span></a>
   </div>
 </li>
@@ -211,16 +244,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#ides" id="toc-ides" class="nav-link active" data-scroll-target="#ides"><span class="header-section-number">4.0.1</span> IDEs</a></li>
+  <li><a href="#emacs" id="toc-emacs" class="nav-link active" data-scroll-target="#emacs"><span class="header-section-number">C</span> Emacs</a>
+  <ul class="collapse">
+  <li><a href="#init-files" id="toc-init-files" class="nav-link" data-scroll-target="#init-files"><span class="header-section-number">C.1</span> init files</a></li>
+  <li><a href="#pdf-mode" id="toc-pdf-mode" class="nav-link" data-scroll-target="#pdf-mode"><span class="header-section-number">C.2</span> pdf-mode</a></li>
+  <li><a href="#keys-and-keyboards" id="toc-keys-and-keyboards" class="nav-link" data-scroll-target="#keys-and-keyboards"><span class="header-section-number">C.3</span> keys and keyboards</a></li>
+  <li><a href="#orgmode-related" id="toc-orgmode-related" class="nav-link" data-scroll-target="#orgmode-related"><span class="header-section-number">C.4</span> orgmode related</a></li>
+  <li><a href="#emacs-1" id="toc-emacs-1" class="nav-link" data-scroll-target="#emacs-1"><span class="header-section-number">C.5</span> emacs</a></li>
+  </ul></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto"><span class="header-section-number">D</span> Quarto</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cGit.html">Appendices</a></li><li class="breadcrumb-item"><a href="./cOSX.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Quarto Basics</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Coding</span></h1>
+<h1 class="title">Quarto Basics</h1>
 </div>
 
 
@@ -237,46 +278,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?</p>
-<section id="languages" class="level4" data-number="4.0.0.1">
-<h4 data-number="4.0.0.1" class="anchored" data-anchor-id="languages"><span class="header-section-number">4.0.0.1</span> Languages</h4>
-<p>What should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.</p>
-<ul>
-<li>Is SPSS a good language for statistics?</li>
-<li>Is R a good language for statistics?</li>
-<li>Is Python a good language for statistics?</li>
-<li>Is R a good language for coding a web app?</li>
-<li>Is R a good language for coding an in-lab visual experiment?</li>
-<li>Should you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?</li>
-</ul>
-<p>How do you <em>future proof</em>? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?</p>
+<section id="emacs" class="level1" data-number="C">
+<h1 data-number="C"><span class="header-section-number">C</span> Emacs</h1>
+<p>I used homebrew awhile ago for this and forgot the details.</p>
+<section id="init-files" class="level2" data-number="C.1">
+<h2 data-number="C.1" class="anchored" data-anchor-id="init-files"><span class="header-section-number">C.1</span> init files</h2>
+<p>Seems to live at <code>~/.emacs.d/init.el</code></p>
+<p>Added these lines and restarted to get the basic package set up working.</p>
+<pre><code>(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+(require 'use-package)
+(setq use-package-always-ensure t)</code></pre>
 </section>
-<section id="ides" class="level3" data-number="4.0.1">
-<h3 data-number="4.0.1" class="anchored" data-anchor-id="ides"><span class="header-section-number">4.0.1</span> IDEs</h3>
-<ul>
-<li>Who are you writing code for? Human or Machine?</li>
-<li>What is an IDE? What makes for a good IDE?</li>
-</ul>
-<section id="using-an-ide" class="level4" data-number="4.0.1.1">
-<h4 data-number="4.0.1.1" class="anchored" data-anchor-id="using-an-ide"><span class="header-section-number">4.0.1.1</span> Using an IDE</h4>
-<p>For this course we will default to <a href="https://code.visualstudio.com/">VSCode</a>, because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an <a href="https://vscodium.com/">opensource build</a> of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in <a href="https://www.gnu.org/software/emacs/">Emacs</a>.</p>
+<section id="pdf-mode" class="level2" data-number="C.2">
+<h2 data-number="C.2" class="anchored" data-anchor-id="pdf-mode"><span class="header-section-number">C.2</span> pdf-mode</h2>
+<p>Do a <code>package-list-packages</code> to get a refesh and install (mark with an “i”) the <code>pdf-tools</code> package from melpa. Then you “x” to execute the installation. Afterwards you need to run <code>M-x pdf-tools-install</code>. This can take awhile.</p>
 </section>
-<section id="vscode" class="level4" data-number="4.0.1.2">
-<h4 data-number="4.0.1.2" class="anchored" data-anchor-id="vscode"><span class="header-section-number">4.0.1.2</span> VSCode</h4>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/B-s71n0dHUk?si=y3fy80M0mGxGLwr5" title="Learn Visual Studio Code in 7 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<ul>
-<li><a href="https://code.visualstudio.com/docs/introvideos/basics">Basics video</a></li>
-<li><a href="https://code.visualstudio.com/docs/languages/r">Using VSCode with R</a></li>
-<li><a href="https://code.visualstudio.com/docs/languages/python">Using VSCode with Python</a></li>
-</ul>
-<p><em>Exercise</em> Install VSCode</p>
+<section id="keys-and-keyboards" class="level2" data-number="C.3">
+<h2 data-number="C.3" class="anchored" data-anchor-id="keys-and-keyboards"><span class="header-section-number">C.3</span> keys and keyboards</h2>
+<p>Several emacs shortcuts conflict with defaults on mac. You can change these in the system utilities for keyboard shortcuts. Just search them out as they arise and turn off the mac ones. The ctrl key is ^ in their printed list.</p>
 </section>
-<section id="jupyter-notebooks" class="level4" data-number="4.0.1.3">
-<h4 data-number="4.0.1.3" class="anchored" data-anchor-id="jupyter-notebooks"><span class="header-section-number">4.0.1.3</span> Jupyter Notebooks</h4>
-<p>What are jupyter notebooks? Are jupyter notebooks ide’s? What are their purpose? What languages to they support?</p>
+<section id="orgmode-related" class="level2" data-number="C.4">
+<h2 data-number="C.4" class="anchored" data-anchor-id="orgmode-related"><span class="header-section-number">C.4</span> orgmode related</h2>
+<ol type="1">
+<li>for exporting html needed to install package <code>htmlize</code>.</li>
+</ol>
+</section>
+<section id="emacs-1" class="level2" data-number="C.5">
+<h2 data-number="C.5" class="anchored" data-anchor-id="emacs-1"><span class="header-section-number">C.5</span> emacs</h2>
+<p>There is a quarto editing mode which I installed through the packaging tools.</p>
+</section>
+</section>
+<section id="quarto" class="level1" data-number="D">
+<h1 data-number="D"><span class="header-section-number">D</span> Quarto</h1>
+<p>Find the download <a href="https://quarto.org/docs/get-started/">here</a>. The demo needs <code>matplotlib</code> and <code>plotly</code>. So, you need python which I got from brew. <code>brew install python-matplotlib</code> will pull in a lot of other libraries as well. There are some tricky steps here. Plotly is not easily gotten via homebrew, and I did not want to mix up my system by also using pip now that I was working hard under homebrew. This brings up the idea of virtual environments. That is generally a good idea, especially with python in my opinion. While doing some searching I came across <code>pipx</code> that seems to try and do both. Allow you to install via homebrew (the pipx) and then use pipx to create virtual environments that can isolate the libraries, but expose the binaries.</p>
+<pre><code>brew install pipx
+pipx ensurepath
+sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
+brew update &amp;&amp; brew upgrade pipx.</code></pre>
+<p>Then, because I could not get plotly in homebrew, I created a <strong>venv</strong>.</p>
+<pre><code>python3 -m venv /Users/britt/p390venv
+cd p390venv
+source bin/activate
+pip install plotly</code></pre>
+<p>I needed to end up also doing pip install for matplotlib and jupyter from within the venv. Then I simply cut and pasted the demo document and followed their recommendation.</p>
+<p>The file I tested as “test.qmd” is …</p>
+<p>For a demonstration of a line plot on a polar axis, see <a href="#fig-polar" class="quarto-xref">Figure&nbsp;<span>D.1</span></a>.</p>
+<div id="cell-fig-polar" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cOSX_files/figure-html/fig-polar-output-1.png" width="450" height="439" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;D.1: A line plot on a polar axis
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>And the command was <code>quarto render test.qmd --to html</code>.</p>
+<p>And if you <code>brew install texlive</code> then export to pdf works well too.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -699,14 +780,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cOpenResearch.html" class="pagination-link" aria-label="Open Research Practices Continued">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open Research Practices Continued</span></span>
+      <a href="./cGit.html" class="pagination-link" aria-label="Version Control">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Version Control</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cQuarto.html" class="pagination-link" aria-label="Quarto">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Quarto</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

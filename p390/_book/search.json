@@ -336,5 +336,71 @@
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
     ]
+  },
+  {
+    "objectID": "cOSX.html",
+    "href": "cOSX.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "C Emacs\nI used homebrew awhile ago for this and forgot the details.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#init-files",
+    "href": "cOSX.html#init-files",
+    "title": "Quarto Basics",
+    "section": "C.1 init files",
+    "text": "C.1 init files\nSeems to live at ~/.emacs.d/init.el\nAdded these lines and restarted to get the basic package set up working.\n(require 'package)\n(add-to-list 'package-archives '(\"melpa\" . \"https://melpa.org/packages/\") t)\n(package-initialize)\n(require 'use-package)\n(setq use-package-always-ensure t)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#pdf-mode",
+    "href": "cOSX.html#pdf-mode",
+    "title": "Quarto Basics",
+    "section": "C.2 pdf-mode",
+    "text": "C.2 pdf-mode\nDo a package-list-packages to get a refesh and install (mark with an “i”) the pdf-tools package from melpa. Then you “x” to execute the installation. Afterwards you need to run M-x pdf-tools-install. This can take awhile.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#keys-and-keyboards",
+    "href": "cOSX.html#keys-and-keyboards",
+    "title": "Quarto Basics",
+    "section": "C.3 keys and keyboards",
+    "text": "C.3 keys and keyboards\nSeveral emacs shortcuts conflict with defaults on mac. You can change these in the system utilities for keyboard shortcuts. Just search them out as they arise and turn off the mac ones. The ctrl key is ^ in their printed list.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#orgmode-related",
+    "href": "cOSX.html#orgmode-related",
+    "title": "Quarto Basics",
+    "section": "C.4 orgmode related",
+    "text": "C.4 orgmode related\n\nfor exporting html needed to install package htmlize.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#emacs-1",
+    "href": "cOSX.html#emacs-1",
+    "title": "Quarto Basics",
+    "section": "C.5 emacs",
+    "text": "C.5 emacs\nThere is a quarto editing mode which I installed through the packaging tools.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
   }
 ]
