@@ -23,6 +23,7 @@ book:
     - summary.qmd
   appendices:
     - cGit.qmd
+    - cOSX.qmd
 
 
 bibliography: references.bib
