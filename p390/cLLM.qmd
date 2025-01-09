@@ -73,3 +73,7 @@ See if you can get your GPT4All model to talk to another group's model.
 ::: {.callout-tip title="Class Question"}
 What is a RAG in this context?
 ::: 
+
+## Next steps
+
+Recently [@Duan_2024] has published an R package to make all of this easier. The [github repository](https://github.com/xufengduan/MacBehaviour "github repository link") has the library, a "read-me" and installation instructions. Our *class activity* is to see if anyone can get this up and working by next week. 
