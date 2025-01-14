@@ -14,7 +14,7 @@ book:
     - cCmpResTool.qmd
     - cOpenResearch.qmd
     - cCode.qmd
-    - cQuarto.qmd
+    - cWriting.qmd
     - cExps.qmd
     - cBiblio.qmd
     - cServer.qmd

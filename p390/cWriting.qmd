@@ -1,0 +1,37 @@
+### Writing Scientific Documents
+
+Papers
+Posters
+Websites
+Books
+Math Formulas
+Images
+Graphs
+References
+Analyses/Code 
+
+What is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?
+
+
+### Scientific Publishing Tools
+
+What is a markup language?
+
+What are the advantages/disadvantages of using a tool other that Word for writing up your research?
+
+   Write once use everywhere. 
+
+Some of the available options. 
+
+- [LaTeX](https://www.latex-project.org/)
+   This was the standard for several decades, and used more by mathematicians than others, but today it seems limited in that it produces mostly pdfs, and many people also want their files to export to html (webpages)
+- [A guide to LaTex for Word Users (pdf)](https://ctan.math.washington.edu/tex-archive/info/latex4wp/latex4wp.pdf)
+- The descendants of [markdown](https://en.wikipedia.org/wiki/Markdown)
+-   [Quarto](https://quarto.org/) (we will skip Rmd and since we are using its successor qmd. Both are related to the people who wrote RStudio,`knitr`, and are now known as [Posit](https://posit.co/)).
+
+Here are some of the helper links for things we can do with Quarto:
+-  [journal formats](https://quarto.org/docs/journals/) try the Elsevier format for this course. A lot of psych journals are Elsevier owned.
+-  [presentation](https://jjallaire.quarto.pub/reproducible-manuscripts-with-quarto/#/title-slide)
+-   [Talking to databases](https://danielroelfs.com/blog/sql-notebooks-with-quarto/).
+-   [Make a website/blog for your work or lab](https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/)
+-   [And more ...](https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file)

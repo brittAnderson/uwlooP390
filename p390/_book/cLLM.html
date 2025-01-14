@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -219,6 +239,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-1" id="toc-how-to-1" class="nav-link" data-scroll-target="#how-to-1"><span class="header-section-number">9.3</span> How-to</a></li>
   <li><a href="#using-llms-for-dynamic-research" id="toc-using-llms-for-dynamic-research" class="nav-link" data-scroll-target="#using-llms-for-dynamic-research"><span class="header-section-number">9.4</span> Using LLMs for Dynamic Research</a></li>
   <li><a href="#why-might-you-want-to-do-this" id="toc-why-might-you-want-to-do-this" class="nav-link" data-scroll-target="#why-might-you-want-to-do-this"><span class="header-section-number">9.5</span> Why Might You Want To Do This?</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">9.6</span> Next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -319,8 +340,17 @@ Class Question
 <p>What is a RAG in this context?</p>
 </div>
 </div>
+</section>
+<section id="next-steps" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">9.6</span> Next steps</h2>
+<p>Recently <span class="citation" data-cites="Duan_2024">(<a href="#ref-Duan_2024" role="doc-biblioref">Duan, Li, and Cai 2024</a>)</span> has published an R package to make all of this easier. The <a href="https://github.com/xufengduan/MacBehaviour" title="github repository link">github repository</a> has the library, a “read-me” and installation instructions. Our <em>class activity</em> is to see if anyone can get this up and working by next week.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Duan_2024" class="csl-entry" role="listitem">
+Duan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. <span>“MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.”</span> <em>Behavior Research Methods</em> 57 (1). <a href="https://doi.org/10.3758/s13428-024-02524-y">https://doi.org/10.3758/s13428-024-02524-y</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

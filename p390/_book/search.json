@@ -402,5 +402,25 @@
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
     ]
+  },
+  {
+    "objectID": "cLLM.html#next-steps",
+    "href": "cLLM.html#next-steps",
+    "title": "9  Large Language Models",
+    "section": "9.6 Next steps",
+    "text": "9.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html",
+    "href": "cWriting.html",
+    "title": "5  Writing Scientific Documents",
+    "section": "",
+    "text": "Papers Posters Websites Books Math Formulas Images Graphs References Analyses/Code\nWhat is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?\n\n5.0.1 Scientific Publishing Tools\nWhat is a markup language?\nWhat are the advantages/disadvantages of using a tool other that Word for writing up your research?\nWrite once use everywhere.\nSome of the available options.\n\nLaTeX This was the standard for several decades, and used more by mathematicians than others, but today it seems limited in that it produces mostly pdfs, and many people also want their files to export to html (webpages)\nA guide to LaTex for Word Users (pdf)\nThe descendants of markdown\nQuarto (we will skip Rmd and since we are using its successor qmd. Both are related to the people who wrote RStudio,knitr, and are now known as Posit).\n\nHere are some of the helper links for things we can do with Quarto: - journal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned. - presentation - Talking to databases. - Make a website/blog for your work or lab - And more …",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
   }
 ]
