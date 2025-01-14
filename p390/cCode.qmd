@@ -55,3 +55,107 @@ For this course we will default to [VSCode](https://code.visualstudio.com/), bec
 #### Jupyter Notebooks
 
 What are jupyter notebooks? Are jupyter notebooks ide's? What are their purpose? What languages to they support?
+
+### Languages
+
+#### R
+
+##### Installation
+- OSX
+- Windows
+- Linux
+
+[Download the CORRECT R](https://cran.r-project.org/downloads)
+
+Follow the appropriate instructions for your operating system. 
+
+Test your installation by opening a `TERMINAL` and typing the capital letter R. You should end up in an interpreter. You can quit with `quit()`.
+
+Restart R in a TERMINAL and install a package. A package is a collection of code, often much of it written in R, that is used for doing things in R. For example try:
+
+```{{r}}
+install.packages("tidyverse")
+```
+
+
+The [tidyverse](https://www.tidyverse.org/) is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not. 
+
+If that went well, you need to make sure you restart VS Code and then click on the little set of squares at the left to install the R extension for VS Code. 
+
+If all goes well check out the [book](https://r4ds.hadley.nz/) on using R that is itself written in Quarto, by the programmer who authored the tidyverse. And make sure you can create a file in VSCode as a quarto document, cut and paste in some R code, and see the whole thing compile to a web page. This after all will be a homework. 
+
+```{r}
+if(!require(tidyverse)){
+    install.packages("tidyverse")
+}
+if(!require(palmerpenguins)){
+    install.packages("palmerpenguins")
+}
+library(tidyverse)
+library(palmerpenguins)
+
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
+) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+
+#### Python
+
+##### Installation
+
+[Installation Instructions](https://code.visualstudio.com/docs/languages/python)
+
+Install the `mathplotlib` package.
+
+
+::: {.callout-warning}
+Ask me about virtual environments!
+:::
+
+[setting up a venv in vscode and python](https://dev.to/emminex/how-to-install-python-libraries-in-visual-studio-code-38i1)
+
+##### Testing
+::: {.callout-warning}
+You may need to install the "reticulate" package for R if you want to run both python and R code in the same document as I am trying to do here. 
+:::
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# fake data
+np.random.seed(19680801)
+data = np.random.lognormal(size=(37, 4), mean=1.5, sigma=1.75)
+labels = list('ABCD')
+fs = 10  # fontsize
+fig, axs = plt.subplots(nrows=2, ncols=3, figsize=(6, 6), sharey=True)
+axs[0, 0].boxplot(data, tick_labels=labels)
+axs[0, 0].set_title('Default', fontsize=fs)
+
+axs[0, 1].boxplot(data, tick_labels=labels, showmeans=True)
+axs[0, 1].set_title('showmeans=True', fontsize=fs)
+
+axs[0, 2].boxplot(data, tick_labels=labels, showmeans=True, meanline=True)
+axs[0, 2].set_title('showmeans=True,\nmeanline=True', fontsize=fs)
+
+axs[1, 0].boxplot(data, tick_labels=labels, showbox=False, showcaps=False)
+tufte_title = 'Tufte Style \n(showbox=False,\nshowcaps=False)'
+axs[1, 0].set_title(tufte_title, fontsize=fs)
+
+axs[1, 1].boxplot(data, tick_labels=labels, notch=True, bootstrap=10000)
+axs[1, 1].set_title('notch=True,\nbootstrap=10000', fontsize=fs)
+
+axs[1, 2].boxplot(data, tick_labels=labels, showfliers=False)
+axs[1, 2].set_title('showfliers=False', fontsize=fs)
+
+for ax in axs.flat:
+    ax.set_yscale('log')
+    ax.set_yticklabels([])
+
+fig.subplots_adjust(hspace=0.4)
+```
+#### Javascript

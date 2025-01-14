@@ -33,6 +33,6 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
-
+engine: knitr
 
 
