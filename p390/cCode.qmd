@@ -54,7 +54,179 @@ For this course we will default to [VSCode](https://code.visualstudio.com/), bec
 
 #### Jupyter Notebooks
 
-What are jupyter notebooks? Are jupyter notebooks ide's? What are their purpose? What languages to they support?
+What are jupyter notebooks? Are jupyter notebooks ide's? What are their purpose? What languages to they support? MORE TO ADD
+
+### Terminals
+
+{{< video https://vimeo.com/453837142 title="A Demo of Playing Terminal Games" >}}
+
+::: {.callout-tip title="Class Question"}
+What is a terminal?
+:::
+
+Find your terminal
+  
+Different operating systems refer to the terminal differently. 
+
+In Windows the =CMD.exe= [fn:1] command is an approximation to a terminal as is the =Power Shell= [fn:2]. 
+
+For OSX you navigate to you applications, find the folder "Utilities" and look in their for the terminal application. 
+
+For Linux it will depend on which particular flavor you have installed.
+
+#### Some Terminology
+   While they do not mean [exactly the same thing](https://www.geeksforgeeks.org/difference-between-terminal-console-shell-and-command-line/), you will often find the following terms being used relatively interchangeably. 
+   - terminal
+   - shell
+   - command line
+  What they have in common is the idea of a text based interface to communicating with the operating system. What this means is that instead of opening a gui (gui: *G* raphical *U* ser *I* nterface) to navigate your file tree you do this with a text based system of commands. 
+
+#### Some sample commands 
+
+::: {#fig-ls}
+```{sh}
+#| eval: False
+
+ls
+```
+
+Typing this command in your terminal will list the files and directory.  What would you have to do to see the hidden files? How would you get more information about this function and how to use it?
+:::
+
+##### An Historical Aside
+   In the early days of computing people wrote their programs on [punch cards](https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era). Some see the inspiration as the [Jacquard machine.](https://en.wikipedia.org/wiki/Jacquard_machin) There are still programmers alive who can tell you their horror stories of tripping and falling and scattering their punch cards everywhere. Want to know if your program worked? Take it to the main frame data center, drop it off, and come back the next day to get your print out. 
+   [Terminals](https://en.wikipedia.org/wiki/Computer_terminal) came along as an alternative to communicating with big central processors. There was a screen and keyboard. By typing you could send input to the computer that returned the output to your screen. 
+   The terminals we have today are not true terminals, but emulators. Though few people refer to them as such. We emulate this old way of communicating to the processor because it works and is efficient.
+
+#### Why use a terminal?
+  
+You can get more done. You can get it done more quickly. Once you learn to do one hard thing you never have to figure out how to do it again, because you can [easily script it](https://www.theatlantic.com/technology/archive/2018/10/agents-of-automation/568795/). That is why you want to learn to use the terminal
+
+Terminals are ubiquitous. They are low in their resource usage. They permit remote logins without the need for sending graphics back and forth. In fact, the remote computer need not have a system installed for displaying windows or even a physical screen attached (called headless). 
+
+Knowing how to use a terminal will allow you to use =ssh= to connect to remote hosts. It will allow you to quickly and efficiently navigate your system, and it will make it easy for you to do things that used to take ages. 
+
+  
+#### A scripting example
+Want to convert and compress a large directory of videos as I did for this course. No need to open up each in an application and click a bunch of mouse clicks. Just write a =bash= script to invoke a command line program to do all the work for you. Go get a cup of coffee and come back when the job is done.
+
+::: {#fig-xkcdCompile}
+  
+![](https://imgs.xkcd.com/comics/automation.png)
+
+How would you pronounce XKCD?
+
+:::
+
+```{sh}
+#| eval: False
+ 
+   for i in *.MP4; 
+   do name=`echo "$i" | cut -d'.' -f1`; 
+   echo "$name"; 
+   ffmpeg -i "$i" -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k "${name}S.mp4";
+   done
+
+```
+
+
+Almost all of this I copied off the Internet where it appeared as an answer to a question from someone else wanting to do essentially the same thing I did. It took me a while to tweak it to my particular use case, but when that was done my problem was solved, /forever./ Every new batch of videos I just put in their own directory and run this script from the command line. Note that this script uses a *for loop*, this is a very common programming construct.
+
+ 
+```{r}
+#| echo: true 
+#| 
+for (i in seq(1,5)) { print(i)}
+```
+
+   
+##### Resources on Terminals
+
+There are a great many resources on how to use the terminal effectively, but don't go out and read them all. One of the skills to learn in learning to use the computer is to develop your own set of links and resources you can go to when need arises. Don't try to learn everything at once. You will get overwhelmed and discouraged. Instead you learn what you need when the need arises. And if you need to know something more than once, then you spend the time to dive deeper. There are a great many things about using the terminal that I do not know, but I know the ones I use often, and I know where to find more when I need to know more. You should do the same. Here are a few online resources to get you started.
+
+  1. [The command line](https://ryanstutorials.net/linuxtutorial/commandline.php)
+  2. [A Short Series of Terminal Lessons from the UbuntuWiki](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
+  3. [Some Scripting Basics](https://null-byte.wonderhowto.com/how-to/hack-like-pro-scripting-for-aspiring-hacker-part-1-bash-basics-0149422/)
+  4. [Another Scripting Introduction](https://hpc-carpentry.github.io/hpc-shell/05-scripts/index.html)
+
+
+Most of what you want to do at the command line, at least in the beginning, you can do with typing directly into the terminal. But at some point you will want to write a file, a script, that has all the commands typed into it. They you can run that script from the terminal. This blog post has some basic background for how to get started. 
+  
+Note the use of the term "BASH". This stands for the Bourne Again Shell. Your terminal can use different shells (and if you are using a mac you are probably using the [zsh](https://ohmyz.sh/) shell). So while you can use the terms interchangeably most of the time, they don't mean exactly the same thing.
+
+##### Terminal Games
+These will only work on linux and OS X. If you are on windows you could enable the [linux subsystem for linux](https://learn.microsoft.com/en-us/windows/wsl/install) or you could learn the [powershell equivalents](https://mathieubuisson.github.io/powershell-linux-bash/). But I suggest that you use the terminals that are built into VS Code for practice. You will usually see these at the bottom of your screen. If not, there is a menu you can use to open one. 
+
+1. ls -la /home/<username>
+  - What does all this output mean?
+  - What changes when you leave out the -la?
+  - What does the hyphen do?
+2. Can you find the location of your desktop folder in your terminal? 
+3. Can you change to that directory?
+   cd
+4. Find out where you are?
+   pwd
+5. Can you find out who the computer thinks you are, your user name?
+   whoami
+6. Find out how much free space you have on your computer disk.
+   df -h
+7. How do you get help for most of these commands?
+   Usually command --help or (-h)
+8. How do you find the manual?
+   man ls
+9. Navigating
+   1. Paths: absolute and relative.
+   2. What do those "dots" mean?
+   3. What do those slashes mean?
+   4. Tab is your friend.
+   5. Try the up arrow too.
+10. File ownership
+    1. Make a text file from the command line.
+         touch /home/yourname/Documents/testText.txt
+    2. Who owns it?
+11. Make a directory
+      mkdir /home/britt/Documents/myFirstDir/
+      Spaces are the enemy. Never use them, but if you have to, escape (\) them.
+
+#### Using the Terminal to Setup a Python Venv and install Jupyterlab
+
+Our goal is to be able to test and develop the idea of a jupyter lab notebook. But we will need several pieces of code installed. Assuming we have python3 installed we can use the terminal to set up a secure enviroment for creating a virtual environment. Think of a sandbox that let's you play without getting the things you installed for experimentation conflict with your system's tools. 
+
+1. Open a terminal
+2. Make a directory (`mkdir`)
+3. "cd" into your new directory and create the virtual environment 
+   ```{sh} 
+   #| echo: True
+   #| eval: False 
+   
+   python3 -m venv .
+   ```
+  
+4. Next, "activate" the environment with 
+   ```{sh} 
+   #| echo: True
+   #| eval: False 
+   
+   source ./bin/activate
+   ```
+5. Now you can install the needed packages with `pip`.
+   ```{sh} 
+   #| echo: True
+   #| eval: False 
+   
+   pip install numpy matplotlib jupyterlab
+   ```
+
+#### Beginning with Jupyter and Quarto/VS
+
+Good instructions are on the Quarto [website](https://quarto.org/docs/tools/vscode-notebook.html). Note those terminal commands. 
+
+You could at this point use the brower interface for editing your ipynb file with `{sh} python3 -m jupyter lab ` or you could open a file in VS Code.
+
+Make sure you have the jupyter extension for vscode. Then you will want to create or open a new jupyter file and select the appropriate kernel (initially use python). If you are in the correct directory and had previously created a virtual environment then all should be good to go. And you can *in the terminal* invoke the quarto command to see your document with `quarto preview my-demo-notebook.ipynb`.
+
+
+
 
 ### Languages
 
@@ -109,7 +281,11 @@ ggplot(
 
 [Installation Instructions](https://code.visualstudio.com/docs/languages/python)
 
-Install the `mathplotlib` package.
+Install the `mathplotlib` and `numpy` packages.
+
+::: {.callout-tip title="Class Discussion"}
+What is a "package" when talking about programming languages? What is a "library"? What is an "executable"?
+:::
 
 
 ::: {.callout-warning}
