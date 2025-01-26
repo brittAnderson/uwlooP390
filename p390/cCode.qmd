@@ -277,6 +277,10 @@ ggplot(
 
 #### Python
 
+::: {.callout-note}
+If the following doesn't go smoothly for you check out the additional suggestions in the [python-venv appendix](python-venv.qmd).
+:::
+
 ##### Installation
 
 [Installation Instructions](https://code.visualstudio.com/docs/languages/python)
