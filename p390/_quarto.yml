@@ -24,6 +24,7 @@ book:
   appendices:
     - cGit.qmd
     - cOSX.qmd
+    - python-venv.qmd
 
 
 bibliography: references.bib
