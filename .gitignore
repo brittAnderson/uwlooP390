@@ -6,4 +6,12 @@ exampleSyllabi/
 backgroundAndExamples/
 .DS_Store
 admin/
-_book/
+p390/bin/
+p390/lib/
+p390/.quarto/
+p390/python-venv*
+p390/pyvenv.cfg
+p390/share/
+p390/etc/
+p390/.DS_Store
+p390/.gitignore
