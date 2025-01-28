@@ -1,10 +1,10 @@
 # The role of the computer as a tool in psychological research
 
-To begin learning how to use the computer as a tool for our research we have to first be clear on what that means. Before we go into specific tools let's discuss the research process so we can better detect where there are opportunities for us to use computers and software to aid our work. 
+Your computer can greatly augment your research productivity and quality. There is more to it than just learning to code. At every stage of the research process there are opportunities to facilitate an efficient and effective workflow by using your computer as an auxilliary. 
 
 :::{.callout-tip title="Class Question"}
 
-Ignore for the moment the specific content of a psychological research project. That is whether it is a study on attention or memory. Let's consider abstractly what are the components of a psychological research project? And then how can computers help us to do our research better? For right now we will focus on the stages of research and the tools we are now using, if any, and then we will return to the particular research stages for developing our experience with particular research tools. 
+Ignore for the moment the specific content of a psychological research project. That is whether it is a study on attention or memory. Consider abstractly what the components of a psychological research project are? Then ask how can computers help you do that stage of research better? 
 
 :::
 
@@ -18,7 +18,7 @@ How do you decide what it is you are going to do? Look up and read the prior lit
 2.  How do you keep track of what you have read?
 3.  How do you organize your notes on what you have read?
 4.  How do you integrate and connect your notes and readings so as to discover new connections or ideas?
-5.  How to you make sure you can correctly cite the articles you have read when it comes to writing up your research proposal or research result.
+5.  How to you make sure you can correctly cite the articles you have read when it comes to writing up your research proposal or research result. Some answers to these questions will be discussed in [a later chapter](cBiblio.qmd).
 
 How do you protect yourself against a change in databases or death of a harddrive?
 
@@ -30,6 +30,8 @@ What skills are needed for this?
 2.  Language? Python; Javascript; other
     1.  How do you make stuff appear on a computer screen?
     2.  How do you verify the timing?
+
+    Some thoughts on programming languages will be found in [this chapter](cCode.qmd)
 3.  How do you make sure you can find the version of the experiment if you need to share it or re-use it.
 4.  There is a new tool in the lab with drivers and hardware. Can you download and install the necessary software?
 5.  What happens to the data?
@@ -37,6 +39,8 @@ What skills are needed for this?
     2.  How do you search it?
     3.  What if it is big?
     4.  What if it needs to be shared?
+
+    Databases are something I hope to document [further](cDatabase.qmd).
 
 ### Analyzing the Research
 
@@ -49,6 +53,8 @@ What skills are needed for this?
     1.  What is the tool?
     2.  Could you write your own analysis?
 
+    Some material on the R programming language, a frequently used programming language for statistical analysis, can be found in [this chapter](cCode.qmd#r).
+
 ### Diseminate the Research
 
 1.  What is the tool you use for writing your research?
@@ -58,7 +64,12 @@ What skills are needed for this?
 5.  How do you make sure that you can easily adapt your analyses and make sure the right figures are included when you update the data? Or that the p-values in the text are also adapted?
 6.  How do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?
 
+I have a lot to say on writing tools in [this chapter](cWriting.qmd).
+
 ### Make Your Research Open
+
+A selfish reason for learning these tools is that it will make what you do easier and better. But there is another more socially pertinent motivation: it enables the collective scientific enterprise to be better because tools like these facilitate reproducible and open science. 
+
 :::{.callout-tip title="Class Question"}
 
 -   What is "open research"?
@@ -70,5 +81,3 @@ What skills are needed for this?
 What are Open Science practices?
 
 A recommended reading: [10 strategies for open science](https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in)
-
-And that is it for today.
