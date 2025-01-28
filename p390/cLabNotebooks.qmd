@@ -1,0 +1,10 @@
+## Lab Notebooks
+
+I will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.
+
+-   [Jupyter notebooks in Psychology](https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf)
+-   [10 rules for lab notebooks (electronic)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012170)
+-   [How to keep a lab notebook](https://www.science.org/content/article/how-keep-lab-notebook)
+-   [Pick an electronic lab notebook](https://www.nature.com/articles/d41586-018-05895-3)
+-   [Lab notebook 2023 guide](https://labfolder.com/electronic-lab-notebook-eln-research-guide/)
+

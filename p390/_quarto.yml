@@ -14,8 +14,10 @@ book:
     - intro.qmd
     - cCmpResTool.qmd
     - cOpenResearch.qmd
-    - cCode.qmd
+    - cLabNotebooks.qmd
     - cWriting.qmd
+    - cTerminal.qmd
+    - cCode.qmd
     - cExps.qmd
     - cBiblio.qmd
     - cServer.qmd
