@@ -1,0 +1,449 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Psych 390",
+    "section": "",
+    "text": "Preface\nThis course is an effort to expose research minded undergraduate students in psychology to the wealth of computational and programming tools that they can use to ease their research tasks, and in some cases do things that they could not do otherwise. It is in written as a series of qmd files. This makes it a Quarto book. Quarto can be seen as a successor to RStudio and Rmd files. It is in another in the series of markup languages that allow you to write in plain text, but by following certain conventions, make it easy to convert those plain text files into any number of output formats such as html (for a website) or pdf (for a book or article). I want to emphasize the writing of reproducible code and papers. There are many different systems that can accomplish this goal. Quarto is just one option, but it is one of the easier ones to get started with. In addition, to Quarto, we will explore IDEs via Visual Studio Code, and also some of the basics of programming, bibliographic tools, and auxilliary tools like zettlekasten and databases.\nYou do not need to read this book in order. At this early draft stage some things are repeated, some are missing, and some are misordered. You may have to jump around to find what you are looking for.\nOne of the key lessons for learning to use your computer effectively as a research tool is learning how to do things generally; rather than mastering one particular variety of software; we want to be able to figure out how to use whatever is the right tool for a particular application. Your needs will change as your science evolves. The tools available will change. You don’t want to be still using the software you learned in University twenty years from now. If you are you will be less able to tackle the problems that interest you. Instead of doing the key experiment, you will be figuring out how to do the experiment that is most like, but not quite, the right one, but is as well as you can do with the old software you know how to use.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book being created for PSYCH390 at the the University of Waterloo.\nIt is very much a work in progress. You can help it get better by providing feedback. Ideally you will do this by raising an issue on the github repo. Even better is if you would fix the book yourself and make a pull request.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "cCmpResTool.html",
+    "href": "cCmpResTool.html",
+    "title": "2  The role of the computer as a tool in psychological research",
+    "section": "",
+    "text": "2.1 Research Project Stages\nTo begin learning how to use the computer as a tool for our research we have to first be clear on what that means. Before we go into specific tools let’s discuss the research process so we can better detect where there are opportunities for us to use computers and software to aid our work.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The role of the computer as a tool in psychological research</span>"
+    ]
+  },
+  {
+    "objectID": "cCmpResTool.html#research-project-stages",
+    "href": "cCmpResTool.html#research-project-stages",
+    "title": "2  The role of the computer as a tool in psychological research",
+    "section": "",
+    "text": "2.1.1 Preliminaries\nHow do you decide what it is you are going to do? Look up and read the prior literature.\n\nHow do you find what to read?\nHow do you keep track of what you have read?\nHow do you organize your notes on what you have read?\nHow do you integrate and connect your notes and readings so as to discover new connections or ideas?\nHow to you make sure you can correctly cite the articles you have read when it comes to writing up your research proposal or research result.\n\nHow do you protect yourself against a change in databases or death of a harddrive?\n\n\n2.1.2 Do the research\nWhat skills are needed for this?\n\nProgram an experiment\nLanguage? Python; Javascript; other\n\nHow do you make stuff appear on a computer screen?\nHow do you verify the timing?\n\nHow do you make sure you can find the version of the experiment if you need to share it or re-use it.\nThere is a new tool in the lab with drivers and hardware. Can you download and install the necessary software?\nWhat happens to the data?\n\nHow do you store it?\nHow do you search it?\nWhat if it is big?\nWhat if it needs to be shared?\n\n\n\n\n2.1.3 Analyzing the Research\n\nHow do you organize the data?\nWorking on a big data project?\n\nHow do you get the data?\nCan you set up a database?\nSearch it?\n\nHow do you do statistics?\n\nWhat is the tool?\nCould you write your own analysis?\n\n\n\n\n2.1.4 Diseminate the Research\n\nWhat is the tool you use for writing your research?\nWhat is reproducibility?\nDoes your writing tool support it?\nHow do you make sure others can re-run your analyses?\nHow do you make sure that you can easily adapt your analyses and make sure the right figures are included when you update the data? Or that the p-values in the text are also adapted?\nHow do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?\n\n\n\n2.1.5 Make Your Research Open\n\n\n\n\n\n\nClass Question\n\n\n\n\nWhat is “open research”?\nShould research be open?\nHow many of your labs are following these practices?\n\n\n\nWhat are Open Science practices?\nA recommended reading: 10 strategies for open science\nAnd that is it for today.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The role of the computer as a tool in psychological research</span>"
+    ]
+  },
+  {
+    "objectID": "cOpenResearch.html",
+    "href": "cOpenResearch.html",
+    "title": "3  Open Research Practices Continued",
+    "section": "",
+    "text": "3.1 Fair Principles\nTake a few minutes and see if you can determine what “Fair” stands. Then we can see if we agree. We can then use those principles to evaluate our research tools.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Open Research Practices Continued</span>"
+    ]
+  },
+  {
+    "objectID": "cOpenResearch.html#fair-principles",
+    "href": "cOpenResearch.html#fair-principles",
+    "title": "3  Open Research Practices Continued",
+    "section": "",
+    "text": "Fair principles\nFair guiding principles",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Open Research Practices Continued</span>"
+    ]
+  },
+  {
+    "objectID": "cOpenResearch.html#lab-notebooks",
+    "href": "cOpenResearch.html#lab-notebooks",
+    "title": "3  Open Research Practices Continued",
+    "section": "3.2 Lab Notebooks",
+    "text": "3.2 Lab Notebooks\nI will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.\n\nJupyter notebooks in Psychology\n10 rules for lab notebooks (electronic)\nHow to keep a lab notebook\nPick an electronic lab notebook\nLab notebook 2023 guide",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Open Research Practices Continued</span>"
+    ]
+  },
+  {
+    "objectID": "cOpenResearch.html#bibliographic-tools-and-exercises",
+    "href": "cOpenResearch.html#bibliographic-tools-and-exercises",
+    "title": "3  Open Research Practices Continued",
+    "section": "3.3 Bibliographic Tools and Exercises",
+    "text": "3.3 Bibliographic Tools and Exercises\nThis would make sense to be discussed next since it fits with our outline of the process that commences with reading and cross referencing knowledge. However, we do not yet have available the tools that we will need to manage this, so we will defer this for now until ADDLINKHERE.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Open Research Practices Continued</span>"
+    ]
+  },
+  {
+    "objectID": "cOpenResearch.html#ides-and-writing-up-your-research",
+    "href": "cOpenResearch.html#ides-and-writing-up-your-research",
+    "title": "3  Open Research Practices Continued",
+    "section": "3.4 IDEs and Writing up your Research",
+    "text": "3.4 IDEs and Writing up your Research\n\n\n\n\n\n\nClass Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n3.4.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n\n\n\n\n\n\nIn-class Exercise\n\n\n\nLocate, download, install, and verify you can start VS Code.\n\n\n\n3.4.1.1 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\n\n\n\n3.4.2 Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nDon’t forget to do the overleaf homework assignment.\nBut know that you always have choices. You can [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Open Research Practices Continued</span>"
+    ]
+  },
+  {
+    "objectID": "cCode.html",
+    "href": "cCode.html",
+    "title": "4  Coding",
+    "section": "",
+    "text": "For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?\n\n4.0.0.1 Languages\nWhat should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.\n\nIs SPSS a good language for statistics?\nIs R a good language for statistics?\nIs Python a good language for statistics?\nIs R a good language for coding a web app?\nIs R a good language for coding an in-lab visual experiment?\nShould you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?\n\nHow do you future proof? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?\n\n\n4.0.1 IDEs\n\nWho are you writing code for? Human or Machine?\nWhat is an IDE? What makes for a good IDE?\n\n\n4.0.1.1 Using an IDE\nFor this course we will default to VSCode, because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an opensource build of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in Emacs.\n\n\n4.0.1.2 VSCode\n\n\nBasics video\nUsing VSCode with R\nUsing VSCode with Python\n\nExercise Install VSCode\n\n\n4.0.1.3 Jupyter Notebooks\nWhat are jupyter notebooks? Are jupyter notebooks ide’s? What are their purpose? What languages to they support? MORE TO ADD\n\n\n\n4.0.2 Terminals\n\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a terminal?\n\n\nFind your terminal\nDifferent operating systems refer to the terminal differently.\nIn Windows the =CMD.exe= [fn:1] command is an approximation to a terminal as is the =Power Shell= [fn:2].\nFor OSX you navigate to you applications, find the folder “Utilities” and look in their for the terminal application.\nFor Linux it will depend on which particular flavor you have installed.\n\n4.0.2.1 Some Terminology\nWhile they do not mean exactly the same thing, you will often find the following terms being used relatively interchangeably. - terminal - shell - command line What they have in common is the idea of a text based interface to communicating with the operating system. What this means is that instead of opening a gui (gui: G raphical U ser I nterface) to navigate your file tree you do this with a text based system of commands.\n\n\n4.0.2.2 Some sample commands\n\n\n\n\nls\n\n\n\nFigure 4.1: Typing this command in your terminal will list the files and directory. What would you have to do to see the hidden files? How would you get more information about this function and how to use it?\n\n\n\n\n4.0.2.2.1 An Historical Aside\nIn the early days of computing people wrote their programs on punch cards. Some see the inspiration as the Jacquard machine. There are still programmers alive who can tell you their horror stories of tripping and falling and scattering their punch cards everywhere. Want to know if your program worked? Take it to the main frame data center, drop it off, and come back the next day to get your print out. Terminals came along as an alternative to communicating with big central processors. There was a screen and keyboard. By typing you could send input to the computer that returned the output to your screen. The terminals we have today are not true terminals, but emulators. Though few people refer to them as such. We emulate this old way of communicating to the processor because it works and is efficient.\n\n\n\n4.0.2.3 Why use a terminal?\nYou can get more done. You can get it done more quickly. Once you learn to do one hard thing you never have to figure out how to do it again, because you can easily script it. That is why you want to learn to use the terminal\nTerminals are ubiquitous. They are low in their resource usage. They permit remote logins without the need for sending graphics back and forth. In fact, the remote computer need not have a system installed for displaying windows or even a physical screen attached (called headless).\nKnowing how to use a terminal will allow you to use =ssh= to connect to remote hosts. It will allow you to quickly and efficiently navigate your system, and it will make it easy for you to do things that used to take ages.\n\n\n4.0.2.4 A scripting example\nWant to convert and compress a large directory of videos as I did for this course. No need to open up each in an application and click a bunch of mouse clicks. Just write a =bash= script to invoke a command line program to do all the work for you. Go get a cup of coffee and come back when the job is done.\n\n\n\n\n\n\nFigure 4.2: How would you pronounce XKCD?\n\n\n\n\n   for i in *.MP4; \n   do name=`echo \"$i\" | cut -d'.' -f1`; \n   echo \"$name\"; \n   ffmpeg -i \"$i\" -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k \"${name}S.mp4\";\n   done\n\nAlmost all of this I copied off the Internet where it appeared as an answer to a question from someone else wanting to do essentially the same thing I did. It took me a while to tweak it to my particular use case, but when that was done my problem was solved, /forever./ Every new batch of videos I just put in their own directory and run this script from the command line. Note that this script uses a for loop, this is a very common programming construct.\n\nfor (i in seq(1,5)) { print(i)}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\n\n4.0.2.4.1 Resources on Terminals\nThere are a great many resources on how to use the terminal effectively, but don’t go out and read them all. One of the skills to learn in learning to use the computer is to develop your own set of links and resources you can go to when need arises. Don’t try to learn everything at once. You will get overwhelmed and discouraged. Instead you learn what you need when the need arises. And if you need to know something more than once, then you spend the time to dive deeper. There are a great many things about using the terminal that I do not know, but I know the ones I use often, and I know where to find more when I need to know more. You should do the same. Here are a few online resources to get you started.\n\nThe command line\nA Short Series of Terminal Lessons from the UbuntuWiki\nSome Scripting Basics\nAnother Scripting Introduction\n\nMost of what you want to do at the command line, at least in the beginning, you can do with typing directly into the terminal. But at some point you will want to write a file, a script, that has all the commands typed into it. They you can run that script from the terminal. This blog post has some basic background for how to get started.\nNote the use of the term “BASH”. This stands for the Bourne Again Shell. Your terminal can use different shells (and if you are using a mac you are probably using the zsh shell). So while you can use the terms interchangeably most of the time, they don’t mean exactly the same thing.\n\n\n4.0.2.4.2 Terminal Games\nThese will only work on linux and OS X. If you are on windows you could enable the linux subsystem for linux or you could learn the powershell equivalents. But I suggest that you use the terminals that are built into VS Code for practice. You will usually see these at the bottom of your screen. If not, there is a menu you can use to open one.\n\nls -la /home/\n\n\nWhat does all this output mean?\nWhat changes when you leave out the -la?\nWhat does the hyphen do?\n\n\nCan you find the location of your desktop folder in your terminal?\nCan you change to that directory? cd\nFind out where you are? pwd\nCan you find out who the computer thinks you are, your user name? whoami\nFind out how much free space you have on your computer disk. df -h\nHow do you get help for most of these commands? Usually command –help or (-h)\nHow do you find the manual? man ls\nNavigating\n\nPaths: absolute and relative.\nWhat do those “dots” mean?\nWhat do those slashes mean?\nTab is your friend.\nTry the up arrow too.\n\nFile ownership\n\nMake a text file from the command line. touch /home/yourname/Documents/testText.txt\nWho owns it?\n\nMake a directory mkdir /home/britt/Documents/myFirstDir/ Spaces are the enemy. Never use them, but if you have to, escape () them.\n\n\n\n\n4.0.2.5 Using the Terminal to Setup a Python Venv and install Jupyterlab\nOur goal is to be able to test and develop the idea of a jupyter lab notebook. But we will need several pieces of code installed. Assuming we have python3 installed we can use the terminal to set up a secure enviroment for creating a virtual environment. Think of a sandbox that let’s you play without getting the things you installed for experimentation conflict with your system’s tools.\n\nOpen a terminal\nMake a directory (mkdir)\n“cd” into your new directory and create the virtual environment\n\npython3 -m venv .\n\nNext, “activate” the environment with\n\nsource ./bin/activate\n\nNow you can install the needed packages with pip.\n\npip install numpy matplotlib jupyterlab\n\n\n\n\n4.0.2.6 Beginning with Jupyter and Quarto/VS\nGood instructions are on the Quarto website. Note those terminal commands.\nYou could at this point use the brower interface for editing your ipynb file with {sh} python3 -m jupyter lab or you could open a file in VS Code.\nMake sure you have the jupyter extension for vscode. Then you will want to create or open a new jupyter file and select the appropriate kernel (initially use python). If you are in the correct directory and had previously created a virtual environment then all should be good to go. And you can in the terminal invoke the quarto command to see your document with quarto preview my-demo-notebook.ipynb.\n\n\n\n4.0.3 Languages\n\n4.0.3.1 R\n\n4.0.3.1.1 Installation\n\nOSX\nWindows\nLinux\n\nDownload the CORRECT R\nFollow the appropriate instructions for your operating system.\nTest your installation by opening a TERMINAL and typing the capital letter R. You should end up in an interpreter. You can quit with quit().\nRestart R in a TERMINAL and install a package. A package is a collection of code, often much of it written in R, that is used for doing things in R. For example try:\n```{r}\ninstall.packages(\"tidyverse\")\n```\nThe tidyverse is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not.\nIf that went well, you need to make sure you restart VS Code and then click on the little set of squares at the left to install the R extension for VS Code.\nIf all goes well check out the book on using R that is itself written in Quarto, by the programmer who authored the tidyverse. And make sure you can create a file in VSCode as a quarto document, cut and paste in some R code, and see the whole thing compile to a web page. This after all will be a homework.\n\nif(!require(tidyverse)){\n    install.packages(\"tidyverse\")\n}\n\nLoading required package: tidyverse\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nif(!require(palmerpenguins)){\n    install.packages(\"palmerpenguins\")\n}\n\nLoading required package: palmerpenguins\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)\n) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n4.0.3.2 Python\n\n\n\n\n\n\nNote\n\n\n\nIf the following doesn’t go smoothly for you check out the additional suggestions in the python-venv appendix.\n\n\n\n4.0.3.2.1 Installation\nInstallation Instructions\nInstall the mathplotlib and numpy packages.\n\n\n\n\n\n\nClass Discussion\n\n\n\nWhat is a “package” when talking about programming languages? What is a “library”? What is an “executable”?\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAsk me about virtual environments!\n\n\nsetting up a venv in vscode and python\n\n\n4.0.3.2.2 Testing\n\n\n\n\n\n\nWarning\n\n\n\nYou may need to install the “reticulate” package for R if you want to run both python and R code in the same document as I am trying to do here.\n\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# fake data\nnp.random.seed(19680801)\ndata = np.random.lognormal(size=(37, 4), mean=1.5, sigma=1.75)\nlabels = list('ABCD')\nfs = 10  # fontsize\nfig, axs = plt.subplots(nrows=2, ncols=3, figsize=(6, 6), sharey=True)\naxs[0, 0].boxplot(data, tick_labels=labels)\n\n{'whiskers': [&lt;matplotlib.lines.Line2D object at 0x13b152e90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b152fd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153750&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153890&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4050&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4190&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4910&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4a50&gt;], 'caps': [&lt;matplotlib.lines.Line2D object at 0x13b153110&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153250&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1539d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153b10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a42d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4410&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4b90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4cd0&gt;], 'boxes': [&lt;matplotlib.lines.Line2D object at 0x13b152d50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153610&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153ed0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a47d0&gt;], 'medians': [&lt;matplotlib.lines.Line2D object at 0x13b153390&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153c50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4550&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4e10&gt;], 'fliers': [&lt;matplotlib.lines.Line2D object at 0x13b1534d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b153d90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4690&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a4f50&gt;], 'means': []}\n\naxs[0, 0].set_title('Default', fontsize=fs)\n\naxs[0, 1].boxplot(data, tick_labels=labels, showmeans=True)\n\n{'whiskers': [&lt;matplotlib.lines.Line2D object at 0x13b1a51d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a5310&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a5bd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a5d10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a65d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6710&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6fd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a7110&gt;], 'caps': [&lt;matplotlib.lines.Line2D object at 0x13b1a5450&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a5590&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a5e50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a5f90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6850&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6990&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a7250&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a7390&gt;], 'boxes': [&lt;matplotlib.lines.Line2D object at 0x13b1a5090&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a5a90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6490&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6e90&gt;], 'medians': [&lt;matplotlib.lines.Line2D object at 0x13b1a56d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a60d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6ad0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a74d0&gt;], 'fliers': [&lt;matplotlib.lines.Line2D object at 0x13b1a5950&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6350&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6d50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a7750&gt;], 'means': [&lt;matplotlib.lines.Line2D object at 0x13b1a5810&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6210&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a6c10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a7610&gt;]}\n\naxs[0, 1].set_title('showmeans=True', fontsize=fs)\n\naxs[0, 2].boxplot(data, tick_labels=labels, showmeans=True, meanline=True)\n\n{'whiskers': [&lt;matplotlib.lines.Line2D object at 0x13b1a79d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a7b10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214410&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214550&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214e10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214f50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215810&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215950&gt;], 'caps': [&lt;matplotlib.lines.Line2D object at 0x13b1a7c50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b1a7d90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214690&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2147d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215090&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2151d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215a90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215bd0&gt;], 'boxes': [&lt;matplotlib.lines.Line2D object at 0x13ad7fb10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2142d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214cd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2156d0&gt;], 'medians': [&lt;matplotlib.lines.Line2D object at 0x13b1a7ed0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214910&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215310&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215d10&gt;], 'fliers': [&lt;matplotlib.lines.Line2D object at 0x13b214190&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214b90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215590&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215f90&gt;], 'means': [&lt;matplotlib.lines.Line2D object at 0x13b214050&gt;, &lt;matplotlib.lines.Line2D object at 0x13b214a50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215450&gt;, &lt;matplotlib.lines.Line2D object at 0x13b215e50&gt;]}\n\naxs[0, 2].set_title('showmeans=True,\\nmeanline=True', fontsize=fs)\n\naxs[1, 0].boxplot(data, tick_labels=labels, showbox=False, showcaps=False)\n\n{'whiskers': [&lt;matplotlib.lines.Line2D object at 0x13b216350&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216490&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216850&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216990&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216d50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216e90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b217250&gt;, &lt;matplotlib.lines.Line2D object at 0x13b217390&gt;], 'caps': [], 'boxes': [], 'medians': [&lt;matplotlib.lines.Line2D object at 0x13b2165d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216ad0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216fd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2174d0&gt;], 'fliers': [&lt;matplotlib.lines.Line2D object at 0x13b216710&gt;, &lt;matplotlib.lines.Line2D object at 0x13b216c10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b217110&gt;, &lt;matplotlib.lines.Line2D object at 0x13b217610&gt;], 'means': []}\n\ntufte_title = 'Tufte Style \\n(showbox=False,\\nshowcaps=False)'\naxs[1, 0].set_title(tufte_title, fontsize=fs)\n\naxs[1, 1].boxplot(data, tick_labels=labels, notch=True, bootstrap=10000)\n\n{'whiskers': [&lt;matplotlib.lines.Line2D object at 0x13b217890&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2179d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290190&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2902d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290a50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290b90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291310&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291450&gt;], 'caps': [&lt;matplotlib.lines.Line2D object at 0x13b217b10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b217c50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290410&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290550&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290cd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290e10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291590&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2916d0&gt;], 'boxes': [&lt;matplotlib.lines.Line2D object at 0x13b217750&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290050&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290910&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2911d0&gt;], 'medians': [&lt;matplotlib.lines.Line2D object at 0x13b217d90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290690&gt;, &lt;matplotlib.lines.Line2D object at 0x13b290f50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291810&gt;], 'fliers': [&lt;matplotlib.lines.Line2D object at 0x13b217ed0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2907d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291090&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291950&gt;], 'means': []}\n\naxs[1, 1].set_title('notch=True,\\nbootstrap=10000', fontsize=fs)\n\naxs[1, 2].boxplot(data, tick_labels=labels, showfliers=False)\n\n{'whiskers': [&lt;matplotlib.lines.Line2D object at 0x13b291bd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291d10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292350&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292490&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292ad0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292c10&gt;, &lt;matplotlib.lines.Line2D object at 0x13b293250&gt;, &lt;matplotlib.lines.Line2D object at 0x13b293390&gt;], 'caps': [&lt;matplotlib.lines.Line2D object at 0x13b291e50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b291f90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2925d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292710&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292d50&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292e90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b2934d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b293610&gt;], 'boxes': [&lt;matplotlib.lines.Line2D object at 0x13b291a90&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292210&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292990&gt;, &lt;matplotlib.lines.Line2D object at 0x13b293110&gt;], 'medians': [&lt;matplotlib.lines.Line2D object at 0x13b2920d0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292850&gt;, &lt;matplotlib.lines.Line2D object at 0x13b292fd0&gt;, &lt;matplotlib.lines.Line2D object at 0x13b293750&gt;], 'fliers': [], 'means': []}\n\naxs[1, 2].set_title('showfliers=False', fontsize=fs)\n\nfor ax in axs.flat:\n    ax.set_yscale('log')\n    ax.set_yticklabels([])\n\n[Text(0, 0.001, ''), Text(0, 0.01, ''), Text(0, 0.1, ''), Text(0, 1.0, ''), Text(0, 10.0, ''), Text(0, 100.0, ''), Text(0, 1000.0, ''), Text(0, 10000.0, '')]\n[]\n[]\n[Text(0, 0.001, ''), Text(0, 0.01, ''), Text(0, 0.1, ''), Text(0, 1.0, ''), Text(0, 10.0, ''), Text(0, 100.0, ''), Text(0, 1000.0, ''), Text(0, 10000.0, '')]\n[]\n[]\n\n\nfig.subplots_adjust(hspace=0.4)\n\n\n\n\n\n\n\n\n\n\n\n4.0.3.3 Javascript",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Coding</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html",
+    "href": "cWriting.html",
+    "title": "5  Writing Scientific Documents",
+    "section": "",
+    "text": "Papers Posters Websites Books Math Formulas Images Graphs References Analyses/Code\nWhat is RStudio? What happened to RStudio? How does Quarto relate to RStudio? What languages does it support? Can you write code in it? Can you write text in it? Can you write an article in it?\n\n5.0.1 Scientific Publishing Tools\nWhat is a markup language?\nWhat are the advantages/disadvantages of using a tool other that Word for writing up your research?\nWrite once use everywhere.\nSome of the available options.\n\nLaTeX This was the standard for several decades, and used more by mathematicians than others, but today it seems limited in that it produces mostly pdfs, and many people also want their files to export to html (webpages)\nA guide to LaTex for Word Users (pdf)\nThe descendants of markdown\nQuarto (we will skip Rmd and since we are using its successor qmd. Both are related to the people who wrote RStudio,knitr, and are now known as Posit).\n\nHere are some of the helper links for things we can do with Quarto: - journal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned. - presentation - Talking to databases. - Make a website/blog for your work or lab - And more …",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cExps.html",
+    "href": "cExps.html",
+    "title": "6  In Lab Experiments",
+    "section": "",
+    "text": "Making stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n6.0.1 Online Experiments\nRunning a server for testing and more? XAMPP Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMPP might be a good resource. Exercise to download and get the XAMPP server running? Need to expand this. An exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>In Lab Experiments</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html",
+    "href": "cBiblio.html",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "",
+    "text": "8 Knowledge Management (Zettlekasten)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#using-references-with-quatro-and-vs-code",
+    "href": "cBiblio.html#using-references-with-quatro-and-vs-code",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "9.1 Using References With Quatro and VS Code",
+    "text": "9.1 Using References With Quatro and VS Code",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#using-references-with-overleaf",
+    "href": "cBiblio.html#using-references-with-overleaf",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "9.2 Using References With Overleaf",
+    "text": "9.2 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different.\nHere are some links to get you started with references in overleaf. 1. Linking Overleaf and Zotero 2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#poster-presentations-move-this-section",
+    "href": "cBiblio.html#poster-presentations-move-this-section",
+    "title": "7  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "9.3 Poster Presentations ? (MOVE THIS SECTION)",
+    "text": "9.3 Poster Presentations ? (MOVE THIS SECTION)\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+    ]
+  },
+  {
+    "objectID": "cServer.html",
+    "href": "cServer.html",
+    "title": "8  Testing Your Javascript",
+    "section": "",
+    "text": "8.1 Run your own server locally\nRunning a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+    ]
+  },
+  {
+    "objectID": "cServer.html#run-your-own-server-locally",
+    "href": "cServer.html#run-your-own-server-locally",
+    "title": "8  Testing Your Javascript",
+    "section": "",
+    "text": "8.1.1 XAMPP\nXAMMP\n\n8.1.1.1 Downloading\nDownload link\n\n\n\n8.1.2 In Lab Experiments\n\nMaking stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n\n8.1.3 Online Experiments\nAn exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen.\nCan you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html",
+    "href": "cLLM.html",
+    "title": "9  Large Language Models",
+    "section": "",
+    "text": "9.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#how-to",
+    "href": "cLLM.html#how-to",
+    "title": "9  Large Language Models",
+    "section": "9.2 How to?",
+    "text": "9.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n9.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#how-to-1",
+    "href": "cLLM.html#how-to-1",
+    "title": "9  Large Language Models",
+    "section": "9.3 How-to",
+    "text": "9.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#using-llms-for-dynamic-research",
+    "href": "cLLM.html#using-llms-for-dynamic-research",
+    "title": "9  Large Language Models",
+    "section": "9.4 Using LLMs for Dynamic Research",
+    "text": "9.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#why-might-you-want-to-do-this",
+    "href": "cLLM.html#why-might-you-want-to-do-this",
+    "title": "9  Large Language Models",
+    "section": "9.5 Why Might You Want To Do This?",
+    "text": "9.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a RAG in this context?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#next-steps",
+    "href": "cLLM.html#next-steps",
+    "title": "9  Large Language Models",
+    "section": "9.6 Next steps",
+    "text": "9.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cDatabase.html",
+    "href": "cDatabase.html",
+    "title": "10  Databases and management",
+    "section": "",
+    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n10.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n10.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Databases and management</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "11  Summary",
+    "section": "",
+    "text": "In summary, I have not gotten to writing a summary yet.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html",
+    "href": "cGit.html",
+    "title": "Appendix A — Version Control",
+    "section": "",
+    "text": "A.1 Getting Started - Some old videos on git from PSYCH363/310\nA few years ago when I was teaching a more elementary version of some of this material (PSYCH363) I included some videos on git and using Github. Some components of these videos may be a bit out of date, and a few things about the interface have changed. Still they may be a reasonable starting point for those of you who feel you need a refresher on version control. Note that for PSYCH390 I am assuming you can either already use version control or figure it out on your own. I will give some class time for getting things working, but mostly you will have to pursue this on your own. The notes here are intended to be prompts and guides, but not to be comprehensive.\nYou will notice that in the videos I talk a lot about Linux. We are not using that for this course so you can ignore those references. However, I do demonstrate the use in the terminal. That is available to all of you regardless of operating system. You will just have to find your own OS version of it.\nFrequenly you will see this referred to as a command line tool (“cli”). It is now easier to get this this working on Windows and OSX than it used to be. For OSX you can also check out Homebrew. For the adventurous Windows user you can look at WSL2.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#an-overview-of-git-and-github",
+    "href": "cGit.html#an-overview-of-git-and-github",
+    "title": "Appendix A — Version Control",
+    "section": "A.2 An overview of git and Github",
+    "text": "A.2 An overview of git and Github",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#you-have-choices---other-version-control-system",
+    "href": "cGit.html#you-have-choices---other-version-control-system",
+    "title": "Appendix A — Version Control",
+    "section": "A.3 You have choices - other version control system",
+    "text": "A.3 You have choices - other version control system\n\nMercurial\nDarcs\nCVS\nSubversion\nPijul\n\nEach has their own fans. CVS and Subversion are more legacy options, but you will still see them occasionally. Darcs is more of an experiment than a broadly used system. Mercurial used to be the cool kid, but now seems eclipsed by Pijul. That is the one for experimental users.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#git-is-not-github",
+    "href": "cGit.html#git-is-not-github",
+    "title": "Appendix A — Version Control",
+    "section": "A.4 Git is not Github",
+    "text": "A.4 Git is not Github\nGit is the version control software. Github is a very popular place to host your publically accessible git repository, but it is far from your only option. You can host elsewhere.\n\nOSF.io For scientists OSF.io seeks to make itself a way to host scientific projects and their data. Trivia question? Do I have any repositories on Osf.io?\nSourceforge An oldie, but still used.\nBitbucket\nGitlab The university provides you with a gitlab account: https://git.uwaterloo.ca\nCodeberg If you believe in freedom and neck beards.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#things-you-should-do",
+    "href": "cGit.html#things-you-should-do",
+    "title": "Appendix A — Version Control",
+    "section": "A.5 Things you should do",
+    "text": "A.5 Things you should do\n\nInstall git\nGet an account on github\nFork the course repository\nClone the course repository to your laptop\nSet up my version as an additional remote.\nSee if you can make a “pull request” to me. You may find that you have to set up an ssh key in order to efficiently pull and push to Github. Github has very clear instructions on how to go about doing this.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#but-first",
+    "href": "cGit.html#but-first",
+    "title": "Appendix A — Version Control",
+    "section": "A.6 But first",
+    "text": "A.6 But first\nIf you have not used git before you will have to configure git. It needs to know who you are and how to reach you at least.\nYou can execute commands like this in your terminal:\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nMore on these configuration options can be found in a nice online book.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#understanding-git-and-the-workflow-in-pictures",
+    "href": "cGit.html#understanding-git-and-the-workflow-in-pictures",
+    "title": "Appendix A — Version Control",
+    "section": "A.7 Understanding Git and the Workflow in Pictures",
+    "text": "A.7 Understanding Git and the Workflow in Pictures\nWhen starting to use git I found it very confusing to tell what was where and what direction things were going when I pushed and pulled. I found pictures helpful adjuncts to the prose descriptions. A few helpful illustrations to the distinction of clones, forks, pull, push, and pull request can be found here.\nI also made a little video to try and illustrate some of these concepts a few years ago. Read for the gist and not for the specific examples.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cGit.html#principal-terms-to-learn-first",
+    "href": "cGit.html#principal-terms-to-learn-first",
+    "title": "Appendix A — Version Control",
+    "section": "A.8 Principal Terms to Learn First",
+    "text": "A.8 Principal Terms to Learn First\n\nFork: A copy of one github repository to another github repository.\nClone: A copy of one git repository to another git repository. The first repository might be hosted on github, but the second one, the cloned one exists on a local machine. In your case this is probably your laptop.\nRemote: This is a repository that you are following. You will typically pull from these, but your push permissions may be limited depending on the distinctions between forks and clones, and whether you own the remote or someone else does. You can have more than one remote.\nPull: the transfer of information and changes from one repository incorporated into another. This is how you get the new information from a remote transported to a local repository that you control.\nPush: this is the transfer of information to a repository you control (or have permissions to push to) from another repository that you control. This is often from your local laptop version to the hosted repository (your fork) on github.\nPull Request: When you have information or changes that you think would be helpful to a remote you do not have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.\nBranch: within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called master. And the principal repository that is the main, shared one is called origin. We will not be working with branches in our course, but those terms do show up in commands.\n\nAll of these “basics” are covered in detail in the book Pro Git (available on line).",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html",
+    "href": "cOSX.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "C Emacs\nI used homebrew awhile ago for this and forgot the details.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#init-files",
+    "href": "cOSX.html#init-files",
+    "title": "Quarto Basics",
+    "section": "C.1 init files",
+    "text": "C.1 init files\nSeems to live at ~/.emacs.d/init.el\nAdded these lines and restarted to get the basic package set up working.\n(require 'package)\n(add-to-list 'package-archives '(\"melpa\" . \"https://melpa.org/packages/\") t)\n(package-initialize)\n(require 'use-package)\n(setq use-package-always-ensure t)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#pdf-mode",
+    "href": "cOSX.html#pdf-mode",
+    "title": "Quarto Basics",
+    "section": "C.2 pdf-mode",
+    "text": "C.2 pdf-mode\nDo a package-list-packages to get a refesh and install (mark with an “i”) the pdf-tools package from melpa. Then you “x” to execute the installation. Afterwards you need to run M-x pdf-tools-install. This can take awhile.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#keys-and-keyboards",
+    "href": "cOSX.html#keys-and-keyboards",
+    "title": "Quarto Basics",
+    "section": "C.3 keys and keyboards",
+    "text": "C.3 keys and keyboards\nSeveral emacs shortcuts conflict with defaults on mac. You can change these in the system utilities for keyboard shortcuts. Just search them out as they arise and turn off the mac ones. The ctrl key is ^ in their printed list.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#orgmode-related",
+    "href": "cOSX.html#orgmode-related",
+    "title": "Quarto Basics",
+    "section": "C.4 orgmode related",
+    "text": "C.4 orgmode related\n\nfor exporting html needed to install package htmlize.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "cOSX.html#emacs-1",
+    "href": "cOSX.html#emacs-1",
+    "title": "Quarto Basics",
+    "section": "C.5 emacs",
+    "text": "C.5 emacs\nThere is a quarto editing mode which I installed through the packaging tools.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto Basics</span>"
+    ]
+  },
+  {
+    "objectID": "python-venv.html",
+    "href": "python-venv.html",
+    "title": "Appendix C — Python",
+    "section": "",
+    "text": "D Virtual Environments\nThe advantage of a virtual environment is the ability to isolate libraries you may install for a particular project from interfering with other projects or previously installed libraries. The disadvantage is that they do involve some additional steps and complexity and you may end up installing multiple versions of the same library, which can be an issue if hard disk space on your computer is limited.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
+    ]
+  },
+  {
+    "objectID": "python-venv.html#methods",
+    "href": "python-venv.html#methods",
+    "title": "Appendix C — Python",
+    "section": "D.1 Methods",
+    "text": "D.1 Methods\nThere is more than one tool for creating a python virutal environment, but one of them is built into the standard python installation: venv, and so for simplicity this is the one that I recommend starting with.\n\nD.1.1 Creating and Activating the Venv\nIf you are in a console you can simply run these commands in the terminal.\npython -m venv &lt;dir-where-you-want-venv&gt;\ncd &lt;dir-where-you-want-venv&gt;\nsource ./bin/activate\n\n\n\n\n\n\nNote\n\n\n\nDepending on the specifics of your operating system and python installation you may find you need to use python3 and pip3 commands instead of plain python and pip.\n\n\nIf you are using a Windows device you will have to find your equivalent of a linux terminal. This can be using WSL or something like MinGW.\nOnce you have activated your venv you will see a change in the terminal display that indicates the venv is active. Now when you run things like pip install &lt;something&gt; it will install that library to a sandbox that is only accessible when using python from within that virtual environment. You should note that this notion of a sandbox or virtual environment is also available for some other programming languages.\nTo deactivate the environment you run ,\ndeactivate\nfrom within the venv. Look for the change in the terminal display. Note how activating the environment shows up in the terminal prompt.\nbritt@arts-220486 ~ % source p390venv/bin/activate\n(p390venv) britt@arts-220486 ~ % deactivate\nbritt@arts-220486 ~ % \n\n\nD.1.2 The Terminal is All You Need\nIf you are a minimalist or doing something simple you can invoke the python interpreter in your venv and complete your task there with no other tools, and using only the libraries required for your particular, limited task. However, if you use some companion tooling things may get more complicated and trickier to debug.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
+    ]
+  },
+  {
+    "objectID": "python-venv.html#visual-studio-code",
+    "href": "python-venv.html#visual-studio-code",
+    "title": "Appendix C — Python",
+    "section": "D.2 Visual Studio Code",
+    "text": "D.2 Visual Studio Code\nVS Code tries to make using a venv easier, but this also means there is some indirection that may make it harder to puzzle out errors. The basic work flow is to make sure that VS code is working in the folder you want your venv to be in. If not, use the open folder menu of VS Code to do so. Then, you can use the Command Palette (found under the View menu tab) to locate the Python Create Environment command. If you have never created an environment before it will do so. This can take some time so be patient and make sure this process completes. If there was a virtual environment previously constructed VS Code will probably be able to figure that out and ask you if you want to re-use it. Usually you will, but if not you can select to destroy it and create a new one. You will probably also need to affilate a particular python version to association to your environment. VS Code can often make a reasonable suggestion and you can also use the command Python Select Interpreter if necessary.\nAfter you have done that you will need to move into the affiliated terminal window of your VS Code environment to install the necessary libraries. You will need to be deliberate and make sure that you are in the correct terminal. VS Code may have several of these open for different purposes if you are working on a complicated project.\nNote that while it may be convenient to use the VS Code terminals you do not have to. If you have a terminal program on your computer accessible to you outside of VS Code you can use VS Code as the editor and then move to your other terminal for activating and implementing and compiling the python project.\n\nD.2.1 Quarto Complications\nWhen you embed a python code block in your .qmd document you will want to compile it. Quarto is assembling a document. It will need more than just the libraries necessary for compiling the python code. It also needs the library for the textual and graphical representation of the output that you will insert into your document. Specifically, it needs the jupyter python library. This means that whatever the python is doing, even if no additional libraries are needed, you will have to have done a pip install jupyter in your venv and you will need to have the venv active for the location where the qmd is stored and compiled.\nIt is worth knowing that although VS Code offers the convenience of buttons to invoke the quarto process it is not necessary. You can invoke all the quarto commands through a terminal directly. For instance quarto preview &lt;file-name&gt;.qmd will try to compile your file and will also usually launch your browser so you can see the html result. It will then watch the source file and update the html whenever it detects you have changed the source. This can be quite convenient for editing.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
+    ]
+  }
+]
