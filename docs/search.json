@@ -60,36 +60,6 @@
     ]
   },
   {
-    "objectID": "cOpenResearch.html#lab-notebooks",
-    "href": "cOpenResearch.html#lab-notebooks",
-    "title": "3  More About Open Research Practices",
-    "section": "3.2 Lab Notebooks",
-    "text": "3.2 Lab Notebooks\nI will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.\n\nJupyter notebooks in Psychology\n10 rules for lab notebooks (electronic)\nHow to keep a lab notebook\nPick an electronic lab notebook\nLab notebook 2023 guide",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>More About Open Research Practices</span>"
-    ]
-  },
-  {
-    "objectID": "cOpenResearch.html#bibliographic-tools-and-exercises",
-    "href": "cOpenResearch.html#bibliographic-tools-and-exercises",
-    "title": "3  More About Open Research Practices",
-    "section": "3.3 Bibliographic Tools and Exercises",
-    "text": "3.3 Bibliographic Tools and Exercises\nThis would make sense to be discussed next since it fits with our outline of the process that commences with reading and cross referencing knowledge. However, we do not yet have available the tools that we will need to manage this, so we will defer this for now until ADDLINKHERE.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>More About Open Research Practices</span>"
-    ]
-  },
-  {
-    "objectID": "cOpenResearch.html#ides-and-writing-up-your-research",
-    "href": "cOpenResearch.html#ides-and-writing-up-your-research",
-    "title": "3  More About Open Research Practices",
-    "section": "3.4 IDEs and Writing up your Research",
-    "text": "3.4 IDEs and Writing up your Research\n\n\n\n\n\n\nClass Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n3.4.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n\n\n\n\n\n\nIn-class Exercise\n\n\n\nLocate, download, install, and verify you can start VS Code.\n\n\n\n3.4.1.1 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\n\n\n\n3.4.2 Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nDon’t forget to do the overleaf homework assignment.\nBut know that you always have choices. You can [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>More About Open Research Practices</span>"
-    ]
-  },
-  {
     "objectID": "cLabNotebooks.html",
     "href": "cLabNotebooks.html",
     "title": "4  Lab Notebooks",
@@ -97,16 +67,6 @@
     "text": "I will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.\n\nJupyter notebooks in Psychology\n10 rules for lab notebooks (electronic)\nHow to keep a lab notebook\nPick an electronic lab notebook\nLab notebook 2023 guide",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab Notebooks</span>"
-    ]
-  },
-  {
-    "objectID": "cCode.html",
-    "href": "cCode.html",
-    "title": "7  Coding",
-    "section": "",
-    "text": "7.0.1 Languages\nFor a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?\nWhat should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.\nHow do you future proof? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coding</span>"
     ]
   },
   {
@@ -120,53 +80,113 @@
     ]
   },
   {
+    "objectID": "cWriting.html#ides-and-writing-up-your-research",
+    "href": "cWriting.html#ides-and-writing-up-your-research",
+    "title": "5  Writing Scientific Documents",
+    "section": "",
+    "text": "Class Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n5.1.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n\n\n\n\n\n\nIn-class Exercise\n\n\n\nLocate, download, install, and verify you can start VS Code.\n\n\n\n\n5.1.2 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\nAdditional material about VS Code and its use as an IDE will be found in this section\n\n\n5.1.3 Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nYou always have choices. You can even [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?\n\n\n\n\n5.1.4 RStudio\nRStudio is a popular IDE for writing R code. R is a programming language particularly useful for statistical analyses. While initially RStudio was only for the R language the number of programming languages it currently supports has grown. It still is not as widely useful as VS Code, and many of RStudio’s features are designed for the interactive evaluation of data, and so it has less of the cutting edge features that software developers expect in their code tools. Whether you want to use RStudio or not will depend in part on your planned activity.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html#scientific-publishing-tools",
+    "href": "cWriting.html#scientific-publishing-tools",
+    "title": "5  Writing Scientific Documents",
+    "section": "5.2 Scientific Publishing Tools",
+    "text": "5.2 Scientific Publishing Tools\nTo understand the plethora of contemporary tooling available to facilitate writing you should know generally what is meant by a mark-up language. This will help you evaluate whether it makes sense for you to switch from a word processiing program, like Word for Windows, to a more general tool like VS Code or emacs.\nSome of the available options you should be familar with are\n\nLaTeX\n\nLaTeX This was the standard for several decades, and used more by mathematicians than others, but today it seems limited in that it produces mostly pdfs, and many people also want their files to export to html (webpages)\n\nA guide to LaTex for Word Users (pdf)\nThe descendants of markdown\nQuarto/Qmd\n\nQuarto (we will skip Rmd and since we are using its successor qmd. Both are related to the people who wrote RStudio,knitr, and are now known as Posit).\n\nOrg Mode\n\nOrg Mode works particularly well with Emacs and allows you to embed code from multiple languages.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html#things-you-can-do-with-quarto",
+    "href": "cWriting.html#things-you-can-do-with-quarto",
+    "title": "5  Writing Scientific Documents",
+    "section": "5.3 Things You Can Do With Quarto",
+    "text": "5.3 Things You Can Do With Quarto\nHere are some of the helper links for things we can do with Quarto:\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\npresentation\nTalking to databases.\nMake a website/blog for your work or lab\nAnd more …",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cTerminal.html",
+    "href": "cTerminal.html",
+    "title": "6  Terminals",
+    "section": "",
+    "text": "Even before you start coding programs you can use simple coding constructs to efficiently command your computer to do things, script repetitive tasks, or find information hard to locate through a GUI interface. To whet your appetite I have included a short video I made for another course showing some use of the Terminal.\n\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a terminal?\n\n\nTo use your terminal you need to do somethings first:\n\nFind your terminal. Different operating systems refer to the terminal differently. In Windows the =CMD.exe= [fn:1] command is an approximation to a terminal as is the Power Shell. For OSX you navigate to you applications, find the folder “Utilities” and look in their for the terminal application. For Linux it will depend on which particular flavor you have installed.\nLearn some terminology While they do not mean exactly the same thing, you will often find the following terms being used relatively interchangeably.\n\nterminal\nshell\ncommand line What they have in common is the idea of a text based interface to communicating with the operating system. What this means is that instead of opening a gui (gui: G raphical U ser I nterface) to navigate your file tree you do this with a text based system of commands.\n\nTry out some sample commands\n\n\n\n\n\nls\n\n\n\nFigure 6.1: Typing this command in your terminal will list the files and directory. What would you have to do to see the hidden files? How would you get more information about this function and how to use it?\n\n\n\n\n6.0.1 An Historical Aside\nIn the early days of computing people wrote their programs on punch cards. Some see the inspiration as the Jacquard machine. There are still programmers alive who can tell you their horror stories of tripping and falling and scattering their punch cards everywhere. Want to know if your program worked? Take it to the main frame data center, drop it off, and come back the next day to get your print out. Terminals came along as an alternative to communicating with big central processors. There was a screen and keyboard. By typing you could send input to the computer that returned the output to your screen. The terminals we have today are not true terminals, but emulators. Though few people refer to them as such. We emulate this old way of communicating to the processor because it works and is efficient.\n\n\n6.0.2 Why use a terminal?\nYou can get more done. You can get it done more quickly. Once you learn to do one hard thing you never have to figure out how to do it again, because you can easily script it. That is why you want to learn to use the terminal\nTerminals are ubiquitous. They are low in their resource usage. They permit remote logins without the need for sending graphics back and forth. In fact, the remote computer need not have a system installed for displaying windows or even a physical screen attached (called headless).\nKnowing how to use a terminal will allow you to use =ssh= to connect to remote hosts. It will allow you to quickly and efficiently navigate your system, and it will make it easy for you to do things that used to take ages.\n\n\n6.0.3 A scripting example\nWant to convert and compress a large directory of videos as I did for this course. No need to open up each in an application and click a bunch of mouse clicks. Just write a =bash= script to invoke a command line program to do all the work for you. Go get a cup of coffee and come back when the job is done.\n\n\n\n\n\n\nFigure 6.2: How would you pronounce XKCD?\n\n\n\n\n   for i in *.MP4; \n   do name=`echo \"$i\" | cut -d'.' -f1`; \n   echo \"$name\"; \n   ffmpeg -i \"$i\" -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k \"${name}S.mp4\";\n   done\n\nAlmost all of this I copied off the Internet where it appeared as an answer to a question from someone else wanting to do essentially the same thing I did. It took me a while to tweak it to my particular use case, but when that was done my problem was solved, /forever./ Every new batch of videos I just put in their own directory and run this script from the command line. Note that this script uses a for loop, this is a very common programming construct.\n\n\nfor (i in seq(1,5)) { print(i)}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nThis code block demonstrates a simple for loop for the R programming language.\n\n\n\n6.0.4 Resources on Terminals\nThere are a great many resources on how to use the terminal effectively, but don’t go out and read them all. One of the skills to learn in learning to use the computer is to develop your own set of links and resources you can go to when need arises. Don’t try to learn everything at once. You will get overwhelmed and discouraged. Instead you learn what you need when the need arises. And if you need to know something more than once, then you spend the time to dive deeper. There are a great many things about using the terminal that I do not know, but I know the ones I use often, and I know where to find more when I need to know more. You should do the same. Here are a few online resources to get you started.\n\nThe command line\nA Short Series of Terminal Lessons from the UbuntuWiki\nSome Scripting Basics\nAnother Scripting Introduction\n\nMost of what you want to do at the command line, at least in the beginning, you can do with typing directly into the terminal. But at some point you will want to write a file, a script, that has all the commands typed into it. They you can run that script from the terminal. This blog post has some basic background for how to get started.\nNote the use of the term “BASH”. This stands for the Bourne Again Shell. Your terminal can use different shells (and if you are using a mac you are probably using the zsh shell). So while you can use the terms interchangeably most of the time, they don’t mean exactly the same thing.\n\n\n6.0.5 Terminal Games Again\nThese will only work on linux and OS X. If you are on windows you could enable the linux subsystem for linux or you could learn the powershell equivalents. But I suggest that you use the terminals that are built into VS Code for practice. You will usually see these at the bottom of your screen. If not, there is a menu you can use to open one.\n\nls -la /home/\n\n\nWhat does all this output mean?\nWhat changes when you leave out the -la?\nWhat does the hyphen do?\n\n\nCan you find the location of your desktop folder in your terminal?\nCan you change to that directory? cd\nFind out where you are? pwd\nCan you find out who the computer thinks you are, your user name? whoami\nFind out how much free space you have on your computer disk. df -h\nHow do you get help for most of these commands? Usually command –help or (-h)\nHow do you find the manual? man ls\nNavigating\n\nPaths: absolute and relative.\nWhat do those “dots” mean?\nWhat do those slashes mean?\nTab is your friend.\nTry the up arrow too.\n\nFile ownership\n\nMake a text file from the command line. touch /home/yourname/Documents/testText.txt\nWho owns it?\n\nMake a directory mkdir /home/britt/Documents/myFirstDir/ Spaces are the enemy. Never use them, but if you have to, escape () them.\n\n\n\n6.0.6 Using the Terminal to Setup a Python Venv and install Jupyterlab\nThe terminal can also be a very convenient and direct to install programs. You are not clicking buttons in a gui and hoping things work. You have to know exactly what program you want and where you want to put it. As an example we see how we might use the terminal to establish a python virutal environment and use that venv to implement a jupyterlab setup. You will find more on python virtual environments in the appendix.\nOur goal is to be able to test and develop the idea of a jupyter lab notebook. But we will need several pieces of code installed. Assuming we have python3 installed we can use the terminal to set up a secure enviroment for creating a virtual environment. Think of a sandbox that let’s you play without getting the things you installed for experimentation conflict with your system’s tools.\n\nOpen a terminal\nMake a directory (mkdir)\n“cd” into your new directory and create the virtual environment\n\npython3 -m venv .\n\nNext, “activate” the environment with\n\nsource ./bin/activate\n\nNow you can install the needed packages with pip.\n\npip install numpy matplotlib jupyterlab",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Terminals</span>"
+    ]
+  },
+  {
+    "objectID": "cCode.html",
+    "href": "cCode.html",
+    "title": "7  Coding",
+    "section": "",
+    "text": "7.0.1 Languages\nFor a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?\nWhat should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.\nHow do you future proof? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coding</span>"
+    ]
+  },
+  {
+    "objectID": "cCode.html#footnotes",
+    "href": "cCode.html#footnotes",
+    "title": "7  Coding",
+    "section": "",
+    "text": "This example comes from this node tutorial.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coding</span>"
+    ]
+  },
+  {
     "objectID": "cExps.html",
     "href": "cExps.html",
-    "title": "7  In Lab Experiments",
+    "title": "8  In Lab Experiments",
     "section": "",
-    "text": "Making stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n7.0.1 Online Experiments\nRunning a server for testing and more? XAMPP Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMPP might be a good resource. Exercise to download and get the XAMPP server running? Need to expand this. An exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?",
+    "text": "Making stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n8.0.1 Online Experiments\nRunning a server for testing and more? XAMPP Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMPP might be a good resource. Exercise to download and get the XAMPP server running? Need to expand this. An exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>In Lab Experiments</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>In Lab Experiments</span>"
     ]
   },
   {
     "objectID": "cBiblio.html",
     "href": "cBiblio.html",
-    "title": "8  What are some of the challenges that computational tools pose for reproducibility?",
+    "title": "9  What are some of the challenges that computational tools pose for reproducibility?",
     "section": "",
-    "text": "9 Knowledge Management (Zettlekasten)",
+    "text": "10 Knowledge Management (Zettlekasten)",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#using-references-with-quatro-and-vs-code",
     "href": "cBiblio.html#using-references-with-quatro-and-vs-code",
-    "title": "8  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "10.1 Using References With Quatro and VS Code",
-    "text": "10.1 Using References With Quatro and VS Code",
+    "title": "9  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "11.1 Using References With Quatro and VS Code",
+    "text": "11.1 Using References With Quatro and VS Code",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#using-references-with-overleaf",
     "href": "cBiblio.html#using-references-with-overleaf",
-    "title": "8  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "10.2 Using References With Overleaf",
-    "text": "10.2 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different.\nHere are some links to get you started with references in overleaf. 1. Linking Overleaf and Zotero 2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)",
+    "title": "9  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "11.2 Using References With Overleaf",
+    "text": "11.2 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different.\nHere are some links to get you started with references in overleaf. 1. Linking Overleaf and Zotero 2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#poster-presentations-move-this-section",
     "href": "cBiblio.html#poster-presentations-move-this-section",
-    "title": "8  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "10.3 Poster Presentations ? (MOVE THIS SECTION)",
-    "text": "10.3 Poster Presentations ? (MOVE THIS SECTION)\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?",
+    "title": "9  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "11.3 Poster Presentations ? (MOVE THIS SECTION)",
+    "text": "11.3 Poster Presentations ? (MOVE THIS SECTION)\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
@@ -192,61 +212,61 @@
   {
     "objectID": "cLLM.html",
     "href": "cLLM.html",
-    "title": "10  Large Language Models",
+    "title": "11  Large Language Models",
     "section": "",
-    "text": "10.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
+    "text": "11.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#how-to",
     "href": "cLLM.html#how-to",
-    "title": "10  Large Language Models",
-    "section": "10.2 How to?",
-    "text": "10.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n10.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
+    "title": "11  Large Language Models",
+    "section": "11.2 How to?",
+    "text": "11.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n11.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#how-to-1",
     "href": "cLLM.html#how-to-1",
-    "title": "10  Large Language Models",
-    "section": "10.3 How-to",
-    "text": "10.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
+    "title": "11  Large Language Models",
+    "section": "11.3 How-to",
+    "text": "11.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#using-llms-for-dynamic-research",
     "href": "cLLM.html#using-llms-for-dynamic-research",
-    "title": "10  Large Language Models",
-    "section": "10.4 Using LLMs for Dynamic Research",
-    "text": "10.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
+    "title": "11  Large Language Models",
+    "section": "11.4 Using LLMs for Dynamic Research",
+    "text": "11.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#why-might-you-want-to-do-this",
     "href": "cLLM.html#why-might-you-want-to-do-this",
-    "title": "10  Large Language Models",
-    "section": "10.5 Why Might You Want To Do This?",
-    "text": "10.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a RAG in this context?",
+    "title": "11  Large Language Models",
+    "section": "11.5 Why Might You Want To Do This?",
+    "text": "11.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a RAG in this context?",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#next-steps",
     "href": "cLLM.html#next-steps",
-    "title": "10  Large Language Models",
-    "section": "10.6 Next steps",
-    "text": "10.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
+    "title": "11  Large Language Models",
+    "section": "11.6 Next steps",
+    "text": "11.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
@@ -262,11 +282,11 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "12  Summary",
+    "title": "13  Summary",
     "section": "",
     "text": "In summary, I have not gotten to writing a summary yet.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
@@ -454,56 +474,6 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
-    ]
-  },
-  {
-    "objectID": "cWriting.html#ides-and-writing-up-your-research",
-    "href": "cWriting.html#ides-and-writing-up-your-research",
-    "title": "5  Writing Scientific Documents",
-    "section": "",
-    "text": "Class Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n5.1.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n\n\n\n\n\n\nIn-class Exercise\n\n\n\nLocate, download, install, and verify you can start VS Code.\n\n\n\n\n5.1.2 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\nAdditional material about VS Code and its use as an IDE will be found in this section\n\n\n5.1.3 Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nYou always have choices. You can even [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?\n\n\n\n\n5.1.4 RStudio\nRStudio is a popular IDE for writing R code. R is a programming language particularly useful for statistical analyses. While initially RStudio was only for the R language the number of programming languages it currently supports has grown. It still is not as widely useful as VS Code, and many of RStudio’s features are designed for the interactive evaluation of data, and so it has less of the cutting edge features that software developers expect in their code tools. Whether you want to use RStudio or not will depend in part on your planned activity.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
-    ]
-  },
-  {
-    "objectID": "cWriting.html#scientific-publishing-tools",
-    "href": "cWriting.html#scientific-publishing-tools",
-    "title": "5  Writing Scientific Documents",
-    "section": "5.2 Scientific Publishing Tools",
-    "text": "5.2 Scientific Publishing Tools\nTo understand the plethora of contemporary tooling available to facilitate writing you should know generally what is meant by a mark-up language. This will help you evaluate whether it makes sense for you to switch from a word processiing program, like Word for Windows, to a more general tool like VS Code or emacs.\nSome of the available options you should be familar with are\n\nLaTeX\n\nLaTeX This was the standard for several decades, and used more by mathematicians than others, but today it seems limited in that it produces mostly pdfs, and many people also want their files to export to html (webpages)\n\nA guide to LaTex for Word Users (pdf)\nThe descendants of markdown\nQuarto/Qmd\n\nQuarto (we will skip Rmd and since we are using its successor qmd. Both are related to the people who wrote RStudio,knitr, and are now known as Posit).\n\nOrg Mode\n\nOrg Mode works particularly well with Emacs and allows you to embed code from multiple languages.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
-    ]
-  },
-  {
-    "objectID": "cWriting.html#things-you-can-do-with-quarto",
-    "href": "cWriting.html#things-you-can-do-with-quarto",
-    "title": "5  Writing Scientific Documents",
-    "section": "5.3 Things You Can Do With Quarto",
-    "text": "5.3 Things You Can Do With Quarto\nHere are some of the helper links for things we can do with Quarto:\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\npresentation\nTalking to databases.\nMake a website/blog for your work or lab\nAnd more …",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
-    ]
-  },
-  {
-    "objectID": "cTerminal.html",
-    "href": "cTerminal.html",
-    "title": "6  Terminals",
-    "section": "",
-    "text": "Even before you start coding programs you can use simple coding constructs to efficiently command your computer to do things, script repetitive tasks, or find information hard to locate through a GUI interface. To whet your appetite I have included a short video I made for another course showing some use of the Terminal.\n\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a terminal?\n\n\nTo use your terminal you need to do somethings first:\n\nFind your terminal. Different operating systems refer to the terminal differently. In Windows the =CMD.exe= [fn:1] command is an approximation to a terminal as is the Power Shell. For OSX you navigate to you applications, find the folder “Utilities” and look in their for the terminal application. For Linux it will depend on which particular flavor you have installed.\nLearn some terminology While they do not mean exactly the same thing, you will often find the following terms being used relatively interchangeably.\n\nterminal\nshell\ncommand line What they have in common is the idea of a text based interface to communicating with the operating system. What this means is that instead of opening a gui (gui: G raphical U ser I nterface) to navigate your file tree you do this with a text based system of commands.\n\nTry out some sample commands\n\n\n\n\n\nls\n\n\n\nFigure 6.1: Typing this command in your terminal will list the files and directory. What would you have to do to see the hidden files? How would you get more information about this function and how to use it?\n\n\n\n\n6.0.1 An Historical Aside\nIn the early days of computing people wrote their programs on punch cards. Some see the inspiration as the Jacquard machine. There are still programmers alive who can tell you their horror stories of tripping and falling and scattering their punch cards everywhere. Want to know if your program worked? Take it to the main frame data center, drop it off, and come back the next day to get your print out. Terminals came along as an alternative to communicating with big central processors. There was a screen and keyboard. By typing you could send input to the computer that returned the output to your screen. The terminals we have today are not true terminals, but emulators. Though few people refer to them as such. We emulate this old way of communicating to the processor because it works and is efficient.\n\n\n6.0.2 Why use a terminal?\nYou can get more done. You can get it done more quickly. Once you learn to do one hard thing you never have to figure out how to do it again, because you can easily script it. That is why you want to learn to use the terminal\nTerminals are ubiquitous. They are low in their resource usage. They permit remote logins without the need for sending graphics back and forth. In fact, the remote computer need not have a system installed for displaying windows or even a physical screen attached (called headless).\nKnowing how to use a terminal will allow you to use =ssh= to connect to remote hosts. It will allow you to quickly and efficiently navigate your system, and it will make it easy for you to do things that used to take ages.\n\n\n6.0.3 A scripting example\nWant to convert and compress a large directory of videos as I did for this course. No need to open up each in an application and click a bunch of mouse clicks. Just write a =bash= script to invoke a command line program to do all the work for you. Go get a cup of coffee and come back when the job is done.\n\n\n\n\n\n\nFigure 6.2: How would you pronounce XKCD?\n\n\n\n\n   for i in *.MP4; \n   do name=`echo \"$i\" | cut -d'.' -f1`; \n   echo \"$name\"; \n   ffmpeg -i \"$i\" -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k \"${name}S.mp4\";\n   done\n\nAlmost all of this I copied off the Internet where it appeared as an answer to a question from someone else wanting to do essentially the same thing I did. It took me a while to tweak it to my particular use case, but when that was done my problem was solved, /forever./ Every new batch of videos I just put in their own directory and run this script from the command line. Note that this script uses a for loop, this is a very common programming construct.\n\n\nfor (i in seq(1,5)) { print(i)}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nThis code block demonstrates a simple for loop for the R programming language.\n\n\n\n6.0.4 Resources on Terminals\nThere are a great many resources on how to use the terminal effectively, but don’t go out and read them all. One of the skills to learn in learning to use the computer is to develop your own set of links and resources you can go to when need arises. Don’t try to learn everything at once. You will get overwhelmed and discouraged. Instead you learn what you need when the need arises. And if you need to know something more than once, then you spend the time to dive deeper. There are a great many things about using the terminal that I do not know, but I know the ones I use often, and I know where to find more when I need to know more. You should do the same. Here are a few online resources to get you started.\n\nThe command line\nA Short Series of Terminal Lessons from the UbuntuWiki\nSome Scripting Basics\nAnother Scripting Introduction\n\nMost of what you want to do at the command line, at least in the beginning, you can do with typing directly into the terminal. But at some point you will want to write a file, a script, that has all the commands typed into it. They you can run that script from the terminal. This blog post has some basic background for how to get started.\nNote the use of the term “BASH”. This stands for the Bourne Again Shell. Your terminal can use different shells (and if you are using a mac you are probably using the zsh shell). So while you can use the terms interchangeably most of the time, they don’t mean exactly the same thing.\n\n\n6.0.5 Terminal Games Again\nThese will only work on linux and OS X. If you are on windows you could enable the linux subsystem for linux or you could learn the powershell equivalents. But I suggest that you use the terminals that are built into VS Code for practice. You will usually see these at the bottom of your screen. If not, there is a menu you can use to open one.\n\nls -la /home/\n\n\nWhat does all this output mean?\nWhat changes when you leave out the -la?\nWhat does the hyphen do?\n\n\nCan you find the location of your desktop folder in your terminal?\nCan you change to that directory? cd\nFind out where you are? pwd\nCan you find out who the computer thinks you are, your user name? whoami\nFind out how much free space you have on your computer disk. df -h\nHow do you get help for most of these commands? Usually command –help or (-h)\nHow do you find the manual? man ls\nNavigating\n\nPaths: absolute and relative.\nWhat do those “dots” mean?\nWhat do those slashes mean?\nTab is your friend.\nTry the up arrow too.\n\nFile ownership\n\nMake a text file from the command line. touch /home/yourname/Documents/testText.txt\nWho owns it?\n\nMake a directory mkdir /home/britt/Documents/myFirstDir/ Spaces are the enemy. Never use them, but if you have to, escape () them.\n\n\n\n6.0.6 Using the Terminal to Setup a Python Venv and install Jupyterlab\nThe terminal can also be a very convenient and direct to install programs. You are not clicking buttons in a gui and hoping things work. You have to know exactly what program you want and where you want to put it. As an example we see how we might use the terminal to establish a python virutal environment and use that venv to implement a jupyterlab setup. You will find more on python virtual environments in the appendix.\nOur goal is to be able to test and develop the idea of a jupyter lab notebook. But we will need several pieces of code installed. Assuming we have python3 installed we can use the terminal to set up a secure enviroment for creating a virtual environment. Think of a sandbox that let’s you play without getting the things you installed for experimentation conflict with your system’s tools.\n\nOpen a terminal\nMake a directory (mkdir)\n“cd” into your new directory and create the virtual environment\n\npython3 -m venv .\n\nNext, “activate” the environment with\n\nsource ./bin/activate\n\nNow you can install the needed packages with pip.\n\npip install numpy matplotlib jupyterlab",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Terminals</span>"
-    ]
-  },
-  {
-    "objectID": "cCode.html#footnotes",
-    "href": "cCode.html#footnotes",
-    "title": "7  Coding",
-    "section": "",
-    "text": "This example comes from this node tutorial.↩︎",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coding</span>"
     ]
   }
 ]
