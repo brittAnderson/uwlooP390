@@ -1,0 +1,58 @@
+---
+title: "Python"
+format: html
+---
+
+# Virtual Environments
+
+The advantage of a virtual environment is the ability to isolate libraries you may install for a particular project from interfering with other projects or previously installed libraries. The disadvantage is that they do involve some additional steps and complexity and you may end up installing multiple versions of the same library, which can be an issue if hard disk space on your computer is limited. 
+
+## Methods
+There is more than one tool for creating a python virutal environment, but one of them is built into the standard python installation: *venv*, and so for simplicity this is the one that I recommend starting with.
+
+### Creating and Activating the Venv
+
+If you are in a console you can simply run these commands in the terminal. 
+
+```console
+python -m venv <dir-where-you-want-venv>
+cd <dir-where-you-want-venv>
+source ./bin/activate
+```
+::: {.callout-note}
+Depending on the specifics of your operating system and python installation you may find you need to use `python3` and `pip3` commands instead of plain `python` and `pip`. 
+:::
+If you are using a Windows device you will have to find your equivalent of a linux terminal. This can be using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) or something like [MinGW](https://en.wikipedia.org/wiki/MinGW). 
+
+Once you have activated your `venv` you will see a change in the terminal display that indicates the `venv` is active. Now when you run things like `pip install <something>` it will install that library to a sandbox that is only accessible when using python from within that virtual environment. You should note that this notion of a sandbox or virtual environment is also available for some other programming languages. 
+
+To deactivate the environment you run ,
+
+```console
+deactivate
+```
+
+from within the venv. Look for the change in the terminal display. Note how activating the environment shows up in the terminal prompt. 
+
+```console
+britt@arts-220486 ~ % source p390venv/bin/activate
+(p390venv) britt@arts-220486 ~ % deactivate
+britt@arts-220486 ~ % 
+```
+
+### The Terminal is All You Need
+If you are a minimalist or doing something simple you can invoke the python interpreter in your venv and complete your task there with no other tools, and using only the libraries required for your particular, limited task. However, if you use some companion tooling things may get more complicated and trickier to debug. 
+
+## Visual Studio Code 
+
+VS Code tries to make using a venv easier, but this also means there is some indirection that may make it harder to puzzle out errors. The basic work flow is to make sure that VS code is working in the folder you want your venv to be in. If not, use the `open folder` menu of VS Code to do so. Then, you can use the `Command Palette` (found under the *View* menu tab) to locate the `Python Create Environment` command. If you have never created an environment before it will do so. This can take some time so be patient and make sure this process completes. If there was a virtual environment previously constructed VS Code will probably be able to figure that out and ask you if you want to re-use it. Usually you will, but if not you can select to destroy it and create a new one. You will probably also need to affilate a particular python version to association to your environment. VS Code can often make a reasonable suggestion and you can also use the command `Python Select Interpreter` if necessary. 
+
+After you have done that you will need to move into the affiliated terminal window of your VS Code environment to install the necessary libraries. You will need to be deliberate and make sure that you are in the correct terminal. VS Code may have several of these open for different purposes if you are working on a complicated project. 
+
+Note that while it may be convenient to use the VS Code terminals you do not have to. If you have a terminal program on your computer accessible to you outside of VS Code you can use VS Code as the editor and then move to your other terminal for activating and implementing and compiling the python project. 
+
+### Quarto Complications
+
+When you embed a python code block in your .qmd document you will want to compile it. Quarto is assembling a document. It will need more than just the libraries necessary for compiling the python code. It also needs the library for the textual and graphical representation of the output that you will insert into your document. Specifically, it needs the `jupyter` python library. This means that whatever the python is doing, even if no additional libraries are needed, you will have to have done a `pip install jupyter` in your venv *and* you will need to have the venv active for the location where the qmd is stored and compiled. 
+
+It is worth knowing that although VS Code offers the convenience of buttons to invoke the quarto process it is *not* necessary. You can invoke all the quarto commands through a terminal directly.  For instance `quarto preview <file-name>.qmd` will try to compile your file and will also usually launch your browser so you can see the html result. It will then watch the source file and update the html whenever it detects you have changed the source. This can be quite convenient for editing. 

@@ -10,6 +10,7 @@ p390/bin/
 p390/lib/
 p390/.quarto/
 p390/python-venv*
+!p390/python-venv.qmd
 p390/pyvenv.cfg
 p390/share/
 p390/etc/
