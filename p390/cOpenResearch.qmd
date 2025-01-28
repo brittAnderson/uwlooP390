@@ -1,4 +1,4 @@
-# Open Research Practices Continued
+# More About Open Research Practices
 
 ::: {.callout-tip title="Class Question"}
 What are the **Fair** principles for research?

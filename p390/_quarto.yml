@@ -35,8 +35,6 @@ format:
     theme: cosmo
   pdf:
     documentclass: book
-    template-partials: 
-      - title.tex
     
 engine: knitr
 
