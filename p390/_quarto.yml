@@ -3,7 +3,7 @@ project:
   output-dir: ../docs
 
 book:
-  title: "Psych 390"
+  title: "P390"
   author: "Britt Anderson"
   date: "Winter 2025"
   cover-image: p390cover.png
@@ -34,7 +34,10 @@ format:
   html:
     theme: cosmo
   pdf:
-    documentclass: scrreprt
+    documentclass: book
+    template-partials: 
+      - title.tex
+    
 engine: knitr
 
 
