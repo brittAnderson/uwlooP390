@@ -1,7 +1,5 @@
 # Introduction
 
-This is a book created for PSYCH390 at the [the University of Waterloo](https://uwaterloo.ca)
+This is a book being created for PSYCH390 at the [the University of Waterloo](https://uwaterloo.ca).
 
-We will try to write this book together with each week or so getting its own chapter. You should be able to edit the files in this book yourself to add and correct things. We will learn more about that in the weeks ahead. As a first step see if you can clone the git repository for [course](https://github.com/brittAnderson/uwloop390) course.
-
-You might find some of this [older material in appendix -@sec-versionControl] on using *git* useful for getting started.
+It is very much a work in progress. You can help it get better by providing feedback. Ideally you will do this by raising an issue on the [github repo](https://github.com/brittAnderson/uwlooP390). Even better is if you would fix the book yourself and make a pull request. 
