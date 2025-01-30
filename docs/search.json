@@ -104,7 +104,7 @@
     "href": "cWriting.html#things-you-can-do-with-quarto",
     "title": "5  Writing Scientific Documents",
     "section": "5.3 Things You Can Do With Quarto",
-    "text": "5.3 Things You Can Do With Quarto\nHere are some of the helper links for things we can do with Quarto:\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\npresentation\nTalking to databases.\nMake a website/blog for your work or lab\nAnd more …",
+    "text": "5.3 Things You Can Do With Quarto\nHere are some of the helper links for things we can do with Quarto:\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\npresentation\nTalking to databases.\nMake a website/blog for your work or lab\nAnd more …\n\n\n5.3.1 Making a Website with Quarto and Github Pages\nTo be included\n\n\n5.3.2 Journal Article Authoring\n\n\n\n\n\n\nClassroom Exercise and HW\n\n\n\nWrite an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to your overleaf submission. All the components of an article, at least one figure, and at least one reference. Instead of using an image from the web try to include either your R or Python code for the figure you liked.\n\n\nI find this easier to do from a terminal.\n#| eval: false\n\nquarto use template quarto-journals/elsevier\nThis will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
     ]

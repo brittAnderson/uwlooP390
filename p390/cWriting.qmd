@@ -75,3 +75,25 @@ Here are some of the helper links for things we can do with Quarto:
 - [Talking to databases](https://danielroelfs.com/blog/sql-notebooks-with-quarto/).
 - [Make a website/blog for your work or lab](https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/)
 - [And more ...](https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file)
+
+### Making a Website with Quarto and Github Pages 
+
+To be included
+
+### Journal Article Authoring
+
+::: {.callout-tip title="Classroom Exercise and HW"}
+
+Write an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to your overleaf submission. All the components of an article, at least one figure, and at least one reference. Instead of using an image from the web try to include either your R or Python code for the figure you liked.
+
+:::
+
+I find this easier to do from a terminal. 
+
+```{sh}
+#| eval: false
+
+quarto use template quarto-journals/elsevier
+```
+
+This will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going. 
