@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7580570a2e354cd56757c689413fca0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ffd7eda54363018a19e95f6fbc69f5de.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#languages" id="toc-languages" class="nav-link active" data-scroll-target="#languages"><span class="header-section-number">7.0.1</span> Languages</a></li>
   <li><a href="#ides" id="toc-ides" class="nav-link" data-scroll-target="#ides"><span class="header-section-number">7.0.2</span> IDEs</a></li>
-  <li><a href="#languages-1" id="toc-languages-1" class="nav-link" data-scroll-target="#languages-1"><span class="header-section-number">7.0.3</span> Languages</a></li>
+  <li><a href="#programming-languages" id="toc-programming-languages" class="nav-link" data-scroll-target="#programming-languages"><span class="header-section-number">7.0.3</span> Programming Languages</a></li>
   </ul>
 </nav>
     </div>
@@ -336,12 +336,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Make sure you have the jupyter extension for vscode. Then you will want to create or open a new jupyter file and select the appropriate kernel (initially use python). If you are in the correct directory and had previously created a virtual environment then all should be good to go. And you can <em>in the terminal</em> invoke the quarto command to see your document with <code>quarto preview my-demo-notebook.ipynb</code>.</p>
 </section>
 </section>
-<section id="languages-1" class="level3" data-number="7.0.3">
-<h3 data-number="7.0.3" class="anchored" data-anchor-id="languages-1"><span class="header-section-number">7.0.3</span> Languages</h3>
-<section id="r" class="level4" data-number="7.0.3.1">
-<h4 data-number="7.0.3.1" class="anchored" data-anchor-id="r"><span class="header-section-number">7.0.3.1</span> R</h4>
-<section id="installation" class="level5" data-number="7.0.3.1.1">
-<h5 data-number="7.0.3.1.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">7.0.3.1.1</span> Installation</h5>
+<section id="programming-languages" class="level3" data-number="7.0.3">
+<h3 data-number="7.0.3" class="anchored" data-anchor-id="programming-languages"><span class="header-section-number">7.0.3</span> Programming Languages</h3>
+<section id="basic-constructs" class="level4" data-number="7.0.3.1">
+<h4 data-number="7.0.3.1" class="anchored" data-anchor-id="basic-constructs"><span class="header-section-number">7.0.3.1</span> Basic Constructs</h4>
+<ul>
+<li>Variables Variables are things (lists, values, names, and such) that you want to give a name to. You might do this because you think you are going to want to do something with them later and it might be more convenient to have a short, memorable name for referring to them.</li>
+<li>Functions These have inputs and output. The inputs may be called parameters. Sometimes the outputs are called return values. What the function does is describe the processing of the inputs to the outputs. Think of a factory. It takes in raw materials (inputs) and produces an output. You are describing a factory when you write a function.</li>
+<li>Interpretation and compilation.</li>
+</ul>
+</section>
+<section id="r" class="level4" data-number="7.0.3.2">
+<h4 data-number="7.0.3.2" class="anchored" data-anchor-id="r"><span class="header-section-number">7.0.3.2</span> R</h4>
+<section id="installation" class="level5" data-number="7.0.3.2.1">
+<h5 data-number="7.0.3.2.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">7.0.3.2.1</span> Installation</h5>
 <ul>
 <li>OSX</li>
 <li>Windows</li>
@@ -349,42 +357,255 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p><a href="https://cran.r-project.org/downloads">Download the CORRECT R</a></p>
 <p>Follow the appropriate instructions for your operating system.</p>
-<p>Test your installation by opening a <code>TERMINAL</code> and typing the capital letter R. You should end up in an interpreter. You can quit with <code>quit()</code>.</p>
-<p>Restart R in a TERMINAL and install a package. A package is a collection of code, often much of it written in R, that is used for doing things in R. For example try:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If that went well, you need to make sure you restart VS Code and then click on the little set of squares at the left to install the R extension for VS Code. If you are using VS Code for your IDE as recommended.</p>
+<p>If that goes well check out the <a href="https://r4ds.hadley.nz/">book</a> on using R that is itself written in Quarto, by the programmer who authored the tidyverse (see below). And make sure you can create a file in VSCode as a quarto document, cut and paste in some R code, and see the whole thing compile to a web page.</p>
+</section>
+<section id="working-methods---generally" class="level5" data-number="7.0.3.2.2">
+<h5 data-number="7.0.3.2.2" class="anchored" data-anchor-id="working-methods---generally"><span class="header-section-number">7.0.3.2.2</span> Working Methods - Generally</h5>
+<p>Have your code open in a window and a terminal open running the R interpreter for testing and checking.</p>
+<p>Test your system by, 1. <code>cd</code> to the directory where you want to work. 2. open a .R file in your editor. 3. open a terminal that points to the same directory you can move with <code>cd</code> and check your location with <code>pwd</code>. 4. Verify that you can open R there by typing <code>r</code> and then hit enter. If you need to quit you can type <code>quit()</code>.</p>
+</section>
+<section id="packageslibraries" class="level5" data-number="7.0.3.2.3">
+<h5 data-number="7.0.3.2.3" class="anchored" data-anchor-id="packageslibraries"><span class="header-section-number">7.0.3.2.3</span> Packages/Libraries</h5>
+<p>Many programming languages are very basic in what they offer. In order to do the cool stuff you will need additional collections of code, some of it may even be written in a different programming language, often called packages or libraries that you import, source, or load. <code>ggplot2</code> was an example of that for R and <code>matplotlib</code> for python.</p>
+<div id="fig-installRpackage" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-installRpackage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="fig-installRpackage"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="fig-installRpackage-1"><a href="#fig-installRpackage-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="fig-installRpackage-2"><a href="#fig-installRpackage-2" aria-hidden="true" tabindex="-1"></a>library{tidyverse}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The <a href="https://www.tidyverse.org/">tidyverse</a> is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not.</p>
-<p>If that went well, you need to make sure you restart VS Code and then click on the little set of squares at the left to install the R extension for VS Code.</p>
-<p>If all goes well check out the <a href="https://r4ds.hadley.nz/">book</a> on using R that is itself written in Quarto, by the programmer who authored the tidyverse. And make sure you can create a file in VSCode as a quarto document, cut and paste in some R code, and see the whole thing compile to a web page. This after all will be a homework.</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-installRpackage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: This is an example of installing a package in R and then using it. Note the inconsistent use of quotation marks.
+</figcaption>
+</figure>
+</div>
+<p>The <a href="https://www.tidyverse.org/">tidyverse</a> is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not. I personally often try to just use “base plot”, but most people seem to prefer the “tidyverse”.</p>
+<p>Here is an example of embedding R code in a qmd document. This is very useful when you get to the stage of data analysis or writing your research report. But when you are first exploring the data it is often better to work directly in an R environment and record your code in an .R file to make it easy to replay and edit your work as you go.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(tidyverse)){</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(palmerpenguins)){</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"palmerpenguins"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(tidyverse)){</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(palmerpenguins)){</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"palmerpenguins"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> penguins,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="cCode_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="cCode_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
+<section id="types" class="level5" data-number="7.0.3.2.4">
+<h5 data-number="7.0.3.2.4" class="anchored" data-anchor-id="types"><span class="header-section-number">7.0.3.2.4</span> Types</h5>
+<p>Many programming languages have a notion of a datatype. <code>1</code> can be a number, but “1” can also be a character that you are typing. It doesn’t make sense to add one, the number, to one, the character, but it might make sense to <code>1 + 1</code> for either. You would expect 2 for numbers and maybe “11” for characters. R in particular has many complicated data types that represent the output of functions and statistical analyses. If things are getting confusing you might want to check on the type of your data.</p>
+<div id="fig-rchecktype" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rchecktype-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rchecktype-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: Checking the type of a number in R.
+</figcaption>
+</figure>
+</div>
+<p>Other data structures that you might run across are: - Lists, - Tuples, - Data.Frames</p>
+<div id="fig-rdatatypes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rdatatypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tpl <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lst <span class="ot">=</span> <span class="fu">list</span>(<span class="st">"firstName"</span> <span class="ot">=</span> <span class="st">'Britt'</span>, <span class="st">"lastName"</span> <span class="ot">=</span> <span class="st">'Anderson'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="st">'fn'</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"bob"</span>,<span class="st">"jane"</span>,<span class="st">"griffin"</span>),<span class="st">"gndr"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">'m'</span>,<span class="st">'f'</span>,<span class="st">'o'</span>))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       fn gndr
+1     bob    m
+2    jane    f
+3 griffin    o</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rdatatypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: Each of three datatypes in R are demonstrated. Think of data.frames as a supercharged spreadsheet with columnn names.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="python" class="level4" data-number="7.0.3.2">
-<h4 data-number="7.0.3.2" class="anchored" data-anchor-id="python"><span class="header-section-number">7.0.3.2</span> Python</h4>
+<section id="data.frames" class="level5" data-number="7.0.3.2.5">
+<h5 data-number="7.0.3.2.5" class="anchored" data-anchor-id="data.frames"><span class="header-section-number">7.0.3.2.5</span> Data.Frames</h5>
+<p><code>Data.Frames</code> are particularly central to the R analysis model and are a killer feature. They are also moving into the python analysis space. Let’s look at the cars data frame that comes as part of the base R installation. You can verify it is installed like this.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  speed dist
+1     4    2
+2     4   10
+3     7    4
+4     7   22
+5     8   16
+6     9   10</code></pre>
+</div>
+</div>
+</section>
+<section id="selecting-data" class="level5" data-number="7.0.3.2.6">
+<h5 data-number="7.0.3.2.6" class="anchored" data-anchor-id="selecting-data"><span class="header-section-number">7.0.3.2.6</span> Selecting Data</h5>
+<p>A bit of code that tests for whether something is true or false can be called a <em>predicates</em>. These are important when having your code do something conditionally. If this is true then do this otherwise do that. This common construct of “if-then-else” exists in most programming languages.</p>
+<div id="fig-booleansinR" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-booleansinR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(cars<span class="sc">$</span>dist[cars<span class="sc">$</span>speed <span class="sc">&gt;</span> <span class="dv">10</span> <span class="sc">&amp;</span> cars<span class="sc">$</span>speed <span class="sc">&lt;</span> <span class="dv">20</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 29</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-booleansinR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.4: How many cars are there that can go faster than 10, but not more than 20?
+</figcaption>
+</figure>
+</div>
+<p>How would you do that in Excel?</p>
+<p>What is going on here? 1. <code>cars</code> is the name of the data frame. 2. We access a <em>column</em> of the data frame with the dollar sign notation <code>cars$dist</code>. You can see the names of the columns in a data frame with <code>names(cars)</code>. 3. We use the square brackets to <em>index</em> the column of data we are interested in. Here we do not use specific numbers, but rather we use a <em>boolean</em> to compare the values in a column and we only include the <em>TRUE</em> values. Here we ask for all the indices where the speed is greater than 10, but less than 20, and we use those indices to get the values for the <code>dist</code> column.</p>
+<p><strong>Practice</strong></p>
+<ol type="1">
+<li><p>Sort (or <sub>order</sub>) cars by the <sub>dist</sub> variable.</p></li>
+<li><p>Find the mean and standard deviation of the speed of the cars.</p></li>
+<li><p>Are there other datasets?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="in">library(help="datasets")</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Open any of the datasets that catches your eye.</p></li>
+<li><p>What are the column names?</p></li>
+<li><p>How many rows?</p></li>
+<li><p>What is the <em>comment</em> designator for R?</p></li>
+<li><p>What is the ending extension of an R script?</p></li>
+</ol>
+</section>
+<section id="loops" class="level5" data-number="7.0.3.2.7">
+<h5 data-number="7.0.3.2.7" class="anchored" data-anchor-id="loops"><span class="header-section-number">7.0.3.2.7</span> Loops</h5>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Loops are very different between python and R. You use them a lot more in python than R. R often allows you to “map” over data.</p>
+</div>
+</div>
+<p><code>For</code> loops are the most common looping construct.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ml <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>  (m <span class="cf">in</span> ml) {</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(m)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10</code></pre>
+</div>
+</div>
+<p>Another kind of loop is the <code>while</code> loop.</p>
+<p><em>Test your understanding with more practice.</em></p>
+<ol type="1">
+<li>Edit the above so that it prints the individual number each time it goes through the loop, and not the whole list.</li>
+</ol>
+<p><em>Another project</em> 1. Create a list of at least 8 individual characters. 2. Make sure they are <strong>not</strong> in alphabetical order 3. Print the letters one at a time. 4. Print the letters sorted alphabetically one at a time, but <em>do not</em> overwrite your original list. 5. Print the letters from both lists with a <code>format</code> command that says which position the letter is in.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>myName <span class="ot">=</span> <span class="st">"brittAnderson"</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>myList <span class="ot">=</span> <span class="fu">unlist</span>(<span class="fu">strsplit</span>(myName,<span class="st">""</span>))</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (l <span class="cf">in</span> myList){</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(l)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (l <span class="cf">in</span> myList[<span class="fu">order</span>(myList)]){</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(l)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>i <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (n <span class="cf">in</span> <span class="fu">order</span>(myList)){</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  t  <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"The %.0fth letter of myList is: %s, but is %s in the sorted list."</span>,i,myList[i],myList[n])</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(t)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">=</span> i<span class="sc">+</span><span class="dv">1</span>  </span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="examples-of-functions" class="level5" data-number="7.0.3.2.8">
+<h5 data-number="7.0.3.2.8" class="anchored" data-anchor-id="examples-of-functions"><span class="header-section-number">7.0.3.2.8</span> Examples of Functions</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-6-1" class="code-annotation-target"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a>myadd  <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y) {</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-6-2" class="code-annotation-target"><a href="#annotated-cell-6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">+</span>y)</span>
+<span id="annotated-cell-6-3"><a href="#annotated-cell-6-3" aria-hidden="true" tabindex="-1"></a>  }</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="1" data-code-annotation="1">The arrow is used to assign something to a name. Other languages usually use the equals sign. The keyword <code>function</code> tells R you are creating a function, and the parentheses following establishes the number of inputs and the nicknames you will use in your function.</span>
+</dd>
+<dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="2" data-code-annotation="2"><code>return</code> specifies what we want to get back from the function.</span>
+</dd>
+</dl>
+</div>
+</div>
+<p>Now we can use the function we defined with particular inputs.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">myadd</span>(<span class="dv">2</span>,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p>A few years ago I made a video talking about some of these features, but I used a different IDE from VS Code.</p>
+<div style="padding:56.39% 0 0 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/460262930?h=894daf7c20" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<p>
+<a href="https://vimeo.com/460262930">Hc : Walking Through the R Topic (i2c4p)</a> from <a href="https://vimeo.com/epistemic">Britt Anderson</a> on <a href="https://vimeo.com">Vimeo</a>.
+</p>
+</section>
+</section>
+<section id="python" class="level4" data-number="7.0.3.3">
+<h4 data-number="7.0.3.3" class="anchored" data-anchor-id="python"><span class="header-section-number">7.0.3.3</span> Python</h4>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -398,8 +619,8 @@ Note
 <p>If the following doesn’t go smoothly for you check out the additional suggestions in the <a href="./python-venv.html">python-venv appendix</a>.</p>
 </div>
 </div>
-<section id="installation-1" class="level5" data-number="7.0.3.2.1">
-<h5 data-number="7.0.3.2.1" class="anchored" data-anchor-id="installation-1"><span class="header-section-number">7.0.3.2.1</span> Installation</h5>
+<section id="installation-1" class="level5" data-number="7.0.3.3.1">
+<h5 data-number="7.0.3.3.1" class="anchored" data-anchor-id="installation-1"><span class="header-section-number">7.0.3.3.1</span> Installation</h5>
 <p><a href="https://code.visualstudio.com/docs/languages/python">Installation Instructions</a></p>
 <p>Install the <code>mathplotlib</code> and <code>numpy</code> packages.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Class Discussion">
@@ -430,8 +651,8 @@ Warning
 </div>
 <p><a href="https://dev.to/emminex/how-to-install-python-libraries-in-visual-studio-code-38i1">setting up a venv in vscode and python</a></p>
 </section>
-<section id="testing" class="level5" data-number="7.0.3.2.2">
-<h5 data-number="7.0.3.2.2" class="anchored" data-anchor-id="testing"><span class="header-section-number">7.0.3.2.2</span> Testing</h5>
+<section id="testing" class="level5" data-number="7.0.3.3.2">
+<h5 data-number="7.0.3.3.2" class="anchored" data-anchor-id="testing"><span class="header-section-number">7.0.3.3.2</span> Testing</h5>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -449,33 +670,228 @@ Warning
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="cCode_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="576"></p>
+<p><img src="cCode_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="576"></p>
 </figure>
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Python cares about whitespace. It is strongly recommended that you only use spaces and not tabs when writing python code.</p>
+</div>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-26"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><a class="code-annotation-anchor" data-target-cell="annotated-cell-26" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-26-1" class="code-annotation-target"><a href="#annotated-cell-26-1" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> <span class="st">"britt"</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-26" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-26-2" class="code-annotation-target"><a href="#annotated-cell-26-2" aria-hidden="true" tabindex="-1"></a>my_name_as_list <span class="op">=</span> <span class="bu">list</span>(my_name)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-26" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-26-3" class="code-annotation-target"><a href="#annotated-cell-26-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, j <span class="kw">in</span> <span class="bu">enumerate</span>(my_name_as_list):</span>
+<span id="annotated-cell-26-4"><a href="#annotated-cell-26-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>((i, j))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-26" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-26" data-code-lines="1" data-code-annotation="1">Assignment in python does not use the arrow like R does.</span>
+</dd>
+<dt data-target-cell="annotated-cell-26" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-26" data-code-lines="2" data-code-annotation="2">Strings and lists are different <em>types</em> of data. I have to coerce my string to a list.</span>
+</dd>
+<dt data-target-cell="annotated-cell-26" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-26" data-code-lines="3" data-code-annotation="3">Python has conventions to make it easy to define multiple looping variables at once.</span>
+</dd>
+</dl>
+</div>
+<div id="fig-loopinpython" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-loopinpython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>(0, 'b')
+(1, 'r')
+(2, 'i')
+(3, 't')
+(4, 't')</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-loopinpython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.5: What a for loop might look like in python.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="some-programming-vocabulary" class="level5" data-number="7.0.3.3.3">
+<h5 data-number="7.0.3.3.3" class="anchored" data-anchor-id="some-programming-vocabulary"><span class="header-section-number">7.0.3.3.3</span> Some programming vocabulary</h5>
+<p>If you want to watch a video that reviews some of the programming vocabular and examples typed out (using Emacs and not VS Code) the following video may be of use.</p>
+<div style="padding:56.39% 0 0 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/458286198?h=952e09c8dc" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<p>
+<a href="https://vimeo.com/458286198">Gd : Common programming terms (i2c4p)</a> from <a href="https://vimeo.com/epistemic">Britt Anderson</a> on <a href="https://vimeo.com">Vimeo</a>.
+</p>
+<p>
+An overview of a few basic and fundamental programming terms.
+</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Python is a dynamically typed language. Python will try to guess the type of your data or change it based on context.</p>
+</div>
+</div>
+</section>
+<section id="assignment-and-equality-are-different-in-programming" class="level5" data-number="7.0.3.3.4">
+<h5 data-number="7.0.3.3.4" class="anchored" data-anchor-id="assignment-and-equality-are-different-in-programming"><span class="header-section-number">7.0.3.3.4</span> Assignment and Equality Are Different in Programming</h5>
+<p>Assignment means you are assigning a name to something. Equality is that you are testing if they are the same. One equals sign does not equal two equals sign. That is <code>= != ==</code>. Exclamation points are often used to <em>negate</em> something (turn true to false and vice versa).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">==</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+</div>
+<p>##### For loop details in python</p>
+<p>Python refers to things called “iterables.” To iterate is another way of saying something you can keep doing the same thing over and over to. Imagine a bowl of ice cream. It is “eatable”. You take one spoon, and keep taking spoonfuls until the bowl is empty.</p>
+<p>Indexing is how you get the location of an element in a list. Think of the row or column number in a spread sheet program, but indexes can be more powerful, and can be nested easily. In many programming languages, but sadly not all, <strong>indexes start at 0</strong>. Different programming languages will have slightly different syntax.</p>
+<div class="sourceCode cell-code" id="annotated-cell-29"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-29-1"><a href="#annotated-cell-29-1" aria-hidden="true" tabindex="-1"></a>name_dict <span class="op">=</span> {<span class="st">'firstName'</span> : <span class="st">'Britt'</span>, <span class="st">'lastName'</span> : <span class="st">'Anderson'</span>}</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-29" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-29-2" class="code-annotation-target"><a href="#annotated-cell-29-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>))</span>
+<span id="annotated-cell-29-3"><a href="#annotated-cell-29-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name_dict[<span class="st">'firstName'</span>])</span>
+<span id="annotated-cell-29-4"><a href="#annotated-cell-29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span>
+<span id="annotated-cell-29-5"><a href="#annotated-cell-29-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">0</span>])</span>
+<span id="annotated-cell-29-6"><a href="#annotated-cell-29-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="annotated-cell-29-7"><a href="#annotated-cell-29-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">0</span>:<span class="dv">4</span>])</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-29" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-29" data-code-lines="2" data-code-annotation="1">Notice that here we use <code>range</code> where we used <code>seq</code> in R. There is usually a way to do something similar in both languages, but they may not have the same name.</span>
+</dd>
+</dl>
+</div>
+<div id="fig-indexinginpython" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-indexinginpython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Britt
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+1
+9
+[1, 2, 3, 4]</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-indexinginpython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.6: The use of the <code>-1</code>as an index is a python trick for getting the last element in a list. Think of the list as a circle. If you count backwards from a list you will get to the beginning eventually (index 0) if you went back one more step (-1) you would circle back to the end of the list. Test what happens when you try -2. Does it keep going? A lot of learning how to program is just doing stuff to see what happens.
+</figcaption>
+</figure>
+</div>
+<p><strong>A <code>for</code> loop in python</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ml <span class="kw">in</span> my_list:</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(ml)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ml <span class="kw">in</span> <span class="bu">enumerate</span>(my_list):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"The </span><span class="sc">{0}</span><span class="st">th element was </span><span class="sc">{1}</span><span class="st">"</span>.<span class="bu">format</span>(i, ml))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The 0th element was 1
+The 1th element was 2
+The 2th element was 3
+The 3th element was 4
+The 4th element was 5
+The 5th element was 6
+The 6th element was 7
+The 7th element was 8
+The 8th element was 9</code></pre>
+</div>
+</div>
+<p><strong>Conditionals in python</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Wha.....?</span><span class="ch">\n\n</span><span class="st">"</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Now that is odd"</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"2 does not equal 3."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2 does not equal 3.</code></pre>
+</div>
+</div>
+<p>Note that we use colons and white space to organize code in python, not the {} of R.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Python uses a different syntax to define functions from R.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_add(x, y):</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span>(x <span class="op">+</span> y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="popular-and-useful-python-libraries" class="level5" data-number="7.0.3.3.5">
+<h5 data-number="7.0.3.3.5" class="anchored" data-anchor-id="popular-and-useful-python-libraries"><span class="header-section-number">7.0.3.3.5</span> Popular and Useful Python Libraries</h5>
+<ol type="1">
+<li>Numpy</li>
+<li>Scipy</li>
+<li>Matplotlib</li>
+<li>Pillow</li>
+<li>Sympy</li>
+</ol>
 </section>
 </section>
-<section id="javascript" class="level4" data-number="7.0.3.3">
-<h4 data-number="7.0.3.3" class="anchored" data-anchor-id="javascript"><span class="header-section-number">7.0.3.3</span> Javascript</h4>
-<section id="installation-2" class="level5" data-number="7.0.3.3.1">
-<h5 data-number="7.0.3.3.1" class="anchored" data-anchor-id="installation-2"><span class="header-section-number">7.0.3.3.1</span> Installation</h5>
+<section id="javascript" class="level4" data-number="7.0.3.4">
+<h4 data-number="7.0.3.4" class="anchored" data-anchor-id="javascript"><span class="header-section-number">7.0.3.4</span> Javascript</h4>
+<section id="installation-2" class="level5" data-number="7.0.3.4.1">
+<h5 data-number="7.0.3.4.1" class="anchored" data-anchor-id="installation-2"><span class="header-section-number">7.0.3.4.1</span> Installation</h5>
 <p>Since javascript is already included in most browsers you likely have a basic version of javascript installed, and you can get started with almost no additional tools. As a quick illustration open up your favorite browser and look in the settings or options for something like “more Tools”. Somewhere in that menu should be a web tools or web developer tools entry. Click it, and you should see something that looks like your VS Code screen with terminal like objects at the bottom. One of those is the <em>console</em>. Select it. Then you can create a function and use it with something like:</p>
 <div class="{code-js-demo}">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">add</span>(a<span class="op">,</span>b<span class="op">=</span><span class="dv">10</span>){<span class="cf">return</span> a <span class="op">+</span> b}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">add</span>(a<span class="op">,</span>b<span class="op">=</span><span class="dv">10</span>){<span class="cf">return</span> a <span class="op">+</span> b}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A simple javascript function.</p>
 </div>
 </section>
-<section id="a-better-way-to-go" class="level5" data-number="7.0.3.3.2">
-<h5 data-number="7.0.3.3.2" class="anchored" data-anchor-id="a-better-way-to-go"><span class="header-section-number">7.0.3.3.2</span> A Better Way to Go</h5>
+<section id="a-better-way-to-go" class="level5" data-number="7.0.3.4.2">
+<h5 data-number="7.0.3.4.2" class="anchored" data-anchor-id="a-better-way-to-go"><span class="header-section-number">7.0.3.4.2</span> A Better Way to Go</h5>
 <p>Even though there is a convenience factor in using your browser’s console it is a very limited way to code. It is fine for testing out a line or two of javascript, but to actually code something you will want an actual development environment, and we will use VS Code.</p>
 <p>To code javascript outside the browser you need a proper environment such as <a href="https://nodejs.org/en">Node.js</a>. There are many ways to install this, but if you are new to javascript using the official installer is probably best. To check if the installation went well you can run <code>node -v</code> inside a terminal. You should see a version number. If you are sure you downloaded things correctly you may have to set your path so your terminal can find the installation.</p>
 <p>To test your installation you can create a test folder, e.g.&nbsp;call it “hello” and open that folder in VS Code. Then create a new file “app.js”. VS Code should give you a lot of help out of the box as you enter:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> msg <span class="op">=</span> <span class="st">'Hello World'</span><span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(msg)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> msg <span class="op">=</span> <span class="st">'Hello World'</span><span class="op">;</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(msg)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>After saving you should be able to move down into your terminal and run <code>node app.js</code> to then see “Hello World” printed.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 
