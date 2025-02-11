@@ -1,5 +1,5 @@
 testing/*
-!testing/firstpygame.py
+!testing/*.py
 venv/
 *~
 exampleSyllabi/
