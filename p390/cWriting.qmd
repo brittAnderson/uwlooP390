@@ -90,7 +90,7 @@ Write an article with quarto/qmd and using any of the linked article formats. Ea
 
 I find this easier to do from a terminal. 
 
-```{sh}
+```sh
 #| eval: false
 
 quarto use template quarto-journals/elsevier
