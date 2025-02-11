@@ -18,6 +18,7 @@ book:
     - cWriting.qmd
     - cTerminal.qmd
     - cCode.qmd
+    - cProgExp.qmd
     - cExps.qmd
     - cBiblio.qmd
     - cServer.qmd
@@ -38,7 +39,7 @@ format:
     code-overflow: wrap
   pdf:
     documentclass: book
-    
+highlight-style: ayu 
 engine: knitr
 
 
