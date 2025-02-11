@@ -1,6 +1,3 @@
-testing/*
-testing/pygametest/*
-!testing/pygametest/firstpygame.py
 venv/
 *~
 exampleSyllabi/
