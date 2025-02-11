@@ -1,9 +1,8 @@
-
-### Coding
+## Coding
 
 For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?
 
-#### Languages
+### Languages
 
 What should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.
 
@@ -38,7 +37,7 @@ Another possible classroom exercise.
 
 #### Using an IDE
 
-For this course we will default to [VSCode](https://code.visualstudio.com/), because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an [opensource build](https://vscodium.com/) of VSCode that you can use instead. You can also use anyother tool you want as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in [Emacs](https://www.gnu.org/software/emacs/).
+For this course we will default to [VSCode](https://code.visualstudio.com/), because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an [opensource build](https://vscodium.com/) of VSCode that you can use instead. You can also use any other tool you want to as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in [Emacs](https://www.gnu.org/software/emacs/).
 
 #### VSCode
 
@@ -56,167 +55,6 @@ For this course we will default to [VSCode](https://code.visualstudio.com/), bec
 
 What are jupyter notebooks? Are jupyter notebooks ide's? What are their purpose? What languages to they support? MORE TO ADD
 
-### Terminals
-
-{{< video https://vimeo.com/453837142 title="A Demo of Playing Terminal Games" >}}
-
-::: {.callout-tip title="Class Question"}
-What is a terminal?
-:::
-
-Find your terminal
-  
-Different operating systems refer to the terminal differently. 
-
-In Windows the =CMD.exe= [fn:1] command is an approximation to a terminal as is the =Power Shell= [fn:2]. 
-
-For OSX you navigate to you applications, find the folder "Utilities" and look in their for the terminal application. 
-
-For Linux it will depend on which particular flavor you have installed.
-
-#### Some Terminology
-   While they do not mean [exactly the same thing](https://www.geeksforgeeks.org/difference-between-terminal-console-shell-and-command-line/), you will often find the following terms being used relatively interchangeably. 
-   - terminal
-   - shell
-   - command line
-  What they have in common is the idea of a text based interface to communicating with the operating system. What this means is that instead of opening a gui (gui: *G* raphical *U* ser *I* nterface) to navigate your file tree you do this with a text based system of commands. 
-
-#### Some sample commands 
-
-::: {#fig-ls}
-```{sh}
-#| eval: False
-
-ls
-```
-
-Typing this command in your terminal will list the files and directory.  What would you have to do to see the hidden files? How would you get more information about this function and how to use it?
-:::
-
-##### An Historical Aside
-   In the early days of computing people wrote their programs on [punch cards](https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era). Some see the inspiration as the [Jacquard machine.](https://en.wikipedia.org/wiki/Jacquard_machin) There are still programmers alive who can tell you their horror stories of tripping and falling and scattering their punch cards everywhere. Want to know if your program worked? Take it to the main frame data center, drop it off, and come back the next day to get your print out. 
-   [Terminals](https://en.wikipedia.org/wiki/Computer_terminal) came along as an alternative to communicating with big central processors. There was a screen and keyboard. By typing you could send input to the computer that returned the output to your screen. 
-   The terminals we have today are not true terminals, but emulators. Though few people refer to them as such. We emulate this old way of communicating to the processor because it works and is efficient.
-
-#### Why use a terminal?
-  
-You can get more done. You can get it done more quickly. Once you learn to do one hard thing you never have to figure out how to do it again, because you can [easily script it](https://www.theatlantic.com/technology/archive/2018/10/agents-of-automation/568795/). That is why you want to learn to use the terminal
-
-Terminals are ubiquitous. They are low in their resource usage. They permit remote logins without the need for sending graphics back and forth. In fact, the remote computer need not have a system installed for displaying windows or even a physical screen attached (called headless). 
-
-Knowing how to use a terminal will allow you to use =ssh= to connect to remote hosts. It will allow you to quickly and efficiently navigate your system, and it will make it easy for you to do things that used to take ages. 
-
-  
-#### A scripting example
-Want to convert and compress a large directory of videos as I did for this course. No need to open up each in an application and click a bunch of mouse clicks. Just write a =bash= script to invoke a command line program to do all the work for you. Go get a cup of coffee and come back when the job is done.
-
-::: {#fig-xkcdCompile}
-  
-![](https://imgs.xkcd.com/comics/automation.png)
-
-How would you pronounce XKCD?
-
-:::
-
-```{sh}
-#| eval: False
- 
-   for i in *.MP4; 
-   do name=`echo "$i" | cut -d'.' -f1`; 
-   echo "$name"; 
-   ffmpeg -i "$i" -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k "${name}S.mp4";
-   done
-
-```
-
-
-Almost all of this I copied off the Internet where it appeared as an answer to a question from someone else wanting to do essentially the same thing I did. It took me a while to tweak it to my particular use case, but when that was done my problem was solved, /forever./ Every new batch of videos I just put in their own directory and run this script from the command line. Note that this script uses a *for loop*, this is a very common programming construct.
-
- 
-```{r}
-#| echo: true 
-#| 
-for (i in seq(1,5)) { print(i)}
-```
-
-   
-##### Resources on Terminals
-
-There are a great many resources on how to use the terminal effectively, but don't go out and read them all. One of the skills to learn in learning to use the computer is to develop your own set of links and resources you can go to when need arises. Don't try to learn everything at once. You will get overwhelmed and discouraged. Instead you learn what you need when the need arises. And if you need to know something more than once, then you spend the time to dive deeper. There are a great many things about using the terminal that I do not know, but I know the ones I use often, and I know where to find more when I need to know more. You should do the same. Here are a few online resources to get you started.
-
-  1. [The command line](https://ryanstutorials.net/linuxtutorial/commandline.php)
-  2. [A Short Series of Terminal Lessons from the UbuntuWiki](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
-  3. [Some Scripting Basics](https://null-byte.wonderhowto.com/how-to/hack-like-pro-scripting-for-aspiring-hacker-part-1-bash-basics-0149422/)
-  4. [Another Scripting Introduction](https://hpc-carpentry.github.io/hpc-shell/05-scripts/index.html)
-
-
-Most of what you want to do at the command line, at least in the beginning, you can do with typing directly into the terminal. But at some point you will want to write a file, a script, that has all the commands typed into it. They you can run that script from the terminal. This blog post has some basic background for how to get started. 
-  
-Note the use of the term "BASH". This stands for the Bourne Again Shell. Your terminal can use different shells (and if you are using a mac you are probably using the [zsh](https://ohmyz.sh/) shell). So while you can use the terms interchangeably most of the time, they don't mean exactly the same thing.
-
-##### Terminal Games
-These will only work on linux and OS X. If you are on windows you could enable the [linux subsystem for linux](https://learn.microsoft.com/en-us/windows/wsl/install) or you could learn the [powershell equivalents](https://mathieubuisson.github.io/powershell-linux-bash/). But I suggest that you use the terminals that are built into VS Code for practice. You will usually see these at the bottom of your screen. If not, there is a menu you can use to open one. 
-
-1. ls -la /home/<username>
-  - What does all this output mean?
-  - What changes when you leave out the -la?
-  - What does the hyphen do?
-2. Can you find the location of your desktop folder in your terminal? 
-3. Can you change to that directory?
-   cd
-4. Find out where you are?
-   pwd
-5. Can you find out who the computer thinks you are, your user name?
-   whoami
-6. Find out how much free space you have on your computer disk.
-   df -h
-7. How do you get help for most of these commands?
-   Usually command --help or (-h)
-8. How do you find the manual?
-   man ls
-9. Navigating
-   1. Paths: absolute and relative.
-   2. What do those "dots" mean?
-   3. What do those slashes mean?
-   4. Tab is your friend.
-   5. Try the up arrow too.
-10. File ownership
-    1. Make a text file from the command line.
-         touch /home/yourname/Documents/testText.txt
-    2. Who owns it?
-11. Make a directory
-      mkdir /home/britt/Documents/myFirstDir/
-      Spaces are the enemy. Never use them, but if you have to, escape (\) them.
-
-#### Using the Terminal to Setup a Python Venv and install Jupyterlab
-
-Our goal is to be able to test and develop the idea of a jupyter lab notebook. But we will need several pieces of code installed. Assuming we have python3 installed we can use the terminal to set up a secure enviroment for creating a virtual environment. Think of a sandbox that let's you play without getting the things you installed for experimentation conflict with your system's tools. 
-
-1. Open a terminal
-2. Make a directory (`mkdir`)
-3. "cd" into your new directory and create the virtual environment 
-   ```{sh} 
-   #| echo: True
-   #| eval: False 
-   
-   python3 -m venv .
-   ```
-  
-4. Next, "activate" the environment with 
-   ```{sh} 
-   #| echo: True
-   #| eval: False 
-   
-   source ./bin/activate
-   ```
-5. Now you can install the needed packages with `pip`.
-   ```{sh} 
-   #| echo: True
-   #| eval: False 
-   
-   pip install numpy matplotlib jupyterlab
-   ```
-
 #### Beginning with Jupyter and Quarto/VS
 
 Good instructions are on the Quarto [website](https://quarto.org/docs/tools/vscode-notebook.html). Note those terminal commands. 
@@ -225,10 +63,15 @@ You could at this point use the brower interface for editing your ipynb file wit
 
 Make sure you have the jupyter extension for vscode. Then you will want to create or open a new jupyter file and select the appropriate kernel (initially use python). If you are in the correct directory and had previously created a virtual environment then all should be good to go. And you can *in the terminal* invoke the quarto command to see your document with `quarto preview my-demo-notebook.ipynb`.
 
+### Programming Languages
 
+#### Basic Constructs
+- Variables
+  Variables are things (lists, values, names, and such) that you want to give a name to. You might do this because you think you are going to want to do something with them later and it might be more convenient to have a short, memorable name for referring to them.
+- Functions
+  These have inputs and output. The inputs may be called parameters. Sometimes the outputs are called return values. What the function does is describe the processing of the inputs to the outputs. Think of a factory. It takes in raw materials (inputs) and produces an output. You are describing a factory when you write a function. 
+- Interpretation and compilation. 
 
-
-### Languages
 
 #### R
 
@@ -241,22 +84,48 @@ Make sure you have the jupyter extension for vscode. Then you will want to creat
 
 Follow the appropriate instructions for your operating system. 
 
-Test your installation by opening a `TERMINAL` and typing the capital letter R. You should end up in an interpreter. You can quit with `quit()`.
+If that went well, you need to make sure you restart VS Code and then click on the little set of squares at the left to install the R extension for VS Code. If you are using VS Code for your IDE as recommended.
 
-Restart R in a TERMINAL and install a package. A package is a collection of code, often much of it written in R, that is used for doing things in R. For example try:
+If that goes well check out the [book](https://r4ds.hadley.nz/) on using R that is itself written in Quarto, by the programmer who authored the tidyverse (see below). And make sure you can create a file in VSCode as a quarto document, cut and paste in some R code, and see the whole thing compile to a web page. 
 
-```{{r}}
+##### Working Methods - Generally
+
+Have your code open in a window and a terminal open running the R interpreter for testing and checking. 
+
+Test your system by, 
+1. `cd` to the directory where you want to work. 
+2. open a .R file in your editor.
+3. open a terminal that points to the same directory
+   you can move with `cd` and check your location with `pwd`.
+4. Verify that you can open R there by typing `r` and then hit enter. 
+   If you need to quit you can type `quit()`.
+
+
+##### Packages/Libraries
+
+Many programming languages are very basic in what they offer. In order to do the cool stuff you will need additional collections of code, some of it may even be written in a different programming language, often called packages or libraries that you import, source, or load. `ggplot2` was an example of that for R and `matplotlib` for python. 
+
+
+
+::: {#fig-installRpackage}
+
+```r
 install.packages("tidyverse")
+library{tidyverse}
 ```
 
+This is an example of installing a package in R and then using it. 
+Note the inconsistent use of quotation marks.
 
-The [tidyverse](https://www.tidyverse.org/) is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not. 
+:::
 
-If that went well, you need to make sure you restart VS Code and then click on the little set of squares at the left to install the R extension for VS Code. 
 
-If all goes well check out the [book](https://r4ds.hadley.nz/) on using R that is itself written in Quarto, by the programmer who authored the tidyverse. And make sure you can create a file in VSCode as a quarto document, cut and paste in some R code, and see the whole thing compile to a web page. This after all will be a homework. 
+The [tidyverse](https://www.tidyverse.org/) is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not. I personally often try to just use "base plot", but most people seem to prefer the "tidyverse".
+
+Here is an example of embedding R code in a qmd document. This is very useful when you get to the stage of data analysis or writing your research report. But when you are first exploring the data it is often better to work directly in an R environment and record your code in an .R file to make it easy to replay and edit your work as you go. 
 
 ```{r}
+#| warning: false
 if(!require(tidyverse)){
     install.packages("tidyverse")
 }
@@ -273,6 +142,171 @@ ggplot(
   geom_point() +
   geom_smooth(method = "lm")
 ```
+
+
+ 
+##### Types
+
+Many programming languages have a notion of a datatype. `1` can be a number, but "1" can also be a character that you are typing. It doesn't make sense to add one, the number, to one, the character, but it might make sense to `1 + 1` for either. You would expect 2 for numbers and maybe "11" for characters. R in particular has many complicated data types that represent the output of functions and statistical analyses. If things are getting confusing you might want to check on the type of your data. 
+
+::: {#fig-rchecktype}
+
+```{r}
+a = 1
+typeof(a)
+```
+
+Checking the type of a number in R.
+
+:::
+
+
+Other data structures that you might run across are:
+- Lists, 
+- Tuples, 
+- Data.Frames
+
+
+
+::: {#fig-rdatatypes}
+
+```{r}
+tpl = c(1,2)
+lst = list("firstName" = 'Britt', "lastName" = 'Anderson')
+df = data.frame('fn' = c("bob","jane","griffin"),"gndr" = c('m','f','o'))
+df
+```
+
+Each of three datatypes in R are demonstrated. Think of data.frames as a supercharged spreadsheet with columnn names.
+
+:::
+
+##### Data.Frames
+
+`Data.Frames` are particularly central to the R analysis model and are a killer feature. They are also moving into the python analysis space. Let's look at the cars
+data frame that comes as part of the base R installation. You can
+verify it is installed like this.
+
+```{r}
+is.data.frame(cars)
+head(cars)
+```
+
+
+##### Selecting Data
+
+A bit of code that tests for whether something is true or false can be called a *predicates*. These are important when having your code do something conditionally. If this is true then do this otherwise do that. This common construct of "if-then-else" exists in most programming languages. 
+    
+
+::: {#fig-booleansinR}
+
+```{r}
+length(cars$dist[cars$speed > 10 & cars$speed < 20])
+
+```
+
+How many cars are there that can go faster than 10, but not more than 20?
+
+:::
+
+How would you do that in Excel?
+
+
+What is going on here?
+1. `cars` is the name of the data frame.
+2. We access a *column* of the data frame with the dollar sign notation `cars$dist`. You can see the names of the columns in a data frame with `names(cars)`.
+3. We use the square brackets to *index* the column of data we are interested in. Here we do not use specific numbers, but rather we use a *boolean* to compare the values in a column and we only include the *TRUE* values. Here we ask for all the indices where the speed is greater than 10, but less than 20, and we use those indices to get the values for the `dist` column. 
+
+**Practice**
+
+1. Sort (or ~order~) cars by the ~dist~ variable.
+2. Find the mean and standard deviation of the speed of the cars.
+3. Are there other datasets?   
+   ```{{r}} 
+   library(help="datasets")
+   
+   ```
+4. Open any of the datasets that catches your eye.
+5. What are the column names?
+6. How many rows?
+7. What is the *comment* designator for R?
+8. What is the ending extension of an R script?
+
+
+##### Loops
+
+::: {.callout-tip}
+Loops are very different between python and R. You use them a lot more in python than R. R often allows you to "map" over data.
+
+:::
+
+`For` loops are the most common looping construct. 
+
+```{r}
+ml <- seq(1:10)
+for  (m in ml) {
+  print(m)
+}
+```
+
+Another kind of loop is the `while` loop.
+
+*Test your understanding with more practice.*
+
+1. Edit the above so that it prints the individual number each time it goes through the loop, and not the whole list.
+
+*Another project*
+1. Create a list of at least 8 individual characters.
+2. Make sure they are **not** in alphabetical order
+3. Print the letters one at a time.
+4. Print the letters sorted alphabetically one at a time, but *do not* overwrite your original list.
+5. Print the letters from both lists with a `format` command that says which position the letter is in.
+
+```{r}
+#| code-fold: true
+#| eval: false
+#| 
+myName = "brittAnderson"
+myList = unlist(strsplit(myName,""))
+
+for (l in myList){
+  print(l)
+  }
+
+for (l in myList[order(myList)]){
+  print(l)
+  }
+
+i = 1
+for (n in order(myList)){
+  t  <- sprintf("The %.0fth letter of myList is: %s, but is %s in the sorted list.",i,myList[i],myList[n])
+  print(t)
+  i = i+1  
+  }
+
+```
+
+##### Examples of Functions
+
+```{r}
+myadd  <- function(x,y) { # <1>
+  return(x+y)             # <2>
+  }
+```
+1. The arrow is used to assign something to a name. Other languages usually use the equals sign. The keyword `function` tells R you are creating a function, and the parentheses following establishes the number of inputs and the nicknames you will use in your function. 
+2. `return` specifies what we want to get back from the function. 
+
+
+Now we can use the function we defined with particular inputs. 
+
+```{r} 
+myadd(2,3)
+```
+
+A few years ago I made a video talking about some of these features, but I used a different IDE from VS Code. 
+
+<div style="padding:56.39% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/460262930?h=894daf7c20" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/460262930">Hc : Walking Through the R Topic (i2c4p)</a> from <a href="https://vimeo.com/epistemic">Britt Anderson</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 
 #### Python
@@ -304,6 +338,10 @@ You may need to install the "reticulate" package for R if you want to run both p
 :::
 
 ```{python}
+#| warning: false
+#| echo: false
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -313,29 +351,181 @@ data = np.random.lognormal(size=(37, 4), mean=1.5, sigma=1.75)
 labels = list('ABCD')
 fs = 10  # fontsize
 fig, axs = plt.subplots(nrows=2, ncols=3, figsize=(6, 6), sharey=True)
-axs[0, 0].boxplot(data, tick_labels=labels)
-axs[0, 0].set_title('Default', fontsize=fs)
-
-axs[0, 1].boxplot(data, tick_labels=labels, showmeans=True)
-axs[0, 1].set_title('showmeans=True', fontsize=fs)
-
-axs[0, 2].boxplot(data, tick_labels=labels, showmeans=True, meanline=True)
-axs[0, 2].set_title('showmeans=True,\nmeanline=True', fontsize=fs)
-
-axs[1, 0].boxplot(data, tick_labels=labels, showbox=False, showcaps=False)
-tufte_title = 'Tufte Style \n(showbox=False,\nshowcaps=False)'
-axs[1, 0].set_title(tufte_title, fontsize=fs)
-
-axs[1, 1].boxplot(data, tick_labels=labels, notch=True, bootstrap=10000)
-axs[1, 1].set_title('notch=True,\nbootstrap=10000', fontsize=fs)
-
-axs[1, 2].boxplot(data, tick_labels=labels, showfliers=False)
-axs[1, 2].set_title('showfliers=False', fontsize=fs)
+axs[0, 0].boxplot(data, tick_labels=labels);
+axs[0, 0].set_title('Default', fontsize=fs);
+axs[0, 1].boxplot(data, tick_labels=labels, showmeans=True);
+axs[0, 1].set_title('showmeans=True', fontsize=fs);
+axs[0, 2].boxplot(data, tick_labels=labels, showmeans=True, meanline=True);
+axs[0, 2].set_title('showmeans=True,\nmeanline=True', fontsize=fs);
+axs[1, 0].boxplot(data, tick_labels=labels, showbox=False, showcaps=False);
+tufte_title = 'Tufte Style \n(showbox=False,\nshowcaps=False)';
+axs[1, 0].set_title(tufte_title, fontsize=fs);
+axs[1, 1].boxplot(data, tick_labels=labels, notch=True, bootstrap=10000);
+axs[1, 1].set_title('notch=True,\nbootstrap=10000', fontsize=fs);
+axs[1, 2].boxplot(data, tick_labels=labels, showfliers=False);
+axs[1, 2].set_title('showfliers=False', fontsize=fs);
 
 for ax in axs.flat:
-    ax.set_yscale('log')
-    ax.set_yticklabels([])
+    ax.set_yscale('log');
+    ax.set_yticklabels([]);
 
 fig.subplots_adjust(hspace=0.4)
 ```
+
+::: {.callout-warning}
+Python cares about whitespace. It is strongly recommended that you only use spaces and not tabs when writing python code. 
+:::
+
+::: {#fig-loopinpython}
+
+```{python}
+my_name = "britt"                          # <1>
+my_name_as_list = list(my_name)            # <2>
+for i, j in enumerate(my_name_as_list):    # <3>
+  print((i, j))
+
+```
+1. Assignment in python does not use the arrow like R does.
+2. Strings and lists are different *types* of data. I have to coerce my string to a list.
+3. Python has conventions to make it easy to define multiple looping variables at once. 
+
+
+What a for loop might look like in python.
+
+:::
+
+##### Some programming vocabulary
+
+If you want to watch a video that reviews some of the programming vocabular and examples typed out (using Emacs and not VS Code) the following video may be of use. 
+
+<div style="padding:56.39% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/458286198?h=952e09c8dc" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/458286198">Gd : Common programming terms (i2c4p)</a> from <a href="https://vimeo.com/epistemic">Britt Anderson</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p>An overview of a few basic and fundamental programming terms.</p>
+
+::: {.callout-important}
+Python is a dynamically typed language. Python will try to guess the type of your data or change it based on context. 
+
+:::
+
+##### Assignment and Equality Are Different in Programming
+
+Assignment means you are assigning a name to something. Equality is that you are testing if they are the same. One equals sign does not equal two equals sign. That is ` = != ==`. Exclamation points are often used to *negate* something (turn true to false and vice versa).
+
+
+```{python}
+a = 2
+print(a == 3)
+
+```
+
+ ##### For loop details in python
+ 
+ Python refers to things called "iterables." To iterate is another way of saying something you can keep doing the same thing over and over to. Imagine a bowl of ice cream. It is "eatable". You take one spoon, and keep taking spoonfuls until the bowl is empty. 
+
+Indexing is how you get the location of an element in a list. Think of the row or column number in a spread sheet program, but indexes can be more powerful, and can be nested easily. In many programming languages, but sadly not all, **indexes start at 0**. Different programming languages will have slightly different syntax. 
+
+::: {#fig-indexinginpython}
+
+
+```{python}
+name_dict = {'firstName' : 'Britt', 'lastName' : 'Anderson'}
+my_list = list(range(1, 10))                                      # <1>
+print(name_dict['firstName'])
+print(my_list)
+print(my_list[0])
+print(my_list[-1])
+print(my_list[0:4])
+
+```
+1. Notice that here we use `range` where we used `seq` in R. There is usually a way to do something similar in both languages, but they may not have the same name.
+
+
+The use of the `-1`as an index is a python trick for getting the last element in a list. Think of the list as a circle. If you count backwards from a list you will get to the beginning eventually (index 0) if you went back one more step (-1) you would circle back to the end of the list. Test what happens when you try -2. Does it keep going? A lot of learning how to program is just doing stuff to see what happens.
+
+
+:::
+
+**A `for` loop in python**
+
+```{python}
+for ml in my_list:
+  print(ml)
+
+for i, ml in enumerate(my_list):
+  print("The {0}th element was {1}".format(i, ml))
+```
+
+**Conditionals in python**
+
+```{python}
+if 2 == 3:
+  print("Wha.....?\n\n")
+elif 3 == 2:
+  print("Now that is odd")
+else:
+  print("2 does not equal 3.")
+
+```
+
+Note that we use colons and white space to organize code in python, not the {} of R. 
+
+::: {.callout-important}
+Python uses a different syntax to define functions from R.
+:::
+
+
+```{python}
+def my_add(x, y):
+  return(x + y)
+
+```
+
+
+##### Popular and Useful Python Libraries
+  
+1. Numpy
+2. Scipy
+3. Matplotlib
+4. Pillow
+5. Sympy
+
 #### Javascript
+
+##### Installation
+
+Since javascript is already included in most browsers you likely have a basic version of javascript installed, and you can get started with almost no additional tools. As a quick illustration open up your favorite browser and look in the settings or options for something like "more Tools". Somewhere in that menu should be a web tools or web developer tools entry. Click it, and you should see something that looks like your VS Code screen with terminal like objects at the bottom. One of those is the *console*. Select it. Then you can create a function and use it with something like:
+
+:::{code-js-demo}
+
+```{js}
+#| eval: False
+
+function add(a,b=10){return a + b}
+```
+
+A simple javascript function.
+
+:::
+
+##### A Better Way to Go
+
+Even though there is a convenience factor in using your browser's console it is a very limited way to code. It is fine for testing out a line or two of javascript, but to actually code something you will want an actual development environment, and we will use VS Code. 
+
+To code javascript outside the browser you need a proper environment such as [Node.js](https://nodejs.org/en). There are many ways to install this, but if you are new to javascript using the official installer is probably best. To check if the installation went well you can run `node -v` inside a terminal. You should see a version number. If you are sure you downloaded things correctly you may have to set your path so your terminal can find the installation. 
+
+To test your installation you can create a test folder, e.g. call it "hello" and open that folder in VS Code. Then create a new file "app.js". VS Code should give you a lot of help out of the box as you enter: 
+
+```{js}
+#| eval: false
+
+var msg = 'Hello World';
+console.log(msg);
+
+```
+
+After saving you should be able to move down into your terminal and run `node app.js` to then see "Hello World" printed.[^1]
+
+[^1]: This example comes from [this node tutorial](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial).
+
+
+

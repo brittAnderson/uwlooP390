@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Databases and management – P390</title>
+<title>6&nbsp; Terminals – P390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./cLLM.html" rel="prev">
+<link href="./cCode.html" rel="next">
+<link href="./cWriting.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cDatabase.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Databases and management</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cTerminal.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Terminals</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -144,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cTerminal.html" class="sidebar-item-text sidebar-link">
+  <a href="./cTerminal.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Terminals</span></span></a>
   </div>
 </li>
@@ -180,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cDatabase.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cDatabase.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Databases and management</span></span></a>
   </div>
 </li>
@@ -229,8 +263,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#datascience" id="toc-datascience" class="nav-link active" data-scroll-target="#datascience"><span class="header-section-number">12.0.1</span> Datascience</a></li>
-  <li><a href="#grant-funding" id="toc-grant-funding" class="nav-link" data-scroll-target="#grant-funding"><span class="header-section-number">12.0.2</span> Grant Funding</a></li>
+  <li><a href="#an-historical-aside" id="toc-an-historical-aside" class="nav-link active" data-scroll-target="#an-historical-aside"><span class="header-section-number">6.0.1</span> An Historical Aside</a></li>
+  <li><a href="#why-use-a-terminal" id="toc-why-use-a-terminal" class="nav-link" data-scroll-target="#why-use-a-terminal"><span class="header-section-number">6.0.2</span> Why use a terminal?</a></li>
+  <li><a href="#a-scripting-example" id="toc-a-scripting-example" class="nav-link" data-scroll-target="#a-scripting-example"><span class="header-section-number">6.0.3</span> A scripting example</a></li>
+  <li><a href="#resources-on-terminals" id="toc-resources-on-terminals" class="nav-link" data-scroll-target="#resources-on-terminals"><span class="header-section-number">6.0.4</span> Resources on Terminals</a></li>
+  <li><a href="#terminal-games-again" id="toc-terminal-games-again" class="nav-link" data-scroll-target="#terminal-games-again"><span class="header-section-number">6.0.5</span> Terminal Games Again</a></li>
+  <li><a href="#using-the-terminal-to-setup-a-python-venv-and-install-jupyterlab" id="toc-using-the-terminal-to-setup-a-python-venv-and-install-jupyterlab" class="nav-link" data-scroll-target="#using-the-terminal-to-setup-a-python-venv-and-install-jupyterlab"><span class="header-section-number">6.0.6</span> Using the Terminal to Setup a Python Venv and install Jupyterlab</a></li>
   </ul>
 </nav>
     </div>
@@ -239,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Databases and management</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Terminals</span></h1>
 </div>
 
 
@@ -256,22 +294,156 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Even before you start coding programs you can use simple coding constructs to efficiently command your computer to do things, script repetitive tasks, or find information hard to locate through a GUI interface. To whet your appetite I have included a short video I made for another course showing some use of the Terminal.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/453837142" frameborder="0" title="A Demo of Playing Terminal Games" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Class Question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Class Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What is a terminal?</p>
+</div>
+</div>
+<p>To use your terminal you need to do somethings first:</p>
+<ol type="1">
+<li>Find your terminal. Different operating systems refer to the terminal differently. In Windows the =CMD.exe= [fn:1] command is an approximation to a terminal as is the <a href="https://learn.microsoft.com/en-ca/powershell/">Power Shell</a>. For OSX you navigate to you applications, find the folder “Utilities” and look in their for the terminal application. For Linux it will depend on which particular flavor you have installed.</li>
+<li>Learn some terminology While they do not mean <a href="https://www.geeksforgeeks.org/difference-between-terminal-console-shell-and-command-line/">exactly the same thing</a>, you will often find the following terms being used relatively interchangeably.
 <ul>
-<li><a href="https://www.dataversity.net/what-is-database-management/">What is it</a></li>
-<li><a href="https://learning-oreilly-com.proxy.lib.uwaterloo.ca/library/view/getting-started-with/9781803241005/B18270_01.xhtml#_idTextAnchor015">A book on DuckDB - database stuff</a></li>
-<li><a href="https://mariadb.org/">MariaDB</a> This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is <a href="https://www.simplified.guide/mysql-mariadb/import-csv">one example</a> how. A <a href="https://kinsta.com/blog/mariadb-vs-postgresql/">blog</a> that compares MariaDB to SQL. A <a href="https://mariadb.com/kb/en/mariadb-basics/">quickie tutorial</a>.</li>
-<li>Why would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.</li>
-<li><em>Exercise</em> Download MariaDB</li>
-</ul>
-<section id="datascience" class="level3" data-number="12.0.1">
-<h3 data-number="12.0.1" class="anchored" data-anchor-id="datascience"><span class="header-section-number">12.0.1</span> Datascience</h3>
-<ul>
-<li><a href="https://medium.com/@fareedkhandev/complete-roadmap-of-data-science-for-non-cs-cs-students-equivalent-to-a-degree-1a0a810360c0">one person’s roadmap for non-cs grads</a></li>
-</ul>
+<li>terminal</li>
+<li>shell</li>
+<li>command line What they have in common is the idea of a text based interface to communicating with the operating system. What this means is that instead of opening a gui (gui: <em>G</em> raphical <em>U</em> ser <em>I</em> nterface) to navigate your file tree you do this with a text based system of commands.</li>
+</ul></li>
+<li>Try out some sample commands</li>
+</ol>
+<div id="fig-ls" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: Typing this command in your terminal will list the files and directory. What would you have to do to see the hidden files? How would you get more information about this function and how to use it?
+</figcaption>
+</figure>
+</div>
+<section id="an-historical-aside" class="level3" data-number="6.0.1">
+<h3 data-number="6.0.1" class="anchored" data-anchor-id="an-historical-aside"><span class="header-section-number">6.0.1</span> An Historical Aside</h3>
+<p>In the early days of computing people wrote their programs on <a href="https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era">punch cards</a>. Some see the inspiration as the <a href="https://en.wikipedia.org/wiki/Jacquard_machin">Jacquard machine.</a> There are still programmers alive who can tell you their horror stories of tripping and falling and scattering their punch cards everywhere. Want to know if your program worked? Take it to the main frame data center, drop it off, and come back the next day to get your print out. <a href="https://en.wikipedia.org/wiki/Computer_terminal">Terminals</a> came along as an alternative to communicating with big central processors. There was a screen and keyboard. By typing you could send input to the computer that returned the output to your screen. The terminals we have today are not true terminals, but emulators. Though few people refer to them as such. We emulate this old way of communicating to the processor because it works and is efficient.</p>
 </section>
-<section id="grant-funding" class="level3" data-number="12.0.2">
-<h3 data-number="12.0.2" class="anchored" data-anchor-id="grant-funding"><span class="header-section-number">12.0.2</span> Grant Funding</h3>
-<p>At the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?</p>
+<section id="why-use-a-terminal" class="level3" data-number="6.0.2">
+<h3 data-number="6.0.2" class="anchored" data-anchor-id="why-use-a-terminal"><span class="header-section-number">6.0.2</span> Why use a terminal?</h3>
+<p>You can get more done. You can get it done more quickly. Once you learn to do one hard thing you never have to figure out how to do it again, because you can <a href="https://www.theatlantic.com/technology/archive/2018/10/agents-of-automation/568795/">easily script it</a>. That is why you want to learn to use the terminal</p>
+<p>Terminals are ubiquitous. They are low in their resource usage. They permit remote logins without the need for sending graphics back and forth. In fact, the remote computer need not have a system installed for displaying windows or even a physical screen attached (called headless).</p>
+<p>Knowing how to use a terminal will allow you to use =ssh= to connect to remote hosts. It will allow you to quickly and efficiently navigate your system, and it will make it easy for you to do things that used to take ages.</p>
+</section>
+<section id="a-scripting-example" class="level3" data-number="6.0.3">
+<h3 data-number="6.0.3" class="anchored" data-anchor-id="a-scripting-example"><span class="header-section-number">6.0.3</span> A scripting example</h3>
+<p>Want to convert and compress a large directory of videos as I did for this course. No need to open up each in an application and click a bunch of mouse clicks. Just write a =bash= script to invoke a command line program to do all the work for you. Go get a cup of coffee and come back when the job is done.</p>
+<div id="fig-xkcdCompile" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-xkcdCompile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://imgs.xkcd.com/comics/automation.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-xkcdCompile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: How would you pronounce XKCD?
+</figcaption>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>   <span class="cf">for</span> i <span class="kw">in</span> <span class="pp">*</span>.MP4<span class="kw">;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>   <span class="cf">do</span> <span class="va">name</span><span class="op">=</span><span class="kw">`</span><span class="bu">echo</span> <span class="st">"</span><span class="va">$i</span><span class="st">"</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span><span class="st">'.'</span> <span class="at">-f1</span><span class="kw">`;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   <span class="bu">echo</span> <span class="st">"</span><span class="va">$name</span><span class="st">"</span><span class="kw">;</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   <span class="ex">ffmpeg</span> <span class="at">-i</span> <span class="st">"</span><span class="va">$i</span><span class="st">"</span> <span class="at">-c:v</span> libx264 <span class="at">-b:v</span> 1.5M <span class="at">-c:a</span> aac <span class="at">-b:a</span> 128k <span class="st">"</span><span class="va">${name}</span><span class="st">S.mp4"</span><span class="kw">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>   <span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Almost all of this I copied off the Internet where it appeared as an answer to a question from someone else wanting to do essentially the same thing I did. It took me a while to tweak it to my particular use case, but when that was done my problem was solved, /forever./ Every new batch of videos I just put in their own directory and run this script from the command line. Note that this script uses a <a href="#for-loop">for loop</a>, this is a very common programming construct.</p>
+<div id="for-loop">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">5</span>)) { <span class="fu">print</span>(i)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5</code></pre>
+</div>
+</div>
+<p>This code block demonstrates a simple for loop for the R programming language.</p>
+</div>
+</section>
+<section id="resources-on-terminals" class="level3" data-number="6.0.4">
+<h3 data-number="6.0.4" class="anchored" data-anchor-id="resources-on-terminals"><span class="header-section-number">6.0.4</span> Resources on Terminals</h3>
+<p>There are a great many resources on how to use the terminal effectively, but don’t go out and read them all. One of the skills to learn in learning to use the computer is to develop your own set of links and resources you can go to when need arises. Don’t try to learn everything at once. You will get overwhelmed and discouraged. Instead you learn what you need when the need arises. And if you need to know something more than once, then you spend the time to dive deeper. There are a great many things about using the terminal that I do not know, but I know the ones I use often, and I know where to find more when I need to know more. You should do the same. Here are a few online resources to get you started.</p>
+<ol type="1">
+<li><a href="https://ryanstutorials.net/linuxtutorial/commandline.php">The command line</a></li>
+<li><a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview">A Short Series of Terminal Lessons from the UbuntuWiki</a></li>
+<li><a href="https://null-byte.wonderhowto.com/how-to/hack-like-pro-scripting-for-aspiring-hacker-part-1-bash-basics-0149422/">Some Scripting Basics</a></li>
+<li><a href="https://hpc-carpentry.github.io/hpc-shell/05-scripts/index.html">Another Scripting Introduction</a></li>
+</ol>
+<p>Most of what you want to do at the command line, at least in the beginning, you can do with typing directly into the terminal. But at some point you will want to write a file, a script, that has all the commands typed into it. They you can run that script from the terminal. This blog post has some basic background for how to get started.</p>
+<p>Note the use of the term “BASH”. This stands for the Bourne Again Shell. Your terminal can use different shells (and if you are using a mac you are probably using the <a href="https://ohmyz.sh/">zsh</a> shell). So while you can use the terms interchangeably most of the time, they don’t mean exactly the same thing.</p>
+</section>
+<section id="terminal-games-again" class="level3" data-number="6.0.5">
+<h3 data-number="6.0.5" class="anchored" data-anchor-id="terminal-games-again"><span class="header-section-number">6.0.5</span> Terminal Games Again</h3>
+<p>These will only work on linux and OS X. If you are on windows you could enable the <a href="https://learn.microsoft.com/en-us/windows/wsl/install">linux subsystem for linux</a> or you could learn the <a href="https://mathieubuisson.github.io/powershell-linux-bash/">powershell equivalents</a>. But I suggest that you use the terminals that are built into VS Code for practice. You will usually see these at the bottom of your screen. If not, there is a menu you can use to open one.</p>
+<ol type="1">
+<li>ls -la /home/<username></username></li>
+</ol>
+<ul>
+<li>What does all this output mean?</li>
+<li>What changes when you leave out the -la?</li>
+<li>What does the hyphen do?</li>
+</ul>
+<ol start="2" type="1">
+<li>Can you find the location of your desktop folder in your terminal?</li>
+<li>Can you change to that directory? cd</li>
+<li>Find out where you are? pwd</li>
+<li>Can you find out who the computer thinks you are, your user name? whoami</li>
+<li>Find out how much free space you have on your computer disk. df -h</li>
+<li>How do you get help for most of these commands? Usually command –help or (-h)</li>
+<li>How do you find the manual? man ls</li>
+<li>Navigating
+<ol type="1">
+<li>Paths: absolute and relative.</li>
+<li>What do those “dots” mean?</li>
+<li>What do those slashes mean?</li>
+<li>Tab is your friend.</li>
+<li>Try the up arrow too.</li>
+</ol></li>
+<li>File ownership
+<ol type="1">
+<li>Make a text file from the command line. touch /home/yourname/Documents/testText.txt</li>
+<li>Who owns it?</li>
+</ol></li>
+<li>Make a directory mkdir /home/britt/Documents/myFirstDir/ Spaces are the enemy. Never use them, but if you have to, escape () them.</li>
+</ol>
+</section>
+<section id="using-the-terminal-to-setup-a-python-venv-and-install-jupyterlab" class="level3" data-number="6.0.6">
+<h3 data-number="6.0.6" class="anchored" data-anchor-id="using-the-terminal-to-setup-a-python-venv-and-install-jupyterlab"><span class="header-section-number">6.0.6</span> Using the Terminal to Setup a Python Venv and install Jupyterlab</h3>
+<p>The terminal can also be a very convenient and direct to install programs. You are not clicking buttons in a gui and hoping things work. You have to know exactly what program you want and where you want to put it. As an example we see how we might use the terminal to establish a python virutal environment and use that venv to implement a <a href="https://jupyter.org/">jupyterlab</a> setup. You will find more on python virtual environments in the <a href="./python-venv.html">appendix</a>.</p>
+<p>Our goal is to be able to test and develop the idea of a jupyter lab notebook. But we will need several pieces of code installed. Assuming we have python3 installed we can use the terminal to set up a secure enviroment for creating a virtual environment. Think of a sandbox that let’s you play without getting the things you installed for experimentation conflict with your system’s tools.</p>
+<ol type="1">
+<li><p>Open a terminal</p></li>
+<li><p>Make a directory (<code>mkdir</code>)</p></li>
+<li><p>“cd” into your new directory and create the virtual environment</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Next, “activate” the environment with</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Now you can install the needed packages with <code>pip</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy matplotlib jupyterlab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ol>
 
 
 </section>
@@ -696,13 +868,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cLLM.html" class="pagination-link" aria-label="Large Language Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Large Language Models</span></span>
+      <a href="./cWriting.html" class="pagination-link" aria-label="Writing Scientific Documents">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Writing Scientific Documents</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cCode.html" class="pagination-link" aria-label="Coding">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Coding</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

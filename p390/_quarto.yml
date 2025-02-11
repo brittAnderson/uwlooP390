@@ -14,8 +14,10 @@ book:
     - intro.qmd
     - cCmpResTool.qmd
     - cOpenResearch.qmd
-    - cCode.qmd
+    - cLabNotebooks.qmd
     - cWriting.qmd
+    - cTerminal.qmd
+    - cCode.qmd
     - cExps.qmd
     - cBiblio.qmd
     - cServer.qmd
@@ -33,10 +35,9 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    code-overflow: wrap
   pdf:
     documentclass: book
-    template-partials: 
-      - title.tex
     
 engine: knitr
 
