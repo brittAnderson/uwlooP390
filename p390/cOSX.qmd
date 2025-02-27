@@ -66,7 +66,7 @@ I needed to end up also doing pip install for matplotlib and jupyter from within
 
 The file I tested as "test.qmd" is ... 
 
-{{< include ../../../p390venv/test-quarto/test.qmd >}}
+[]: {{< include ../../../p390venv/test-quarto/test.qmd >}}
 
 And the command was `quarto render test.qmd --to html`.
 
