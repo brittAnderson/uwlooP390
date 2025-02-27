@@ -97,3 +97,17 @@ quarto use template quarto-journals/elsevier
 ```
 
 This will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going. 
+
+### Presentations 
+Presentations are a standard component of professional life. Despite that importance the materials are often developed in a casual way that does not give the best impact to the material. There are many more versatile tools than contemporary Power Point. Though power point can make an effective presentation its default use does not typically achieve that goal. Quarto provides easy access to two other presentation tools that will expand one's recognition of what an effective presentation tool can do. 
+
+#### Reveal.JS
+[Reveal.js](https://revealjs.com/) is a javascript library for the creating presentations that work as well on the web as they do in person. Quarto also [supports](https://quarto.org/docs/presentations/revealjs/) Reveal.js.
+
+#### Beamer
+[Beamer](https://ctan.org/pkg/beamer) is a package for LaTeX that allows professional quality typesetting. It is particularly relevant for presentations that have a lot of mathematical material, though it is quite capable of supporting any general presentation as well. It is less flexible for the web since it produces PDFs. These can be shared on the web, but they require the intermediate step of downloading them rather than just playing them. Beamer also has a "Poster" variant that can be used to make high quality academic posters. 
+
+Overleaf has a beginners [tutorial](https://www.overleaf.com/learn/latex/Beamer_Presentations%3A_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Getting_Started). Quarto also [supports](https://quarto.org/docs/presentations/beamer.html) Beamer. 
+
+#### Academic Posters
+[Typest](https://github.com/quarto-ext/typst-templates/tree/main/poster)
