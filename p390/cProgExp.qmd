@@ -37,7 +37,7 @@ python -m pygame.examples.aliens # <2>
 ::: {#fig-basicimports}
 
 ```python
-import pygame
+import sys,pygame
 pygame.init()
 
 mywindow = pygame.display.set_mode([800,800])
@@ -50,6 +50,7 @@ while running:
     pygame.display.flip()
         
 pygame.quit()
+sys.exit()
 
 ```
 
@@ -63,7 +64,7 @@ Here is an example of a bit of code that shows some elementary use of the mouse,
 
 ```python
 from itertools import compress
-import pygame
+import sys,pygame
 pygame.init()
 
 
@@ -106,6 +107,7 @@ while running:
         print(rslts)
         
 pygame.quit()
+sys.exit()
 ```
 
 #### Next Steps
