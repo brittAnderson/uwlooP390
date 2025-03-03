@@ -1,0 +1,203 @@
+### Handling Data
+
+Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use. 
+
+#### Data Formats
+
+- Plain Text
+- CSV
+- TSV
+- JSON
+- Pickle    
+- Dat (R)
+
+Some advantages and disadvantages of each.
+
+Plain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.
+
+CSV and TSV view all data as rows and a unique character (commas or tabs) separates the cells of the rows. Another character, typically a new line (often seen written as `\n`) is what distinguishes one row from the next. These file types are, largely, human readable if the number of columns and rows are not too large. They are not as space efficient as other formats, but that may be a reasonable tradeoff when the size of the data files is small. 
+
+JSON stands for Java Script Object Notation. Although, as the name implies, it had its origin in javascript it is largely language agnostic and is a common format for the storage of data of all types. Its being used as a standard means it has wide support from many programming languages and that means there are good tools for exporting and storing for most programming languages. It can be quite flexible in the type of data stored. It is not friendly for writing by hand, but the use of tools makes it fairly easy to take experimentally collected data created in, say, a python dictionary and convert it to a json format. 
+
+```{r}
+#| echo: false
+
+library(reticulate)
+```
+
+::: {#fig-minimaljson}
+
+```{python}
+import random as r
+import json as j
+a = {'name': 'John Doe', 'age': 24, 'rt': r.random()}
+js = j.dumps(a)
+js
+```
+
+The `dumps` command will output the json version as a string. 
+
+:::
+
+Note there is a very similar python function without the terminal *s*, `json.dump`, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with `json.load()`
+
+::: {#fig-jsonfileexample}
+
+```{python}
+#| eval: false
+
+import json
+a = {'name': 'John Doe', 'age': 24}
+js = json.dumps(a)
+
+# Open new json file if not exist it will create
+fp = open('test.json', 'a')
+
+# write to json file
+fp.write(js)
+
+# close the connection
+fp.close()
+```
+
+A simple example taken from [[StackOverflow](https://stackoverflow.com/questions/42825102/how-to-save-python-dictionary-into-json-files)] shows a working example.
+
+:::
+
+A JSON tutorial can be found [here](https://www.w3schools.com/js/js_json_intro.asp).
+
+
+Pickling is a data serialization [library](https://docs.python.org/3/library/pickle.html) specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage. 
+
+This [code](#pickle-example) from a [GeeksforGeeks article](https://www.geeksforgeeks.org/understanding-python-pickling-example/) provides a nice minimal working example. 
+
+:::{#pickle-example}
+```{python}
+#| eval: false
+
+import pickle
+
+def storeData():
+    # initializing data to be stored in db
+    Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak',
+    'age' : 21, 'pay' : 40000}
+    Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',
+    'age' : 50, 'pay' : 50000}
+
+    # database
+    db = {}
+    db['Omkar'] = Omkar
+    db['Jagdish'] = Jagdish
+    
+    # Its important to use binary mode
+    dbfile = open('examplePickle', 'ab')
+    
+    # source, destination
+    pickle.dump(db, dbfile)                    
+    dbfile.close()
+
+def loadData():
+    # for reading also binary mode is important
+    dbfile = open('examplePickle', 'rb')    
+    db = pickle.load(dbfile)
+    for keys in db:
+        print(keys, '=>', db[keys])
+    dbfile.close()
+
+if __name__ == '__main__':
+    storeData()
+    loadData()
+
+```
+
+When working in the R environment the `save` and `load` function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called `read` and `write`. Each of these has several specialization that target particular file types (e.g. `read.csv`) and also allow a number of customizations (e.g. whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others. 
+
+
+#### Considering Pandas and Interoperability with R 
+
+[Pandas](https://pandas.pydata.org/) is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully. 
+
+Pandas can usually be installed with `pip install pandas`. Because of the size and complexity of python installations a virtual environment is recommended. 
+
+Even if you are not thinking of doing your data analysis in python if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data convenient. But before we show a pandas method let's see a lower tech, more old school method. 
+
+It is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example, 
+
+```{python}
+a = 1 
+b = "britt"
+c = 2.3
+mycolumnheadings = "a," + "b," + "c" + "\n"
+mystring = str(a) + "," + b + "," + str(c) + "\n"
+print(mycolumnheadings + mystring)
+```
+
+shows how to create a string from one's data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler. 
+
+##### Opening and Closing a File in Python
+
+```{python}
+#| output: false
+
+a = 1 
+b = "britt"
+c = 2.3
+mycolumnheadings = "a," + "b," + "c" + "\n"
+mystring = str(a) + "," + b + "," + str(c) + "\n"
+with open('/Users/britt/gitRepos/p390/p390/myfile.csv','w+') as f:
+    f.write(mycolumnheadings)
+    f.write(mystring)
+
+
+```
+
+Now you can see if you can read that csv into R.
+
+```{r}
+mydata = as.data.frame(read.csv("/Users/britt/gitRepos/p390/p390/myfile.csv"))
+mydata
+```
+
+##### A Better Way: Dictionaries
+
+Python dictionaries (which have their counterparts in most programming languages though they may be called something different) are a convenient way to store data where you can give it a meaningful name. For example, in an experiment with numerous trials and conditions you could have a *key* in your dictionary for "trial no." and another for "condition". The *values* for these would then be updated as your experiment unfolded. 
+
+A first pass to using dictionaries is to blend this with a python library for [CSV files](https://docs.python.org/3/library/csv.html). Then you can create the column headings from your keys and then each trial that you loop through you can use the dictionary to write a new row to your csv file. Some of the functions you might want to use are:
+
+- `csv.DictWriter`
+- `writeheader`
+- `writerows`
+
+If you set up and define your dictionary at the start of the file you only need to update the changing values as they occur. 
+
+Another approach that will start you getting some familiarity with python pandas library is to make to make a distinct dictionary for each of the trials in your experiment. Then you can concatenate these dictionaries to a list and use that list to create a pandas dataframe. That could then be used in analysis python code or for importing into R. Here is a short example to illustrate the principle. 
+
+```{python}
+import random as r
+import pandas as pd
+
+mylistofkeys=["name","v1","v2","v3","v4"]
+
+mydictlist = []
+for i in range(5):
+    mydictlist.append({key:value for key,value in zip(["name","v1","v2","v3","v4"],["britt"] + [r.random() for i in range(5)])})
+
+df = pd.DataFrame(mydictlist)
+
+df.loc[:,'v3'].mean()
+
+myfilename = "mypandastest.csv"
+df.to_csv(myfilename)
+```
+
+You can save pandas dataframes as a pickle file, but then you will not be able to easily read it into R. CSV remains the easiest and most direct way to do this. It is probably all you need for most use cases. Though there are other options.
+
+```{r}
+rdf = read.csv("mypandastest.csv")
+mean(rdf$v3)
+```
+
+#### Some Analysis Tools
+
+- Pandas TBD
+- Some more R TBD
