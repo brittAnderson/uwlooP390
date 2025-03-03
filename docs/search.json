@@ -180,143 +180,153 @@
     ]
   },
   {
+    "objectID": "cHandlingData.html",
+    "href": "cHandlingData.html",
+    "title": "10  Handling Data",
+    "section": "",
+    "text": "Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use.\n\n10.0.0.1 Data Formats\n\nPlain Text\nCSV\nTSV\nJSON\nPickle\n\nDat (R)\n\nSome advantages and disadvantages of each.\nPlain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.\nCSV and TSV view all data as rows and a unique character (commas or tabs) separates the cells of the rows. Another character, typically a new line (often seen written as \\n) is what distinguishes one row from the next. These file types are, largely, human readable if the number of columns and rows are not too large. They are not as space efficient as other formats, but that may be a reasonable tradeoff when the size of the data files is small.\nJSON stands for Java Script Object Notation. Although, as the name implies, it had its origin in javascript it is largely language agnostic and is a common format for the storage of data of all types. Its being used as a standard means it has wide support from many programming languages and that means there are good tools for exporting and storing for most programming languages. It can be quite flexible in the type of data stored. It is not friendly for writing by hand, but the use of tools makes it fairly easy to take experimentally collected data created in, say, a python dictionary and convert it to a json format.\n\n\n\n\nimport random as r\nimport json as j\na = {'name': 'John Doe', 'age': 24, 'rt': r.random()}\njs = j.dumps(a)\njs\n\n'{\"name\": \"John Doe\", \"age\": 24, \"rt\": 0.19775625785168327}'\n\n\n\n\nFigure 10.1: The dumps command will output the json version as a string.\n\n\n\nNote there is a very similar python function without the terminal s, json.dump, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with json.load()\n\n\n\n\nimport json\na = {'name': 'John Doe', 'age': 24}\njs = json.dumps(a)\n\n# Open new json file if not exist it will create\nfp = open('test.json', 'a')\n\n# write to json file\nfp.write(js)\n\n# close the connection\nfp.close()\n\n\n\nFigure 10.2: A simple example taken from [StackOverflow] shows a working example.\n\n\n\nA JSON tutorial can be found here.\nPickling is a data serialization library specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage.\nThis code from a GeeksforGeeks article provides a nice minimal working example.\n\n\nimport pickle\n\ndef storeData():\n    # initializing data to be stored in db\n    Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak',\n    'age' : 21, 'pay' : 40000}\n    Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',\n    'age' : 50, 'pay' : 50000}\n\n    # database\n    db = {}\n    db['Omkar'] = Omkar\n    db['Jagdish'] = Jagdish\n    \n    # Its important to use binary mode\n    dbfile = open('examplePickle', 'ab')\n    \n    # source, destination\n    pickle.dump(db, dbfile)                    \n    dbfile.close()\n\ndef loadData():\n    # for reading also binary mode is important\n    dbfile = open('examplePickle', 'rb')    \n    db = pickle.load(dbfile)\n    for keys in db:\n        print(keys, '=&gt;', db[keys])\n    dbfile.close()\n\nif __name__ == '__main__':\n    storeData()\n    loadData()\n\nWhen working in the R environment the save and load function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called read and write. Each of these has several specialization that target particular file types (e.g. read.csv) and also allow a number of customizations (e.g. whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others.\n\n10.0.0.2 Considering Pandas and Interoperability with R\nPandas is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully.\nPandas can usually be installed with pip install pandas. Because of the size and complexity of python installations a virtual environment is recommended.\nEven if you are not thinking of doing your data analysis in python if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data convenient. But before we show a pandas method let’s see a lower tech, more old school method.\nIt is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example,\n\na = 1 \nb = \"britt\"\nc = 2.3\nmycolumnheadings = \"a,\" + \"b,\" + \"c\" + \"\\n\"\nmystring = str(a) + \",\" + b + \",\" + str(c) + \"\\n\"\nprint(mycolumnheadings + mystring)\n\na,b,c\n1,britt,2.3\n\n\nshows how to create a string from one’s data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler.\n\n10.0.0.2.1 Opening and Closing a File in Python\n\na = 1 \nb = \"britt\"\nc = 2.3\nmycolumnheadings = \"a,\" + \"b,\" + \"c\" + \"\\n\"\nmystring = str(a) + \",\" + b + \",\" + str(c) + \"\\n\"\nwith open('/Users/britt/gitRepos/p390/p390/myfile.csv','w+') as f:\n    f.write(mycolumnheadings)\n    f.write(mystring)\n\nNow you can see if you can read that csv into R.\n\nmydata = as.data.frame(read.csv(\"/Users/britt/gitRepos/p390/p390/myfile.csv\"))\nmydata\n\n  a     b   c\n1 1 britt 2.3\n\n\n\n\n10.0.0.2.2 A Better Way: Dictionaries\nPython dictionaries (which have their counterparts in most programming languages though they may be called something different) are a convenient way to store data where you can give it a meaningful name. For example, in an experiment with numerous trials and conditions you could have a key in your dictionary for “trial no.” and another for “condition”. The values for these would then be updated as your experiment unfolded.\nA first pass to using dictionaries is to blend this with a python library for CSV files. Then you can create the column headings from your keys and then each trial that you loop through you can use the dictionary to write a new row to your csv file. Some of the functions you might want to use are:\n\ncsv.DictWriter\nwriteheader\nwriterows\n\nIf you set up and define your dictionary at the start of the file you only need to update the changing values as they occur.\nAnother approach that will start you getting some familiarity with python pandas library is to make to make a distinct dictionary for each of the trials in your experiment. Then you can concatenate these dictionaries to a list and use that list to create a pandas dataframe. That could then be used in analysis python code or for importing into R. Here is a short example to illustrate the principle.\n\nimport random as r\nimport pandas as pd\n\nmylistofkeys=[\"name\",\"v1\",\"v2\",\"v3\",\"v4\"]\n\nmydictlist = []\nfor i in range(5):\n    mydictlist.append({key:value for key,value in zip([\"name\",\"v1\",\"v2\",\"v3\",\"v4\"],[\"britt\"] + [r.random() for i in range(5)])})\n\ndf = pd.DataFrame(mydictlist)\n\ndf.loc[:,'v3'].mean()\n\nnp.float64(0.42191914350305526)\n\n\nmyfilename = \"mypandastest.csv\"\ndf.to_csv(myfilename)\n\nYou can save pandas dataframes as a pickle file, but then you will not be able to easily read it into R. CSV remains the easiest and most direct way to do this. It is probably all you need for most use cases. Though there are other options.\n\nrdf = read.csv(\"mypandastest.csv\")\nmean(rdf$v3)\n\n[1] 0.4219191\n\n\n\n\n\n10.0.0.3 Some Analysis Tools\n\nPandas TBD\nSome more R TBD",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Handling Data</span>"
+    ]
+  },
+  {
     "objectID": "cBiblio.html",
     "href": "cBiblio.html",
-    "title": "10  What are some of the challenges that computational tools pose for reproducibility?",
+    "title": "11  What are some of the challenges that computational tools pose for reproducibility?",
     "section": "",
-    "text": "11 Knowledge Management (Zettlekasten)",
+    "text": "12 Knowledge Management (Zettlekasten)",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#using-references-with-quatro-and-vs-code",
     "href": "cBiblio.html#using-references-with-quatro-and-vs-code",
-    "title": "10  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "12.1 Using References With Quatro and VS Code",
-    "text": "12.1 Using References With Quatro and VS Code",
+    "title": "11  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "13.1 Using References With Quatro and VS Code",
+    "text": "13.1 Using References With Quatro and VS Code",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#using-references-with-overleaf",
     "href": "cBiblio.html#using-references-with-overleaf",
-    "title": "10  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "12.2 Using References With Overleaf",
-    "text": "12.2 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different.\nHere are some links to get you started with references in overleaf. 1. Linking Overleaf and Zotero 2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)",
+    "title": "11  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "13.2 Using References With Overleaf",
+    "text": "13.2 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different.\nHere are some links to get you started with references in overleaf. 1. Linking Overleaf and Zotero 2. [Connecting Zotero and Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cBiblio.html#poster-presentations-move-this-section",
     "href": "cBiblio.html#poster-presentations-move-this-section",
-    "title": "10  What are some of the challenges that computational tools pose for reproducibility?",
-    "section": "12.3 Poster Presentations ? (MOVE THIS SECTION)",
-    "text": "12.3 Poster Presentations ? (MOVE THIS SECTION)\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?",
+    "title": "11  What are some of the challenges that computational tools pose for reproducibility?",
+    "section": "13.3 Poster Presentations ? (MOVE THIS SECTION)",
+    "text": "13.3 Poster Presentations ? (MOVE THIS SECTION)\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>What are some of the challenges that computational tools pose for reproducibility?</span>"
     ]
   },
   {
     "objectID": "cServer.html",
     "href": "cServer.html",
-    "title": "11  Testing Your Javascript",
+    "title": "12  Testing Your Javascript",
     "section": "",
-    "text": "11.1 Run your own server locally\nRunning a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.",
+    "text": "12.1 Run your own server locally\nRunning a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testing Your Javascript</span>"
     ]
   },
   {
     "objectID": "cServer.html#run-your-own-server-locally",
     "href": "cServer.html#run-your-own-server-locally",
-    "title": "11  Testing Your Javascript",
+    "title": "12  Testing Your Javascript",
     "section": "",
-    "text": "11.1.1 XAMPP\nXAMMP\n\n11.1.1.1 Downloading\nDownload link\n\n\n\n11.1.2 In Lab Experiments\n\nMaking stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n\n11.1.3 Online Experiments\nAn exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen.\nCan you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE",
+    "text": "12.1.1 XAMPP\nXAMMP\n\n12.1.1.1 Downloading\nDownload link\n\n\n\n12.1.2 In Lab Experiments\n\nMaking stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n\n12.1.3 Online Experiments\nAn exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen.\nCan you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testing Your Javascript</span>"
     ]
   },
   {
     "objectID": "cLLM.html",
     "href": "cLLM.html",
-    "title": "12  Large Language Models",
+    "title": "13  Large Language Models",
     "section": "",
-    "text": "12.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
+    "text": "13.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#how-to",
     "href": "cLLM.html#how-to",
-    "title": "12  Large Language Models",
-    "section": "12.2 How to?",
-    "text": "12.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n12.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
+    "title": "13  Large Language Models",
+    "section": "13.2 How to?",
+    "text": "13.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n13.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#how-to-1",
     "href": "cLLM.html#how-to-1",
-    "title": "12  Large Language Models",
-    "section": "12.3 How-to",
-    "text": "12.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
+    "title": "13  Large Language Models",
+    "section": "13.3 How-to",
+    "text": "13.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#using-llms-for-dynamic-research",
     "href": "cLLM.html#using-llms-for-dynamic-research",
-    "title": "12  Large Language Models",
-    "section": "12.4 Using LLMs for Dynamic Research",
-    "text": "12.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
+    "title": "13  Large Language Models",
+    "section": "13.4 Using LLMs for Dynamic Research",
+    "text": "13.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#why-might-you-want-to-do-this",
     "href": "cLLM.html#why-might-you-want-to-do-this",
-    "title": "12  Large Language Models",
-    "section": "12.5 Why Might You Want To Do This?",
-    "text": "12.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a RAG in this context?",
+    "title": "13  Large Language Models",
+    "section": "13.5 Why Might You Want To Do This?",
+    "text": "13.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a RAG in this context?",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cLLM.html#next-steps",
     "href": "cLLM.html#next-steps",
-    "title": "12  Large Language Models",
-    "section": "12.6 Next steps",
-    "text": "12.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
+    "title": "13  Large Language Models",
+    "section": "13.6 Next steps",
+    "text": "13.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Large Language Models</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
     ]
   },
   {
     "objectID": "cDatabase.html",
     "href": "cDatabase.html",
-    "title": "13  Databases and management",
+    "title": "14  Databases and management",
     "section": "",
-    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n13.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n13.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
+    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n14.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n14.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Databases and management</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Databases and management</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "14  Summary",
+    "title": "15  Summary",
     "section": "",
     "text": "In summary, I have not gotten to writing a summary yet.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {

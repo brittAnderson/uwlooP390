@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; In Lab Experiments – P390</title>
+<title>10&nbsp; Analyzing Data – P390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cHandlingData.html" rel="next">
-<link href="./cProgExp.html" rel="prev">
+<link href="./cBiblio.html" rel="next">
+<link href="./cExps.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cExps.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cAnalysis.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyzing Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -162,14 +196,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cExps.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cExps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cHandlingData.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Data</span></span></a>
+  <a href="./cAnalysis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyzing Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -236,21 +270,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#online-experiments" id="toc-online-experiments" class="nav-link active" data-scroll-target="#online-experiments"><span class="header-section-number">9.0.1</span> Online Experiments</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Analyzing Data</span></h1>
 </div>
 
 
@@ -267,18 +295,148 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use.</p>
+<section id="data-formats" class="level4" data-number="10.0.0.1">
+<h4 data-number="10.0.0.1" class="anchored" data-anchor-id="data-formats"><span class="header-section-number">10.0.0.1</span> Data Formats</h4>
 <ul>
-<li>Making stuff appear on monitors.</li>
-<li>What is OpenGL?</li>
-<li>Use pygame to make some simple visual experiments.</li>
-<li>Have a beauty contest the following week to see what people have been able to make?</li>
-<li>Make sure that people are using <a href="https://python.land/virtual-environments/virtualenv">venv</a></li>
+<li>Plain Text</li>
+<li>CSV</li>
+<li>TSV</li>
+<li>JSON</li>
+<li>Pickle<br>
+</li>
+<li>Dat (R)</li>
 </ul>
-<section id="online-experiments" class="level3" data-number="9.0.1">
-<h3 data-number="9.0.1" class="anchored" data-anchor-id="online-experiments"><span class="header-section-number">9.0.1</span> Online Experiments</h3>
-<p>Running a server for testing and more? <a href="https://www.apachefriends.org/index.html">XAMPP</a> Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like <a href="https://www.apachefriends.org/download.html">XAMPP</a> might be a good resource. <em>Exercise</em> to download and get the XAMPP server running? Need to expand this. An exercise with <a href="https://code.visualstudio.com/Docs/languages/javascript">JavaScript</a>? This <a href="https://www.geeksforgeeks.org/how-to-display-images-in-javascript/">site</a> has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?</p>
+<p>Some advantages and disadvantages of each.</p>
+<p>Plain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.</p>
+<p>CSV and TSV view all data as rows and a unique character (commas or tabs) separates the cells of the rows. Another character, typically a new line (often seen written as <code>\n</code>) is what distinguishes one row from the next. These file types are, largely, human readable if the number of columns and rows are not too large. They are not as space efficient as other formats, but that may be a reasonable tradeoff when the size of the data files is small.</p>
+<p>JSON stands for Java Script Object Notation. Although, as the name implies, it had its origin in javascript it is largely language agnostic and is a common format for the storage of data of all types. Its being used as a standard means it has wide support from many programming languages and that means there are good tools for exporting and storing for most programming languages. It can be quite flexible in the type of data stored. It is not friendly for writing by hand, but the use of tools makes it fairly easy to take experimentally collected data created in, say, a python dictionary and convert it to a json format.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="fig-minimaljson" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-minimaljson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random <span class="im">as</span> r</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json <span class="im">as</span> j</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> {<span class="st">'name'</span>: <span class="st">'John Doe'</span>, <span class="st">'age'</span>: <span class="dv">24</span>, <span class="st">'rt'</span>: r.random()}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>js <span class="op">=</span> j.dumps(a)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>js</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'{"name": "John Doe", "age": 24, "rt": 0.6209626351408646}'</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-minimaljson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: The <code>dumps</code> command will output the json version as a string.
+</figcaption>
+</figure>
+</div>
+<p>Note there is a very similar python function without the terminal <em>s</em> <code>json.dump</code> that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with <code>json.load()</code></p>
+<p>A simple example taken from [<a href="https://stackoverflow.com/questions/42825102/how-to-save-python-dictionary-into-json-files">StackOverflow</a>] shows a simple working example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> {<span class="st">'name'</span>: <span class="st">'John Doe'</span>, <span class="st">'age'</span>: <span class="dv">24</span>}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>js <span class="op">=</span> json.dumps(a)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Open new json file if not exist it will create</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>fp <span class="op">=</span> <span class="bu">open</span>(<span class="st">'test.json'</span>, <span class="st">'a'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># write to json file</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>fp.write(js)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># close the connection</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>fp.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A JSON tutorial can be found <a href="https://www.w3schools.com/js/js_json_intro.asp">here</a>.</p>
+<p>Pickling is a data serialization <a href="https://docs.python.org/3/library/pickle.html">library</a> specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage.</p>
+<p>This <a href="#pickle-example">code</a> from a <a href="https://www.geeksforgeeks.org/understanding-python-pickling-example/">GeeksforGeeks article</a> provides a nice minimal working example.</p>
+<div id="pickle-example">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> storeData():</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initializing data to be stored in db</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    Omkar <span class="op">=</span> {<span class="st">'key'</span> : <span class="st">'Omkar'</span>, <span class="st">'name'</span> : <span class="st">'Omkar Pathak'</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'age'</span> : <span class="dv">21</span>, <span class="st">'pay'</span> : <span class="dv">40000</span>}</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    Jagdish <span class="op">=</span> {<span class="st">'key'</span> : <span class="st">'Jagdish'</span>, <span class="st">'name'</span> : <span class="st">'Jagdish Pathak'</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'age'</span> : <span class="dv">50</span>, <span class="st">'pay'</span> : <span class="dv">50000</span>}</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># database</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> {}</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    db[<span class="st">'Omkar'</span>] <span class="op">=</span> Omkar</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    db[<span class="st">'Jagdish'</span>] <span class="op">=</span> Jagdish</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Its important to use binary mode</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    dbfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">'examplePickle'</span>, <span class="st">'ab'</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># source, destination</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    pickle.dump(db, dbfile)                    </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    dbfile.close()</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> loadData():</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># for reading also binary mode is important</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    dbfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">'examplePickle'</span>, <span class="st">'rb'</span>)    </span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> pickle.load(dbfile)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> keys <span class="kw">in</span> db:</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(keys, <span class="st">'=&gt;'</span>, db[keys])</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    dbfile.close()</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    storeData()</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    loadData()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When working in the R environment the <code>save</code> and <code>load</code> function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called <code>read</code> and <code>write</code>. Each of these has several specialization that target particular file types (e.g.&nbsp;<code>read.csv</code>) and also allow a number of customizations (e.g.&nbsp;whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others.</p>
+<section id="considering-pandas-and-interoperability-with-r" class="level4" data-number="10.0.0.2">
+<h4 data-number="10.0.0.2" class="anchored" data-anchor-id="considering-pandas-and-interoperability-with-r"><span class="header-section-number">10.0.0.2</span> Considering Pandas and Interoperability with R</h4>
+<p><a href="https://pandas.pydata.org/">Pandas</a> is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully.</p>
+<p>Pandas can usually be installed with <code>pip install pandas</code>. Because of the size and complexity of python installations a virtual environment is recommended.</p>
+<p>Even if you are not thinking of doing your data analysis in python if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data convenient. But before we show a pandas method let’s see a lower tech, more old school method.</p>
+<p>It is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"britt"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">2.3</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>mycolumnheadings <span class="op">=</span> <span class="st">"a,"</span> <span class="op">+</span> <span class="st">"b,"</span> <span class="op">+</span> <span class="st">"c"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>mystring <span class="op">=</span> <span class="bu">str</span>(a) <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> b <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(c) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mycolumnheadings <span class="op">+</span> mystring)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>a,b,c
+1,britt,2.3</code></pre>
+</div>
+</div>
+<p>shows how to create a string from one’s data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler.</p>
+</section>
+<section id="opening-and-closing-a-file-in-python" class="level4" data-number="10.0.0.3">
+<h4 data-number="10.0.0.3" class="anchored" data-anchor-id="opening-and-closing-a-file-in-python"><span class="header-section-number">10.0.0.3</span> Opening and Closing a File in Python</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"britt"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">2.3</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>mycolumnheadings <span class="op">=</span> <span class="st">"a,"</span> <span class="op">+</span> <span class="st">"b,"</span> <span class="op">+</span> <span class="st">"c"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>mystring <span class="op">=</span> <span class="bu">str</span>(a) <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> b <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(c) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'/Users/britt/gitRepos/p390/p390/myfile.csv'</span>,<span class="st">'w+'</span>) <span class="im">as</span> f:</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    f.write(mycolumnheadings)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    f.write(mystring)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>6
+12</code></pre>
+</div>
+</div>
+<p>Now you can see if you can read that csv into R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">read.csv</span>(<span class="st">"/Users/britt/gitRepos/p390/p390/myfile.csv"</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mydata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  a     b   c
+1 1 britt 2.3</code></pre>
+</div>
+</div>
 
 
+</section>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -701,13 +859,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cProgExp.html" class="pagination-link" aria-label="Programming Experiments">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Programming Experiments</span></span>
+      <a href="./cExps.html" class="pagination-link" aria-label="In Lab Experiments">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cHandlingData.html" class="pagination-link" aria-label="Handling Data">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cBiblio.html" class="pagination-link" aria-label="What are some of the challenges that computational tools pose for reproducibility?">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">What are some of the challenges that computational tools pose for reproducibility?</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

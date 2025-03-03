@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix A — Version Control – P390</title>
+<title>10&nbsp; Handling Data – P390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cOSX.html" rel="next">
-<link href="./summary.html" rel="prev">
+<link href="./cBiblio.html" rel="next">
+<link href="./cExps.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cGit.html">Appendices</a></li><li class="breadcrumb-item"><a href="./cGit.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Version Control</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cHandlingData.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -202,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cHandlingData.html" class="sidebar-item-text sidebar-link">
+  <a href="./cHandlingData.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Data</span></span></a>
   </div>
 </li>
@@ -247,7 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cGit.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cGit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Version Control</span></span></a>
   </div>
 </li>
@@ -270,28 +270,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#getting-started---some-old-videos-on-git-from-psych363310" id="toc-getting-started---some-old-videos-on-git-from-psych363310" class="nav-link active" data-scroll-target="#getting-started---some-old-videos-on-git-from-psych363310"><span class="header-section-number">A.1</span> Getting Started - Some old videos on git from PSYCH363/310</a></li>
-  <li><a href="#an-overview-of-git-and-github" id="toc-an-overview-of-git-and-github" class="nav-link" data-scroll-target="#an-overview-of-git-and-github"><span class="header-section-number">A.2</span> An overview of git and Github</a></li>
-  <li><a href="#you-have-choices---other-version-control-system" id="toc-you-have-choices---other-version-control-system" class="nav-link" data-scroll-target="#you-have-choices---other-version-control-system"><span class="header-section-number">A.3</span> You have choices - other version control system</a></li>
-  <li><a href="#git-is-not-github" id="toc-git-is-not-github" class="nav-link" data-scroll-target="#git-is-not-github"><span class="header-section-number">A.4</span> Git is not Github</a></li>
-  <li><a href="#things-you-should-do" id="toc-things-you-should-do" class="nav-link" data-scroll-target="#things-you-should-do"><span class="header-section-number">A.5</span> Things you should do</a></li>
-  <li><a href="#but-first" id="toc-but-first" class="nav-link" data-scroll-target="#but-first"><span class="header-section-number">A.6</span> But first</a></li>
-  <li><a href="#understanding-git-and-the-workflow-in-pictures" id="toc-understanding-git-and-the-workflow-in-pictures" class="nav-link" data-scroll-target="#understanding-git-and-the-workflow-in-pictures"><span class="header-section-number">A.7</span> Understanding Git and the Workflow in Pictures</a></li>
-  <li><a href="#principal-terms-to-learn-first" id="toc-principal-terms-to-learn-first" class="nav-link" data-scroll-target="#principal-terms-to-learn-first"><span class="header-section-number">A.8</span> Principal Terms to Learn First</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cGit.html">Appendices</a></li><li class="breadcrumb-item"><a href="./cGit.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Version Control</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-versionControl" class="quarto-section-identifier">Appendix A — Version Control</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Data</span></h1>
 </div>
 
 
@@ -308,77 +295,196 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="getting-started---some-old-videos-on-git-from-psych363310" class="level2" data-number="A.1">
-<h2 data-number="A.1" class="anchored" data-anchor-id="getting-started---some-old-videos-on-git-from-psych363310"><span class="header-section-number">A.1</span> Getting Started - Some old videos on git from PSYCH363/310</h2>
-<p>A few years ago when I was teaching a more elementary version of some of this material (PSYCH363) I included some videos on git and using Github. Some components of these videos may be a bit out of date, and a few things about the interface have changed. Still they may be a reasonable starting point for those of you who feel you need a refresher on version control. Note that for PSYCH390 I am assuming you can either already use version control or figure it out on your own. I will give some class time for getting things working, but mostly you will have to pursue this on your own. The notes here are intended to be prompts and guides, but not to be comprehensive.</p>
-<p>You will notice that in the videos I talk a lot about Linux. We are not using that for this course so you can ignore those references. However, I do demonstrate the use in the <em>terminal</em>. That is available to all of you regardless of operating system. You will just have to find your own OS version of it.</p>
-<p>Frequenly you will see this referred to as a command line tool (“cli”). It is now easier to get <a href="https://cli.github.com/">this</a> this working on Windows and OSX than it used to be. For OSX you can also check out <strong>Homebrew</strong>. For the adventurous Windows user you can look at WSL2.</p>
-</section>
-<section id="an-overview-of-git-and-github" class="level2" data-number="A.2">
-<h2 data-number="A.2" class="anchored" data-anchor-id="an-overview-of-git-and-github"><span class="header-section-number">A.2</span> An overview of git and Github</h2>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/456349738" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="you-have-choices---other-version-control-system" class="level2" data-number="A.3">
-<h2 data-number="A.3" class="anchored" data-anchor-id="you-have-choices---other-version-control-system"><span class="header-section-number">A.3</span> You have choices - other version control system</h2>
-<ol type="1">
-<li><a href="https://www.mercurial-scm.org/">Mercurial</a></li>
-<li><a href="http://darcs.net/">Darcs</a></li>
-<li><a href="https://www.nongnu.org/cvs/">CVS</a></li>
-<li><a href="https://subversion.apache.org/">Subversion</a></li>
-<li><a href="https://pijul.org/">Pijul</a></li>
-</ol>
-<p>Each has their own fans. CVS and Subversion are more legacy options, but you will still see them occasionally. Darcs is more of an experiment than a broadly used system. Mercurial used to be the cool kid, but now seems eclipsed by <em>Pijul</em>. That is the one for experimental users.</p>
-</section>
-<section id="git-is-not-github" class="level2" data-number="A.4">
-<h2 data-number="A.4" class="anchored" data-anchor-id="git-is-not-github"><span class="header-section-number">A.4</span> Git is not Github</h2>
-<p>Git is the version control software. Github is a very popular place to host your publically accessible git repository, but it is far from your only option. You can host elsewhere.</p>
-<ol type="1">
-<li><a href="https://osf.io/">OSF.io</a> For scientists OSF.io seeks to make itself a way to host scientific projects and their data. Trivia question? Do I have any repositories on Osf.io?</li>
-<li><a href="https://sourceforge.net/">Sourceforge</a> An oldie, but still used.</li>
-<li><a href="https://bitbucket.org/">Bitbucket</a></li>
-<li>Gitlab The university provides you with a gitlab account: <a href="https://git.uwaterloo.ca" class="uri">https://git.uwaterloo.ca</a></li>
-<li><a href="https://codeberg.org/">Codeberg</a> If you believe in freedom and neck beards.</li>
-</ol>
-</section>
-<section id="things-you-should-do" class="level2" data-number="A.5">
-<h2 data-number="A.5" class="anchored" data-anchor-id="things-you-should-do"><span class="header-section-number">A.5</span> Things you should do</h2>
-<ol type="1">
-<li>Install git</li>
-<li>Get an account on github</li>
-<li>Fork the course repository</li>
-<li>Clone the course repository to your laptop</li>
-<li>Set up my version as an additional <strong>remote</strong>.</li>
-<li>See if you can make a “pull request” to me. You may find that you have to set up an <strong>ssh key</strong> in order to efficiently pull and push to Github. Github has very clear <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">instructions</a> on how to go about doing this.</li>
-</ol>
-</section>
-<section id="but-first" class="level2" data-number="A.6">
-<h2 data-number="A.6" class="anchored" data-anchor-id="but-first"><span class="header-section-number">A.6</span> But first</h2>
-<p>If you have not used git before you will have to configure git. It needs to know who you are and how to reach you at least.</p>
-<p>You can execute commands like this in your terminal:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"John Doe"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email johndoe@example.com</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>More on these configuration options can be found <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">in a nice online book</a>.</p>
-</section>
-<section id="understanding-git-and-the-workflow-in-pictures" class="level2" data-number="A.7">
-<h2 data-number="A.7" class="anchored" data-anchor-id="understanding-git-and-the-workflow-in-pictures"><span class="header-section-number">A.7</span> Understanding Git and the Workflow in Pictures</h2>
-<p>When starting to use git I found it very confusing to tell what was where and what direction things were going when I pushed and pulled. I found pictures helpful adjuncts to the prose descriptions. A few helpful illustrations to the distinction of clones, forks, pull, push, and pull request can be found <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/">here</a>.</p>
-<p>I also made a little video to try and illustrate some of these concepts a few years ago. Read for the gist and not for the specific examples.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/456349595" frameborder="0" title="another test" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="principal-terms-to-learn-first" class="level2" data-number="A.8">
-<h2 data-number="A.8" class="anchored" data-anchor-id="principal-terms-to-learn-first"><span class="header-section-number">A.8</span> Principal Terms to Learn First</h2>
+<p>Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use.</p>
+<section id="data-formats" class="level4" data-number="10.0.0.1">
+<h4 data-number="10.0.0.1" class="anchored" data-anchor-id="data-formats"><span class="header-section-number">10.0.0.1</span> Data Formats</h4>
 <ul>
-<li><strong>Fork:</strong> A copy of one github repository to another <strong>github</strong> repository.</li>
-<li><strong>Clone:</strong> A copy of one <strong>git</strong> repository to another <strong>git</strong> repository. The first repository might be hosted on github, but the second one, the <em>cloned</em> one exists on a local machine. In your case this is probably your laptop.</li>
-<li><strong>Remote:</strong> This is a repository that you are following. You will typically <em>pull</em> from these, but your <em>push</em> permissions may be limited depending on the distinctions between forks and clones, and whether you own the remote or someone else does. You can have more than one remote.</li>
-<li><strong>Pull:</strong> the transfer of information and changes <strong>from</strong> one repository incorporated into another. This is how you get the new information from a remote transported to a local repository that you control.</li>
-<li><strong>Push:</strong> this is the transfer of information <strong>to</strong> a repository you control (or have permissions to push to) from another repository that you control. This is often from your local laptop version to the hosted repository (your fork) on github.</li>
-<li><strong>Pull Request:</strong> When you have information or changes that you think would be helpful to a remote you do <strong>not</strong> have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.</li>
-<li><strong>Branch:</strong> within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called <strong>master</strong>. And the principal repository that is the main, shared one is called <strong>origin</strong>. We will not be working with branches in our course, but those terms do show up in commands.</li>
+<li>Plain Text</li>
+<li>CSV</li>
+<li>TSV</li>
+<li>JSON</li>
+<li>Pickle<br>
+</li>
+<li>Dat (R)</li>
 </ul>
-<p>All of these “<a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository">basics</a>” are covered in detail in the book Pro Git (available on line).</p>
+<p>Some advantages and disadvantages of each.</p>
+<p>Plain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.</p>
+<p>CSV and TSV view all data as rows and a unique character (commas or tabs) separates the cells of the rows. Another character, typically a new line (often seen written as <code>\n</code>) is what distinguishes one row from the next. These file types are, largely, human readable if the number of columns and rows are not too large. They are not as space efficient as other formats, but that may be a reasonable tradeoff when the size of the data files is small.</p>
+<p>JSON stands for Java Script Object Notation. Although, as the name implies, it had its origin in javascript it is largely language agnostic and is a common format for the storage of data of all types. Its being used as a standard means it has wide support from many programming languages and that means there are good tools for exporting and storing for most programming languages. It can be quite flexible in the type of data stored. It is not friendly for writing by hand, but the use of tools makes it fairly easy to take experimentally collected data created in, say, a python dictionary and convert it to a json format.</p>
+<div id="fig-minimaljson" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-minimaljson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random <span class="im">as</span> r</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json <span class="im">as</span> j</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> {<span class="st">'name'</span>: <span class="st">'John Doe'</span>, <span class="st">'age'</span>: <span class="dv">24</span>, <span class="st">'rt'</span>: r.random()}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>js <span class="op">=</span> j.dumps(a)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>js</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'{"name": "John Doe", "age": 24, "rt": 0.19775625785168327}'</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-minimaljson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: The <code>dumps</code> command will output the json version as a string.
+</figcaption>
+</figure>
+</div>
+<p>Note there is a very similar python function without the terminal <em>s</em>, <code>json.dump</code>, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with <code>json.load()</code></p>
+<div id="fig-jsonfileexample" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-jsonfileexample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> {<span class="st">'name'</span>: <span class="st">'John Doe'</span>, <span class="st">'age'</span>: <span class="dv">24</span>}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>js <span class="op">=</span> json.dumps(a)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Open new json file if not exist it will create</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fp <span class="op">=</span> <span class="bu">open</span>(<span class="st">'test.json'</span>, <span class="st">'a'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># write to json file</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>fp.write(js)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># close the connection</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>fp.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jsonfileexample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.2: A simple example taken from [<a href="https://stackoverflow.com/questions/42825102/how-to-save-python-dictionary-into-json-files">StackOverflow</a>] shows a working example.
+</figcaption>
+</figure>
+</div>
+<p>A JSON tutorial can be found <a href="https://www.w3schools.com/js/js_json_intro.asp">here</a>.</p>
+<p>Pickling is a data serialization <a href="https://docs.python.org/3/library/pickle.html">library</a> specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage.</p>
+<p>This <a href="#pickle-example">code</a> from a <a href="https://www.geeksforgeeks.org/understanding-python-pickling-example/">GeeksforGeeks article</a> provides a nice minimal working example.</p>
+<div id="pickle-example">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> storeData():</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initializing data to be stored in db</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    Omkar <span class="op">=</span> {<span class="st">'key'</span> : <span class="st">'Omkar'</span>, <span class="st">'name'</span> : <span class="st">'Omkar Pathak'</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'age'</span> : <span class="dv">21</span>, <span class="st">'pay'</span> : <span class="dv">40000</span>}</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    Jagdish <span class="op">=</span> {<span class="st">'key'</span> : <span class="st">'Jagdish'</span>, <span class="st">'name'</span> : <span class="st">'Jagdish Pathak'</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'age'</span> : <span class="dv">50</span>, <span class="st">'pay'</span> : <span class="dv">50000</span>}</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># database</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> {}</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    db[<span class="st">'Omkar'</span>] <span class="op">=</span> Omkar</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    db[<span class="st">'Jagdish'</span>] <span class="op">=</span> Jagdish</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Its important to use binary mode</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    dbfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">'examplePickle'</span>, <span class="st">'ab'</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># source, destination</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    pickle.dump(db, dbfile)                    </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    dbfile.close()</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> loadData():</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># for reading also binary mode is important</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    dbfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">'examplePickle'</span>, <span class="st">'rb'</span>)    </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> pickle.load(dbfile)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> keys <span class="kw">in</span> db:</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(keys, <span class="st">'=&gt;'</span>, db[keys])</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    dbfile.close()</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    storeData()</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    loadData()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When working in the R environment the <code>save</code> and <code>load</code> function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called <code>read</code> and <code>write</code>. Each of these has several specialization that target particular file types (e.g.&nbsp;<code>read.csv</code>) and also allow a number of customizations (e.g.&nbsp;whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others.</p>
+<section id="considering-pandas-and-interoperability-with-r" class="level4" data-number="10.0.0.2">
+<h4 data-number="10.0.0.2" class="anchored" data-anchor-id="considering-pandas-and-interoperability-with-r"><span class="header-section-number">10.0.0.2</span> Considering Pandas and Interoperability with R</h4>
+<p><a href="https://pandas.pydata.org/">Pandas</a> is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully.</p>
+<p>Pandas can usually be installed with <code>pip install pandas</code>. Because of the size and complexity of python installations a virtual environment is recommended.</p>
+<p>Even if you are not thinking of doing your data analysis in python if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data convenient. But before we show a pandas method let’s see a lower tech, more old school method.</p>
+<p>It is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"britt"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">2.3</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>mycolumnheadings <span class="op">=</span> <span class="st">"a,"</span> <span class="op">+</span> <span class="st">"b,"</span> <span class="op">+</span> <span class="st">"c"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>mystring <span class="op">=</span> <span class="bu">str</span>(a) <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> b <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(c) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mycolumnheadings <span class="op">+</span> mystring)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>a,b,c
+1,britt,2.3</code></pre>
+</div>
+</div>
+<p>shows how to create a string from one’s data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler.</p>
+<section id="opening-and-closing-a-file-in-python" class="level5" data-number="10.0.0.2.1">
+<h5 data-number="10.0.0.2.1" class="anchored" data-anchor-id="opening-and-closing-a-file-in-python"><span class="header-section-number">10.0.0.2.1</span> Opening and Closing a File in Python</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"britt"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">2.3</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>mycolumnheadings <span class="op">=</span> <span class="st">"a,"</span> <span class="op">+</span> <span class="st">"b,"</span> <span class="op">+</span> <span class="st">"c"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>mystring <span class="op">=</span> <span class="bu">str</span>(a) <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> b <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(c) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'/Users/britt/gitRepos/p390/p390/myfile.csv'</span>,<span class="st">'w+'</span>) <span class="im">as</span> f:</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    f.write(mycolumnheadings)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    f.write(mystring)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now you can see if you can read that csv into R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">read.csv</span>(<span class="st">"/Users/britt/gitRepos/p390/p390/myfile.csv"</span>))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mydata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  a     b   c
+1 1 britt 2.3</code></pre>
+</div>
+</div>
+</section>
+<section id="a-better-way-dictionaries" class="level5" data-number="10.0.0.2.2">
+<h5 data-number="10.0.0.2.2" class="anchored" data-anchor-id="a-better-way-dictionaries"><span class="header-section-number">10.0.0.2.2</span> A Better Way: Dictionaries</h5>
+<p>Python dictionaries (which have their counterparts in most programming languages though they may be called something different) are a convenient way to store data where you can give it a meaningful name. For example, in an experiment with numerous trials and conditions you could have a <em>key</em> in your dictionary for “trial no.” and another for “condition”. The <em>values</em> for these would then be updated as your experiment unfolded.</p>
+<p>A first pass to using dictionaries is to blend this with a python library for <a href="https://docs.python.org/3/library/csv.html">CSV files</a>. Then you can create the column headings from your keys and then each trial that you loop through you can use the dictionary to write a new row to your csv file. Some of the functions you might want to use are:</p>
+<ul>
+<li><code>csv.DictWriter</code></li>
+<li><code>writeheader</code></li>
+<li><code>writerows</code></li>
+</ul>
+<p>If you set up and define your dictionary at the start of the file you only need to update the changing values as they occur.</p>
+<p>Another approach that will start you getting some familiarity with python pandas library is to make to make a distinct dictionary for each of the trials in your experiment. Then you can concatenate these dictionaries to a list and use that list to create a pandas dataframe. That could then be used in analysis python code or for importing into R. Here is a short example to illustrate the principle.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random <span class="im">as</span> r</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>mylistofkeys<span class="op">=</span>[<span class="st">"name"</span>,<span class="st">"v1"</span>,<span class="st">"v2"</span>,<span class="st">"v3"</span>,<span class="st">"v4"</span>]</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>mydictlist <span class="op">=</span> []</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    mydictlist.append({key:value <span class="cf">for</span> key,value <span class="kw">in</span> <span class="bu">zip</span>([<span class="st">"name"</span>,<span class="st">"v1"</span>,<span class="st">"v2"</span>,<span class="st">"v3"</span>,<span class="st">"v4"</span>],[<span class="st">"britt"</span>] <span class="op">+</span> [r.random() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)])})</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(mydictlist)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>df.loc[:,<span class="st">'v3'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>np.float64(0.42191914350305526)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>myfilename <span class="op">=</span> <span class="st">"mypandastest.csv"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df.to_csv(myfilename)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can save pandas dataframes as a pickle file, but then you will not be able to easily read it into R. CSV remains the easiest and most direct way to do this. It is probably all you need for most use cases. Though there are other options.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rdf <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"mypandastest.csv"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(rdf<span class="sc">$</span>v3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4219191</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="some-analysis-tools" class="level4" data-number="10.0.0.3">
+<h4 data-number="10.0.0.3" class="anchored" data-anchor-id="some-analysis-tools"><span class="header-section-number">10.0.0.3</span> Some Analysis Tools</h4>
+<ul>
+<li>Pandas TBD</li>
+<li>Some more R TBD</li>
+</ul>
 
 
+</section>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -801,13 +907,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      <a href="./cExps.html" class="pagination-link" aria-label="In Lab Experiments">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cOSX.html" class="pagination-link" aria-label="Just a place for some notes for installing things on Mac">
-        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Just a place for some notes for installing things on Mac</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cBiblio.html" class="pagination-link" aria-label="What are some of the challenges that computational tools pose for reproducibility?">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">What are some of the challenges that computational tools pose for reproducibility?</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
