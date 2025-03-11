@@ -62,13 +62,7 @@ Then, because I could not get plotly in homebrew, I created a **venv**.
 
 I needed to end up also doing pip install for matplotlib and jupyter from within the venv. Then I simply cut and pasted the demo document and followed their recommendation.
 
-
-
-The file I tested as "test.qmd" is ... 
-
-[]: {{< include ../../../p390venv/test-quarto/test.qmd >}}
-
-And the command was `quarto render test.qmd --to html`.
+Assuming your file was called `test.qmd` you could use the command:  `quarto render test.qmd --to html`.
 
 And if you `brew install texlive` then export to pdf works well too. 
 

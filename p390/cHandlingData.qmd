@@ -112,7 +112,6 @@ if __name__ == '__main__':
 
 When working in the R environment the `save` and `load` function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called `read` and `write`. Each of these has several specialization that target particular file types (e.g. `read.csv`) and also allow a number of customizations (e.g. whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others. 
 
-
 #### Considering Pandas and Interoperability with R 
 
 [Pandas](https://pandas.pydata.org/) is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully. 
@@ -144,7 +143,7 @@ b = "britt"
 c = 2.3
 mycolumnheadings = "a," + "b," + "c" + "\n"
 mystring = str(a) + "," + b + "," + str(c) + "\n"
-with open('/Users/britt/gitRepos/p390/p390/myfile.csv','w+') as f:
+with open('/home/britt/gitRepos/uwlooP390/p390/myfile.csv','w+') as f:
     f.write(mycolumnheadings)
     f.write(mystring)
 
@@ -154,7 +153,7 @@ with open('/Users/britt/gitRepos/p390/p390/myfile.csv','w+') as f:
 Now you can see if you can read that csv into R.
 
 ```{r}
-mydata = as.data.frame(read.csv("/Users/britt/gitRepos/p390/p390/myfile.csv"))
+mydata = as.data.frame(read.csv("/home/britt/gitRepos/uwlooP390/p390/myfile.csv"))
 mydata
 ```
 
