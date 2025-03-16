@@ -183,5 +183,11 @@ Presentations are a standard component of professional life. Despite that import
 
 Overleaf has a beginners [tutorial](https://www.overleaf.com/learn/latex/Beamer_Presentations%3A_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Getting_Started). Quarto also [supports](https://quarto.org/docs/presentations/beamer.html) Beamer. 
 
+[LaTeX and Knitr in Overleaf](https://www.overleaf.com/learn/latex/Knitr)\]\[knitr\]\] with overleaf. 
+[A scientific poster with Overleaf?](https://www.overleaf.com/latex/templates?q=poster)
+
 #### Academic Posters
+
 [Typest](https://github.com/quarto-ext/typst-templates/tree/main/poster)
+
+[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster\)
