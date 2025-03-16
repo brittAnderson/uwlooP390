@@ -10,3 +10,9 @@ Take a few minutes and see if you can determine what "Fair" stands. Then we can 
 
 -   [Fair principles](https://www.go-fair.org/fair-principles/)
 -   [Fair guiding principles](https://www.nature.com/articles/sdata201618)  
+
+# What are some of the challenges that computational tools pose for reproducibility?
+:::{.callout-tip title="Classroom Exercise"}
+Read and discuss: [A toolkit for transparency ... ](https://www.nature.com/articles/d41586-018-05990-5).
+
+:::
