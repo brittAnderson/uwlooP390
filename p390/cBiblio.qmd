@@ -10,7 +10,6 @@ Although there are different flavors to this "slip box" approach the consistent 
 
 
 ## ([Zettlekasten](https://en.wikipedia.org/wiki/Zettelkasten))
-
   1. [Org-roam](https://github.com/org-roam/org-roam)
   
   Org-roam is a tool for use within the Emacs ecosystem. Emacs is, to paraphrase the old joke, an operating system managing as a text editor. [Emacs](https://www.gnu.org/software/emacs/) comes with a suite of functions (`org-mode`) built in that facilitate outlining and note taking (and many more things besides). [Org-roam](https://www.orgroam.com/) is an additional piece of software designed to interact with the Emacs/Orgmode combination to implement many zettlekasten features. It is an emulation, in Emacs, of [RoamResearch](https://roamresearch.com/) a self-described tool for networked thought. 
@@ -68,6 +67,9 @@ In this section we will look at tools for two important functions related to ref
   I think this is a very nice new addition to the search environent, but your free use is very limited. In the paid version you can easily identify articles that seem central to a field of research. 
 
   Sign up and try your free search. 
+
+- [Research Rabbit](https://www.researchrabbit.ai/)
+  To be added.
 
 ### More on Citation Management
 
