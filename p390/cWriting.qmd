@@ -154,6 +154,8 @@ website:
 9. My files are at [Britt's Github Example](https://github.com/brittAnderson/brittAnderson.github.io/) and the demo is at [brittanderson.github.io](https://brittanderson.github.io).
    
 
+Note added Sept 2025. A good article on academic websites is to be found here: https://doi.org/10.1038/s41562-025-02310-6
+
 ### Journal Article Authoring
 
 ::: {.callout-tip title="Classroom Exercise and HW"}
