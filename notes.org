@@ -1,6 +1,6 @@
 Something to use in the new course: 
 https://www.science.org/doi/10.1126/science.adk4858 ?
-
+[[https://link.springer.com/article/10.3758/s13428-025-02868-z][fine tuning an llm]]
 How to access and use large datasets?
 * Ideas
 ** Coding

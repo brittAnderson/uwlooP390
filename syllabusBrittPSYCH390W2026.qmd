@@ -53,7 +53,6 @@ Britt Anderson, PhD & MD
 	2. Clean it.
     3. Shut it down
 
-
 ### Computer anatomy
     1. Operating Systems
     2. Directories
@@ -72,29 +71,20 @@ Britt Anderson, PhD & MD
 	 3. Object Oriented
 	    Also Python
 
-## Bibliography software and Zettlekasten
+### Using your computer
+#### Write an article
+#### Handle the bibliography
+#### Keep track of your notes and knowledge
+### Analyze your data
+    1. Statistically
+	2. Visually
 
-## Programming language choices for experiments
-
-## Data Storage
-
-### Data sharing; Big Data; Data Re-use
-
-## Data Analysis
-
-### Statistical programming
-
-### Data Visualization
-
-## Research dissemination
-
-### Writing and sharing reproducible analyses and articles
 
 # Grades
 
-I know you are all concerned about grades, but I am not. It sometimes feels like University is a checklist: take the right number of courses and get the right numbers on your transcripts and you will win. But that is not the case. Success in your career depends on your being able to deploy what you have learned and being able to keep on learning. These meta-skills are the ones I am most interested in helping you progress with and there are no measurement tools that we can use in this course that will allow us to predict your future occupational success. The compromise is for me to emphasize and incentivize those practices that I have learned to be most correlated with professional success: persistence, self-learning, striving for excellence. That is why I try to grade less on what you produce than how you produce it. A spectacular fail may be worth more than a safe win at this stage of your career. That is the philosophy. How do we make this work in practice?
+I know you are all concerned about grades, but I am not. It sometimes feels like University is a checklist: take the right number of courses and get the right numbers on your transcripts and you will win. But that is not the case. Success in your career depends on you being able to deploy what you have learned and being able to keep on learning. These meta-skills are the ones I am most interested in helping you progress with, and there are no measurement tools that we can use in this course that will allow us to predict your future occupational success. The compromise is for me to emphasize and incentivize those practices that I have learned to be most correlated with professional success: persistence, self-learning, striving for excellence. That is why I try to grade less on what you produce than on how you produce it. A spectacular fail may be worth more than a safe win at this stage of your career. That is the philosophy. How do we make this work in practice?
 
-I will give you frequent small assignments to demonstrate that you are keeping up and working on the material. I will assess your profile in class: do you come, are your interactive, are you prepared, and are you collaborative; and I will provide a final project goal for you to try and stretch your wings and put in practice what you have learned.
+I will give you frequent small assignments to demonstrate that you are keeping up and working on the material. I will assess your profile in class: do you come, are your interactive, are you prepared, and are you collaborative? I will provide a final project goal for you to try and stretch your wings and put in practice what you have learned.
 
 My experience is that I don't have to be a strict grader. The world is a far harder grader than I will ever be. You can easily find a way to get a good number in my class without learning a whole lot. That will be a very short term gain. I encourage you to be ambitious for yourselves. I hope that you will be more proud of what you have learned in this course than any particular pride in how it helps your GPA.
 
@@ -240,6 +230,8 @@ credit, you must follow specific guidelines. The article review must:
 Students need to have access to a laptop for in course programming exercises. This does not need to be purchased for the course, but it does need to be available, and it is presumed that all students currently enrolled in advanced undergraduate studies have access to a computer. The cost is \$0.00.
 
 The computer must run a full operating system (OSX/Windows/Linux). Phones and tablets running iOS or Android will not be sufficient.
+
+The students will be asked to use a large language model. Free tools are available, but some improved quality may result from using a paid model. From my testing the necessary token credits to complete the material for this course should be less than 10 dollars. 
 
 ## **Academic integrity**:
 
