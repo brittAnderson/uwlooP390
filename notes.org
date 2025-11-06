@@ -113,6 +113,10 @@ How to access and use large datasets?
    1. [[https://stackoverflow.com/questions/66869413/visual-studio-code-does-not-detect-virtual-environments][Stackoverflow Question]]
    2. [[https://quarto.org/docs/projects/virtual-environments.html][Quarto on virtual environments]]
    3. [[https://r4ds.hadley.nz/quarto][Hadley's Notes on Quarto]]
+** Finding Papers to Read Nature article
+   [[https://www.nature.com/articles/d41586-025-02867-2]]
+* Nexttime
+  1. [[https://www.nature.com/articles/d41586-025-03196-0][Code Nature Article]]
 * Footnotes
 
 [fn:1] What is the difference between "replicability" and "reproducibility"? 
