@@ -110,7 +110,7 @@ Many programming languages are very basic in what they offer. In order to do the
 ::: {#fig-installRpackage}
 
 ```r
-install.packages("tidyverse")
+install.packages("tidyverse",repos='https://mirror.csclub.uwaterloo.ca/CRAN/')
 library{tidyverse}
 ```
 
@@ -127,10 +127,10 @@ Here is an example of embedding R code in a qmd document. This is very useful wh
 ```{r}
 #| warning: false
 if(!require(tidyverse)){
-    install.packages("tidyverse")
+    install.packages("tidyverse",repos='https://mirror.csclub.uwaterloo.ca/CRAN/')
 }
 if(!require(palmerpenguins)){
-    install.packages("palmerpenguins")
+    install.packages("palmerpenguins",repos='https://mirror.csclub.uwaterloo.ca/CRAN/')
 }
 library(tidyverse)
 library(palmerpenguins)
