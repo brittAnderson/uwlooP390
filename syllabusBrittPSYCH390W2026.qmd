@@ -9,11 +9,12 @@ author:
         city: Waterloo
         province: ON
         url: brittlab.uwaterloo.ca
+latex-tinytex: false
 format:
   html:
     code-fold: true
   pdf:
-    pdf-engine: pdflatex
+    pdf-engine: xelatex
 jupyter: python3
 ---
 
