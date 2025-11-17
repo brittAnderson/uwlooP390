@@ -1,83 +1,26 @@
-# The role of the computer as a tool in psychological research
-
-Your computer can greatly augment your research productivity and quality. There is more to it than just learning to code. At every stage of the research process there are opportunities to facilitate an efficient and effective workflow by using your computer as an auxilliary. 
+# How can a computer help us in our research? 
 
 :::{.callout-tip title="Class Question"}
-
-Ignore for the moment the specific content of a psychological research project. That is whether it is a study on attention or memory. Consider abstractly what the components of a psychological research project are? Then ask how can computers help you do that stage of research better? 
-
+What are steps (or stages) involved in psychological research?
 :::
 
-## Research Project Stages
+## Research Project Support
 
-### Preliminaries
+[Knowledge and Literature Management](cBiblio.qmd).
 
-How do you decide what it is you are going to do? Look up and read the prior literature.
+[Telling the Computer What to Do](cCode.qmd)
 
-1.  How do you find what to read?
-2.  How do you keep track of what you have read?
-3.  How do you organize your notes on what you have read?
-4.  How do you integrate and connect your notes and readings so as to discover new connections or ideas?
-5.  How to you make sure you can correctly cite the articles you have read when it comes to writing up your research proposal or research result. Some answers to these questions will be discussed in [a later chapter](cBiblio.qmd).
+[Managing Data](cDatabase.qmd).
 
-How do you protect yourself against a change in databases or death of a harddrive?
+[Analyzing and Visualizing Data](cCode.qmd#r).
 
-### Do the research
+[Sharing Your Findings](cWriting.qmd).
 
-What skills are needed for this?
-
-1.  Program an experiment
-2.  Language? Python; Javascript; other
-    1.  How do you make stuff appear on a computer screen?
-    2.  How do you verify the timing?
-
-    Some thoughts on programming languages will be found in [this chapter](cCode.qmd)
-3.  How do you make sure you can find the version of the experiment if you need to share it or re-use it.
-4.  There is a new tool in the lab with drivers and hardware. Can you download and install the necessary software?
-5.  What happens to the data?
-    1.  How do you store it?
-    2.  How do you search it?
-    3.  What if it is big?
-    4.  What if it needs to be shared?
-
-    Databases are something I hope to document [further](cDatabase.qmd).
-
-### Analyzing the Research
-
-1.  How do you organize the data?
-2.  Working on a big data project?
-    1.  How do you get the data?
-    2.  Can you set up a database?
-    3.  Search it?
-3.  How do you do statistics?
-    1.  What is the tool?
-    2.  Could you write your own analysis?
-
-    Some material on the R programming language, a frequently used programming language for statistical analysis, can be found in [this chapter](cCode.qmd#r).
-
-### Diseminate the Research
-
-1.  What is the tool you use for writing your research?
-2.  What is reproducibility?
-3.  Does your writing tool support it?
-4.  How do you make sure others can re-run your analyses?
-5.  How do you make sure that you can easily adapt your analyses and make sure the right figures are included when you update the data? Or that the p-values in the text are also adapted?
-6.  How do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?
-
-I have a lot to say on writing tools in [this chapter](cWriting.qmd).
-
-### Make Your Research Open
-
-A selfish reason for learning these tools is that it will make what you do easier and better. But there is another more socially pertinent motivation: it enables the collective scientific enterprise to be better because tools like these facilitate reproducible and open science. 
+[Sharing Your Data](TBN)
 
 :::{.callout-tip title="Class Question"}
 
 -   What is "open research"?
 -   Should research be open?
--   How many of your labs are following these practices?
-
 :::
-
-What are Open Science practices?
-
-A recommended reading: [10 strategies for open science](https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in)
+[10 strategies for open science](https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in)
