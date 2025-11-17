@@ -13,9 +13,11 @@ book:
     - index.qmd
     - intro.qmd
     - cCmpResTool.qmd
+    - cIDE.qmd
+    - cTerminal.qmd
+    - cGit.qmd
     - cLabNotebooks.qmd
     - cWriting.qmd
-    - cTerminal.qmd
     - cCode.qmd
     - cProgExp.qmd
     - cExps.qmd
@@ -26,7 +28,6 @@ book:
     - cDatabase.qmd
     - summary.qmd
   appendices:
-    - cGit.qmd
     - cOSX.qmd
     - python-venv.qmd
 

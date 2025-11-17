@@ -22,518 +22,508 @@
   {
     "objectID": "cCmpResTool.html",
     "href": "cCmpResTool.html",
-    "title": "2  The role of the computer as a tool in psychological research",
+    "title": "2  How can a computer help us in our research?",
     "section": "",
-    "text": "2.1 Research Project Stages\nYour computer can greatly augment your research productivity and quality. There is more to it than just learning to code. At every stage of the research process there are opportunities to facilitate an efficient and effective workflow by using your computer as an auxilliary.",
+    "text": "2.1 Research Project Support\nKnowledge and Literature Management.\nTelling the Computer What to Do\nManaging Data.\nAnalyzing and Visualizing Data.\nSharing Your Findings.\nSharing Your Data",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The role of the computer as a tool in psychological research</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How can a computer help us in our research?</span>"
     ]
   },
   {
-    "objectID": "cCmpResTool.html#research-project-stages",
-    "href": "cCmpResTool.html#research-project-stages",
-    "title": "2  The role of the computer as a tool in psychological research",
+    "objectID": "cCmpResTool.html#open-research-practices",
+    "href": "cCmpResTool.html#open-research-practices",
+    "title": "2  How can a computer help us in our research?",
+    "section": "2.2 Open Research Practices",
+    "text": "2.2 Open Research Practices\n\n\n\n\n\n\nTipClass Question\n\n\n\n\nWhat is “open research”?\nShould research be open?\n\n\n\n10 strategies for open science\n\n\n\n\n\n\nTipClass Question\n\n\n\nWhat are the Fair principles for research?\n\n\n\nFair principles\nFair guiding principles\n\nRead and discuss: A toolkit for transparency ….",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How can a computer help us in our research?</span>"
+    ]
+  },
+  {
+    "objectID": "cIDE.html",
+    "href": "cIDE.html",
+    "title": "3  IDEs",
     "section": "",
-    "text": "2.1.1 Preliminaries\nHow do you decide what it is you are going to do? Look up and read the prior literature.\n\nHow do you find what to read?\nHow do you keep track of what you have read?\nHow do you organize your notes on what you have read?\nHow do you integrate and connect your notes and readings so as to discover new connections or ideas?\nHow to you make sure you can correctly cite the articles you have read when it comes to writing up your research proposal or research result. Some answers to these questions will be discussed in a later chapter.\n\nHow do you protect yourself against a change in databases or death of a harddrive?\n\n\n2.1.2 Do the research\nWhat skills are needed for this?\n\nProgram an experiment\nLanguage? Python; Javascript; other\n\nHow do you make stuff appear on a computer screen?\nHow do you verify the timing?\n\nSome thoughts on programming languages will be found in this chapter\nHow do you make sure you can find the version of the experiment if you need to share it or re-use it.\nThere is a new tool in the lab with drivers and hardware. Can you download and install the necessary software?\nWhat happens to the data?\n\nHow do you store it?\nHow do you search it?\nWhat if it is big?\nWhat if it needs to be shared?\n\nDatabases are something I hope to document further.\n\n\n\n2.1.3 Analyzing the Research\n\nHow do you organize the data?\nWorking on a big data project?\n\nHow do you get the data?\nCan you set up a database?\nSearch it?\n\nHow do you do statistics?\n\nWhat is the tool?\nCould you write your own analysis?\n\nSome material on the R programming language, a frequently used programming language for statistical analysis, can be found in this chapter.\n\n\n\n2.1.4 Diseminate the Research\n\nWhat is the tool you use for writing your research?\nWhat is reproducibility?\nDoes your writing tool support it?\nHow do you make sure others can re-run your analyses?\nHow do you make sure that you can easily adapt your analyses and make sure the right figures are included when you update the data? Or that the p-values in the text are also adapted?\nHow do you change the citation format when you submit to a journal that does not want APA or an edit changes which of your citations is the first (so it changes when you use et al)?\n\nI have a lot to say on writing tools in this chapter.\n\n\n2.1.5 Make Your Research Open\nA selfish reason for learning these tools is that it will make what you do easier and better. But there is another more socially pertinent motivation: it enables the collective scientific enterprise to be better because tools like these facilitate reproducible and open science.\n\n\n\n\n\n\nClass Question\n\n\n\n\nWhat is “open research”?\nShould research be open?\nHow many of your labs are following these practices?\n\n\n\nWhat are Open Science practices?\nA recommended reading: 10 strategies for open science",
+    "text": "3.1 Required for this Course: VS Code\nVSCode\nOpensource alternative",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The role of the computer as a tool in psychological research</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IDEs</span>"
     ]
   },
   {
-    "objectID": "cOpenResearch.html",
-    "href": "cOpenResearch.html",
-    "title": "3  More About Open Research Practices",
-    "section": "",
-    "text": "3.1 Fair Principles\nTake a few minutes and see if you can determine what “Fair” stands. Then we can see if we agree. We can then use those principles to evaluate our research tools.",
+    "objectID": "cIDE.html#for-the-hardcore",
+    "href": "cIDE.html#for-the-hardcore",
+    "title": "3  IDEs",
+    "section": "3.2 For the Hardcore",
+    "text": "3.2 For the Hardcore\nEmacs. VIM",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>More About Open Research Practices</span>"
-    ]
-  },
-  {
-    "objectID": "cOpenResearch.html#fair-principles",
-    "href": "cOpenResearch.html#fair-principles",
-    "title": "3  More About Open Research Practices",
-    "section": "",
-    "text": "Fair principles\nFair guiding principles",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>More About Open Research Practices</span>"
-    ]
-  },
-  {
-    "objectID": "cLabNotebooks.html",
-    "href": "cLabNotebooks.html",
-    "title": "4  Lab Notebooks",
-    "section": "",
-    "text": "I will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.\n\nJupyter notebooks in Psychology\n10 rules for lab notebooks (electronic)\nHow to keep a lab notebook\nPick an electronic lab notebook\nLab notebook 2023 guide",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab Notebooks</span>"
-    ]
-  },
-  {
-    "objectID": "cWriting.html",
-    "href": "cWriting.html",
-    "title": "5  Writing Scientific Documents",
-    "section": "",
-    "text": "5.1 IDEs and Writing up your Research\nWriting scientific documents is more than writing papers. It can also include posters, websites, books, and all of these may require images, graphs, references, formuals, and even code. We will take a look here at some of the tools that can help with this, and later we will look in more detail at some of the options.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
-    ]
-  },
-  {
-    "objectID": "cWriting.html#ides-and-writing-up-your-research",
-    "href": "cWriting.html#ides-and-writing-up-your-research",
-    "title": "5  Writing Scientific Documents",
-    "section": "",
-    "text": "TipClass Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n5.1.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n\n\n\n\n\n\nTipIn-class Exercise\n\n\n\nLocate, download, install, and verify you can start VS Code.\n\n\n\n\n5.1.2 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\nAdditional material about VS Code and its use as an IDE will be found in this section quit ### Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nYou always have choices. You can even [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nTipClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?\n\n\n\n\n5.1.3 RStudio\nRStudio is a popular IDE for writing R code. R is a programming language particularly useful for statistical analyses. While initially RStudio was only for the R language the number of programming languages it currently supports has grown. It still is not as widely useful as VS Code, and many of RStudio’s features are designed for the interactive evaluation of data, and so it has less of the cutting edge features that software developers expect in their code tools. Whether you want to use RStudio or not will depend in part on your planned activity.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
-    ]
-  },
-  {
-    "objectID": "cWriting.html#scientific-publishing-tools",
-    "href": "cWriting.html#scientific-publishing-tools",
-    "title": "5  Writing Scientific Documents",
-    "section": "5.2 Scientific Publishing Tools",
-    "text": "5.2 Scientific Publishing Tools\nTo understand the plethora of contemporary tooling available to facilitate writing you should know generally what is meant by a mark-up language. This will help you evaluate whether it makes sense for you to switch from a word processiing program, like Word for Windows, to a more general tool like VS Code or emacs.\nSome of the available options you should be familar with are\n\nLaTeX\n\nLaTeX This was the standard for several decades, and used more by mathematicians than others, but today it seems limited in that it produces mostly pdfs, and many people also want their files to export to html (webpages)\n\nA guide to LaTex for Word Users (pdf)\nThe descendants of markdown\nQuarto/Qmd\n\nQuarto (we will skip Rmd and since we are using its successor qmd. Both are related to the people who wrote RStudio,knitr, and are now known as Posit).\n\nOrg Mode\n\nOrg Mode works particularly well with Emacs and allows you to embed code from multiple languages.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
-    ]
-  },
-  {
-    "objectID": "cWriting.html#things-you-can-do-with-quarto",
-    "href": "cWriting.html#things-you-can-do-with-quarto",
-    "title": "5  Writing Scientific Documents",
-    "section": "5.3 Things You Can Do With Quarto",
-    "text": "5.3 Things You Can Do With Quarto\nHere are some of the helper links for things we can do with Quarto:\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\npresentation\nTalking to databases.\nMake a website/blog for your work or lab\nAnd more …\n\n\n5.3.1 Making a Website with Quarto and Github Pages\nAs science progressively moves to online communication there is a need to have a place to show case your work and share ideas. One way to do this is with a personal website structured around your scientific interests and activities. While there are many methods, tools, and hosts for this I will focus on sharing how you can use the Quarto publishing tool.\n\n5.3.1.1 Hosting\nTo have a website viewable by the world it must be hosted on a server that is viewable by the world. For example, it cannot be behind an institutional firewall (as are most of the computers at the University of Waterloo). And if you host on a University or Company server you have the potential of being limited in what you can share, how often you can update, or you may be required to adhere to certain styles and formats mandated by the institution’s brand. One way to avoid this is to find an external hosting site. A modest fee would allow you to have a virtual server in the cloud, but the example we will use here to get you started is a free service available to those with Github accounts: Github Pages.\n\n5.3.1.1.1 Testing Github Pages\nAssuming you have an account you should be able to create a minimal webpage in a few steps.\n\nGo to personal dashboard and create a new repo as instructed on the Github Pages website. The repo must be named .github.io.\nUse terminal to clone this repo to your local computer.\ncd into the correct directory using your terminal (inside VS Code is fine). And using the terminal do `echo “hello world” &gt; index.html.\nDo the usual add, commit, and push and verify your web site works at &lt;username.github.io&gt;.\n\nYou now have a website!\n\n\n\n5.3.1.2 Blog Project in Quarto\nThe advantage of managing your blog (or website) in Quarto is that you get to take advantage of all the markdown language features. This is much more convenient than writing in html directly. You can also embed code and output just as you have been doing when you export your R code to html.\nThere are several ways that the Quarto people recommend getting the material to and from github. The one that I found most convenient (that is the one that I got working with the least amount of swearing) was to configure a project that exports to a docs directory.\nCreating the blog project in Quarto.\n\nIn the terminal move to the directory with your repo.\nCreate a branch called gh-pages.\n\nYou can find the steps for creating this branch at blog, but for the later steps he uses the publish option where we will output to docs.\nMake sure everything is committed or stashed before you begin then:\n\n\ngit checkout --orphan gh-pages\ngit reset --hard\ngit commit --allow-empty -m \"Initializing gh-pages branch\"\n\n\n\n\n\n\nCaution\n\n\n\nIf you are going to try the “publish” option you will not want to edit in the gh-pages branch. That branch will just be used for publishing your content. However, when using the docs approach, as I am illustrating, it is fine to just work on the gh-pages branch directly. For the docs method to work properly you must go into your settings for this repository on Github and find the Pages area. Then make you set the branch correctly and point it to the docs/ directory.\n\n\n\nAdd the following to your .gitignore:\n/.quarto/\n/_site/\nIf you don’t have such a file, create it. If you don’t know what a .gitignore file is ask!\nNow we use the quarto command in the terminal to initiate our website as a project. This creates the basic structure we need. We can later change or adapt it.\n\nquarto create project blog .\nWhen I did this it asked me for a title and then it asked to open everything in vs code. Then you will want to edit the _quarto.yml file to direct the output to the docs/ directory. The top of you file should look like\n\nproject:\n  output-dir: docs/\n  type: website\n\nwebsite:\n  title: \"brittAnderson.github.io\"\n...\n\nTry quarto preview to see the current skeleton.\nExplore the files to see what you can change. Try the about page for a starter. Can you add a picture of yourself, and make it say your name?\nTry adding a post. First study the structure of the existing posts. You will need to emulate this in order for things to track correctly.\nThen publish quarto render This command will compile the html versions of your qmd code and direct them to the correct places. Then if you have set up thing correctly you can use the git features within VS Code to commit and push your changes. After a few minutes they should be available via your github link.\nMy files are at Britt’s Github Example and the demo is at brittanderson.github.io.\n\nNote added Sept 2025. A good article on academic websites is to be found here: https://doi.org/10.1038/s41562-025-02310-6\n\n\n\n5.3.2 Journal Article Authoring\n\n\n\n\n\n\nTipClassroom Exercise and HW\n\n\n\nWrite an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to your overleaf submission. All the components of an article, at least one figure, and at least one reference. Instead of using an image from the web try to include either your R or Python code for the figure you liked.\n\n\nI find this easier to do from a terminal.\n#| eval: false\n\nquarto use template quarto-journals/elsevier\nThis will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going.\n\n\n5.3.3 Presentations\nPresentations are a standard component of professional life. Despite that importance the materials are often developed in a casual way that does not give the best impact to the material. There are many more versatile tools than contemporary Power Point. Though power point can make an effective presentation its default use does not typically achieve that goal. Quarto provides easy access to two other presentation tools that will expand one’s recognition of what an effective presentation tool can do.\n\n5.3.3.1 Reveal.JS\nReveal.js is a javascript library for the creating presentations that work as well on the web as they do in person. Quarto also supports Reveal.js.\n\n\n5.3.3.2 Beamer\nBeamer is a package for LaTeX that allows professional quality typesetting. It is particularly relevant for presentations that have a lot of mathematical material, though it is quite capable of supporting any general presentation as well. It is less flexible for the web since it produces PDFs. These can be shared on the web, but they require the intermediate step of downloading them rather than just playing them. Beamer also has a “Poster” variant that can be used to make high quality academic posters.\nOverleaf has a beginners tutorial. Quarto also supports Beamer.\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?\n\n\n5.3.3.3 Academic Posters\nTypest\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IDEs</span>"
     ]
   },
   {
     "objectID": "cTerminal.html",
     "href": "cTerminal.html",
-    "title": "6  Terminals",
+    "title": "4  Terminals",
     "section": "",
-    "text": "Even before you start coding programs you can use simple coding constructs to efficiently command your computer to do things, script repetitive tasks, or find information hard to locate through a GUI interface. To whet your appetite I have included a short video I made for another course showing some use of the Terminal.\n\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a terminal?\n\n\nTo use your terminal you need to do somethings first:\n\nFind your terminal. Different operating systems refer to the terminal differently. In Windows the =CMD.exe= [fn:1] command is an approximation to a terminal as is the Power Shell. For OSX you navigate to you applications, find the folder “Utilities” and look in their for the terminal application. For Linux it will depend on which particular flavor you have installed.\nLearn some terminology While they do not mean exactly the same thing, you will often find the following terms being used relatively interchangeably.\n\nterminal\nshell\ncommand line What they have in common is the idea of a text based interface to communicating with the operating system. What this means is that instead of opening a gui (gui: G raphical U ser I nterface) to navigate your file tree you do this with a text based system of commands.\n\nTry out some sample commands\n\n\n\n\n\nls\n\n\n\nFigure 6.1: Typing this command in your terminal will list the files and directory. What would you have to do to see the hidden files? How would you get more information about this function and how to use it?\n\n\n\n\n6.0.1 An Historical Aside\nIn the early days of computing people wrote their programs on punch cards. Some see the inspiration as the Jacquard machine. There are still programmers alive who can tell you their horror stories of tripping and falling and scattering their punch cards everywhere. Want to know if your program worked? Take it to the main frame data center, drop it off, and come back the next day to get your print out. Terminals came along as an alternative to communicating with big central processors. There was a screen and keyboard. By typing you could send input to the computer that returned the output to your screen. The terminals we have today are not true terminals, but emulators. Though few people refer to them as such. We emulate this old way of communicating to the processor because it works and is efficient.\n\n\n6.0.2 Why use a terminal?\nYou can get more done. You can get it done more quickly. Once you learn to do one hard thing you never have to figure out how to do it again, because you can easily script it. That is why you want to learn to use the terminal\nTerminals are ubiquitous. They are low in their resource usage. They permit remote logins without the need for sending graphics back and forth. In fact, the remote computer need not have a system installed for displaying windows or even a physical screen attached (called headless).\nKnowing how to use a terminal will allow you to use =ssh= to connect to remote hosts. It will allow you to quickly and efficiently navigate your system, and it will make it easy for you to do things that used to take ages.\n\n\n6.0.3 A scripting example\nWant to convert and compress a large directory of videos as I did for this course. No need to open up each in an application and click a bunch of mouse clicks. Just write a =bash= script to invoke a command line program to do all the work for you. Go get a cup of coffee and come back when the job is done.\n\n\n\n\n\n\nFigure 6.2: How would you pronounce XKCD?\n\n\n\n\n   for i in *.MP4; \n   do name=`echo \"$i\" | cut -d'.' -f1`; \n   echo \"$name\"; \n   ffmpeg -i \"$i\" -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k \"${name}S.mp4\";\n   done\n\nAlmost all of this I copied off the Internet where it appeared as an answer to a question from someone else wanting to do essentially the same thing I did. It took me a while to tweak it to my particular use case, but when that was done my problem was solved, /forever./ Every new batch of videos I just put in their own directory and run this script from the command line. Note that this script uses a for loop, this is a very common programming construct.\n\n\nfor (i in seq(1,5)) { print(i)}\n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n\n\nThis code block demonstrates a simple for loop for the R programming language.\n\n\n\n6.0.4 Resources on Terminals\nThere are a great many resources on how to use the terminal effectively, but don’t go out and read them all. One of the skills to learn in learning to use the computer is to develop your own set of links and resources you can go to when need arises. Don’t try to learn everything at once. You will get overwhelmed and discouraged. Instead you learn what you need when the need arises. And if you need to know something more than once, then you spend the time to dive deeper. There are a great many things about using the terminal that I do not know, but I know the ones I use often, and I know where to find more when I need to know more. You should do the same. Here are a few online resources to get you started.\n\nThe command line\nA Short Series of Terminal Lessons from the UbuntuWiki\nSome Scripting Basics\nAnother Scripting Introduction\n\nMost of what you want to do at the command line, at least in the beginning, you can do with typing directly into the terminal. But at some point you will want to write a file, a script, that has all the commands typed into it. They you can run that script from the terminal. This blog post has some basic background for how to get started.\nNote the use of the term “BASH”. This stands for the Bourne Again Shell. Your terminal can use different shells (and if you are using a mac you are probably using the zsh shell). So while you can use the terms interchangeably most of the time, they don’t mean exactly the same thing.\n\n\n6.0.5 Terminal Games Again\nThese will only work on linux and OS X. If you are on windows you could enable the linux subsystem for linux or you could learn the powershell equivalents. But I suggest that you use the terminals that are built into VS Code for practice. You will usually see these at the bottom of your screen. If not, there is a menu you can use to open one.\n\nls -la /home/\n\n\nWhat does all this output mean?\nWhat changes when you leave out the -la?\nWhat does the hyphen do?\n\n\nCan you find the location of your desktop folder in your terminal?\nCan you change to that directory? cd\nFind out where you are? pwd\nCan you find out who the computer thinks you are, your user name? whoami\nFind out how much free space you have on your computer disk. df -h\nHow do you get help for most of these commands? Usually command –help or (-h)\nHow do you find the manual? man ls\nNavigating\n\nPaths: absolute and relative.\nWhat do those “dots” mean?\nWhat do those slashes mean?\nTab is your friend.\nTry the up arrow too.\n\nFile ownership\n\nMake a text file from the command line. touch /home/yourname/Documents/testText.txt\nWho owns it?\n\nMake a directory mkdir /home/britt/Documents/myFirstDir/ Spaces are the enemy. Never use them, but if you have to, escape () them.\n\n\n\n6.0.6 Using the Terminal to Setup a Python Venv and install Jupyterlab\nThe terminal can also be a very convenient and direct to install programs. You are not clicking buttons in a gui and hoping things work. You have to know exactly what program you want and where you want to put it. As an example we see how we might use the terminal to establish a python virutal environment and use that venv to implement a jupyterlab setup. You will find more on python virtual environments in the appendix.\nOur goal is to be able to test and develop the idea of a jupyter lab notebook. But we will need several pieces of code installed. Assuming we have python3 installed we can use the terminal to set up a secure enviroment for creating a virtual environment. Think of a sandbox that let’s you play without getting the things you installed for experimentation conflict with your system’s tools.\n\nOpen a terminal\nMake a directory (mkdir)\n“cd” into your new directory and create the virtual environment\n\npython3 -m venv .\n\nNext, “activate” the environment with\n\nsource ./bin/activate\n\nNow you can install the needed packages with pip.\n\npip install numpy matplotlib jupyterlab",
+    "text": "4.0.1 Commands to try (many have options)\nCurrently these words are used as synonyms: terminal, shell, command line; which is not exactly true, but is close enough.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Terminals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Terminals</span>"
     ]
   },
   {
-    "objectID": "cCode.html",
-    "href": "cCode.html",
-    "title": "7  Coding",
-    "section": "",
-    "text": "7.0.1 Languages\nFor a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?\nWhat should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.\nHow do you future proof? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?",
+    "objectID": "cTerminal.html#additional-introductory-material",
+    "href": "cTerminal.html#additional-introductory-material",
+    "title": "4  Terminals",
+    "section": "4.1 Additional Introductory Material",
+    "text": "4.1 Additional Introductory Material\n\nThe command line\nA Short Series of Terminal Lessons from the UbuntuWiki\nSome Scripting Basics\nAnother Scripting Introduction",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coding</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Terminals</span>"
     ]
   },
   {
-    "objectID": "cCode.html#footnotes",
-    "href": "cCode.html#footnotes",
-    "title": "7  Coding",
-    "section": "",
-    "text": "This example comes from this node tutorial.↩︎",
+    "objectID": "cTerminal.html#getting-work-done-scripting",
+    "href": "cTerminal.html#getting-work-done-scripting",
+    "title": "4  Terminals",
+    "section": "4.2 Getting work done: scripting",
+    "text": "4.2 Getting work done: scripting\nWant to convert and compress a large directory of videos (as I did for the pandemic version of a course)?\n   for i in *.MP4; \n   do name=`echo \"$i\" | cut -d'.' -f1`; \n   echo \"$name\"; \n   ffmpeg -i \"$i\" -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k \"${name}S.mp4\";\n   done",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coding</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Terminals</span>"
     ]
   },
   {
-    "objectID": "cProgExp.html",
-    "href": "cProgExp.html",
-    "title": "8  Programming Experiments",
-    "section": "",
-    "text": "8.1 All-in-one options\nOne of the most common uses of computers in psychology is for the programming of experiments. Classic experiments often involve a combination of visual stimuli that the participant has to respond to in someway. Typical responses are often button presses or mouse clicks, though many other varieties of stimuli and reports are used. While many programming languages can be used for this task we will begin with one of the most popular, Python. And if time permits we can explore some examples with Javascript as the world of experimental psychology is increasingly complementing the usual lab based testing paradigm with online studies.\nExcellent tools exist that provide turn-key solutions. A very popular one is Psychopy. This package is available for the popular operating systems and gives a gui like builder that allows you to program visually. It offers the opportunity to output your experiment into a web friendly format that can integrate with an online hosting service for performing experiments. However, my experience is that while such tools make it easy to get started they don’t help people develop the general skills that will transfer into programming that distinctive experiment that no one else has done. And the knowledge you gain is often interface specific. It is not general, and so your learning cannot transfer into writing R code or porting your experiment to MATLAB if that becomes the tool a collaborator wants to use. Even if this is the sort of tool you eventually settle on for the very reasonable reasons that your experimental needs are not complex and the quality of the implementation allows you to get work done more easily and on board new investigators more quickly, it will still make you better at planning and handling problems if you have a knowledge of what is going on under the hood.",
+    "objectID": "cTerminal.html#talking-to-other-computers-in-the-terminal",
+    "href": "cTerminal.html#talking-to-other-computers-in-the-terminal",
+    "title": "4  Terminals",
+    "section": "4.3 Talking to other computers in the terminal",
+    "text": "4.3 Talking to other computers in the terminal\n\n4.3.1 SSH\nTesting and Learning for Linux SSH",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Programming Experiments</span>"
-    ]
-  },
-  {
-    "objectID": "cProgExp.html#python",
-    "href": "cProgExp.html#python",
-    "title": "8  Programming Experiments",
-    "section": "8.2 Python",
-    "text": "8.2 Python\nThe following examples focus on the sort of experiment where you want something to appear on the screen, and you want feedback from the participant. Current computer graphics don’t work like they did twenty years ago when we all had heavy CRTs on our desks, but one can still deploy some of the intuitions of that era.\nThe monitor is a screen and it is displaying a picture. In the background what is to be shown next is in preparation and at some point what is on the display now will be replaced by the next collection in the queue. Even though we no longer literally raster the display from top to bottom and side to side you can still usefully think in terms of frames. Thus, almost all your experiments will need the mechanics of a window the participant views and in which you can write things you want them to see.\n\n8.2.1 Pygame\nFor practice I will use the pygame python library. There are a large number of help and tutorials for this well established library that has been in use for decades. It is well vetted and documented, and relies on a simple direct library for video manipulations.\n\n8.2.1.1 Some Links for Getting Started with Pygame\n\nThe pygame getting started wiki. Most of my examples will draw from this site.\nReal python pygame tutorial\nGame Development Academy\n\n\n\n8.2.1.2 Installation\nA virtual environment is recommended, but not necessary. If you are using a venv activate it first.\nThen\n1pip install pygame\n\n2python -m pygame.examples.aliens\n\n1\n\nThis line installs the library.\n\n2\n\nThis launches a test game. If you see the game, you have installed pygame. I find this game plays a little fast on modern hardware.\n\n\n\n\n\nimport sys,pygame\npygame.init()\n\nmywindow = pygame.display.set_mode([800,800])\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n    mywindow.fill((128,15,15))\n    pygame.display.flip()\n        \npygame.quit()\nsys.exit()\n\n\nFigure 8.1: This python program will, assuming you have installed pygame, launch a window and close it when you click the “x”. Can you change the window size and background color?\n\n\n\nOne of the better ways to get started is to gradually hand in functionality one step at a time until you have the basics of what you need on a trial and then to refine that to loop through the multiple trials you will probably need.\nHere is an example of a bit of code that shows some elementary use of the mouse, response time, shape and text functionality.\nfrom itertools import compress\nimport sys,pygame\npygame.init()\n\n\nmy_font = pygame.font.Font(None,72)\ntest_text = my_font.render(\"Hello P390\", 1, (200,10,200))\ntest_text_pos = test_text.get_rect(centerx = 400)\n\n#Helper functions\ndef which_buttons (bs):\n    return(list(compress(range(len(bs)),bs)))\n\n#button colors\nclrs = [(0,0,255),(0,225,0),(225,0,0)]\nactv_clr = 0\nrslts = {'trial_num': -1,'color' : None ,'time' : None}\n\nmywindow = pygame.display.set_mode([800,800])\nrunning = True\nmyrt_clock = pygame.time.Clock()\nt1 = myrt_clock.tick(60)\nanew = pygame.mouse.get_pressed()\ntrl = -1,\nclr = clrs[0]\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n    mywindow.fill((128,15,15))\n    pygame.draw.circle(mywindow, clrs[actv_clr], (400,400), 75)\n    mywindow.blit(test_text, test_text_pos)\n    pygame.display.flip()\n    aold = pygame.mouse.get_pressed()\n    if(any(aold) and (aold != anew)):\n        t2 = myrt_clock.tick(60)\n        rslts['time'] = t2 - t1\n        rslts['trial_num'] = rslts['trial_num'] + 1\n        actv_clr = which_buttons(aold)[0]\n        rslts['color'] = actv_clr\n        anew = aold\n        print(rslts)\n        \npygame.quit()\nsys.exit()\n\n\n8.2.1.3 Next Steps\nYou will want to save your data. As a first step see if you can open a file, and the if you can use the dictionary created to add lines to a csv file.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Programming Experiments</span>"
-    ]
-  },
-  {
-    "objectID": "cProgExp.html#javascript",
-    "href": "cProgExp.html#javascript",
-    "title": "8  Programming Experiments",
-    "section": "8.3 Javascript",
-    "text": "8.3 Javascript\nWIP",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Programming Experiments</span>"
-    ]
-  },
-  {
-    "objectID": "cExps.html",
-    "href": "cExps.html",
-    "title": "9  In Lab Experiments",
-    "section": "",
-    "text": "Making stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n9.0.1 Online Experiments\nRunning a server for testing and more? XAMPP Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMPP might be a good resource. Exercise to download and get the XAMPP server running? Need to expand this. An exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>In Lab Experiments</span>"
-    ]
-  },
-  {
-    "objectID": "cHandlingData.html",
-    "href": "cHandlingData.html",
-    "title": "10  Handling Data",
-    "section": "",
-    "text": "Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use.\n\n10.0.0.1 Data Formats\n\nPlain Text\nCSV\nTSV\nJSON\nPickle\n\nDat (R)\n\nSome advantages and disadvantages of each.\nPlain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.\nCSV and TSV view all data as rows and a unique character (commas or tabs) separates the cells of the rows. Another character, typically a new line (often seen written as \\n) is what distinguishes one row from the next. These file types are, largely, human readable if the number of columns and rows are not too large. They are not as space efficient as other formats, but that may be a reasonable tradeoff when the size of the data files is small.\nJSON stands for Java Script Object Notation. Although, as the name implies, it had its origin in javascript it is largely language agnostic and is a common format for the storage of data of all types. Its being used as a standard means it has wide support from many programming languages and that means there are good tools for exporting and storing for most programming languages. It can be quite flexible in the type of data stored. It is not friendly for writing by hand, but the use of tools makes it fairly easy to take experimentally collected data created in, say, a python dictionary and convert it to a json format.\n\n\n\n\nimport random as r\nimport json as j\na = {'name': 'John Doe', 'age': 24, 'rt': r.random()}\njs = j.dumps(a)\njs\n\n'{\"name\": \"John Doe\", \"age\": 24, \"rt\": 0.037200070019879794}'\n\n\n\n\nFigure 10.1: The dumps command will output the json version as a string.\n\n\n\nNote there is a very similar python function without the terminal s, json.dump, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with json.load()\n\n\n\n\nimport json\na = {'name': 'John Doe', 'age': 24}\njs = json.dumps(a)\n\n# Open new json file if not exist it will create\nfp = open('test.json', 'a')\n\n# write to json file\nfp.write(js)\n\n# close the connection\nfp.close()\n\n\n\nFigure 10.2: A simple example taken from [StackOverflow] shows a working example.\n\n\n\nA JSON tutorial can be found here.\nPickling is a data serialization library specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage.\nThis code from a GeeksforGeeks article provides a nice minimal working example.\n\n\nimport pickle\n\ndef storeData():\n    # initializing data to be stored in db\n    Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak',\n    'age' : 21, 'pay' : 40000}\n    Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',\n    'age' : 50, 'pay' : 50000}\n\n    # database\n    db = {}\n    db['Omkar'] = Omkar\n    db['Jagdish'] = Jagdish\n    \n    # Its important to use binary mode\n    dbfile = open('examplePickle', 'ab')\n    \n    # source, destination\n    pickle.dump(db, dbfile)                    \n    dbfile.close()\n\ndef loadData():\n    # for reading also binary mode is important\n    dbfile = open('examplePickle', 'rb')    \n    db = pickle.load(dbfile)\n    for keys in db:\n        print(keys, '=&gt;', db[keys])\n    dbfile.close()\n\nif __name__ == '__main__':\n    storeData()\n    loadData()\n\nWhen working in the R environment the save and load function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called read and write. Each of these has several specialization that target particular file types (e.g. read.csv) and also allow a number of customizations (e.g. whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others.\n\n10.0.0.2 Considering Pandas and Interoperability with R\nPandas is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully.\nPandas can usually be installed with pip install pandas. Because of the size and complexity of python installations a virtual environment is recommended.\nEven if you are not thinking of doing your data analysis in python if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data convenient. But before we show a pandas method let’s see a lower tech, more old school method.\nIt is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example,\n\na = 1 \nb = \"britt\"\nc = 2.3\nmycolumnheadings = \"a,\" + \"b,\" + \"c\" + \"\\n\"\nmystring = str(a) + \",\" + b + \",\" + str(c) + \"\\n\"\nprint(mycolumnheadings + mystring)\n\na,b,c\n1,britt,2.3\n\n\nshows how to create a string from one’s data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler.\n\n10.0.0.2.1 Opening and Closing a File in Python\n\na = 1 \nb = \"britt\"\nc = 2.3\nmycolumnheadings = \"a,\" + \"b,\" + \"c\" + \"\\n\"\nmystring = str(a) + \",\" + b + \",\" + str(c) + \"\\n\"\nwith open('/home/britt/gitRepos/uwlooP390/p390/myfile.csv','w+') as f:\n    f.write(mycolumnheadings)\n    f.write(mystring)\n\nNow you can see if you can read that csv into R.\n\nmydata = as.data.frame(read.csv(\"/home/britt/gitRepos/uwlooP390/p390/myfile.csv\"))\nmydata\n\n  a     b   c\n1 1 britt 2.3\n\n\n\n\n10.0.0.2.2 A Better Way: Dictionaries\nPython dictionaries (which have their counterparts in most programming languages though they may be called something different) are a convenient way to store data where you can give it a meaningful name. For example, in an experiment with numerous trials and conditions you could have a key in your dictionary for “trial no.” and another for “condition”. The values for these would then be updated as your experiment unfolded.\nA first pass to using dictionaries is to blend this with a python library for CSV files. Then you can create the column headings from your keys and then each trial that you loop through you can use the dictionary to write a new row to your csv file. Some of the functions you might want to use are:\n\ncsv.DictWriter\nwriteheader\nwriterows\n\nIf you set up and define your dictionary at the start of the file you only need to update the changing values as they occur.\nAnother approach that will start you getting some familiarity with python pandas library is to make to make a distinct dictionary for each of the trials in your experiment. Then you can concatenate these dictionaries to a list and use that list to create a pandas dataframe. That could then be used in analysis python code or for importing into R. Here is a short example to illustrate the principle.\n\nimport random as r\nimport pandas as pd\n\nmylistofkeys=[\"name\",\"v1\",\"v2\",\"v3\",\"v4\"]\n\nmydictlist = []\nfor i in range(5):\n    mydictlist.append({key:value for key,value in zip([\"name\",\"v1\",\"v2\",\"v3\",\"v4\"],[\"britt\"] + [r.random() for i in range(5)])})\n\ndf = pd.DataFrame(mydictlist)\n\ndf.loc[:,'v3'].mean()\n\nnp.float64(0.7023188282722294)\n\n\nmyfilename = \"mypandastest.csv\"\ndf.to_csv(myfilename)\n\nYou can save pandas dataframes as a pickle file, but then you will not be able to easily read it into R. CSV remains the easiest and most direct way to do this. It is probably all you need for most use cases. Though there are other options.\n\nrdf = read.csv(\"mypandastest.csv\")\nmean(rdf$v3)\n\n[1] 0.7023188\n\n\n\n\n\n10.0.0.3 Some Analysis Tools\n\nPandas TBD\nSome more R TBD",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Handling Data</span>"
-    ]
-  },
-  {
-    "objectID": "cBiblio.html",
-    "href": "cBiblio.html",
-    "title": "11  Knowledge Management",
-    "section": "",
-    "text": "11.1 (Zettlekasten)\nThis section deals with the issue of how you keep track of the information you discover and how you mine it for new ideas, associations, and connections. In this section we will consider the notion of the zettlekasten and some modern tools for emulating this technique.\nFor many contemporary adherents to the zettlekasten system their pole star is Niklas Luhman a social systems theorist who was an prolific publisher and who credited much of his fecundity to this technique. Essentially, the method is one of cross-referenced index cards, and historical precedents are easy to find.\nAlthough there are different flavors to this “slip box” approach the consistent theme is that one reflect on their reading, summarize it, and connect it to other works and concepts in their data base. We can perhaps do this more easily 1.\nOrg-roam is a tool for use within the Emacs ecosystem. Emacs is, to paraphrase the old joke, an operating system managing as a text editor. Emacs comes with a suite of functions (org-mode) built in that facilitate outlining and note taking (and many more things besides). Org-roam is an additional piece of software designed to interact with the Emacs/Orgmode combination to implement many zettlekasten features. It is an emulation, in Emacs, of RoamResearch a self-described tool for networked thought.\nThe online manual for org-roam provides a brief introduction and overview of the tool. Very, perhaps too, briefly you use various key commands to create nodes in your network and link them to others. You include notes on entries in your bibliographic system, or free standing notes organized around particular concepts. These links can be viewed both forward (things they link to) or backward (things that link to them), and there are also graphical views. A brief demonstration of some of these tools will be provided in class.\nThis note-taking knowledge management tool is included here because it can interact well with the VS Code and Markdown approach we have been learning about through our use of Quarto.\nOne of the common features you will find for all these tools is the paring back of dependencies. Most rely on some sort of plain text system at their base. This means you can always just read your entries even if the fancy link and processing features break or prove unwieldy. This generally future proofs your “cards” and also often means that things can work faster and more robustly because there are fewer dependencies.\nObsidian is another very popular offering in the same space as the above. This one however will cost you money. I include it here because of its wide popularity. The overview page of the website provides a good general visual orientation to the offerings and features.",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Knowledge Management</span>"
-    ]
-  },
-  {
-    "objectID": "cBiblio.html#zettlekasten",
-    "href": "cBiblio.html#zettlekasten",
-    "title": "11  Knowledge Management",
-    "section": "",
-    "text": "Org-roam\n\n\n\n\nDendron - works with VS Code\n\n\n\n\nObsidian\n\n\n\n\n\n\n\n\nTipClassroom Exercise\n\n\n\nTaking Dendron for a test drive.\n\nInstall Dendron from the VS Code Marketplace.\nFill out the survey and any extensions you want (I took all the recommended) and proceed to the tutorial.\nThis should like quite familiar to your. The qmd files we have been writing are really just augmented versions of this md format.\nUse the terminal to figure out what directory your notes are being stored in.\nUse Ctrl-L to create a new note then navigate back to the tutorial.\nThe authors keep talking about vim. Look up what vim is. Do you have vim or its more difficult cousin vi on your computer? Try to open one or the other in a terminal.\nHow do you creat a note hierarchy?\nView the tree mode.\nUse the Command Palette to view all the Dendron related commands, and at least read the next steps.",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Knowledge Management</span>"
-    ]
-  },
-  {
-    "objectID": "cBiblio.html#reference-management",
-    "href": "cBiblio.html#reference-management",
-    "title": "11  Knowledge Management",
-    "section": "11.2 Reference Management",
-    "text": "11.2 Reference Management\nIn this section we will look at tools for two important functions related to references for the papers we write and the research we do. How do we find the details for references that we may need to cite, and how do we ease the task of writing so that our references and citations are properly formatted and easy to update when we need to change the citation format for a manuscript.\n\n11.2.1 Finding Citations\n\nSemantic Scholar\nThis tool is supposed to help you find related papers. I have not found it all that helpful in my daily use. Do any of you have success stories to share?\nOpenAlex Try finding my articles here, and see if you can find out what my opinion on attention is.\nGoogle Scholar\nSee if you can find any research articles on Albert Einstein’s brain by Dr. Sandra Witelson of McMaster University. What I like about this tool is that you can also search for articles that cite particular articles. How many of the articles that cite Dr. Witelson also contain the word myelin?\nConsensus\nThis is a new AI Driven search engine. It has some very nice features, but do be careful. Ask it what it thinks about me and category theory. Then look at the references. It is mixing me up with other researchers.\nUndermind\nI think this is a very nice new addition to the search environent, but your free use is very limited. In the paid version you can easily identify articles that seem central to a field of research.\nSign up and try your free search.\nResearch Rabbit To be added.\n\n\n\n11.2.2 More on Citation Management\nAs the web as grown as the principal compendium of scientific articles the community has had to deal with the facts that URLs (website addresses) change. How do we avoid dead links when searching for literature? At the moment, our best tool is to refer to the doi.\nWhat does doi stand for?\nFind the article with the doi: 10.1371/journal.pone.0152353\nThere are many tools for this, but a convenient look up is provided by Crossref.\nIf you keep your own reference database, you will often find that locating the doi is the easiest way to get that reference saved to your database.\nThe same problem that occurs for uniquely specifiying research articles can also occur for uniquely specifiying researchers. There is more than Britt Anderson out there. How would a reader know if I am the one who wrote a particular article?\nWhat is an orcid?\nAfter you know what one is. Get yourself one if you do not already have one.\n\n\n11.2.3 The last thing you want to do …\nwhen managing references is to be cut and pasting them into your own home grown document. You want to use a piece of software that can easily keep the data updated and correct, and facilitate you easiliy being able to correctly cite and correctly format your references when you write. Again, there are many tools, but zotero has withstood the test of time and is a free offering well supported by academic libraries world wide.\nZotero is a piece of software, and for this section you ought ot download it and find a few articles on the web, in google scholar, or arxiv that you can install in your database to have a few test articles to work with. The support page will give you links to a quick start guide. There are many ways you can use zotero with tools you have used before (e.g. linking it to a word document), but in a moment we will explore a couple of ways to use it with the Quarto document writing system.\nSince we don’t want to have to manually format all our citations and references, and then reformat them when we are forced to by needing to resubmit to a new journal we want to rely on the computer to fix such things for us. One contemporary tool that can make that easier is csl. A csl file is a file that specifies all the necessary details about how references should be formatted for a particular citation style. Since you will most often be working with apa see if you can find and download the proper csl file https://www.zotero.org/styles, and then at least one other csl type so you can practice how easy it is to switch from one style to another.",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Knowledge Management</span>"
-    ]
-  },
-  {
-    "objectID": "cBiblio.html#using-references-with-quatro-and-vs-code",
-    "href": "cBiblio.html#using-references-with-quatro-and-vs-code",
-    "title": "11  Knowledge Management",
-    "section": "11.3 Using References With Quatro and VS Code",
-    "text": "11.3 Using References With Quatro and VS Code\nSince you will, at least for this course, be writing Qmd files you may want to use Zotero for reference management and connect [it to Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero). You will find details under the citation section of this webpage. In addition you will see how doi’s, crossref, and other tools can be used to cite while you write in quarto. This workshop also provides details on citation management in Quarto as well as RStudio. See if you can write a minimal stub of an article and try some of the citation managment features in VS Code and Quarto.",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Knowledge Management</span>"
-    ]
-  },
-  {
-    "objectID": "cBiblio.html#using-references-with-overleaf",
-    "href": "cBiblio.html#using-references-with-overleaf",
-    "title": "11  Knowledge Management",
-    "section": "11.4 Using References With Overleaf",
-    "text": "11.4 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different. We have seen this before. Zotero will offer you the option to export references to a bib file which you can then use directly or if you need to submit a .bib file for a manuscript.\nIn addition you can link Overleaf and Zotero to make your writing easier.",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Knowledge Management</span>"
-    ]
-  },
-  {
-    "objectID": "cBiblio.html#footnotes",
-    "href": "cBiblio.html#footnotes",
-    "title": "11  Knowledge Management",
-    "section": "",
-    "text": "It is a question whether the enhanced digital ease impacts effectiveness since key to the practice is the reading and re-reading of “cards” in the index.↩︎",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Knowledge Management</span>"
-    ]
-  },
-  {
-    "objectID": "cServer.html",
-    "href": "cServer.html",
-    "title": "12  Testing Your Javascript",
-    "section": "",
-    "text": "12.1 Run your own server locally\nRunning a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testing Your Javascript</span>"
-    ]
-  },
-  {
-    "objectID": "cServer.html#run-your-own-server-locally",
-    "href": "cServer.html#run-your-own-server-locally",
-    "title": "12  Testing Your Javascript",
-    "section": "",
-    "text": "12.1.1 XAMPP\nXAMMP\n\n12.1.1.1 Downloading\nDownload link\n\n\n\n12.1.2 In Lab Experiments\n\nMaking stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n\n12.1.3 Online Experiments\nAn exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen.\nCan you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testing Your Javascript</span>"
-    ]
-  },
-  {
-    "objectID": "cLLM.html",
-    "href": "cLLM.html",
-    "title": "13  Large Language Models",
-    "section": "",
-    "text": "13.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
-    ]
-  },
-  {
-    "objectID": "cLLM.html#how-to",
-    "href": "cLLM.html#how-to",
-    "title": "13  Large Language Models",
-    "section": "13.2 How to?",
-    "text": "13.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n13.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
-    ]
-  },
-  {
-    "objectID": "cLLM.html#how-to-1",
-    "href": "cLLM.html#how-to-1",
-    "title": "13  Large Language Models",
-    "section": "13.3 How-to",
-    "text": "13.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
-    ]
-  },
-  {
-    "objectID": "cLLM.html#using-llms-for-dynamic-research",
-    "href": "cLLM.html#using-llms-for-dynamic-research",
-    "title": "13  Large Language Models",
-    "section": "13.4 Using LLMs for Dynamic Research",
-    "text": "13.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
-    ]
-  },
-  {
-    "objectID": "cLLM.html#why-might-you-want-to-do-this",
-    "href": "cLLM.html#why-might-you-want-to-do-this",
-    "title": "13  Large Language Models",
-    "section": "13.5 Why Might You Want To Do This?",
-    "text": "13.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nClass Question\n\n\n\nWhat is a RAG in this context?",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
-    ]
-  },
-  {
-    "objectID": "cLLM.html#next-steps",
-    "href": "cLLM.html#next-steps",
-    "title": "13  Large Language Models",
-    "section": "13.6 Next steps",
-    "text": "13.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Large Language Models</span>"
-    ]
-  },
-  {
-    "objectID": "cDatabase.html",
-    "href": "cDatabase.html",
-    "title": "14  Databases and management",
-    "section": "",
-    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n14.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n14.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Databases and management</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "15  Summary",
-    "section": "",
-    "text": "In summary, I have not gotten to writing a summary yet.",
-    "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Terminals</span>"
     ]
   },
   {
     "objectID": "cGit.html",
     "href": "cGit.html",
-    "title": "Appendix A — Version Control",
+    "title": "5  Version Control",
     "section": "",
-    "text": "A.1 Getting Started - Some old videos on git from PSYCH363/310\nA few years ago when I was teaching a more elementary version of some of this material (PSYCH363) I included some videos on git and using Github. Some components of these videos may be a bit out of date, and a few things about the interface have changed. Still they may be a reasonable starting point for those of you who feel you need a refresher on version control. Note that for PSYCH390 I am assuming you can either already use version control or figure it out on your own. I will give some class time for getting things working, but mostly you will have to pursue this on your own. The notes here are intended to be prompts and guides, but not to be comprehensive.\nYou will notice that in the videos I talk a lot about Linux. We are not using that for this course so you can ignore those references. However, I do demonstrate the use in the terminal. That is available to all of you regardless of operating system. You will just have to find your own OS version of it.\nFrequenly you will see this referred to as a command line tool (“cli”). It is now easier to get this this working on Windows and OSX than it used to be. For OSX you can also check out Homebrew. For the adventurous Windows user you can look at WSL2.",
+    "text": "5.1 Git",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Version Control</span>"
     ]
   },
   {
-    "objectID": "cGit.html#an-overview-of-git-and-github",
-    "href": "cGit.html#an-overview-of-git-and-github",
-    "title": "Appendix A — Version Control",
-    "section": "A.2 An overview of git and Github",
-    "text": "A.2 An overview of git and Github",
+    "objectID": "cGit.html#an-old-overview-of-git-and-github",
+    "href": "cGit.html#an-old-overview-of-git-and-github",
+    "title": "5  Version Control",
+    "section": "5.2 An old overview of git and Github",
+    "text": "5.2 An old overview of git and Github\n\n\n5.2.1 Getting Git\nIt depends on what system you have. If you are using wsl then you are using linux. Additional installation instructions.\n\n\n5.2.2 Configuring Git\nDo this in your terminal\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Version Control</span>"
     ]
   },
   {
-    "objectID": "cGit.html#you-have-choices---other-version-control-system",
-    "href": "cGit.html#you-have-choices---other-version-control-system",
-    "title": "Appendix A — Version Control",
-    "section": "A.3 You have choices - other version control system",
-    "text": "A.3 You have choices - other version control system\n\nMercurial\nDarcs\nCVS\nSubversion\nPijul\n\nEach has their own fans. CVS and Subversion are more legacy options, but you will still see them occasionally. Darcs is more of an experiment than a broadly used system. Mercurial used to be the cool kid, but now seems eclipsed by Pijul. That is the one for experimental users.",
+    "objectID": "cGit.html#other-version-control-system",
+    "href": "cGit.html#other-version-control-system",
+    "title": "5  Version Control",
+    "section": "5.3 Other version control system",
+    "text": "5.3 Other version control system\n\nMercurial\nDarcs\nCVS\nSubversion\nPijul",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Version Control</span>"
     ]
   },
   {
     "objectID": "cGit.html#git-is-not-github",
     "href": "cGit.html#git-is-not-github",
-    "title": "Appendix A — Version Control",
-    "section": "A.4 Git is not Github",
-    "text": "A.4 Git is not Github\nGit is the version control software. Github is a very popular place to host your publically accessible git repository, but it is far from your only option. You can host elsewhere.\n\nOSF.io For scientists OSF.io seeks to make itself a way to host scientific projects and their data. Trivia question? Do I have any repositories on Osf.io?\nSourceforge An oldie, but still used.\nBitbucket\nGitlab The university provides you with a gitlab account: https://git.uwaterloo.ca\nCodeberg If you believe in freedom and neck beards.",
+    "title": "5  Version Control",
+    "section": "5.4 Git is not Github",
+    "text": "5.4 Git is not Github\nAnd github is not the only way to share code and data. 1. OSF.io 2. Sourceforge 3. Bitbucket 4. Gitlab The university provides you with a gitlab account: https://git.uwaterloo.ca 5. Codeberg",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Version Control</span>"
     ]
   },
   {
-    "objectID": "cGit.html#things-you-should-do",
-    "href": "cGit.html#things-you-should-do",
-    "title": "Appendix A — Version Control",
-    "section": "A.5 Things you should do",
-    "text": "A.5 Things you should do\n\nInstall git\nGet an account on github\nFork the course repository\nClone the course repository to your laptop\nSet up my version as an additional remote.\nSee if you can make a “pull request” to me. You may find that you have to set up an ssh key in order to efficiently pull and push to Github. Github has very clear instructions on how to go about doing this.",
+    "objectID": "cGit.html#using-git-with-github",
+    "href": "cGit.html#using-git-with-github",
+    "title": "5  Version Control",
+    "section": "5.5 Using git with github",
+    "text": "5.5 Using git with github\nYou will need an ssh key.\nThe offical instructions\n\n5.5.1 Creating an ssh key with your terminal\nDetailed instructions on ssh-keygen\nA slower walk through with some github specifics",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
-    ]
-  },
-  {
-    "objectID": "cGit.html#but-first",
-    "href": "cGit.html#but-first",
-    "title": "Appendix A — Version Control",
-    "section": "A.6 But first",
-    "text": "A.6 But first\nIf you have not used git before you will have to configure git. It needs to know who you are and how to reach you at least.\nYou can execute commands like this in your terminal:\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nMore on these configuration options can be found in a nice online book.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Version Control</span>"
     ]
   },
   {
     "objectID": "cGit.html#understanding-git-and-the-workflow-in-pictures",
     "href": "cGit.html#understanding-git-and-the-workflow-in-pictures",
-    "title": "Appendix A — Version Control",
-    "section": "A.7 Understanding Git and the Workflow in Pictures",
-    "text": "A.7 Understanding Git and the Workflow in Pictures\nWhen starting to use git I found it very confusing to tell what was where and what direction things were going when I pushed and pulled. I found pictures helpful adjuncts to the prose descriptions. A few helpful illustrations to the distinction of clones, forks, pull, push, and pull request can be found here.\nI also made a little video to try and illustrate some of these concepts a few years ago. Read for the gist and not for the specific examples.",
+    "title": "5  Version Control",
+    "section": "5.6 Understanding Git and the Workflow in Pictures",
+    "text": "5.6 Understanding Git and the Workflow in Pictures\nGit can be confusing.\nClone or fork?.\nA long video where I try to talk and draw through the concepts.",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Version Control</span>"
     ]
   },
   {
-    "objectID": "cGit.html#principal-terms-to-learn-first",
-    "href": "cGit.html#principal-terms-to-learn-first",
-    "title": "Appendix A — Version Control",
-    "section": "A.8 Principal Terms to Learn First",
-    "text": "A.8 Principal Terms to Learn First\n\nFork: A copy of one github repository to another github repository.\nClone: A copy of one git repository to another git repository. The first repository might be hosted on github, but the second one, the cloned one exists on a local machine. In your case this is probably your laptop.\nRemote: This is a repository that you are following. You will typically pull from these, but your push permissions may be limited depending on the distinctions between forks and clones, and whether you own the remote or someone else does. You can have more than one remote.\nPull: the transfer of information and changes from one repository incorporated into another. This is how you get the new information from a remote transported to a local repository that you control.\nPush: this is the transfer of information to a repository you control (or have permissions to push to) from another repository that you control. This is often from your local laptop version to the hosted repository (your fork) on github.\nPull Request: When you have information or changes that you think would be helpful to a remote you do not have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.\nBranch: within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called master. And the principal repository that is the main, shared one is called origin. We will not be working with branches in our course, but those terms do show up in commands.\n\nAll of these “basics” are covered in detail in the book Pro Git (available on line).",
+    "objectID": "cGit.html#principal-terms-terms-for-git",
+    "href": "cGit.html#principal-terms-terms-for-git",
+    "title": "5  Version Control",
+    "section": "5.7 Principal Terms Terms for Git",
+    "text": "5.7 Principal Terms Terms for Git\n\nFork: A copy of one github repository to another github repository.\nClone: A copy of one git repository to another git repository.\nRemote: This is a repository that you are following. You will typically pull from these, but your push permissions may be limited depending on the distinctions between forks and clones, and whether you own the remote or someone else does. You can have more than one remote.\nPull: the transfer of information and changes from one repository incorporated into another. This is how you get the new information from a remote transported to a local repository that you control.\nPush: this is the transfer of information to a repository you control (or have permissions to push to) from another repository that you control. This is often from your local laptop version to the hosted repository (your fork) on github.\nPull Request: When you have information or changes that you think would be helpful to a remote you do not have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.\nBranch: within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called master. And the principal repository that is the main, shared one is called origin. We will not be working with branches in our course, but those terms do show up in commands.",
     "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Version Control</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "cLabNotebooks.html",
+    "href": "cLabNotebooks.html",
+    "title": "6  Lab Notebooks",
+    "section": "",
+    "text": "I will not actually be spending much time on this, but we could. It is a neglected practice in psychology to keep a lab notebook that is updated. Here are some options if you are interested in exploring this topic.\n\nJupyter notebooks in Psychology\n10 rules for lab notebooks (electronic)\nHow to keep a lab notebook\nPick an electronic lab notebook\nLab notebook 2023 guide",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab Notebooks</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html",
+    "href": "cWriting.html",
+    "title": "7  Writing Scientific Documents",
+    "section": "",
+    "text": "7.1 IDEs and Writing up your Research\nWriting scientific documents is more than writing papers. It can also include posters, websites, books, and all of these may require images, graphs, references, formuals, and even code. We will take a look here at some of the tools that can help with this, and later we will look in more detail at some of the options.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html#ides-and-writing-up-your-research",
+    "href": "cWriting.html#ides-and-writing-up-your-research",
+    "title": "7  Writing Scientific Documents",
+    "section": "",
+    "text": "TipClass Question\n\n\n\nWhat does IDE stand for and what are examples of IDEs?\n\n\n\n7.1.1 VSCode\nThere are many powerful IDEs available. It will be useful for you to try more than one. However, at this moment in time the clear winner of the IDE popularity contest is Microsoft’s Visual Studio Code.\nSince I want you to learn to use your computer as a tool, and to continue to be able to do so when tooling changes, you need to be able to:\n\nLocate code/programs on the internet\nDownload and install that program to your computer\nLocate the help to begin to use the tool without formal instruction.\n\n\n\n\n\n\n\nTipIn-class Exercise\n\n\n\nLocate, download, install, and verify you can start VS Code.\n\n\n\n\n7.1.2 Some helpful links to get you started\n\nBasics Video\nUsing VSCode with Python\nUsing VSCode with R\nText Editor Page from Quarto Site\n\nWhat is “pip”? And why will you need to know?\n\n\nAdditional material about VS Code and its use as an IDE will be found in this section quit ### Overleaf\nVS Code is far from your only option. For technical writing and collaboration many scientists rely on Overleaf.\nNature will [let you submit your manuscript](https://www.nature.com/srep/author-instructions/submission-guidelines) from an Overleaf template.\nYou always have choices. You can even [write LaTeX with Quarto](https://github.com/James-Yu/LaTeX-Workshop?tab=readme-ov-file) (see also).\n\n\n\n\n\n\nTipClassroom Discussion\n\n\n\nWhat is single source publishing? How does this idea impact your preference for tools like Overleaf and Quarto?\n\n\n\n\n7.1.3 RStudio\nRStudio is a popular IDE for writing R code. R is a programming language particularly useful for statistical analyses. While initially RStudio was only for the R language the number of programming languages it currently supports has grown. It still is not as widely useful as VS Code, and many of RStudio’s features are designed for the interactive evaluation of data, and so it has less of the cutting edge features that software developers expect in their code tools. Whether you want to use RStudio or not will depend in part on your planned activity.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html#scientific-publishing-tools",
+    "href": "cWriting.html#scientific-publishing-tools",
+    "title": "7  Writing Scientific Documents",
+    "section": "7.2 Scientific Publishing Tools",
+    "text": "7.2 Scientific Publishing Tools\nTo understand the plethora of contemporary tooling available to facilitate writing you should know generally what is meant by a mark-up language. This will help you evaluate whether it makes sense for you to switch from a word processiing program, like Word for Windows, to a more general tool like VS Code or emacs.\nSome of the available options you should be familar with are\n\nLaTeX\n\nLaTeX This was the standard for several decades, and used more by mathematicians than others, but today it seems limited in that it produces mostly pdfs, and many people also want their files to export to html (webpages)\n\nA guide to LaTex for Word Users (pdf)\nThe descendants of markdown\nQuarto/Qmd\n\nQuarto (we will skip Rmd and since we are using its successor qmd. Both are related to the people who wrote RStudio,knitr, and are now known as Posit).\n\nOrg Mode\n\nOrg Mode works particularly well with Emacs and allows you to embed code from multiple languages.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cWriting.html#things-you-can-do-with-quarto",
+    "href": "cWriting.html#things-you-can-do-with-quarto",
+    "title": "7  Writing Scientific Documents",
+    "section": "7.3 Things You Can Do With Quarto",
+    "text": "7.3 Things You Can Do With Quarto\nHere are some of the helper links for things we can do with Quarto:\n\njournal formats try the Elsevier format for this course. A lot of psych journals are Elsevier owned.\npresentation\nTalking to databases.\nMake a website/blog for your work or lab\nAnd more …\n\n\n7.3.1 Making a Website with Quarto and Github Pages\nAs science progressively moves to online communication there is a need to have a place to show case your work and share ideas. One way to do this is with a personal website structured around your scientific interests and activities. While there are many methods, tools, and hosts for this I will focus on sharing how you can use the Quarto publishing tool.\n\n7.3.1.1 Hosting\nTo have a website viewable by the world it must be hosted on a server that is viewable by the world. For example, it cannot be behind an institutional firewall (as are most of the computers at the University of Waterloo). And if you host on a University or Company server you have the potential of being limited in what you can share, how often you can update, or you may be required to adhere to certain styles and formats mandated by the institution’s brand. One way to avoid this is to find an external hosting site. A modest fee would allow you to have a virtual server in the cloud, but the example we will use here to get you started is a free service available to those with Github accounts: Github Pages.\n\n7.3.1.1.1 Testing Github Pages\nAssuming you have an account you should be able to create a minimal webpage in a few steps.\n\nGo to personal dashboard and create a new repo as instructed on the Github Pages website. The repo must be named .github.io.\nUse terminal to clone this repo to your local computer.\ncd into the correct directory using your terminal (inside VS Code is fine). And using the terminal do `echo “hello world” &gt; index.html.\nDo the usual add, commit, and push and verify your web site works at &lt;username.github.io&gt;.\n\nYou now have a website!\n\n\n\n7.3.1.2 Blog Project in Quarto\nThe advantage of managing your blog (or website) in Quarto is that you get to take advantage of all the markdown language features. This is much more convenient than writing in html directly. You can also embed code and output just as you have been doing when you export your R code to html.\nThere are several ways that the Quarto people recommend getting the material to and from github. The one that I found most convenient (that is the one that I got working with the least amount of swearing) was to configure a project that exports to a docs directory.\nCreating the blog project in Quarto.\n\nIn the terminal move to the directory with your repo.\nCreate a branch called gh-pages.\n\nYou can find the steps for creating this branch at blog, but for the later steps he uses the publish option where we will output to docs.\nMake sure everything is committed or stashed before you begin then:\n\n\ngit checkout --orphan gh-pages\ngit reset --hard\ngit commit --allow-empty -m \"Initializing gh-pages branch\"\n\n\n\n\n\n\nCaution\n\n\n\nIf you are going to try the “publish” option you will not want to edit in the gh-pages branch. That branch will just be used for publishing your content. However, when using the docs approach, as I am illustrating, it is fine to just work on the gh-pages branch directly. For the docs method to work properly you must go into your settings for this repository on Github and find the Pages area. Then make you set the branch correctly and point it to the docs/ directory.\n\n\n\nAdd the following to your .gitignore:\n/.quarto/\n/_site/\nIf you don’t have such a file, create it. If you don’t know what a .gitignore file is ask!\nNow we use the quarto command in the terminal to initiate our website as a project. This creates the basic structure we need. We can later change or adapt it.\n\nquarto create project blog .\nWhen I did this it asked me for a title and then it asked to open everything in vs code. Then you will want to edit the _quarto.yml file to direct the output to the docs/ directory. The top of you file should look like\n\nproject:\n  output-dir: docs/\n  type: website\n\nwebsite:\n  title: \"brittAnderson.github.io\"\n...\n\nTry quarto preview to see the current skeleton.\nExplore the files to see what you can change. Try the about page for a starter. Can you add a picture of yourself, and make it say your name?\nTry adding a post. First study the structure of the existing posts. You will need to emulate this in order for things to track correctly.\nThen publish quarto render This command will compile the html versions of your qmd code and direct them to the correct places. Then if you have set up thing correctly you can use the git features within VS Code to commit and push your changes. After a few minutes they should be available via your github link.\nMy files are at Britt’s Github Example and the demo is at brittanderson.github.io.\n\nNote added Sept 2025. A good article on academic websites is to be found here: https://doi.org/10.1038/s41562-025-02310-6\n\n\n\n7.3.2 Journal Article Authoring\n\n\n\n\n\n\nTipClassroom Exercise and HW\n\n\n\nWrite an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to your overleaf submission. All the components of an article, at least one figure, and at least one reference. Instead of using an image from the web try to include either your R or Python code for the figure you liked.\n\n\nI find this easier to do from a terminal.\n#| eval: false\n\nquarto use template quarto-journals/elsevier\nThis will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going.\n\n\n7.3.3 Presentations\nPresentations are a standard component of professional life. Despite that importance the materials are often developed in a casual way that does not give the best impact to the material. There are many more versatile tools than contemporary Power Point. Though power point can make an effective presentation its default use does not typically achieve that goal. Quarto provides easy access to two other presentation tools that will expand one’s recognition of what an effective presentation tool can do.\n\n7.3.3.1 Reveal.JS\nReveal.js is a javascript library for the creating presentations that work as well on the web as they do in person. Quarto also supports Reveal.js.\n\n\n7.3.3.2 Beamer\nBeamer is a package for LaTeX that allows professional quality typesetting. It is particularly relevant for presentations that have a lot of mathematical material, though it is quite capable of supporting any general presentation as well. It is less flexible for the web since it produces PDFs. These can be shared on the web, but they require the intermediate step of downloading them rather than just playing them. Beamer also has a “Poster” variant that can be used to make high quality academic posters.\nOverleaf has a beginners tutorial. Quarto also supports Beamer.\nLaTeX and Knitr in Overleaf][knitr]] with overleaf. A scientific poster with Overleaf?\n\n\n7.3.3.3 Academic Posters\nTypest\n[Scientific Posters with Quarto](https://github.com/quarto-ext/typst-templates/tree/main/poster)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Writing Scientific Documents</span>"
+    ]
+  },
+  {
+    "objectID": "cCode.html",
+    "href": "cCode.html",
+    "title": "8  Coding",
+    "section": "",
+    "text": "8.0.1 Languages\nFor a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?\nWhat should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.\nHow do you future proof? - If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding</span>"
+    ]
+  },
+  {
+    "objectID": "cCode.html#footnotes",
+    "href": "cCode.html#footnotes",
+    "title": "8  Coding",
+    "section": "",
+    "text": "This example comes from this node tutorial.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding</span>"
+    ]
+  },
+  {
+    "objectID": "cProgExp.html",
+    "href": "cProgExp.html",
+    "title": "9  Programming Experiments",
+    "section": "",
+    "text": "9.1 All-in-one options\nOne of the most common uses of computers in psychology is for the programming of experiments. Classic experiments often involve a combination of visual stimuli that the participant has to respond to in someway. Typical responses are often button presses or mouse clicks, though many other varieties of stimuli and reports are used. While many programming languages can be used for this task we will begin with one of the most popular, Python. And if time permits we can explore some examples with Javascript as the world of experimental psychology is increasingly complementing the usual lab based testing paradigm with online studies.\nExcellent tools exist that provide turn-key solutions. A very popular one is Psychopy. This package is available for the popular operating systems and gives a gui like builder that allows you to program visually. It offers the opportunity to output your experiment into a web friendly format that can integrate with an online hosting service for performing experiments. However, my experience is that while such tools make it easy to get started they don’t help people develop the general skills that will transfer into programming that distinctive experiment that no one else has done. And the knowledge you gain is often interface specific. It is not general, and so your learning cannot transfer into writing R code or porting your experiment to MATLAB if that becomes the tool a collaborator wants to use. Even if this is the sort of tool you eventually settle on for the very reasonable reasons that your experimental needs are not complex and the quality of the implementation allows you to get work done more easily and on board new investigators more quickly, it will still make you better at planning and handling problems if you have a knowledge of what is going on under the hood.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Programming Experiments</span>"
+    ]
+  },
+  {
+    "objectID": "cProgExp.html#python",
+    "href": "cProgExp.html#python",
+    "title": "9  Programming Experiments",
+    "section": "9.2 Python",
+    "text": "9.2 Python\nThe following examples focus on the sort of experiment where you want something to appear on the screen, and you want feedback from the participant. Current computer graphics don’t work like they did twenty years ago when we all had heavy CRTs on our desks, but one can still deploy some of the intuitions of that era.\nThe monitor is a screen and it is displaying a picture. In the background what is to be shown next is in preparation and at some point what is on the display now will be replaced by the next collection in the queue. Even though we no longer literally raster the display from top to bottom and side to side you can still usefully think in terms of frames. Thus, almost all your experiments will need the mechanics of a window the participant views and in which you can write things you want them to see.\n\n9.2.1 Pygame\nFor practice I will use the pygame python library. There are a large number of help and tutorials for this well established library that has been in use for decades. It is well vetted and documented, and relies on a simple direct library for video manipulations.\n\n9.2.1.1 Some Links for Getting Started with Pygame\n\nThe pygame getting started wiki. Most of my examples will draw from this site.\nReal python pygame tutorial\nGame Development Academy\n\n\n\n9.2.1.2 Installation\nA virtual environment is recommended, but not necessary. If you are using a venv activate it first.\nThen\n1pip install pygame\n\n2python -m pygame.examples.aliens\n\n1\n\nThis line installs the library.\n\n2\n\nThis launches a test game. If you see the game, you have installed pygame. I find this game plays a little fast on modern hardware.\n\n\n\n\n\nimport sys,pygame\npygame.init()\n\nmywindow = pygame.display.set_mode([800,800])\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n    mywindow.fill((128,15,15))\n    pygame.display.flip()\n        \npygame.quit()\nsys.exit()\n\n\nFigure 9.1: This python program will, assuming you have installed pygame, launch a window and close it when you click the “x”. Can you change the window size and background color?\n\n\n\nOne of the better ways to get started is to gradually hand in functionality one step at a time until you have the basics of what you need on a trial and then to refine that to loop through the multiple trials you will probably need.\nHere is an example of a bit of code that shows some elementary use of the mouse, response time, shape and text functionality.\nfrom itertools import compress\nimport sys,pygame\npygame.init()\n\n\nmy_font = pygame.font.Font(None,72)\ntest_text = my_font.render(\"Hello P390\", 1, (200,10,200))\ntest_text_pos = test_text.get_rect(centerx = 400)\n\n#Helper functions\ndef which_buttons (bs):\n    return(list(compress(range(len(bs)),bs)))\n\n#button colors\nclrs = [(0,0,255),(0,225,0),(225,0,0)]\nactv_clr = 0\nrslts = {'trial_num': -1,'color' : None ,'time' : None}\n\nmywindow = pygame.display.set_mode([800,800])\nrunning = True\nmyrt_clock = pygame.time.Clock()\nt1 = myrt_clock.tick(60)\nanew = pygame.mouse.get_pressed()\ntrl = -1,\nclr = clrs[0]\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n    mywindow.fill((128,15,15))\n    pygame.draw.circle(mywindow, clrs[actv_clr], (400,400), 75)\n    mywindow.blit(test_text, test_text_pos)\n    pygame.display.flip()\n    aold = pygame.mouse.get_pressed()\n    if(any(aold) and (aold != anew)):\n        t2 = myrt_clock.tick(60)\n        rslts['time'] = t2 - t1\n        rslts['trial_num'] = rslts['trial_num'] + 1\n        actv_clr = which_buttons(aold)[0]\n        rslts['color'] = actv_clr\n        anew = aold\n        print(rslts)\n        \npygame.quit()\nsys.exit()\n\n\n9.2.1.3 Next Steps\nYou will want to save your data. As a first step see if you can open a file, and the if you can use the dictionary created to add lines to a csv file.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Programming Experiments</span>"
+    ]
+  },
+  {
+    "objectID": "cProgExp.html#javascript",
+    "href": "cProgExp.html#javascript",
+    "title": "9  Programming Experiments",
+    "section": "9.3 Javascript",
+    "text": "9.3 Javascript\nWIP",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Programming Experiments</span>"
+    ]
+  },
+  {
+    "objectID": "cExps.html",
+    "href": "cExps.html",
+    "title": "10  In Lab Experiments",
+    "section": "",
+    "text": "Making stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n10.0.1 Online Experiments\nRunning a server for testing and more? XAMPP Running a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMPP might be a good resource. Exercise to download and get the XAMPP server running? Need to expand this. An exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen. Then use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>In Lab Experiments</span>"
+    ]
+  },
+  {
+    "objectID": "cHandlingData.html",
+    "href": "cHandlingData.html",
+    "title": "11  Handling Data",
+    "section": "",
+    "text": "Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use.\n\n11.0.0.1 Data Formats\n\nPlain Text\nCSV\nTSV\nJSON\nPickle\n\nDat (R)\n\nSome advantages and disadvantages of each.\nPlain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.\nCSV and TSV view all data as rows and a unique character (commas or tabs) separates the cells of the rows. Another character, typically a new line (often seen written as \\n) is what distinguishes one row from the next. These file types are, largely, human readable if the number of columns and rows are not too large. They are not as space efficient as other formats, but that may be a reasonable tradeoff when the size of the data files is small.\nJSON stands for Java Script Object Notation. Although, as the name implies, it had its origin in javascript it is largely language agnostic and is a common format for the storage of data of all types. Its being used as a standard means it has wide support from many programming languages and that means there are good tools for exporting and storing for most programming languages. It can be quite flexible in the type of data stored. It is not friendly for writing by hand, but the use of tools makes it fairly easy to take experimentally collected data created in, say, a python dictionary and convert it to a json format.\n\n\n\n\nimport random as r\nimport json as j\na = {'name': 'John Doe', 'age': 24, 'rt': r.random()}\njs = j.dumps(a)\njs\n\n'{\"name\": \"John Doe\", \"age\": 24, \"rt\": 0.7481987929292987}'\n\n\n\n\nFigure 11.1: The dumps command will output the json version as a string.\n\n\n\nNote there is a very similar python function without the terminal s, json.dump, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with json.load()\n\n\n\n\nimport json\na = {'name': 'John Doe', 'age': 24}\njs = json.dumps(a)\n\n# Open new json file if not exist it will create\nfp = open('test.json', 'a')\n\n# write to json file\nfp.write(js)\n\n# close the connection\nfp.close()\n\n\n\nFigure 11.2: A simple example taken from [StackOverflow] shows a working example.\n\n\n\nA JSON tutorial can be found here.\nPickling is a data serialization library specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage.\nThis code from a GeeksforGeeks article provides a nice minimal working example.\n\n\nimport pickle\n\ndef storeData():\n    # initializing data to be stored in db\n    Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak',\n    'age' : 21, 'pay' : 40000}\n    Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',\n    'age' : 50, 'pay' : 50000}\n\n    # database\n    db = {}\n    db['Omkar'] = Omkar\n    db['Jagdish'] = Jagdish\n    \n    # Its important to use binary mode\n    dbfile = open('examplePickle', 'ab')\n    \n    # source, destination\n    pickle.dump(db, dbfile)                    \n    dbfile.close()\n\ndef loadData():\n    # for reading also binary mode is important\n    dbfile = open('examplePickle', 'rb')    \n    db = pickle.load(dbfile)\n    for keys in db:\n        print(keys, '=&gt;', db[keys])\n    dbfile.close()\n\nif __name__ == '__main__':\n    storeData()\n    loadData()\n\nWhen working in the R environment the save and load function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called read and write. Each of these has several specialization that target particular file types (e.g. read.csv) and also allow a number of customizations (e.g. whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others.\n\n11.0.0.2 Considering Pandas and Interoperability with R\nPandas is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully.\nPandas can usually be installed with pip install pandas. Because of the size and complexity of python installations a virtual environment is recommended.\nEven if you are not thinking of doing your data analysis in python if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data convenient. But before we show a pandas method let’s see a lower tech, more old school method.\nIt is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example,\n\na = 1 \nb = \"britt\"\nc = 2.3\nmycolumnheadings = \"a,\" + \"b,\" + \"c\" + \"\\n\"\nmystring = str(a) + \",\" + b + \",\" + str(c) + \"\\n\"\nprint(mycolumnheadings + mystring)\n\na,b,c\n1,britt,2.3\n\n\nshows how to create a string from one’s data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler.\n\n11.0.0.2.1 Opening and Closing a File in Python\n\na = 1 \nb = \"britt\"\nc = 2.3\nmycolumnheadings = \"a,\" + \"b,\" + \"c\" + \"\\n\"\nmystring = str(a) + \",\" + b + \",\" + str(c) + \"\\n\"\nwith open('/home/britt/gitRepos/uwlooP390/p390/myfile.csv','w+') as f:\n    f.write(mycolumnheadings)\n    f.write(mystring)\n\nNow you can see if you can read that csv into R.\n\nmydata = as.data.frame(read.csv(\"/home/britt/gitRepos/uwlooP390/p390/myfile.csv\"))\nmydata\n\n  a     b   c\n1 1 britt 2.3\n\n\n\n\n11.0.0.2.2 A Better Way: Dictionaries\nPython dictionaries (which have their counterparts in most programming languages though they may be called something different) are a convenient way to store data where you can give it a meaningful name. For example, in an experiment with numerous trials and conditions you could have a key in your dictionary for “trial no.” and another for “condition”. The values for these would then be updated as your experiment unfolded.\nA first pass to using dictionaries is to blend this with a python library for CSV files. Then you can create the column headings from your keys and then each trial that you loop through you can use the dictionary to write a new row to your csv file. Some of the functions you might want to use are:\n\ncsv.DictWriter\nwriteheader\nwriterows\n\nIf you set up and define your dictionary at the start of the file you only need to update the changing values as they occur.\nAnother approach that will start you getting some familiarity with python pandas library is to make to make a distinct dictionary for each of the trials in your experiment. Then you can concatenate these dictionaries to a list and use that list to create a pandas dataframe. That could then be used in analysis python code or for importing into R. Here is a short example to illustrate the principle.\n\nimport random as r\nimport pandas as pd\n\nmylistofkeys=[\"name\",\"v1\",\"v2\",\"v3\",\"v4\"]\n\nmydictlist = []\nfor i in range(5):\n    mydictlist.append({key:value for key,value in zip([\"name\",\"v1\",\"v2\",\"v3\",\"v4\"],[\"britt\"] + [r.random() for i in range(5)])})\n\ndf = pd.DataFrame(mydictlist)\n\ndf.loc[:,'v3'].mean()\n\nnp.float64(0.4321472426148506)\n\n\nmyfilename = \"mypandastest.csv\"\ndf.to_csv(myfilename)\n\nYou can save pandas dataframes as a pickle file, but then you will not be able to easily read it into R. CSV remains the easiest and most direct way to do this. It is probably all you need for most use cases. Though there are other options.\n\nrdf = read.csv(\"mypandastest.csv\")\nmean(rdf$v3)\n\n[1] 0.4321472\n\n\n\n\n\n11.0.0.3 Some Analysis Tools\n\nPandas TBD\nSome more R TBD",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Handling Data</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html",
+    "href": "cBiblio.html",
+    "title": "12  Knowledge Management",
+    "section": "",
+    "text": "12.1 (Zettlekasten)\nThis section deals with the issue of how you keep track of the information you discover and how you mine it for new ideas, associations, and connections. In this section we will consider the notion of the zettlekasten and some modern tools for emulating this technique.\nFor many contemporary adherents to the zettlekasten system their pole star is Niklas Luhman a social systems theorist who was an prolific publisher and who credited much of his fecundity to this technique. Essentially, the method is one of cross-referenced index cards, and historical precedents are easy to find.\nAlthough there are different flavors to this “slip box” approach the consistent theme is that one reflect on their reading, summarize it, and connect it to other works and concepts in their data base. We can perhaps do this more easily 1.\nOrg-roam is a tool for use within the Emacs ecosystem. Emacs is, to paraphrase the old joke, an operating system managing as a text editor. Emacs comes with a suite of functions (org-mode) built in that facilitate outlining and note taking (and many more things besides). Org-roam is an additional piece of software designed to interact with the Emacs/Orgmode combination to implement many zettlekasten features. It is an emulation, in Emacs, of RoamResearch a self-described tool for networked thought.\nThe online manual for org-roam provides a brief introduction and overview of the tool. Very, perhaps too, briefly you use various key commands to create nodes in your network and link them to others. You include notes on entries in your bibliographic system, or free standing notes organized around particular concepts. These links can be viewed both forward (things they link to) or backward (things that link to them), and there are also graphical views. A brief demonstration of some of these tools will be provided in class.\nThis note-taking knowledge management tool is included here because it can interact well with the VS Code and Markdown approach we have been learning about through our use of Quarto.\nOne of the common features you will find for all these tools is the paring back of dependencies. Most rely on some sort of plain text system at their base. This means you can always just read your entries even if the fancy link and processing features break or prove unwieldy. This generally future proofs your “cards” and also often means that things can work faster and more robustly because there are fewer dependencies.\nObsidian is another very popular offering in the same space as the above. This one however will cost you money. I include it here because of its wide popularity. The overview page of the website provides a good general visual orientation to the offerings and features.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Knowledge Management</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#zettlekasten",
+    "href": "cBiblio.html#zettlekasten",
+    "title": "12  Knowledge Management",
+    "section": "",
+    "text": "Org-roam\n\n\n\n\nDendron - works with VS Code\n\n\n\n\nObsidian\n\n\n\n\n\n\n\n\nTipClassroom Exercise\n\n\n\nTaking Dendron for a test drive.\n\nInstall Dendron from the VS Code Marketplace.\nFill out the survey and any extensions you want (I took all the recommended) and proceed to the tutorial.\nThis should like quite familiar to your. The qmd files we have been writing are really just augmented versions of this md format.\nUse the terminal to figure out what directory your notes are being stored in.\nUse Ctrl-L to create a new note then navigate back to the tutorial.\nThe authors keep talking about vim. Look up what vim is. Do you have vim or its more difficult cousin vi on your computer? Try to open one or the other in a terminal.\nHow do you creat a note hierarchy?\nView the tree mode.\nUse the Command Palette to view all the Dendron related commands, and at least read the next steps.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Knowledge Management</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#reference-management",
+    "href": "cBiblio.html#reference-management",
+    "title": "12  Knowledge Management",
+    "section": "12.2 Reference Management",
+    "text": "12.2 Reference Management\nIn this section we will look at tools for two important functions related to references for the papers we write and the research we do. How do we find the details for references that we may need to cite, and how do we ease the task of writing so that our references and citations are properly formatted and easy to update when we need to change the citation format for a manuscript.\n\n12.2.1 Finding Citations\n\nSemantic Scholar\nThis tool is supposed to help you find related papers. I have not found it all that helpful in my daily use. Do any of you have success stories to share?\nOpenAlex Try finding my articles here, and see if you can find out what my opinion on attention is.\nGoogle Scholar\nSee if you can find any research articles on Albert Einstein’s brain by Dr. Sandra Witelson of McMaster University. What I like about this tool is that you can also search for articles that cite particular articles. How many of the articles that cite Dr. Witelson also contain the word myelin?\nConsensus\nThis is a new AI Driven search engine. It has some very nice features, but do be careful. Ask it what it thinks about me and category theory. Then look at the references. It is mixing me up with other researchers.\nUndermind\nI think this is a very nice new addition to the search environent, but your free use is very limited. In the paid version you can easily identify articles that seem central to a field of research.\nSign up and try your free search.\nResearch Rabbit To be added.\n\n\n\n12.2.2 More on Citation Management\nAs the web as grown as the principal compendium of scientific articles the community has had to deal with the facts that URLs (website addresses) change. How do we avoid dead links when searching for literature? At the moment, our best tool is to refer to the doi.\nWhat does doi stand for?\nFind the article with the doi: 10.1371/journal.pone.0152353\nThere are many tools for this, but a convenient look up is provided by Crossref.\nIf you keep your own reference database, you will often find that locating the doi is the easiest way to get that reference saved to your database.\nThe same problem that occurs for uniquely specifiying research articles can also occur for uniquely specifiying researchers. There is more than Britt Anderson out there. How would a reader know if I am the one who wrote a particular article?\nWhat is an orcid?\nAfter you know what one is. Get yourself one if you do not already have one.\n\n\n12.2.3 The last thing you want to do …\nwhen managing references is to be cut and pasting them into your own home grown document. You want to use a piece of software that can easily keep the data updated and correct, and facilitate you easiliy being able to correctly cite and correctly format your references when you write. Again, there are many tools, but zotero has withstood the test of time and is a free offering well supported by academic libraries world wide.\nZotero is a piece of software, and for this section you ought ot download it and find a few articles on the web, in google scholar, or arxiv that you can install in your database to have a few test articles to work with. The support page will give you links to a quick start guide. There are many ways you can use zotero with tools you have used before (e.g. linking it to a word document), but in a moment we will explore a couple of ways to use it with the Quarto document writing system.\nSince we don’t want to have to manually format all our citations and references, and then reformat them when we are forced to by needing to resubmit to a new journal we want to rely on the computer to fix such things for us. One contemporary tool that can make that easier is csl. A csl file is a file that specifies all the necessary details about how references should be formatted for a particular citation style. Since you will most often be working with apa see if you can find and download the proper csl file https://www.zotero.org/styles, and then at least one other csl type so you can practice how easy it is to switch from one style to another.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Knowledge Management</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#using-references-with-quatro-and-vs-code",
+    "href": "cBiblio.html#using-references-with-quatro-and-vs-code",
+    "title": "12  Knowledge Management",
+    "section": "12.3 Using References With Quatro and VS Code",
+    "text": "12.3 Using References With Quatro and VS Code\nSince you will, at least for this course, be writing Qmd files you may want to use Zotero for reference management and connect [it to Quarto](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero). You will find details under the citation section of this webpage. In addition you will see how doi’s, crossref, and other tools can be used to cite while you write in quarto. This workshop also provides details on citation management in Quarto as well as RStudio. See if you can write a minimal stub of an article and try some of the citation managment features in VS Code and Quarto.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Knowledge Management</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#using-references-with-overleaf",
+    "href": "cBiblio.html#using-references-with-overleaf",
+    "title": "12  Knowledge Management",
+    "section": "12.4 Using References With Overleaf",
+    "text": "12.4 Using References With Overleaf\nVS Code is not your only option. Overleaf also use “.bib” files to hold references, though some of the other syntax is different. We have seen this before. Zotero will offer you the option to export references to a bib file which you can then use directly or if you need to submit a .bib file for a manuscript.\nIn addition you can link Overleaf and Zotero to make your writing easier.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Knowledge Management</span>"
+    ]
+  },
+  {
+    "objectID": "cBiblio.html#footnotes",
+    "href": "cBiblio.html#footnotes",
+    "title": "12  Knowledge Management",
+    "section": "",
+    "text": "It is a question whether the enhanced digital ease impacts effectiveness since key to the practice is the reading and re-reading of “cards” in the index.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Knowledge Management</span>"
+    ]
+  },
+  {
+    "objectID": "cServer.html",
+    "href": "cServer.html",
+    "title": "13  Testing Your Javascript",
+    "section": "",
+    "text": "13.1 Run your own server locally\nRunning a lab now seems to require some familiarity with servers. And people who want to write their experiments in javascript often want to try things out first so it seems something like XAMMP is a good tool to know about.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+    ]
+  },
+  {
+    "objectID": "cServer.html#run-your-own-server-locally",
+    "href": "cServer.html#run-your-own-server-locally",
+    "title": "13  Testing Your Javascript",
+    "section": "",
+    "text": "13.1.1 XAMPP\nXAMMP\n\n13.1.1.1 Downloading\nDownload link\n\n\n\n13.1.2 In Lab Experiments\n\nMaking stuff appear on monitors.\nWhat is OpenGL?\nUse pygame to make some simple visual experiments.\nHave a beauty contest the following week to see what people have been able to make?\nMake sure that people are using venv\n\n\n\n13.1.3 Online Experiments\nAn exercise with JavaScript? This site has a simple bit of code for throwing an image on the screen.\nCan you use the XAMPP server to test it? Require changing the image? Animate a button to toggle or get a random image? WIP HERE",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Testing Your Javascript</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html",
+    "href": "cLLM.html",
+    "title": "14  Large Language Models",
+    "section": "",
+    "text": "14.1 Run locally\nWhy? Own your own data.\nSecurity and Privacy.\nResearch applications you may not want participants’ data fed to openAI or other proprietary vendors.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#how-to",
+    "href": "cLLM.html#how-to",
+    "title": "14  Large Language Models",
+    "section": "14.2 How to?",
+    "text": "14.2 How to?\nThere are many methods to running LLMs locally on your own hardward. I have chosen GPT4All. It can run under OSX, Windows, and Ubuntu (linux).\n\n14.2.1 Key Features of GPT4ALL\nAccording to the website https://getstream.io/blog/best-local-llm-tools/:\nGPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.\n\nPrivacy First: Keep private and sensitive chat information and prompts only on your machine.\nNo Internet Required: It works completely offline.\nModels Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.\nLocal Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.\nCustomization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.\nEnterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.\n\nIt is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#how-to-1",
+    "href": "cLLM.html#how-to-1",
+    "title": "14  Large Language Models",
+    "section": "14.3 How-to",
+    "text": "14.3 How-to\nFrom the GPT4all download page download the version for your operating system.\nFollow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large.\nAfter you have successfully downloaded and installed the program checkout the quickstart guide.\n\nStart Chatting\nInstall a Model\nI tried “Llama 3.2 1b Instruct”\nLoad the model\nStart chatting",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#using-llms-for-dynamic-research",
+    "href": "cLLM.html#using-llms-for-dynamic-research",
+    "title": "14  Large Language Models",
+    "section": "14.4 Using LLMs for Dynamic Research",
+    "text": "14.4 Using LLMs for Dynamic Research\nWhat are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task.\nIt is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use GET and POST from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: curl.\n\n\n\n\n\n\nTipClassroom Exercise\n\n\n\nDownload and implement the above.\nStart the GPT4All Server\nSee if you can get your GPT4All model to talk to another group’s model.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#why-might-you-want-to-do-this",
+    "href": "cLLM.html#why-might-you-want-to-do-this",
+    "title": "14  Large Language Models",
+    "section": "14.5 Why Might You Want To Do This?",
+    "text": "14.5 Why Might You Want To Do This?\nDurably reducing conspiracy beliefs through dialogues with AI\n\nThis LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?\n\n\n\n\n\n\nTipClass Question\n\n\n\nWhat is a RAG in this context?",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cLLM.html#next-steps",
+    "href": "cLLM.html#next-steps",
+    "title": "14  Large Language Models",
+    "section": "14.6 Next steps",
+    "text": "14.6 Next steps\nRecently (Duan, Li, and Cai 2024) has published an R package to make all of this easier. The github repository has the library, a “read-me” and installation instructions. Our class activity is to see if anyone can get this up and working by next week.\n\n\n\n\nDuan, Xufeng, Shixuan Li, and Zhenguang G. Cai. 2024. “MacBehaviour: An r Package for Behavioural Experimentation on Large Language Models.” Behavior Research Methods 57 (1). https://doi.org/10.3758/s13428-024-02524-y.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
+  },
+  {
+    "objectID": "cDatabase.html",
+    "href": "cDatabase.html",
+    "title": "15  Databases and management",
+    "section": "",
+    "text": "What is it\nA book on DuckDB - database stuff\nMariaDB This SQL like, and open source. Might be easier to get started with and still be SQL enough to give them some professional benefits. I was thinking we could get some data online, often they come as CSV’s and read it into the database? This is one example how. A blog that compares MariaDB to SQL. A quickie tutorial.\nWhy would I want to use a relational database over a csv file (or R data frame or similar)? This could be a class exercise and discussion.\nExercise Download MariaDB\n\n\n15.0.1 Datascience\n\none person’s roadmap for non-cs grads\n\n\n\n15.0.2 Grant Funding\nAt the moment I am not sure if will have time for this. But thinking of having the students review the peer review manual for NSERC Discovery Grants. Then have them each write a minimal proposal. Assign the proposals to members of the class, and then hold our own reviewers meeting to decide which projects to fund. Top grants get performed for experiments? Get extra-credit points?",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Databases and management</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "16  Summary",
+    "section": "",
+    "text": "In summary, I have not gotten to writing a summary yet.",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
     "objectID": "cOSX.html",
     "href": "cOSX.html",
-    "title": "Appendix B — Just a place for some notes for installing things on Mac",
+    "title": "Appendix A — Mac Related Instructions",
     "section": "",
-    "text": "C Emacs\nI used homebrew awhile ago for this and forgot the details.",
+    "text": "A.1 Homebrew\nHomebrew installation instructions",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Just a place for some notes for installing things on Mac</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Mac Related Instructions</span>"
     ]
   },
   {
-    "objectID": "cOSX.html#init-files",
-    "href": "cOSX.html#init-files",
-    "title": "Appendix B — Just a place for some notes for installing things on Mac",
-    "section": "C.1 init files",
-    "text": "C.1 init files\nSeems to live at ~/.emacs.d/init.el\nAdded these lines and restarted to get the basic package set up working.\n(require 'package)\n(add-to-list 'package-archives '(\"melpa\" . \"https://melpa.org/packages/\") t)\n(package-initialize)\n(require 'use-package)\n(setq use-package-always-ensure t)",
+    "objectID": "cOSX.html#homebrew",
+    "href": "cOSX.html#homebrew",
+    "title": "Appendix A — Mac Related Instructions",
+    "section": "",
+    "text": "A.1.1 Texlive\nGet it via Homebrew with brew install texlive then export to pdf via quarto works well.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Just a place for some notes for installing things on Mac</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Mac Related Instructions</span>"
     ]
   },
   {
-    "objectID": "cOSX.html#pdf-mode",
-    "href": "cOSX.html#pdf-mode",
-    "title": "Appendix B — Just a place for some notes for installing things on Mac",
-    "section": "C.2 pdf-mode",
-    "text": "C.2 pdf-mode\nDo a package-list-packages to get a refesh and install (mark with an “i”) the pdf-tools package from melpa. Then you “x” to execute the installation. Afterwards you need to run M-x pdf-tools-install. This can take awhile.",
+    "objectID": "cOSX.html#uv",
+    "href": "cOSX.html#uv",
+    "title": "Appendix A — Mac Related Instructions",
+    "section": "A.2 UV",
+    "text": "A.2 UV\nuv",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Just a place for some notes for installing things on Mac</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Mac Related Instructions</span>"
     ]
   },
   {
-    "objectID": "cOSX.html#keys-and-keyboards",
-    "href": "cOSX.html#keys-and-keyboards",
-    "title": "Appendix B — Just a place for some notes for installing things on Mac",
-    "section": "C.3 keys and keyboards",
-    "text": "C.3 keys and keyboards\nSeveral emacs shortcuts conflict with defaults on mac. You can change these in the system utilities for keyboard shortcuts. Just search them out as they arise and turn off the mac ones. The ctrl key is ^ in their printed list.",
+    "objectID": "cOSX.html#quarto",
+    "href": "cOSX.html#quarto",
+    "title": "Appendix A — Mac Related Instructions",
+    "section": "A.3 Quarto",
+    "text": "A.3 Quarto\nFind the download here. The demo needs matplotlib and plotly.\nIt can be simpler to get python from Homebrew instead of uv with brew install python-matplotlib .",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Just a place for some notes for installing things on Mac</span>"
-    ]
-  },
-  {
-    "objectID": "cOSX.html#orgmode-related",
-    "href": "cOSX.html#orgmode-related",
-    "title": "Appendix B — Just a place for some notes for installing things on Mac",
-    "section": "C.4 orgmode related",
-    "text": "C.4 orgmode related\n\nfor exporting html needed to install package htmlize.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Just a place for some notes for installing things on Mac</span>"
-    ]
-  },
-  {
-    "objectID": "cOSX.html#emacs-1",
-    "href": "cOSX.html#emacs-1",
-    "title": "Appendix B — Just a place for some notes for installing things on Mac",
-    "section": "C.5 emacs",
-    "text": "C.5 emacs\nThere is a quarto editing mode which I installed through the packaging tools.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Just a place for some notes for installing things on Mac</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Mac Related Instructions</span>"
     ]
   },
   {
     "objectID": "python-venv.html",
     "href": "python-venv.html",
-    "title": "Appendix C — Python",
+    "title": "Appendix B — Python",
     "section": "",
-    "text": "D Virtual Environments\nThe advantage of a virtual environment is the ability to isolate libraries you may install for a particular project from interfering with other projects or previously installed libraries. The disadvantage is that they do involve some additional steps and complexity and you may end up installing multiple versions of the same library, which can be an issue if hard disk space on your computer is limited.",
+    "text": "C Virtual Environments\nThe advantage of a virtual environment is the ability to isolate libraries you may install for a particular project from interfering with other projects or previously installed libraries. The disadvantage is that they do involve some additional steps and complexity and you may end up installing multiple versions of the same library, which can be an issue if hard disk space on your computer is limited.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Python</span>"
     ]
   },
   {
     "objectID": "python-venv.html#methods",
     "href": "python-venv.html#methods",
-    "title": "Appendix C — Python",
-    "section": "D.1 Methods",
-    "text": "D.1 Methods\nThere is more than one tool for creating a python virutal environment, but one of them is built into the standard python installation: venv, and so for simplicity this is the one that I recommend starting with.\n\nD.1.1 Creating and Activating the Venv\nIf you are in a console you can simply run these commands in the terminal.\npython -m venv &lt;dir-where-you-want-venv&gt;\ncd &lt;dir-where-you-want-venv&gt;\nsource ./bin/activate\n\n\n\n\n\n\nNote\n\n\n\nDepending on the specifics of your operating system and python installation you may find you need to use python3 and pip3 commands instead of plain python and pip.\n\n\nIf you are using a Windows device you will have to find your equivalent of a linux terminal. This can be using WSL or something like MinGW.\nOnce you have activated your venv you will see a change in the terminal display that indicates the venv is active. Now when you run things like pip install &lt;something&gt; it will install that library to a sandbox that is only accessible when using python from within that virtual environment. You should note that this notion of a sandbox or virtual environment is also available for some other programming languages.\nTo deactivate the environment you run ,\ndeactivate\nfrom within the venv. Look for the change in the terminal display. Note how activating the environment shows up in the terminal prompt.\nbritt@arts-220486 ~ % source p390venv/bin/activate\n(p390venv) britt@arts-220486 ~ % deactivate\nbritt@arts-220486 ~ % \n\n\nD.1.2 The Terminal is All You Need\nIf you are a minimalist or doing something simple you can invoke the python interpreter in your venv and complete your task there with no other tools, and using only the libraries required for your particular, limited task. However, if you use some companion tooling things may get more complicated and trickier to debug.",
+    "title": "Appendix B — Python",
+    "section": "C.1 Methods",
+    "text": "C.1 Methods\nThere is more than one tool for creating a python virutal environment, but one of them is built into the standard python installation: venv, and so for simplicity this is the one that I recommend starting with.\n\nC.1.1 Creating and Activating the Venv\nIf you are in a console you can simply run these commands in the terminal.\npython -m venv &lt;dir-where-you-want-venv&gt;\ncd &lt;dir-where-you-want-venv&gt;\nsource ./bin/activate\n\n\n\n\n\n\nNote\n\n\n\nDepending on the specifics of your operating system and python installation you may find you need to use python3 and pip3 commands instead of plain python and pip.\n\n\nIf you are using a Windows device you will have to find your equivalent of a linux terminal. This can be using WSL or something like MinGW.\nOnce you have activated your venv you will see a change in the terminal display that indicates the venv is active. Now when you run things like pip install &lt;something&gt; it will install that library to a sandbox that is only accessible when using python from within that virtual environment. You should note that this notion of a sandbox or virtual environment is also available for some other programming languages.\nTo deactivate the environment you run ,\ndeactivate\nfrom within the venv. Look for the change in the terminal display. Note how activating the environment shows up in the terminal prompt.\nbritt@arts-220486 ~ % source p390venv/bin/activate\n(p390venv) britt@arts-220486 ~ % deactivate\nbritt@arts-220486 ~ % \n\n\nC.1.2 The Terminal is All You Need\nIf you are a minimalist or doing something simple you can invoke the python interpreter in your venv and complete your task there with no other tools, and using only the libraries required for your particular, limited task. However, if you use some companion tooling things may get more complicated and trickier to debug.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Python</span>"
     ]
   },
   {
     "objectID": "python-venv.html#visual-studio-code",
     "href": "python-venv.html#visual-studio-code",
-    "title": "Appendix C — Python",
-    "section": "D.2 Visual Studio Code",
-    "text": "D.2 Visual Studio Code\nVS Code tries to make using a venv easier, but this also means there is some indirection that may make it harder to puzzle out errors. The basic work flow is to make sure that VS code is working in the folder you want your venv to be in. If not, use the open folder menu of VS Code to do so. Then, you can use the Command Palette (found under the View menu tab) to locate the Python Create Environment command. If you have never created an environment before it will do so. This can take some time so be patient and make sure this process completes. If there was a virtual environment previously constructed VS Code will probably be able to figure that out and ask you if you want to re-use it. Usually you will, but if not you can select to destroy it and create a new one. You will probably also need to affilate a particular python version to association to your environment. VS Code can often make a reasonable suggestion and you can also use the command Python Select Interpreter if necessary.\nAfter you have done that you will need to move into the affiliated terminal window of your VS Code environment to install the necessary libraries. You will need to be deliberate and make sure that you are in the correct terminal. VS Code may have several of these open for different purposes if you are working on a complicated project.\nNote that while it may be convenient to use the VS Code terminals you do not have to. If you have a terminal program on your computer accessible to you outside of VS Code you can use VS Code as the editor and then move to your other terminal for activating and implementing and compiling the python project.\n\nD.2.1 Quarto Complications\nWhen you embed a python code block in your .qmd document you will want to compile it. Quarto is assembling a document. It will need more than just the libraries necessary for compiling the python code. It also needs the library for the textual and graphical representation of the output that you will insert into your document. Specifically, it needs the jupyter python library. This means that whatever the python is doing, even if no additional libraries are needed, you will have to have done a pip install jupyter in your venv and you will need to have the venv active for the location where the qmd is stored and compiled.\nIt is worth knowing that although VS Code offers the convenience of buttons to invoke the quarto process it is not necessary. You can invoke all the quarto commands through a terminal directly. For instance quarto preview &lt;file-name&gt;.qmd will try to compile your file and will also usually launch your browser so you can see the html result. It will then watch the source file and update the html whenever it detects you have changed the source. This can be quite convenient for editing.",
+    "title": "Appendix B — Python",
+    "section": "C.2 Visual Studio Code",
+    "text": "C.2 Visual Studio Code\nVS Code tries to make using a venv easier, but this also means there is some indirection that may make it harder to puzzle out errors. The basic work flow is to make sure that VS code is working in the folder you want your venv to be in. If not, use the open folder menu of VS Code to do so. Then, you can use the Command Palette (found under the View menu tab) to locate the Python Create Environment command. If you have never created an environment before it will do so. This can take some time so be patient and make sure this process completes. If there was a virtual environment previously constructed VS Code will probably be able to figure that out and ask you if you want to re-use it. Usually you will, but if not you can select to destroy it and create a new one. You will probably also need to affilate a particular python version to association to your environment. VS Code can often make a reasonable suggestion and you can also use the command Python Select Interpreter if necessary.\nAfter you have done that you will need to move into the affiliated terminal window of your VS Code environment to install the necessary libraries. You will need to be deliberate and make sure that you are in the correct terminal. VS Code may have several of these open for different purposes if you are working on a complicated project.\nNote that while it may be convenient to use the VS Code terminals you do not have to. If you have a terminal program on your computer accessible to you outside of VS Code you can use VS Code as the editor and then move to your other terminal for activating and implementing and compiling the python project.\n\nC.2.1 Quarto Complications\nWhen you embed a python code block in your .qmd document you will want to compile it. Quarto is assembling a document. It will need more than just the libraries necessary for compiling the python code. It also needs the library for the textual and graphical representation of the output that you will insert into your document. Specifically, it needs the jupyter python library. This means that whatever the python is doing, even if no additional libraries are needed, you will have to have done a pip install jupyter in your venv and you will need to have the venv active for the location where the qmd is stored and compiled.\nIt is worth knowing that although VS Code offers the convenience of buttons to invoke the quarto process it is not necessary. You can invoke all the quarto commands through a terminal directly. For instance quarto preview &lt;file-name&gt;.qmd will try to compile your file and will also usually launch your browser so you can see the html result. It will then watch the source file and update the html whenever it detects you have changed the source. This can be quite convenient for editing.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Python</span>"
     ]
   }
 ]

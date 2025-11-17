@@ -30,38 +30,7 @@ Another possible classroom exercise.
 
 :::
 
-### IDEs
 
--   Who are you writing code for? Human or Machine?
--   What is an IDE? What makes for a good IDE?
-
-#### Using an IDE
-
-For this course we will default to [VSCode](https://code.visualstudio.com/), because it is currently very popular and becoming somewhat of a standard. Everything said above about not getting to attached to the flavor of the month applies to IDEs. Especially since VSCode is a tool tied to Microsoft. However, there is an [opensource build](https://vscodium.com/) of VSCode that you can use instead. You can also use any other tool you want to as long as you can figure out how to make it do the things I will ask you to do. I, for one, live in [Emacs](https://www.gnu.org/software/emacs/).
-
-#### VSCode
-
-{{< video https://www.youtube.com/embed/B-s71n0dHUk?si=y3fy80M0mGxGLwr5
-    title="Learn Visual Studio Code in 7 Minutes"
->}}
-
--   [Basics video](https://code.visualstudio.com/docs/introvideos/basics)
--   [Using VSCode with R](https://code.visualstudio.com/docs/languages/r)
--   [Using VSCode with Python](https://code.visualstudio.com/docs/languages/python)
-
-*Exercise* Install VSCode
-
-#### Jupyter Notebooks
-
-What are jupyter notebooks? Are jupyter notebooks ide's? What are their purpose? What languages to they support? MORE TO ADD
-
-#### Beginning with Jupyter and Quarto/VS
-
-Good instructions are on the Quarto [website](https://quarto.org/docs/tools/vscode-notebook.html). Note those terminal commands. 
-
-You could at this point use the brower interface for editing your ipynb file with `{sh} python3 -m jupyter lab ` or you could open a file in VS Code.
-
-Make sure you have the jupyter extension for vscode. Then you will want to create or open a new jupyter file and select the appropriate kernel (initially use python). If you are in the correct directory and had previously created a virtual environment then all should be good to go. And you can *in the terminal* invoke the quarto command to see your document with `quarto preview my-demo-notebook.ipynb`.
 
 ### Programming Languages
 

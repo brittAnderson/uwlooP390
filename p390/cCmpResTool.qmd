@@ -18,9 +18,19 @@ What are steps (or stages) involved in psychological research?
 
 [Sharing Your Data](TBN)
 
-:::{.callout-tip title="Class Question"}
+## Open Research Practices
 
+:::{.callout-tip title="Class Question"}
 -   What is "open research"?
 -   Should research be open?
 :::
+
 [10 strategies for open science](https://online.ucpress.edu/collabra/article/8/1/57545/195042/Ten-Strategies-to-Foster-Open-Science-in)
+
+::: {.callout-tip title="Class Question"}
+What are the **Fair** principles for research?
+:::
+-   [Fair principles](https://www.go-fair.org/fair-principles/)
+-   [Fair guiding principles](https://www.nature.com/articles/sdata201618)  
+
+Read and discuss: [A toolkit for transparency ... ](https://www.nature.com/articles/d41586-018-05990-5).
