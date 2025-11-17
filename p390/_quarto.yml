@@ -13,7 +13,6 @@ book:
     - index.qmd
     - intro.qmd
     - cCmpResTool.qmd
-    - cOpenResearch.qmd
     - cLabNotebooks.qmd
     - cWriting.qmd
     - cTerminal.qmd
