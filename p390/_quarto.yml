@@ -12,8 +12,8 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - cCmpResTool.qmd
-    - cIDE.qmd
+    - cOpenFairRes.qmd
+    - cBasicTooling.qmd
     - cTerminal.qmd
     - cGit.qmd
     - cLabNotebooks.qmd
