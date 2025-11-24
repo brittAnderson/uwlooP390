@@ -1,6 +1,4 @@
 test*
-testing/*
-!testing/*.py
 venv/
 *~
 exampleSyllabi/
