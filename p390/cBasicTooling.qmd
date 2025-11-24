@@ -1,7 +1,6 @@
 # Basic Tools for Scientific Computing
   In the following some of the common tools are highlighted with instructions for how to download and install. 
 
-
 # Integrated Development Environments (IDEs)
 -   Who are you writing code for? Human or Machine?
 -   What is an IDE? What makes for a good IDE?
