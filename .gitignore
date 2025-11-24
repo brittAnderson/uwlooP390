@@ -1,3 +1,6 @@
+testing/testFiles/testPython_files/
+testing/testFiles/testR_files/
+test_files/
 venv/
 *~
 exampleSyllabi/
@@ -14,3 +17,4 @@ p390/share/
 p390/etc/
 p390/.DS_Store
 finalProjW2025/
+*.*#
