@@ -36,8 +36,6 @@ And github is not the only way to share code and data.
     The university provides you with a gitlab account:  <https://git.uwaterloo.ca>
 5. [Codeberg](https://codeberg.org/) 
 
-
-
 ## Using git with github
 You will need an ssh key. 
 
