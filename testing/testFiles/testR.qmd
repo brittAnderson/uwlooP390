@@ -1,0 +1,9 @@
+# This is a test of R
+
+```{r}
+myadd <- function (a,b) {
+    return (a + b)
+}
+
+print(myadd(2,3))
+```
