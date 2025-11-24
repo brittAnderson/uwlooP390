@@ -1,4 +1,4 @@
-## Coding
+# Coding
 
 For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?
 
@@ -279,6 +279,18 @@ A few years ago I made a video talking about some of these features, but I used 
 
 
 #### Python
+
+##### Installation
+
+I recommend using `uv`. This is a new tool that will take care of installing python version, python libraries, and initiating virtual environments. Many operating systems come with a version of python already installed. If you install additional versions to the global workspace you can get conflicts that can be very frustrating and challenging to fix. 
+
+First, get [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+Second, [install a version of python](https://docs.astral.sh/uv/guides/install-python/). 
+
+Third, [practice setting up a virtual environment](https://docs.astral.sh/uv/guides/install-python/).
+
+Fourth, [install some packages](https://docs.astral.sh/uv/pip/packages/).
 
 ::: {.callout-note}
 If the following doesn't go smoothly for you check out the additional suggestions in the [python-venv appendix](python-venv.qmd).
