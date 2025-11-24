@@ -1,0 +1,10 @@
+# Windows Subsystem for Linux
+  This is a relatively new feature for the Windows operating system that lets you install a linux virtual machine inside your current Windows distribution. You can thus "use" linux while still running windows. You can use it just for terminal commands or you can run some visual applications as well. 
+
+## Make sure you are on Windows 10 or 11 and that you are updated.
+
+## Then follow the instructions per [microsoft](https://learn.microsoft.com/en-us/windows/wsl/install.)
+
+# VSCode
+
+[Install](https://code.visualstudio.com/download)

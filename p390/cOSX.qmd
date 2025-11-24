@@ -4,7 +4,11 @@
 
 [Homebrew installation instructions](https://docs.brew.sh/Installation)
 
-### Texlive
+## VS Code
+
+[Install Mac](https://code.visualstudio.com/docs/setup/mac)
+
+## Texlive
 
 Get it via Homebrew with `brew install texlive` then export to pdf via quarto works well. 
 
