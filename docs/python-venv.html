@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix B — Python – P390</title>
+<title>Appendix C — Python – P390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cOSX.html" rel="prev">
+<link href="./cWindows.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cOSX.html">Appendices</a></li><li class="breadcrumb-item"><a href="./python-venv.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Python</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cOSX.html">Appendices</a></li><li class="breadcrumb-item"><a href="./python-venv.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Python</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -228,8 +228,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./cWindows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Windows Subsystem for Linux</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./python-venv.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Python</span></span></a>
   </div>
 </li>
       </ul>
@@ -244,16 +250,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link active" data-scroll-target="#virtual-environments"><span class="header-section-number">C</span> Virtual Environments</a>
+  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link active" data-scroll-target="#virtual-environments"><span class="header-section-number">D</span> Virtual Environments</a>
   <ul class="collapse">
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">C.1</span> Methods</a>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">D.1</span> Methods</a>
   <ul class="collapse">
-  <li><a href="#creating-and-activating-the-venv" id="toc-creating-and-activating-the-venv" class="nav-link" data-scroll-target="#creating-and-activating-the-venv"><span class="header-section-number">C.1.1</span> Creating and Activating the Venv</a></li>
-  <li><a href="#the-terminal-is-all-you-need" id="toc-the-terminal-is-all-you-need" class="nav-link" data-scroll-target="#the-terminal-is-all-you-need"><span class="header-section-number">C.1.2</span> The Terminal is All You Need</a></li>
+  <li><a href="#creating-and-activating-the-venv" id="toc-creating-and-activating-the-venv" class="nav-link" data-scroll-target="#creating-and-activating-the-venv"><span class="header-section-number">D.1.1</span> Creating and Activating the Venv</a></li>
+  <li><a href="#the-terminal-is-all-you-need" id="toc-the-terminal-is-all-you-need" class="nav-link" data-scroll-target="#the-terminal-is-all-you-need"><span class="header-section-number">D.1.2</span> The Terminal is All You Need</a></li>
   </ul></li>
-  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code"><span class="header-section-number">C.2</span> Visual Studio Code</a>
+  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code"><span class="header-section-number">D.2</span> Visual Studio Code</a>
   <ul class="collapse">
-  <li><a href="#quarto-complications" id="toc-quarto-complications" class="nav-link" data-scroll-target="#quarto-complications"><span class="header-section-number">C.2.1</span> Quarto Complications</a></li>
+  <li><a href="#quarto-complications" id="toc-quarto-complications" class="nav-link" data-scroll-target="#quarto-complications"><span class="header-section-number">D.2.1</span> Quarto Complications</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -262,9 +268,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cOSX.html">Appendices</a></li><li class="breadcrumb-item"><a href="./python-venv.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Python</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cOSX.html">Appendices</a></li><li class="breadcrumb-item"><a href="./python-venv.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Python</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Appendix B — Python</h1>
+<h1 class="title">Appendix C — Python</h1>
 </div>
 
 
@@ -281,14 +287,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="virtual-environments" class="level1" data-number="C">
-<h1 data-number="C"><span class="header-section-number">C</span> Virtual Environments</h1>
+<section id="virtual-environments" class="level1" data-number="D">
+<h1 data-number="D"><span class="header-section-number">D</span> Virtual Environments</h1>
 <p>The advantage of a virtual environment is the ability to isolate libraries you may install for a particular project from interfering with other projects or previously installed libraries. The disadvantage is that they do involve some additional steps and complexity and you may end up installing multiple versions of the same library, which can be an issue if hard disk space on your computer is limited.</p>
-<section id="methods" class="level2" data-number="C.1">
-<h2 data-number="C.1" class="anchored" data-anchor-id="methods"><span class="header-section-number">C.1</span> Methods</h2>
+<section id="methods" class="level2" data-number="D.1">
+<h2 data-number="D.1" class="anchored" data-anchor-id="methods"><span class="header-section-number">D.1</span> Methods</h2>
 <p>There is more than one tool for creating a python virutal environment, but one of them is built into the standard python installation: <em>venv</em>, and so for simplicity this is the one that I recommend starting with.</p>
-<section id="creating-and-activating-the-venv" class="level3" data-number="C.1.1">
-<h3 data-number="C.1.1" class="anchored" data-anchor-id="creating-and-activating-the-venv"><span class="header-section-number">C.1.1</span> Creating and Activating the Venv</h3>
+<section id="creating-and-activating-the-venv" class="level3" data-number="D.1.1">
+<h3 data-number="D.1.1" class="anchored" data-anchor-id="creating-and-activating-the-venv"><span class="header-section-number">D.1.1</span> Creating and Activating the Venv</h3>
 <p>If you are in a console you can simply run these commands in the terminal.</p>
 <pre class="console"><code>python -m venv &lt;dir-where-you-want-venv&gt;
 cd &lt;dir-where-you-want-venv&gt;
@@ -315,18 +321,18 @@ Note
 (p390venv) britt@arts-220486 ~ % deactivate
 britt@arts-220486 ~ % </code></pre>
 </section>
-<section id="the-terminal-is-all-you-need" class="level3" data-number="C.1.2">
-<h3 data-number="C.1.2" class="anchored" data-anchor-id="the-terminal-is-all-you-need"><span class="header-section-number">C.1.2</span> The Terminal is All You Need</h3>
+<section id="the-terminal-is-all-you-need" class="level3" data-number="D.1.2">
+<h3 data-number="D.1.2" class="anchored" data-anchor-id="the-terminal-is-all-you-need"><span class="header-section-number">D.1.2</span> The Terminal is All You Need</h3>
 <p>If you are a minimalist or doing something simple you can invoke the python interpreter in your venv and complete your task there with no other tools, and using only the libraries required for your particular, limited task. However, if you use some companion tooling things may get more complicated and trickier to debug.</p>
 </section>
 </section>
-<section id="visual-studio-code" class="level2" data-number="C.2">
-<h2 data-number="C.2" class="anchored" data-anchor-id="visual-studio-code"><span class="header-section-number">C.2</span> Visual Studio Code</h2>
+<section id="visual-studio-code" class="level2" data-number="D.2">
+<h2 data-number="D.2" class="anchored" data-anchor-id="visual-studio-code"><span class="header-section-number">D.2</span> Visual Studio Code</h2>
 <p>VS Code tries to make using a venv easier, but this also means there is some indirection that may make it harder to puzzle out errors. The basic work flow is to make sure that VS code is working in the folder you want your venv to be in. If not, use the <code>open folder</code> menu of VS Code to do so. Then, you can use the <code>Command Palette</code> (found under the <em>View</em> menu tab) to locate the <code>Python Create Environment</code> command. If you have never created an environment before it will do so. This can take some time so be patient and make sure this process completes. If there was a virtual environment previously constructed VS Code will probably be able to figure that out and ask you if you want to re-use it. Usually you will, but if not you can select to destroy it and create a new one. You will probably also need to affilate a particular python version to association to your environment. VS Code can often make a reasonable suggestion and you can also use the command <code>Python Select Interpreter</code> if necessary.</p>
 <p>After you have done that you will need to move into the affiliated terminal window of your VS Code environment to install the necessary libraries. You will need to be deliberate and make sure that you are in the correct terminal. VS Code may have several of these open for different purposes if you are working on a complicated project.</p>
 <p>Note that while it may be convenient to use the VS Code terminals you do not have to. If you have a terminal program on your computer accessible to you outside of VS Code you can use VS Code as the editor and then move to your other terminal for activating and implementing and compiling the python project.</p>
-<section id="quarto-complications" class="level3" data-number="C.2.1">
-<h3 data-number="C.2.1" class="anchored" data-anchor-id="quarto-complications"><span class="header-section-number">C.2.1</span> Quarto Complications</h3>
+<section id="quarto-complications" class="level3" data-number="D.2.1">
+<h3 data-number="D.2.1" class="anchored" data-anchor-id="quarto-complications"><span class="header-section-number">D.2.1</span> Quarto Complications</h3>
 <p>When you embed a python code block in your .qmd document you will want to compile it. Quarto is assembling a document. It will need more than just the libraries necessary for compiling the python code. It also needs the library for the textual and graphical representation of the output that you will insert into your document. Specifically, it needs the <code>jupyter</code> python library. This means that whatever the python is doing, even if no additional libraries are needed, you will have to have done a <code>pip install jupyter</code> in your venv <em>and</em> you will need to have the venv active for the location where the qmd is stored and compiled.</p>
 <p>It is worth knowing that although VS Code offers the convenience of buttons to invoke the quarto process it is <em>not</em> necessary. You can invoke all the quarto commands through a terminal directly. For instance <code>quarto preview &lt;file-name&gt;.qmd</code> will try to compile your file and will also usually launch your browser so you can see the html result. It will then watch the source file and update the html whenever it detects you have changed the source. This can be quite convenient for editing.</p>
 
@@ -738,8 +744,8 @@ britt@arts-220486 ~ % </code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cOSX.html" class="pagination-link" aria-label="Mac Related Instructions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Mac Related Instructions</span></span>
+      <a href="./cWindows.html" class="pagination-link" aria-label="Windows Subsystem for Linux">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Windows Subsystem for Linux</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
