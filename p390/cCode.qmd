@@ -37,5 +37,15 @@ Common varieties of loops are the `for` and `while` loop.
 ### Virtual Environments
 You will often have software installed on your computer that you use for multiple purposes. There is also software on your computer that is used by your operating system. If you download different versions of that software for your own use you may find that your programs do not run correctly, or even worse that your system does not work properly. Do avoid such problems you may want to "sandbox" your development environment. Conflicts are less common for R, but very common for python. Such sandboxes are often called `venv`. A virtual environment lets you install software that only works locally, and cannot interfere with your global system software or other virtual environments you may have constructed for other projects. 
 
+### Assignment and Equality Are Different in Programming
+
+Assignment means you are assigning a name to something. Equality means that you are testing if two things are the same. One equals sign does not equal two equals sign. That is ` = != ==`. Exclamation points are often used to *negate* something (turn true to false and vice versa).
 
 
+```{python}
+a = 2
+print(a == 3)
+
+```
+
+In the first line we *assign* the value of two to the variable `a`. In the next line we test if a and 3 are in fact equal to each other. A "boolean" value is returned: false.
