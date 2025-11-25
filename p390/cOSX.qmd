@@ -4,6 +4,9 @@
 
 [Homebrew installation instructions](https://docs.brew.sh/Installation)
 
+## Git
+[Install Mac](https://git-scm.com/install/mac)
+
 ## VS Code
 
 [Install Mac](https://code.visualstudio.com/docs/setup/mac)

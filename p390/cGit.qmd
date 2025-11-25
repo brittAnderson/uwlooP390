@@ -7,7 +7,8 @@
 {{< video https://vimeo.com/456349738 title = " A quick overview of Git and Github" >}}
 
 ### Getting Git
-It depends on what system you have. 
+It depends on what system you have. See the operating system appendices.
+
 If you are using wsl then you are using linux. [Additional installation instructions](https://git-scm.com/install/windows). 
 
 ### Configuring Git
