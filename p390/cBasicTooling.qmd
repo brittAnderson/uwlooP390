@@ -10,7 +10,7 @@
 [Opensource alternative](https://vscodium.com/)
 
 ### Installing VS Code
-    See the operating specific appendices.
+    See the operating system specific appendices.
 
 ### Using VSCode
 
