@@ -1,0 +1,231 @@
+
+
+#### Python
+
+##### Installation
+
+I recommend using `uv`. This is a new tool that will take care of installing python version, python libraries, and initiating virtual environments. Many operating systems come with a version of python already installed. If you install additional versions to the global workspace you can get conflicts that can be very frustrating and challenging to fix. 
+
+First, get [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+Second, [install a version of python](https://docs.astral.sh/uv/guides/install-python/). 
+
+Third, [practice setting up a virtual environment](https://docs.astral.sh/uv/guides/install-python/).
+
+Fourth, [install some packages](https://docs.astral.sh/uv/pip/packages/).
+
+::: {.callout-note}
+If the following doesn't go smoothly for you check out the additional suggestions in the [python-venv appendix](python-venv.qmd).
+:::
+
+##### Installation
+
+[Installation Instructions](https://code.visualstudio.com/docs/languages/python)
+
+Install the `mathplotlib` and `numpy` packages.
+
+::: {.callout-tip title="Class Discussion"}
+What is a "package" when talking about programming languages? What is a "library"? What is an "executable"?
+:::
+
+
+::: {.callout-warning}
+Ask me about virtual environments!
+:::
+
+[setting up a venv in vscode and python](https://dev.to/emminex/how-to-install-python-libraries-in-visual-studio-code-38i1)
+
+##### Testing
+::: {.callout-warning}
+You may need to install the "reticulate" package for R if you want to run both python and R code in the same document as I am trying to do here. 
+:::
+
+```{python}
+#| warning: false
+#| echo: false
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# fake data
+np.random.seed(19680801)
+data = np.random.lognormal(size=(37, 4), mean=1.5, sigma=1.75)
+labels = list('ABCD')
+fs = 10  # fontsize
+fig, axs = plt.subplots(nrows=2, ncols=3, figsize=(6, 6), sharey=True)
+axs[0, 0].boxplot(data, tick_labels=labels);
+axs[0, 0].set_title('Default', fontsize=fs);
+axs[0, 1].boxplot(data, tick_labels=labels, showmeans=True);
+axs[0, 1].set_title('showmeans=True', fontsize=fs);
+axs[0, 2].boxplot(data, tick_labels=labels, showmeans=True, meanline=True);
+axs[0, 2].set_title('showmeans=True,\nmeanline=True', fontsize=fs);
+axs[1, 0].boxplot(data, tick_labels=labels, showbox=False, showcaps=False);
+tufte_title = 'Tufte Style \n(showbox=False,\nshowcaps=False)';
+axs[1, 0].set_title(tufte_title, fontsize=fs);
+axs[1, 1].boxplot(data, tick_labels=labels, notch=True, bootstrap=10000);
+axs[1, 1].set_title('notch=True,\nbootstrap=10000', fontsize=fs);
+axs[1, 2].boxplot(data, tick_labels=labels, showfliers=False);
+axs[1, 2].set_title('showfliers=False', fontsize=fs);
+
+for ax in axs.flat:
+    ax.set_yscale('log');
+    ax.set_yticklabels([]);
+
+fig.subplots_adjust(hspace=0.4)
+```
+
+::: {.callout-warning}
+Python cares about whitespace. It is strongly recommended that you only use spaces and not tabs when writing python code. 
+:::
+
+::: {#fig-loopinpython}
+
+```{python}
+my_name = "britt"                          # <1>
+my_name_as_list = list(my_name)            # <2>
+for i, j in enumerate(my_name_as_list):    # <3>
+  print((i, j))
+
+```
+1. Assignment in python does not use the arrow like R does.
+2. Strings and lists are different *types* of data. I have to coerce my string to a list.
+3. Python has conventions to make it easy to define multiple looping variables at once. 
+
+
+What a for loop might look like in python.
+
+:::
+
+##### Some programming vocabulary
+
+If you want to watch a video that reviews some of the programming vocabular and examples typed out (using Emacs and not VS Code) the following video may be of use. 
+
+<div style="padding:56.39% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/458286198?h=952e09c8dc" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/458286198">Gd : Common programming terms (i2c4p)</a> from <a href="https://vimeo.com/epistemic">Britt Anderson</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p>An overview of a few basic and fundamental programming terms.</p>
+
+::: {.callout-important}
+Python is a dynamically typed language. Python will try to guess the type of your data or change it based on context. 
+
+:::
+
+##### Assignment and Equality Are Different in Programming
+
+Assignment means you are assigning a name to something. Equality is that you are testing if they are the same. One equals sign does not equal two equals sign. That is ` = != ==`. Exclamation points are often used to *negate* something (turn true to false and vice versa).
+
+
+```{python}
+a = 2
+print(a == 3)
+
+```
+
+ ##### For loop details in python
+ 
+ Python refers to things called "iterables." To iterate is another way of saying something you can keep doing the same thing over and over to. Imagine a bowl of ice cream. It is "eatable". You take one spoon, and keep taking spoonfuls until the bowl is empty. 
+
+Indexing is how you get the location of an element in a list. Think of the row or column number in a spread sheet program, but indexes can be more powerful, and can be nested easily. In many programming languages, but sadly not all, **indexes start at 0**. Different programming languages will have slightly different syntax. 
+
+::: {#fig-indexinginpython}
+
+
+```{python}
+name_dict = {'firstName' : 'Britt', 'lastName' : 'Anderson'}
+my_list = list(range(1, 10))                                      # <1>
+print(name_dict['firstName'])
+print(my_list)
+print(my_list[0])
+print(my_list[-1])
+print(my_list[0:4])
+
+```
+1. Notice that here we use `range` where we used `seq` in R. There is usually a way to do something similar in both languages, but they may not have the same name.
+
+
+The use of the `-1`as an index is a python trick for getting the last element in a list. Think of the list as a circle. If you count backwards from a list you will get to the beginning eventually (index 0) if you went back one more step (-1) you would circle back to the end of the list. Test what happens when you try -2. Does it keep going? A lot of learning how to program is just doing stuff to see what happens.
+
+
+:::
+
+**A `for` loop in python**
+
+```{python}
+for ml in my_list:
+  print(ml)
+
+for i, ml in enumerate(my_list):
+  print("The {0}th element was {1}".format(i, ml))
+```
+
+**Conditionals in python**
+
+```{python}
+if 2 == 3:
+  print("Wha.....?\n\n")
+elif 3 == 2:
+  print("Now that is odd")
+else:
+  print("2 does not equal 3.")
+
+```
+
+Note that we use colons and white space to organize code in python, not the {} of R. 
+
+::: {.callout-important}
+Python uses a different syntax to define functions from R.
+:::
+
+
+```{python}
+def my_add(x, y):
+  return(x + y)
+
+```
+
+
+##### Popular and Useful Python Libraries
+  
+1. Numpy
+2. Scipy
+3. Matplotlib
+4. Pillow
+5. Sympy
+
+#### Javascript
+
+##### Installation
+
+Since javascript is already included in most browsers you likely have a basic version of javascript installed, and you can get started with almost no additional tools. As a quick illustration open up your favorite browser and look in the settings or options for something like "more Tools". Somewhere in that menu should be a web tools or web developer tools entry. Click it, and you should see something that looks like your VS Code screen with terminal like objects at the bottom. One of those is the *console*. Select it. Then you can create a function and use it with something like:
+
+:::{code-js-demo}
+
+```{js}
+#| eval: False
+
+function add(a,b=10){return a + b}
+```
+
+A simple javascript function.
+
+:::
+
+##### A Better Way to Go
+
+Even though there is a convenience factor in using your browser's console it is a very limited way to code. It is fine for testing out a line or two of javascript, but to actually code something you will want an actual development environment, and we will use VS Code. 
+
+To code javascript outside the browser you need a proper environment such as [Node.js](https://nodejs.org/en). There are many ways to install this, but if you are new to javascript using the official installer is probably best. To check if the installation went well you can run `node -v` inside a terminal. You should see a version number. If you are sure you downloaded things correctly you may have to set your path so your terminal can find the installation. 
+
+To test your installation you can create a test folder, e.g. call it "hello" and open that folder in VS Code. Then create a new file "app.js". VS Code should give you a lot of help out of the box as you enter: 
+
+```{js}
+#| eval: false
+
+var msg = 'Hello World';
+console.log(msg);
+
+```
+
+After saving you should be able to move down into your terminal and run `node app.js` to then see "Hello World" printed.[^1]
+
+[^1]: This example comes from [this node tutorial](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial).
