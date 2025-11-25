@@ -9,11 +9,9 @@
 ### Getting Git
 It depends on what system you have. See the operating system appendices.
 
-If you are using wsl then you are using linux. [Additional installation instructions](https://git-scm.com/install/windows). 
-
 ### Configuring Git
 
-Do this in your terminal
+Do this in your terminal (and please use your own name and email address). 
 
 `git config --global user.name "John Doe"`
 
@@ -29,7 +27,7 @@ Do this in your terminal
  
 ## Git is not Github
 
-And github is not the only way to share code and data.
+And github is not the only way to share code and data using `git` version control.
 1. [OSF.io](https://osf.io/)
 2. [Sourceforge](https://sourceforge.net/)
 3. [Bitbucket](https://bitbucket.org/)
@@ -38,7 +36,7 @@ And github is not the only way to share code and data.
 5. [Codeberg](https://codeberg.org/) 
 
 ## Using git with github
-You will need an ssh key. 
+You will need an ssh key. And the easiest way to get an SSH key is via the terminal. If you haven't done any of the terminal exercises, now might be a good time to go there, do at least the basics so you know where your termina is, and then come back here to finish the set up. 
 
 [The offical instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
