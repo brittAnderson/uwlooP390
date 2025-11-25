@@ -19,6 +19,8 @@ book:
     - cLabNotebooks.qmd
     - cWriting.qmd
     - cCode.qmd
+    - cR.qmd
+    - cPython.qmd
     - cProgExp.qmd
     - cExps.qmd
     - cHandlingData.qmd
