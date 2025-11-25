@@ -16,13 +16,22 @@
 Get it via Homebrew with `brew install texlive` then export to pdf via quarto works well. 
 
 ## UV
-[uv](https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_1)
+This is a new tool that will take care of installing python version, python libraries, and initiating virtual environments. Many operating systems come with a version of python already installed. If you install additional versions to the global workspace you can get conflicts that can be very frustrating and challenging to fix. 
+
+First, get [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+Second, [install a version of python](https://docs.astral.sh/uv/guides/install-python/). 
+
+Third, [practice setting up a virtual environment](https://docs.astral.sh/uv/guides/install-python/).
+
+Fourth, [install some packages](https://docs.astral.sh/uv/pip/packages/).
+
+## R
+
+[Install instructions](https://cran.r-project.org/bin/macosx/)
 
 ## Quarto
 
-Find the download [here](https://quarto.org/docs/get-started/).
-The demo needs `matplotlib` and `plotly`.
-
-It can be simpler to get python from Homebrew instead of uv with `brew install python-matplotlib` .
+[Getting started](https://quarto.org/docs/get-started/index.html)
 
 

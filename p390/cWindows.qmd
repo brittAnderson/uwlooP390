@@ -15,3 +15,13 @@
 
 If you are using WSL then you probably already have it. Enter you WSL terminal and try `git --version`. If you see an answer you have it. If you don't want to use WSL you can [install](https://git-scm.com/install/windows) it for Windows directly. 
 
+## Python
+
+First, get [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+Second, [install a version of python](https://docs.astral.sh/uv/guides/install-python/). 
+
+Third, [practice setting up a virtual environment](https://docs.astral.sh/uv/guides/install-python/).
+
+Fourth, [install some packages](https://docs.astral.sh/uv/pip/packages/).
+
