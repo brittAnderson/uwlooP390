@@ -1,40 +1,14 @@
-# Coding
+# Coding General
 
-For a lot of the above we need to know how to code. In order to write code we need minimally to answer two questions. What language? What tooling?
+Simply put, this is you telling the machine what to do. It is usually done via the writing of a file in plain text that is then processed in various ways to yield machine code that the computer actually uses. It is possible to program in machine code, but it is not very user friendly.
 
-### Languages
+## Languages
 
-What should I consider when selecting a programming language? Will it do what I need it to do now and tomorrow.
+There is more than one language available for programming your computer and each has their pros and cons. Some are "low level" or close to the metal (see for example, [rust](https://rust-lang.org/) or [zig](https://ziglang.org/)), while others, the ones we will use in this course are considered high level, and abstract away many of the details (such as how much memory to allocate or how to clean-up (garbage collection) unused data from memory). 
 
--   Is SPSS a good language for statistics?
--   Is R a good language for statistics?
--   Is Python a good language for statistics?
--   Is R a good language for coding a web app?
--   Is R a good language for coding an in-lab visual experiment?
--   Should you use Julia? Common Lisp? Haskell? Lean? OCaml? Rust? Go?
+When evaluating the fitness of a new programming language ask yourself not only whether it meets your needs today, but does it look likely to be available tomorrow, or five years from tomorrow. It is also, in general, to chose a more general purpose language that you can use for more than one particular task. The latter will allow you to leverage your knowledge of how to get things done in one domain for getting things done in others. And it is likely that you will learn general patterns that may help you pick up additional programming languages more quickly if, in the future, you need to change. 
 
-::: {.content-hidden}
-Break up class to do some quick research and make a case for each. Goal is to help them see the diversity of what is out there. One of the ideas is the Swiss Army Knife idea. It is a pretty handy to thing to have, but is it the best tool for anything?
-
-:::
-
-How do you *future proof*?
--   If languages go in and out of fashion what is it you should really be learning about programming? What are good coding practices? 
-
-::: {.content-hidden} 
-Another possible classroom exercise.
--   documentation
--   small functions
--   avoid spaghetti
--   use libraries
-
-:::
-
-
-
-### Programming Languages
-
-#### Basic Constructs
+## Common Programming Constructs
 - Variables
   Variables are things (lists, values, names, and such) that you want to give a name to. You might do this because you think you are going to want to do something with them later and it might be more convenient to have a short, memorable name for referring to them.
 - Functions
