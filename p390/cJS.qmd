@@ -1,0 +1,38 @@
+
+#### Javascript
+
+##### Installation
+
+Since javascript is already included in most browsers you likely have a basic version of javascript installed, and you can get started with almost no additional tools. As a quick illustration open up your favorite browser and look in the settings or options for something like "more Tools". Somewhere in that menu should be a web tools or web developer tools entry. Click it, and you should see something that looks like your VS Code screen with terminal like objects at the bottom. One of those is the *console*. Select it. Then you can create a function and use it with something like:
+
+:::{code-js-demo}
+
+```{js}
+#| eval: False
+
+function add(a,b=10){return a + b}
+```
+
+A simple javascript function.
+
+:::
+
+##### A Better Way to Go
+
+Even though there is a convenience factor in using your browser's console it is a very limited way to code. It is fine for testing out a line or two of javascript, but to actually code something you will want an actual development environment, and we will use VS Code. 
+
+To code javascript outside the browser you need a proper environment such as [Node.js](https://nodejs.org/en). There are many ways to install this, but if you are new to javascript using the official installer is probably best. To check if the installation went well you can run `node -v` inside a terminal. You should see a version number. If you are sure you downloaded things correctly you may have to set your path so your terminal can find the installation. 
+
+To test your installation you can create a test folder, e.g. call it "hello" and open that folder in VS Code. Then create a new file "app.js". VS Code should give you a lot of help out of the box as you enter: 
+
+```{js}
+#| eval: false
+
+var msg = 'Hello World';
+console.log(msg);
+
+```
+
+After saving you should be able to move down into your terminal and run `node app.js` to then see "Hello World" printed.[^1]
+
+[^1]: This example comes from [this node tutorial](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial).
