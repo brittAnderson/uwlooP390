@@ -1,0 +1,802 @@
+# Terminal Self-Learning Exercises for Psychology Students
+
+## Prerequisites
+- You have located your terminal application (Terminal on Mac, WSL terminal on Windows)
+- You can open it successfully
+
+## Note on Command Compatibility
+These exercises work in both bash (WSL/Linux) and zsh (Mac). The commands are identical between these shells.
+
+---
+
+## Exercise Set 1: Orientation and Basic Navigation
+
+### Learning Goals
+- Understand what the prompt means
+- Know where you are in the file system
+- Navigate between directories
+
+### 1.1 Where Am I?
+Open your terminal. You'll see a prompt (something like `user@computer:~$` or `computer-name:~ user$`).
+
+**Task:** Type `pwd` and press Enter.
+
+**Question to answer:** What does `pwd` stand for? What information does it give you?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see a path like `/home/username` (Linux/WSL) or `/Users/username` (Mac). This is your "home directory" - your starting location.
+
+`pwd` = "print working directory"
+</details>
+
+### 1.2 What's Here?
+**Task:** Type `ls` and press Enter.
+
+**Question to answer:** What does this command show you?
+
+<details>
+<summary>Expected outcome</summary>
+
+You see a list of files and folders in your current directory. Common ones might include Documents, Downloads, Desktop.
+
+`ls` = "list"
+</details>
+
+### 1.3 More Details
+**Task:** Type `ls -l` and press Enter.
+
+**Question to answer:** How is the output different from plain `ls`? What additional information do you see?
+
+<details>
+<summary>Expected outcome</summary>
+
+You see the same files but with permissions, owner, size, and modification date. The `-l` is called a "flag" or "option" that modifies command behavior.
+</details>
+
+### 1.4 Including Hidden Files
+**Task:** Type `ls -la` and press Enter.
+
+**Question to answer:** Do you see any files starting with `.` (period)? What do you think these are?
+
+<details>
+<summary>Expected outcome</summary>
+
+Files starting with `.` are hidden by default. They're often configuration files like `.bashrc` or `.zshrc`.
+</details>
+
+### 1.5 Moving Around
+**Task:** 
+1. Type `cd Documents` and press Enter
+2. Type `pwd` to see where you are now
+3. Type `ls` to see what's in Documents
+
+**Question to answer:** Did your prompt change? How can you tell you're in a different location?
+
+<details>
+<summary>Expected outcome</summary>
+
+Your working directory changed to `/home/username/Documents` (or similar). The prompt might show the directory name.
+
+`cd` = "change directory"
+</details>
+
+### 1.6 Going Back
+**Task:** Type `cd ..` and press Enter, then `pwd`.
+
+**Question to answer:** Where are you now? What does `..` mean?
+
+<details>
+<summary>Expected outcome</summary>
+
+You're back in your home directory. `..` means "parent directory" (one level up).
+</details>
+
+### 1.7 Returning Home
+**Task:** 
+1. Navigate into Documents again: `cd Documents`
+2. Type `cd` (with nothing after it) and press Enter
+3. Type `pwd` to verify
+
+**Question to answer:** Where does `cd` by itself take you?
+
+<details>
+<summary>Expected outcome</summary>
+
+Plain `cd` always returns you to your home directory, no matter where you are.
+</details>
+
+---
+
+## Exercise Set 2: Creating and Manipulating Files
+
+### Learning Goals
+- Create directories and files
+- Move and copy things
+- Delete safely
+
+### 2.1 Make a Workspace
+**Task:** 
+1. Make sure you're in your home directory: `cd`
+2. Type `mkdir terminal_practice` and press Enter
+3. Type `ls` to verify it was created
+4. Type `cd terminal_practice`
+
+**Question to answer:** What do you think `mkdir` stands for?
+
+<details>
+<summary>Expected outcome</summary>
+
+You created a new directory and moved into it. 
+
+`mkdir` = "make directory"
+</details>
+
+### 2.2 Create a File
+**Task:** Type `touch experiment_notes.txt` and press Enter, then `ls`.
+
+**Question to answer:** Does a file appear? Open your graphical file browser (Finder/Explorer) and navigate to this folder. Can you see the file there?
+
+<details>
+<summary>Expected outcome</summary>
+
+You created an empty file. `touch` creates files (technically, it updates timestamps, but creates the file if it doesn't exist).
+</details>
+
+### 2.3 Add Content to a File
+**Task:** Type `echo "First observation: Subjects prefer terminal over GUI" > experiment_notes.txt` and press Enter.
+
+**Question to answer:** What do you think `>` does? Try opening the file in a text editor to check.
+
+<details>
+<summary>Expected outcome</summary>
+
+The text was written to the file. `>` means "redirect output to file" (it overwrites existing content).
+</details>
+
+### 2.4 Append to a File
+**Task:** 
+1. Type `echo "Second observation: Learning curve steep" >> experiment_notes.txt`
+2. View the file content: `cat experiment_notes.txt`
+
+**Question to answer:** How is `>>` different from `>`?
+
+<details>
+<summary>Expected outcome</summary>
+
+You see both lines. `>>` appends (adds to the end) instead of overwriting.
+
+`cat` = "concatenate" (displays file contents)
+</details>
+
+### 2.5 Copy Files
+**Task:** 
+1. Type `cp experiment_notes.txt backup_notes.txt`
+2. Type `ls` to verify both files exist
+
+**Question to answer:** What do you think `cp` stands for?
+
+<details>
+<summary>Expected outcome</summary>
+
+You now have two identical files.
+
+`cp` = "copy"
+Format: `cp source destination`
+</details>
+
+### 2.6 Rename/Move Files
+**Task:** Type `mv backup_notes.txt observations.txt` and then `ls`.
+
+**Question to answer:** What happened to `backup_notes.txt`?
+
+<details>
+<summary>Expected outcome</summary>
+
+The file was renamed. `mv` = "move" but is also used for renaming (moving to a new name in the same directory).
+</details>
+
+### 2.7 Create Directory Structure
+**Task:**
+1. Type `mkdir data`
+2. Type `mkdir data/raw data/processed`
+3. Type `ls data`
+
+**Question to answer:** Can you create multiple directories at once?
+
+<details>
+<summary>Expected outcome</summary>
+
+You created a data directory with two subdirectories. You can specify multiple paths to mkdir.
+</details>
+
+### 2.8 Move Files Between Directories
+**Task:**
+1. Create a test file: `touch subject_001_data.csv`
+2. Move it: `mv subject_001_data.csv data/raw/`
+3. Verify: `ls data/raw`
+
+**Question to answer:** How do you move files between directories?
+
+<details>
+<summary>Expected outcome</summary>
+
+The file is now in data/raw/. When moving, you specify the destination directory.
+</details>
+
+### 2.9 Safe Deletion
+**Task:**
+1. Type `rm observations.txt`
+2. Type `ls` to verify it's gone
+3. Try `ls observations.txt`
+
+**Question to answer:** Can you get the file back after using `rm`?
+
+<details>
+<summary>Expected outcome</summary>
+
+The file is permanently deleted. There's no "recycle bin" in the terminal. **Be careful with `rm`!**
+
+`rm` = "remove"
+</details>
+
+### 2.10 Remove Directories
+**Task:**
+1. Try `rm data`
+2. Now try `rm -r data`
+
+**Question to answer:** Why doesn't the first command work? What does the `-r` flag do?
+
+<details>
+<summary>Expected outcome</summary>
+
+Plain `rm` doesn't work on directories. The `-r` flag means "recursive" (remove directory and everything inside).
+
+**Warning:** `rm -r` is dangerous - it deletes everything in the directory. Always double-check before using it.
+</details>
+
+---
+
+## Exercise Set 3: Viewing and Searching Content
+
+### Learning Goals
+- Read file contents in different ways
+- Search within files
+- Understand pipes and filters
+
+### 3.1 Setup the Dataset
+**Task:** Let's create a sample dataset for practice.
+
+```bash
+cd ~/terminal_practice
+cat > participants.txt << 'EOF'
+ID,Age,Condition,Score
+001,23,Control,78
+002,27,Treatment,85
+003,21,Control,72
+004,25,Treatment,91
+005,29,Control,68
+006,22,Treatment,88
+007,26,Control,75
+008,24,Treatment,82
+EOF
+```
+
+Just copy all of this and paste it into your terminal, then press Enter.
+
+**Question to answer:** Type `cat participants.txt` - do you see your data?
+
+<details>
+<summary>Expected outcome</summary>
+
+You created a CSV file with participant data. The `<< 'EOF'` syntax is called a "here document" - a way to input multiple lines.
+</details>
+
+### 3.2 Page Through Files
+**Task:** 
+1. Type `less participants.txt` and press Enter
+2. Use arrow keys to navigate
+3. Press `q` to quit
+
+**Question to answer:** How is `less` different from `cat`?
+
+<details>
+<summary>Expected outcome</summary>
+
+`less` allows you to scroll through files without printing everything to the screen. Useful for large files.
+
+Navigation: arrows to move, `q` to quit, `/` to search
+</details>
+
+### 3.3 First Few Lines
+**Task:** Type `head participants.txt`
+
+**Question to answer:** How many lines does it show?
+
+<details>
+<summary>Expected outcome</summary>
+
+Shows first 10 lines by default. Useful for checking file structure.
+
+Try: `head -n 3 participants.txt` to show only 3 lines
+</details>
+
+### 3.4 Last Few Lines
+**Task:** Type `tail participants.txt`
+
+**Question to answer:** What do you see?
+
+<details>
+<summary>Expected outcome</summary>
+
+Shows last 10 lines. Useful for checking end of files or recent log entries.
+</details>
+
+### 3.5 Count Lines
+**Task:** Type `wc -l participants.txt`
+
+**Question to answer:** What number do you get? Why?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see `8 participants.txt` (or possibly 9 depending on blank lines).
+
+`wc` = "word count", `-l` flag means count lines instead
+</details>
+
+### 3.6 Search for Patterns
+**Task:** Type `grep Treatment participants.txt`
+
+**Question to answer:** What gets displayed?
+
+<details>
+<summary>Expected outcome</summary>
+
+Only lines containing "Treatment" are shown. `grep` searches for patterns in files.
+</details>
+
+### 3.7 Search with Count
+**Task:** Type `grep -c Treatment participants.txt`
+
+**Question to answer:** What does this number represent?
+
+<details>
+<summary>Expected outcome</summary>
+
+The count of lines containing "Treatment". The `-c` flag gives you a count instead of the lines themselves.
+</details>
+
+### 3.8 Case-Insensitive Search
+**Task:** 
+1. Type `grep control participants.txt`
+2. Type `grep -i control participants.txt`
+
+**Question to answer:** Why different results?
+
+<details>
+<summary>Expected outcome</summary>
+
+First search finds nothing (lowercase doesn't match "Control"). 
+Second search with `-i` flag is case-insensitive.
+</details>
+
+### 3.9 Combining Commands (Pipes)
+**Task:** Type `cat participants.txt | grep Treatment | wc -l`
+
+**Question to answer:** What happened? What does the `|` symbol do?
+
+<details>
+<summary>Expected outcome</summary>
+
+This counts Treatment participants. The `|` (pipe) sends output of one command as input to the next.
+
+Flow: display file → filter for Treatment → count lines
+</details>
+
+### 3.10 Sorting Data
+**Task:**
+1. Type `sort participants.txt`
+2. Type `sort -k4 -t, -n participants.txt`
+
+**Question to answer:** How does the second command change the sort?
+
+<details>
+<summary>Expected outcome</summary>
+
+First sorts alphabetically by whole line.
+Second sorts numerically (`-n`) by field 4 (`-k4`) using comma as delimiter (`-t,`) - i.e., by Score column.
+</details>
+
+---
+
+## Exercise Set 4: Efficiency Tools
+
+### Learning Goals
+- Use command history
+- Autocomplete with Tab
+- Edit commands efficiently
+- Use wildcards
+
+### 4.1 Command History
+**Task:**
+1. Type `history` and press Enter
+2. Use up-arrow key a few times
+3. Press down-arrow
+
+**Question to answer:** What do the arrow keys do?
+
+<details>
+<summary>Expected outcome</summary>
+
+`history` shows all past commands.
+Up/down arrows cycle through command history - very useful for repeating or modifying previous commands.
+</details>
+
+### 4.2 Search History
+**Task:**
+1. Press `Ctrl+r` (Control-r)
+2. Start typing `grep`
+3. Press `Ctrl+r` again to see next match
+
+**Question to answer:** What does `Ctrl+r` do?
+
+<details>
+<summary>Expected outcome</summary>
+
+Reverse search through command history. Start typing and it finds matching commands. Press Enter to run, or edit first.
+</details>
+
+### 4.3 Tab Completion
+**Task:**
+1. Type `cd ~/term` and press Tab
+2. If it doesn't complete, press Tab twice
+
+**Question to answer:** What happened?
+
+<details>
+<summary>Expected outcome</summary>
+
+Tab autocompletes file/directory names. Double-tab shows all matches if there are multiple options.
+
+This saves enormous amounts of typing and prevents typos.
+</details>
+
+### 4.4 Cursor Movement
+**Task:** Type a long command (don't press Enter yet): 
+`echo "This is a very long command that I want to edit"`
+
+Now practice:
+- `Ctrl+a` (jump to start)
+- `Ctrl+e` (jump to end)
+- `Alt+b` or `Esc` then `b` (back one word)
+- `Alt+f` or `Esc` then `f` (forward one word)
+
+**Question to answer:** Are these faster than arrow keys?
+
+<details>
+<summary>Expected outcome</summary>
+
+These shortcuts make editing commands much faster than holding arrow keys.
+</details>
+
+### 4.5 Wildcards - Multiple Files
+**Task:**
+1. Create test files: `touch data_jan.csv data_feb.csv data_mar.csv report_jan.txt`
+2. Type `ls data*`
+3. Type `ls *.csv`
+4. Type `ls data_*.csv`
+
+**Question to answer:** What does `*` match?
+
+<details>
+<summary>Expected outcome</summary>
+
+`*` is a wildcard matching any characters.
+- `data*` matches anything starting with "data"
+- `*.csv` matches anything ending with ".csv"  
+- `data_*.csv` matches that pattern
+
+This is powerful for operating on multiple files at once.
+</details>
+
+### 4.6 Wildcards - Single Character
+**Task:**
+1. Type `ls data_???.csv`
+
+**Question to answer:** How is `?` different from `*`?
+
+<details>
+<summary>Expected outcome</summary>
+
+`?` matches exactly one character. So `???` matches exactly three characters (jan, feb, mar).
+</details>
+
+### 4.7 Clear the Screen
+**Task:** 
+1. Your terminal is probably cluttered now. Type `clear`
+2. Alternatively, press `Ctrl+l`
+
+**Question to answer:** Does this delete your history?
+
+<details>
+<summary>Expected outcome</summary>
+
+Screen is cleared but history remains. You can still scroll up or use up-arrow to access previous commands.
+</details>
+
+---
+
+## Exercise Set 5: Practical Research Workflow
+
+### Learning Goals
+- Combine tools for real tasks
+- Develop a reproducible workflow
+- Practice documentation
+
+### 5.1 Organize a Project
+**Task:** Create this directory structure:
+
+```bash
+cd ~
+mkdir psych_study
+cd psych_study
+mkdir data data/raw data/processed scripts results
+```
+
+Then verify: `ls -R`
+
+**Question to answer:** What does `ls -R` do?
+
+<details>
+<summary>Expected outcome</summary>
+
+You created a standard research project structure. `-R` shows recursive listing (shows subdirectories too).
+</details>
+
+### 5.2 Create a Data Log
+**Task:**
+```bash
+cd ~/psych_study
+echo "# Data Collection Log" > README.txt
+echo "" >> README.txt
+echo "Date: $(date)" >> README.txt
+echo "Researcher: [Your Name]" >> README.txt
+echo "Study: Terminal Skills Acquisition" >> README.txt
+```
+
+Then view it: `cat README.txt`
+
+**Question to answer:** What does `$(date)` do?
+
+<details>
+<summary>Expected outcome</summary>
+
+`$(date)` runs the date command and inserts its output. This is called "command substitution" - very useful in scripts.
+</details>
+
+### 5.3 Document Your Commands
+**Task:** Create a script file:
+
+```bash
+cd ~/psych_study/scripts
+touch process_data.sh
+echo "#!/bin/bash" > process_data.sh
+echo "# Script to process participant data" >> process_data.sh
+echo "" >> process_data.sh
+echo "echo 'Starting data processing...'" >> process_data.sh
+echo "ls ../data/raw/" >> process_data.sh
+echo "echo 'Processing complete!'" >> process_data.sh
+```
+
+View it: `cat process_data.sh`
+
+**Question to answer:** What is `#!/bin/bash` at the top?
+
+<details>
+<summary>Expected outcome</summary>
+
+This is called a "shebang" - it tells the system this is a bash script. Scripts are just text files containing commands.
+</details>
+
+### 5.4 Make Scripts Executable
+**Task:**
+1. Try running: `./process_data.sh`
+2. It fails! Now type: `chmod +x process_data.sh`
+3. Try again: `./process_data.sh`
+
+**Question to answer:** What did `chmod +x` do?
+
+<details>
+<summary>Expected outcome</summary>
+
+`chmod +x` makes the file executable. Without it, the system won't run it.
+
+`chmod` = "change mode" (permissions)
+</details>
+
+### 5.5 Batch Process Files
+**Task:** Create sample data files and process them:
+
+```bash
+cd ~/psych_study/data/raw
+echo "subject,rt,accuracy" > pilot_01.csv
+echo "S001,450,1" >> pilot_01.csv
+echo "S002,523,1" >> pilot_01.csv
+
+echo "subject,rt,accuracy" > pilot_02.csv  
+echo "S003,489,0" >> pilot_02.csv
+echo "S004,512,1" >> pilot_02.csv
+
+# Now count how many data rows across all files
+cat pilot_*.csv | grep -v "subject" | wc -l
+```
+
+**Question to answer:** What does `grep -v` do?
+
+<details>
+<summary>Expected outcome</summary>
+
+You counted total participants across multiple files. `grep -v` inverts the match (shows lines NOT containing the pattern) - here, excluding headers.
+</details>
+
+### 5.6 Extract Specific Data
+**Task:**
+```bash
+# Extract all accurate responses (accuracy=1)
+grep ",1$" pilot_*.csv
+```
+
+**Question to answer:** What does `$` mean in the pattern?
+
+<details>
+<summary>Expected outcome</summary>
+
+`$` means "end of line" in grep patterns. So `,1$` matches lines ending with ",1".
+
+This is a "regular expression" - a powerful pattern matching system.
+</details>
+
+### 5.7 Create Summary Statistics
+**Task:**
+```bash
+cd ~/psych_study/results
+echo "# Summary Statistics" > summary.txt
+echo "" >> summary.txt
+echo "Total data files: $(ls ../data/raw/*.csv | wc -l)" >> summary.txt
+echo "Total participants: $(cat ../data/raw/*.csv | grep -v subject | wc -l)" >> summary.txt
+cat summary.txt
+```
+
+**Question to answer:** Did this create a useful summary?
+
+<details>
+<summary>Expected outcome</summary>
+
+You automated summary statistics. This approach scales - if you add 100 more files, the command still works.
+</details>
+
+### 5.8 Find Files by Content
+**Task:**
+```bash
+cd ~/psych_study
+grep -r "S001" .
+```
+
+**Question to answer:** What does `-r` do with grep?
+
+<details>
+<summary>Expected outcome</summary>
+
+`-r` makes grep recursive - it searches in current directory and all subdirectories. Useful for finding where specific data appears.
+</details>
+
+### 5.9 Check Disk Usage
+**Task:**
+```bash
+cd ~/psych_study
+du -sh *
+```
+
+**Question to answer:** What does this tell you?
+
+<details>
+<summary>Expected outcome</summary>
+
+`du` = "disk usage"
+`-s` = summary for each item
+`-h` = human-readable (KB, MB instead of bytes)
+
+Shows how much space each directory uses - important for large datasets.
+</details>
+
+### 5.10 Final Cleanup Exercise
+**Task:** Time to clean up our practice.
+
+```bash
+cd ~
+ls terminal_practice  # Verify it exists
+rm -r terminal_practice  # Remove it
+
+ls psych_study  # Verify it exists
+rm -r psych_study  # Remove it
+```
+
+**Question to answer:** Why is it important to be careful with `rm -r`?
+
+<details>
+<summary>Expected outcome</summary>
+
+You successfully cleaned up practice directories. Always double-check paths before using `rm -r` - there's no undo!
+</details>
+
+---
+
+## Self-Assessment Checklist
+
+After completing these exercises, you should be able to:
+
+- [ ] Navigate the file system (`cd`, `pwd`, `ls`)
+- [ ] Create and remove files and directories (`touch`, `mkdir`, `rm`, `rm -r`)
+- [ ] Copy and move files (`cp`, `mv`)
+- [ ] View file contents (`cat`, `less`, `head`, `tail`)
+- [ ] Search within files (`grep`)
+- [ ] Count and sort data (`wc`, `sort`)
+- [ ] Use pipes to combine commands (`|`)
+- [ ] Use wildcards for batch operations (`*`, `?`)
+- [ ] Navigate command history (arrow keys, `Ctrl+r`)
+- [ ] Use tab completion
+- [ ] Create simple shell scripts
+- [ ] Make files executable (`chmod +x`)
+
+---
+
+## Common Pitfalls and Tips
+
+### Safety
+- **Always** check `pwd` before running `rm -r`
+- There is no "Undo" in the terminal
+- Test commands on unimportant files first
+
+### Efficiency  
+- Use Tab completion religiously - prevents typos
+- Use up-arrow for recent commands instead of retyping
+- Learn `Ctrl+r` for searching history - it's incredibly useful
+
+### Debugging
+- If a command doesn't work, check for typos (especially spaces and `-` vs `_`)
+- File names with spaces need quotes: `"my file.txt"` or escaping: `my\ file.txt`
+- Case matters: `File.txt` ≠ `file.txt`
+
+### Getting Help
+- `man <command>` shows the manual (press `q` to quit)
+- `<command> --help` usually shows brief help
+- Google "bash [command] examples" for more information
+
+---
+
+## Next Steps
+
+Once comfortable with these basics, you might explore:
+- **Text processing**: `awk`, `sed` for data manipulation
+- **Version control**: `git` for tracking changes
+- **Remote access**: `ssh` for working on servers
+- **Scripting**: Writing longer bash/zsh scripts for automation
+- **Package managers**: `brew` (Mac) or `apt` (Linux) for installing software
+
+Remember: The terminal seems arcane at first, but it's actually more logical than most GUIs once you understand the patterns. These commands have remained largely unchanged for 40+ years because they work well.
+
+---
+
+## Getting Stuck?
+
+If you get stuck or your terminal stops responding:
+- `Ctrl+c` cancels the current command
+- `Ctrl+d` exits many programs  
+- If completely stuck, close the terminal window and open a new one
+- Type `reset` if your terminal looks weird/corrupted
+
+---
+
+**License:** This document is released under CC BY 4.0. Feel free to adapt for your courses.
