@@ -1,0 +1,1781 @@
+# Git and GitHub Self-Learning Exercises for Psychology Students
+
+## Prerequisites
+- You have completed the terminal exercises
+- You can navigate directories and create/edit files from the command line
+- You have a stable internet connection
+
+## What is Git and GitHub?
+
+**Git** is a version control system that tracks changes to files over time. Think of it as an incredibly sophisticated "undo" system that also lets multiple people work on the same files.
+
+**GitHub** is a website that hosts git repositories online. It's like Google Drive for code, but with powerful collaboration features built specifically for version control.
+
+## Why Use Git?
+
+- **Track changes**: See exactly what changed, when, and by whom
+- **Collaborate**: Work with others without overwriting each other's work
+- **Backup**: Your code lives both on your computer and on GitHub
+- **Experiment safely**: Try new things without fear of breaking what works
+- **Professional skill**: Git is the industry standard for version control
+
+---
+
+## Exercise Set 1: GitHub Account and Repository Setup
+
+### Learning Goals
+- Create a GitHub account
+- Understand what repositories are
+- Fork repositories
+- Navigate GitHub's interface
+
+### 1.1 Create Your GitHub Account
+
+**Task:** 
+1. Go to [https://github.com](https://github.com)
+2. Click "Sign up"
+3. Choose a professional username (you'll use this for your career)
+4. Use your UWaterloo email if you're a student (you may get educational benefits)
+
+**Question to answer:** What username did you choose? Will it be appropriate to share with future employers or graduate programs?
+
+<details>
+<summary>Best practices</summary>
+
+Choose something professional:
+- ✅ Good: `jane-smith`, `j-smith-research`, `jasmith`
+- ❌ Avoid: `party-animal-2024`, `psycho-killer`, `coolguy123`
+
+Your GitHub profile is essentially your coding resume. Many employers and grad programs will look at it.
+</details>
+
+### 1.2 Understanding Repositories
+
+**Task:** Navigate to the course repository: [https://github.com/brittAnderson/uwlooP390](https://github.com/brittAnderson/uwlooP390)
+
+**Questions to answer:**
+1. What do you see in the file list?
+2. Can you find the README.md file? What does it contain?
+3. Look at the "commits" (click the clock icon with a number). What information does each commit show?
+
+<details>
+<summary>Expected observations</summary>
+
+A repository (or "repo") is a project folder tracked by git. It contains:
+- Files and directories (just like on your computer)
+- A complete history of all changes (commits)
+- Information about who made changes and when
+- README.md typically explains what the project is about
+
+Commits are snapshots of the project at different points in time. Each shows what changed, when, and who made the change.
+</details>
+
+### 1.3 Fork the Course Repository
+
+**Task:**
+1. While viewing [https://github.com/brittAnderson/uwlooP390](https://github.com/brittAnderson/uwlooP390)
+2. Click the "Fork" button in the upper right
+3. Click "Create fork"
+4. You should now see the repository under YOUR username: `https://github.com/YOUR-USERNAME/uwlooP390`
+
+**Question to answer:** What does "forking" do?
+
+<details>
+<summary>Expected outcome</summary>
+
+Forking creates your own personal copy of someone else's repository. You now have:
+- **Original repo** (mine): `brittAnderson/uwlooP390` (you can't change this)
+- **Your fork**: `YOUR-USERNAME/uwlooP390` (you can change this freely)
+
+Your fork is completely independent - you can experiment without affecting the original.
+</details>
+
+### 1.4 Fork the Practice Repository
+
+**Task:** Repeat the forking process for [https://github.com/brittAnderson/p390Practice](https://github.com/brittAnderson/p390Practice)
+
+**Question to answer:** How many repositories do you now have in your GitHub account?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should have at least 2 repositories:
+- `YOUR-USERNAME/uwlooP390` (forked from course repo)
+- `YOUR-USERNAME/p390Practice` (forked from practice repo)
+
+You can see all your repositories by clicking your profile icon → "Your repositories"
+</details>
+
+### 1.5 Explore Repository Features
+
+**Task:** In your forked `p390Practice` repository, explore these tabs:
+1. **Code** - the file browser
+2. **Issues** - where people report problems or ask questions
+3. **Pull requests** - where people submit changes
+4. **Insights** → **Network** - visualize the repository's history
+
+**Question to answer:** What do you see in the Network graph?
+
+<details>
+<summary>Expected observations</summary>
+
+The Network graph shows:
+- The original repository (mine)
+- All forks (including yours)
+- Branches and their relationships
+- The flow of commits over time
+
+This visualizes how code evolves and spreads through collaboration.
+</details>
+
+### 1.6 Take a Screenshot
+
+**Task:** 
+1. Navigate to your GitHub profile page (`https://github.com/YOUR-USERNAME`)
+2. Take a screenshot showing your account with both forked repositories visible
+3. Save it as `github_setup_complete.png`
+
+**Question to answer:** Can you see both `uwlooP390` and `p390Practice` in your repository list?
+
+<details>
+<summary>Why this matters</summary>
+
+This screenshot confirms you've completed the setup. In a course setting, you might submit this to show you're ready for collaborative work.
+
+This is also your first step toward building a professional portfolio. As you add projects, your GitHub profile becomes evidence of your skills.
+</details>
+
+---
+
+## Exercise Set 2: Git Installation and Configuration
+
+### Learning Goals
+- Install git on your computer
+- Configure your identity
+- Understand the relationship between git (local) and GitHub (remote)
+
+### 2.1 Check if Git is Installed
+
+**Task:** Open your terminal and type: `git --version`
+
+**Question to answer:** Do you see a version number (like "git version 2.x.x")?
+
+<details>
+<summary>Expected outcomes</summary>
+
+If you see a version number: Git is already installed! Skip to section 2.3.
+
+If you see "command not found": You need to install git (proceed to 2.2).
+</details>
+
+### 2.2 Install Git (if needed)
+
+**Mac users:**
+```bash
+# If you have Homebrew:
+brew install git
+
+# Or: Download from https://git-scm.com/download/mac
+```
+
+**Windows (WSL) users:**
+```bash
+sudo apt update
+sudo apt install git
+```
+
+**Question to answer:** After installation, does `git --version` work now?
+
+<details>
+<summary>Troubleshooting</summary>
+
+If installation fails:
+- Mac: You might need to install Xcode Command Line Tools first
+- WSL: Make sure you're running the commands in your WSL terminal, not PowerShell
+- Both: Try closing and reopening your terminal after installation
+</details>
+
+### 2.3 Configure Your Name
+
+**Task:** Type these commands, replacing with YOUR information:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@uwaterloo.ca"
+```
+
+**Question to answer:** Type `git config --global --list`. Do you see your name and email?
+
+<details>
+<summary>Why this matters</summary>
+
+Every change you make in git will be labeled with this name and email. This is how collaborators know who made each change.
+
+Use your real name (or professional pseudonym) and a real email - this information appears in the public commit history.
+
+The `--global` flag means this configuration applies to all your git projects.
+</details>
+
+### 2.4 Set Your Default Branch Name
+
+**Task:** 
+```bash
+git config --global init.defaultBranch main
+```
+
+**Question to answer:** Why "main" instead of other names?
+
+<details>
+<summary>Expected outcome</summary>
+
+"main" is the modern standard default branch name (replacing the older "master"). This ensures consistency with GitHub and current best practices.
+
+A branch is a line of development. We'll learn more about branches later.
+</details>
+
+### 2.5 Verify Your Configuration
+
+**Task:**
+```bash
+git config --global --list
+```
+
+**Question to answer:** Can you see all three settings (user.name, user.email, init.defaultBranch)?
+
+<details>
+<summary>Expected output</summary>
+
+You should see something like:
+```
+user.name=Jane Smith
+user.email=jane.smith@uwaterloo.ca
+init.defaultBranch=main
+```
+
+These are stored in a hidden file called `~/.gitconfig`. You can edit this file directly if needed.
+</details>
+
+---
+
+## Exercise Set 3: Cloning and Basic Git Operations
+
+### Learning Goals
+- Clone repositories from GitHub to your computer
+- Understand the relationship between local and remote
+- Make changes and track them with git
+
+### 3.1 Clone Your Practice Repository
+
+**Task:**
+1. Make sure you're in your home directory: `cd ~`
+2. Create a workspace: `mkdir git_workspace` and `cd git_workspace`
+3. Go to YOUR fork of p390Practice on GitHub
+4. Click the green "Code" button
+5. Copy the HTTPS URL (should be `https://github.com/YOUR-USERNAME/p390Practice.git`)
+6. In terminal: `git clone https://github.com/YOUR-USERNAME/p390Practice.git`
+7. Type `ls` to verify, then `cd p390Practice`
+
+**Question to answer:** What does cloning do? What's the difference between the repository on GitHub and what's now on your computer?
+
+<details>
+<summary>Expected outcome</summary>
+
+Cloning downloads a complete copy of the repository to your computer, including all history.
+
+You now have:
+- **Remote** (on GitHub): `github.com/YOUR-USERNAME/p390Practice`
+- **Local** (on your computer): `~/git_workspace/p390Practice`
+
+Changes you make locally don't automatically appear on GitHub - you have to explicitly push them.
+</details>
+
+### 3.2 Check Repository Status
+
+**Task:**
+```bash
+pwd  # Verify you're in ~/git_workspace/p390Practice
+git status
+```
+
+**Question to answer:** What does `git status` tell you?
+
+<details>
+<summary>Expected output</summary>
+
+You should see something like:
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+This means:
+- You're on the "main" branch
+- Your local copy matches what's on GitHub ("origin")
+- You haven't made any changes yet
+</details>
+
+### 3.3 Explore Remote Information
+
+**Task:**
+```bash
+git remote -v
+```
+
+**Question to answer:** What does "origin" refer to?
+
+<details>
+<summary>Expected output</summary>
+
+You should see:
+```
+origin  https://github.com/YOUR-USERNAME/p390Practice.git (fetch)
+origin  https://github.com/YOUR-USERNAME/p390Practice.git (push)
+```
+
+"origin" is the default name for the remote repository you cloned from. In this case, origin is YOUR fork on GitHub.
+
+We'll add a second remote (the original course repo) later.
+</details>
+
+### 3.4 View Repository Contents
+
+**Task:**
+```bash
+ls -la
+```
+
+**Question to answer:** Do you see a `.git` directory?
+
+<details>
+<summary>Expected observation</summary>
+
+The `.git` directory (hidden by default) contains all of git's tracking information - the entire history, all branches, configuration, etc.
+
+**NEVER manually edit or delete the `.git` directory!** This is where git stores everything.
+
+Everything else in the folder is your "working directory" - the actual files you edit.
+</details>
+
+### 3.5 Create a New File
+
+**Task:**
+```bash
+mkdir my_practice
+cd my_practice
+touch learning_notes.txt
+echo "Git is a version control system" > learning_notes.txt
+cat learning_notes.txt
+cd ..
+```
+
+**Question to answer:** Did git automatically track this new file?
+
+<details>
+<summary>Expected outcome</summary>
+
+No! Creating a file doesn't automatically add it to git. Type `git status` and you'll see it listed under "Untracked files".
+
+You have to explicitly tell git which files to track. This is a feature - it lets you have files in the directory that git ignores (like temporary files or local configurations).
+</details>
+
+### 3.6 Stage Your Changes (git add)
+
+**Task:**
+```bash
+git status  # See that the directory is untracked
+git add my_practice/learning_notes.txt
+git status  # See the change
+```
+
+**Question to answer:** What changed when you ran `git add`?
+
+<details>
+<summary>Expected outcome</summary>
+
+After `git add`, the file moves from "Untracked files" to "Changes to be committed" (shown in green).
+
+This is called "staging" - you're telling git "I want to include this change in my next commit."
+
+Think of staging as putting items in a shopping cart (you've selected them but haven't checked out yet).
+</details>
+
+### 3.7 Commit Your Changes
+
+**Task:**
+```bash
+git commit -m "Add my practice directory with learning notes"
+git status
+```
+
+**Question to answer:** What does committing do? What does the `-m` flag mean?
+
+<details>
+<summary>Expected outcome</summary>
+
+After committing, `git status` should show "nothing to commit, working tree clean".
+
+**Commit** = create a permanent snapshot of the staged changes.
+
+`-m` lets you write the commit message directly in the command. The message should describe what changed and why.
+
+Good commit messages:
+- ✅ "Add learning notes file with git definition"
+- ✅ "Fix typo in analysis script"
+- ❌ "updated stuff"
+- ❌ "asdf"
+</details>
+
+### 3.8 View Commit History
+
+**Task:**
+```bash
+git log
+```
+
+**Question to answer:** Can you find your commit? What information does each commit show?
+
+<details>
+<summary>Expected output</summary>
+
+Each commit shows:
+- **Commit hash**: unique identifier (long string of letters/numbers)
+- **Author**: name and email
+- **Date**: when the commit was made
+- **Message**: description of the change
+
+Press `q` to exit the log viewer.
+
+Try: `git log --oneline` for a compact view
+Try: `git log --graph --oneline --all` for a visual tree
+</details>
+
+### 3.9 Make More Changes
+
+**Task:**
+```bash
+echo "GitHub is a hosting service for git repositories" >> my_practice/learning_notes.txt
+cat my_practice/learning_notes.txt
+git status
+```
+
+**Question to answer:** What does `git status` show now?
+
+<details>
+<summary>Expected outcome</summary>
+
+Git detected that `learning_notes.txt` was modified. It shows under "Changes not staged for commit" (in red).
+
+The file is tracked, but the new changes aren't staged yet. You need to `git add` again to stage the new changes, even though the file is already tracked.
+</details>
+
+### 3.10 The Add-Commit Cycle
+
+**Task:**
+```bash
+git add my_practice/learning_notes.txt
+git commit -m "Add GitHub definition to learning notes"
+git log --oneline
+```
+
+**Question to answer:** How many commits do you have now?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see your two new commits plus any that existed before.
+
+This is the fundamental git workflow:
+1. Make changes to files
+2. `git add` to stage changes
+3. `git commit` to create snapshot
+4. Repeat
+
+Each commit is a save point you can return to later.
+</details>
+
+---
+
+## Exercise Set 4: Connecting to the Original Repository (Upstream)
+
+### Learning Goals
+- Understand the concept of multiple remotes
+- Add the original course repository as "upstream"
+- Pull changes from upstream
+- Keep your fork synchronized
+
+### 4.1 Check Current Remotes
+
+**Task:**
+```bash
+git remote -v
+```
+
+**Question to answer:** How many remotes do you have? What are they called?
+
+<details>
+<summary>Expected output</summary>
+
+Right now you should only see "origin" (your fork on GitHub).
+
+To collaborate effectively, we need to add a second remote: the original course repository (my repository that you forked from).
+</details>
+
+### 4.2 Add Upstream Remote
+
+**Task:**
+```bash
+git remote add upstream https://github.com/brittAnderson/p390Practice.git
+git remote -v
+```
+
+**Question to answer:** How many remotes do you have now?
+
+<details>
+<summary>Expected output</summary>
+
+You should now see:
+```
+origin    https://github.com/YOUR-USERNAME/p390Practice.git (fetch)
+origin    https://github.com/YOUR-USERNAME/p390Practice.git (push)
+upstream  https://github.com/brittAnderson/p390Practice.git (fetch)
+upstream  https://github.com/brittAnderson/p390Practice.git (push)
+```
+
+**origin** = your fork (you can push to this)
+**upstream** = original repo (you can only pull from this)
+
+This naming convention (origin/upstream) is standard in the git community.
+</details>
+
+### 4.3 Fetch from Upstream
+
+**Task:**
+```bash
+git fetch upstream
+```
+
+**Question to answer:** What does "fetch" do? Did it change any of your files?
+
+<details>
+<summary>Expected outcome</summary>
+
+Fetch downloads commits from the remote but DOESN'T change your working files.
+
+Think of it as: "Download new information but don't apply it yet."
+
+After fetching, git knows what's new in the upstream repo, but your files remain unchanged until you merge.
+</details>
+
+### 4.4 View All Branches
+
+**Task:**
+```bash
+git branch -a
+```
+
+**Question to answer:** What branches do you see?
+
+<details>
+<summary>Expected output</summary>
+
+You might see:
+- `* main` (your current local branch, marked with *)
+- `remotes/origin/main` (the main branch on your fork)
+- `remotes/upstream/main` (the main branch on the original repo)
+
+Branches with `remotes/` are references to branches on GitHub, not local branches.
+</details>
+
+### 4.5 Pull from Upstream
+
+**Task:**
+```bash
+git pull upstream main
+```
+
+**Question to answer:** What happened? Did you see "Already up to date" or were changes merged?
+
+<details>
+<summary>Expected outcome</summary>
+
+`git pull` = `git fetch` + `git merge`
+
+If the upstream repo has new commits, they're merged into your local branch.
+If there are no new commits, you see "Already up to date."
+
+This is how you keep your fork synchronized with the original repository. You'll do this regularly to get new assignments, fixes, and updates.
+</details>
+
+### 4.6 Push Changes to Your Fork
+
+**Task:**
+```bash
+git push origin main
+```
+
+**Question to answer:** What does this command do?
+
+<details>
+<summary>Expected outcome</summary>
+
+This pushes your local commits to YOUR fork on GitHub (origin).
+
+The flow is:
+1. Pull from upstream (get professor's updates)
+2. Work locally (make your changes)
+3. Push to origin (your fork)
+
+Check your fork on GitHub in a browser - you should now see your new commits there!
+</details>
+
+### 4.7 Verify on GitHub
+
+**Task:**
+1. Go to your fork: `https://github.com/YOUR-USERNAME/p390Practice`
+2. Navigate to `my_practice/learning_notes.txt`
+3. Click on the file to view it
+
+**Question to answer:** Do you see your changes on GitHub?
+
+<details>
+<summary>Expected outcome</summary>
+
+The file should contain both lines you added. The GitHub interface shows:
+- The file contents
+- When it was last modified
+- The commit message
+- Who made the change
+
+If you don't see your changes, make sure you ran `git push origin main` successfully.
+</details>
+
+### 4.8 Understanding the Three-Repository Model
+
+**Task:** Draw or describe the relationship between these three locations:
+1. Your local repository (on your computer)
+2. Your fork (origin, on GitHub)
+3. The original repository (upstream, on GitHub)
+
+**Question to answer:** Where can you make changes? Where can you only read?
+
+<details>
+<summary>The model</summary>
+
+```
+Upstream (brittAnderson/p390Practice)
+    ↓ fork (one time)
+    ↓ pull (regular updates)
+    ↓
+Origin (YOUR-USERNAME/p390Practice) on GitHub
+    ↕ push/pull
+    ↕
+Local (your computer)
+```
+
+You can:
+- **Change freely**: Local repository
+- **Push changes to**: Origin (your fork)
+- **Pull from but not push to**: Upstream (original repo)
+
+To contribute to upstream, you create a pull request (coming in Exercise Set 6).
+</details>
+
+---
+
+## Exercise Set 5: Working in the gitnames Directory
+
+### Learning Goals
+- Practice the complete workflow
+- Create files in the correct location
+- Prepare for submitting a pull request
+
+### 5.1 Ensure You Have Latest Changes
+
+**Task:**
+```bash
+cd ~/git_workspace/p390Practice
+git pull upstream main
+git push origin main
+```
+
+**Question to answer:** Why do we pull from upstream before starting work?
+
+<details>
+<summary>Expected outcome</summary>
+
+This ensures you have the latest changes from the original repo, including any files other students have added.
+
+This prevents conflicts and ensures you're working with the most up-to-date version.
+
+Always start your work session with this pull-merge-push sequence.
+</details>
+
+### 5.2 Navigate to gitnames Directory
+
+**Task:**
+```bash
+ls
+cd gitnames
+ls
+```
+
+**Question to answer:** Do you see files from other students?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see `.txt` files named after other students (if any have submitted their pull requests yet).
+
+This directory is where everyone adds their file - it's a shared space for practicing collaboration.
+</details>
+
+### 5.3 Create Your File
+
+**Task:** Create a file with your first name (replace YOURNAME):
+
+```bash
+touch YOURNAME.txt
+echo "I am learning git and GitHub for Psychology 390" > YOURNAME.txt
+echo "Git helps me track changes and collaborate effectively" >> YOURNAME.txt
+cat YOURNAME.txt
+```
+
+**Question to answer:** Does the file exist? What does it contain?
+
+<details>
+<summary>Expected outcome</summary>
+
+You created a personalized file in the gitnames directory.
+
+Example: If your name is Alex, you'd create `alex.txt`.
+
+This file will eventually be added to the original repository through a pull request - your first contribution to a collaborative project!
+</details>
+
+### 5.4 Check Status
+
+**Task:**
+```bash
+git status
+```
+
+**Question to answer:** Where is your new file listed?
+
+<details>
+<summary>Expected output</summary>
+
+Your file should appear under "Untracked files" in red.
+
+Git sees the file but isn't tracking it yet - you need to explicitly add it.
+</details>
+
+### 5.5 Stage Your File
+
+**Task:**
+```bash
+git add gitnames/YOURNAME.txt
+git status
+```
+
+**Question to answer:** What changed?
+
+<details>
+<summary>Expected outcome</summary>
+
+The file moved from "Untracked files" to "Changes to be committed" (shown in green).
+
+It's now staged and ready to commit.
+</details>
+
+### 5.6 Commit Your Change
+
+**Task:**
+```bash
+git commit -m "Add [YOURNAME] to gitnames directory"
+```
+
+Replace [YOURNAME] with your actual name.
+
+**Question to answer:** Why is a good commit message important?
+
+<details>
+<summary>Expected outcome</summary>
+
+Good commit messages:
+- Explain WHAT changed
+- Sometimes explain WHY (if not obvious)
+- Use present tense: "Add file" not "Added file"
+- Are specific: "Add alex.txt to gitnames" not "updated stuff"
+
+When collaborating, clear commit messages help others understand the project's history.
+</details>
+
+### 5.7 Check Log
+
+**Task:**
+```bash
+git log --oneline -5
+```
+
+**Question to answer:** Can you see your commit?
+
+<details>
+<summary>Expected output</summary>
+
+Your commit should be at the top of the list (most recent).
+
+The `-5` flag shows only the last 5 commits for brevity.
+</details>
+
+### 5.8 Push to Your Fork
+
+**Task:**
+```bash
+git push origin main
+```
+
+**Question to answer:** Where did this change go?
+
+<details>
+<summary>Expected outcome</summary>
+
+Your commit is now on YOUR fork on GitHub (origin), but NOT yet on the original repository (upstream).
+
+To get it into the upstream repo, you need to create a pull request (next exercise set).
+
+Verify on GitHub: Go to `github.com/YOUR-USERNAME/p390Practice` and look in the gitnames directory.
+</details>
+
+### 5.9 Verify on GitHub
+
+**Task:**
+1. Open your fork in a browser: `https://github.com/YOUR-USERNAME/p390Practice`
+2. Navigate to the gitnames directory
+3. Find your file
+
+**Question to answer:** Is your file visible on GitHub?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see your file in the directory listing. If you click on it, you'll see its contents and the commit message.
+
+If you don't see it, verify you successfully completed the push in 5.8.
+</details>
+
+### 5.10 Compare with Original
+
+**Task:**
+1. Open the original repo: `https://github.com/brittAnderson/p390Practice`
+2. Navigate to gitnames
+3. Look for your file
+
+**Question to answer:** Is your file there?
+
+<details>
+<summary>Expected outcome</summary>
+
+Your file is NOT in the original repository yet!
+
+Your changes are:
+- ✅ On your local computer
+- ✅ On your fork (origin)
+- ❌ NOT on the original repo (upstream)
+
+The original repository is protected - you can't directly push to it. Instead, you request that the maintainer (me) pull your changes. That's called a "pull request."
+</details>
+
+---
+
+## Exercise Set 6: Creating a Pull Request
+
+### Learning Goals
+- Understand what pull requests are
+- Create a pull request on GitHub
+- Navigate the pull request workflow
+
+### 6.1 Navigate to Your Fork
+
+**Task:** Go to your fork on GitHub: `https://github.com/YOUR-USERNAME/p390Practice`
+
+**Question to answer:** Do you see a yellow banner saying "This branch is X commits ahead of brittAnderson:main"?
+
+<details>
+<summary>Expected observation</summary>
+
+If you see this banner, it means your fork has commits that aren't in the original repository.
+
+This confirms you have changes ready to submit via pull request.
+
+If you don't see this, make sure you pushed your changes in the previous exercise set.
+</details>
+
+### 6.2 Initiate Pull Request
+
+**Task:**
+1. Click "Contribute" (green button)
+2. Click "Open pull request"
+3. You'll be taken to the original repository with a comparison view
+
+**Question to answer:** What two branches are being compared?
+
+<details>
+<summary>Expected view</summary>
+
+You should see:
+- **Base repository**: `brittAnderson/p390Practice` base: `main`
+- **Head repository**: `YOUR-USERNAME/p390Practice` compare: `main`
+
+This means: "I want to merge changes from MY main branch into the ORIGINAL main branch"
+
+Below this, you'll see a list of commits and file changes - everything you're proposing to add.
+</details>
+
+### 6.3 Write Pull Request Description
+
+**Task:**
+1. Title: "Add [YOURNAME] to gitnames directory"
+2. Description: Write a brief message explaining your change. For example:
+```
+This pull request adds my name file to the gitnames directory as requested in Exercise Set 5.
+
+- Created YOURNAME.txt with learning reflections
+- Following P390 course requirements
+```
+
+**Question to answer:** Why is a clear description helpful?
+
+<details>
+<summary>Best practices</summary>
+
+Pull request descriptions should:
+- Summarize what changed and why
+- Reference any relevant issues or requirements
+- Explain anything non-obvious
+- Be polite and professional
+
+The repository maintainer (me) will read this to understand your contribution before merging.
+
+Think of pull requests as formal requests to add your work to a project.
+</details>
+
+### 6.4 Create the Pull Request
+
+**Task:**
+1. Review your changes in the "Files changed" tab
+2. Click "Create pull request"
+3. Note the pull request number (e.g., #42)
+
+**Question to answer:** What number is your pull request?
+
+<details>
+<summary>Expected outcome</summary>
+
+You've created your first pull request! 
+
+The PR now appears in the original repository's pull request list. The maintainer (me) can:
+- Review your changes
+- Leave comments
+- Request modifications
+- Merge (accept) your changes
+- Close without merging (reject)
+
+Your changes are still only in your fork until the PR is merged.
+</details>
+
+### 6.5 View Your Pull Request
+
+**Task:**
+1. Go to `https://github.com/brittAnderson/p390Practice/pulls`
+2. Find your pull request in the list
+3. Click on it to see details
+
+**Question to answer:** What information is displayed on the pull request page?
+
+<details>
+<summary>Expected view</summary>
+
+You should see:
+- Title and description
+- Status (Open/Merged/Closed)
+- Commits included
+- Files changed
+- Discussion/comments
+- Checks (automated tests, if configured)
+
+This is the collaboration interface where you and the maintainer can discuss the changes.
+</details>
+
+### 6.6 Understanding Pull Request Status
+
+**Task:** Check your pull request status. It will be one of:
+- **Open** (pending review)
+- **Merged** (accepted and integrated)
+- **Closed** (not accepted)
+
+**Question to answer:** What's the current status of your PR?
+
+<details>
+<summary>What happens next</summary>
+
+The repository maintainer will:
+1. Review your changes
+2. May leave comments or request changes
+3. Will eventually merge (accept) or close (reject)
+
+When merged, your changes become part of the original repository!
+
+You'll get email notifications about any activity on your PR.
+</details>
+
+### 6.7 After PR is Merged
+
+**Task:** Once your PR is merged (you'll get a notification), update your local repository:
+
+```bash
+cd ~/git_workspace/p390Practice
+git pull upstream main
+git push origin main
+```
+
+**Question to answer:** What does this accomplish?
+
+<details>
+<summary>Expected outcome</summary>
+
+This synchronizes everything:
+1. `git pull upstream main` - downloads the merged changes from the original repo (which now includes your contribution AND contributions from other students)
+2. `git push origin main` - updates your fork to match
+
+Now all three locations (local, origin, upstream) have the same code.
+</details>
+
+### 6.8 See Everyone's Contributions
+
+**Task:**
+```bash
+cd ~/git_workspace/p390Practice/gitnames
+ls
+```
+
+**Question to answer:** How many files are there now?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see files from multiple students - everyone who has had their pull request merged.
+
+This is collaborative version control in action! Everyone contributed their file, and git managed merging all changes together.
+
+If there were any conflicts (two people editing the same line), the maintainer would have resolved them during the merge.
+</details>
+
+### 6.9 View Merged Commit
+
+**Task:**
+```bash
+git log --oneline --all --graph
+```
+
+**Question to answer:** Can you identify the merge commit that brought your changes into the original repository?
+
+<details>
+<summary>Expected output</summary>
+
+You should see a graph showing:
+- Your commits
+- Other students' commits  
+- Merge commits (where pull requests were merged)
+
+The graph visualizes the project's collaborative history.
+
+Press `q` to exit.
+</details>
+
+### 6.10 Reflection
+
+**Task:** Answer these questions in your own words:
+
+1. What is the purpose of a pull request?
+2. Why can't you push directly to the original repository?
+3. What's the difference between committing and pushing?
+4. When should you pull from upstream?
+
+<details>
+<summary>Sample answers</summary>
+
+1. Pull requests let you propose changes to a repository you don't own. The maintainer reviews and decides whether to accept them.
+
+2. The original repository is protected to prevent accidental or malicious changes. Only the owner can directly modify it.
+
+3. Committing saves changes locally (on your computer). Pushing sends those commits to GitHub (your fork).
+
+4. Pull from upstream before starting new work, to ensure you have the latest changes from the original repository.
+</details>
+
+---
+
+## Exercise Set 7: Opening an Issue
+
+### Learning Goals
+- Understand what issues are used for
+- Create an issue on GitHub
+- Practice professional technical communication
+
+### 7.1 Understanding Issues
+
+**Task:** Go to `https://github.com/brittAnderson/uwlooP390/issues`
+
+**Question to answer:** What kinds of things do you see reported in the issues?
+
+<details>
+<summary>Expected observations</summary>
+
+Issues are used for:
+- Bug reports ("The install instructions don't work on Mac")
+- Feature requests ("Could we add examples for SPSS users?")
+- Questions ("How do I set up RStudio?")
+- Documentation problems ("The README is unclear about X")
+- Discussions about the project
+
+Issues are NOT for:
+- General chat
+- Personal technical support unrelated to the project
+- Spam
+
+Think of issues as a project's to-do list and discussion forum combined.
+</details>
+
+### 7.2 Navigate to Practice Repository Issues
+
+**Task:** Go to `https://github.com/brittAnderson/p390Practice/issues`
+
+**Question to answer:** Are there any open issues? What are they about?
+
+<details>
+<summary>Expected view</summary>
+
+You might see:
+- Issues from other students
+- My responses to issues
+- Closed issues (resolved problems)
+
+This is where the class can ask questions and report problems.
+</details>
+
+### 7.3 Create an Issue
+
+**Task:**
+1. Click "New issue"
+2. Title: "Practice issue from [YOUR NAME]"
+3. Description: Write a brief message. For example:
+```
+This is a practice issue to demonstrate understanding of GitHub's issue system.
+
+I have successfully:
+- Created a GitHub account
+- Forked the practice repository
+- Created a pull request
+- Opened this issue
+
+This issue can be closed after verification.
+```
+4. Click "Submit new issue"
+
+**Question to answer:** What number is your issue?
+
+<details>
+<summary>Expected outcome</summary>
+
+Your issue now appears in the issue list. Note the issue number (e.g., #15).
+
+Issues are numbered sequentially across the repository. Your pull request and issues share the same numbering system.
+</details>
+
+### 7.4 Record Your Issue Number
+
+**Task:** In a text file on your computer, record:
+- Your GitHub username
+- Your pull request number
+- Your issue number
+
+Save this as `github_completion.txt`
+
+**Question to answer:** Why might this information be important?
+
+<details>
+<summary>Expected outcome</summary>
+
+In a course setting, this information helps the instructor:
+- Match GitHub activity to students
+- Verify that you completed the exercises
+- Track contributions
+
+In real projects, you'd reference issue numbers in commits and pull requests to link related work.
+</details>
+
+### 7.5 Use Issues Constructively
+
+**Task:** Read through some issues on the course repository: `https://github.com/brittAnderson/uwlooP390/issues`
+
+**Question to answer:** What makes a good issue report?
+
+<details>
+<summary>Best practices</summary>
+
+Good issues:
+- Have clear, descriptive titles
+- Explain the problem or request completely
+- Include steps to reproduce (for bugs)
+- Are respectful and professional
+- Stay on topic
+
+Bad issues:
+- "It doesn't work" (too vague)
+- Off-topic or spam
+- Rude or demanding
+- Duplicate existing issues
+
+Before creating an issue, search to see if someone else already reported the same problem.
+</details>
+
+### 7.6 Comment on an Issue
+
+**Task:** Find any open issue (yours or someone else's) and add a comment:
+- If it's your issue: Add "Issue number recorded for course requirements"
+- If it's someone else's: Add a helpful observation or supportive comment
+
+**Question to answer:** How does commenting help collaboration?
+
+<details>
+<summary>Expected outcome</summary>
+
+Comments on issues allow:
+- Discussion of solutions
+- Requests for clarification
+- Sharing of workarounds
+- Building on others' ideas
+- Keeping everyone informed
+
+Issues become threaded conversations that document how problems were solved.
+</details>
+
+### 7.7 Understand Issue Labels
+
+**Task:** Look at issues on the main course repo and note any labels (like "bug", "question", "enhancement")
+
+**Question to answer:** How do labels help organize issues?
+
+<details>
+<summary>Expected observation</summary>
+
+Labels categorize issues:
+- **bug**: Something isn't working
+- **enhancement**: Feature request
+- **question**: Need help or clarification
+- **documentation**: Docs need improvement
+- **good first issue**: Beginner-friendly
+
+Labels help people find relevant issues and prioritize work.
+
+Repository maintainers assign labels, though some repos let contributors suggest them.
+</details>
+
+### 7.8 Close Your Practice Issue
+
+**Task:** 
+1. Go to your practice issue
+2. Add a comment: "Exercise completed, closing issue"
+3. Click "Close issue"
+
+**Question to answer:** What happens to closed issues?
+
+<details>
+<summary>Expected outcome</summary>
+
+Closed issues:
+- Are marked as resolved
+- Remain visible in the issue list (with "Closed" filter)
+- Can be reopened if needed
+- Are searchable forever
+
+Closing doesn't delete - it just marks as done. The conversation history is preserved for future reference.
+</details>
+
+### 7.9 Using Issues for Learning
+
+**Task:** Think about situations where you might open a real issue on the uwlooP390 repository.
+
+**Question to answer:** What kinds of problems or questions would be appropriate to report as issues?
+
+<details>
+<summary>Appropriate uses</summary>
+
+Good reasons to open an issue:
+- Assignment instructions are unclear
+- You found a typo in course materials
+- Installation instructions don't work
+- You have a suggestion for improvement
+- You need clarification on requirements
+
+The issue tracker is a resource for all students - if you're confused, others probably are too!
+</details>
+
+### 7.10 Reflection on Collaborative Features
+
+**Task:** Think about how pull requests and issues work together.
+
+**Question to answer:** How do pull requests and issues relate? How might you reference an issue in a pull request?
+
+<details>
+<summary>The connection</summary>
+
+Pull requests and issues work together:
+- Issues identify problems
+- Pull requests propose solutions
+
+You can reference issues in PR descriptions:
+- "Fixes #23" - automatically closes issue #23 when PR is merged
+- "Relates to #15" - links to issue without closing it
+
+This creates a traceable history: from problem identification (issue) to solution (PR) to implementation (merge).
+</details>
+
+---
+
+## Exercise Set 8: Real-World Workflow Practice
+
+### Learning Goals
+- Practice the complete git workflow
+- Handle merge conflicts
+- Develop good habits
+
+### 8.1 Create a Work Branch (Optional Advanced)
+
+**Task:**
+```bash
+cd ~/git_workspace/p390Practice
+git checkout -b my-experiments
+```
+
+**Question to answer:** What did this do?
+
+<details>
+<summary>Expected outcome</summary>
+
+You created and switched to a new branch called "my-experiments".
+
+Branches let you work on different things independently:
+- `main` branch: stable, synchronized code
+- `my-experiments` branch: where you try new things
+
+This is optional but common in professional workflows. Changes on this branch don't affect main until you explicitly merge them.
+</details>
+
+### 8.2 Practice Making Changes
+
+**Task:** Create a practice file:
+```bash
+mkdir experiments
+echo "Experiment 1: Testing git workflow" > experiments/notes.txt
+git add experiments/notes.txt
+git commit -m "Add experiment notes"
+```
+
+**Question to answer:** Is this change on your main branch?
+
+<details>
+<summary>Expected outcome</summary>
+
+No! This commit is only on the `my-experiments` branch.
+
+Type `git checkout main` to switch back to main, then `ls` - the experiments directory isn't there.
+
+Type `git checkout my-experiments` and `ls` again - now it appears.
+
+Branches are independent lines of development.
+</details>
+
+### 8.3 Merge Branch into Main (Optional Advanced)
+
+**Task:**
+```bash
+git checkout main
+git merge my-experiments
+ls
+```
+
+**Question to answer:** Is the experiments directory now in main?
+
+<details>
+<summary>Expected outcome</summary>
+
+Yes! Merging brought the changes from `my-experiments` into `main`.
+
+This is how you incorporate experimental work into the main codebase once you're satisfied with it.
+
+Delete the branch if done: `git branch -d my-experiments`
+</details>
+
+### 8.4 Simulate Regular Workflow
+
+**Task:** Practice this sequence (which you'll do often):
+
+```bash
+# Start of work session
+git pull upstream main  # Get latest from course repo
+git push origin main    # Update your fork
+
+# Do your work
+echo "New learning point" >> my_practice/learning_notes.txt
+git add my_practice/learning_notes.txt
+git commit -m "Add new learning point"
+
+# End of work session
+git push origin main    # Save your work to GitHub
+```
+
+**Question to answer:** Why is this sequence important?
+
+<details>
+<summary>Expected outcome</summary>
+
+This workflow ensures:
+1. You always have the latest changes
+2. Your work is backed up on GitHub
+3. You can collaborate without conflicts
+
+Make this a habit:
+- Start each session: pull upstream, push to origin
+- Work locally: add, commit frequently
+- End each session: push to origin
+</details>
+
+### 8.5 Understanding Merge Conflicts
+
+**Task:** Read about merge conflicts (you don't need to create one now):
+
+A merge conflict happens when:
+- Two people edit the same line of the same file
+- Git can't automatically determine which version to keep
+
+**Question to answer:** How would you avoid conflicts in collaborative work?
+
+<details>
+<summary>Prevention strategies</summary>
+
+To minimize conflicts:
+- Pull from upstream frequently
+- Communicate with collaborators about what you're working on
+- Commit and push regularly
+- Work on different files when possible
+- If you must edit the same file, work on different sections
+
+When conflicts do occur, git marks them in the file and you manually choose which version to keep.
+</details>
+
+### 8.6 Check Remote Relationship
+
+**Task:**
+```bash
+git remote -v
+git branch -vv
+```
+
+**Question to answer:** What does `-vv` show you?
+
+<details>
+<summary>Expected output</summary>
+
+`git branch -vv` shows:
+- Which branch you're on
+- The last commit
+- Which remote branch it tracks
+
+Example:
+```
+* main abc1234 [origin/main] Latest commit message
+```
+
+This confirms your local main tracks origin/main (your fork's main branch).
+</details>
+
+### 8.7 Practice git status Awareness
+
+**Task:** Make it a habit to run `git status` frequently while working.
+
+**Question to answer:** What are the possible states you might see?
+
+<details>
+<summary>Common states</summary>
+
+- **Clean working tree**: No changes since last commit
+- **Untracked files**: New files git isn't tracking (red)
+- **Changes not staged**: Modified tracked files, not added (red)
+- **Changes to be committed**: Staged files, ready to commit (green)
+- **Branch ahead/behind**: Local differs from remote
+
+`git status` is your most important diagnostic command. Use it constantly!
+</details>
+
+### 8.8 View What Changed
+
+**Task:**
+```bash
+echo "Another line" >> my_practice/learning_notes.txt
+git diff my_practice/learning_notes.txt
+```
+
+**Question to answer:** What does `git diff` show?
+
+<details>
+<summary>Expected output</summary>
+
+`git diff` shows exactly what changed:
+- Lines removed (preceded by `-`, shown in red)
+- Lines added (preceded by `+`, shown in green)
+- Context lines (unchanged)
+
+This lets you review changes before committing.
+
+Use:
+- `git diff` - unstaged changes
+- `git diff --staged` - staged changes
+- `git diff HEAD` - all changes since last commit
+</details>
+
+### 8.9 Undo Mistakes Safely
+
+**Task:** Learn these safety commands (don't run them unless needed):
+
+**Discard unstaged changes to a file:**
+```bash
+git checkout -- filename
+```
+
+**Unstage a file (keep the changes):**
+```bash
+git reset HEAD filename
+```
+
+**Amend the last commit (before pushing):**
+```bash
+git commit --amend -m "New message"
+```
+
+**Question to answer:** Why is it important to know how to undo changes?
+
+<details>
+<summary>Safety knowledge</summary>
+
+Everyone makes mistakes:
+- You edit the wrong file
+- You commit with a bad message
+- You stage files you didn't mean to
+
+Knowing how to safely undo changes prevents panic and destructive solutions (like deleting the repository and starting over).
+
+**IMPORTANT**: These undo commands are safe BEFORE pushing. After pushing, you need different approaches.
+</details>
+
+### 8.10 Final Workflow Check
+
+**Task:** Verify your complete understanding by describing each step:
+
+1. How do you get changes from the original course repo?
+2. How do you save your work locally?
+3. How do you back up your work to GitHub?
+4. How do you propose changes to the original repo?
+5. How do you report problems or ask questions?
+
+<details>
+<summary>Complete workflow summary</summary>
+
+1. **Get updates**: `git pull upstream main`
+2. **Save locally**: `git add files`, then `git commit -m "message"`
+3. **Back up**: `git push origin main`
+4. **Propose changes**: Create a pull request on GitHub
+5. **Report problems**: Open an issue on GitHub
+
+Additional commands you've learned:
+- `git status` - check what's changed
+- `git log` - view history
+- `git diff` - see specific changes
+- `git remote -v` - check remotes
+- `git branch` - manage branches
+
+This is professional version control!
+</details>
+
+---
+
+## Self-Assessment Checklist
+
+After completing these exercises, you should be able to:
+
+**Basic Operations:**
+- [ ] Create and configure a GitHub account
+- [ ] Fork repositories
+- [ ] Clone repositories to your computer
+- [ ] Check repository status (`git status`)
+- [ ] View commit history (`git log`)
+
+**Making Changes:**
+- [ ] Create and edit files
+- [ ] Stage changes (`git add`)
+- [ ] Commit changes with good messages (`git commit`)
+- [ ] Push changes to your fork (`git push`)
+
+**Collaboration:**
+- [ ] Add upstream remote
+- [ ] Pull from upstream (`git pull upstream main`)
+- [ ] Keep fork synchronized
+- [ ] Create pull requests
+- [ ] Open and comment on issues
+
+**Understanding:**
+- [ ] Explain the difference between local, origin, and upstream
+- [ ] Describe the purpose of committing, pushing, and pulling
+- [ ] Understand why pull requests are necessary
+- [ ] Know when to use issues vs pull requests
+
+---
+
+## Common Pitfalls and Solutions
+
+### "Permission denied" when pushing
+**Problem**: Trying to push to upstream instead of origin
+**Solution**: Always `git push origin main`, never push to upstream
+
+### "Please commit your changes or stash them"
+**Problem**: Trying to pull/checkout with uncommitted changes
+**Solution**: Either commit your changes first, or use `git stash` to temporarily save them
+
+### "Your branch is behind origin/main"
+**Problem**: Someone else pushed to your fork (or you pushed from another computer)
+**Solution**: `git pull origin main` to get those changes
+
+### Can't see your pushed changes on GitHub
+**Problem**: You committed but didn't push
+**Solution**: Run `git push origin main`
+
+### Accidentally edited files in the original repo
+**Problem**: Cloned upstream instead of your fork
+**Solution**: Clone from YOUR fork, then add upstream as a second remote
+
+### "Merge conflict"
+**Problem**: Same file edited in two places
+**Solution**: Edit the file to resolve conflicts (git marks them with `<<<<<<<`), then add and commit
+
+---
+
+## Git Commands Quick Reference
+
+### Setup
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+```
+
+### Daily Workflow
+```bash
+git status              # Check what's changed
+git pull upstream main  # Get latest from course repo
+git add filename        # Stage a file
+git commit -m "msg"     # Save changes locally
+git push origin main    # Upload to your fork
+git log --oneline       # View history
+```
+
+### Repository Management
+```bash
+git clone url           # Download a repository
+git remote -v           # List remotes
+git remote add name url # Add a remote
+git branch              # List branches
+git diff                # See unstaged changes
+```
+
+### Collaboration
+- **Pull Request**: On GitHub, after pushing to your fork
+- **Issues**: On GitHub, click "Issues" → "New issue"
+
+---
+
+## Getting Help
+
+### In the Terminal
+```bash
+git help <command>      # Full manual
+git <command> --help    # Same as above
+git <command> -h        # Brief help
+```
+
+### Online Resources
+- [GitHub Documentation](https://docs.github.com)
+- [Git Documentation](https://git-scm.com/doc)
+- [GitHub Skills](https://skills.github.com/) - Interactive tutorials
+- Course repository issues: `https://github.com/brittAnderson/uwlooP390/issues`
+
+### Best Practices
+- Commit often (every logical unit of work)
+- Write clear commit messages
+- Pull before starting work
+- Push at the end of every session
+- Use issues to ask for help
+
+---
+
+## Next Steps
+
+Once comfortable with these basics:
+1. Learn about branches and branching workflows
+2. Explore `.gitignore` files for managing which files git tracks
+3. Learn about git tags for marking versions
+4. Explore GitHub Actions for automation
+5. Practice reviewing pull requests
+6. Learn about rebasing (advanced)
+
+---
+
+## Troubleshooting
+
+### Terminal Not Responding
+- Press `Ctrl+c` to cancel current command
+- Press `q` to quit log/diff viewers
+- Close and reopen terminal if stuck
+
+### Need to Start Over?
+```bash
+# Delete local repository
+cd ~/git_workspace
+rm -rf p390Practice
+
+# Clone again
+git clone https://github.com/YOUR-USERNAME/p390Practice.git
+cd p390Practice
+git remote add upstream https://github.com/brittAnderson/p390Practice.git
+```
+
+### Completely Lost?
+1. Save any files you care about outside the repository
+2. Delete the repository folder
+3. Start fresh with cloning
+4. Ask for help via issues on the course repo
+
+---
+
+**Remember**: Git has a learning curve, but it's the industry standard for a reason. Every professional programmer uses it. These skills are directly transferable to:
+- Research collaborations
+- Graduate work
+- Industry positions
+- Open source contributions
+- Personal projects
+
+You're building valuable, marketable skills!
+
+---
+
+**License**: This document is released under CC BY 4.0. Adapted for Psychology 390, University of Waterloo.

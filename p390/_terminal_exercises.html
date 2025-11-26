@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>terminal_exercises</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="_terminal_exercises_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_terminal_exercises_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="_terminal_exercises_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="_terminal_exercises_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="_terminal_exercises_files/libs/quarto-html/popper.min.js"></script>
+<script src="_terminal_exercises_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_terminal_exercises_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_terminal_exercises_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_terminal_exercises_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_terminal_exercises_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_terminal_exercises_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_terminal_exercises_files/libs/bootstrap/bootstrap-95ae828e8be5b013c170b8db8ffb7fb2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="terminal-self-learning-exercises-for-psychology-students" class="level2">
+<h2 class="anchored" data-anchor-id="terminal-self-learning-exercises-for-psychology-students">Terminal Self-Learning Exercises for Psychology Students</h2>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
+<ul>
+<li>You have located your terminal application (Terminal on Mac, WSL terminal on Windows)</li>
+<li>You can open it successfully</li>
+</ul>
+</section>
+<section id="note-on-command-compatibility" class="level3">
+<h3 class="anchored" data-anchor-id="note-on-command-compatibility">Note on Command Compatibility</h3>
+<p>These exercises work in both bash (WSL/Linux) and zsh (Mac). The commands are identical between these shells.</p>
+<hr>
+</section>
+<section id="exercise-set-1-orientation-and-basic-navigation" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-set-1-orientation-and-basic-navigation">Exercise Set 1: Orientation and Basic Navigation</h3>
+<section id="learning-goals" class="level4">
+<h4 class="anchored" data-anchor-id="learning-goals">Learning Goals</h4>
+<ul>
+<li>Understand what the prompt means</li>
+<li>Know where you are in the file system</li>
+<li>Navigate between directories</li>
+</ul>
+</section>
+<section id="where-am-i" class="level4">
+<h4 class="anchored" data-anchor-id="where-am-i">1.1 Where Am I?</h4>
+<p>Open your terminal. You’ll see a prompt (something like <code>user@computer:~$</code> or <code>computer-name:~ user$</code>).</p>
+<p><strong>Task:</strong> Type <code>pwd</code> and press Enter.</p>
+<p><strong>Question to answer:</strong> What does <code>pwd</code> stand for? What information does it give you?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You should see a path like <code>/home/username</code> (Linux/WSL) or <code>/Users/username</code> (Mac). This is your “home directory” - your starting location.</p>
+<code>pwd</code> = “print working directory”
+</details>
+</section>
+<section id="whats-here" class="level4">
+<h4 class="anchored" data-anchor-id="whats-here">1.2 What’s Here?</h4>
+<p><strong>Task:</strong> Type <code>ls</code> and press Enter.</p>
+<p><strong>Question to answer:</strong> What does this command show you?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You see a list of files and folders in your current directory. Common ones might include Documents, Downloads, Desktop.</p>
+<code>ls</code> = “list”
+</details>
+</section>
+<section id="more-details" class="level4">
+<h4 class="anchored" data-anchor-id="more-details">1.3 More Details</h4>
+<p><strong>Task:</strong> Type <code>ls -l</code> and press Enter.</p>
+<p><strong>Question to answer:</strong> How is the output different from plain <code>ls</code>? What additional information do you see?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You see the same files but with permissions, owner, size, and modification date. The <code>-l</code> is called a “flag” or “option” that modifies command behavior.
+</details>
+</section>
+<section id="including-hidden-files" class="level4">
+<h4 class="anchored" data-anchor-id="including-hidden-files">1.4 Including Hidden Files</h4>
+<p><strong>Task:</strong> Type <code>ls -la</code> and press Enter.</p>
+<p><strong>Question to answer:</strong> Do you see any files starting with <code>.</code> (period)? What do you think these are?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+Files starting with <code>.</code> are hidden by default. They’re often configuration files like <code>.bashrc</code> or <code>.zshrc</code>.
+</details>
+</section>
+<section id="moving-around" class="level4">
+<h4 class="anchored" data-anchor-id="moving-around">1.5 Moving Around</h4>
+<p><strong>Task:</strong> 1. Type <code>cd Documents</code> and press Enter 2. Type <code>pwd</code> to see where you are now 3. Type <code>ls</code> to see what’s in Documents</p>
+<p><strong>Question to answer:</strong> Did your prompt change? How can you tell you’re in a different location?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Your working directory changed to <code>/home/username/Documents</code> (or similar). The prompt might show the directory name.</p>
+<code>cd</code> = “change directory”
+</details>
+</section>
+<section id="going-back" class="level4">
+<h4 class="anchored" data-anchor-id="going-back">1.6 Going Back</h4>
+<p><strong>Task:</strong> Type <code>cd ..</code> and press Enter, then <code>pwd</code>.</p>
+<p><strong>Question to answer:</strong> Where are you now? What does <code>..</code> mean?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You’re back in your home directory. <code>..</code> means “parent directory” (one level up).
+</details>
+</section>
+<section id="returning-home" class="level4">
+<h4 class="anchored" data-anchor-id="returning-home">1.7 Returning Home</h4>
+<p><strong>Task:</strong> 1. Navigate into Documents again: <code>cd Documents</code> 2. Type <code>cd</code> (with nothing after it) and press Enter 3. Type <code>pwd</code> to verify</p>
+<p><strong>Question to answer:</strong> Where does <code>cd</code> by itself take you?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+Plain <code>cd</code> always returns you to your home directory, no matter where you are.
+</details>
+<hr>
+</section>
+</section>
+<section id="exercise-set-2-creating-and-manipulating-files" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-set-2-creating-and-manipulating-files">Exercise Set 2: Creating and Manipulating Files</h3>
+<section id="learning-goals-1" class="level4">
+<h4 class="anchored" data-anchor-id="learning-goals-1">Learning Goals</h4>
+<ul>
+<li>Create directories and files</li>
+<li>Move and copy things</li>
+<li>Delete safely</li>
+</ul>
+</section>
+<section id="make-a-workspace" class="level4">
+<h4 class="anchored" data-anchor-id="make-a-workspace">2.1 Make a Workspace</h4>
+<p><strong>Task:</strong> 1. Make sure you’re in your home directory: <code>cd</code> 2. Type <code>mkdir terminal_practice</code> and press Enter 3. Type <code>ls</code> to verify it was created 4. Type <code>cd terminal_practice</code></p>
+<p><strong>Question to answer:</strong> What do you think <code>mkdir</code> stands for?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You created a new directory and moved into it.</p>
+<code>mkdir</code> = “make directory”
+</details>
+</section>
+<section id="create-a-file" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-file">2.2 Create a File</h4>
+<p><strong>Task:</strong> Type <code>touch experiment_notes.txt</code> and press Enter, then <code>ls</code>.</p>
+<p><strong>Question to answer:</strong> Does a file appear? Open your graphical file browser (Finder/Explorer) and navigate to this folder. Can you see the file there?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You created an empty file. <code>touch</code> creates files (technically, it updates timestamps, but creates the file if it doesn’t exist).
+</details>
+</section>
+<section id="add-content-to-a-file" class="level4">
+<h4 class="anchored" data-anchor-id="add-content-to-a-file">2.3 Add Content to a File</h4>
+<p><strong>Task:</strong> Type <code>echo "First observation: Subjects prefer terminal over GUI" &gt; experiment_notes.txt</code> and press Enter.</p>
+<p><strong>Question to answer:</strong> What do you think <code>&gt;</code> does? Try opening the file in a text editor to check.</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+The text was written to the file. <code>&gt;</code> means “redirect output to file” (it overwrites existing content).
+</details>
+</section>
+<section id="append-to-a-file" class="level4">
+<h4 class="anchored" data-anchor-id="append-to-a-file">2.4 Append to a File</h4>
+<p><strong>Task:</strong> 1. Type <code>echo "Second observation: Learning curve steep" &gt;&gt; experiment_notes.txt</code> 2. View the file content: <code>cat experiment_notes.txt</code></p>
+<p><strong>Question to answer:</strong> How is <code>&gt;&gt;</code> different from <code>&gt;</code>?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You see both lines. <code>&gt;&gt;</code> appends (adds to the end) instead of overwriting.</p>
+<code>cat</code> = “concatenate” (displays file contents)
+</details>
+</section>
+<section id="copy-files" class="level4">
+<h4 class="anchored" data-anchor-id="copy-files">2.5 Copy Files</h4>
+<p><strong>Task:</strong> 1. Type <code>cp experiment_notes.txt backup_notes.txt</code> 2. Type <code>ls</code> to verify both files exist</p>
+<p><strong>Question to answer:</strong> What do you think <code>cp</code> stands for?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You now have two identical files.</p>
+<code>cp</code> = “copy” Format: <code>cp source destination</code>
+</details>
+</section>
+<section id="renamemove-files" class="level4">
+<h4 class="anchored" data-anchor-id="renamemove-files">2.6 Rename/Move Files</h4>
+<p><strong>Task:</strong> Type <code>mv backup_notes.txt observations.txt</code> and then <code>ls</code>.</p>
+<p><strong>Question to answer:</strong> What happened to <code>backup_notes.txt</code>?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+The file was renamed. <code>mv</code> = “move” but is also used for renaming (moving to a new name in the same directory).
+</details>
+</section>
+<section id="create-directory-structure" class="level4">
+<h4 class="anchored" data-anchor-id="create-directory-structure">2.7 Create Directory Structure</h4>
+<p><strong>Task:</strong> 1. Type <code>mkdir data</code> 2. Type <code>mkdir data/raw data/processed</code> 3. Type <code>ls data</code></p>
+<p><strong>Question to answer:</strong> Can you create multiple directories at once?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You created a data directory with two subdirectories. You can specify multiple paths to mkdir.
+</details>
+</section>
+<section id="move-files-between-directories" class="level4">
+<h4 class="anchored" data-anchor-id="move-files-between-directories">2.8 Move Files Between Directories</h4>
+<p><strong>Task:</strong> 1. Create a test file: <code>touch subject_001_data.csv</code> 2. Move it: <code>mv subject_001_data.csv data/raw/</code> 3. Verify: <code>ls data/raw</code></p>
+<p><strong>Question to answer:</strong> How do you move files between directories?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+The file is now in data/raw/. When moving, you specify the destination directory.
+</details>
+</section>
+<section id="safe-deletion" class="level4">
+<h4 class="anchored" data-anchor-id="safe-deletion">2.9 Safe Deletion</h4>
+<p><strong>Task:</strong> 1. Type <code>rm observations.txt</code> 2. Type <code>ls</code> to verify it’s gone 3. Try <code>ls observations.txt</code></p>
+<p><strong>Question to answer:</strong> Can you get the file back after using <code>rm</code>?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>The file is permanently deleted. There’s no “recycle bin” in the terminal. <strong>Be careful with <code>rm</code>!</strong></p>
+<code>rm</code> = “remove”
+</details>
+</section>
+<section id="remove-directories" class="level4">
+<h4 class="anchored" data-anchor-id="remove-directories">2.10 Remove Directories</h4>
+<p><strong>Task:</strong> 1. Try <code>rm data</code> 2. Now try <code>rm -r data</code></p>
+<p><strong>Question to answer:</strong> Why doesn’t the first command work? What does the <code>-r</code> flag do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Plain <code>rm</code> doesn’t work on directories. The <code>-r</code> flag means “recursive” (remove directory and everything inside).</p>
+<strong>Warning:</strong> <code>rm -r</code> is dangerous - it deletes everything in the directory. Always double-check before using it.
+</details>
+<hr>
+</section>
+</section>
+<section id="exercise-set-3-viewing-and-searching-content" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-set-3-viewing-and-searching-content">Exercise Set 3: Viewing and Searching Content</h3>
+<section id="learning-goals-2" class="level4">
+<h4 class="anchored" data-anchor-id="learning-goals-2">Learning Goals</h4>
+<ul>
+<li>Read file contents in different ways</li>
+<li>Search within files</li>
+<li>Understand pipes and filters</li>
+</ul>
+</section>
+<section id="setup-the-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="setup-the-dataset">3.1 Setup the Dataset</h4>
+<p><strong>Task:</strong> Let’s create a sample dataset for practice.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/terminal_practice</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="op">&gt;</span> participants.txt <span class="op">&lt;&lt; 'EOF'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">ID,Age,Condition,Score</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">001,23,Control,78</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">002,27,Treatment,85</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">003,21,Control,72</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="st">004,25,Treatment,91</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">005,29,Control,68</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">006,22,Treatment,88</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">007,26,Control,75</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">008,24,Treatment,82</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Just copy all of this and paste it into your terminal, then press Enter.</p>
+<p><strong>Question to answer:</strong> Type <code>cat participants.txt</code> - do you see your data?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You created a CSV file with participant data. The <code>&lt;&lt; 'EOF'</code> syntax is called a “here document” - a way to input multiple lines.
+</details>
+</section>
+<section id="page-through-files" class="level4">
+<h4 class="anchored" data-anchor-id="page-through-files">3.2 Page Through Files</h4>
+<p><strong>Task:</strong> 1. Type <code>less participants.txt</code> and press Enter 2. Use arrow keys to navigate 3. Press <code>q</code> to quit</p>
+<p><strong>Question to answer:</strong> How is <code>less</code> different from <code>cat</code>?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p><code>less</code> allows you to scroll through files without printing everything to the screen. Useful for large files.</p>
+Navigation: arrows to move, <code>q</code> to quit, <code>/</code> to search
+</details>
+</section>
+<section id="first-few-lines" class="level4">
+<h4 class="anchored" data-anchor-id="first-few-lines">3.3 First Few Lines</h4>
+<p><strong>Task:</strong> Type <code>head participants.txt</code></p>
+<p><strong>Question to answer:</strong> How many lines does it show?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Shows first 10 lines by default. Useful for checking file structure.</p>
+Try: <code>head -n 3 participants.txt</code> to show only 3 lines
+</details>
+</section>
+<section id="last-few-lines" class="level4">
+<h4 class="anchored" data-anchor-id="last-few-lines">3.4 Last Few Lines</h4>
+<p><strong>Task:</strong> Type <code>tail participants.txt</code></p>
+<p><strong>Question to answer:</strong> What do you see?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+Shows last 10 lines. Useful for checking end of files or recent log entries.
+</details>
+</section>
+<section id="count-lines" class="level4">
+<h4 class="anchored" data-anchor-id="count-lines">3.5 Count Lines</h4>
+<p><strong>Task:</strong> Type <code>wc -l participants.txt</code></p>
+<p><strong>Question to answer:</strong> What number do you get? Why?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You should see <code>8 participants.txt</code> (or possibly 9 depending on blank lines).</p>
+<code>wc</code> = “word count”, <code>-l</code> flag means count lines instead
+</details>
+</section>
+<section id="search-for-patterns" class="level4">
+<h4 class="anchored" data-anchor-id="search-for-patterns">3.6 Search for Patterns</h4>
+<p><strong>Task:</strong> Type <code>grep Treatment participants.txt</code></p>
+<p><strong>Question to answer:</strong> What gets displayed?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+Only lines containing “Treatment” are shown. <code>grep</code> searches for patterns in files.
+</details>
+</section>
+<section id="search-with-count" class="level4">
+<h4 class="anchored" data-anchor-id="search-with-count">3.7 Search with Count</h4>
+<p><strong>Task:</strong> Type <code>grep -c Treatment participants.txt</code></p>
+<p><strong>Question to answer:</strong> What does this number represent?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+The count of lines containing “Treatment”. The <code>-c</code> flag gives you a count instead of the lines themselves.
+</details>
+</section>
+<section id="case-insensitive-search" class="level4">
+<h4 class="anchored" data-anchor-id="case-insensitive-search">3.8 Case-Insensitive Search</h4>
+<p><strong>Task:</strong> 1. Type <code>grep control participants.txt</code> 2. Type <code>grep -i control participants.txt</code></p>
+<p><strong>Question to answer:</strong> Why different results?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+First search finds nothing (lowercase doesn’t match “Control”). Second search with <code>-i</code> flag is case-insensitive.
+</details>
+</section>
+<section id="combining-commands-pipes" class="level4">
+<h4 class="anchored" data-anchor-id="combining-commands-pipes">3.9 Combining Commands (Pipes)</h4>
+<p><strong>Task:</strong> Type <code>cat participants.txt | grep Treatment | wc -l</code></p>
+<p><strong>Question to answer:</strong> What happened? What does the <code>|</code> symbol do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>This counts Treatment participants. The <code>|</code> (pipe) sends output of one command as input to the next.</p>
+Flow: display file → filter for Treatment → count lines
+</details>
+</section>
+<section id="sorting-data" class="level4">
+<h4 class="anchored" data-anchor-id="sorting-data">3.10 Sorting Data</h4>
+<p><strong>Task:</strong> 1. Type <code>sort participants.txt</code> 2. Type <code>sort -k4 -t, -n participants.txt</code></p>
+<p><strong>Question to answer:</strong> How does the second command change the sort?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+First sorts alphabetically by whole line. Second sorts numerically (<code>-n</code>) by field 4 (<code>-k4</code>) using comma as delimiter (<code>-t,</code>) - i.e., by Score column.
+</details>
+<hr>
+</section>
+</section>
+<section id="exercise-set-4-efficiency-tools" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-set-4-efficiency-tools">Exercise Set 4: Efficiency Tools</h3>
+<section id="learning-goals-3" class="level4">
+<h4 class="anchored" data-anchor-id="learning-goals-3">Learning Goals</h4>
+<ul>
+<li>Use command history</li>
+<li>Autocomplete with Tab</li>
+<li>Edit commands efficiently</li>
+<li>Use wildcards</li>
+</ul>
+</section>
+<section id="command-history" class="level4">
+<h4 class="anchored" data-anchor-id="command-history">4.1 Command History</h4>
+<p><strong>Task:</strong> 1. Type <code>history</code> and press Enter 2. Use up-arrow key a few times 3. Press down-arrow</p>
+<p><strong>Question to answer:</strong> What do the arrow keys do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<code>history</code> shows all past commands. Up/down arrows cycle through command history - very useful for repeating or modifying previous commands.
+</details>
+</section>
+<section id="search-history" class="level4">
+<h4 class="anchored" data-anchor-id="search-history">4.2 Search History</h4>
+<p><strong>Task:</strong> 1. Press <code>Ctrl+r</code> (Control-r) 2. Start typing <code>grep</code> 3. Press <code>Ctrl+r</code> again to see next match</p>
+<p><strong>Question to answer:</strong> What does <code>Ctrl+r</code> do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+Reverse search through command history. Start typing and it finds matching commands. Press Enter to run, or edit first.
+</details>
+</section>
+<section id="tab-completion" class="level4">
+<h4 class="anchored" data-anchor-id="tab-completion">4.3 Tab Completion</h4>
+<p><strong>Task:</strong> 1. Type <code>cd ~/term</code> and press Tab 2. If it doesn’t complete, press Tab twice</p>
+<p><strong>Question to answer:</strong> What happened?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Tab autocompletes file/directory names. Double-tab shows all matches if there are multiple options.</p>
+This saves enormous amounts of typing and prevents typos.
+</details>
+</section>
+<section id="cursor-movement" class="level4">
+<h4 class="anchored" data-anchor-id="cursor-movement">4.4 Cursor Movement</h4>
+<p><strong>Task:</strong> Type a long command (don’t press Enter yet): <code>echo "This is a very long command that I want to edit"</code></p>
+<p>Now practice: - <code>Ctrl+a</code> (jump to start) - <code>Ctrl+e</code> (jump to end) - <code>Alt+b</code> or <code>Esc</code> then <code>b</code> (back one word) - <code>Alt+f</code> or <code>Esc</code> then <code>f</code> (forward one word)</p>
+<p><strong>Question to answer:</strong> Are these faster than arrow keys?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+These shortcuts make editing commands much faster than holding arrow keys.
+</details>
+</section>
+<section id="wildcards---multiple-files" class="level4">
+<h4 class="anchored" data-anchor-id="wildcards---multiple-files">4.5 Wildcards - Multiple Files</h4>
+<p><strong>Task:</strong> 1. Create test files: <code>touch data_jan.csv data_feb.csv data_mar.csv report_jan.txt</code> 2. Type <code>ls data*</code> 3. Type <code>ls *.csv</code> 4. Type <code>ls data_*.csv</code></p>
+<p><strong>Question to answer:</strong> What does <code>*</code> match?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p><code>*</code> is a wildcard matching any characters. - <code>data*</code> matches anything starting with “data” - <code>*.csv</code> matches anything ending with “.csv”<br>
+- <code>data_*.csv</code> matches that pattern</p>
+This is powerful for operating on multiple files at once.
+</details>
+</section>
+<section id="wildcards---single-character" class="level4">
+<h4 class="anchored" data-anchor-id="wildcards---single-character">4.6 Wildcards - Single Character</h4>
+<p><strong>Task:</strong> 1. Type <code>ls data_???.csv</code></p>
+<p><strong>Question to answer:</strong> How is <code>?</code> different from <code>*</code>?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<code>?</code> matches exactly one character. So <code>???</code> matches exactly three characters (jan, feb, mar).
+</details>
+</section>
+<section id="clear-the-screen" class="level4">
+<h4 class="anchored" data-anchor-id="clear-the-screen">4.7 Clear the Screen</h4>
+<p><strong>Task:</strong> 1. Your terminal is probably cluttered now. Type <code>clear</code> 2. Alternatively, press <code>Ctrl+l</code></p>
+<p><strong>Question to answer:</strong> Does this delete your history?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+Screen is cleared but history remains. You can still scroll up or use up-arrow to access previous commands.
+</details>
+<hr>
+</section>
+</section>
+<section id="exercise-set-5-practical-research-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-set-5-practical-research-workflow">Exercise Set 5: Practical Research Workflow</h3>
+<section id="learning-goals-4" class="level4">
+<h4 class="anchored" data-anchor-id="learning-goals-4">Learning Goals</h4>
+<ul>
+<li>Combine tools for real tasks</li>
+<li>Develop a reproducible workflow</li>
+<li>Practice documentation</li>
+</ul>
+</section>
+<section id="organize-a-project" class="level4">
+<h4 class="anchored" data-anchor-id="organize-a-project">5.1 Organize a Project</h4>
+<p><strong>Task:</strong> Create this directory structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> psych_study</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> psych_study</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> data data/raw data/processed scripts results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then verify: <code>ls -R</code></p>
+<p><strong>Question to answer:</strong> What does <code>ls -R</code> do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You created a standard research project structure. <code>-R</code> shows recursive listing (shows subdirectories too).
+</details>
+</section>
+<section id="create-a-data-log" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-data-log">5.2 Create a Data Log</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# Data Collection Log"</span> <span class="op">&gt;</span> README.txt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">""</span> <span class="op">&gt;&gt;</span> README.txt</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Date: </span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span><span class="st">"</span> <span class="op">&gt;&gt;</span> README.txt</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Researcher: [Your Name]"</span> <span class="op">&gt;&gt;</span> README.txt</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Study: Terminal Skills Acquisition"</span> <span class="op">&gt;&gt;</span> README.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then view it: <code>cat README.txt</code></p>
+<p><strong>Question to answer:</strong> What does <code>$(date)</code> do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<code>$(date)</code> runs the date command and inserts its output. This is called “command substitution” - very useful in scripts.
+</details>
+</section>
+<section id="document-your-commands" class="level4">
+<h4 class="anchored" data-anchor-id="document-your-commands">5.3 Document Your Commands</h4>
+<p><strong>Task:</strong> Create a script file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/scripts</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> process_data.sh</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"#!/bin/bash"</span> <span class="op">&gt;</span> process_data.sh</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# Script to process participant data"</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">""</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"echo 'Starting data processing...'"</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"ls ../data/raw/"</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"echo 'Processing complete!'"</span> <span class="op">&gt;&gt;</span> process_data.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>View it: <code>cat process_data.sh</code></p>
+<p><strong>Question to answer:</strong> What is <code>#!/bin/bash</code> at the top?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+This is called a “shebang” - it tells the system this is a bash script. Scripts are just text files containing commands.
+</details>
+</section>
+<section id="make-scripts-executable" class="level4">
+<h4 class="anchored" data-anchor-id="make-scripts-executable">5.4 Make Scripts Executable</h4>
+<p><strong>Task:</strong> 1. Try running: <code>./process_data.sh</code> 2. It fails! Now type: <code>chmod +x process_data.sh</code> 3. Try again: <code>./process_data.sh</code></p>
+<p><strong>Question to answer:</strong> What did <code>chmod +x</code> do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p><code>chmod +x</code> makes the file executable. Without it, the system won’t run it.</p>
+<code>chmod</code> = “change mode” (permissions)
+</details>
+</section>
+<section id="batch-process-files" class="level4">
+<h4 class="anchored" data-anchor-id="batch-process-files">5.5 Batch Process Files</h4>
+<p><strong>Task:</strong> Create sample data files and process them:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/data/raw</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"subject,rt,accuracy"</span> <span class="op">&gt;</span> pilot_01.csv</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"S001,450,1"</span> <span class="op">&gt;&gt;</span> pilot_01.csv</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"S002,523,1"</span> <span class="op">&gt;&gt;</span> pilot_01.csv</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"subject,rt,accuracy"</span> <span class="op">&gt;</span> pilot_02.csv  </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"S003,489,0"</span> <span class="op">&gt;&gt;</span> pilot_02.csv</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"S004,512,1"</span> <span class="op">&gt;&gt;</span> pilot_02.csv</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Now count how many data rows across all files</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> pilot_<span class="pp">*</span>.csv <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> <span class="st">"subject"</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does <code>grep -v</code> do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You counted total participants across multiple files. <code>grep -v</code> inverts the match (shows lines NOT containing the pattern) - here, excluding headers.
+</details>
+</section>
+<section id="extract-specific-data" class="level4">
+<h4 class="anchored" data-anchor-id="extract-specific-data">5.6 Extract Specific Data</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract all accurate responses (accuracy=1)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">",1$"</span> pilot_<span class="pp">*</span>.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does <code>$</code> mean in the pattern?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p><code>$</code> means “end of line” in grep patterns. So <code>,1$</code> matches lines ending with “,1”.</p>
+This is a “regular expression” - a powerful pattern matching system.
+</details>
+</section>
+<section id="create-summary-statistics" class="level4">
+<h4 class="anchored" data-anchor-id="create-summary-statistics">5.7 Create Summary Statistics</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/results</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# Summary Statistics"</span> <span class="op">&gt;</span> summary.txt</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">""</span> <span class="op">&gt;&gt;</span> summary.txt</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Total data files: </span><span class="va">$(</span><span class="fu">ls</span> ../data/raw/<span class="pp">*</span>.csv <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span><span class="va">)</span><span class="st">"</span> <span class="op">&gt;&gt;</span> summary.txt</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Total participants: </span><span class="va">$(</span><span class="fu">cat</span> ../data/raw/<span class="pp">*</span>.csv <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> subject <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span><span class="va">)</span><span class="st">"</span> <span class="op">&gt;&gt;</span> summary.txt</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> summary.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Did this create a useful summary?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You automated summary statistics. This approach scales - if you add 100 more files, the command still works.
+</details>
+</section>
+<section id="find-files-by-content" class="level4">
+<h4 class="anchored" data-anchor-id="find-files-by-content">5.8 Find Files by Content</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-r</span> <span class="st">"S001"</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does <code>-r</code> do with grep?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<code>-r</code> makes grep recursive - it searches in current directory and all subdirectories. Useful for finding where specific data appears.
+</details>
+</section>
+<section id="check-disk-usage" class="level4">
+<h4 class="anchored" data-anchor-id="check-disk-usage">5.9 Check Disk Usage</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sh</span> <span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does this tell you?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p><code>du</code> = “disk usage” <code>-s</code> = summary for each item <code>-h</code> = human-readable (KB, MB instead of bytes)</p>
+Shows how much space each directory uses - important for large datasets.
+</details>
+</section>
+<section id="final-cleanup-exercise" class="level4">
+<h4 class="anchored" data-anchor-id="final-cleanup-exercise">5.10 Final Cleanup Exercise</h4>
+<p><strong>Task:</strong> Time to clean up our practice.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> terminal_practice  <span class="co"># Verify it exists</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> terminal_practice  <span class="co"># Remove it</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> psych_study  <span class="co"># Verify it exists</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> psych_study  <span class="co"># Remove it</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Why is it important to be careful with <code>rm -r</code>?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+You successfully cleaned up practice directories. Always double-check paths before using <code>rm -r</code> - there’s no undo!
+</details>
+<hr>
+</section>
+</section>
+<section id="self-assessment-checklist" class="level3">
+<h3 class="anchored" data-anchor-id="self-assessment-checklist">Self-Assessment Checklist</h3>
+<p>After completing these exercises, you should be able to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Navigate the file system (<code>cd</code>, <code>pwd</code>, <code>ls</code>)</label></li>
+<li><label><input type="checkbox">Create and remove files and directories (<code>touch</code>, <code>mkdir</code>, <code>rm</code>, <code>rm -r</code>)</label></li>
+<li><label><input type="checkbox">Copy and move files (<code>cp</code>, <code>mv</code>)</label></li>
+<li><label><input type="checkbox">View file contents (<code>cat</code>, <code>less</code>, <code>head</code>, <code>tail</code>)</label></li>
+<li><label><input type="checkbox">Search within files (<code>grep</code>)</label></li>
+<li><label><input type="checkbox">Count and sort data (<code>wc</code>, <code>sort</code>)</label></li>
+<li><label><input type="checkbox">Use pipes to combine commands (<code>|</code>)</label></li>
+<li><label><input type="checkbox">Use wildcards for batch operations (<code>*</code>, <code>?</code>)</label></li>
+<li><label><input type="checkbox">Navigate command history (arrow keys, <code>Ctrl+r</code>)</label></li>
+<li><label><input type="checkbox">Use tab completion</label></li>
+<li><label><input type="checkbox">Create simple shell scripts</label></li>
+<li><label><input type="checkbox">Make files executable (<code>chmod +x</code>)</label></li>
+</ul>
+<hr>
+</section>
+<section id="common-pitfalls-and-tips" class="level3">
+<h3 class="anchored" data-anchor-id="common-pitfalls-and-tips">Common Pitfalls and Tips</h3>
+<section id="safety" class="level4">
+<h4 class="anchored" data-anchor-id="safety">Safety</h4>
+<ul>
+<li><strong>Always</strong> check <code>pwd</code> before running <code>rm -r</code></li>
+<li>There is no “Undo” in the terminal</li>
+<li>Test commands on unimportant files first</li>
+</ul>
+</section>
+<section id="efficiency" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency">Efficiency</h4>
+<ul>
+<li>Use Tab completion religiously - prevents typos</li>
+<li>Use up-arrow for recent commands instead of retyping</li>
+<li>Learn <code>Ctrl+r</code> for searching history - it’s incredibly useful</li>
+</ul>
+</section>
+<section id="debugging" class="level4">
+<h4 class="anchored" data-anchor-id="debugging">Debugging</h4>
+<ul>
+<li>If a command doesn’t work, check for typos (especially spaces and <code>-</code> vs <code>_</code>)</li>
+<li>File names with spaces need quotes: <code>"my file.txt"</code> or escaping: <code>my\ file.txt</code></li>
+<li>Case matters: <code>File.txt</code> ≠ <code>file.txt</code></li>
+</ul>
+</section>
+<section id="getting-help" class="level4">
+<h4 class="anchored" data-anchor-id="getting-help">Getting Help</h4>
+<ul>
+<li><code>man &lt;command&gt;</code> shows the manual (press <code>q</code> to quit)</li>
+<li><code>&lt;command&gt; --help</code> usually shows brief help</li>
+<li>Google “bash [command] examples” for more information</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>Once comfortable with these basics, you might explore: - <strong>Text processing</strong>: <code>awk</code>, <code>sed</code> for data manipulation - <strong>Version control</strong>: <code>git</code> for tracking changes - <strong>Remote access</strong>: <code>ssh</code> for working on servers - <strong>Scripting</strong>: Writing longer bash/zsh scripts for automation - <strong>Package managers</strong>: <code>brew</code> (Mac) or <code>apt</code> (Linux) for installing software</p>
+<p>Remember: The terminal seems arcane at first, but it’s actually more logical than most GUIs once you understand the patterns. These commands have remained largely unchanged for 40+ years because they work well.</p>
+<hr>
+</section>
+<section id="getting-stuck" class="level3">
+<h3 class="anchored" data-anchor-id="getting-stuck">Getting Stuck?</h3>
+<p>If you get stuck or your terminal stops responding: - <code>Ctrl+c</code> cancels the current command - <code>Ctrl+d</code> exits many programs<br>
+- If completely stuck, close the terminal window and open a new one - Type <code>reset</code> if your terminal looks weird/corrupted</p>
+<hr>
+<p><strong>License:</strong> This document is released under CC BY 4.0. Feel free to adapt for your courses.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
