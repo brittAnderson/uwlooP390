@@ -1,4 +1,4 @@
-## Terminals
+# Terminals
 Currently these words are used as synonyms: terminal, shell, command line; which is not exactly true, but is close enough. 
 
 {{< video https://vimeo.com/453837142 title="A Demo of Playing Terminal Games" >}}
@@ -6,7 +6,7 @@ Currently these words are used as synonyms: terminal, shell, command line; which
 - [Power Shell](https://learn.microsoft.com/en-ca/powershell/).  
 - [OSX Terminal](https://support.apple.com/en-ca/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac)
 
-### Commands to try (many have options)
+## Commands to try (many have options)
 - `ls`
 - `ls -alt`
 - `cd`
@@ -46,3 +46,5 @@ Want to convert and compress a large directory of videos (as I did for the pande
 ### SSH
 
 [Testing and Learning for Linux SSH](https://labex.io/tutorials/linux-linux-secure-connecting-271389)
+
+{{< include _terminal_exercises.qmd >}}
