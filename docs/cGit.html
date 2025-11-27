@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -263,20 +298,91 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#git" id="toc-git" class="nav-link active" data-scroll-target="#git"><span class="header-section-number">5.1</span> Git</a></li>
-  <li><a href="#an-old-overview-of-git-and-github" id="toc-an-old-overview-of-git-and-github" class="nav-link" data-scroll-target="#an-old-overview-of-git-and-github"><span class="header-section-number">5.2</span> An old overview of git and Github</a>
+  <li><a href="#git" id="toc-git" class="nav-link active" data-scroll-target="#git"><span class="header-section-number">5.1</span> Git</a>
   <ul class="collapse">
-  <li><a href="#getting-git" id="toc-getting-git" class="nav-link" data-scroll-target="#getting-git"><span class="header-section-number">5.2.1</span> Getting Git</a></li>
-  <li><a href="#configuring-git" id="toc-configuring-git" class="nav-link" data-scroll-target="#configuring-git"><span class="header-section-number">5.2.2</span> Configuring Git</a></li>
+  <li><a href="#git-github-and-version-control-background" id="toc-git-github-and-version-control-background" class="nav-link" data-scroll-target="#git-github-and-version-control-background"><span class="header-section-number">5.1.1</span> Git, Github, and Version Control Background</a></li>
+  <li><a href="#getting-git-and-checking-your-setup" id="toc-getting-git-and-checking-your-setup" class="nav-link" data-scroll-target="#getting-git-and-checking-your-setup"><span class="header-section-number">5.1.2</span> Getting Git And Checking Your Setup</a></li>
+  <li><a href="#communicating-with-github" id="toc-communicating-with-github" class="nav-link" data-scroll-target="#communicating-with-github"><span class="header-section-number">5.1.3</span> Communicating with Github</a></li>
+  <li><a href="#using-git-and-github-practice" id="toc-using-git-and-github-practice" class="nav-link" data-scroll-target="#using-git-and-github-practice"><span class="header-section-number">5.1.4</span> Using Git and Github — Practice</a></li>
+  <li><a href="#cloning-and-basic-git-operations" id="toc-cloning-and-basic-git-operations" class="nav-link" data-scroll-target="#cloning-and-basic-git-operations"><span class="header-section-number">5.1.5</span> Cloning and Basic Git Operations</a></li>
+  <li><a href="#explore-remote-repositories-your-clone-may-have-many" id="toc-explore-remote-repositories-your-clone-may-have-many" class="nav-link" data-scroll-target="#explore-remote-repositories-your-clone-may-have-many"><span class="header-section-number">5.1.6</span> Explore Remote Repositories — Your clone may have many</a></li>
+  <li><a href="#working-in-the-gitnames-directory" id="toc-working-in-the-gitnames-directory" class="nav-link" data-scroll-target="#working-in-the-gitnames-directory"><span class="header-section-number">5.1.7</span> Working in the gitnames Directory</a></li>
+  <li><a href="#navigate-to-gitnames-directory" id="toc-navigate-to-gitnames-directory" class="nav-link" data-scroll-target="#navigate-to-gitnames-directory"><span class="header-section-number">5.1.8</span> Navigate to gitnames Directory</a></li>
+  <li><a href="#create-your-file" id="toc-create-your-file" class="nav-link" data-scroll-target="#create-your-file"><span class="header-section-number">5.1.9</span> Create Your File</a></li>
+  <li><a href="#check-status" id="toc-check-status" class="nav-link" data-scroll-target="#check-status"><span class="header-section-number">5.1.10</span> Check Status</a></li>
+  <li><a href="#stage-your-file" id="toc-stage-your-file" class="nav-link" data-scroll-target="#stage-your-file"><span class="header-section-number">5.1.11</span> Stage Your File</a></li>
+  <li><a href="#commit-your-change" id="toc-commit-your-change" class="nav-link" data-scroll-target="#commit-your-change"><span class="header-section-number">5.1.12</span> Commit Your Change</a></li>
+  <li><a href="#check-log" id="toc-check-log" class="nav-link" data-scroll-target="#check-log"><span class="header-section-number">5.1.13</span> 5.7 Check Log</a></li>
+  <li><a href="#push-to-your-fork" id="toc-push-to-your-fork" class="nav-link" data-scroll-target="#push-to-your-fork"><span class="header-section-number">5.1.14</span> Push to Your Fork</a></li>
+  <li><a href="#verify-on-github-1" id="toc-verify-on-github-1" class="nav-link" data-scroll-target="#verify-on-github-1"><span class="header-section-number">5.1.15</span> Verify on GitHub</a></li>
+  <li><a href="#compare-with-original" id="toc-compare-with-original" class="nav-link" data-scroll-target="#compare-with-original"><span class="header-section-number">5.1.16</span> Compare with Original</a></li>
   </ul></li>
-  <li><a href="#other-version-control-system" id="toc-other-version-control-system" class="nav-link" data-scroll-target="#other-version-control-system"><span class="header-section-number">5.3</span> Other version control system</a></li>
-  <li><a href="#git-is-not-github" id="toc-git-is-not-github" class="nav-link" data-scroll-target="#git-is-not-github"><span class="header-section-number">5.4</span> Git is not Github</a></li>
-  <li><a href="#using-git-with-github" id="toc-using-git-with-github" class="nav-link" data-scroll-target="#using-git-with-github"><span class="header-section-number">5.5</span> Using git with github</a>
+  <li><a href="#creating-a-pull-request" id="toc-creating-a-pull-request" class="nav-link" data-scroll-target="#creating-a-pull-request"><span class="header-section-number">5.2</span> Creating a Pull Request</a>
   <ul class="collapse">
-  <li><a href="#creating-an-ssh-key-with-your-terminal" id="toc-creating-an-ssh-key-with-your-terminal" class="nav-link" data-scroll-target="#creating-an-ssh-key-with-your-terminal"><span class="header-section-number">5.5.1</span> Creating an ssh key with your terminal</a></li>
+  <li><a href="#navigate-to-your-fork" id="toc-navigate-to-your-fork" class="nav-link" data-scroll-target="#navigate-to-your-fork"><span class="header-section-number">5.2.1</span> Navigate to Your Fork</a></li>
+  <li><a href="#initiate-pull-request" id="toc-initiate-pull-request" class="nav-link" data-scroll-target="#initiate-pull-request"><span class="header-section-number">5.2.2</span> Initiate Pull Request</a></li>
+  <li><a href="#write-pull-request-description" id="toc-write-pull-request-description" class="nav-link" data-scroll-target="#write-pull-request-description"><span class="header-section-number">5.2.3</span> Write Pull Request Description</a></li>
+  <li><a href="#create-the-pull-request" id="toc-create-the-pull-request" class="nav-link" data-scroll-target="#create-the-pull-request"><span class="header-section-number">5.2.4</span> Create the Pull Request</a></li>
+  <li><a href="#view-your-pull-request" id="toc-view-your-pull-request" class="nav-link" data-scroll-target="#view-your-pull-request"><span class="header-section-number">5.2.5</span> View Your Pull Request</a></li>
+  <li><a href="#understanding-pull-request-status" id="toc-understanding-pull-request-status" class="nav-link" data-scroll-target="#understanding-pull-request-status"><span class="header-section-number">5.2.6</span> Understanding Pull Request Status</a></li>
+  <li><a href="#after-pr-is-merged" id="toc-after-pr-is-merged" class="nav-link" data-scroll-target="#after-pr-is-merged"><span class="header-section-number">5.2.7</span> After PR is Merged</a></li>
+  <li><a href="#see-everyones-contributions" id="toc-see-everyones-contributions" class="nav-link" data-scroll-target="#see-everyones-contributions"><span class="header-section-number">5.2.8</span> See Everyone’s Contributions</a></li>
+  <li><a href="#view-merged-commit" id="toc-view-merged-commit" class="nav-link" data-scroll-target="#view-merged-commit"><span class="header-section-number">5.2.9</span> View Merged Commit</a></li>
   </ul></li>
-  <li><a href="#understanding-git-and-the-workflow-in-pictures" id="toc-understanding-git-and-the-workflow-in-pictures" class="nav-link" data-scroll-target="#understanding-git-and-the-workflow-in-pictures"><span class="header-section-number">5.6</span> Understanding Git and the Workflow in Pictures</a></li>
-  <li><a href="#principal-terms-terms-for-git" id="toc-principal-terms-terms-for-git" class="nav-link" data-scroll-target="#principal-terms-terms-for-git"><span class="header-section-number">5.7</span> Principal Terms Terms for Git</a></li>
+  <li><a href="#opening-an-issue" id="toc-opening-an-issue" class="nav-link" data-scroll-target="#opening-an-issue"><span class="header-section-number">5.3</span> Opening an Issue</a>
+  <ul class="collapse">
+  <li><a href="#understanding-issues" id="toc-understanding-issues" class="nav-link" data-scroll-target="#understanding-issues"><span class="header-section-number">5.3.1</span> Understanding Issues</a></li>
+  <li><a href="#navigate-to-practice-repository-issues" id="toc-navigate-to-practice-repository-issues" class="nav-link" data-scroll-target="#navigate-to-practice-repository-issues"><span class="header-section-number">5.3.2</span> Navigate to Practice Repository Issues</a></li>
+  <li><a href="#create-an-issue" id="toc-create-an-issue" class="nav-link" data-scroll-target="#create-an-issue"><span class="header-section-number">5.3.3</span> Create an Issue</a></li>
+  <li><a href="#record-your-issue-number" id="toc-record-your-issue-number" class="nav-link" data-scroll-target="#record-your-issue-number"><span class="header-section-number">5.3.4</span> Record Your Issue Number</a></li>
+  <li><a href="#use-issues-constructively" id="toc-use-issues-constructively" class="nav-link" data-scroll-target="#use-issues-constructively"><span class="header-section-number">5.3.5</span> Use Issues Constructively</a></li>
+  <li><a href="#comment-on-an-issue" id="toc-comment-on-an-issue" class="nav-link" data-scroll-target="#comment-on-an-issue"><span class="header-section-number">5.3.6</span> Comment on an Issue</a></li>
+  <li><a href="#understand-issue-labels" id="toc-understand-issue-labels" class="nav-link" data-scroll-target="#understand-issue-labels"><span class="header-section-number">5.3.7</span> Understand Issue Labels</a></li>
+  <li><a href="#close-your-practice-issue" id="toc-close-your-practice-issue" class="nav-link" data-scroll-target="#close-your-practice-issue"><span class="header-section-number">5.3.8</span> Close Your Practice Issue</a></li>
+  <li><a href="#using-issues-for-learning" id="toc-using-issues-for-learning" class="nav-link" data-scroll-target="#using-issues-for-learning"><span class="header-section-number">5.3.9</span> Using Issues for Learning</a></li>
+  <li><a href="#reflection-on-collaborative-features" id="toc-reflection-on-collaborative-features" class="nav-link" data-scroll-target="#reflection-on-collaborative-features"><span class="header-section-number">5.3.10</span> Reflection on Collaborative Features</a></li>
+  </ul></li>
+  <li><a href="#real-world-workflow-practice" id="toc-real-world-workflow-practice" class="nav-link" data-scroll-target="#real-world-workflow-practice"><span class="header-section-number">5.4</span> Real-World Workflow Practice</a>
+  <ul class="collapse">
+  <li><a href="#create-a-work-branch-optional-advanced" id="toc-create-a-work-branch-optional-advanced" class="nav-link" data-scroll-target="#create-a-work-branch-optional-advanced"><span class="header-section-number">5.4.1</span> 8.1 Create a Work Branch (Optional Advanced)</a></li>
+  <li><a href="#practice-making-changes" id="toc-practice-making-changes" class="nav-link" data-scroll-target="#practice-making-changes"><span class="header-section-number">5.4.2</span> 8.2 Practice Making Changes</a></li>
+  <li><a href="#merge-branch-into-main-optional-advanced" id="toc-merge-branch-into-main-optional-advanced" class="nav-link" data-scroll-target="#merge-branch-into-main-optional-advanced"><span class="header-section-number">5.4.3</span> 8.3 Merge Branch into Main (Optional Advanced)</a></li>
+  <li><a href="#simulate-regular-workflow" id="toc-simulate-regular-workflow" class="nav-link" data-scroll-target="#simulate-regular-workflow"><span class="header-section-number">5.4.4</span> 8.4 Simulate Regular Workflow</a></li>
+  <li><a href="#understanding-merge-conflicts" id="toc-understanding-merge-conflicts" class="nav-link" data-scroll-target="#understanding-merge-conflicts"><span class="header-section-number">5.4.5</span> 8.5 Understanding Merge Conflicts</a></li>
+  <li><a href="#check-remote-relationship" id="toc-check-remote-relationship" class="nav-link" data-scroll-target="#check-remote-relationship"><span class="header-section-number">5.4.6</span> 8.6 Check Remote Relationship</a></li>
+  <li><a href="#practice-git-status-awareness" id="toc-practice-git-status-awareness" class="nav-link" data-scroll-target="#practice-git-status-awareness"><span class="header-section-number">5.4.7</span> 8.7 Practice git status Awareness</a></li>
+  <li><a href="#view-what-changed" id="toc-view-what-changed" class="nav-link" data-scroll-target="#view-what-changed"><span class="header-section-number">5.4.8</span> 8.8 View What Changed</a></li>
+  <li><a href="#undo-mistakes-safely" id="toc-undo-mistakes-safely" class="nav-link" data-scroll-target="#undo-mistakes-safely"><span class="header-section-number">5.4.9</span> 8.9 Undo Mistakes Safely</a></li>
+  <li><a href="#final-workflow-check" id="toc-final-workflow-check" class="nav-link" data-scroll-target="#final-workflow-check"><span class="header-section-number">5.4.10</span> 8.10 Final Workflow Check</a></li>
+  </ul></li>
+  <li><a href="#self-assessment-checklist" id="toc-self-assessment-checklist" class="nav-link" data-scroll-target="#self-assessment-checklist"><span class="header-section-number">5.5</span> Self-Assessment Checklist</a></li>
+  <li><a href="#common-pitfalls-and-solutions" id="toc-common-pitfalls-and-solutions" class="nav-link" data-scroll-target="#common-pitfalls-and-solutions"><span class="header-section-number">5.6</span> Common Pitfalls and Solutions</a>
+  <ul class="collapse">
+  <li><a href="#permission-denied-when-pushing" id="toc-permission-denied-when-pushing" class="nav-link" data-scroll-target="#permission-denied-when-pushing"><span class="header-section-number">5.6.1</span> “Permission denied” when pushing</a></li>
+  <li><a href="#please-commit-your-changes-or-stash-them" id="toc-please-commit-your-changes-or-stash-them" class="nav-link" data-scroll-target="#please-commit-your-changes-or-stash-them"><span class="header-section-number">5.6.2</span> “Please commit your changes or stash them”</a></li>
+  <li><a href="#your-branch-is-behind-originmain" id="toc-your-branch-is-behind-originmain" class="nav-link" data-scroll-target="#your-branch-is-behind-originmain"><span class="header-section-number">5.6.3</span> “Your branch is behind origin/main”</a></li>
+  <li><a href="#cant-see-your-pushed-changes-on-github" id="toc-cant-see-your-pushed-changes-on-github" class="nav-link" data-scroll-target="#cant-see-your-pushed-changes-on-github"><span class="header-section-number">5.6.4</span> Can’t see your pushed changes on GitHub</a></li>
+  <li><a href="#accidentally-edited-files-in-the-original-repo" id="toc-accidentally-edited-files-in-the-original-repo" class="nav-link" data-scroll-target="#accidentally-edited-files-in-the-original-repo"><span class="header-section-number">5.6.5</span> Accidentally edited files in the original repo</a></li>
+  <li><a href="#merge-conflict" id="toc-merge-conflict" class="nav-link" data-scroll-target="#merge-conflict"><span class="header-section-number">5.6.6</span> “Merge conflict”</a></li>
+  </ul></li>
+  <li><a href="#git-commands-quick-reference" id="toc-git-commands-quick-reference" class="nav-link" data-scroll-target="#git-commands-quick-reference"><span class="header-section-number">5.7</span> Git Commands Quick Reference</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">5.7.1</span> Setup</a></li>
+  <li><a href="#daily-workflow" id="toc-daily-workflow" class="nav-link" data-scroll-target="#daily-workflow"><span class="header-section-number">5.7.2</span> Daily Workflow</a></li>
+  <li><a href="#repository-management" id="toc-repository-management" class="nav-link" data-scroll-target="#repository-management"><span class="header-section-number">5.7.3</span> Repository Management</a></li>
+  <li><a href="#collaboration" id="toc-collaboration" class="nav-link" data-scroll-target="#collaboration"><span class="header-section-number">5.7.4</span> Collaboration</a></li>
+  </ul></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help"><span class="header-section-number">5.8</span> Getting Help</a>
+  <ul class="collapse">
+  <li><a href="#in-the-terminal" id="toc-in-the-terminal" class="nav-link" data-scroll-target="#in-the-terminal"><span class="header-section-number">5.8.1</span> In the Terminal</a></li>
+  <li><a href="#online-resources" id="toc-online-resources" class="nav-link" data-scroll-target="#online-resources"><span class="header-section-number">5.8.2</span> Online Resources</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices"><span class="header-section-number">5.8.3</span> Best Practices</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">5.9</span> Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#need-to-start-over" id="toc-need-to-start-over" class="nav-link" data-scroll-target="#need-to-start-over"><span class="header-section-number">5.9.1</span> Need to Start Over?</a></li>
+  <li><a href="#completely-lost" id="toc-completely-lost" class="nav-link" data-scroll-target="#completely-lost"><span class="header-section-number">5.9.2</span> Completely Lost?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -304,53 +410,48 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="git" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="git"><span class="header-section-number">5.1</span> Git</h2>
+<section id="git-github-and-version-control-background" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="git-github-and-version-control-background"><span class="header-section-number">5.1.1</span> Git, Github, and Version Control Background</h3>
+<section id="what-is-git-and-github" class="level4" data-number="5.1.1.1">
+<h4 data-number="5.1.1.1" class="anchored" data-anchor-id="what-is-git-and-github"><span class="header-section-number">5.1.1.1</span> What is Git and GitHub?</h4>
+<p><strong>Git</strong> is a version control system that tracks changes to files over time. Think of it as an incredibly sophisticated “undo” system that also lets multiple people work on the same files.</p>
+<p><strong>GitHub</strong> is a website that hosts git repositories online. It’s like Google Drive for code, but with powerful collaboration features built specifically for version control.</p>
 </section>
-<section id="an-old-overview-of-git-and-github" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="an-old-overview-of-git-and-github"><span class="header-section-number">5.2</span> An old overview of git and Github</h2>
+<section id="why-use-git" class="level4" data-number="5.1.1.2">
+<h4 data-number="5.1.1.2" class="anchored" data-anchor-id="why-use-git"><span class="header-section-number">5.1.1.2</span> Why Use Git?</h4>
+<ul>
+<li><strong>Track changes</strong>: See exactly what changed, when, and by whom</li>
+<li><strong>Collaborate</strong>: Work with others without overwriting each other’s work</li>
+<li><strong>Backup</strong>: Your code lives both on your computer and on GitHub</li>
+<li><strong>Experiment safely</strong>: Try new things without fear of breaking what works</li>
+<li><strong>Professional skill</strong>: Git is the industry standard for version control</li>
+</ul>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/456349738" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<section id="getting-git" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="getting-git"><span class="header-section-number">5.2.1</span> Getting Git</h3>
-<p>It depends on what system you have. See the operating system appendices.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/456349595" frameborder="0" title="A meandering git explanation" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="configuring-git" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="configuring-git"><span class="header-section-number">5.2.2</span> Configuring Git</h3>
-<p>Do this in your terminal (and please use your own name and email address).</p>
-<p><code>git config --global user.name "John Doe"</code></p>
-<p><code>git config --global user.email johndoe@example.com</code></p>
-</section>
-</section>
-<section id="other-version-control-system" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="other-version-control-system"><span class="header-section-number">5.3</span> Other version control system</h2>
+<section id="git-is-not-the-only-option-other-version-control-system" class="level4" data-number="5.1.1.3">
+<h4 data-number="5.1.1.3" class="anchored" data-anchor-id="git-is-not-the-only-option-other-version-control-system"><span class="header-section-number">5.1.1.3</span> Git Is Not The Only Option: Other version control system</h4>
 <ol type="1">
-<li><a href="https://www.mercurial-scm.org/">Mercurial</a></li>
-<li><a href="http://darcs.net/">Darcs</a></li>
-<li><a href="https://www.nongnu.org/cvs/">CVS</a></li>
-<li><a href="https://subversion.apache.org/">Subversion</a></li>
-<li><a href="https://pijul.org/">Pijul</a></li>
+<li><p><a href="https://www.mercurial-scm.org/">Mercurial</a></p></li>
+<li><p><a href="http://darcs.net/">Darcs</a></p></li>
+<li><p><a href="https://www.nongnu.org/cvs/">CVS</a></p></li>
+<li><p><a href="https://subversion.apache.org/">Subversion</a></p></li>
+<li><p><a href="https://pijul.org/">Pijul</a></p></li>
 </ol>
 </section>
-<section id="git-is-not-github" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="git-is-not-github"><span class="header-section-number">5.4</span> Git is not Github</h2>
-<p>And github is not the only way to share code and data using <code>git</code> version control. 1. <a href="https://osf.io/">OSF.io</a> 2. <a href="https://sourceforge.net/">Sourceforge</a> 3. <a href="https://bitbucket.org/">Bitbucket</a> 4. Gitlab The university provides you with a gitlab account: <a href="https://git.uwaterloo.ca" class="uri">https://git.uwaterloo.ca</a> 5. <a href="https://codeberg.org/">Codeberg</a></p>
+<section id="git-is-not-github" class="level4" data-number="5.1.1.4">
+<h4 data-number="5.1.1.4" class="anchored" data-anchor-id="git-is-not-github"><span class="header-section-number">5.1.1.4</span> Git is not Github</h4>
+<p>And github is not the only way to share code and data using <code>git</code> version control.</p>
+<ol type="1">
+<li><p><a href="https://osf.io/">OSF.io</a></p></li>
+<li><p><a href="https://sourceforge.net/">Sourceforge</a></p></li>
+<li><p><a href="https://bitbucket.org/">Bitbucket</a></p></li>
+<li><p>Gitlab The university provides you with a gitlab account: <a href="https://git.uwaterloo.ca" class="uri">https://git.uwaterloo.ca</a></p></li>
+<li><p><a href="https://codeberg.org/">Codeberg</a></p></li>
+</ol>
 </section>
-<section id="using-git-with-github" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="using-git-with-github"><span class="header-section-number">5.5</span> Using git with github</h2>
-<p>You will need an ssh key. And the easiest way to get an SSH key is via the terminal. If you haven’t done any of the terminal exercises, now might be a good time to go there, do at least the basics so you know where your termina is, and then come back here to finish the set up.</p>
-<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">The offical instructions</a></p>
-<section id="creating-an-ssh-key-with-your-terminal" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="creating-an-ssh-key-with-your-terminal"><span class="header-section-number">5.5.1</span> Creating an ssh key with your terminal</h3>
-<p><a href="https://www.ssh.com/academy/ssh/keygen">Detailed instructions on ssh-keygen</a></p>
-<p><a href="https://www.freecodecamp.org/news/the-ultimate-guide-to-ssh-setting-up-ssh-keys/">A slower walk through with some github specifics</a></p>
-</section>
-</section>
-<section id="understanding-git-and-the-workflow-in-pictures" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="understanding-git-and-the-workflow-in-pictures"><span class="header-section-number">5.6</span> Understanding Git and the Workflow in Pictures</h2>
-<p>Git can be confusing.</p>
-<p><a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/">Clone or fork?</a>.</p>
-<p>A long video where I try to talk and draw through the concepts. </p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/456349595" frameborder="0" title="A meandering git explanation" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
-</section>
-<section id="principal-terms-terms-for-git" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="principal-terms-terms-for-git"><span class="header-section-number">5.7</span> Principal Terms Terms for Git</h2>
+<section id="what-does-forking-mean-some-git-terminology" class="level4" data-number="5.1.1.5">
+<h4 data-number="5.1.1.5" class="anchored" data-anchor-id="what-does-forking-mean-some-git-terminology"><span class="header-section-number">5.1.1.5</span> What Does Forking Mean? Some Git Terminology</h4>
 <ul>
 <li><strong>Fork:</strong> A copy of one github repository to another <strong>github</strong> repository.</li>
 <li><strong>Clone:</strong> A copy of one <strong>git</strong> repository to another <strong>git</strong> repository.</li>
@@ -360,8 +461,1505 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Pull Request:</strong> When you have information or changes that you think would be helpful to a remote you do <strong>not</strong> have push permissions for then you can request that the owner of that repository pull in your changes. This is a formal process called a pull request. It is primarily a github concept and not a git concept.</li>
 <li><strong>Branch:</strong> within a repository the development of the code may be proceeding in a few different directions at the same time. The principal production branch is conventionally called <strong>master</strong>. And the principal repository that is the main, shared one is called <strong>origin</strong>. We will not be working with branches in our course, but those terms do show up in commands.</li>
 </ul>
+</section>
+</section>
+<section id="getting-git-and-checking-your-setup" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="getting-git-and-checking-your-setup"><span class="header-section-number">5.1.2</span> Getting Git And Checking Your Setup</h3>
+<p>It depends on what system you have. See the operating system appendices.</p>
+<section id="check-your-git-installation" class="level4" data-number="5.1.2.1">
+<h4 data-number="5.1.2.1" class="anchored" data-anchor-id="check-your-git-installation"><span class="header-section-number">5.1.2.1</span> Check Your Git Installation</h4>
+<p><strong>Task:</strong> Open your terminal and type: <code>git --version</code></p>
+<p><strong>Question to answer:</strong> Do you see a version number (like “git version 2.x.x”)?</p>
+<details>
+<summary>
+Expected outcomes
+</summary>
+<p>If you see a version number: Git is already installed! Skip to section 2.3.</p>
+If you see “command not found”: You need to install git (proceed to 2.2).
+</details>
+<details>
+<summary>
+Troubleshooting
+</summary>
+If installation fails: - Mac: You might need to install Xcode Command Line Tools first - WSL: Make sure you’re running the commands in your WSL terminal, not PowerShell - Both: Try closing and reopening your terminal after installation
+</details>
+</section>
+<section id="configure-your-name" class="level4" data-number="5.1.2.2">
+<h4 data-number="5.1.2.2" class="anchored" data-anchor-id="configure-your-name"><span class="header-section-number">5.1.2.2</span> Configure Your Name</h4>
+<p><strong>Task:</strong> Type these commands in your terminal, replacing with YOUR information:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@uwaterloo.ca"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Type <code>git config --global --list</code>. Do you see your name and email?</p>
+<details>
+<summary>
+Why this matters
+</summary>
+<p>Every change you make in git will be labeled with this name and email. This is how collaborators know who made each change.</p>
+<p>Use your real name (or professional pseudonym) and a real email - this information appears in the public commit history.</p>
+The <code>--global</code> flag means this configuration applies to all your git projects.
+</details>
+</section>
+<section id="set-your-default-branch-name" class="level4" data-number="5.1.2.3">
+<h4 data-number="5.1.2.3" class="anchored" data-anchor-id="set-your-default-branch-name"><span class="header-section-number">5.1.2.3</span> Set Your Default Branch Name</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Why “main” instead of other names?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>“main” is the modern standard default branch name (replacing the older “master”). This ensures consistency with GitHub and current best practices.</p>
+A branch is a line of development. We’ll learn more about branches later.
+</details>
+</section>
+<section id="verify-your-configuration" class="level4" data-number="5.1.2.4">
+<h4 data-number="5.1.2.4" class="anchored" data-anchor-id="verify-your-configuration"><span class="header-section-number">5.1.2.4</span> Verify Your Configuration</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Can you see all three settings (user.name, user.email, init.defaultBranch)?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>You should see something like:</p>
+<pre><code>user.name=Jane Smith
+user.email=jane.smith@uwaterloo.ca
+init.defaultBranch=main</code></pre>
+These are stored in a hidden file called <code>~/.gitconfig</code>. You can edit this file directly if needed.
+</details>
+</section>
+</section>
+<section id="communicating-with-github" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="communicating-with-github"><span class="header-section-number">5.1.3</span> Communicating with Github</h3>
+<p>Communication will be much easier with an <strong>ssh key</strong>. And the easiest way to get an SSH key is via the terminal. If you haven’t done any of the terminal exercises, now might be a good time to go there. Do at least the basics so you know where your terminal is, and then come back here to finish the set up.</p>
+<section id="create-a-github-account" class="level4" data-number="5.1.3.1">
+<h4 data-number="5.1.3.1" class="anchored" data-anchor-id="create-a-github-account"><span class="header-section-number">5.1.3.1</span> Create a Github Account</h4>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Go to <a href="https://github.com">https://github.com</a></p></li>
+<li><p>Click “Sign up”</p></li>
+<li><p>Choose a professional username (you’ll use this for your career)</p></li>
+<li><p>Use your UWaterloo email if you’re a student (you may get educational benefits)</p></li>
+</ol>
+<p><strong>Question to answer:</strong> What username did you choose? Will it be appropriate to share with future employers or graduate programs?</p>
+<details>
+<summary>
+Best practices
+</summary>
+<p>Choose something professional:</p>
+<ul>
+<li><p>✅ Good: <code>jane-smith</code>, <code>j-smith-research</code>, <code>jasmith</code></p></li>
+<li><p>❌ Avoid: <code>party-animal-2024</code>, <code>psycho-killer</code>, <code>coolguy123</code></p></li>
+</ul>
+Your GitHub profile is essentially your coding resume. Many employers and grad programs will look at it.
+</details>
+</section>
+<section id="creating-an-ssh-key-with-your-terminal" class="level4" data-number="5.1.3.2">
+<h4 data-number="5.1.3.2" class="anchored" data-anchor-id="creating-an-ssh-key-with-your-terminal"><span class="header-section-number">5.1.3.2</span> Creating an ssh key with your terminal</h4>
+<p><a href="https://www.ssh.com/academy/ssh/keygen">Detailed instructions on ssh-keygen</a></p>
+<p><a href="https://www.freecodecamp.org/news/the-ultimate-guide-to-ssh-setting-up-ssh-keys/">A slower walk through with some github specifics</a></p>
+<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">The offical instructions</a></p>
+</section>
+</section>
+<section id="using-git-and-github-practice" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="using-git-and-github-practice"><span class="header-section-number">5.1.4</span> Using Git and Github — Practice</h3>
+<section id="fork-the-course-repository" class="level4" data-number="5.1.4.1">
+<h4 data-number="5.1.4.1" class="anchored" data-anchor-id="fork-the-course-repository"><span class="header-section-number">5.1.4.1</span> Fork the Course Repository</h4>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>While viewing <a href="https://github.com/brittAnderson/uwlooP390">https://github.com/brittAnderson/uwlooP390</a></p></li>
+<li><p>Click the “Fork” button in the upper right</p></li>
+<li><p>Click “Create fork”</p></li>
+<li><p>You should now see the repository under YOUR username: <code>https://github.com/YOUR-USERNAME/uwlooP390</code></p></li>
+</ol>
+<p><strong>Question to answer:</strong> What does “forking” do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Forking creates your own personal copy of someone else’s repository. You now have:</p>
+<ul>
+<li><p><strong>Original repo</strong> (mine): <code>brittAnderson/uwlooP390</code> (you can’t change this)</p></li>
+<li><p><strong>Your fork</strong>: <code>YOUR-USERNAME/uwlooP390</code> (you can change this freely)</p></li>
+</ul>
+<p>Your fork is completely independent - you can experiment without affecting the original.</p>
+</details>
+</section>
+<section id="more-forking" class="level4" data-number="5.1.4.2">
+<h4 data-number="5.1.4.2" class="anchored" data-anchor-id="more-forking"><span class="header-section-number">5.1.4.2</span> More Forking</h4>
+<p><strong>Task:</strong></p>
+<p>Repeat the forking process for <a href="https://github.com/brittAnderson/p390Practice">https://github.com/brittAnderson/p390Practice</a></p>
+<p><strong>Question to answer:</strong> How many repositories do you now have in your GitHub account?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You should have at least 2 repositories:</p>
+<ul>
+<li><p><code>YOUR-USERNAME/uwlooP390</code> (forked from course repo)</p></li>
+<li><p><code>YOUR-USERNAME/p390Practice</code> (forked from practice repo)</p></li>
+</ul>
+You can see all your repositories by clicking your profile icon → “Your repositories”
+</details>
+</section>
+<section id="explore-repository-features" class="level4" data-number="5.1.4.3">
+<h4 data-number="5.1.4.3" class="anchored" data-anchor-id="explore-repository-features"><span class="header-section-number">5.1.4.3</span> Explore Repository Features</h4>
+<p><strong>Task:</strong> In your forked <code>p390Practice</code> repository, explore these tabs:</p>
+<ol type="1">
+<li><p><strong>Code</strong> - the file browser</p></li>
+<li><p><strong>Issues</strong> - where people report problems or ask questions</p></li>
+<li><p><strong>Pull requests</strong> - where people submit changes</p></li>
+<li><p><strong>Insights</strong> → <strong>Network</strong> - visualize the repository’s history</p></li>
+</ol>
+<p><strong>Question to answer:</strong> What do you see in the Network graph?</p>
+<details>
+<summary>
+Expected observations
+</summary>
+<p>The Network graph shows:</p>
+<ul>
+<li><p>The original repository (mine)</p></li>
+<li><p>All forks (including yours)</p></li>
+<li><p>Branches and their relationships</p></li>
+<li><p>The flow of commits over time</p></li>
+</ul>
+This visualizes how code evolves and spreads through collaboration.
+</details>
+</section>
+<section id="take-a-screenshot---youll-need-this-for-homework" class="level4" data-number="5.1.4.4">
+<h4 data-number="5.1.4.4" class="anchored" data-anchor-id="take-a-screenshot---youll-need-this-for-homework"><span class="header-section-number">5.1.4.4</span> Take a Screenshot - You’ll need this for homework</h4>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Navigate to your GitHub profile page (<code>https://github.com/YOUR-USERNAME</code>)</p></li>
+<li><p>Take a screenshot showing your account with both forked repositories visible</p></li>
+<li><p>Save it as <code>github_setup_complete.png</code></p></li>
+</ol>
+<p><strong>Question to answer:</strong> Can you see both <code>uwlooP390</code> and <code>p390Practice</code> in your repository list?</p>
+<details>
+<summary>
+Why this matters
+</summary>
+<p>This screenshot confirms you’ve completed the setup. You might submit this to show you’re ready for collaborative work.</p>
+This is also your first step toward building a professional portfolio. As you add projects, your GitHub profile becomes evidence of your skills.
+</details>
+</section>
+</section>
+<section id="cloning-and-basic-git-operations" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="cloning-and-basic-git-operations"><span class="header-section-number">5.1.5</span> Cloning and Basic Git Operations</h3>
+<p>When you “fork” you are making a copy of a github repository from someone else’s account to yours. Cloning happens either from github to your local machine (probably laptop) or from one local machine to another.</p>
+<p>Note, in much of the following it assumes you are using the directory <code>git_workspace</code> and that it is in your home directory. But you may have put your files somewhere else, or used a different directory name. If so, you need to substitute those names and locations in what follows.</p>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Make sure you’re in your home directory: <code>cd ~</code></p></li>
+<li><p>Create a workspace: <code>mkdir git_workspace</code> and <code>cd git_workspace</code></p>
+<p>It can be named anything. I generally put my repos in <code>~/gitRepos/</code>.</p></li>
+<li><p>Go to YOUR fork of p390Practice on GitHub</p></li>
+<li><p>Click the green “Code” button</p></li>
+<li><p>Copy the HTTPS URL (if you did not create an ssh key ;should be <code>https://github.com/YOUR-USERNAME/p390Practice.git</code>). If you created an ssh key you should use the one that starts with <code>git@</code>.</p></li>
+<li><p>In terminal: <code>git clone https://github.com/YOUR-USERNAME/p390Practice.git</code> . Again, this may be different if you successfully created your ssh key.</p></li>
+<li><p>Type <code>ls</code> to verify, then <code>cd p390Practice</code></p></li>
+</ol>
+<p>You now have:</p>
+<ul>
+<li><p><strong>Remote</strong> (on GitHub): <code>github.com/YOUR-USERNAME/p390Practice</code></p></li>
+<li><p><strong>Local</strong> (on your computer): <code>~/git_workspace/p390Practice</code></p></li>
+</ul>
+Changes you make locally don’t automatically appear on GitHub - you have to explicitly <strong>push</strong> them.
+
+<section id="view-repository-contents" class="level4" data-number="5.1.5.1">
+<h4 data-number="5.1.5.1" class="anchored" data-anchor-id="view-repository-contents"><span class="header-section-number">5.1.5.1</span> View Repository Contents</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Do you see a <code>.git</code> directory?</p>
+<details>
+<summary>
+Expected observation
+</summary>
+<p>The <code>.git</code> directory (hidden by default) contains all of git’s tracking information - the entire history, all branches, configuration, etc.</p>
+<p><strong>NEVER manually edit or delete the <code>.git</code> directory!</strong> This is where git stores everything.</p>
+Everything else in the folder is your “working directory” - the actual files you edit.
+</details>
+</section>
+<section id="check-repository-status" class="level4" data-number="5.1.5.2">
+<h4 data-number="5.1.5.2" class="anchored" data-anchor-id="check-repository-status"><span class="header-section-number">5.1.5.2</span> Check Repository Status</h4>
+<p>This is important. If multiple people are working on the same repository, which is very common, you will need to have all the latest changes from the principal repo first, before you push your local changes.</p>
+<p><strong>Task:</strong> This is how to do it in the terminal.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span>  <span class="co"># Verify you're in ~/git_workspace/p390Practice</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does <code>git status</code> tell you?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>You should see something like:</p>
+<pre><code>On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</code></pre>
+This means: - You’re on the “main” branch - Your local copy matches what’s on GitHub (“origin”) - You haven’t made any changes yet
+</details>
+</section>
+</section>
+<section id="explore-remote-repositories-your-clone-may-have-many" class="level3" data-number="5.1.6">
+<h3 data-number="5.1.6" class="anchored" data-anchor-id="explore-remote-repositories-your-clone-may-have-many"><span class="header-section-number">5.1.6</span> Explore Remote Repositories — Your clone may have many</h3>
+<p>Remotes are what they sound like. Locations that are following the same repository that you are.</p>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does “origin” refer to?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>You should see:</p>
+<pre><code>origin  https://github.com/YOUR-USERNAME/p390Practice.git (fetch)
+origin  https://github.com/YOUR-USERNAME/p390Practice.git (push)</code></pre>
+<p>“origin” is the default name for the remote repository you cloned from. In this case, origin is YOUR fork on GitHub.</p>
+We’ll add a second remote (the original course repo) later.
+</details>
+<section id="create-a-new-file" class="level4" data-number="5.1.6.1">
+<h4 data-number="5.1.6.1" class="anchored" data-anchor-id="create-a-new-file"><span class="header-section-number">5.1.6.1</span> Create a New File</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my_practice</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my_practice</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> learning_notes.txt</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Git is a version control system"</span> <span class="op">&gt;</span> learning_notes.txt</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> learning_notes.txt</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Did git automatically track this new file?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>No! Creating a file doesn’t automatically add it to git. Type <code>git status</code> and you’ll see it listed under “Untracked files”.</p>
+You have to explicitly tell git which files to track. This is a feature - it lets you have files in the directory that git ignores (like temporary files or local configurations).
+</details>
+</section>
+<section id="stage-your-changes-git-add" class="level4" data-number="5.1.6.2">
+<h4 data-number="5.1.6.2" class="anchored" data-anchor-id="stage-your-changes-git-add"><span class="header-section-number">5.1.6.2</span> Stage Your Changes (git add)</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status  <span class="co"># See that the directory is untracked</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status  <span class="co"># See the change</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What changed when you ran <code>git add</code>?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>After <code>git add</code>, the file moves from “Untracked files” to “Changes to be committed” (shown in green).</p>
+<p>This is called “staging” - you’re telling git “I want to include this change in my next commit.”</p>
+Think of staging as putting items in a shopping cart (you’ve selected them but haven’t checked out yet).
+</details>
+</section>
+<section id="commit-your-changes" class="level4" data-number="5.1.6.3">
+<h4 data-number="5.1.6.3" class="anchored" data-anchor-id="commit-your-changes"><span class="header-section-number">5.1.6.3</span> Commit Your Changes</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add my practice directory with learning notes"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does committing do? What does the <code>-m</code> flag mean?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>After committing, <code>git status</code> should show “nothing to commit, working tree clean”.</p>
+<p><strong>Commit</strong> = create a permanent snapshot of the staged changes.</p>
+<p><code>-m</code> lets you write the commit message directly in the command. The message should describe what changed and why.</p>
+<p>Good commit messages:</p>
+<ul>
+<li><p>✅ “Add learning notes file with git definition”</p></li>
+<li><p>✅ “Fix typo in analysis script”</p></li>
+<li><p>❌ “updated stuff”</p></li>
+<li><p>❌ “asdf”</p></li>
+</ul>
+</details>
+</section>
+<section id="view-commit-history" class="level4" data-number="5.1.6.4">
+<h4 data-number="5.1.6.4" class="anchored" data-anchor-id="view-commit-history"><span class="header-section-number">5.1.6.4</span> View Commit History</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Can you find your commit? What information does each commit show?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>Each commit shows:</p>
+<ul>
+<li><p><strong>Commit hash</strong>: unique identifier (long string of letters/numbers)</p></li>
+<li><p><strong>Author</strong>: name and email</p></li>
+<li><p><strong>Date</strong>: when the commit was made</p></li>
+<li><p><strong>Message</strong>: description of the change</p></li>
+</ul>
+<p>Press <code>q</code> to exit the log viewer.</p>
+Try: <code>git log --oneline</code> for a compact view Try: <code>git log --graph --oneline --all</code> for a visual tree
+</details>
+</section>
+<section id="make-more-changes" class="level4" data-number="5.1.6.5">
+<h4 data-number="5.1.6.5" class="anchored" data-anchor-id="make-more-changes"><span class="header-section-number">5.1.6.5</span> Make More Changes</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"GitHub is a hosting service for git repositories"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> my_practice/learning_notes.txt</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does <code>git status</code> show now?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Git detected that <code>learning_notes.txt</code> was modified. It shows under “Changes not staged for commit” (in red).</p>
+The file is tracked, but the new changes aren’t staged yet. You need to <code>git add</code> again to stage the new changes, even though the file is already tracked.
+</details>
+</section>
+<section id="the-add-commit-cycle" class="level4" data-number="5.1.6.6">
+<h4 data-number="5.1.6.6" class="anchored" data-anchor-id="the-add-commit-cycle"><span class="header-section-number">5.1.6.6</span> The Add-Commit Cycle</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add GitHub definition to learning notes"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> How many commits do you have now?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You should see your two new commits plus any that existed before.</p>
+<p>This is the fundamental git workflow:</p>
+<ol type="1">
+<li><p>Make changes to files</p></li>
+<li><p><code>git add</code> to stage changes</p></li>
+<li><p><code>git commit</code> to create snapshot</p></li>
+<li><p>Repeat</p></li>
+</ol>
+Each commit is a save point you can return to later.
+</details>
+</section>
+<section id="check-current-remotes" class="level4" data-number="5.1.6.7">
+<h4 data-number="5.1.6.7" class="anchored" data-anchor-id="check-current-remotes"><span class="header-section-number">5.1.6.7</span> Check Current Remotes</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> How many remotes do you have? What are they called?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>Right now you should only see “origin” (your fork on GitHub).</p>
+To collaborate effectively, we need to add a second remote: the original course repository (my repository that you forked from).
+</details>
+</section>
+<section id="add-upstream-remote" class="level4" data-number="5.1.6.8">
+<h4 data-number="5.1.6.8" class="anchored" data-anchor-id="add-upstream-remote"><span class="header-section-number">5.1.6.8</span> Add Upstream Remote</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/brittAnderson/p390Practice.git</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> How many remotes do you have now?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>You should now see:</p>
+<pre><code>origin    https://github.com/YOUR-USERNAME/p390Practice.git (fetch)
+origin    https://github.com/YOUR-USERNAME/p390Practice.git (push)
+upstream  https://github.com/brittAnderson/p390Practice.git (fetch)
+upstream  https://github.com/brittAnderson/p390Practice.git (push)</code></pre>
+<p><strong>origin</strong> = your fork (you can push to this) <strong>upstream</strong> = original repo (you can only pull from this)</p>
+This naming convention (origin/upstream) is standard in the git community.
+</details>
+</section>
+<section id="fetch-from-upstream" class="level4" data-number="5.1.6.9">
+<h4 data-number="5.1.6.9" class="anchored" data-anchor-id="fetch-from-upstream"><span class="header-section-number">5.1.6.9</span> Fetch from Upstream</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch upstream</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does “fetch” do? Did it change any of your files?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Fetch downloads commits from the remote but DOESN’T change your working files.</p>
+<p>Think of it as: “Download new information but don’t apply it yet.”</p>
+After fetching, git knows what’s new in the upstream repo, but your files remain unchanged until you merge.
+</details>
+</section>
+<section id="view-all-branches" class="level4" data-number="5.1.6.10">
+<h4 data-number="5.1.6.10" class="anchored" data-anchor-id="view-all-branches"><span class="header-section-number">5.1.6.10</span> View All Branches</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What branches do you see?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>You might see:</p>
+<ul>
+<li><p><code>* main</code> (your current local branch, marked with *)</p></li>
+<li><p><code>remotes/origin/main</code> (the main branch on your fork)</p></li>
+<li><p><code>remotes/upstream/main</code> (the main branch on the original repo)</p></li>
+</ul>
+Branches with <code>remotes/</code> are references to branches on GitHub, not local branches.
+</details>
+</section>
+<section id="pull-from-upstream" class="level4" data-number="5.1.6.11">
+<h4 data-number="5.1.6.11" class="anchored" data-anchor-id="pull-from-upstream"><span class="header-section-number">5.1.6.11</span> Pull from Upstream</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What happened? Did you see “Already up to date” or were changes merged?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p><code>git pull</code> = <code>git fetch</code> + <code>git merge</code></p>
+<p>If the upstream repo has new commits, they’re merged into your local branch. If there are no new commits, you see “Already up to date.”</p>
+This is how you keep your fork synchronized with the original repository. You’ll do this regularly to get new assignments, fixes, and updates.
+</details>
+</section>
+<section id="push-changes-to-your-fork" class="level4" data-number="5.1.6.12">
+<h4 data-number="5.1.6.12" class="anchored" data-anchor-id="push-changes-to-your-fork"><span class="header-section-number">5.1.6.12</span> Push Changes to Your Fork</h4>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does this command do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>This pushes your local commits to YOUR fork on GitHub (origin).</p>
+<p>The flow is:</p>
+<ol type="1">
+<li><p>Pull from upstream (get professor’s updates)</p></li>
+<li><p>Work locally (make your changes)</p></li>
+<li><p>Push to origin (your fork)</p></li>
+</ol>
+Check your fork on GitHub in a browser - you should now see your new commits there!
+</details>
+</section>
+<section id="verify-on-github" class="level4" data-number="5.1.6.13">
+<h4 data-number="5.1.6.13" class="anchored" data-anchor-id="verify-on-github"><span class="header-section-number">5.1.6.13</span> Verify on GitHub</h4>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Go to your fork: <code>https://github.com/YOUR-USERNAME/p390Practice</code></p></li>
+<li><p>Navigate to <code>my_practice/learning_notes.txt</code></p></li>
+<li><p>Click on the file to view it</p></li>
+</ol>
+<p><strong>Question to answer:</strong> Do you see your changes on GitHub?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>The file should contain both lines you added. The GitHub interface shows:</p>
+<ul>
+<li><p>The file contents</p></li>
+<li><p>When it was last modified</p></li>
+<li><p>The commit message</p></li>
+<li><p>Who made the change</p></li>
+</ul>
+If you don’t see your changes, make sure you ran <code>git push origin main</code> successfully.
+</details>
+</section>
+<section id="understanding-the-three-repository-model" class="level4" data-number="5.1.6.14">
+<h4 data-number="5.1.6.14" class="anchored" data-anchor-id="understanding-the-three-repository-model"><span class="header-section-number">5.1.6.14</span> Understanding the Three-Repository Model</h4>
+<p><strong>Task:</strong> Draw or describe the relationship between these three locations:</p>
+<ol type="1">
+<li><p>Your local repository (on your computer)</p></li>
+<li><p>Your fork (origin, on GitHub)</p></li>
+<li><p>The original repository (upstream, on GitHub)</p></li>
+</ol>
+<p><strong>Question to answer:</strong> Where can you make changes? Where can you only read?</p>
+<details>
+<summary>
+The model
+</summary>
+<pre><code>Upstream (brittAnderson/p390Practice)
+    ↓ fork (one time)
+    ↓ pull (regular updates)
+    ↓
+Origin (YOUR-USERNAME/p390Practice) on GitHub
+    ↕ push/pull
+    ↕
+Local (your computer)</code></pre>
+<p>You can:</p>
+<ul>
+<li><p><strong>Change freely</strong>: Local repository</p></li>
+<li><p><strong>Push changes to</strong>: Origin (your fork)</p></li>
+<li><p><strong>Pull from but not push to</strong>: Upstream (original repo)</p></li>
+</ul>
+To contribute to upstream, you create a pull request.
+</details>
+</section>
+</section>
+<section id="working-in-the-gitnames-directory" class="level3" data-number="5.1.7">
+<h3 data-number="5.1.7" class="anchored" data-anchor-id="working-in-the-gitnames-directory"><span class="header-section-number">5.1.7</span> Working in the gitnames Directory</h3>
+<section id="ensure-you-have-latest-changes" class="level4" data-number="5.1.7.1">
+<h4 data-number="5.1.7.1" class="anchored" data-anchor-id="ensure-you-have-latest-changes"><span class="header-section-number">5.1.7.1</span> Ensure You Have Latest Changes</h4>
+<p><strong>Task</strong></p>
+<pre><code>cd git_workspace/p390Practice
+git status upstream main
+git status origin main</code></pre>
+<p><strong>Question to answer:</strong></p>
+<p>Why do we pull from upstream before starting work?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>This ensures that you have the latest changes from the original repo, including any files other students have added.</p>
+<p>This avoids conflicts and ensures you’re working with the most up-to-date version.</p>
+Always start your work session with this pull-merge-push sequence.
+</details>
+</section>
+</section>
+<section id="navigate-to-gitnames-directory" class="level3" data-number="5.1.8">
+<h3 data-number="5.1.8" class="anchored" data-anchor-id="navigate-to-gitnames-directory"><span class="header-section-number">5.1.8</span> Navigate to gitnames Directory</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> gitnames</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Do you see files from other students?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You should see <code>.txt</code> files named after other students (if any have submitted their pull requests yet).</p>
+This directory is where everyone adds their file - it’s a shared space for practicing collaboration.
+</details>
+</section>
+<section id="create-your-file" class="level3" data-number="5.1.9">
+<h3 data-number="5.1.9" class="anchored" data-anchor-id="create-your-file"><span class="header-section-number">5.1.9</span> Create Your File</h3>
+<p><strong>Task:</strong> Create a file with your first name (replace YOURNAME):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> YOURNAME.txt</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I am learning git and GitHub for Psychology 390"</span> <span class="op">&gt;</span> YOURNAME.txt</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Git helps me track changes and collaborate effectively"</span> <span class="op">&gt;&gt;</span> YOURNAME.txt</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> YOURNAME.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Does the file exist? What does it contain?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You created a personalized file in the gitnames directory.</p>
+<p>Example: If your name is Alex, you’d create <code>alex.txt</code>.</p>
+This file will eventually be added to the original repository through a pull request - your first contribution to a collaborative project!
+</details>
+</section>
+<section id="check-status" class="level3" data-number="5.1.10">
+<h3 data-number="5.1.10" class="anchored" data-anchor-id="check-status"><span class="header-section-number">5.1.10</span> Check Status</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Where is your new file listed?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>Your file should appear under “Untracked files” in red.</p>
+Git sees the file but isn’t tracking it yet - you need to explicitly add it.
+</details>
+</section>
+<section id="stage-your-file" class="level3" data-number="5.1.11">
+<h3 data-number="5.1.11" class="anchored" data-anchor-id="stage-your-file"><span class="header-section-number">5.1.11</span> Stage Your File</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add gitnames/YOURNAME.txt</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What changed?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>The file moved from “Untracked files” to “Changes to be committed” (shown in green).</p>
+It’s now staged and ready to commit.
+</details>
+</section>
+<section id="commit-your-change" class="level3" data-number="5.1.12">
+<h3 data-number="5.1.12" class="anchored" data-anchor-id="commit-your-change"><span class="header-section-number">5.1.12</span> Commit Your Change</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add [YOURNAME] to gitnames directory"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace [YOURNAME] with your actual name.</p>
+<p><strong>Question to answer:</strong> Why is a good commit message important?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Good commit messages: - Explain WHAT changed - Sometimes explain WHY (if not obvious) - Use present tense: “Add file” not “Added file” - Are specific: “Add alex.txt to gitnames” not “updated stuff”</p>
+When collaborating, clear commit messages help others understand the project’s history.
+</details>
+</section>
+<section id="check-log" class="level3" data-number="5.1.13">
+<h3 data-number="5.1.13" class="anchored" data-anchor-id="check-log"><span class="header-section-number">5.1.13</span> 5.7 Check Log</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">-5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Can you see your commit?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>Your commit should be at the top of the list (most recent).</p>
+The <code>-5</code> flag shows only the last 5 commits for brevity.
+</details>
+</section>
+<section id="push-to-your-fork" class="level3" data-number="5.1.14">
+<h3 data-number="5.1.14" class="anchored" data-anchor-id="push-to-your-fork"><span class="header-section-number">5.1.14</span> Push to Your Fork</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Where did this change go?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Your commit is now on YOUR fork on GitHub (origin), but NOT yet on the original repository (upstream).</p>
+<p>To get it into the upstream repo, you need to create a pull request (next exercise set).</p>
+Verify on GitHub: Go to <code>github.com/YOUR-USERNAME/p390Practice</code> and look in the gitnames directory.
+</details>
+</section>
+<section id="verify-on-github-1" class="level3" data-number="5.1.15">
+<h3 data-number="5.1.15" class="anchored" data-anchor-id="verify-on-github-1"><span class="header-section-number">5.1.15</span> Verify on GitHub</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Open your fork in a browser: <code>https://github.com/YOUR-USERNAME/p390Practice</code></p></li>
+<li><p>Navigate to the gitnames directory</p></li>
+<li><p>Find your file</p></li>
+</ol>
+<p><strong>Question to answer:</strong> Is your file visible on GitHub?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You should see your file in the directory listing. If you click on it, you’ll see its contents and the commit message.</p>
+If you don’t see it, verify you successfully completed the push in 5.8.
+</details>
+</section>
+<section id="compare-with-original" class="level3" data-number="5.1.16">
+<h3 data-number="5.1.16" class="anchored" data-anchor-id="compare-with-original"><span class="header-section-number">5.1.16</span> Compare with Original</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Open the original repo: <code>https://github.com/brittAnderson/p390Practice</code></p></li>
+<li><p>Navigate to gitnames</p></li>
+<li><p>Look for your file</p></li>
+</ol>
+<p><strong>Question to answer:</strong> Is your file there?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Your file is NOT in the original repository yet!</p>
+<p>Your changes are:</p>
+<ul>
+<li><p>✅ On your local computer</p></li>
+<li><p>✅ On your fork (origin)</p></li>
+<li><p>❌ NOT on the original repo (upstream)</p></li>
+</ul>
+The original repository is protected - you can’t directly push to it. Instead, you request that the maintainer (me) pull your changes. That’s called a “pull request.”
+</details>
+</section>
+</section>
+<section id="creating-a-pull-request" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="creating-a-pull-request"><span class="header-section-number">5.2</span> Creating a Pull Request</h2>
+<section id="navigate-to-your-fork" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="navigate-to-your-fork"><span class="header-section-number">5.2.1</span> Navigate to Your Fork</h3>
+<p><strong>Task:</strong> Go to your fork on GitHub: <code>https://github.com/YOUR-USERNAME/p390Practice</code></p>
+<p><strong>Question to answer:</strong> Do you see a yellow banner saying “This branch is X commits ahead of brittAnderson:main”?</p>
+<details>
+<summary>
+Expected observation
+</summary>
+<p>If you see this banner, it means your fork has commits that aren’t in the original repository.</p>
+<p>This confirms you have changes ready to submit via pull request.</p>
+If you don’t see this, make sure you pushed your changes in the previous exercise set.
+</details>
+</section>
+<section id="initiate-pull-request" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="initiate-pull-request"><span class="header-section-number">5.2.2</span> Initiate Pull Request</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Click “Contribute” (green button)</p></li>
+<li><p>Click “Open pull request”</p></li>
+<li><p>You’ll be taken to the original repository with a comparison view</p></li>
+</ol>
+<p><strong>Question to answer:</strong> What two branches are being compared?</p>
+<details>
+<summary>
+Expected view
+</summary>
+<p>You should see:</p>
+<ul>
+<li><p><strong>Base repository</strong>: <code>brittAnderson/p390Practice</code> base: <code>main</code></p></li>
+<li><p><strong>Head repository</strong>: <code>YOUR-USERNAME/p390Practice</code> compare: <code>main</code></p></li>
+</ul>
+<p>This means: “I want to merge changes from MY main branch into the ORIGINAL main branch”</p>
+Below this, you’ll see a list of commits and file changes - everything you’re proposing to add.
+</details>
+</section>
+<section id="write-pull-request-description" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="write-pull-request-description"><span class="header-section-number">5.2.3</span> Write Pull Request Description</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Title: “Add [YOURNAME] to gitnames directory”</p></li>
+<li><p>Description: Write a brief message explaining your change. For example:</p></li>
+</ol>
+<p>This pull request adds my name file to the gitnames directory as requested in Exercise Set 5.</p>
+<ul>
+<li><p>Created YOURNAME.txt with learning reflections</p></li>
+<li><p>Following P390 course requirements</p></li>
+</ul>
+<p><strong>Question to answer:</strong> Why is a clear description helpful?</p>
+<details>
+<summary>
+Best practices
+</summary>
+<p>Pull request descriptions should:</p>
+<ul>
+<li><p>Summarize what changed and why</p></li>
+<li><p>Reference any relevant issues or requirements</p></li>
+<li><p>Explain anything non-obvious</p></li>
+<li><p>Be polite and professional</p></li>
+</ul>
+<p>The repository maintainer (me) will read this to understand your contribution before merging.</p>
+Think of pull requests as formal requests to add your work to a project.
+</details>
+</section>
+<section id="create-the-pull-request" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="create-the-pull-request"><span class="header-section-number">5.2.4</span> Create the Pull Request</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Review your changes in the “Files changed” tab</p></li>
+<li><p>Click “Create pull request”</p></li>
+<li><p>Note the pull request number (e.g., #42)</p></li>
+</ol>
+<p><strong>Question to answer:</strong> What number is your pull request?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You’ve created your first pull request!</p>
+<p>The PR now appears in the original repository’s pull request list. The maintainer (me) can:</p>
+<ul>
+<li><p>Review your changes</p></li>
+<li><p>Leave comments</p></li>
+<li><p>Request modifications</p></li>
+<li><p>Merge (accept) your changes</p></li>
+<li><p>Close without merging (reject)</p></li>
+</ul>
+Your changes are still only in your fork until the PR is merged.
+</details>
+</section>
+<section id="view-your-pull-request" class="level3" data-number="5.2.5">
+<h3 data-number="5.2.5" class="anchored" data-anchor-id="view-your-pull-request"><span class="header-section-number">5.2.5</span> View Your Pull Request</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Go to <code>https://github.com/brittAnderson/p390Practice/pulls</code></p></li>
+<li><p>Find your pull request in the list</p></li>
+<li><p>Click on it to see details</p></li>
+</ol>
+<p><strong>Question to answer:</strong> What information is displayed on the pull request page?</p>
+<details>
+<summary>
+Expected view
+</summary>
+<p>You should see:</p>
+<ul>
+<li><p>Title and description</p></li>
+<li><p>Status (Open/Merged/Closed)</p></li>
+<li><p>Commits included</p></li>
+<li><p>Files changed</p></li>
+<li><p>Discussion/comments</p></li>
+<li><p>Checks (automated tests, if configured)</p></li>
+</ul>
+This is the collaboration interface where you and the maintainer can discuss the changes.
+</details>
+</section>
+<section id="understanding-pull-request-status" class="level3" data-number="5.2.6">
+<h3 data-number="5.2.6" class="anchored" data-anchor-id="understanding-pull-request-status"><span class="header-section-number">5.2.6</span> Understanding Pull Request Status</h3>
+<p><strong>Task:</strong></p>
+<p>Check your pull request status. It will be one of:</p>
+<ul>
+<li><p><strong>Open</strong> (pending review)</p></li>
+<li><p><strong>Merged</strong> (accepted and integrated)</p></li>
+<li><p><strong>Closed</strong> (not accepted)</p></li>
+</ul>
+<p><strong>Question to answer:</strong> What’s the current status of your PR?</p>
+<details>
+<summary>
+What happens next
+</summary>
+<p>The repository maintainer will: 1. Review your changes 2. May leave comments or request changes 3. Will eventually merge (accept) or close (reject)</p>
+<p>When merged, your changes become part of the original repository!</p>
+You’ll get email notifications about any activity on your PR.
+</details>
+</section>
+<section id="after-pr-is-merged" class="level3" data-number="5.2.7">
+<h3 data-number="5.2.7" class="anchored" data-anchor-id="after-pr-is-merged"><span class="header-section-number">5.2.7</span> After PR is Merged</h3>
+<p><strong>Task:</strong></p>
+<p>Once your PR is merged (you’ll get a notification), update your local repository:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does this accomplish?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>This synchronizes everything:</p>
+<ol type="1">
+<li><p><code>git pull upstream main</code> - downloads the merged changes from the original repo (which now includes your contribution AND contributions from other students)</p></li>
+<li><p><code>git push origin main</code> - updates your fork to match</p></li>
+</ol>
+Now all three locations (local, origin, upstream) have the same code.
+</details>
+</section>
+<section id="see-everyones-contributions" class="level3" data-number="5.2.8">
+<h3 data-number="5.2.8" class="anchored" data-anchor-id="see-everyones-contributions"><span class="header-section-number">5.2.8</span> See Everyone’s Contributions</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice/gitnames</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> How many files are there now?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You should see files from multiple students - everyone who has had their pull request merged.</p>
+<p>This is collaborative version control in action! Everyone contributed their file, and git managed merging all changes together.</p>
+If there were any conflicts (two people editing the same line), the maintainer would have resolved them during the merge.
+</details>
+</section>
+<section id="view-merged-commit" class="level3" data-number="5.2.9">
+<h3 data-number="5.2.9" class="anchored" data-anchor-id="view-merged-commit"><span class="header-section-number">5.2.9</span> View Merged Commit</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--all</span> <span class="at">--graph</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Can you identify the merge commit that brought your changes into the original repository?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p>You should see a graph showing:</p>
+<ul>
+<li><p>Your commits</p></li>
+<li><p>Other students’ commits</p></li>
+<li><p>Merge commits (where pull requests were merged)</p></li>
+</ul>
+<p>The graph visualizes the project’s collaborative history.</p>
+Press <code>q</code> to exit.
+</details>
+</section>
+</section>
+<section id="opening-an-issue" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="opening-an-issue"><span class="header-section-number">5.3</span> Opening an Issue</h2>
+<section id="understanding-issues" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="understanding-issues"><span class="header-section-number">5.3.1</span> Understanding Issues</h3>
+<p><strong>Task:</strong></p>
+<p>Go to <code>https://github.com/brittAnderson/uwlooP390/issues</code></p>
+<p><strong>Question to answer:</strong> What kinds of things do you see reported in the issues?</p>
+<details>
+<summary>
+Expected observations
+</summary>
+<p>Issues are used for:</p>
+<ul>
+<li><p>Bug reports (“The install instructions don’t work on Mac”)</p></li>
+<li><p>Feature requests (“Could we add examples for SPSS users?”)</p></li>
+<li><p>Questions (“How do I set up RStudio?”)</p></li>
+<li><p>Documentation problems (“The README is unclear about X”)</p></li>
+<li><p>Discussions about the project</p></li>
+</ul>
+<p>Issues are NOT for:</p>
+<ul>
+<li><p>General chat</p></li>
+<li><p>Personal technical support unrelated to the project</p></li>
+<li><p>Spam</p></li>
+</ul>
+Think of issues as a project’s to-do list and discussion forum combined.
+</details>
+</section>
+<section id="navigate-to-practice-repository-issues" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="navigate-to-practice-repository-issues"><span class="header-section-number">5.3.2</span> Navigate to Practice Repository Issues</h3>
+<p><strong>Task:</strong></p>
+<p>Go to <code>https://github.com/brittAnderson/p390Practice/issues</code></p>
+<p><strong>Question to answer:</strong> Are there any open issues? What are they about?</p>
+<details>
+<summary>
+Expected view
+</summary>
+<p>You might see:</p>
+<ul>
+<li><p>Issues from other students</p></li>
+<li><p>My responses to issues</p></li>
+<li><p>Closed issues (resolved problems)</p></li>
+</ul>
+This is where the class can ask questions and report problems.
+</details>
+</section>
+<section id="create-an-issue" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="create-an-issue"><span class="header-section-number">5.3.3</span> Create an Issue</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Click “New issue”</p></li>
+<li><p>Title: “Practice issue from [YOUR NAME]”</p></li>
+<li><p>Description: Write a brief message. For example:</p></li>
+</ol>
+<p>This is a practice issue to demonstrate understanding of GitHub’s issue system.</p>
+<p>I have successfully:</p>
+<ul>
+<li><p>Created a GitHub account</p></li>
+<li><p>Forked the practice repository</p></li>
+<li><p>Created a pull request</p></li>
+<li><p>Opened this issue</p></li>
+</ul>
+<p>This issue can be closed after verification.</p>
+<ol start="4" type="1">
+<li>Click “Submit new issue”</li>
+</ol>
+<p><strong>Question to answer:</strong> What number is your issue?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Your issue now appears in the issue list. Note the issue number (e.g., #15).</p>
+Issues are numbered sequentially across the repository. Your pull request and issues share the same numbering system.
+</details>
+</section>
+<section id="record-your-issue-number" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="record-your-issue-number"><span class="header-section-number">5.3.4</span> Record Your Issue Number</h3>
+<p><strong>Task:</strong></p>
+<p>In a text file on your computer, record:</p>
+<ul>
+<li><p>Your GitHub username</p></li>
+<li><p>Your pull request number</p></li>
+<li><p>Your issue number</p></li>
+</ul>
+<p>Save this as <code>github_completion.txt</code></p>
+<p><strong>Question to answer:</strong> Why might this information be important?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>In a course setting, this information helps the instructor:</p>
+<ul>
+<li><p>Match GitHub activity to students</p></li>
+<li><p>Verify that you completed the exercises</p></li>
+<li><p>Track contributions</p></li>
+</ul>
+In real projects, you’d reference issue numbers in commits and pull requests to link related work.
+</details>
+</section>
+<section id="use-issues-constructively" class="level3" data-number="5.3.5">
+<h3 data-number="5.3.5" class="anchored" data-anchor-id="use-issues-constructively"><span class="header-section-number">5.3.5</span> Use Issues Constructively</h3>
+<p><strong>Task:</strong></p>
+<p>Read through some issues on the course repository: <code>https://github.com/brittAnderson/uwlooP390/issues</code></p>
+<p><strong>Question to answer:</strong> What makes a good issue report?</p>
+<details>
+<summary>
+Best practices
+</summary>
+<p>Good issues:</p>
+<ul>
+<li><p>Have clear, descriptive titles</p></li>
+<li><p>Explain the problem or request completely</p></li>
+<li><p>Include steps to reproduce (for bugs)</p></li>
+<li><p>Are respectful and professional</p></li>
+<li><p>Stay on topic</p></li>
+</ul>
+<p>Bad issues:</p>
+<ul>
+<li><p>“It doesn’t work” (too vague)</p></li>
+<li><p>Off-topic or spam</p></li>
+<li><p>Rude or demanding</p></li>
+<li><p>Duplicate existing issues</p></li>
+</ul>
+Before creating an issue, search to see if someone else already reported the same problem.
+</details>
+</section>
+<section id="comment-on-an-issue" class="level3" data-number="5.3.6">
+<h3 data-number="5.3.6" class="anchored" data-anchor-id="comment-on-an-issue"><span class="header-section-number">5.3.6</span> Comment on an Issue</h3>
+<p><strong>Task:</strong></p>
+<p>Find any open issue (yours or someone else’s) and add a comment:</p>
+<ul>
+<li><p>If it’s your issue: Add “Issue number recorded for course requirements”</p></li>
+<li><p>If it’s someone else’s: Add a helpful observation or supportive comment</p></li>
+</ul>
+<p><strong>Question to answer:</strong> How does commenting help collaboration?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Comments on issues allow:</p>
+<ul>
+<li><p>Discussion of solutions</p></li>
+<li><p>Requests for clarification</p></li>
+<li><p>Sharing of workarounds</p></li>
+<li><p>Building on others’ ideas</p></li>
+<li><p>Keeping everyone informed</p></li>
+</ul>
+Issues become threaded conversations that document how problems were solved.
+</details>
+</section>
+<section id="understand-issue-labels" class="level3" data-number="5.3.7">
+<h3 data-number="5.3.7" class="anchored" data-anchor-id="understand-issue-labels"><span class="header-section-number">5.3.7</span> Understand Issue Labels</h3>
+<p><strong>Task:</strong></p>
+<p>Look at issues on the main course repo and note any labels (like “bug”, “question”, “enhancement”)</p>
+<p><strong>Question to answer:</strong> How do labels help organize issues?</p>
+<details>
+<summary>
+Expected observation
+</summary>
+<p>Labels categorize issues:</p>
+<ul>
+<li><p><strong>bug</strong>: Something isn’t working</p></li>
+<li><p><strong>enhancement</strong>: Feature request</p></li>
+<li><p><strong>question</strong>: Need help or clarification</p></li>
+<li><p><strong>documentation</strong>: Docs need improvement</p></li>
+<li><p><strong>good first issue</strong>: Beginner-friendly</p></li>
+</ul>
+<p>Labels help people find relevant issues and prioritize work.</p>
+Repository maintainers assign labels, though some repos let contributors suggest them.
+</details>
+</section>
+<section id="close-your-practice-issue" class="level3" data-number="5.3.8">
+<h3 data-number="5.3.8" class="anchored" data-anchor-id="close-your-practice-issue"><span class="header-section-number">5.3.8</span> Close Your Practice Issue</h3>
+<p><strong>Task:</strong></p>
+<ol type="1">
+<li><p>Go to your practice issue</p></li>
+<li><p>Add a comment: “Exercise completed, closing issue”</p></li>
+<li><p>Click “Close issue”</p></li>
+</ol>
+<p><strong>Question to answer:</strong> What happens to closed issues?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Closed issues:</p>
+<ul>
+<li><p>Are marked as resolved</p></li>
+<li><p>Remain visible in the issue list (with “Closed” filter)</p></li>
+<li><p>Can be reopened if needed</p></li>
+<li><p>Are searchable forever</p></li>
+</ul>
+Closing doesn’t delete - it just marks as done. The conversation history is preserved for future reference.
+</details>
+</section>
+<section id="using-issues-for-learning" class="level3" data-number="5.3.9">
+<h3 data-number="5.3.9" class="anchored" data-anchor-id="using-issues-for-learning"><span class="header-section-number">5.3.9</span> Using Issues for Learning</h3>
+<p><strong>Task:</strong></p>
+<p>Think about situations where you might open a real issue on the uwlooP390 repository.</p>
+<p><strong>Question to answer:</strong></p>
+<p>What kinds of problems or questions would be appropriate to report as issues?</p>
+<details>
+<summary>
+Appropriate uses
+</summary>
+<p>Good reasons to open an issue:</p>
+<ul>
+<li><p>Assignment instructions are unclear</p></li>
+<li><p>You found a typo in course materials</p></li>
+<li><p>Installation instructions don’t work</p></li>
+<li><p>You have a suggestion for improvement</p></li>
+<li><p>You need clarification on requirements</p></li>
+</ul>
+The issue tracker is a resource for all students - if you’re confused, others probably are too!
+</details>
+</section>
+<section id="reflection-on-collaborative-features" class="level3" data-number="5.3.10">
+<h3 data-number="5.3.10" class="anchored" data-anchor-id="reflection-on-collaborative-features"><span class="header-section-number">5.3.10</span> Reflection on Collaborative Features</h3>
+<p><strong>Task:</strong></p>
+<p>Think about how pull requests and issues work together.</p>
+<p><strong>Question to answer:</strong></p>
+<p>How do pull requests and issues relate? How might you reference an issue in a pull request?</p>
+<details>
+<summary>
+The connection
+</summary>
+<p>Pull requests and issues work together:</p>
+<ul>
+<li><p>Issues identify problems</p></li>
+<li><p>Pull requests propose solutions</p></li>
+</ul>
+<p>You can reference issues in PR descriptions:</p>
+<ul>
+<li><p>“Fixes #23” - automatically closes issue #23 when PR is merged</p></li>
+<li><p>“Relates to #15” - links to issue without closing it</p></li>
+</ul>
+This creates a traceable history: from problem identification (issue) to solution (PR) to implementation (merge).
+</details>
+</section>
+</section>
+<section id="real-world-workflow-practice" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="real-world-workflow-practice"><span class="header-section-number">5.4</span> Real-World Workflow Practice</h2>
+<section id="create-a-work-branch-optional-advanced" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="create-a-work-branch-optional-advanced"><span class="header-section-number">5.4.1</span> 8.1 Create a Work Branch (Optional Advanced)</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> my-experiments</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What did this do?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>You created and switched to a new branch called “my-experiments”.</p>
+<p>Branches let you work on different things independently: - <code>main</code> branch: stable, synchronized code - <code>my-experiments</code> branch: where you try new things</p>
+This is optional but common in professional workflows. Changes on this branch don’t affect main until you explicitly merge them.
+</details>
+</section>
+<section id="practice-making-changes" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="practice-making-changes"><span class="header-section-number">5.4.2</span> 8.2 Practice Making Changes</h3>
+<p><strong>Task:</strong> Create a practice file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> experiments</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Experiment 1: Testing git workflow"</span> <span class="op">&gt;</span> experiments/notes.txt</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add experiments/notes.txt</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add experiment notes"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Is this change on your main branch?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>No! This commit is only on the <code>my-experiments</code> branch.</p>
+<p>Type <code>git checkout main</code> to switch back to main, then <code>ls</code> - the experiments directory isn’t there.</p>
+<p>Type <code>git checkout my-experiments</code> and <code>ls</code> again - now it appears.</p>
+Branches are independent lines of development.
+</details>
+</section>
+<section id="merge-branch-into-main-optional-advanced" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="merge-branch-into-main-optional-advanced"><span class="header-section-number">5.4.3</span> 8.3 Merge Branch into Main (Optional Advanced)</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge my-experiments</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Is the experiments directory now in main?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>Yes! Merging brought the changes from <code>my-experiments</code> into <code>main</code>.</p>
+<p>This is how you incorporate experimental work into the main codebase once you’re satisfied with it.</p>
+Delete the branch if done: <code>git branch -d my-experiments</code>
+</details>
+</section>
+<section id="simulate-regular-workflow" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="simulate-regular-workflow"><span class="header-section-number">5.4.4</span> 8.4 Simulate Regular Workflow</h3>
+<p><strong>Task:</strong> Practice this sequence (which you’ll do often):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start of work session</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main  <span class="co"># Get latest from course repo</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Update your fork</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Do your work</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"New learning point"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add new learning point"</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a><span class="co"># End of work session</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Save your work to GitHub</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Why is this sequence important?</p>
+<details>
+<summary>
+Expected outcome
+</summary>
+<p>This workflow ensures:</p>
+<ol type="1">
+<li><p>You always have the latest changes</p></li>
+<li><p>Your work is backed up on GitHub</p></li>
+<li><p>You can collaborate without conflicts</p></li>
+</ol>
+<p>Make this a habit:</p>
+<ul>
+<li><p>Start each session: pull upstream, push to origin</p></li>
+<li><p>Work locally: add, commit frequently</p></li>
+<li><p>End each session: push to origin</p></li>
+</ul>
+</details>
+</section>
+<section id="understanding-merge-conflicts" class="level3" data-number="5.4.5">
+<h3 data-number="5.4.5" class="anchored" data-anchor-id="understanding-merge-conflicts"><span class="header-section-number">5.4.5</span> 8.5 Understanding Merge Conflicts</h3>
+<p><strong>Task:</strong> Read about merge conflicts (you don’t need to create one now):</p>
+<p>A merge conflict happens when:</p>
+<ul>
+<li><p>Two people edit the same line of the same file</p></li>
+<li><p>Git can’t automatically determine which version to keep</p></li>
+</ul>
+<p><strong>Question to answer:</strong> How would you avoid conflicts in collaborative work?</p>
+<details>
+<summary>
+Prevention strategies
+</summary>
+<p>To minimize conflicts:</p>
+<ul>
+<li><p>Pull from upstream frequently</p></li>
+<li><p>Communicate with collaborators about what you’re working on</p></li>
+<li><p>Commit and push regularly</p></li>
+<li><p>Work on different files when possible</p></li>
+<li><p>If you must edit the same file, work on different sections</p></li>
+</ul>
+When conflicts do occur, git marks them in the file and you manually choose which version to keep.
+</details>
+</section>
+<section id="check-remote-relationship" class="level3" data-number="5.4.6">
+<h3 data-number="5.4.6" class="anchored" data-anchor-id="check-remote-relationship"><span class="header-section-number">5.4.6</span> 8.6 Check Remote Relationship</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-vv</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does <code>-vv</code> show you?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p><code>git branch -vv</code> shows:</p>
+<ul>
+<li><p>Which branch you’re on</p></li>
+<li><p>The last commit</p></li>
+<li><p>Which remote branch it tracks</p></li>
+</ul>
+<p>Example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">*</span> main abc1234 <span class="pp">[</span><span class="ss">origin/main</span><span class="pp">]</span> Latest commit message</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+This confirms your local main tracks origin/main (your fork’s main branch).
+</details>
+</section>
+<section id="practice-git-status-awareness" class="level3" data-number="5.4.7">
+<h3 data-number="5.4.7" class="anchored" data-anchor-id="practice-git-status-awareness"><span class="header-section-number">5.4.7</span> 8.7 Practice git status Awareness</h3>
+<p><strong>Task:</strong> Make it a habit to run <code>git status</code> frequently while working.</p>
+<p><strong>Question to answer:</strong> What are the possible states you might see?</p>
+<details>
+<summary>
+Common states
+</summary>
+<ul>
+<li><p><strong>Clean working tree</strong>: No changes since last commit</p></li>
+<li><p><strong>Untracked files</strong>: New files git isn’t tracking (red)</p></li>
+<li><p><strong>Changes not staged</strong>: Modified tracked files, not added (red)</p></li>
+<li><p><strong>Changes to be committed</strong>: Staged files, ready to commit (green)</p></li>
+<li><p><strong>Branch ahead/behind</strong>: Local differs from remote</p></li>
+</ul>
+<code>git status</code> is your most important diagnostic command. Use it constantly!
+</details>
+</section>
+<section id="view-what-changed" class="level3" data-number="5.4.8">
+<h3 data-number="5.4.8" class="anchored" data-anchor-id="view-what-changed"><span class="header-section-number">5.4.8</span> 8.8 View What Changed</h3>
+<p><strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Another line"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff my_practice/learning_notes.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> What does <code>git diff</code> show?</p>
+<details>
+<summary>
+Expected output
+</summary>
+<p><code>git diff</code> shows exactly what changed:</p>
+<ul>
+<li><p>Lines removed (preceded by <code>-</code>, shown in red)</p></li>
+<li><p>Lines added (preceded by <code>+</code>, shown in green)</p></li>
+<li><p>Context lines (unchanged)</p></li>
+</ul>
+<p>This lets you review changes before committing.</p>
+<p>Use:</p>
+<ul>
+<li><p><code>git diff</code> - unstaged changes</p></li>
+<li><p><code>git diff --staged</code> - staged changes</p></li>
+<li><p><code>git diff HEAD</code> - all changes since last commit</p></li>
+</ul>
+</details>
+</section>
+<section id="undo-mistakes-safely" class="level3" data-number="5.4.9">
+<h3 data-number="5.4.9" class="anchored" data-anchor-id="undo-mistakes-safely"><span class="header-section-number">5.4.9</span> 8.9 Undo Mistakes Safely</h3>
+<p><strong>Task:</strong> Learn these safety commands (don’t run them unless needed):</p>
+<p><strong>Discard unstaged changes to a file:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--</span> filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Unstage a file (keep the changes):</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset HEAD filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Amend the last commit (before pushing):</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> <span class="at">-m</span> <span class="st">"New message"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Question to answer:</strong> Why is it important to know how to undo changes?</p>
+<details>
+<summary>
+Safety knowledge
+</summary>
+<p>Everyone makes mistakes:</p>
+<ul>
+<li><p>You edit the wrong file</p></li>
+<li><p>You commit with a bad message</p></li>
+<li><p>You stage files you didn’t mean to</p></li>
+</ul>
+<p>Knowing how to safely undo changes prevents panic and destructive solutions (like deleting the repository and starting over).</p>
+<strong>IMPORTANT</strong>: These undo commands are safe BEFORE pushing. After pushing, you need different approaches.
+</details>
+</section>
+<section id="final-workflow-check" class="level3" data-number="5.4.10">
+<h3 data-number="5.4.10" class="anchored" data-anchor-id="final-workflow-check"><span class="header-section-number">5.4.10</span> 8.10 Final Workflow Check</h3>
+<p><strong>Task:</strong> Verify your complete understanding by describing each step:</p>
+<ol type="1">
+<li><p>How do you get changes from the original course repo?</p></li>
+<li><p>How do you save your work locally?</p></li>
+<li><p>How do you back up your work to GitHub?</p></li>
+<li><p>How do you propose changes to the original repo?</p></li>
+<li><p>How do you report problems or ask questions?</p></li>
+</ol>
+<details>
+<summary>
+Complete workflow summary
+</summary>
+<ol type="1">
+<li><p><strong>Get updates</strong>: <code>git pull upstream main</code></p></li>
+<li><p><strong>Save locally</strong>: <code>git add files</code>, then <code>git commit -m "message"</code></p></li>
+<li><p><strong>Back up</strong>: <code>git push origin main</code></p></li>
+<li><p><strong>Propose changes</strong>: Create a pull request on GitHub</p></li>
+<li><p><strong>Report problems</strong>: Open an issue on GitHub</p></li>
+</ol>
+<p>Additional commands you’ve learned:</p>
+<ul>
+<li><p><code>git status</code> - check what’s changed</p></li>
+<li><p><code>git log</code> - view history</p></li>
+<li><p><code>git diff</code> - see specific changes</p></li>
+<li><p><code>git remote -v</code> - check remotes</p></li>
+<li><p><code>git branch</code> - manage branches</p></li>
+</ul>
+This is professional version control!
+</details>
+</section>
+</section>
+<section id="self-assessment-checklist" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="self-assessment-checklist"><span class="header-section-number">5.5</span> Self-Assessment Checklist</h2>
+<p>After completing these exercises, you should be able to:</p>
+<p><strong>Basic Operations:</strong></p>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Create and configure a GitHub account</label></p></li>
+<li><p><label><input type="checkbox">Fork repositories</label></p></li>
+<li><p><label><input type="checkbox">Clone repositories to your computer</label></p></li>
+<li><p><label><input type="checkbox">Check repository status (<code>git status</code>)</label></p></li>
+<li><p><label><input type="checkbox">View commit history (<code>git log</code>)</label></p></li>
+</ul>
+<p><strong>Making Changes:</strong></p>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Create and edit files</label></p></li>
+<li><p><label><input type="checkbox">Stage changes (<code>git add</code>)</label></p></li>
+<li><p><label><input type="checkbox">Commit changes with good messages (<code>git commit</code>)</label></p></li>
+<li><p><label><input type="checkbox">Push changes to your fork (<code>git push</code>)</label></p></li>
+</ul>
+<p><strong>Collaboration:</strong></p>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Add upstream remote</label></p></li>
+<li><p><label><input type="checkbox">Pull from upstream (<code>git pull upstream main</code>)</label></p></li>
+<li><p><label><input type="checkbox">Keep fork synchronized</label></p></li>
+<li><p><label><input type="checkbox">Create pull requests</label></p></li>
+<li><p><label><input type="checkbox">Open and comment on issues</label></p></li>
+</ul>
+<p><strong>Understanding:</strong></p>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Explain the difference between local, origin, and upstream</label></p></li>
+<li><p><label><input type="checkbox">Describe the purpose of committing, pushing, and pulling</label></p></li>
+<li><p><label><input type="checkbox">Understand why pull requests are necessary</label></p></li>
+<li><p><label><input type="checkbox">Know when to use issues vs pull requests</label></p></li>
+</ul>
+<hr>
+</section>
+<section id="common-pitfalls-and-solutions" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="common-pitfalls-and-solutions"><span class="header-section-number">5.6</span> Common Pitfalls and Solutions</h2>
+<section id="permission-denied-when-pushing" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="permission-denied-when-pushing"><span class="header-section-number">5.6.1</span> “Permission denied” when pushing</h3>
+<p><strong>Problem</strong>: Trying to push to upstream instead of origin</p>
+<p><strong>Solution</strong>: Always <code>git push origin main</code>, never push to upstream</p>
+</section>
+<section id="please-commit-your-changes-or-stash-them" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="please-commit-your-changes-or-stash-them"><span class="header-section-number">5.6.2</span> “Please commit your changes or stash them”</h3>
+<p><strong>Problem</strong>: Trying to pull/checkout with uncommitted changes</p>
+<p><strong>Solution</strong>: Either commit your changes first, or use <code>git stash</code> to temporarily save them</p>
+</section>
+<section id="your-branch-is-behind-originmain" class="level3" data-number="5.6.3">
+<h3 data-number="5.6.3" class="anchored" data-anchor-id="your-branch-is-behind-originmain"><span class="header-section-number">5.6.3</span> “Your branch is behind origin/main”</h3>
+<p><strong>Problem</strong>: Someone else pushed to your fork (or you pushed from another computer)</p>
+<p><strong>Solution</strong>: <code>git pull origin main</code> to get those changes</p>
+</section>
+<section id="cant-see-your-pushed-changes-on-github" class="level3" data-number="5.6.4">
+<h3 data-number="5.6.4" class="anchored" data-anchor-id="cant-see-your-pushed-changes-on-github"><span class="header-section-number">5.6.4</span> Can’t see your pushed changes on GitHub</h3>
+<p><strong>Problem</strong>: You committed but didn’t push</p>
+<p><strong>Solution</strong>: Run <code>git push origin main</code></p>
+</section>
+<section id="accidentally-edited-files-in-the-original-repo" class="level3" data-number="5.6.5">
+<h3 data-number="5.6.5" class="anchored" data-anchor-id="accidentally-edited-files-in-the-original-repo"><span class="header-section-number">5.6.5</span> Accidentally edited files in the original repo</h3>
+<p><strong>Problem</strong>: Cloned upstream instead of your fork</p>
+<p><strong>Solution</strong>: Clone from YOUR fork, then add upstream as a second remote</p>
+</section>
+<section id="merge-conflict" class="level3" data-number="5.6.6">
+<h3 data-number="5.6.6" class="anchored" data-anchor-id="merge-conflict"><span class="header-section-number">5.6.6</span> “Merge conflict”</h3>
+<p><strong>Problem</strong>: Same file edited in two places</p>
+<p><strong>Solution</strong>: Edit the file to resolve conflicts (git marks them with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>), then add and commit</p>
+</section>
+</section>
+<section id="git-commands-quick-reference" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="git-commands-quick-reference"><span class="header-section-number">5.7</span> Git Commands Quick Reference</h2>
+<section id="setup" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">5.7.1</span> Setup</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"email@example.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="daily-workflow" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="daily-workflow"><span class="header-section-number">5.7.2</span> Daily Workflow</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status              <span class="co"># Check what's changed</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main  <span class="co"># Get latest from course repo</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add filename        <span class="co"># Stage a file</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"msg"</span>     <span class="co"># Save changes locally</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Upload to your fork</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span>       <span class="co"># View history</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="repository-management" class="level3" data-number="5.7.3">
+<h3 data-number="5.7.3" class="anchored" data-anchor-id="repository-management"><span class="header-section-number">5.7.3</span> Repository Management</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone url           <span class="co"># Download a repository</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span>           <span class="co"># List remotes</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add name url <span class="co"># Add a remote</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch              <span class="co"># List branches</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff                <span class="co"># See unstaged changes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="collaboration" class="level3" data-number="5.7.4">
+<h3 data-number="5.7.4" class="anchored" data-anchor-id="collaboration"><span class="header-section-number">5.7.4</span> Collaboration</h3>
+<ul>
+<li><p><strong>Pull Request</strong>: On GitHub, after pushing to your fork</p></li>
+<li><p><strong>Issues</strong>: On GitHub, click “Issues” → “New issue”</p></li>
+</ul>
+</section>
+</section>
+<section id="getting-help" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="getting-help"><span class="header-section-number">5.8</span> Getting Help</h2>
+<section id="in-the-terminal" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="in-the-terminal"><span class="header-section-number">5.8.1</span> In the Terminal</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> help <span class="op">&lt;</span>command<span class="op">&gt;</span>      <span class="co"># Full manual</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="op">&lt;</span>command<span class="op">&gt;</span> --help    <span class="co"># Same as above</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="op">&lt;</span>command<span class="op">&gt;</span> -h        <span class="co"># Brief help</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="online-resources" class="level3" data-number="5.8.2">
+<h3 data-number="5.8.2" class="anchored" data-anchor-id="online-resources"><span class="header-section-number">5.8.2</span> Online Resources</h3>
+<ul>
+<li><p><a href="https://docs.github.com">GitHub Documentation</a></p></li>
+<li><p><a href="https://git-scm.com/doc">Git Documentation</a></p></li>
+<li><p><a href="https://skills.github.com/">GitHub Skills</a> - Interactive tutorials</p></li>
+<li><p>Course repository issues: <code>https://github.com/brittAnderson/uwlooP390/issues</code></p></li>
+</ul>
+</section>
+<section id="best-practices" class="level3" data-number="5.8.3">
+<h3 data-number="5.8.3" class="anchored" data-anchor-id="best-practices"><span class="header-section-number">5.8.3</span> Best Practices</h3>
+<ul>
+<li><p>Commit often (every logical unit of work)</p></li>
+<li><p>Write clear commit messages</p></li>
+<li><p>Pull before starting work</p></li>
+<li><p>Push at the end of every session</p></li>
+<li><p>Use issues to ask for help</p></li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">5.9</span> Troubleshooting</h2>
+<section id="need-to-start-over" class="level3" data-number="5.9.1">
+<h3 data-number="5.9.1" class="anchored" data-anchor-id="need-to-start-over"><span class="header-section-number">5.9.1</span> Need to Start Over?</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete local repository</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> p390Practice</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone again</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/YOUR-USERNAME/p390Practice.git</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> p390Practice</span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/brittAnderson/p390Practice.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="completely-lost" class="level3" data-number="5.9.2">
+<h3 data-number="5.9.2" class="anchored" data-anchor-id="completely-lost"><span class="header-section-number">5.9.2</span> Completely Lost?</h3>
+<ol type="1">
+<li><p>Save any files you care about outside the repository</p></li>
+<li><p>Delete the repository folder</p></li>
+<li><p>Start fresh with cloning</p></li>
+<li><p>Ask for help via issues on the course repo</p></li>
+</ol>
+<p><strong>Remember</strong>: Git has a learning curve, but it’s the industry standard for a reason. Every professional programmer uses it. These skills are directly transferable to:</p>
+<ul>
+<li><p>Research collaborations</p></li>
+<li><p>Graduate work</p></li>
+<li><p>Industry positions</p></li>
+<li><p>Open source contributions</p></li>
+<li><p>Personal projects</p></li>
+</ul>
+<p>You’re building valuable, marketable skills!</p>
+<p><strong>License</strong>: This document is released under CC BY 4.0. Adapted for Psychology 390, University of Waterloo.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
