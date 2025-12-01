@@ -28,6 +28,11 @@ Modern research often combines the "Lab Notebook" with the "Statistical Analysis
 
 **Try this in your terminal:**
 
+::: {.callout-warning}
+The path to your virtual environment may be different. Adjust the line in the next section accordingly. 
+
+:::
+
 1.  **Activate your virtual environment and install Jupyter:**
     ```bash
     source venv/bin/activate
