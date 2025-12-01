@@ -36,7 +36,10 @@ Modern research often combines the "Lab Notebook" with the "Statistical Analysis
     data = [200, 350, 410, 320]
     print(sum(data) / len(data))
     ```
-5.  **Run it:** Click the "Play" button next to the code cell.
+ 5 Select Kernel: Click the "Play" button. If asked to select a Kernel:                                       
+    • Choose Python Environments.                                                                             
+    • Select the entry labeled .venv (or "Recommended").  
+6.  **Run it:** Click the "Play" button next to the code cell.
 
 You now have documentation and calculation in one place.
 
