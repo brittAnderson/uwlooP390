@@ -23,22 +23,43 @@ echo "Today I learned how to append text to a file." >> research_log.txt
 cat research_log.txt
 ```
 
-### Exercise 2: Jupyter Notebooks in VS Code
-Modern research often combines the "Lab Notebook" with the "Statistical Analysis" using tools like Jupyter Notebooks. Since you are already using VS Code, you can run these notebooks directly in your editor without needing a browser.
+### Exercise 2: Jupyter Notebooks
+Modern research often combines the "Lab Notebook" with the "Statistical Analysis" using tools like Jupyter Notebooks. These allow you to mix narrative text, code, and results in a single document.
 
-**Try this:**
+**Try this in your terminal:**
 
-1.  Open VS Code.
-2.  Create a new file named `lab_session.ipynb`.
-3.  **The Narrative:** Hover over the top of the document and click **+ Markdown**. Type: "Calculating the mean of my pilot data."
-4.  **The Code:** Click **+ Code**. Type the following Python code:
+1.  **Activate your virtual environment and install Jupyter:**
+    ```bash
+    source venv/bin/activate
+    pip install jupyter ipykernel
+    ```
+
+2.  **Launch Jupyter Notebook:**
+    ```bash
+    jupyter notebook
+    ```
+    This will open your browser to the Jupyter interface.
+
+3.  **Create a new notebook:** Click "New" → "Python 3" in the browser.
+
+4.  **Add narrative text:** In the first cell, change the dropdown from "Code" to "Markdown". Type:
+    ```
+    # Lab Session: Pilot Data Analysis
+    Calculating the mean of my pilot data collected on [today's date].
+    ```
+    Press Shift+Enter to run the cell.
+
+5.  **Add code:** In the next cell (which should be "Code" by default), type:
     ```python
     data = [200, 350, 410, 320]
-    print(sum(data) / len(data))
+    mean_rt = sum(data) / len(data)
+    print(f"Mean reaction time: {mean_rt} ms")
     ```
-5.  **Run it:** Click the "Play" button next to the code cell.
+    Press Shift+Enter to run the cell.
 
-You now have documentation and calculation in one place.
+6.  **Save your work:** Press Ctrl+S or go to File → Save.
+
+You now have documentation and calculation in one place that you can share or return to later.
 
 ### Further Reading
 If you want to dive deeper into best practices for digital record keeping:
