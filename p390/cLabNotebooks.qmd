@@ -34,32 +34,42 @@ The path to your virtual environment may be different. Adjust the line in the ne
 :::
 
 1.  **Activate your virtual environment and install Jupyter:**
+
     ```bash
     source venv/bin/activate
+    
     pip install jupyter ipykernel
     ```
 
 2.  **Launch Jupyter Notebook:**
+
     ```bash
     jupyter notebook
     ```
+
     This will open your browser to the Jupyter interface.
 
 3.  **Create a new notebook:** Click "New" → "Python 3" in the browser.
 
 4.  **Add narrative text:** In the first cell, change the dropdown from "Code" to "Markdown". Type:
     ```
+
     # Lab Session: Pilot Data Analysis
     Calculating the mean of my pilot data collected on [today's date].
     ```
+
     Press Shift+Enter to run the cell.
 
 5.  **Add code:** In the next cell (which should be "Code" by default), type:
+
     ```python
     data = [200, 350, 410, 320]
+
     mean_rt = sum(data) / len(data)
+
     print(f"Mean reaction time: {mean_rt} ms")
     ```
+
     Press Shift+Enter to run the cell.
 
 6.  **Save your work:** Press Ctrl+S or go to File → Save.
@@ -67,6 +77,7 @@ The path to your virtual environment may be different. Adjust the line in the ne
 You now have documentation and calculation in one place that you can share or return to later.
 
 ### Further Reading
+
 If you want to dive deeper into best practices for digital record keeping:
 
 -   [Jupyter notebooks in Psychology](https://www.tqmp.org/RegularArticles/vol14-2/p137/p137.pdf)
