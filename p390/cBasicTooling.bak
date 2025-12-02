@@ -1,0 +1,143 @@
+# Basic Tools for Scientific Computing
+  In the following some of the common tools are highlighted with instructions for how to download and install. 
+
+## Integrated Development Environments (IDEs)
+-   Who are you writing code for? Human or Machine?
+-   What is an IDE? What makes for a good IDE?
+
+### Required for this Course: VS Code
+[VSCode](https://code.visualstudio.com/)
+[Opensource alternative](https://vscodium.com/)
+
+#### Installing VS Code
+    See the operating system specific appendices.
+
+#### Using VSCode
+
+{{< video https://www.youtube.com/watch?v=B-s71n0dHUk
+    title="Learn Visual Studio Code in 7 Minutes"
+>}}
+
+-   [Basics video](https://code.visualstudio.com/docs/introvideos/basics)
+-   [Using VSCode with R](https://code.visualstudio.com/docs/languages/r)
+-   [Using VSCode with Python](https://code.visualstudio.com/docs/languages/python)
+
+### Other Options 
+ [Emacs](https://www.gnu.org/software/emacs/).
+ [VIM](https://www.vim.org/)
+ [Jupyter Notebooks](https://jupyter.org/)
+  An environment for interactively analyzing and visualizing data. Can generate very [nice output](https://next.jupyterbook.org/). 
+  It can be mixed with VS Code, but is most often used directly in a web browser.
+  {{< video https://www.youtube.com/watch?v=suAkMeWJ1yE 
+title="Intro to using Jupyter Notebooks in VS Code" >}}
+
+## Quarto
+
+Quarto is an open-source scientific and technical publishing system that allows you to create reproducible documents, presentations, websites, and books. It works with multiple programming languages including R, Python, Julia, and Observable JavaScript.
+
+### Installing Quarto
+
+Download and install Quarto from the official website: [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+
+1. **Windows**: Download the Windows installer (.msi file) and run it
+2. **macOS**: Download the macOS installer (.pkg file) and run it
+3. **Linux**: Use the provided .deb or .tar.gz packages, or install via package manager
+
+After installation, verify it's working by opening a terminal and running:
++## Quarto                                                                                                    
++                                                                                                             
++Quarto is an open-source scientific and technical publishing system that allows you to create reproducible   
+documents, presentations, websites, and books. It works with multiple programming languages including R,      
+Python, Julia, and Observable JavaScript.                                                                     
++                                                                                                             
++### Installing Quarto                                                                                        
++                                                                                                             
++Download and install Quarto from the official website:                                                       
+[https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)                                  
++                                                                                                             
++1. **Windows**: Download the Windows installer (.msi file) and run it                                        
++2. **macOS**: Download the macOS installer (.pkg file) and run it                                            
++3. **Linux**: Use the provided .deb or .tar.gz packages, or install via package manager                      
++                                                                                                             
++After installation, verify it's working by opening a terminal and running:                                   
+                                                                                                              
+
+quarto --version                                                                                              
+
+                                                                                                              
+                                                                                                              
+                                                                                                              
+### Setting up Quarto with VS Code                                                                            
+                                                                                                              
+                                                                                                              
+                                                                                                              
+1. **Install the Quarto VS Code Extension**:                                                                  
+                                                                                                              
+   - Open VS Code                                                                                             
+                                                                                                              
+   - Go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X on Mac)                                           
+                                                                                                              
+   - Search for "Quarto"                                                                                      
+                                                                                                              
+   - Install the official Quarto extension by Quarto                                                          
+                                                                                                              
+                                                                                                              
+                                                                                                              
+2. **Create your first Quarto document**:                                                                     
+                                                                                                              
+   - Create a new file with a `.qmd` extension                                                                
+                                                                                                              
+   - Add the following basic content:                                                                         
+                                                                                                              
+   ```markdown                                                                                                
+                                                                                                              
+   ---                                                                                                        
+                                                                                                              
+   title: "My First Document"                                                                                 
+                                                                                                              
+   format: html                                                                                               
+                                                                                                              
+   ---                                                                                                        
+                                                                                                              
+                                                                                                              
+                                                                                                              
+   ## Introduction                                                                                            
+                                                                                                              
+                                                                                                              
+                                                                                                              
+   This is a Quarto document. You can include:                                                                
+                                                                                                              
+                                                                                                              
+                                                                                                              
+   - Markdown text                                                                                            
+                                                                                                              
+   - Code chunks                                                                                              
+                                                                                                              
+   - Mathematical equations: $E = mc^2$                                                                       
+                                                                                                              
+
+ 3 Preview and render documents:                                                                              
+    • Use the "Render" button in VS Code's editor toolbar                                                     
+    • Or use Command Palette (Ctrl+Shift+P): "Quarto: Preview"                                                
+    • Or from terminal: quarto preview filename.qmd                                                           
+ 4 Key features in VS Code:                                                                                   
+    • Syntax highlighting for Quarto documents                                                                
+    • Live preview with automatic updates                                                                     
+    • Code completion for YAML options                                                                        
+    • Integration with R, Python, and Julia kernels                                                           
+    • Visual markdown editor mode                                                                             
+
+Useful Quarto Commands                                                                                        
+
+ • quarto render document.qmd - Render a document to its output format                                        
+ • quarto preview document.qmd - Preview with live reload                                                     
+ • quarto create project - Create a new Quarto project                                                        
+ • quarto publish - Publish to GitHub Pages, Netlify, or Quarto Pub                                           
+
+Resources                                                                                                     
+
+ • Quarto Documentation                                                                                       
+ • Quarto with VS Code                                                                                        
+ • Quarto Gallery - Examples of what you can create                                                           
+
+                
