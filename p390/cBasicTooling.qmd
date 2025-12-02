@@ -31,16 +31,3 @@
   {{< video https://www.youtube.com/watch?v=suAkMeWJ1yE 
 title="Intro to using Jupyter Notebooks in VS Code" >}}
 
-## Quarto
-
-Quarto is an open-source scientific and technical publishing system that allows you to create reproducible documents, presentations, websites, and books. It works with multiple programming languages including R, Python, Julia, and Observable JavaScript.
-
-### Installing Quarto
-
-Download and install Quarto from the official website: [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
-
-1. **Windows**: Download the Windows installer (.msi file) and run it
-2. **macOS**: Download the macOS installer (.pkg file) and run it
-3. **Linux**: Use the provided .deb or .tar.gz packages, or install via package manager
-
-After installation, verify it's working by opening a terminal and running:
