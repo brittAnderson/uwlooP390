@@ -1,0 +1,16 @@
+### Making a Website with Quarto and Github Pages 
+
+As science progressively moves to online communication there is a need to have a place to show case your work and share ideas. One way to do this is with a personal website structured around your scientific interests and activities. While there are many methods, tools, and hosts for this I will focus on sharing how you can use the Quarto publishing tool. 
+
+#### Hosting
+To have a website viewable by the world it must be hosted on a server that is viewable by the world. For example, it cannot be behind an institutional firewall (as are most of the computers at the University of Waterloo). And if you host on a University or Company server you have the potential of being limited in what you can share, how often you can update, or you may be required to adhere to certain styles and formats mandated by the institution's brand. One way to avoid this is to find an external hosting site. A modest fee would allow you to have a virtual server in the cloud, but the example we will use here to get you started is a free service available to those with Github accounts: [Github Pages](https://pages.github.com/). 
+
+##### Testing Github Pages
+Assuming you have an account you should be able to create a minimal webpage in a few steps. 
+
+1. Go to personal dashboard and create a new repo as instructed on the Github Pages website. The repo must be named <username>.github.io. 
+2. Use terminal to clone this repo to your local computer. 
+3. cd into the correct directory using your terminal (inside VS Code is fine). And using the *terminal* do `echo "hello world" > index.html.
+4. Do the usual add, commit, and push and verify your web site works at <username.github.io>.
+
+You now have a website!
