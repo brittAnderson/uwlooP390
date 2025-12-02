@@ -31,3 +31,16 @@
   {{< video https://www.youtube.com/watch?v=suAkMeWJ1yE 
 title="Intro to using Jupyter Notebooks in VS Code" >}}
 
+## Quarto
+
+Quarto is a scientific and technical publishing system that allows you to combine text, code, and output into a single document.
+
+### Setup for VS Code
+
+1.  **Install Quarto CLI**: Download and install from [quarto.org](https://quarto.org/docs/get-started/).
+2.  **VS Code Extension**: Install the **Quarto** extension from the VS Code Marketplace.
+
+### Your First Document
+
+Create a new file named `test.qmd` and add the following content to see how Quarto handles text and math:
+
