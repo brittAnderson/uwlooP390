@@ -8,8 +8,11 @@ Here are two ways to approach this in a computational environment.
 The simplest digital notebook is a plain text file. It is future-proof, searchable, and works on every computer.
 
 **Try this in your terminal:**
+
 1. Create a file named `research_log.txt`.
+
 2. Append the current date and a note about what you are doing.
+
 3. Read the file back.
 
 ```bash

@@ -1,4 +1,5 @@
 # Basic Tools for Scientific Computing
+
   In the following some of the common tools are highlighted with instructions for how to download and install. 
 
 ## Integrated Development Environments (IDEs)
@@ -48,10 +49,13 @@ At the very top of the file, you need a YAML header. This tells Quarto how to pr
 
 Type the following at the top of your file:
 
+
+```yaml
 ---
 title: "My First Quarto Doc"
 format: html
 ---
+```
 
 Below the header, you can write normal text. Add a section header and some text:
 

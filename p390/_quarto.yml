@@ -19,6 +19,7 @@ book:
     - cLabNotebooks.qmd
     - cWriting.qmd
     - cCode.qmd
+    - cWebSite.qmd
     - cR.qmd
     - cPython.qmd
     - cProgExp.qmd
