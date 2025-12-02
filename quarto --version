@@ -1,0 +1,51 @@
+
+### Setting up Quarto with VS Code
+
+1. **Install the Quarto VS Code Extension**:
+   - Open VS Code
+   - Go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X on Mac)
+   - Search for "Quarto"
+   - Install the official Quarto extension by Quarto
+
+2. **Create your first Quarto document**:
+   - Create a new file with a `.qmd` extension
+   - Add the following basic content:
+   ```markdown
+   ---
+   title: "My First Document"
+   format: html
+   ---
+   
+   ## Introduction
+   
+   This is a Quarto document. You can include:
+   
+   - Markdown text
+   - Code chunks
+   - Mathematical equations: $E = mc^2$
+   ```
+
+3. **Preview and render documents**:
+   - Use the "Render" button in VS Code's editor toolbar
+   - Or use Command Palette (Ctrl+Shift+P): "Quarto: Preview"
+   - Or from terminal: `quarto preview filename.qmd`
+
+4. **Key features in VS Code**:
+   - Syntax highlighting for Quarto documents
+   - Live preview with automatic updates
+   - Code completion for YAML options
+   - Integration with R, Python, and Julia kernels
+   - Visual markdown editor mode
+
+### Useful Quarto Commands
+
+- `quarto render document.qmd` - Render a document to its output format
+- `quarto preview document.qmd` - Preview with live reload
+- `quarto create project` - Create a new Quarto project
+- `quarto publish` - Publish to GitHub Pages, Netlify, or Quarto Pub
+
+### Resources
+
+- [Quarto Documentation](https://quarto.org/docs/guide/)
+- [Quarto with VS Code](https://quarto.org/docs/tools/vscode.html)
+- [Quarto Gallery](https://quarto.org/docs/gallery/) - Examples of what you can create
