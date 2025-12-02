@@ -42,5 +42,36 @@ Quarto is a scientific and technical publishing system that allows you to combin
 
 ### Your First Document
 
-Create a new file named `test.qmd` and add the following content to see how Quarto handles text and math:
+Create a new file named `test.qmd`.
 
+At the very top of the file, you need a YAML header. This tells Quarto how to process the document. It sits between two lines of three dashes.
+
+Type the following at the top of your file:
+
+---
+title: "My First Quarto Doc"
+format: html
+---
+
+Below the header, you can write normal text. Add a section header and some text:
+
+## Introduction
+
+This is a Quarto document. It combines markdown text with code.
+
+Now let's add some math. Quarto uses LaTeX syntax for equations.
+
+## Math Example
+
+We can write mathematical equations using LaTeX syntax.
+
+$$
+f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi
+$$
+
+Inline math is also supported: $e^{i\pi} + 1 = 0$.
+
+### Previewing and Rendering
+
+-   **Preview**: Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and type `Quarto: Preview`. This will open a live preview window that updates as you edit.
+-   **Render**: Click the **Render** button at the top of the editor to generate the final output (HTML, PDF, etc.).
