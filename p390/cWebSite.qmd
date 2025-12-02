@@ -14,3 +14,67 @@ Assuming you have an account you should be able to create a minimal webpage in a
 4. Do the usual add, commit, and push and verify your web site works at <username.github.io>.
 
 You now have a website!
+
+##### Level Up: From HTML to Quarto Magic ✨
+
+Great! You have a basic website. But let's be honest - that "hello world" page isn't going to impress anyone at a conference poster session. Let's upgrade to Quarto in just a few more steps and create something you can actually show off!
+
+###### Quick Quarto Setup (5 minutes to awesome)
+
+1. **Delete that boring index.html** - we're going pro now:
+   ```bash
+   rm index.html
+   ```
+
+2. **Create a Quarto project** right in your repo folder:
+   ```bash
+   quarto create project website .
+   ```
+   Choose "website" when prompted, and say "Y" to overwrite the directory.
+
+3. **Preview your site locally** (this is the fun part):
+   ```bash
+   quarto preview
+   ```
+   Your browser should open with a real website! 🎉
+
+4. **Make it yours** - Open `index.qmd` in VS Code and change the title to something fun like:
+   ```yaml
+   ---
+   title: "[Your Name]'s Science Corner 🧪"
+   ---
+   
+   Welcome to my corner of the internet where I share cool science stuff!
+   
+   ## Things I'm Working On
+   - Making websites apparently 😄
+   - [Your actual research/interests]
+   ```
+
+5. **Configure for GitHub Pages** - Open `_quarto.yml` and add these lines:
+   ```yaml
+   project:
+     type: website
+     output-dir: docs
+   ```
+
+6. **Render and deploy**:
+   ```bash
+   quarto render
+   git add .
+   git commit -m "My first Quarto website! 🚀"
+   git push
+   ```
+
+7. **One last GitHub setting**: Go to your repo Settings → Pages → Source: Deploy from branch → Branch: main → Folder: /docs → Save
+
+Wait 2-3 minutes, refresh your <username>.github.io page, and... BOOM! Professional website! 🎊
+
+###### Challenge: Make It Yours (10 minutes)
+Before we dive deep into Quarto later, try these quick wins:
+- Add an About page (`about.qmd`)
+- Change the theme in `_quarto.yml` (try `theme: cosmo` or `theme: darkly` for dark mode!)
+- Add an emoji favicon 
+- Include a photo or GIF that represents your research
+
+Remember: You can always `quarto preview` to see changes instantly before pushing to GitHub!
