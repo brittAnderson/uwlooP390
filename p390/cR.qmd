@@ -34,7 +34,7 @@ The [tidyverse](https://www.tidyverse.org/) is a very popular collection of R co
 
 ## Mix R Code with Text for Reproducible and Documented Workflows 
 
-Here is an example of embedding R code in a qmd document. In this code we download and install a package if necessary (the if statement). Then we use that package to load some data and generate a plot. The plot you see in this document is the result of that code. I did not cut and paste a png. 
+Here is an example of embedding R code in a qmd document. In this code we download and install a package if necessary (the `if` statement). Then we use that package to load some data and generate a plot. The plot you see in this document is the result of that code. I did not cut and paste a png. 
 
 ```{r}
 #| warning: false
@@ -120,7 +120,9 @@ What is going on here?
 
 ## Practice
 
-1. Sort (or ~order~) cars by the ~dist~ variable.
+While qmd files and Quarto are great for writing documents with code in it, they are not idea for exploring in a quick and interactive way. For that use a terminal or console. In VSCode you have a menu that will create a new terminal where you can start R with the command `R`.
+
+1. Sort (or `order`) cars by the `dist` variable.
 2. Find the mean and standard deviation of the speed of the cars.
 3. Are there other datasets?   
    ```{{r}} 

@@ -401,7 +401,7 @@ Figure&nbsp;11.1
 </section>
 <section id="mix-r-code-with-text-for-reproducible-and-documented-workflows" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="mix-r-code-with-text-for-reproducible-and-documented-workflows"><span class="header-section-number">11.4</span> Mix R Code with Text for Reproducible and Documented Workflows</h2>
-<p>Here is an example of embedding R code in a qmd document. In this code we download and install a package if necessary (the if statement). Then we use that package to load some data and generate a plot. The plot you see in this document is the result of that code. I did not cut and paste a png.</p>
+<p>Here is an example of embedding R code in a qmd document. In this code we download and install a package if necessary (the <code>if</code> statement). Then we use that package to load some data and generate a plot. The plot you see in this document is the result of that code. I did not cut and paste a png.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(tidyverse)){</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>,<span class="at">repos=</span><span class="st">'https://mirror.csclub.uwaterloo.ca/CRAN/'</span>)</span>
@@ -511,8 +511,9 @@ Figure&nbsp;11.4: How many cars are there that can go faster than 10, but not mo
 </section>
 <section id="practice" class="level2" data-number="11.8">
 <h2 data-number="11.8" class="anchored" data-anchor-id="practice"><span class="header-section-number">11.8</span> Practice</h2>
+<p>While qmd files and Quarto are great for writing documents with code in it, they are not idea for exploring in a quick and interactive way. For that use a terminal or console. In VSCode you have a menu that will create a new terminal where you can start R with the command <code>R</code>.</p>
 <ol type="1">
-<li><p>Sort (or <sub>order</sub>) cars by the <sub>dist</sub> variable.</p></li>
+<li><p>Sort (or <code>order</code>) cars by the <code>dist</code> variable.</p></li>
 <li><p>Find the mean and standard deviation of the speed of the cars.</p></li>
 <li><p>Are there other datasets?</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
