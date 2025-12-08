@@ -1,41 +1,61 @@
-# Coding General
+## Coding General
 
-Simply put, this is you telling the machine what to do. It is usually done via the writing of a file in plain text that is then processed in various ways to yield machine code that the computer actually uses. It is possible to program in machine code, but it is not very user friendly.
+Simply put, this is you telling the machine what to do. It is usually done via the writing of a file in plain text that is then processed in various ways to yield machine code that the computer actually uses. It is possible to program in machine code, but it is not very user friendly. If this sounds familiar, it is because writing qmd or LaTeX is a form of coding. You have already been doing it. 
 
 ## Languages
 
-There is more than one language available for programming your computer and each has their pros and cons. Some are "low level" or close to the metal (see for example, [rust](https://rust-lang.org/) or [zig](https://ziglang.org/)), while others, the ones we will use in this course are considered high level, and abstract away many of the details (such as how much memory to allocate or how to clean-up (garbage collection) unused data from memory). 
+There is more than one language available for programming your computer and each has its pros and cons. Some are "low level" or close to the metal (see for example, [rust](https://rust-lang.org/) or [zig](https://ziglang.org/)), while others, the ones we will use in this course are considered high level, and abstract away many of the details (such as how much memory to allocate or how to clean-up (garbage collection) unused data from memory). 
 
-When evaluating the fitness of a new programming language ask yourself not only whether it meets your needs today, but does it look likely to be available tomorrow, or five years from tomorrow. It is also, in general, to chose a more general purpose language that you can use for more than one particular task. The latter will allow you to leverage your knowledge of how to get things done in one domain for getting things done in others. And it is likely that you will learn general patterns that may help you pick up additional programming languages more quickly if, in the future, you need to change. 
+When evaluating the fitness of a new programming language ask yourself not only whether it meets your needs today, but does it look likely to be available tomorrow, or five years from tomorrow? It is also, in general, better to choose a more general purpose language that you can use for more than one particular task. This will allow you to leverage your knowledge of how to get things done in one domain for how to get things done in another domain. And it is likely that you will learn general patterns that may help you pick up additional programming languages more quickly if, in the future, you need to change. 
 
 ## Common Programming Constructs
+
+Some of the basic vocabulary may help you as you begin to program. The succeeding chapters will give you some specifics, experience, and practice with both Python and R.
+
 ### Variables
+
   Variables are things (lists, values, names, and such) that you want to give a name to. You might do this because you think you are going to want to do something with them later and it might be more convenient to have a short, memorable name for referring to them.
+
 ### Functions
-  Functions have inputs and output. The inputs may be called parameters or arguments. The outputs maybe called return values. What the function does is describe the processing of the inputs to the outputs. Think of a factory. It takes in raw materials (inputs) and produces an output. You are describing a factory when you write a function. 
+
+  Functions have inputs and output. The inputs may be called parameters or arguments. The outputs may be called return values. What the function does is describe the processing of the inputs to the outputs. Think of it as a factory. It takes in raw materials (inputs) and produces an output. You are describing a factory when you write a function. 
+
 ### Interpreted
+
 An interpreted language is one where you type in code one line at a time and a program converts that to machine code, evaluates it, and prints the return value for you to read. This is an interactive mode. Python is an example of an interpreted language.
+
 ### Compiled
-You write the whole program. Another program reads your code and all at once, and possibly requiring several passes and linking to other code elsewhere produces a single compiled version for the machine to read and use. C is an example of a compiled language. 
+
+You write the whole program. Another program reads your code and all at once, and possibly requiring several passes and linking to other code elsewhere produces a single compiled version for the machine to read and use. C is an example of a compiled language. To some extent so is LaTeX.
+
 ### Packages/Libraries
 
-Many programming languages are very basic in what they offer. In order to do the cool stuff you will need additional collections of code, some of it may even be written in a different programming language, often called packages or libraries that you import, source, or load. `ggplot2` is an example of an R plotting library. `matplotlib` is similar for python. 
+Many programming languages are very basic in what they offer. In order to do the cool stuff you will need additional collections of code, some of it may even be written in a different programming language. The colletions are often called packages or libraries that you import, source, or load. `ggplot2` is an example of an R plotting library. `matplotlib` is similar for python.
+
 ### Types
 
-Many programming languages have a notion of a datatype. `1` can be a number, but "1" can also be a character that you are typing. It doesn't make sense to add one, the number, to one, the character, but it might make sense to `1 + 1` for either. You would expect 2 for numbers and maybe "11" for characters. Some programming languages, such as python, type *dynamically*. They figure out what type to treat a value as as you type. They try to deduce it from the context. Other languages, such as Haskell, are *statically* typed. They require that everything have a type and that it never changes. Dynamically typed languages are often easier to get started with, but statically typed languges can prove helpful when writing larger pieces of software.
+Many programming languages have a notion of a datatype. `1` can be a number, but "1" can also be a character that you are typing. It doesn't make sense to add one, the number, to one, the character, but it might make sense to `1 + 1` for either. You would expect 2 for numbers and maybe "11" for characters. Some programming languages, such as python, type *dynamically*. They figure out what type to treat a value as they read your code. They try to deduce it from the context. Other languages, such as Haskell, are *statically* typed. They require that everything have a type and that it never changes. Dynamically typed languages are often easier to get started with, but statically typed languges can prove helpful when writing larger pieces of software.
 
-Other types of data structures that you might run across in this course are:
-- Lists, 
+Other sorts of data structures that you might run across in this course are: 
+- Lists,  
+
 - Tuples, 
+
 - Data.Frames
 
 ### Loops
-Loops are a common programming construct. They allow you to repeat an action multiple times. For example if wanted to print a number you could repeatedly use something like `print(my_number)` as long as you changed my_number in between each use. 
+
+Loops are a common programming construct. They allow you to repeat an action multiple times. For example, if you wanted to print a number you could repeatedly use something like `print(my_number)` as long as you changed my_number in between each use. 
 
 Common varieties of loops are the `for` and `while` loop.
 
 ### Virtual Environments
-You will often have software installed on your computer that you use for multiple purposes. There is also software on your computer that is used by your operating system. If you download different versions of that software for your own use you may find that your programs do not run correctly, or even worse that your system does not work properly. Do avoid such problems you may want to "sandbox" your development environment. Conflicts are less common for R, but very common for python. Such sandboxes are often called `venv`. A virtual environment lets you install software that only works locally, and cannot interfere with your global system software or other virtual environments you may have constructed for other projects. 
+
+You will often have software installed on your computer that you use for multiple purposes. There is also software on your computer that is used by your operating system. If you download different versions of that software for your own use you may find that your programs do not run correctly, or even worse that your system does not work properly. 
+
+To avoid such problems you may want to "sandbox" your development environment. Conflicts are less common for R, but very common for python. Such sandboxes are often called `venv`. 
+
+A virtual environment lets you install software that only works locally, and cannot interfere with your global system software or other virtual environments you may have constructed for other projects. 
 
 ### Assignment and Equality Are Different in Programming
 
@@ -49,3 +69,4 @@ print(a == 3)
 ```
 
 In the first line we *assign* the value of two to the variable `a`. In the next line we test if a and 3 are in fact equal to each other. A "boolean" value is returned: false.
+
