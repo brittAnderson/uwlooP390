@@ -4,15 +4,13 @@
 See OS specific appendices.
 
 ## Packages
-Unlike R, you do not install python packages from within an interpreted environment. Worse, the python package system has differnt tools. Recently, `pip` has been the most commonly used, and there is an interface to it through `uv`. Conflicting packages are a real risk. Use a virtual environment. Also, available via the `uv` interface. 
+Unlike R, you do not install python packages from within an interpreted environment. Worse, the python package system has different tools. Recently, `pip` has been the most commonly used, and there is an interface to it through `uv`. Conflicting packages are a real risk. Use a virtual environment. Virtual environments are also available via the `uv` interface. 
 
 ### Using uv to create an env and install local packages
 
 First, initiate the virtual environment and declare the python version to use. You will first create the environment. Then you will **activate** it. I find this far easier in a shell/terminal/command-line environment. 
 
-```{sh}
-#| eval: false
-
+```bash
 uv venv --python 3.10
 source .venv/bin/activate
 ```
@@ -25,9 +23,7 @@ When active your subsequent python command should refer to this python installat
 
 To install packages the code would look like (again in the shell):
 
-```{sh}
-#| eval: false
-
+```bash
 uv pip install numpy matplotlib jupyter pandas
 ```
 
@@ -118,7 +114,7 @@ Python refers to things called "iterables." To iterate is another way of saying 
 
 
 ```{python}
-name_dict = {'firstName' : 'Britt', 'lastName' : 'Anderson'}
+name_dict = {'firstName' : 'Britt', 'lastName' : 'Anderson'} # <2>
 my_list = list(range(1, 10))                                      # <1>
 print(name_dict['firstName'])
 print(my_list)
@@ -128,6 +124,7 @@ print(my_list[0:4])
 
 ```
 1. Notice that here we use `range` where we use `seq` in R. There is usually a way to do something similar in both languages, but they may not have the same name.
+2. Also note that I am using a python dictionary. It has keys and values. It can be a nice way to handle data files.  
 
 The use of the `-1`as an index is a python trick for getting the last element in a list. Think of the list as a circle. If you count backwards from a list you will get to the beginning eventually (index 0) if you went back one more step (-1) you would circle back to the end of the list. Test what happens when you try -2. Does it keep going? A lot of learning how to program is just doing stuff to see what happens.
 
