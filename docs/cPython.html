@@ -353,21 +353,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="packages" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="packages"><span class="header-section-number">12.2</span> Packages</h2>
-<p>Unlike R, you do not install python packages from within an interpreted environment. Worse, the python package system has differnt tools. Recently, <code>pip</code> has been the most commonly used, and there is an interface to it through <code>uv</code>. Conflicting packages are a real risk. Use a virtual environment. Also, available via the <code>uv</code> interface.</p>
+<p>Unlike R, you do not install python packages from within an interpreted environment. Worse, the python package system has different tools. Recently, <code>pip</code> has been the most commonly used, and there is an interface to it through <code>uv</code>. Conflicting packages are a real risk. Use a virtual environment. Virtual environments are also available via the <code>uv</code> interface.</p>
 <section id="using-uv-to-create-an-env-and-install-local-packages" class="level3" data-number="12.2.1">
 <h3 data-number="12.2.1" class="anchored" data-anchor-id="using-uv-to-create-an-env-and-install-local-packages"><span class="header-section-number">12.2.1</span> Using uv to create an env and install local packages</h3>
 <p>First, initiate the virtual environment and declare the python version to use. You will first create the environment. Then you will <strong>activate</strong> it. I find this far easier in a shell/terminal/command-line environment.</p>
-<pre class="{sh}"><code>#| eval: false
-
-uv venv --python 3.10
-source .venv/bin/activate</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> venv <span class="at">--python</span> 3.10</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>NB: As of 2025 the most recent version of python that works well with psychopy is said to be 3.10.</p>
 <p>This will create a new <em>hidden</em> (directories starting with a “dot” like <code>.venv</code> will not display on many operating systems unless you specifically ask to see them.) directory called <code>.venv</code> inside the directory where you invoked that command. To activate the virtual environment you do <code>source &lt;path-to&gt;/.venv/bin/activate</code>.</p>
 <p>When active your subsequent python command should refer to this python installation.</p>
 <p>To install packages the code would look like (again in the shell):</p>
-<pre class="{sh}"><code>#| eval: false
-
-uv pip install numpy matplotlib jupyter pandas</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install numpy matplotlib jupyter pandas</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>I picked these packages, because I know they will come in handy later.</p>
 </section>
 <section id="testing-your-python-package-installation" class="level3" data-number="12.2.2">
@@ -400,7 +396,7 @@ Warning
 </div>
 </div>
 <p>If you did all the above then this should generate a rather cool looking set of figures.</p>
-<div id="4033789f" class="cell" data-execution_count="1">
+<div id="5d41581b" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -434,7 +430,7 @@ Warning
 <div id="fig-loopinpython" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-loopinpython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="1065fa43" class="cell" data-execution_count="2">
+<div id="45b74c74" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>(0, 'b')
 (1, 'r')
@@ -454,7 +450,7 @@ Figure&nbsp;12.1: What a for loop might look like in python.
 <h3 data-number="12.3.1" class="anchored" data-anchor-id="loops-in-python-make-use-of-iterables"><span class="header-section-number">12.3.1</span> Loops in Python Make Use of Iterables</h3>
 <p>Python refers to things called “iterables.” To iterate is another way of saying that you can keep doing the same thing over and over. Imagine a bowl of ice cream. It is “eatable”. You take one spoonful, and then another, and keep taking spoonfuls until the bowl is empty.</p>
 <p><strong>Indexing</strong> is how you get the location of an element in a list. Think of the row or column number in a spread sheet program, but indexes can be more powerful, and can be nested easily. In many programming languages, but sadly not all, <strong>indexes start at 0</strong>. Different programming languages will have slightly different syntax.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-8-1"><a href="#annotated-cell-8-1" aria-hidden="true" tabindex="-1"></a>name_dict <span class="op">=</span> {<span class="st">'firstName'</span> : <span class="st">'Britt'</span>, <span class="st">'lastName'</span> : <span class="st">'Anderson'</span>}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-8-1" class="code-annotation-target"><a href="#annotated-cell-8-1" aria-hidden="true" tabindex="-1"></a>name_dict <span class="op">=</span> {<span class="st">'firstName'</span> : <span class="st">'Britt'</span>, <span class="st">'lastName'</span> : <span class="st">'Anderson'</span>}</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-8-2" class="code-annotation-target"><a href="#annotated-cell-8-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>))</span>
 <span id="annotated-cell-8-3"><a href="#annotated-cell-8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name_dict[<span class="st">'firstName'</span>])</span>
 <span id="annotated-cell-8-4"><a href="#annotated-cell-8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span>
@@ -467,12 +463,16 @@ Figure&nbsp;12.1: What a for loop might look like in python.
 <dd>
 <span data-code-cell="annotated-cell-8" data-code-lines="2" data-code-annotation="1">Notice that here we use <code>range</code> where we use <code>seq</code> in R. There is usually a way to do something similar in both languages, but they may not have the same name.</span>
 </dd>
+<dt data-target-cell="annotated-cell-8" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="1" data-code-annotation="2">Also note that I am using a python dictionary. It has keys and values. It can be a nice way to handle data files.</span>
+</dd>
 </dl>
 </div>
 <div id="fig-indexinginpython" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-indexinginpython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="c7fdfe78" class="cell" data-execution_count="3">
+<div id="57486c81" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>Britt
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -491,7 +491,7 @@ Figure&nbsp;12.2: The use of the <code>-1</code>as an index is a python trick fo
 <section id="additional-examples-of-programming-constructs-in-python" class="level3" data-number="12.3.2">
 <h3 data-number="12.3.2" class="anchored" data-anchor-id="additional-examples-of-programming-constructs-in-python"><span class="header-section-number">12.3.2</span> Additional Examples of Programming Constructs in Python</h3>
 <p><strong>Another <code>for</code> loop in python</strong></p>
-<div id="5ac93a23" class="cell" data-execution_count="4">
+<div id="7eece1ed" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ml <span class="kw">in</span> my_list:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(ml)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -519,7 +519,7 @@ The 8th element was 9</code></pre>
 </div>
 </div>
 <p><strong>Conditionals in python</strong></p>
-<div id="57806e12" class="cell" data-execution_count="5">
+<div id="1e26c87d" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">3</span>:</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Wha.....?</span><span class="ch">\n\n</span><span class="st">"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">2</span>:</span>
@@ -544,7 +544,7 @@ Important
 <p>Python uses a different syntax to define functions from R.</p>
 </div>
 </div>
-<div id="386f915e" class="cell" data-execution_count="6">
+<div id="139ddaa4" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_add(x, y):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span>(x <span class="op">+</span> y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
