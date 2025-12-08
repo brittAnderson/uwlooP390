@@ -314,9 +314,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#common-programming-constructs" id="toc-common-programming-constructs" class="nav-link" data-scroll-target="#common-programming-constructs"><span class="header-section-number">10.2</span> Common Programming Constructs</a>
   <ul class="collapse">
   <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="header-section-number">10.2.1</span> Variables</a></li>
-  <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops"><span class="header-section-number">10.2.2</span> Loops</a></li>
-  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link" data-scroll-target="#virtual-environments"><span class="header-section-number">10.2.3</span> Virtual Environments</a></li>
-  <li><a href="#assignment-and-equality-are-different-in-programming" id="toc-assignment-and-equality-are-different-in-programming" class="nav-link" data-scroll-target="#assignment-and-equality-are-different-in-programming"><span class="header-section-number">10.2.4</span> Assignment and Equality Are Different in Programming</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="header-section-number">10.2.2</span> Functions</a></li>
+  <li><a href="#interpreted" id="toc-interpreted" class="nav-link" data-scroll-target="#interpreted"><span class="header-section-number">10.2.3</span> Interpreted</a></li>
+  <li><a href="#compiled" id="toc-compiled" class="nav-link" data-scroll-target="#compiled"><span class="header-section-number">10.2.4</span> Compiled</a></li>
+  <li><a href="#packageslibraries" id="toc-packageslibraries" class="nav-link" data-scroll-target="#packageslibraries"><span class="header-section-number">10.2.5</span> Packages/Libraries</a></li>
+  <li><a href="#types" id="toc-types" class="nav-link" data-scroll-target="#types"><span class="header-section-number">10.2.6</span> Types</a></li>
+  <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops"><span class="header-section-number">10.2.7</span> Loops</a></li>
+  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link" data-scroll-target="#virtual-environments"><span class="header-section-number">10.2.8</span> Virtual Environments</a></li>
+  <li><a href="#assignment-and-equality-are-different-in-programming" id="toc-assignment-and-equality-are-different-in-programming" class="nav-link" data-scroll-target="#assignment-and-equality-are-different-in-programming"><span class="header-section-number">10.2.9</span> Assignment and Equality Are Different in Programming</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -343,34 +348,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Simply put, this is you telling the machine what to do. It is usually done via the writing of a file in plain text that is then processed in various ways to yield machine code that the computer actually uses. It is possible to program in machine code, but it is not very user friendly.</p>
+<p>Simply put, this is you telling the machine what to do. It is usually done via the writing of a file in plain text that is then processed in various ways to yield machine code that the computer actually uses. It is possible to program in machine code, but it is not very user friendly. If this sounds familiar, it is because writing qmd or LaTeX is a form of coding. You have already been doing it.</p>
 <section id="languages" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="languages"><span class="header-section-number">10.1</span> Languages</h2>
-<p>There is more than one language available for programming your computer and each has their pros and cons. Some are “low level” or close to the metal (see for example, <a href="https://rust-lang.org/">rust</a> or <a href="https://ziglang.org/">zig</a>), while others, the ones we will use in this course are considered high level, and abstract away many of the details (such as how much memory to allocate or how to clean-up (garbage collection) unused data from memory).</p>
-<p>When evaluating the fitness of a new programming language ask yourself not only whether it meets your needs today, but does it look likely to be available tomorrow, or five years from tomorrow. It is also, in general, to chose a more general purpose language that you can use for more than one particular task. The latter will allow you to leverage your knowledge of how to get things done in one domain for getting things done in others. And it is likely that you will learn general patterns that may help you pick up additional programming languages more quickly if, in the future, you need to change.</p>
+<p>There is more than one language available for programming your computer and each has its pros and cons. Some are “low level” or close to the metal (see for example, <a href="https://rust-lang.org/">rust</a> or <a href="https://ziglang.org/">zig</a>), while others, the ones we will use in this course are considered high level, and abstract away many of the details (such as how much memory to allocate or how to clean-up (garbage collection) unused data from memory).</p>
+<p>When evaluating the fitness of a new programming language ask yourself not only whether it meets your needs today, but does it look likely to be available tomorrow, or five years from tomorrow? It is also, in general, better to choose a more general purpose language that you can use for more than one particular task. This will allow you to leverage your knowledge of how to get things done in one domain for how to get things done in another domain. And it is likely that you will learn general patterns that may help you pick up additional programming languages more quickly if, in the future, you need to change.</p>
 </section>
 <section id="common-programming-constructs" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="common-programming-constructs"><span class="header-section-number">10.2</span> Common Programming Constructs</h2>
+<p>Some of the basic vocabulary may help you as you begin to program. The succeeding chapters will give you some specifics, experience, and practice with both Python and R.</p>
 <section id="variables" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="variables"><span class="header-section-number">10.2.1</span> Variables</h3>
-<p>Variables are things (lists, values, names, and such) that you want to give a name to. You might do this because you think you are going to want to do something with them later and it might be more convenient to have a short, memorable name for referring to them. ### Functions Functions have inputs and output. The inputs may be called parameters or arguments. The outputs maybe called return values. What the function does is describe the processing of the inputs to the outputs. Think of a factory. It takes in raw materials (inputs) and produces an output. You are describing a factory when you write a function. ### Interpreted An interpreted language is one where you type in code one line at a time and a program converts that to machine code, evaluates it, and prints the return value for you to read. This is an interactive mode. Python is an example of an interpreted language. ### Compiled You write the whole program. Another program reads your code and all at once, and possibly requiring several passes and linking to other code elsewhere produces a single compiled version for the machine to read and use. C is an example of a compiled language. ### Packages/Libraries</p>
-<p>Many programming languages are very basic in what they offer. In order to do the cool stuff you will need additional collections of code, some of it may even be written in a different programming language, often called packages or libraries that you import, source, or load. <code>ggplot2</code> is an example of an R plotting library. <code>matplotlib</code> is similar for python. ### Types</p>
-<p>Many programming languages have a notion of a datatype. <code>1</code> can be a number, but “1” can also be a character that you are typing. It doesn’t make sense to add one, the number, to one, the character, but it might make sense to <code>1 + 1</code> for either. You would expect 2 for numbers and maybe “11” for characters. Some programming languages, such as python, type <em>dynamically</em>. They figure out what type to treat a value as as you type. They try to deduce it from the context. Other languages, such as Haskell, are <em>statically</em> typed. They require that everything have a type and that it never changes. Dynamically typed languages are often easier to get started with, but statically typed languges can prove helpful when writing larger pieces of software.</p>
-<p>Other types of data structures that you might run across in this course are: - Lists, - Tuples, - Data.Frames</p>
+<p>Variables are things (lists, values, names, and such) that you want to give a name to. You might do this because you think you are going to want to do something with them later and it might be more convenient to have a short, memorable name for referring to them.</p>
 </section>
-<section id="loops" class="level3" data-number="10.2.2">
-<h3 data-number="10.2.2" class="anchored" data-anchor-id="loops"><span class="header-section-number">10.2.2</span> Loops</h3>
-<p>Loops are a common programming construct. They allow you to repeat an action multiple times. For example if wanted to print a number you could repeatedly use something like <code>print(my_number)</code> as long as you changed my_number in between each use.</p>
+<section id="functions" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="functions"><span class="header-section-number">10.2.2</span> Functions</h3>
+<p>Functions have inputs and output. The inputs may be called parameters or arguments. The outputs may be called return values. What the function does is describe the processing of the inputs to the outputs. Think of it as a factory. It takes in raw materials (inputs) and produces an output. You are describing a factory when you write a function.</p>
+</section>
+<section id="interpreted" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="interpreted"><span class="header-section-number">10.2.3</span> Interpreted</h3>
+<p>An interpreted language is one where you type in code one line at a time and a program converts that to machine code, evaluates it, and prints the return value for you to read. This is an interactive mode. Python is an example of an interpreted language.</p>
+</section>
+<section id="compiled" class="level3" data-number="10.2.4">
+<h3 data-number="10.2.4" class="anchored" data-anchor-id="compiled"><span class="header-section-number">10.2.4</span> Compiled</h3>
+<p>You write the whole program. Another program reads your code and all at once, and possibly requiring several passes and linking to other code elsewhere produces a single compiled version for the machine to read and use. C is an example of a compiled language. To some extent so is LaTeX.</p>
+</section>
+<section id="packageslibraries" class="level3" data-number="10.2.5">
+<h3 data-number="10.2.5" class="anchored" data-anchor-id="packageslibraries"><span class="header-section-number">10.2.5</span> Packages/Libraries</h3>
+<p>Many programming languages are very basic in what they offer. In order to do the cool stuff you will need additional collections of code, some of it may even be written in a different programming language. The colletions are often called packages or libraries that you import, source, or load. <code>ggplot2</code> is an example of an R plotting library. <code>matplotlib</code> is similar for python.</p>
+</section>
+<section id="types" class="level3" data-number="10.2.6">
+<h3 data-number="10.2.6" class="anchored" data-anchor-id="types"><span class="header-section-number">10.2.6</span> Types</h3>
+<p>Many programming languages have a notion of a datatype. <code>1</code> can be a number, but “1” can also be a character that you are typing. It doesn’t make sense to add one, the number, to one, the character, but it might make sense to <code>1 + 1</code> for either. You would expect 2 for numbers and maybe “11” for characters. Some programming languages, such as python, type <em>dynamically</em>. They figure out what type to treat a value as they read your code. They try to deduce it from the context. Other languages, such as Haskell, are <em>statically</em> typed. They require that everything have a type and that it never changes. Dynamically typed languages are often easier to get started with, but statically typed languges can prove helpful when writing larger pieces of software.</p>
+<p>Other sorts of data structures that you might run across in this course are: - Lists,</p>
+<ul>
+<li><p>Tuples,</p></li>
+<li><p>Data.Frames</p></li>
+</ul>
+</section>
+<section id="loops" class="level3" data-number="10.2.7">
+<h3 data-number="10.2.7" class="anchored" data-anchor-id="loops"><span class="header-section-number">10.2.7</span> Loops</h3>
+<p>Loops are a common programming construct. They allow you to repeat an action multiple times. For example, if you wanted to print a number you could repeatedly use something like <code>print(my_number)</code> as long as you changed my_number in between each use.</p>
 <p>Common varieties of loops are the <code>for</code> and <code>while</code> loop.</p>
 </section>
-<section id="virtual-environments" class="level3" data-number="10.2.3">
-<h3 data-number="10.2.3" class="anchored" data-anchor-id="virtual-environments"><span class="header-section-number">10.2.3</span> Virtual Environments</h3>
-<p>You will often have software installed on your computer that you use for multiple purposes. There is also software on your computer that is used by your operating system. If you download different versions of that software for your own use you may find that your programs do not run correctly, or even worse that your system does not work properly. Do avoid such problems you may want to “sandbox” your development environment. Conflicts are less common for R, but very common for python. Such sandboxes are often called <code>venv</code>. A virtual environment lets you install software that only works locally, and cannot interfere with your global system software or other virtual environments you may have constructed for other projects.</p>
+<section id="virtual-environments" class="level3" data-number="10.2.8">
+<h3 data-number="10.2.8" class="anchored" data-anchor-id="virtual-environments"><span class="header-section-number">10.2.8</span> Virtual Environments</h3>
+<p>You will often have software installed on your computer that you use for multiple purposes. There is also software on your computer that is used by your operating system. If you download different versions of that software for your own use you may find that your programs do not run correctly, or even worse that your system does not work properly.</p>
+<p>To avoid such problems you may want to “sandbox” your development environment. Conflicts are less common for R, but very common for python. Such sandboxes are often called <code>venv</code>.</p>
+<p>A virtual environment lets you install software that only works locally, and cannot interfere with your global system software or other virtual environments you may have constructed for other projects.</p>
 </section>
-<section id="assignment-and-equality-are-different-in-programming" class="level3" data-number="10.2.4">
-<h3 data-number="10.2.4" class="anchored" data-anchor-id="assignment-and-equality-are-different-in-programming"><span class="header-section-number">10.2.4</span> Assignment and Equality Are Different in Programming</h3>
+<section id="assignment-and-equality-are-different-in-programming" class="level3" data-number="10.2.9">
+<h3 data-number="10.2.9" class="anchored" data-anchor-id="assignment-and-equality-are-different-in-programming"><span class="header-section-number">10.2.9</span> Assignment and Equality Are Different in Programming</h3>
 <p>Assignment means you are assigning a name to something. Equality means that you are testing if two things are the same. One equals sign does not equal two equals sign. That is <code>= != ==</code>. Exclamation points are often used to <em>negate</em> something (turn true to false and vice versa).</p>
-<div id="fdbb9c98" class="cell" data-execution_count="1">
+<div id="bb3c6df4" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">==</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
