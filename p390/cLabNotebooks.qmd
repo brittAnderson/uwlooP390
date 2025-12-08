@@ -88,3 +88,7 @@ If you want to dive deeper into best practices for digital record keeping:
 -   [How to keep a lab notebook](https://www.science.org/content/article/how-keep-lab-notebook)
 -   [Pick an electronic lab notebook](https://www.nature.com/articles/d41586-018-05895-3)
 -   [Lab notebook 2023 guide](https://labfolder.com/electronic-lab-notebook-eln-research-guide/)
+
+### An example
+
+See @sec-lab-notebook-example for an example of how a lab notebook in Quarto might look and be used. In the upper portion the use of the notebook for recording analyses and important project metadata, as well as interim data analyses. The second portion shows the use of a chronological lab notebook. This makes the notebook a living, dynamic document that helps you remember important details and records them in case later you need to find the documentation or date for an important event. These two styles are complementary anc can be used together. 
