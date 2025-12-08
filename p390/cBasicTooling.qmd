@@ -6,7 +6,7 @@
 -   Who are you writing code for? Human or Machine?
 -   What is an IDE? What makes for a good IDE?
 
-### Required for this Course: VS Code
+### Required for this Course: VS Code {#sec-vscode-required}
 [VSCode](https://code.visualstudio.com/)
 [Opensource alternative](https://vscodium.com/)
 
