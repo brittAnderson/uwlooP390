@@ -16,10 +16,11 @@ book:
     - cBasicTooling.qmd
     - cTerminal.qmd
     - cGit.qmd
+    - cWebSite.qmd  
     - cLabNotebooks.qmd
+    - cLabNoteBookQuartoExample.qmd
     - cWriting.qmd
     - cCode.qmd
-    - cWebSite.qmd
     - cR.qmd
     - cPython.qmd
     - cProgExp.qmd
