@@ -354,12 +354,10 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#previewing-and-rendering" id="toc-previewing-and-rendering" class="nav-link" data-scroll-target="#previewing-and-rendering"><span class="header-section-number">3.4.1</span> Previewing and Rendering</a></li>
   </ul></li>
-  <li><a href="#installation-instructions-by-operating-system" id="toc-installation-instructions-by-operating-system" class="nav-link" data-scroll-target="#installation-instructions-by-operating-system"><span class="header-section-number">3.5</span> Installation Instructions by Operating System</a></li>
-  <li><a href="#testing-your-installation" id="toc-testing-your-installation" class="nav-link" data-scroll-target="#testing-your-installation"><span class="header-section-number">3.6</span> Testing Your Installation</a>
+  <li><a href="#installing-r-and-python" id="toc-installing-r-and-python" class="nav-link" data-scroll-target="#installing-r-and-python"><span class="header-section-number">3.5</span> Installing R and Python</a>
   <ul class="collapse">
-  <li><a href="#python-test" id="toc-python-test" class="nav-link" data-scroll-target="#python-test"><span class="header-section-number">3.6.1</span> Python Test</a></li>
-  <li><a href="#r-test" id="toc-r-test" class="nav-link" data-scroll-target="#r-test"><span class="header-section-number">3.6.2</span> R Test</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">3.6.3</span> Submission</a></li>
+  <li><a href="#testing-your-installation-of-python-and-r" id="toc-testing-your-installation-of-python-and-r" class="nav-link" data-scroll-target="#testing-your-installation-of-python-and-r"><span class="header-section-number">3.5.1</span> Testing Your Installation of Python and R</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">3.5.2</span> Submission</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -457,19 +455,18 @@ f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi
 </ul>
 </section>
 </section>
-<section id="installation-instructions-by-operating-system" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="installation-instructions-by-operating-system"><span class="header-section-number">3.5</span> Installation Instructions by Operating System</h2>
-<p>For detailed installation instructions specific to your operating system, please see:</p>
+<section id="installing-r-and-python" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="installing-r-and-python"><span class="header-section-number">3.5</span> Installing R and Python</h2>
+<p>See the OS specific instructions:</p>
 <ul>
 <li><a href="./cOSX.html">Mac Installation Instructions</a></li>
 <li><a href="./cWindows.html">Windows Installation Instructions</a></li>
 </ul>
-</section>
-<section id="testing-your-installation" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="testing-your-installation"><span class="header-section-number">3.6</span> Testing Your Installation</h2>
+<section id="testing-your-installation-of-python-and-r" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="testing-your-installation-of-python-and-r"><span class="header-section-number">3.5.1</span> Testing Your Installation of Python and R</h3>
 <p>Once you have installed the necessary tools, test your setup with the following exercises.</p>
-<section id="python-test" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="python-test"><span class="header-section-number">3.6.1</span> Python Test</h3>
+<section id="python-test" class="level4" data-number="3.5.1.1">
+<h4 data-number="3.5.1.1" class="anchored" data-anchor-id="python-test"><span class="header-section-number">3.5.1.1</span> Python Test</h4>
 <p>Create a file named <code>test_python.py</code> and add the following code:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(name):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""A simple function that greets someone by name."""</span></span>
@@ -479,8 +476,8 @@ f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a function called 'square' that takes a number and returns its square</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To test your work: 1. Open a Python interactive session (in VS Code or your terminal) 2. Import your file: <code>import test_python</code> 3. Test the provided function: <code>test_python.greet("Student")</code> 4. Test your function: <code>test_python.square(5)</code> (should return 25)</p>
 </section>
-<section id="r-test" class="level3" data-number="3.6.2">
-<h3 data-number="3.6.2" class="anchored" data-anchor-id="r-test"><span class="header-section-number">3.6.2</span> R Test</h3>
+<section id="r-test" class="level4" data-number="3.5.1.2">
+<h4 data-number="3.5.1.2" class="anchored" data-anchor-id="r-test"><span class="header-section-number">3.5.1.2</span> R Test</h4>
 <p>Create a file named <code>test_r.R</code> and add the following code:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple function that greets someone by name</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>greet <span class="ot">&lt;-</span> <span class="cf">function</span>(name) {</span>
@@ -491,9 +488,10 @@ f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a function called 'square' that takes a number and returns its square</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To test your work: 1. Open an R interactive session (in VS Code or RStudio) 2. Source your file: <code>source("test_r.R")</code> 3. Test the provided function: <code>greet("Student")</code> 4. Test your function: <code>square(5)</code> (should return 25)</p>
 </section>
-<section id="submission" class="level3" data-number="3.6.3">
-<h3 data-number="3.6.3" class="anchored" data-anchor-id="submission"><span class="header-section-number">3.6.3</span> Submission</h3>
-<p>Once you’ve completed both exercises and verified they work in an interactive session, save your files. This confirms your development environment is properly configured.</p>
+</section>
+<section id="submission" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="submission"><span class="header-section-number">3.5.2</span> Submission</h3>
+<p>Once you’ve completed both exercises and verified they work in an interactive session, save your files. This confirms your development environment is properly configured. Your test files will need to be submitted on Learn for grading.</p>
 
 
 </section>

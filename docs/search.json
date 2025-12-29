@@ -943,5 +943,15 @@
       "Appendices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Python</span>"
     ]
+  },
+  {
+    "objectID": "cBasicTooling.html#installing-r-and-python",
+    "href": "cBasicTooling.html#installing-r-and-python",
+    "title": "3  Basic Tools for Scientific Computing",
+    "section": "3.5 Installing R and Python",
+    "text": "3.5 Installing R and Python\nSee the OS specific instructions:\n\nMac Installation Instructions\nWindows Installation Instructions\n\n\n3.5.1 Testing Your Installation of Python and R\nOnce you have installed the necessary tools, test your setup with the following exercises.\n\n3.5.1.1 Python Test\nCreate a file named test_python.py and add the following code:\ndef greet(name):\n    \"\"\"A simple function that greets someone by name.\"\"\"\n    return f\"Hello, {name}! Welcome to scientific computing.\"\n\n# TODO: Write your own function below\n# Create a function called 'square' that takes a number and returns its square\nTo test your work: 1. Open a Python interactive session (in VS Code or your terminal) 2. Import your file: import test_python 3. Test the provided function: test_python.greet(\"Student\") 4. Test your function: test_python.square(5) (should return 25)\n\n\n3.5.1.2 R Test\nCreate a file named test_r.R and add the following code:\n# A simple function that greets someone by name\ngreet &lt;- function(name) {\n  paste(\"Hello\", name, \"! Welcome to scientific computing.\")\n}\n\n# TODO: Write your own function below\n# Create a function called 'square' that takes a number and returns its square\nTo test your work: 1. Open an R interactive session (in VS Code or RStudio) 2. Source your file: source(\"test_r.R\") 3. Test the provided function: greet(\"Student\") 4. Test your function: square(5) (should return 25)\n\n\n\n3.5.2 Submission\nOnce you’ve completed both exercises and verified they work in an interactive session, save your files. This confirms your development environment is properly configured. Your test files will need to be submitted on Learn for grading.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Basic Tools for Scientific Computing</span>"
+    ]
   }
 ]

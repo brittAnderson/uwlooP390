@@ -80,18 +80,18 @@ Inline math is also supported: $e^{i\pi} + 1 = 0$.
 -   **Preview**: Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and type `Quarto: Preview`. This will open a live preview window that updates as you edit.
 -   **Render**: Click the **Render** button at the top of the editor to generate the final output (HTML, PDF, etc.).
 
-## Installation Instructions by Operating System
+## Installing R and Python
 
-For detailed installation instructions specific to your operating system, please see:
+See the OS specific instructions:
 
 - [Mac Installation Instructions](cOSX.qmd)
 - [Windows Installation Instructions](cWindows.qmd)
 
-## Testing Your Installation
+### Testing Your Installation of Python and R
 
 Once you have installed the necessary tools, test your setup with the following exercises.
 
-### Python Test
+#### Python Test
 
 Create a file named `test_python.py` and add the following code:
 
@@ -110,7 +110,7 @@ To test your work:
 3. Test the provided function: `test_python.greet("Student")`
 4. Test your function: `test_python.square(5)` (should return 25)
 
-### R Test
+#### R Test
 
 Create a file named `test_r.R` and add the following code:
 
@@ -132,4 +132,4 @@ To test your work:
 
 ### Submission
 
-Once you've completed both exercises and verified they work in an interactive session, save your files. This confirms your development environment is properly configured.
+Once you've completed both exercises and verified they work in an interactive session, save your files. This confirms your development environment is properly configured. Your test files will need to be submitted on Learn for grading. 
