@@ -37,9 +37,11 @@ If you are using WSL then you probably already have it. Enter you WSL terminal a
 
 First, get [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
-Second, [install a version of python](https://docs.astral.sh/uv/guides/install-python/). 
+Optional, [install a version of python](https://docs.astral.sh/uv/guides/install-python/). It may be better *not* to do this. You can get the particular version of python you need at the time you create your virtual environment in step two below. 
 
-Third, [practice setting up a virtual environment](https://docs.astral.sh/uv/guides/install-python/).
+Second, [practice setting up a virtual environment](https://docs.astral.sh/uv/guides/install-python/).
 
-Fourth, [install some packages](https://docs.astral.sh/uv/pip/packages/).
+If you are in your linux terminal you will use terminal commands such `cd` to navigate to a particular directory and then I recommend making a test directory until you are confident in what you are doing. For example, `cd ~` takes you to your home directory; `mkdir test` creates a directory called "test"; `cd ./test` moves you into your test directory, and finally, `uv venv -p 3.10` will install a virtual environment in the "test" directory (called `.venv` -- you would have to `ls -a` to see that). You will then activate this environment with `source .venv/bin/activate` to make it live, and `deactivate` when you are done. 
+
+Third, [install some packages](https://docs.astral.sh/uv/pip/packages/). *After* having created the virtual environment and activated it. 
 
