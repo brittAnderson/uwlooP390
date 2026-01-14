@@ -5,7 +5,7 @@
 
 ### Make sure you are on Windows 10 or 11 and that you are updated.
 
-### Then follow the instructions per [microsoft](https://learn.microsoft.com/en-us/windows/wsl/install.)
+### Then follow the instructions per [microsoft](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 ## VSCode
 
