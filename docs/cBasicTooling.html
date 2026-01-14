@@ -403,8 +403,8 @@ window.Quarto = {
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/B-s71n0dHUk" title="Learn Visual Studio Code in 7 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <ul>
 <li><a href="https://code.visualstudio.com/docs/introvideos/basics">Basics video</a></li>
-<li><a href="https://code.visualstudio.com/docs/languages/r">Using VSCode with R</a></li>
-<li><a href="https://code.visualstudio.com/docs/languages/python">Using VSCode with Python</a></li>
+<li><a href="https://code.visualstudio.com/docs/languages/r">Using VSCode with R</a> It is important that you do this for the operating system you are working with. Your VS Code environment will need to be able to “find” the R program when it wants to use it. Thus, when the instructions say “install R” you have to figure out if you are installing for WSL or Windows. For OSX and Linux native it is comparatively easier, because there will be only one installation. For WSL you will want to follow the <a href="https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html">installation instructions for ubuntu</a> making sure you execute these in your linux terminal (not power shell). If you have questions about adding things to your package database ask your instructor or TA.</li>
+<li><a href="https://code.visualstudio.com/docs/languages/python">Using VSCode with Python</a> The same caveats apply for Windows users. You want to be able to see things on the WSL Linux terminal side. You will want to install <code>uv</code> (per the instructions in the appendix) on the linux terminal side. When using VS Code (hopefully launched from your linux terminal) you will need to make sure that your VS Code app is using the correct virtual environment. This can be tricky (and frustrating). Ask for assistance if you have trouble with this.</li>
 </ul>
 </section>
 </section>
@@ -419,9 +419,10 @@ window.Quarto = {
 <section id="setup-for-vs-code" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="setup-for-vs-code"><span class="header-section-number">3.2.1</span> Setup for VS Code</h3>
 <ol type="1">
-<li><strong>Install Quarto CLI</strong>: Download and install from <a href="https://quarto.org/docs/get-started/">quarto.org</a>.</li>
-<li><strong>VS Code Extension</strong>: Install the <strong>Quarto</strong> extension from the VS Code Marketplace.</li>
+<li><p><strong>Install Quarto CLI</strong>: Download and install from <a href="https://quarto.org/docs/get-started/">quarto.org</a>. Again, yet another warning for Windows users. You may also need to install this in the linux terminal so that you have it available on the linux side of things. Currently, the easiest way to do this seems to be to download the “deb” file from <a href="https://quarto.org/docs/get-started/index.html">here</a> to a directory visible within the linux side (you can find that in your windows finder. Scroll down to network and you can open up the linux, ubuntu, home, your user name, and place it there if you, for example, downloaded it to the windows download folder). Then you will need to <code>cd</code> your linux terminal to the same exact directory and run a particular command: <code>sudo dpkg -i &lt;name of quarto deb file&gt;</code>.</p></li>
+<li><p><strong>VS Code Extension</strong>: Install the <strong>Quarto</strong> extension from the VS Code Marketplace.</p></li>
 </ol>
+<p>After almost all these new installations you will want to close and restart your VS Code index so that all the paths are refreshed and it can find all the new languages and extensions you have installed.</p>
 </section>
 <section id="your-first-document" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="your-first-document"><span class="header-section-number">3.2.2</span> Your First Document</h3>

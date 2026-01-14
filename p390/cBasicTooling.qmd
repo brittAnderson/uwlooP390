@@ -21,7 +21,9 @@
 
 -   [Basics video](https://code.visualstudio.com/docs/introvideos/basics)
 -   [Using VSCode with R](https://code.visualstudio.com/docs/languages/r)
--   [Using VSCode with Python](https://code.visualstudio.com/docs/languages/python)
+    It is important that you do this for the operating system you are working with. Your VS Code environment will need to be able to "find" the R program when it wants to use it. Thus, when the instructions say "install R" you have to figure out if you are installing for WSL or Windows. For OSX and Linux native it is comparatively easier, because there will be only one installation. For WSL you will want to follow the [installation instructions for ubuntu](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html) making sure you execute these in your linux terminal (not power shell). If you have questions about adding things to your package database ask your instructor or TA.
+-   [Using VSCode with Python](https://code.visualstudio.com/docs/languages/python) 
+    The same caveats apply for Windows users. You want to be able to see things on the WSL Linux terminal side. You will want to install `uv` (per the instructions in the appendix) on the linux terminal side. When using VS Code (hopefully launched from your linux terminal) you will need to make sure that your VS Code app is using the correct virtual environment. This can be tricky (and frustrating). Ask for assistance if you have trouble with this. 
 
 ### Other Options 
  [Emacs](https://www.gnu.org/software/emacs/).
@@ -39,7 +41,12 @@ Quarto is a scientific and technical publishing system that allows you to combin
 ### Setup for VS Code
 
 1.  **Install Quarto CLI**: Download and install from [quarto.org](https://quarto.org/docs/get-started/).
+    Again, yet another warning for Windows users. You may also need to install this in the linux terminal so that you have it available on the linux side of things. Currently, the easiest way to do this seems to be to download the "deb" file from [here](https://quarto.org/docs/get-started/index.html) to a directory visible within the linux side (you can find that in your windows finder. Scroll down to network and you can open up the linux, ubuntu, home, your user name, and place it there if you, for example, downloaded it to the windows download folder). Then you will need to `cd` your linux terminal to the same exact directory and run a particular command: `sudo dpkg -i <name of quarto deb file>`. 
+	
 2.  **VS Code Extension**: Install the **Quarto** extension from the VS Code Marketplace.
+
+
+After almost all these new installations you will want to close and restart your VS Code index so that all the paths are refreshed and it can find all the new languages and extensions you have installed. 
 
 ### Your First Document
 
