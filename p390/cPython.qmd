@@ -46,7 +46,7 @@ If you did all the above then this should generate a rather cool looking set of 
 
 ```{python}
 #| warning: false
-#| echo: false
+#| echo: true
 
 
 import matplotlib.pyplot as plt
