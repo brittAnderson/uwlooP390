@@ -275,14 +275,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#windows-subsystem-for-linux" id="toc-windows-subsystem-for-linux" class="nav-link active" data-scroll-target="#windows-subsystem-for-linux"><span class="header-section-number">B.1</span> Windows Subsystem for Linux</a>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">B.1</span> General</a></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context"><span class="header-section-number">B.2</span> Context</a></li>
+  <li><a href="#windows-subsystem-for-linux" id="toc-windows-subsystem-for-linux" class="nav-link" data-scroll-target="#windows-subsystem-for-linux"><span class="header-section-number">B.3</span> Windows Subsystem for Linux</a>
   <ul class="collapse">
-  <li><a href="#make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated." id="toc-make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated." class="nav-link" data-scroll-target="#make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated."><span class="header-section-number">B.1.1</span> Make sure you are on Windows 10 or 11 and that you are updated.</a></li>
-  <li><a href="#then-follow-the-instructions-per-microsoft" id="toc-then-follow-the-instructions-per-microsoft" class="nav-link" data-scroll-target="#then-follow-the-instructions-per-microsoft"><span class="header-section-number">B.1.2</span> Then follow the instructions per microsoft</a></li>
+  <li><a href="#make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated." id="toc-make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated." class="nav-link" data-scroll-target="#make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated."><span class="header-section-number">B.3.1</span> Make sure you are on Windows 10 or 11 and that you are updated.</a></li>
+  <li><a href="#then-follow-the-instructions-per-microsoft." id="toc-then-follow-the-instructions-per-microsoft." class="nav-link" data-scroll-target="#then-follow-the-instructions-per-microsoft."><span class="header-section-number">B.3.2</span> Then follow the instructions per microsoft.</a></li>
   </ul></li>
-  <li><a href="#vscode" id="toc-vscode" class="nav-link" data-scroll-target="#vscode"><span class="header-section-number">B.2</span> VSCode</a></li>
-  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">B.3</span> Git</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">B.4</span> Python</a></li>
+  <li><a href="#vscode" id="toc-vscode" class="nav-link" data-scroll-target="#vscode"><span class="header-section-number">B.4</span> VSCode</a></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">B.5</span> Git</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">B.6</span> Python</a></li>
   </ul>
 </nav>
     </div>
@@ -308,30 +310,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="windows-subsystem-for-linux" class="level2" data-number="B.1">
-<h2 data-number="B.1" class="anchored" data-anchor-id="windows-subsystem-for-linux"><span class="header-section-number">B.1</span> Windows Subsystem for Linux</h2>
+<section id="general" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="general"><span class="header-section-number">B.1</span> General</h2>
+<p>Go slow.</p>
+<p>Read, pause, reflect, and then, and only then, type and hit enter.</p>
+</section>
+<section id="context" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="context"><span class="header-section-number">B.2</span> Context</h2>
+<p>Windows is a very locked down system. Developing applications for windows using only windows tools can be limiting. You don’t know what you will want to do in the future. By using a linux style system with linux inflected tools you will be learning general methods that will broaden what you can do in the future, but living in two worlds can be tricky and you will need to keep straight when you are in windows proper and when you are in the subsystem for linux.</p>
+</section>
+<section id="windows-subsystem-for-linux" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="windows-subsystem-for-linux"><span class="header-section-number">B.3</span> Windows Subsystem for Linux</h2>
 <p>This is a relatively new feature for the Windows operating system that lets you install a linux virtual machine inside your current Windows distribution. You can thus “use” linux while still running windows. You can use it just for terminal commands or you can run some visual applications as well.</p>
-<section id="make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated." class="level3" data-number="B.1.1">
-<h3 data-number="B.1.1" class="anchored" data-anchor-id="make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated."><span class="header-section-number">B.1.1</span> Make sure you are on Windows 10 or 11 and that you are updated.</h3>
+<section id="make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated." class="level3" data-number="B.3.1">
+<h3 data-number="B.3.1" class="anchored" data-anchor-id="make-sure-you-are-on-windows-10-or-11-and-that-you-are-updated."><span class="header-section-number">B.3.1</span> Make sure you are on Windows 10 or 11 and that you are updated.</h3>
+<pre><code>There will be two steps to this process. First you will install windows subsystem for linux, usually just called WSL. This will be easier if you have the [windows power shell](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5) available.  Once you have installed WSL you will then install a linux distribution. Since ubuntu is one of the most common and best documented of the linux distributions that is the distribution I suggest you start with.
+
+You will use power shell to get wsl and ubuntu installed. After having done that you will primarily use the linux terminal that you have installed. This can be launched via you applications. Just look for Ubuntu. </code></pre>
 </section>
-<section id="then-follow-the-instructions-per-microsoft" class="level3" data-number="B.1.2">
-<h3 data-number="B.1.2" class="anchored" data-anchor-id="then-follow-the-instructions-per-microsoft"><span class="header-section-number">B.1.2</span> Then follow the instructions per <a href="https://learn.microsoft.com/en-us/windows/wsl/install.">microsoft</a></h3>
+<section id="then-follow-the-instructions-per-microsoft." class="level3" data-number="B.3.2">
+<h3 data-number="B.3.2" class="anchored" data-anchor-id="then-follow-the-instructions-per-microsoft."><span class="header-section-number">B.3.2</span> Then follow the instructions per <a href="https://learn.microsoft.com/en-us/windows/wsl/install">microsoft</a>.</h3>
 </section>
 </section>
-<section id="vscode" class="level2" data-number="B.2">
-<h2 data-number="B.2" class="anchored" data-anchor-id="vscode"><span class="header-section-number">B.2</span> VSCode</h2>
+<section id="vscode" class="level2" data-number="B.4">
+<h2 data-number="B.4" class="anchored" data-anchor-id="vscode"><span class="header-section-number">B.4</span> VSCode</h2>
+<p>This is an integrated development environment for numeous coding languages including the three file types that we will focus on: .qmd, .py, and .r files.</p>
+<p>Downloading it and having it play nice with your linux environment requires special care. Make sure you follow instructions specifically related to wsl. Usually you will install the Windows VS Code application, but when you go to “launch” it for files that will be stored in your linux land you will use your <em>linux</em> terminal with the command <code>code .</code>. Don’t forget the period. That should start it from your home directory in linux land.</p>
 <p><a href="https://code.visualstudio.com/download">Install</a></p>
 </section>
-<section id="git" class="level2" data-number="B.3">
-<h2 data-number="B.3" class="anchored" data-anchor-id="git"><span class="header-section-number">B.3</span> Git</h2>
+<section id="git" class="level2" data-number="B.5">
+<h2 data-number="B.5" class="anchored" data-anchor-id="git"><span class="header-section-number">B.5</span> Git</h2>
 <p>If you are using WSL then you probably already have it. Enter you WSL terminal and try <code>git --version</code>. If you see an answer you have it. If you don’t want to use WSL you can <a href="https://git-scm.com/install/windows">install</a> it for Windows directly.</p>
 </section>
-<section id="python" class="level2" data-number="B.4">
-<h2 data-number="B.4" class="anchored" data-anchor-id="python"><span class="header-section-number">B.4</span> Python</h2>
+<section id="python" class="level2" data-number="B.6">
+<h2 data-number="B.6" class="anchored" data-anchor-id="python"><span class="header-section-number">B.6</span> Python</h2>
 <p>First, get <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>.</p>
-<p>Second, <a href="https://docs.astral.sh/uv/guides/install-python/">install a version of python</a>.</p>
-<p>Third, <a href="https://docs.astral.sh/uv/guides/install-python/">practice setting up a virtual environment</a>.</p>
-<p>Fourth, <a href="https://docs.astral.sh/uv/pip/packages/">install some packages</a>.</p>
+<p>Optional, <a href="https://docs.astral.sh/uv/guides/install-python/">install a version of python</a>. It may be better <em>not</em> to do this. You can get the particular version of python you need at the time you create your virtual environment in step two below.</p>
+<p>Second, <a href="https://docs.astral.sh/uv/guides/install-python/">practice setting up a virtual environment</a>.</p>
+<p>If you are in your linux terminal you will use terminal commands such <code>cd</code> to navigate to a particular directory and then I recommend making a test directory until you are confident in what you are doing. For example, <code>cd ~</code> takes you to your home directory; <code>mkdir test</code> creates a directory called “test”; <code>cd ./test</code> moves you into your test directory, and finally, <code>uv venv -p 3.10</code> will install a virtual environment in the “test” directory (called <code>.venv</code> – you would have to <code>ls -a</code> to see that). You will then activate this environment with <code>source .venv/bin/activate</code> to make it live, and <code>deactivate</code> when you are done.</p>
+<p>Third, <a href="https://docs.astral.sh/uv/pip/packages/">install some packages</a>. <em>After</em> having created the virtual environment and activated it.</p>
 
 
 </section>
