@@ -15,9 +15,10 @@
 
 ### Make sure you are on Windows 10 or 11 and that you are updated.
 
-    There will be two steps to this process. First you will install windows subsystem for linux, usually just called WSL. This will be easier if you have the [windows power shell](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5) available.  Once you have installed WSL you will then install a linux distribution. Since ubuntu is one of the most common and best documented of the linux distributions that is the distribution I suggest you start with.
-	
-	You will use power shell to get wsl and ubuntu installed. After having done that you will primarily use the linux terminal that you have installed. This can be launched via you applications. Just look for Ubuntu. 
+There will be two steps to this process. First you will install windows subsystem for linux, usually just called WSL. This will be easier if you have the [windows power shell](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5) available.  
+
+Once you have installed WSL you will then install a linux distribution. Since ubuntu is one of the most common and best documented of the linux distributions that is the distribution I suggest you start with.
+You will use power shell to get wsl and ubuntu installed. After having done that you will primarily use the linux terminal that you have installed. This can be launched via you applications. Just look for Ubuntu. 
     
 ### Then follow the instructions per [microsoft](https://learn.microsoft.com/en-us/windows/wsl/install).
 
