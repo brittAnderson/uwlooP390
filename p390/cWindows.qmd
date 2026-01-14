@@ -23,9 +23,11 @@
 
 ## VSCode
 
-   This is
+   This is an integrated development environment for numeous coding languages including the three file types that we will focus on: .qmd, .py, and .r files. 
+   
+   Downloading it and having it play nice with your linux environment requires special care. Make sure you follow instructions specifically related to wsl. Usually you will install the Windows VS Code application, but when you go to "launch" it for files that will be stored in your linux land you will use your *linux* terminal with the command `code .`. Don't forget the period. That should start it from your home directory in linux land. 
 
-[Install](https://code.visualstudio.com/download)
+   [Install](https://code.visualstudio.com/download)
 
 ## Git
 
