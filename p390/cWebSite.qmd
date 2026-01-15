@@ -26,7 +26,7 @@ While a basic HTML page demonstrates that GitHub Pages is working, Quarto provid
    rm index.html
    ```
 
-2. **Initialize a Quarto website project** in your repository folder:
+2. **Initialize a Quarto website project** in your repository folder (using the command in your terminal):
    ```bash
    quarto create project website .
    ```
