@@ -1,0 +1,165 @@
+# Tutorial: Using Aider with OpenRouter to Debug Code
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+1. Set up and use aider from the command line
+2. Connect aider to a free model via OpenRouter
+3. Use aider to identify and fix bugs in existing code
+4. Verify that LLM-suggested fixes actually work
+
+## Prerequisites
+
+- OpenRouter account created (free at [openrouter.ai](https://openrouter.ai/))
+- Aider installed on your system
+- Basic familiarity with the terminal/command line
+
+## Part 1: Setup (10 minutes)
+
+### Step 1: Get Your OpenRouter API Key
+
+1. Log in to [OpenRouter](https://openrouter.ai/)
+2. Navigate to "Keys" in the top menu
+3. Click "Create Key" 
+4. Copy your API key (you'll need it in a moment)
+
+### Step 2: Set Up Your Environment
+
+In your terminal, set your OpenRouter API key as an environment variable:
+
+**On Mac/Linux:**
+```bash
+export OPENROUTER_API_KEY='your-key-here'
+```
+
+**On Windows (PowerShell):**
+```powershell
+$env:OPENROUTER_API_KEY='your-key-here'
+```
+
+### Step 3: Create a Working Directory
+
+```bash
+mkdir ~/aider_tutorial
+cd ~/aider_tutorial
+```
+
+### Step 4: Copy the Buggy Pong Game
+
+Copy the `pong_buggy.py` file from the course materials into your working directory.
+
+## Part 2: Starting Aider (5 minutes)
+
+### Step 5: Launch Aider
+
+In your terminal, from your working directory, type:
+
+```bash
+aider
+```
+
+Aider will ask if you want to create a git repository. Type `y` and press Enter. This allows you to track changes and revert if needed.
+
+### Step 6: Select a Free Model
+
+At the aider prompt, type:
+
+```
+/model meta-llama/llama-3.2-3b-instruct:free
+```
+
+This connects you to a free model via OpenRouter. You should see confirmation that the model has been set.
+
+## Part 3: Finding and Fixing Bugs (20 minutes)
+
+### Step 7: Add the File to Aider's Context
+
+```
+/add pong_buggy.py
+```
+
+This tells aider which file you want to work with.
+
+### Step 8: Ask Aider to Identify Problems
+
+Type the following at the aider prompt:
+
+```
+/ask Can you review this pong game code and identify any bugs or issues that would prevent it from working correctly?
+```
+
+**Important:** Read the response carefully. Does it identify the bugs? Does it explain them clearly?
+
+### Step 9: Request Fixes
+
+Now type:
+
+```
+Fix the bugs you identified in the pong game code.
+```
+
+Aider will show you the proposed changes. If you agree, type `y` to accept the changes.
+
+### Step 10: Verify the Fixes
+
+Exit aider by typing `/exit`.
+
+Run the pong game:
+
+```bash
+python pong_buggy.py
+```
+
+Test the game:
+- Use W/S keys to move the left paddle
+- Use Up/Down arrow keys to move the right paddle
+- Does the ball bounce correctly off both paddles?
+- Does the score update correctly when the ball goes past each paddle?
+
+## Part 4: Understanding What Happened (10 minutes)
+
+### Step 11: Review the Git History
+
+```bash
+git log --oneline
+```
+
+You should see commits made by aider showing what was changed.
+
+To see the actual changes:
+
+```bash
+git diff HEAD~1
+```
+
+### Step 12: Reflection Questions
+
+Answer these questions (write them down or discuss with a partner):
+
+1. **What bugs did the LLM identify?** Were they the same bugs you would have noticed?
+
+2. **Did the LLM fix the bugs correctly?** How did you verify this?
+
+3. **What did the LLM get right?** What did it struggle with?
+
+4. **How was this different from searching for solutions online?** What are the advantages and disadvantages?
+
+## The Bugs (Instructor Reference - Don't Peek!)
+
+The file contains two bugs:
+
+1. **Scoring bug:** When the ball goes past the right paddle, `score_a` is incremented instead of `score_b`
+2. **Collision bug:** The x-coordinate check for paddle_b collision is wrong (checks `> 300` instead of `> 340`)
+
+## Key Takeaways
+
+- LLMs can be very effective at identifying logical errors in code
+- **Always verify the output** - just because the LLM suggests it doesn't mean it's correct
+- Using version control (git) with aider lets you safely experiment and revert changes
+- Free models can handle many programming tasks adequately
+- The `/ask` command is useful for exploration; direct commands make actual changes
+
+## Next Steps
+
+For homework, you'll use these same skills to build a lexical decision experiment from scratch!
