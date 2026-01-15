@@ -1,66 +1,76 @@
 # Large Language Models
 
+## When, why, whether?
+
+Large language models are better for some tasks than others. They have become very good at writing the sort of simple, short programs that are common in experimental psychology. They can be very good at finding bugs or giving you a template to build on. 
+
+They can also be good, but you should be less confident, in acting as an expert conversation partner for you to bounce idea off of. 
+
+Whether to use them often depends on your goal. When you don't care how the result was achieved, *and* you have a way of verifying the output they can be great time savers. An example of this might be where you are having trouble figuring out why your formatting is off in a document. You just want it fixed and you will be able to tell by looking if it is fixed. Then let an LLM fix it. 
+
+If you want to learn something, then you may wish to *not* use an LLM. People who code a lot often find that there are unconventional choices made by LLMs. They may find overly complex solutions. They know this, because they can read the code and see what the LLM has done. If you don't know how to read the code yourself you may grow a mass of spaghetti that will cost you more time untangling than you thought you saved with the LLM. When you are beginning to code there is great value in learning the basic structures on your own, and then using that knowledge to bootstrap the quality of code your write later on with an LLM. 
+
+## How to run
+
+Wean yourself from the browser interface and the free versions of the mainline popular models. The free versions are often not the state of the art models the companies have built. You are not getting the best answers. You end up in a constant state of cut and paste and that can introduce errors. It is harder to track your conversations over time and build on or continue chats or even change, in the middle of a conversation, which model you are using. 
+
+### Pay up
+
+To get the state of the art models you will need to pay, however, it can be difficult to choose which model and which plan. To help with this there are several aggregators that will funnel your requests to any of a number of models. You pay one fee to the aggregator and then the aggregator passes on some of the money to the host model. You can buy one set of credits that you can easily use with multiple vendors. 
+
+#### OpenRouter
+
+[Openrouter](https://openrouter.ai/) is the vendor that I currently use for this purpose. An account is free to create and use. You can only use free models and then you don't have to pay at all, but I recommend buying 10.00 of credit and then you can test all the new models as they come out. 
+
+To find the free models look for the "models" menu near the top right. After selecting it you can type "free" in the search bar and see the models that are free.  The small clipboard icon after each models name will allow you to copy the official model name you will need to access it later with the tools described below.
+
+### Aider
+
+[Aider](https://aider.chat/) allows you to invoke the AI model from your terminal. You type `aider` at your terminal and off you go. 
+
+Before you begin though you will want to locate yourself in the directory where the project you are working on is located. If you are just playing, create a test directory and `cd` into that before beginning. Aider will, by default, ask to create a git repository to track its changes. Say yes. This allows you to more easily revert any of the changes aider makes. If you already have a git repo allow aider to commit to it. Aider will ask. 
+
+Since you are in the terminal your conversation appears in the terminal and commands to aider are preceded by a forwardslash (/). `/help` will get you a list of available things to do. Try starting with `/ask`. All the conversation occurs in your terminal and even the things that look like code do not get written anywhere. `/architect` will let you get aider's design ideas on a project. You can `/add` files and then ask aider to edit and fix them. For example, if you had a simple posner cuing task and now wanted to record reaction times in a csv file for each trial, you could ask aider to do that and it would, with your permission, edit your code to make the changes. To control which model aider is using you use the `/model` command to then type or paste in your choice. 
+
+Having trouble getting your qmd file to behave exactly as you want? Let aider take a crack at it. 
+
+The usage guide for aider is found [here](https://aider.chat/docs/usage.html).
 
 ## Run locally
 
-Why? Own your own data. 
+Using a LLM can mean different things. There is the training of the LLM and then there is the inference made by the LLM. The former often takes the large data centers that you hear about, but it can be done, for smaller size models, done on smaller set ups. If your training corpus is small it might be feasible on a single computer with a large GPU. However, that is not the usage that we will be addressing here. 
 
-Security and Privacy.
+If you want to make use of an already trained model for inference then you definitely can do that on a great many recent laptops. For these setups RAM is key, and a speedy CPU helps, but with advances made in model quantization most laptops can run something locally. That means no internet. 
 
-Research applications you may not want participants' data fed to openAI or other proprietary vendors. 
+The appeal of this is learning and privacy. The data is yours. It doesn't leave and it is not trained on. 
 
-## How to?
+Depending on how much you want to get your hands dirty and learn the basic tooling, for which your  python programming skills should be sufficient by the way, you can go with a graphical application that hides the details, or you can use something that you can control via the terminal. I will present both options. 
 
-There are many methods to running LLMs locally on your own hardward. I have chosen [GPT4All](https://www.nomic.ai/gpt4all). It can run under OSX, Windows, and Ubuntu (linux). 
+### LM Studio
+[LM Studio](https://lmstudio.ai/) will give you the ability to download an app that you can then use to download all the billions of weights that make up a particular model. Start small if you have a lower spec'd laptop. After that you can converse via the app and your conversations are private and local. You can also upload up to five sources (e.g. pdfs) that will then be used to aid the model in retrieving answers pertinent to that material (a process called RAG for retrieval augmented generation).
 
-### Key Features of GPT4ALL
+### Ollama
+[Ollama](https://ollama.com/) is an online repository of a number of very powerful models and provides the tooling for you to be able to run them locally. The [quickstart guide](https://docs.ollama.com/quickstart) provides your best starting point. 
 
-According to the website https://getstream.io/blog/best-local-llm-tools/:
+With this software installed you can run larger models locally. Embed large collections of documents and run special inquiries and conversations with tailored prompts for particular collections. It is worth a look, but it is beyond what we will be doing in our course here. 
 
-GPT4All can run LLMs on major consumer hardware such as Mac M-Series chips, AMD and NVIDIA GPUs. The following are its key features.
 
-- Privacy First: Keep private and sensitive chat information and prompts only on your machine.
+{{< video https://www.youtube.com/watch?v=TzY2lzrlPuI
+    title="Running Ollama in the WSL Terminal"
+>}}
 
-- No Internet Required: It works completely offline.
+### Using LLMs for Dynamic Research
 
-- Models Exploration: This feature allows developers to browse and download different kinds of LLMs to experiment with. You can select about 1000 open-source language models from popular options like LLama, Mistral, and more.
-
-- Local Documents: You can let your local LLM access your sensitive data with local documents like .pdf and .txt without data leaving your device and without a network.
-
-- Customization options: It provides several chatbot adjustment options like temperature, batch size, context length, etc.
-
-- Enterprise Edition: GPT4ALL provides an enterprise package with security, support, and per-device licenses to bring local AI to businesses.
- 
-It is also a very popular LLM for self-hosting (second only to Ollama, which you should also try out).
-
-## How-to
-From the GPT4all download page download the version for your operating system. 
-
-Follow the download instructions appropriate to your system and pay particular attention to any warnings and make sure that you have sufficient freespace. This is a big application and the model parameters are also quite large. 
-
-After you have successfully downloaded and installed the program checkout the [quickstart guide](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html).
-
-1. Start Chatting
-2. Install a Model
-3. I tried "Llama 3.2 1b Instruct"
-4. Load the model
-5. Start chatting
-
-## Using LLMs for Dynamic Research
+With a model running locally you could use this in your experimental pipeline to take in user input and return model output. 
 
 What are the mechanics we need for this? We need our model to accept input and generate output and we need a method to transfer the elements of the conversation back and forth. The first stage is to think of the components we have used so far and how we might stitch them together for this task. 
 
 It is also a useful transitional step to work incrementally. First, maybe try to set up an interface to allow someone to talk to the model via a web interface. Then you might be able to figure out how to use [GET and POST](link) from PHP to communicate between two web servers. There are definitely better ways to do that, but it is a fairly direct starting point. If you want an additional challenge perhaps try to use the tool: [curl](https://medium.com/@kevinkoech265/curl-a-deep-dive-into-command-line-data-transfer-8361a85b177d).
 
-::: {.callout-tip title="Classroom Exercise"}
-Download and implement the above.
 
-Start the GPT4All Server
+### Why Might You Want To Do This?
 
-See if you can get your GPT4All model to talk to another group's model.
-:::
-
-## Why Might You Want To Do This?
+Because you would like your paper to be published in the world's premier scientific journal _Science_. 
 
 [Durably reducing conspiracy beliefs through dialogues with AI](https://www.science.org/doi/10.1126/science.adq1814)
 
@@ -70,10 +80,142 @@ See if you can get your GPT4All model to talk to another group's model.
 [This](https://www.linkedin.com/pulse/integrate-chatgpt-openai-api-your-research-project-part-ding-wang-rdyec) LinkedIn post talks about ChatGPT integration. What would you have to change to get it working with your local server?
 
 
-::: {.callout-tip title="Class Question"}
-What is a RAG in this context?
-::: 
+# In class practice exercise
 
-## Next steps
+## Prerequisites
 
-Recently [@Duan_2024] has published an R package to make all of this easier. The [github repository](https://github.com/xufengduan/MacBehaviour "github repository link") has the library, a "read-me" and installation instructions. Our *class activity* is to see if anyone can get this up and working by next week. 
+- OpenRouter account created (free at [openrouter.ai](https://openrouter.ai/))
+- Aider installed on your system
+- Basic familiarity with the terminal/command line
+
+## Get Your OpenRouter API Key
+
+1. Log in to [OpenRouter](https://openrouter.ai/)
+2. Navigate to "Keys" in the top menu
+3. Click "Create Key" 
+4. Copy your API key (you'll need it in a moment)
+
+## Set Up Your Environment
+
+In your terminal, set your OpenRouter API key as an environment variable:
+
+**On Mac/Linux:**
+
+```bash
+export OPENROUTER_API_KEY='your-key-here'
+```
+
+**On Windows (PowerShell):**
+
+```powershell
+$env:OPENROUTER_API_KEY='your-key-here'
+```
+
+## Create a Working Directory
+
+```bash
+mkdir ~/aider_tutorial
+cd ~/aider_tutorial
+```
+
+## Copy the Buggy Pong Game
+
+Copy the `pong_buggy.py` file from the course materials into your working directory.
+
+## Launch Aider
+
+In your terminal, from your working directory, type:
+
+```bash
+aider
+```
+
+Aider will ask if you want to create a git repository. Type `y` and press Enter. This allows you to track changes and revert if needed.
+
+## Select a Free Model
+
+At the aider prompt, type:
+
+```
+/model meta-llama/llama-3.2-3b-instruct:free
+```
+
+This connects you to a free model via OpenRouter. You should see confirmation that the model has been set.
+
+##  Add the File to Aider's Context
+
+```
+/add pong_buggy.py
+```
+
+This tells aider which file you want to work with.
+
+## Ask Aider to Identify Problems
+
+Type the following at the aider prompt:
+
+```
+/ask Can you review this pong game code and identify any bugs or issues that would prevent it from working correctly?
+```
+
+**Important:** Read the response carefully. Does it identify the bugs? Does it explain them clearly?
+
+## Request Fixes
+
+Now type:
+
+```
+Fix the bugs you identified in the pong game code.
+```
+
+Aider will show you the proposed changes. If you agree, type `y` to accept the changes.
+
+## Verify the Fixes
+
+Exit aider by typing `/exit`.
+
+Run the pong game:
+
+```bash
+python pong_buggy.py
+```
+
+Test the game:
+- Use W/S keys to move the left paddle
+- Use Up/Down arrow keys to move the right paddle
+- Does the ball bounce correctly off both paddles?
+- Does the score update correctly when the ball goes past each paddle?
+
+## Review the Git History
+
+```bash
+git log --oneline
+```
+
+You should see commits made by aider showing what was changed.
+
+To see the actual changes:
+
+```bash
+git diff HEAD~1
+```
+
+
+## The Bugs (Reference - Don't Peek!)
+
+The file contains two bugs:
+
+1. **Scoring bug:** When the ball goes past the right paddle, `score_a` is incremented instead of `score_b`
+2. **Collision bug:** The x-coordinate check for paddle_b collision is wrong (checks `> 300` instead of `> 340`)
+
+## Key Takeaways
+
+- LLMs can be very effective at identifying logical errors in code
+- **Always verify the output** - just because the LLM suggests it doesn't mean it's correct
+- Using version control (git) with aider lets you safely experiment and revert changes
+- Free models can handle many programming tasks adequately
+- The `/ask` command is useful for exploration; direct commands make actual changes
+
+## Next Steps
+
+For homework, you'll use these same skills to build a lexical decision experiment from scratch!
