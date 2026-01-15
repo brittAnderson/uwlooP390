@@ -114,6 +114,3 @@ sys.exit()
 
 You will want to save your data. As a first step see if you can [open a file](https://www.w3schools.com/python/python_file_handling.asp), and the if you can use the dictionary created to [add lines to a csv file](https://docs.python.org/3/library/csv.html). 
 
-
-## Javascript 
-WIP

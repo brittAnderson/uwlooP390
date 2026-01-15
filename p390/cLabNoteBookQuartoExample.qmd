@@ -17,7 +17,7 @@ date: today # Automatically uses the current date. This serves as the official t
 
 
 
-## 🎯 1. Research Aim & Hypotheses
+## 1. Research Aim & Hypotheses
 
 ### Research Question
 What is the effect of **[Independent Variable (IV)]** on **[Dependent Variable (DV)]** in our sample of [Population]?
@@ -26,7 +26,7 @@ What is the effect of **[Independent Variable (IV)]** on **[Dependent Variable (
 * **H1 (Alternative):** We predict that [Specific prediction based on IV and DV].
 * **H0 (Null):** There will be no significant effect of the IV on the DV.
 
-## 🔬 2. Methodology & Procedure
+## 2. Methodology & Procedure
 
 ### Participants
 * **Recruitment Method:** [e.g., SONA, convenience sample]
@@ -43,13 +43,13 @@ What is the effect of **[Independent Variable (IV)]** on **[Dependent Variable (
 2.  [Detailed action 2, e.g., Participant received standardized instructions.]
 3.  [Detailed action 3, e.g., Ran 4 blocks of 20 trials each, with a 30-second break between blocks.]
 
-### 🚨 Critical Observations & Deviations (The "Activity Log")
+###  Critical Observations & Deviations (The "Activity Log")
 
 > **Observation 1 (Time: 10:45 AM):** The internet connection briefly dropped for 3 minutes during the survey administration for Participant 7. The system appears to have saved their progress, but a note was made to check the final file for completeness.
 >
 > **Deviation:** We were supposed to collect 20 participants, but due to time, only collected 18. Analysis must account for lower statistical power.
 
-## 📊 3. Data Processing & Analysis
+##  3. Data Processing & Analysis
 
 ### 3.01 Generating Fake Data
 This is **not** part of a lab notebook. This is some code to generate random data so that the rest of the code can be tested. 
@@ -179,7 +179,7 @@ cleaned_data |>
   theme_minimal()
 ```
 
-## 🗓️ 4. Project Chronology and Daily Log
+## 4. Project Chronology and Daily Log
 
 *(Purpose: This section serves as the **scientific diary** for the project. Every day you work on the research—whether collecting data, cleaning code, or reading literature—you must log your activities, thoughts, and any problems encountered. This maintains the chain of custody and the historical record of the research.)*
 

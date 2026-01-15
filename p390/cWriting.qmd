@@ -254,7 +254,7 @@ After creating each post, run `quarto preview` to see how the homepage listing u
 
 ::: {.callout-tip title="Classroom Exercise and HW"}
 
-Write an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to your overleaf submission. All the components of an article, at least one figure, and at least one reference. Instead of using an image from the web try to include either your R or Python code for the figure you liked.
+Write an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to a real manuscript when you compile it to pdf. It should have all the components of an article, at least one figure, and at least one reference. You can use some of the example code in these notes for ideas so that you can a section of embedded code that creates a figure.
 
 :::
 

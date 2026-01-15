@@ -8,12 +8,12 @@ To have a website viewable by the world it must be hosted on a server that is vi
 ### Testing Github Pages
 Assuming you have an account you should be able to create a minimal webpage in a few steps. 
 
-1. Go to personal dashboard and create a new repo as instructed on the Github Pages website. The repo must be named <username>.github.io. 
-2. Use terminal to clone this repo to your local computer. 
+1. Go to personal dashboard and create a new repo as instructed on the Github Pages website. The repo must be named yourusername.github.io. 
+2. Use your terminal to clone this repo to your local computer. 
 3. cd into the correct directory using your terminal (inside VS Code is fine). And using the *terminal* do `echo "hello world" > index.html.`
 4. Do the usual add, commit, and push and verify your web site works at <username.github.io>.
 
-You now have a website!
+You now have a website! To view it go to yourusername.github.io
 
 ### Converting to Quarto
 

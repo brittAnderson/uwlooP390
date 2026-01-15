@@ -1008,5 +1008,3 @@ mean(rdf$v3)
 
 #### Some Analysis Tools
 
-- Pandas TBD
-- Some more R TBD
