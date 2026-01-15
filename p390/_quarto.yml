@@ -24,12 +24,9 @@ book:
     - cR.qmd
     - cPython.qmd
     - cProgExp.qmd
-    - cExps.qmd
     - cHandlingData.qmd
     - cBiblio.qmd
-    - cServer.qmd
     - cLLM.qmd
-    - cDatabase.qmd
     - summary.qmd
   appendices:
     - cOSX.qmd
