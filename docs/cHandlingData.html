@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; Handling Data – P390</title>
+<title>14&nbsp; Handling Data – P390</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./cBiblio.html" rel="next">
-<link href="./cExps.html" rel="prev">
+<link href="./cProgExp.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cHandlingData.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Handling Data</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cHandlingData.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Handling Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -231,44 +231,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cExps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cHandlingData.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Handling Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Handling Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cBiblio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Knowledge Management</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cServer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Testing Your Javascript</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Knowledge Management</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cLLM.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Large Language Models</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cDatabase.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Databases and management</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Large Language Models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -310,9 +292,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#common-data-formats-and-some-advantages-of-each" id="toc-common-data-formats-and-some-advantages-of-each" class="nav-link active" data-scroll-target="#common-data-formats-and-some-advantages-of-each"><span class="header-section-number">15.0.1</span> Common Data Formats And Some Advantages of Each</a></li>
-  <li><a href="#a-json-illustration" id="toc-a-json-illustration" class="nav-link" data-scroll-target="#a-json-illustration"><span class="header-section-number">15.0.2</span> A JSON Illustration</a></li>
-  <li><a href="#a-pickle-python-example" id="toc-a-pickle-python-example" class="nav-link" data-scroll-target="#a-pickle-python-example"><span class="header-section-number">15.0.3</span> A Pickle Python Example</a></li>
+  <li><a href="#common-data-formats-and-some-advantages-of-each" id="toc-common-data-formats-and-some-advantages-of-each" class="nav-link active" data-scroll-target="#common-data-formats-and-some-advantages-of-each"><span class="header-section-number">14.0.1</span> Common Data Formats And Some Advantages of Each</a></li>
+  <li><a href="#a-json-illustration" id="toc-a-json-illustration" class="nav-link" data-scroll-target="#a-json-illustration"><span class="header-section-number">14.0.2</span> A JSON Illustration</a></li>
+  <li><a href="#a-pickle-python-example" id="toc-a-pickle-python-example" class="nav-link" data-scroll-target="#a-pickle-python-example"><span class="header-section-number">14.0.3</span> A Pickle Python Example</a></li>
   </ul>
 </nav>
     </div>
@@ -321,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Handling Data</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Handling Data</span></h1>
 </div>
 
 
@@ -339,8 +321,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use.</p>
-<section id="common-data-formats-and-some-advantages-of-each" class="level3" data-number="15.0.1">
-<h3 data-number="15.0.1" class="anchored" data-anchor-id="common-data-formats-and-some-advantages-of-each"><span class="header-section-number">15.0.1</span> Common Data Formats And Some Advantages of Each</h3>
+<section id="common-data-formats-and-some-advantages-of-each" class="level3" data-number="14.0.1">
+<h3 data-number="14.0.1" class="anchored" data-anchor-id="common-data-formats-and-some-advantages-of-each"><span class="header-section-number">14.0.1</span> Common Data Formats And Some Advantages of Each</h3>
 <ul>
 <li><p>Plain Text</p>
 <p>Plain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.</p></li>
@@ -355,8 +337,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This is an R data format. Like pickle it is binary and like pickle it is language specific, but rather than python the language is R. Maybe it is because I feel more comfortable doing data analysis in R, but I don’t view this as hard to use as pickle. Usually my data is small enough to fit in a single workspace and I use the .dat format to save work at the end of a day, but I don’t use it as my primary storage format when generating data experimentally.</p></li>
 </ul>
 </section>
-<section id="a-json-illustration" class="level3" data-number="15.0.2">
-<h3 data-number="15.0.2" class="anchored" data-anchor-id="a-json-illustration"><span class="header-section-number">15.0.2</span> A JSON Illustration</h3>
+<section id="a-json-illustration" class="level3" data-number="14.0.2">
+<h3 data-number="14.0.2" class="anchored" data-anchor-id="a-json-illustration"><span class="header-section-number">14.0.2</span> A JSON Illustration</h3>
 <div id="fig-minimaljson" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-minimaljson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -367,12 +349,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>js <span class="op">=</span> j.dumps(a)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>js</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>'{"name": "John Doe", "age": 24, "rt": 0.9737641221623755}'</code></pre>
+<pre><code>'{"name": "John Doe", "age": 24, "rt": 0.7280271577777825}'</code></pre>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-minimaljson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.1: The <code>dumps</code> command will output the json version as a string. Note this example is using python, but you can do the same thing with R. Thus JSON is more portable. Note there is a very similar python function without the terminal <em>s</em>, <code>json.dump</code>, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with <code>json.load()</code>
+Figure&nbsp;14.1: The <code>dumps</code> command will output the json version as a string. Note this example is using python, but you can do the same thing with R. Thus JSON is more portable. Note there is a very similar python function without the terminal <em>s</em>, <code>json.dump</code>, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with <code>json.load()</code>
 </figcaption>
 </figure>
 </div>
@@ -395,14 +377,14 @@ Figure&nbsp;15.1: The <code>dumps</code> command will output the json version as
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jsonfileexample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.2: This example was taken from [<a href="https://stackoverflow.com/questions/42825102/how-to-save-python-dictionary-into-json-files">StackOverflow</a>] shows a working example.
+Figure&nbsp;14.2: This example was taken from [<a href="https://stackoverflow.com/questions/42825102/how-to-save-python-dictionary-into-json-files">StackOverflow</a>] shows a working example.
 </figcaption>
 </figure>
 </div>
 <p>A JSON tutorial can be found <a href="https://www.w3schools.com/js/js_json_intro.asp">here</a>.</p>
 </section>
-<section id="a-pickle-python-example" class="level3" data-number="15.0.3">
-<h3 data-number="15.0.3" class="anchored"><span class="header-section-number">15.0.3</span> A Pickle Python Example</h3>
+<section id="a-pickle-python-example" class="level3" data-number="14.0.3">
+<h3 data-number="14.0.3" class="anchored"><span class="header-section-number">14.0.3</span> A Pickle Python Example</h3>
 <p>Pickling is a data serialization <a href="https://docs.python.org/3/library/pickle.html">library</a> specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage.</p>
 <p>This <a href="#pickle-example">code</a> from a <a href="https://www.geeksforgeeks.org/understanding-python-pickling-example/">GeeksforGeeks article</a> provides a nice minimal working example.</p>
 <div id="pickle-example">
@@ -441,8 +423,8 @@ Figure&nbsp;15.2: This example was taken from [<a href="https://stackoverflow.co
 <span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    loadData()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Note that <code>__name__</code> at the end. That is a clever way to handle python files that allows you to use them as either a library or a script.</p>
-<section id="a-simple-r-example" class="level3" data-number="15.0.4">
-<h3 data-number="15.0.4" class="anchored" data-anchor-id="a-simple-r-example"><span class="header-section-number">15.0.4</span> A Simple R Example</h3>
+<section id="a-simple-r-example" class="level3" data-number="14.0.4">
+<h3 data-number="14.0.4" class="anchored" data-anchor-id="a-simple-r-example"><span class="header-section-number">14.0.4</span> A Simple R Example</h3>
 <p>When working in the R environment the <code>save</code> and <code>load</code> function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called <code>read</code> and <code>write</code>. Each of these has several specialization that target particular file types (e.g.&nbsp;<code>read.csv</code>) and also allow a number of customizations (e.g.&nbsp;whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Class Question">
 <div class="callout-header d-flex align-content-center">
@@ -509,39 +491,39 @@ Figure&nbsp;15.2: This example was taken from [<a href="https://stackoverflow.co
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cars_from_json <span class="ot">&lt;-</span> <span class="fu">read_json</span>(<span class="st">"cars.json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="considering-pandas-and-interoperability-with-r" class="level3" data-number="15.0.5">
-<h3 data-number="15.0.5" class="anchored" data-anchor-id="considering-pandas-and-interoperability-with-r"><span class="header-section-number">15.0.5</span> Considering Pandas and Interoperability with R</h3>
+<section id="considering-pandas-and-interoperability-with-r" class="level3" data-number="14.0.5">
+<h3 data-number="14.0.5" class="anchored" data-anchor-id="considering-pandas-and-interoperability-with-r"><span class="header-section-number">14.0.5</span> Considering Pandas and Interoperability with R</h3>
 <p><a href="https://pandas.pydata.org/">Pandas</a> is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully.</p>
 <p>Pandas can usually be installed with <code>pip install pandas</code>. Because of the size and complexity of python installations a virtual environment is recommended. If you are using <code>uv</code> and a virtual environment as recommended make sure you activate that environment and use prefix with <code>uv</code>.</p>
 <p>Even if you are not thinking of doing your data analysis in python, if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data more convenient.</p>
 <p>IAMHERE – need to test the following and fix the level of headers. – Britt Jan 6 2026</p>
 </section>
-<section id="pandas-and-r-dataframes-illustrated." class="level3" data-number="15.0.6">
-<h3 data-number="15.0.6" class="anchored" data-anchor-id="pandas-and-r-dataframes-illustrated."><span class="header-section-number">15.0.6</span> Pandas and R Dataframes Illustrated.</h3>
+<section id="pandas-and-r-dataframes-illustrated." class="level3" data-number="14.0.6">
+<h3 data-number="14.0.6" class="anchored" data-anchor-id="pandas-and-r-dataframes-illustrated."><span class="header-section-number">14.0.6</span> Pandas and R Dataframes Illustrated.</h3>
 <p>Since these two methods of handling data are so common we will run through a series of illustrative exercises that will teach you their differences and help you understand and compare their syntax.</p>
 </section>
-<section id="dataframe-self-learning-exercises-r-and-python-pandas" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="dataframe-self-learning-exercises-r-and-python-pandas"><span class="header-section-number">15.1</span> Dataframe Self-Learning Exercises: R and Python Pandas</h2>
-<section id="prerequisites" class="level3" data-number="15.1.1">
-<h3 data-number="15.1.1" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">15.1.1</span> Prerequisites</h3>
+<section id="dataframe-self-learning-exercises-r-and-python-pandas" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="dataframe-self-learning-exercises-r-and-python-pandas"><span class="header-section-number">14.1</span> Dataframe Self-Learning Exercises: R and Python Pandas</h2>
+<section id="prerequisites" class="level3" data-number="14.1.1">
+<h3 data-number="14.1.1" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">14.1.1</span> Prerequisites</h3>
 <ul>
 <li>You have R installed and can run R code</li>
 <li>You have Python installed with pandas library (<code>pip install pandas</code> or <code>uv pip install pandas</code>)</li>
 <li>You can execute code in either RStudio, Jupyter notebooks, or your preferred IDE</li>
 </ul>
 </section>
-<section id="learning-philosophy" class="level3" data-number="15.1.2">
-<h3 data-number="15.1.2" class="anchored" data-anchor-id="learning-philosophy"><span class="header-section-number">15.1.2</span> Learning Philosophy</h3>
+<section id="learning-philosophy" class="level3" data-number="14.1.2">
+<h3 data-number="14.1.2" class="anchored" data-anchor-id="learning-philosophy"><span class="header-section-number">14.1.2</span> Learning Philosophy</h3>
 <p>These exercises are designed to help you discover similarities and differences between R dataframes and Python pandas dataframes through hands-on experimentation. You’ll work with the same dataset in both languages to build intuition about how each handles common data analysis tasks.</p>
 <hr>
 </section>
 </section>
-<section id="part-1-r-dataframe-exercises" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="part-1-r-dataframe-exercises"><span class="header-section-number">15.2</span> Part 1: R Dataframe Exercises</h2>
-<section id="exercise-set-r1-creating-and-exploring-dataframes" class="level3" data-number="15.2.1">
-<h3 data-number="15.2.1" class="anchored" data-anchor-id="exercise-set-r1-creating-and-exploring-dataframes"><span class="header-section-number">15.2.1</span> Exercise Set R1: Creating and Exploring Dataframes</h3>
-<section id="r1.1-create-a-research-dataset" class="level4" data-number="15.2.1.1">
-<h4 data-number="15.2.1.1" class="anchored" data-anchor-id="r1.1-create-a-research-dataset"><span class="header-section-number">15.2.1.1</span> R1.1 Create a Research Dataset</h4>
+<section id="part-1-r-dataframe-exercises" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="part-1-r-dataframe-exercises"><span class="header-section-number">14.2</span> Part 1: R Dataframe Exercises</h2>
+<section id="exercise-set-r1-creating-and-exploring-dataframes" class="level3" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="exercise-set-r1-creating-and-exploring-dataframes"><span class="header-section-number">14.2.1</span> Exercise Set R1: Creating and Exploring Dataframes</h3>
+<section id="r1.1-create-a-research-dataset" class="level4" data-number="14.2.1.1">
+<h4 data-number="14.2.1.1" class="anchored" data-anchor-id="r1.1-create-a-research-dataset"><span class="header-section-number">14.2.1.1</span> R1.1 Create a Research Dataset</h4>
 <p><strong>Task:</strong> Create a dataframe with experimental data.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dataframe with participant data</span></span>
@@ -568,8 +550,8 @@ Expected outcome
 You should see a dataframe with 10 rows and 5 columns. The <code>str()</code> function shows that <code>condition</code> is stored as a character vector by default in modern R. You can see the data types: numeric for age, reaction_time, and accuracy; character for condition; numeric for subject_id.
 </details>
 </section>
-<section id="r1.2-basic-dataframe-information" class="level4" data-number="15.2.1.2">
-<h4 data-number="15.2.1.2" class="anchored" data-anchor-id="r1.2-basic-dataframe-information"><span class="header-section-number">15.2.1.2</span> R1.2 Basic Dataframe Information</h4>
+<section id="r1.2-basic-dataframe-information" class="level4" data-number="14.2.1.2">
+<h4 data-number="14.2.1.2" class="anchored" data-anchor-id="r1.2-basic-dataframe-information"><span class="header-section-number">14.2.1.2</span> R1.2 Basic Dataframe Information</h4>
 <p><strong>Task:</strong> Explore your dataframe’s properties.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of rows</span></span>
@@ -603,8 +585,8 @@ Expected outcome
 <code>summary()</code> provides descriptive statistics (min, max, mean, median, quartiles) for numeric columns and counts for character/factor columns. This is a quick way to check your data for outliers or data entry errors.
 </details>
 </section>
-<section id="r1.3-selecting-columns" class="level4" data-number="15.2.1.3">
-<h4 data-number="15.2.1.3" class="anchored" data-anchor-id="r1.3-selecting-columns"><span class="header-section-number">15.2.1.3</span> R1.3 Selecting Columns</h4>
+<section id="r1.3-selecting-columns" class="level4" data-number="14.2.1.3">
+<h4 data-number="14.2.1.3" class="anchored" data-anchor-id="r1.3-selecting-columns"><span class="header-section-number">14.2.1.3</span> R1.3 Selecting Columns</h4>
 <p><strong>Task:</strong> Practice different ways to access columns.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Dollar sign notation</span></span>
@@ -630,8 +612,8 @@ Expected outcome
 <code>$</code> returns a vector, while <code>[, "column"]</code> returns a vector by default but can return a dataframe if you use <code>drop=FALSE</code>. Single brackets <code>["column"]</code> returns a dataframe with one column. Understanding these differences is important for avoiding errors in your analysis code.
 </details>
 </section>
-<section id="r1.4-filtering-rows" class="level4" data-number="15.2.1.4">
-<h4 data-number="15.2.1.4" class="anchored" data-anchor-id="r1.4-filtering-rows"><span class="header-section-number">15.2.1.4</span> R1.4 Filtering Rows</h4>
+<section id="r1.4-filtering-rows" class="level4" data-number="14.2.1.4">
+<h4 data-number="14.2.1.4" class="anchored" data-anchor-id="r1.4-filtering-rows"><span class="header-section-number">14.2.1.4</span> R1.4 Filtering Rows</h4>
 <p><strong>Task:</strong> Select subsets of your data based on conditions.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for treatment condition only</span></span>
@@ -659,8 +641,8 @@ Expected outcome
 You should find 5 participants in treatment group, and 2 young participants in treatment. The <code>subset()</code> function is often more readable because you don’t need to repeat the dataframe name and the comma notation is less error-prone.
 </details>
 </section>
-<section id="r1.5-computing-condition-means" class="level4" data-number="15.2.1.5">
-<h4 data-number="15.2.1.5" class="anchored" data-anchor-id="r1.5-computing-condition-means"><span class="header-section-number">15.2.1.5</span> R1.5 Computing Condition Means</h4>
+<section id="r1.5-computing-condition-means" class="level4" data-number="14.2.1.5">
+<h4 data-number="14.2.1.5" class="anchored" data-anchor-id="r1.5-computing-condition-means"><span class="header-section-number">14.2.1.5</span> R1.5 Computing Condition Means</h4>
 <p><strong>Task:</strong> Calculate mean reaction time by condition.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Manual filtering</span></span>
@@ -688,8 +670,8 @@ Expected outcome
 Treatment group should have faster reaction times (lower values). <code>aggregate()</code> returns a dataframe which is often easier to work with, while <code>tapply()</code> returns a named vector. The formula syntax in <code>aggregate()</code> (<code>reaction_time ~ condition</code>) is very readable and common in R statistical functions.
 </details>
 </section>
-<section id="r1.6-adding-and-modifying-columns" class="level4" data-number="15.2.1.6">
-<h4 data-number="15.2.1.6" class="anchored" data-anchor-id="r1.6-adding-and-modifying-columns"><span class="header-section-number">15.2.1.6</span> R1.6 Adding and Modifying Columns</h4>
+<section id="r1.6-adding-and-modifying-columns" class="level4" data-number="14.2.1.6">
+<h4 data-number="14.2.1.6" class="anchored" data-anchor-id="r1.6-adding-and-modifying-columns"><span class="header-section-number">14.2.1.6</span> R1.6 Adding and Modifying Columns</h4>
 <p><strong>Task:</strong> Create new variables in your dataframe.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a new column: convert RT from ms to seconds</span></span>
@@ -716,8 +698,8 @@ Expected outcome
 Your dataframe now has 8 columns. You can calculate condition means for performance using the methods from R1.5. For three-level grouping, you’d use nested <code>ifelse()</code> or the <code>cut()</code> function.
 </details>
 </section>
-<section id="r1.7-basic-statistical-tests" class="level4" data-number="15.2.1.7">
-<h4 data-number="15.2.1.7" class="anchored" data-anchor-id="r1.7-basic-statistical-tests"><span class="header-section-number">15.2.1.7</span> R1.7 Basic Statistical Tests</h4>
+<section id="r1.7-basic-statistical-tests" class="level4" data-number="14.2.1.7">
+<h4 data-number="14.2.1.7" class="anchored" data-anchor-id="r1.7-basic-statistical-tests"><span class="header-section-number">14.2.1.7</span> R1.7 Basic Statistical Tests</h4>
 <p><strong>Task:</strong> Perform a t-test comparing conditions.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># T-test: Does treatment affect reaction time?</span></span>
@@ -745,12 +727,12 @@ You should see a significant difference between conditions (treatment faster). T
 </section>
 </section>
 </section>
-<section id="part-2-python-pandas-dataframe-exercises" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="part-2-python-pandas-dataframe-exercises"><span class="header-section-number">15.3</span> Part 2: Python Pandas Dataframe Exercises</h2>
-<section id="exercise-set-p1-creating-and-exploring-dataframes" class="level3" data-number="15.3.1">
-<h3 data-number="15.3.1" class="anchored" data-anchor-id="exercise-set-p1-creating-and-exploring-dataframes"><span class="header-section-number">15.3.1</span> Exercise Set P1: Creating and Exploring Dataframes</h3>
-<section id="p1.1-create-the-same-research-dataset" class="level4" data-number="15.3.1.1">
-<h4 data-number="15.3.1.1" class="anchored" data-anchor-id="p1.1-create-the-same-research-dataset"><span class="header-section-number">15.3.1.1</span> P1.1 Create the Same Research Dataset</h4>
+<section id="part-2-python-pandas-dataframe-exercises" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="part-2-python-pandas-dataframe-exercises"><span class="header-section-number">14.3</span> Part 2: Python Pandas Dataframe Exercises</h2>
+<section id="exercise-set-p1-creating-and-exploring-dataframes" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="exercise-set-p1-creating-and-exploring-dataframes"><span class="header-section-number">14.3.1</span> Exercise Set P1: Creating and Exploring Dataframes</h3>
+<section id="p1.1-create-the-same-research-dataset" class="level4" data-number="14.3.1.1">
+<h4 data-number="14.3.1.1" class="anchored" data-anchor-id="p1.1-create-the-same-research-dataset"><span class="header-section-number">14.3.1.1</span> P1.1 Create the Same Research Dataset</h4>
 <p><strong>Task:</strong> Create an identical dataframe in pandas.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -781,8 +763,8 @@ Expected outcome
 Pandas displays the dataframe with row indices (0-9) on the left. The <code>info()</code> method shows similar information to R’s <code>str()</code>: column names, non-null counts, and data types. Pandas uses <code>int64</code>, <code>float64</code>, and <code>object</code> (for strings) as data types.
 </details>
 </section>
-<section id="p1.2-basic-dataframe-information" class="level4" data-number="15.3.1.2">
-<h4 data-number="15.3.1.2" class="anchored" data-anchor-id="p1.2-basic-dataframe-information"><span class="header-section-number">15.3.1.2</span> P1.2 Basic Dataframe Information</h4>
+<section id="p1.2-basic-dataframe-information" class="level4" data-number="14.3.1.2">
+<h4 data-number="14.3.1.2" class="anchored" data-anchor-id="p1.2-basic-dataframe-information"><span class="header-section-number">14.3.1.2</span> P1.2 Basic Dataframe Information</h4>
 <p><strong>Task:</strong> Explore your dataframe’s properties.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of rows and columns</span></span>
@@ -814,8 +796,8 @@ Expected outcome
 <code>shape</code> is a tuple (10, 5) similar to R’s <code>dim()</code>. <code>describe()</code> shows statistics for numeric columns only by default, while R’s <code>summary()</code> includes all columns. Using <code>include='all'</code> shows statistics for all column types, including count, unique values, and most frequent value for categorical data.
 </details>
 </section>
-<section id="p1.3-selecting-columns" class="level4" data-number="15.3.1.3">
-<h4 data-number="15.3.1.3" class="anchored" data-anchor-id="p1.3-selecting-columns"><span class="header-section-number">15.3.1.3</span> P1.3 Selecting Columns</h4>
+<section id="p1.3-selecting-columns" class="level4" data-number="14.3.1.3">
+<h4 data-number="14.3.1.3" class="anchored" data-anchor-id="p1.3-selecting-columns"><span class="header-section-number">14.3.1.3</span> P1.3 Selecting Columns</h4>
 <p><strong>Task:</strong> Practice different ways to access columns.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Bracket notation with column name</span></span>
@@ -841,8 +823,8 @@ Expected outcome
 Single brackets with one column name returns a Series (like a vector), double brackets returns a DataFrame. <code>loc</code> uses labels (column/row names), <code>iloc</code> uses integer positions. This is similar to R’s distinction between <code>$</code> (returns vector) and <code>[, "col"]</code> (can return vector or dataframe).
 </details>
 </section>
-<section id="p1.4-filtering-rows" class="level4" data-number="15.3.1.4">
-<h4 data-number="15.3.1.4" class="anchored" data-anchor-id="p1.4-filtering-rows"><span class="header-section-number">15.3.1.4</span> P1.4 Filtering Rows</h4>
+<section id="p1.4-filtering-rows" class="level4" data-number="14.3.1.4">
+<h4 data-number="14.3.1.4" class="anchored" data-anchor-id="p1.4-filtering-rows"><span class="header-section-number">14.3.1.4</span> P1.4 Filtering Rows</h4>
 <p><strong>Task:</strong> Select subsets of your data based on conditions.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for treatment condition only</span></span>
@@ -871,8 +853,8 @@ Expected outcome
 Parentheses are needed because of operator precedence in Python. You should find 5 treatment participants and 2 young treatment participants. The <code>query()</code> method is similar to R’s <code>subset()</code> in readability, using string expressions instead of boolean indexing.
 </details>
 </section>
-<section id="p1.5-computing-condition-means" class="level4" data-number="15.3.1.5">
-<h4 data-number="15.3.1.5" class="anchored" data-anchor-id="p1.5-computing-condition-means"><span class="header-section-number">15.3.1.5</span> P1.5 Computing Condition Means</h4>
+<section id="p1.5-computing-condition-means" class="level4" data-number="14.3.1.5">
+<h4 data-number="14.3.1.5" class="anchored" data-anchor-id="p1.5-computing-condition-means"><span class="header-section-number">14.3.1.5</span> P1.5 Computing Condition Means</h4>
 <p><strong>Task:</strong> Calculate mean reaction time by condition.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Manual filtering</span></span>
@@ -899,8 +881,8 @@ Expected outcome
 Treatment group has faster reaction times. <code>groupby()</code> is similar to R’s <code>aggregate()</code> but often more flexible. The <code>agg()</code> method lets you apply multiple functions at once, returning a nice summary table. This is very powerful for exploratory data analysis.
 </details>
 </section>
-<section id="p1.6-adding-and-modifying-columns" class="level4" data-number="15.3.1.6">
-<h4 data-number="15.3.1.6" class="anchored" data-anchor-id="p1.6-adding-and-modifying-columns"><span class="header-section-number">15.3.1.6</span> P1.6 Adding and Modifying Columns</h4>
+<section id="p1.6-adding-and-modifying-columns" class="level4" data-number="14.3.1.6">
+<h4 data-number="14.3.1.6" class="anchored" data-anchor-id="p1.6-adding-and-modifying-columns"><span class="header-section-number">14.3.1.6</span> P1.6 Adding and Modifying Columns</h4>
 <p><strong>Task:</strong> Create new variables in your dataframe.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a new column: convert RT from ms to seconds</span></span>
@@ -931,8 +913,8 @@ Expected outcome
 Your dataframe now has 9 columns (one more than R because we created age_group twice). <code>apply()</code> with lambda is more flexible but can be slower; <code>np.where()</code> is vectorized and faster, similar to R’s <code>ifelse()</code>. Both languages make it easy to add columns with simple assignment.
 </details>
 </section>
-<section id="p1.7-basic-statistical-tests" class="level4" data-number="15.3.1.7">
-<h4 data-number="15.3.1.7" class="anchored" data-anchor-id="p1.7-basic-statistical-tests"><span class="header-section-number">15.3.1.7</span> P1.7 Basic Statistical Tests</h4>
+<section id="p1.7-basic-statistical-tests" class="level4" data-number="14.3.1.7">
+<h4 data-number="14.3.1.7" class="anchored" data-anchor-id="p1.7-basic-statistical-tests"><span class="header-section-number">14.3.1.7</span> P1.7 Basic Statistical Tests</h4>
 <p><strong>Task:</strong> Perform a t-test comparing conditions.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
@@ -966,10 +948,10 @@ Results should be identical to R (within rounding). Scipy returns tuples (statis
 </section>
 </section>
 </section>
-<section id="part-3-comparative-exercises" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="part-3-comparative-exercises"><span class="header-section-number">15.4</span> Part 3: Comparative Exercises</h2>
-<section id="exercise-c1-side-by-side-comparison" class="level3" data-number="15.4.1">
-<h3 data-number="15.4.1" class="anchored" data-anchor-id="exercise-c1-side-by-side-comparison"><span class="header-section-number">15.4.1</span> Exercise C1: Side-by-Side Comparison</h3>
+<section id="part-3-comparative-exercises" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="part-3-comparative-exercises"><span class="header-section-number">14.4</span> Part 3: Comparative Exercises</h2>
+<section id="exercise-c1-side-by-side-comparison" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="exercise-c1-side-by-side-comparison"><span class="header-section-number">14.4.1</span> Exercise C1: Side-by-Side Comparison</h3>
 <p><strong>Task:</strong> Work through the same analysis in both languages and compare.</p>
 <p><strong>Scenario:</strong> You want to know if there’s a relationship between age and performance, separately for each condition.</p>
 <p><strong>R Version:</strong></p>
@@ -1005,8 +987,8 @@ Expected outcome
 Both accomplish the same task but with different syntax. R’s formula interface (<code>~ condition</code>) is very concise. Python’s <code>groupby().apply()</code> is explicit about the grouping and function application. Neither is objectively “better” - it depends on your background and preferences.
 </details>
 </section>
-<section id="exercise-c2-data-reshaping-challenge" class="level3" data-number="15.4.2">
-<h3 data-number="15.4.2" class="anchored" data-anchor-id="exercise-c2-data-reshaping-challenge"><span class="header-section-number">15.4.2</span> Exercise C2: Data Reshaping Challenge</h3>
+<section id="exercise-c2-data-reshaping-challenge" class="level3" data-number="14.4.2">
+<h3 data-number="14.4.2" class="anchored" data-anchor-id="exercise-c2-data-reshaping-challenge"><span class="header-section-number">14.4.2</span> Exercise C2: Data Reshaping Challenge</h3>
 <p><strong>Task:</strong> Create a summary table showing mean RT and accuracy by condition.</p>
 <p><strong>R Version:</strong></p>
 <div class="cell">
@@ -1048,8 +1030,8 @@ Expected outcome
 R returns a dataframe with condition as a regular column. Pandas makes condition the index by default. The index is similar to R’s row names but more powerful. Use <code>reset_index()</code> when you want the grouping variable as a regular column for further analysis or export.
 </details>
 </section>
-<section id="exercise-c3-saving-your-work" class="level3" data-number="15.4.3">
-<h3 data-number="15.4.3" class="anchored" data-anchor-id="exercise-c3-saving-your-work"><span class="header-section-number">15.4.3</span> Exercise C3: Saving Your Work</h3>
+<section id="exercise-c3-saving-your-work" class="level3" data-number="14.4.3">
+<h3 data-number="14.4.3" class="anchored" data-anchor-id="exercise-c3-saving-your-work"><span class="header-section-number">14.4.3</span> Exercise C3: Saving Your Work</h3>
 <p><strong>Task:</strong> Save your dataframe to a CSV file in both languages.</p>
 <p><strong>R Version:</strong></p>
 <div class="cell">
@@ -1087,8 +1069,8 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 <hr>
 </section>
 </section>
-<section id="reflection-questions" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="reflection-questions"><span class="header-section-number">15.5</span> Reflection Questions</h2>
+<section id="reflection-questions" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="reflection-questions"><span class="header-section-number">14.5</span> Reflection Questions</h2>
 <p>After completing all exercises, consider:</p>
 <ol type="1">
 <li><strong>Syntax Patterns:</strong>
@@ -1124,10 +1106,10 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 </ol>
 <hr>
 </section>
-<section id="summary-key-similarities-and-differences" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="summary-key-similarities-and-differences"><span class="header-section-number">15.6</span> Summary: Key Similarities and Differences</h2>
-<section id="similarities" class="level3" data-number="15.6.1">
-<h3 data-number="15.6.1" class="anchored" data-anchor-id="similarities"><span class="header-section-number">15.6.1</span> Similarities</h3>
+<section id="summary-key-similarities-and-differences" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="summary-key-similarities-and-differences"><span class="header-section-number">14.6</span> Summary: Key Similarities and Differences</h2>
+<section id="similarities" class="level3" data-number="14.6.1">
+<h3 data-number="14.6.1" class="anchored" data-anchor-id="similarities"><span class="header-section-number">14.6.1</span> Similarities</h3>
 <ul>
 <li>Both have dataframe structures with rows and columns</li>
 <li>Both can filter, select, and transform data</li>
@@ -1136,8 +1118,8 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 <li>Both have extensive statistical capabilities</li>
 </ul>
 </section>
-<section id="key-differences" class="level3" data-number="15.6.2">
-<h3 data-number="15.6.2" class="anchored" data-anchor-id="key-differences"><span class="header-section-number">15.6.2</span> Key Differences</h3>
+<section id="key-differences" class="level3" data-number="14.6.2">
+<h3 data-number="14.6.2" class="anchored" data-anchor-id="key-differences"><span class="header-section-number">14.6.2</span> Key Differences</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 42%">
@@ -1197,34 +1179,34 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 <hr>
 </section>
 </section>
-<section id="next-steps" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">15.7</span> Next Steps</h2>
+<section id="next-steps" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">14.7</span> Next Steps</h2>
 <p>Once comfortable with these basics, explore:</p>
 <p><strong>R:</strong> - <code>dplyr</code> package for data manipulation (very popular) - <code>tidyr</code> for reshaping data - <code>ggplot2</code> for visualization - <code>data.table</code> for large datasets</p>
 <p><strong>Python Pandas:</strong> - Advanced groupby operations - Merging and joining dataframes - Time series functionality - Integration with scikit-learn for machine learning</p>
 <p><strong>Both:</strong> - Handling missing data - Working with dates and times - Merging datasets - Pivot tables and cross-tabulations</p>
 <hr>
 </section>
-<section id="common-pitfalls" class="level2" data-number="15.8">
-<h2 data-number="15.8" class="anchored" data-anchor-id="common-pitfalls"><span class="header-section-number">15.8</span> Common Pitfalls</h2>
-<section id="r" class="level3" data-number="15.8.1">
-<h3 data-number="15.8.1" class="anchored" data-anchor-id="r"><span class="header-section-number">15.8.1</span> R</h3>
+<section id="common-pitfalls" class="level2" data-number="14.8">
+<h2 data-number="14.8" class="anchored" data-anchor-id="common-pitfalls"><span class="header-section-number">14.8</span> Common Pitfalls</h2>
+<section id="r" class="level3" data-number="14.8.1">
+<h3 data-number="14.8.1" class="anchored" data-anchor-id="r"><span class="header-section-number">14.8.1</span> R</h3>
 <ul>
 <li>Forgetting the comma in <code>df[condition, ]</code></li>
 <li>Factor vs.&nbsp;character confusion</li>
 <li>Recycling rules can cause unexpected behavior</li>
 </ul>
 </section>
-<section id="pandas" class="level3" data-number="15.8.2">
-<h3 data-number="15.8.2" class="anchored" data-anchor-id="pandas"><span class="header-section-number">15.8.2</span> Pandas</h3>
+<section id="pandas" class="level3" data-number="14.8.2">
+<h3 data-number="14.8.2" class="anchored" data-anchor-id="pandas"><span class="header-section-number">14.8.2</span> Pandas</h3>
 <ul>
 <li>Forgetting that many operations return a copy, not modifying in place</li>
 <li>Index alignment can cause unexpected results</li>
 <li>Chained indexing warnings (<code>df[df['x'] &gt; 5]['y'] = 10</code> is problematic)</li>
 </ul>
 </section>
-<section id="both" class="level3" data-number="15.8.3">
-<h3 data-number="15.8.3" class="anchored" data-anchor-id="both"><span class="header-section-number">15.8.3</span> Both</h3>
+<section id="both" class="level3" data-number="14.8.3">
+<h3 data-number="14.8.3" class="anchored" data-anchor-id="both"><span class="header-section-number">14.8.3</span> Both</h3>
 <ul>
 <li>Not checking data types after loading from files</li>
 <li>Assuming missing values are handled the same way</li>
@@ -1233,8 +1215,8 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 <hr>
 <p><strong>License:</strong> This document is released under CC BY 4.0. Feel free to adapt for your courses.</p>
 </section>
-<section id="old-school-storing-data-as-a-csv-file-with-python." class="level3" data-number="15.8.4">
-<h3 data-number="15.8.4" class="anchored" data-anchor-id="old-school-storing-data-as-a-csv-file-with-python."><span class="header-section-number">15.8.4</span> Old School: Storing data as a csv file with Python.</h3>
+<section id="old-school-storing-data-as-a-csv-file-with-python." class="level3" data-number="14.8.4">
+<h3 data-number="14.8.4" class="anchored" data-anchor-id="old-school-storing-data-as-a-csv-file-with-python."><span class="header-section-number">14.8.4</span> Old School: Storing data as a csv file with Python.</h3>
 <p>But before we show a pandas method let’s see a lower tech, more old school method.</p>
 <p>It is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example,</p>
 <div class="cell">
@@ -1250,8 +1232,8 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 </div>
 </div>
 <p>shows how to create a string from one’s data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler.</p>
-<section id="opening-and-closing-a-file-in-python" class="level5" data-number="15.8.4.0.1">
-<h5 data-number="15.8.4.0.1" class="anchored" data-anchor-id="opening-and-closing-a-file-in-python"><span class="header-section-number">15.8.4.0.1</span> Opening and Closing a File in Python</h5>
+<section id="opening-and-closing-a-file-in-python" class="level5" data-number="14.8.4.0.1">
+<h5 data-number="14.8.4.0.1" class="anchored" data-anchor-id="opening-and-closing-a-file-in-python"><span class="header-section-number">14.8.4.0.1</span> Opening and Closing a File in Python</h5>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span> </span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"britt"</span></span>
@@ -1272,8 +1254,8 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 </div>
 </div>
 </section>
-<section id="a-better-way-dictionaries" class="level5" data-number="15.8.4.0.2">
-<h5 data-number="15.8.4.0.2" class="anchored" data-anchor-id="a-better-way-dictionaries"><span class="header-section-number">15.8.4.0.2</span> A Better Way: Dictionaries</h5>
+<section id="a-better-way-dictionaries" class="level5" data-number="14.8.4.0.2">
+<h5 data-number="14.8.4.0.2" class="anchored" data-anchor-id="a-better-way-dictionaries"><span class="header-section-number">14.8.4.0.2</span> A Better Way: Dictionaries</h5>
 <p>Python dictionaries (which have their counterparts in most programming languages though they may be called something different) are a convenient way to store data where you can give it a meaningful name. For example, in an experiment with numerous trials and conditions you could have a <em>key</em> in your dictionary for “trial no.” and another for “condition”. The <em>values</em> for these would then be updated as your experiment unfolded.</p>
 <p>A first pass to using dictionaries is to blend this with a python library for <a href="https://docs.python.org/3/library/csv.html">CSV files</a>. Then you can create the column headings from your keys and then each trial that you loop through you can use the dictionary to write a new row to your csv file. Some of the functions you might want to use are:</p>
 <ul>
@@ -1297,7 +1279,7 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 <span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>df.loc[:,<span class="st">'v3'</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(0.3880700486903944)</code></pre>
+<pre><code>np.float64(0.39283379579450106)</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>myfilename <span class="op">=</span> <span class="st">"mypandastest.csv"</span></span>
@@ -1308,16 +1290,12 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>rdf <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"mypandastest.csv"</span>)</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(rdf<span class="sc">$</span>v3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.38807</code></pre>
+<pre><code>[1] 0.3928338</code></pre>
 </div>
 </div>
 </section>
-<section id="some-analysis-tools" class="level4" data-number="15.8.4.1">
-<h4 data-number="15.8.4.1" class="anchored" data-anchor-id="some-analysis-tools"><span class="header-section-number">15.8.4.1</span> Some Analysis Tools</h4>
-<ul>
-<li>Pandas TBD</li>
-<li>Some more R TBD</li>
-</ul>
+<section id="some-analysis-tools" class="level4" data-number="14.8.4.1">
+<h4 data-number="14.8.4.1" class="anchored" data-anchor-id="some-analysis-tools"><span class="header-section-number">14.8.4.1</span> Some Analysis Tools</h4>
 
 
 </section>
@@ -1729,13 +1707,13 @@ Both languages can save/load CSV files easily. Setting <code>row.names/index = F
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cExps.html" class="pagination-link" aria-label="In Lab Experiments">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">In Lab Experiments</span></span>
+      <a href="./cProgExp.html" class="pagination-link" aria-label="Programming Experiments">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Programming Experiments</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./cBiblio.html" class="pagination-link" aria-label="Knowledge Management">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Knowledge Management</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Knowledge Management</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
