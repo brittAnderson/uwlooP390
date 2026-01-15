@@ -1,0 +1,152 @@
+# Homework: Build a Lexical Decision Task with Aider
+
+## Overview
+
+In this homework assignment, you will use aider and a free OpenRouter model to create a lexical decision experiment from scratch. In a lexical decision task, participants see a string of letters and must decide whether it is a real word or a non-word as quickly and accurately as possible. This is a classic paradigm in psycholinguistics for studying word recognition.
+
+## Learning Goals
+
+- Practice using aider to build a complete experimental program
+- Learn to iteratively develop code through conversation with an LLM
+- Critically evaluate LLM-generated code
+- Gain experience with a fundamental psycholinguistics paradigm
+
+## Assignment
+
+### Part 1: Build the Experiment (80 points)
+
+Use aider to create a Python program called `lexical_decision.py` that implements a lexical decision task with the following specifications:
+
+#### Required Features:
+
+1. **Stimuli (15 points)**
+   - Load words from `word_list.txt` 
+   - Load non-words from `nonword_list.txt`
+   - Randomly present 20 words and 20 non-words (40 trials total)
+   - Each stimulus should be presented only once
+
+2. **Trial Structure (20 points)**
+   - Display a fixation cross (+) for 500ms at the start of each trial
+   - Present the word/non-word in the center of the screen
+   - Wait for participant response
+   - Provide feedback (correct/incorrect) for 500ms
+   - Include a 500ms inter-trial interval (blank screen)
+
+3. **Response Collection (20 points)**
+   - Participant presses 'f' for word, 'j' for non-word
+   - Record reaction time (RT) in milliseconds from stimulus onset to response
+   - Record whether the response was correct or incorrect
+   - Allow 'q' key to quit the experiment early
+
+4. **Data Output (15 points)**
+   - Save data to a CSV file named `lexical_decision_data.csv`
+   - Include these columns: trial_number, stimulus, stimulus_type (word/nonword), response, correct, reaction_time
+   - Include a header row
+
+5. **Instructions (10 points)**
+   - Display clear instructions at the beginning
+   - Explain the task and which keys to press
+   - Include a "Press SPACE to begin" prompt
+
+#### Implementation Notes:
+
+- You should use only Python standard library modules (no external dependencies)
+- The turtle module is acceptable for graphics if you choose to use it
+- You may also use tkinter or implement a text-based version
+
+### Part 2: Documentation (10 points)
+
+Create a file called `lexical_decision_readme.md` that includes:
+
+1. Brief description of what the program does
+2. How to run the program
+3. What the output looks like (describe the CSV format)
+4. Any limitations or known issues
+
+### Part 3: Reflection (10 points)
+
+Create a file called `reflection.md` (approximately 300-500 words) addressing:
+
+1. **Process:** Describe how you used aider. What prompts worked well? What didn't?
+
+2. **Challenges:** What problems did the LLM create? How did you identify and fix them?
+
+3. **Verification:** How did you test that the program works correctly? Did you find bugs that the LLM missed?
+
+4. **Learning:** What did you learn about lexical decision tasks? What did you learn about working with LLMs?
+
+5. **Comparison:** How was this different from the in-class tutorial? What strategies did you develop?
+
+## Getting Started
+
+Here's a suggested workflow:
+
+1. Create a new directory for this homework
+2. Copy `word_list.txt` and `nonword_list.txt` into that directory
+3. Start aider and select your free OpenRouter model
+4. Use `/architect` to discuss the overall design with the LLM
+5. Build the program incrementally:
+   - Start with file loading and stimulus selection
+   - Add the basic trial structure
+   - Add response collection and timing
+   - Add data saving
+   - Add instructions
+6. Test thoroughly after each addition
+7. Use git commits (which aider does automatically) to track your progress
+
+## Tips for Success
+
+- **Start simple:** Get a basic version working, then add features
+- **Test frequently:** Run the program after each change
+- **Be specific:** Clear, detailed prompts get better results
+- **Verify everything:** Don't assume the LLM's code is correct
+- **Use `/ask` liberally:** Ask the LLM to explain code you don't understand
+- **Read the code:** Make sure you understand what each part does
+
+## Submission Requirements
+
+Submit the following files:
+
+1. `lexical_decision.py` - Your working program
+2. `lexical_decision_readme.md` - Documentation
+3. `reflection.md` - Your reflection
+4. `lexical_decision_data.csv` - Sample output from running your program
+5. `git_log.txt` - Output from running `git log` in your project directory
+
+## Grading Rubric
+
+- **Functionality (80 points):** Does the program meet all specifications?
+  - All required features implemented correctly (60 points)
+  - Program runs without errors (10 points)
+  - Data output is correct and complete (10 points)
+
+- **Documentation (10 points):** Is the readme clear and complete?
+
+- **Reflection (10 points):** Does the reflection demonstrate critical thinking about the LLM's performance and your learning?
+
+## Due Date
+
+[Instructor to fill in]
+
+## Academic Integrity Note
+
+You are encouraged and expected to use an LLM for this assignment. However:
+
+- You must understand the code that is generated
+- You must be able to explain how it works
+- You are responsible for testing and verifying correctness
+- Your reflection must be your own original writing
+
+The goal is to learn to work **with** AI tools effectively, not to blindly accept their output.
+
+## Questions?
+
+If you run into problems:
+
+1. First, try asking the LLM to help debug
+2. Check that you're using the correct model and it's responding
+3. Review the tutorial exercise - many patterns will be similar
+4. Post questions in the class discussion forum
+5. Attend office hours
+
+Good luck!
