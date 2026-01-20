@@ -582,7 +582,7 @@ Then view it: `cat README.txt`
 ```bash
 cd ~/psych_study/scripts
 touch process_data.sh
-echo "#!/bin/bash" > process_data.sh
+echo '#!/bin/bash' > process_data.sh
 echo "# Script to process participant data" >> process_data.sh
 echo "" >> process_data.sh
 echo "echo 'Starting data processing...'" >> process_data.sh
