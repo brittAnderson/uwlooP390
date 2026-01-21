@@ -5,7 +5,7 @@
 - You can open it successfully
 
 ### Note on Command Compatibility
-These exercises work in both bash (WSL/Linux) and zsh (Mac). The commands are identical between these shells.
+These exercises work in both bash (WSL/Linux) and zsh (Mac). The commands are identical between these shells. To avoid conflicts you should use the `#!/bin/sh` at the start of the script. That should work for basic functionality on both systems.
 
 ---
 
@@ -268,7 +268,7 @@ Plain `rm` doesn't work on directories. The `-r` flag means "recursive" (remove 
 #### 3.1 Setup the Dataset
 **Task:** Let's create a sample dataset for practice.
 
-```bash
+```sh 
 cd ~/terminal_practice
 cat > participants.txt << 'EOF'
 ID,Age,Condition,Score
@@ -538,7 +538,7 @@ Screen is cleared but history remains. You can still scroll up or use up-arrow t
 #### 5.1 Organize a Project
 **Task:** Create this directory structure:
 
-```bash
+```sh
 cd ~
 mkdir psych_study
 cd psych_study
@@ -557,7 +557,7 @@ You created a standard research project structure. `-R` shows recursive listing 
 
 #### 5.2 Create a Data Log
 **Task:**
-```bash
+```sh
 cd ~/psych_study
 echo "# Data Collection Log" > README.txt
 echo "" >> README.txt
@@ -579,7 +579,7 @@ Then view it: `cat README.txt`
 #### 5.3 Document Your Commands
 **Task:** Create a script file:
 
-```bash
+```sh
 cd ~/psych_study/scripts
 touch process_data.sh
 echo '#!/bin/sh' > process_data.sh
@@ -597,7 +597,7 @@ View it: `cat process_data.sh`
 <details>
 <summary>Expected outcome</summary>
 
-This is called a "shebang" - it tells the system this is a bash script. Scripts are just text files containing commands.
+This is called a "shebang" - it tells the system this is a shell script. Scripts are just text files containing commands.
 </details>
 
 #### 5.4 Make Scripts Executable
@@ -619,7 +619,7 @@ This is called a "shebang" - it tells the system this is a bash script. Scripts 
 #### 5.5 Batch Process Files
 **Task:** Create sample data files and process them:
 
-```bash
+```sh
 cd ~/psych_study/data/raw
 echo "subject,rt,accuracy" > pilot_01.csv
 echo "S001,450,1" >> pilot_01.csv
@@ -643,7 +643,7 @@ You counted total participants across multiple files. `grep -v` inverts the matc
 
 #### 5.6 Extract Specific Data
 **Task:**
-```bash
+```sh
 # Extract all accurate responses (accuracy=1)
 grep ",1$" pilot_*.csv
 ```
@@ -660,7 +660,7 @@ This is a "regular expression" - a powerful pattern matching system.
 
 #### 5.7 Create Summary Statistics
 **Task:**
-```bash
+```sh
 cd ~/psych_study/results
 echo "# Summary Statistics" > summary.txt
 echo "" >> summary.txt
@@ -679,7 +679,7 @@ You automated summary statistics. This approach scales - if you add 100 more fil
 
 #### 5.8 Find Files by Content
 **Task:**
-```bash
+```sh
 cd ~/psych_study
 grep -r "S001" .
 ```
@@ -694,7 +694,7 @@ grep -r "S001" .
 
 #### 5.9 Check Disk Usage
 **Task:**
-```bash
+```sh
 cd ~/psych_study
 du -sh *
 ```
@@ -714,7 +714,7 @@ Shows how much space each directory uses - important for large datasets.
 #### 5.10 Final Cleanup Exercise
 **Task:** Time to clean up our practice.
 
-```bash
+```sh
 cd ~
 ls terminal_practice  # Verify it exists
 rm -r terminal_practice  # Remove it
