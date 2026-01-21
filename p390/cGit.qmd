@@ -89,6 +89,7 @@ If installation fails:
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@uwaterloo.ca"
+git config --global pull.rebase true
 ```
 
 **Question to answer:** Type `git config --global --list`. Do you see your name and email?
@@ -127,7 +128,7 @@ A branch is a line of development. We'll learn more about branches later.
 git config --global --list
 ```
 
-**Question to answer:** Can you see all three settings (user.name, user.email, init.defaultBranch)?
+**Question to answer:** Can you see all settings (user.name, user.email, init.defaultBranch, pull.rebase)?
 
 <details>
 <summary>Expected output</summary>
@@ -137,7 +138,9 @@ You should see something like:
 user.name=Jane Smith
 user.email=jane.smith@uwaterloo.ca
 init.defaultBranch=main
+pull.rebase=true
 ```
+That last is intended to help deal with a particular error that cropped up anew for the class in 2026 when git changed some of its default behavior. Please let me know when, later on in the homework, if you see a "divergent branch message" **and** it is preventing you from pulling from my remote and pushing to your fork (terminology that should make more sense shortly).
 
 These are stored in a hidden file called `~/.gitconfig`. You can edit this file directly if needed.
 </details>
@@ -171,8 +174,6 @@ Choose something professional:
 
 Your GitHub profile is essentially your coding resume. Many employers and grad programs will look at it.
 </details>
-
-
 
 #### Creating an ssh key with your terminal 
 
