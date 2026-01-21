@@ -403,7 +403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="note-on-command-compatibility" class="level3" data-number="4.5.2">
 <h3 data-number="4.5.2" class="anchored" data-anchor-id="note-on-command-compatibility"><span class="header-section-number">4.5.2</span> Note on Command Compatibility</h3>
-<p>These exercises work in both bash (WSL/Linux) and zsh (Mac). The commands are identical between these shells.</p>
+<p>These exercises work in both bash (WSL/Linux) and zsh (Mac). The commands are identical between these shells. To avoid conflicts you should use the <code>#!/bin/sh</code> at the start of the script. That should work for basic functionality on both systems.</p>
 <hr>
 </section>
 <section id="exercise-set-1-orientation-and-basic-navigation" class="level3" data-number="4.5.3">
@@ -639,7 +639,7 @@ Expected outcome
 <section id="setup-the-dataset" class="level4" data-number="4.5.5.2">
 <h4 data-number="4.5.5.2" class="anchored" data-anchor-id="setup-the-dataset"><span class="header-section-number">4.5.5.2</span> 3.1 Setup the Dataset</h4>
 <p><strong>Task:</strong> Let’s create a sample dataset for practice.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/terminal_practice</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/terminal_practice</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="op">&gt;</span> participants.txt <span class="op">&lt;&lt; 'EOF'</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="st">ID,Age,Condition,Score</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="st">001,23,Control,78</span></span>
@@ -872,7 +872,7 @@ Screen is cleared but history remains. You can still scroll up or use up-arrow t
 <section id="organize-a-project" class="level4" data-number="4.5.7.2">
 <h4 data-number="4.5.7.2" class="anchored" data-anchor-id="organize-a-project"><span class="header-section-number">4.5.7.2</span> 5.1 Organize a Project</h4>
 <p><strong>Task:</strong> Create this directory structure:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> psych_study</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> psych_study</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> data data/raw data/processed scripts results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -887,8 +887,8 @@ You created a standard research project structure. <code>-R</code> shows recursi
 </section>
 <section id="create-a-data-log" class="level4" data-number="4.5.7.3">
 <h4 data-number="4.5.7.3" class="anchored" data-anchor-id="create-a-data-log"><span class="header-section-number">4.5.7.3</span> 5.2 Create a Data Log</h4>
-<p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
+<p>The task is illustrated with the use of <code>echo</code>. This will work and requires no additional tools to get familiar with. However, it can be tedious. Most systems will come with a very minimalist word processor built in. You might find that more convenient and you are welcome to use it if you prefer. A very common minimal text editor that launches in the terminal is “nano”. To see if you have this just type <code>nano</code> at the prompt. The “^” character in the menu displayed at the problem means your control (aka CTRL) key. To save a file for example you would type <code>Ctrl-o</code> at the same time. Then you would enter the name of the file and hit enter to save. <strong>Task:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# Data Collection Log"</span> <span class="op">&gt;</span> README.txt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">""</span> <span class="op">&gt;&gt;</span> README.txt</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Date: </span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span><span class="st">"</span> <span class="op">&gt;&gt;</span> README.txt</span>
@@ -906,21 +906,21 @@ Expected outcome
 <section id="document-your-commands" class="level4" data-number="4.5.7.4">
 <h4 data-number="4.5.7.4" class="anchored" data-anchor-id="document-your-commands"><span class="header-section-number">4.5.7.4</span> 5.3 Document Your Commands</h4>
 <p><strong>Task:</strong> Create a script file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/scripts</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/scripts</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> process_data.sh</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'#!/bin/bash'</span> <span class="op">&gt;</span> process_data.sh</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'#!/bin/sh'</span> <span class="op">&gt;</span> process_data.sh</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# Script to process participant data"</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">""</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"echo 'Starting data processing...'"</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"ls ../data/raw/"</span> <span class="op">&gt;&gt;</span> process_data.sh</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"echo 'Processing complete!'"</span> <span class="op">&gt;&gt;</span> process_data.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>View it: <code>cat process_data.sh</code></p>
-<p><strong>Question to answer:</strong> What is <code>#!/bin/bash</code> at the top?</p>
+<p><strong>Question to answer:</strong> What is <code>#!/bin/sh</code> at the top?</p>
 <details>
 <summary>
 Expected outcome
 </summary>
-This is called a “shebang” - it tells the system this is a bash script. Scripts are just text files containing commands.
+This is called a “shebang” - it tells the system this is a shell script. Scripts are just text files containing commands.
 </details>
 </section>
 <section id="make-scripts-executable" class="level4" data-number="4.5.7.5">
@@ -938,7 +938,7 @@ Expected outcome
 <section id="batch-process-files" class="level4" data-number="4.5.7.6">
 <h4 data-number="4.5.7.6" class="anchored" data-anchor-id="batch-process-files"><span class="header-section-number">4.5.7.6</span> 5.5 Batch Process Files</h4>
 <p><strong>Task:</strong> Create sample data files and process them:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/data/raw</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/data/raw</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"subject,rt,accuracy"</span> <span class="op">&gt;</span> pilot_01.csv</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"S001,450,1"</span> <span class="op">&gt;&gt;</span> pilot_01.csv</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"S002,523,1"</span> <span class="op">&gt;&gt;</span> pilot_01.csv</span>
@@ -960,7 +960,7 @@ You counted total participants across multiple files. <code>grep -v</code> inver
 <section id="extract-specific-data" class="level4" data-number="4.5.7.7">
 <h4 data-number="4.5.7.7" class="anchored" data-anchor-id="extract-specific-data"><span class="header-section-number">4.5.7.7</span> 5.6 Extract Specific Data</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract all accurate responses (accuracy=1)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract all accurate responses (accuracy=1)</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">",1$"</span> pilot_<span class="pp">*</span>.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does <code>$</code> mean in the pattern?</p>
 <details>
@@ -974,7 +974,7 @@ This is a “regular expression” - a powerful pattern matching system.
 <section id="create-summary-statistics" class="level4" data-number="4.5.7.8">
 <h4 data-number="4.5.7.8" class="anchored" data-anchor-id="create-summary-statistics"><span class="header-section-number">4.5.7.8</span> 5.7 Create Summary Statistics</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/results</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study/results</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# Summary Statistics"</span> <span class="op">&gt;</span> summary.txt</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">""</span> <span class="op">&gt;&gt;</span> summary.txt</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Total data files: </span><span class="va">$(</span><span class="fu">ls</span> ../data/raw/<span class="pp">*</span>.csv <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span><span class="va">)</span><span class="st">"</span> <span class="op">&gt;&gt;</span> summary.txt</span>
@@ -991,7 +991,7 @@ You automated summary statistics. This approach scales - if you add 100 more fil
 <section id="find-files-by-content" class="level4" data-number="4.5.7.9">
 <h4 data-number="4.5.7.9" class="anchored" data-anchor-id="find-files-by-content"><span class="header-section-number">4.5.7.9</span> 5.8 Find Files by Content</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-r</span> <span class="st">"S001"</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does <code>-r</code> do with grep?</p>
 <details>
@@ -1004,7 +1004,7 @@ Expected outcome
 <section id="check-disk-usage" class="level4" data-number="4.5.7.10">
 <h4 data-number="4.5.7.10" class="anchored" data-anchor-id="check-disk-usage"><span class="header-section-number">4.5.7.10</span> 5.9 Check Disk Usage</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/psych_study</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sh</span> <span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does this tell you?</p>
 <details>
@@ -1018,7 +1018,7 @@ Shows how much space each directory uses - important for large datasets.
 <section id="final-cleanup-exercise" class="level4" data-number="4.5.7.11">
 <h4 data-number="4.5.7.11" class="anchored" data-anchor-id="final-cleanup-exercise"><span class="header-section-number">4.5.7.11</span> 5.10 Final Cleanup Exercise</h4>
 <p><strong>Task:</strong> Time to clean up our practice.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> terminal_practice  <span class="co"># Verify it exists</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> terminal_practice  <span class="co"># Remove it</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>

@@ -482,7 +482,8 @@ If installation fails: - Mac: You might need to install Xcode Command Line Tools
 <h4 data-number="5.1.2.2" class="anchored" data-anchor-id="configure-your-name"><span class="header-section-number">5.1.2.2</span> Configure Your Name</h4>
 <p><strong>Task:</strong> Type these commands in your terminal, replacing with YOUR information:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@uwaterloo.ca"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@uwaterloo.ca"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> pull.rebase true</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Type <code>git config --global --list</code>. Do you see your name and email?</p>
 <details>
 <summary>
@@ -510,7 +511,7 @@ A branch is a line of development. We’ll learn more about branches later.
 <h4 data-number="5.1.2.4" class="anchored" data-anchor-id="verify-your-configuration"><span class="header-section-number">5.1.2.4</span> Verify Your Configuration</h4>
 <p><strong>Task:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Question to answer:</strong> Can you see all three settings (user.name, user.email, init.defaultBranch)?</p>
+<p><strong>Question to answer:</strong> Can you see all settings (user.name, user.email, init.defaultBranch, pull.rebase)?</p>
 <details>
 <summary>
 Expected output
@@ -518,7 +519,9 @@ Expected output
 <p>You should see something like:</p>
 <pre><code>user.name=Jane Smith
 user.email=jane.smith@uwaterloo.ca
-init.defaultBranch=main</code></pre>
+init.defaultBranch=main
+pull.rebase=true</code></pre>
+<p>That last is intended to help deal with a particular error that cropped up anew for the class in 2026 when git changed some of its default behavior. Please let me know when, later on in the homework, if you see a “divergent branch message” <strong>and</strong> it is preventing you from pulling from my remote and pushing to your fork (terminology that should make more sense shortly).</p>
 These are stored in a hidden file called <code>~/.gitconfig</code>. You can edit this file directly if needed.
 </details>
 </section>
@@ -550,9 +553,40 @@ Your GitHub profile is essentially your coding resume. Many employers and grad p
 </section>
 <section id="creating-an-ssh-key-with-your-terminal" class="level4" data-number="5.1.3.2">
 <h4 data-number="5.1.3.2" class="anchored" data-anchor-id="creating-an-ssh-key-with-your-terminal"><span class="header-section-number">5.1.3.2</span> Creating an ssh key with your terminal</h4>
-<p><a href="https://www.ssh.com/academy/ssh/keygen">Detailed instructions on ssh-keygen</a></p>
-<p><a href="https://www.freecodecamp.org/news/the-ultimate-guide-to-ssh-setting-up-ssh-keys/">A slower walk through with some github specifics</a></p>
-<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">The offical instructions</a></p>
+<p>Using SSH keys is the preferred method for authenticating with GitHub. It saves you from typing your username and password every time you push code.</p>
+<p><strong>Step 1: Generate the key pair</strong></p>
+<p>Open your terminal and run the following command (substituting your email):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"your.email@uwaterloo.ca"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="1">
+<li>When asked where to save the key, just press Enter to accept the default location (usually <code>~/.ssh/id_ed25519</code>).</li>
+<li>When asked for a passphrase, you can press Enter for no passphrase (easier) or type a password for extra security.</li>
+</ol>
+<p><strong>Step 2: Copy the public key</strong></p>
+<p>You need to copy the contents of the public key file you just created.</p>
+<p>Run this command to display the key:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Select and copy the entire output string (it starts with <code>ssh-ed25519</code> and ends with your email).</p>
+<p><strong>Step 3: Add the key to GitHub</strong></p>
+<ol type="1">
+<li>Go to <a href="https://github.com">GitHub.com</a> and sign in.</li>
+<li>Click your profile photo in the top-right corner and select <strong>Settings</strong>.</li>
+<li>In the “Access” section of the sidebar, click <strong>SSH and GPG keys</strong>.</li>
+<li>Click the green <strong>New SSH key</strong> button.</li>
+<li><strong>Title</strong>: Give it a name like “My Laptop”.</li>
+<li><strong>Key type</strong>: Leave as “Authentication Key”.</li>
+<li><strong>Key</strong>: Paste the key you copied in Step 2.</li>
+<li>Click <strong>Add SSH key</strong>.</li>
+</ol>
+<p><strong>Step 4: Test the connection</strong></p>
+<p>Back in your terminal, type:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>If you see a warning about authenticity (<code>The authenticity of host...</code>), type <code>yes</code> and press Enter.</li>
+<li>You should see a success message: <code>Hi username! You've successfully authenticated...</code></li>
+</ul>
+<p><strong>Important Note for Future Cloning:</strong></p>
+<p>Now that you have SSH set up, when you clone repositories, always select the <strong>SSH</strong> tab (instead of HTTPS) to get the URL. It will look like: <code>git@github.com:username/repository.git</code></p>
+<p>If you use the HTTPS URL, git will ask for your username/password instead of using your new key.</p>
 </section>
 </section>
 <section id="using-git-and-github-practice" class="level3" data-number="5.1.4">
@@ -663,7 +697,7 @@ Changes you make locally don’t automatically appear on GitHub - you have to ex
 <section id="view-repository-contents" class="level4" data-number="5.1.5.1">
 <h4 data-number="5.1.5.1" class="anchored" data-anchor-id="view-repository-contents"><span class="header-section-number">5.1.5.1</span> View Repository Contents</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Do you see a <code>.git</code> directory?</p>
 <details>
 <summary>
@@ -678,8 +712,8 @@ Everything else in the folder is your “working directory” - the actual files
 <h4 data-number="5.1.5.2" class="anchored" data-anchor-id="check-repository-status"><span class="header-section-number">5.1.5.2</span> Check Repository Status</h4>
 <p>This is important. If multiple people are working on the same repository, which is very common, you will need to have all the latest changes from the principal repo first, before you push your local changes.</p>
 <p><strong>Task:</strong> This is how to do it in the terminal.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span>  <span class="co"># Verify you're in ~/git_workspace/p390Practice</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span>  <span class="co"># Verify you're in ~/git_workspace/p390Practice</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does <code>git status</code> tell you?</p>
 <details>
 <summary>
@@ -698,7 +732,7 @@ This means: - You’re on the “main” branch - Your local copy matches what�
 <h3 data-number="5.1.6" class="anchored" data-anchor-id="explore-remote-repositories-your-clone-may-have-many"><span class="header-section-number">5.1.6</span> Explore Remote Repositories — Your clone may have many</h3>
 <p>Remotes are what they sound like. Locations that are following the same repository that you are.</p>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does “origin” refer to?</p>
 <details>
 <summary>
@@ -713,12 +747,12 @@ We’ll add a second remote (the original course repo) later.
 <section id="create-a-new-file" class="level4" data-number="5.1.6.1">
 <h4 data-number="5.1.6.1" class="anchored" data-anchor-id="create-a-new-file"><span class="header-section-number">5.1.6.1</span> Create a New File</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my_practice</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my_practice</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> learning_notes.txt</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Git is a version control system"</span> <span class="op">&gt;</span> learning_notes.txt</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> learning_notes.txt</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my_practice</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my_practice</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> learning_notes.txt</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Git is a version control system"</span> <span class="op">&gt;</span> learning_notes.txt</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> learning_notes.txt</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Did git automatically track this new file?</p>
 <details>
 <summary>
@@ -731,9 +765,9 @@ You have to explicitly tell git which files to track. This is a feature - it let
 <section id="stage-your-changes-git-add" class="level4" data-number="5.1.6.2">
 <h4 data-number="5.1.6.2" class="anchored" data-anchor-id="stage-your-changes-git-add"><span class="header-section-number">5.1.6.2</span> Stage Your Changes (git add)</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status  <span class="co"># See that the directory is untracked</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status  <span class="co"># See the change</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status  <span class="co"># See that the directory is untracked</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status  <span class="co"># See the change</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What changed when you ran <code>git add</code>?</p>
 <details>
 <summary>
@@ -747,8 +781,8 @@ Think of staging as putting items in a shopping cart (you’ve selected them but
 <section id="commit-your-changes" class="level4" data-number="5.1.6.3">
 <h4 data-number="5.1.6.3" class="anchored" data-anchor-id="commit-your-changes"><span class="header-section-number">5.1.6.3</span> Commit Your Changes</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add my practice directory with learning notes"</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add my practice directory with learning notes"</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does committing do? What does the <code>-m</code> flag mean?</p>
 <details>
 <summary>
@@ -769,7 +803,7 @@ Expected outcome
 <section id="view-commit-history" class="level4" data-number="5.1.6.4">
 <h4 data-number="5.1.6.4" class="anchored" data-anchor-id="view-commit-history"><span class="header-section-number">5.1.6.4</span> View Commit History</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Can you find your commit? What information does each commit show?</p>
 <details>
 <summary>
@@ -789,9 +823,9 @@ Try: <code>git log --oneline</code> for a compact view Try: <code>git log --grap
 <section id="make-more-changes" class="level4" data-number="5.1.6.5">
 <h4 data-number="5.1.6.5" class="anchored" data-anchor-id="make-more-changes"><span class="header-section-number">5.1.6.5</span> Make More Changes</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"GitHub is a hosting service for git repositories"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> my_practice/learning_notes.txt</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"GitHub is a hosting service for git repositories"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> my_practice/learning_notes.txt</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does <code>git status</code> show now?</p>
 <details>
 <summary>
@@ -804,9 +838,9 @@ The file is tracked, but the new changes aren’t staged yet. You need to <code>
 <section id="the-add-commit-cycle" class="level4" data-number="5.1.6.6">
 <h4 data-number="5.1.6.6" class="anchored" data-anchor-id="the-add-commit-cycle"><span class="header-section-number">5.1.6.6</span> The Add-Commit Cycle</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add GitHub definition to learning notes"</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add GitHub definition to learning notes"</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> How many commits do you have now?</p>
 <details>
 <summary>
@@ -826,7 +860,7 @@ Each commit is a save point you can return to later.
 <section id="check-current-remotes" class="level4" data-number="5.1.6.7">
 <h4 data-number="5.1.6.7" class="anchored" data-anchor-id="check-current-remotes"><span class="header-section-number">5.1.6.7</span> Check Current Remotes</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> How many remotes do you have? What are they called?</p>
 <details>
 <summary>
@@ -839,8 +873,8 @@ To collaborate effectively, we need to add a second remote: the original course 
 <section id="add-upstream-remote" class="level4" data-number="5.1.6.8">
 <h4 data-number="5.1.6.8" class="anchored" data-anchor-id="add-upstream-remote"><span class="header-section-number">5.1.6.8</span> Add Upstream Remote</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/brittAnderson/p390Practice.git</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/brittAnderson/p390Practice.git</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> How many remotes do you have now?</p>
 <details>
 <summary>
@@ -858,7 +892,7 @@ This naming convention (origin/upstream) is standard in the git community.
 <section id="fetch-from-upstream" class="level4" data-number="5.1.6.9">
 <h4 data-number="5.1.6.9" class="anchored" data-anchor-id="fetch-from-upstream"><span class="header-section-number">5.1.6.9</span> Fetch from Upstream</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch upstream</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch upstream</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does “fetch” do? Did it change any of your files?</p>
 <details>
 <summary>
@@ -872,7 +906,7 @@ After fetching, git knows what’s new in the upstream repo, but your files rema
 <section id="view-all-branches" class="level4" data-number="5.1.6.10">
 <h4 data-number="5.1.6.10" class="anchored" data-anchor-id="view-all-branches"><span class="header-section-number">5.1.6.10</span> View All Branches</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What branches do you see?</p>
 <details>
 <summary>
@@ -890,7 +924,7 @@ Branches with <code>remotes/</code> are references to branches on GitHub, not lo
 <section id="pull-from-upstream" class="level4" data-number="5.1.6.11">
 <h4 data-number="5.1.6.11" class="anchored" data-anchor-id="pull-from-upstream"><span class="header-section-number">5.1.6.11</span> Pull from Upstream</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What happened? Did you see “Already up to date” or were changes merged?</p>
 <details>
 <summary>
@@ -904,7 +938,7 @@ This is how you keep your fork synchronized with the original repository. You’
 <section id="push-changes-to-your-fork" class="level4" data-number="5.1.6.12">
 <h4 data-number="5.1.6.12" class="anchored" data-anchor-id="push-changes-to-your-fork"><span class="header-section-number">5.1.6.12</span> Push Changes to Your Fork</h4>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does this command do?</p>
 <details>
 <summary>
@@ -997,9 +1031,9 @@ Always start your work session with this pull-merge-push sequence.
 <section id="navigate-to-gitnames-directory" class="level3" data-number="5.1.8">
 <h3 data-number="5.1.8" class="anchored" data-anchor-id="navigate-to-gitnames-directory"><span class="header-section-number">5.1.8</span> Navigate to gitnames Directory</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> gitnames</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> gitnames</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Do you see files from other students?</p>
 <details>
 <summary>
@@ -1012,10 +1046,10 @@ This directory is where everyone adds their file - it’s a shared space for pra
 <section id="create-your-file" class="level3" data-number="5.1.9">
 <h3 data-number="5.1.9" class="anchored" data-anchor-id="create-your-file"><span class="header-section-number">5.1.9</span> Create Your File</h3>
 <p><strong>Task:</strong> Create a file with your first name (replace YOURNAME):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> YOURNAME.txt</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I am learning git and GitHub for Psychology 390"</span> <span class="op">&gt;</span> YOURNAME.txt</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Git helps me track changes and collaborate effectively"</span> <span class="op">&gt;&gt;</span> YOURNAME.txt</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> YOURNAME.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> YOURNAME.txt</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I am learning git and GitHub for Psychology 390"</span> <span class="op">&gt;</span> YOURNAME.txt</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Git helps me track changes and collaborate effectively"</span> <span class="op">&gt;&gt;</span> YOURNAME.txt</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> YOURNAME.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Does the file exist? What does it contain?</p>
 <details>
 <summary>
@@ -1029,7 +1063,7 @@ This file will eventually be added to the original repository through a pull req
 <section id="check-status" class="level3" data-number="5.1.10">
 <h3 data-number="5.1.10" class="anchored" data-anchor-id="check-status"><span class="header-section-number">5.1.10</span> Check Status</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Where is your new file listed?</p>
 <details>
 <summary>
@@ -1042,8 +1076,8 @@ Git sees the file but isn’t tracking it yet - you need to explicitly add it.
 <section id="stage-your-file" class="level3" data-number="5.1.11">
 <h3 data-number="5.1.11" class="anchored" data-anchor-id="stage-your-file"><span class="header-section-number">5.1.11</span> Stage Your File</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add gitnames/YOURNAME.txt</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add gitnames/YOURNAME.txt</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What changed?</p>
 <details>
 <summary>
@@ -1056,7 +1090,7 @@ It’s now staged and ready to commit.
 <section id="commit-your-change" class="level3" data-number="5.1.12">
 <h3 data-number="5.1.12" class="anchored" data-anchor-id="commit-your-change"><span class="header-section-number">5.1.12</span> Commit Your Change</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add [YOURNAME] to gitnames directory"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add [YOURNAME] to gitnames directory"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Replace [YOURNAME] with your actual name.</p>
 <p><strong>Question to answer:</strong> Why is a good commit message important?</p>
 <details>
@@ -1070,7 +1104,7 @@ When collaborating, clear commit messages help others understand the project’s
 <section id="check-log" class="level3" data-number="5.1.13">
 <h3 data-number="5.1.13" class="anchored" data-anchor-id="check-log"><span class="header-section-number">5.1.13</span> 5.7 Check Log</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">-5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">-5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Can you see your commit?</p>
 <details>
 <summary>
@@ -1083,7 +1117,7 @@ The <code>-5</code> flag shows only the last 5 commits for brevity.
 <section id="push-to-your-fork" class="level3" data-number="5.1.14">
 <h3 data-number="5.1.14" class="anchored" data-anchor-id="push-to-your-fork"><span class="header-section-number">5.1.14</span> Push to Your Fork</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Where did this change go?</p>
 <details>
 <summary>
@@ -1273,9 +1307,9 @@ You’ll get email notifications about any activity on your PR.
 <h3 data-number="5.2.7" class="anchored" data-anchor-id="after-pr-is-merged"><span class="header-section-number">5.2.7</span> After PR is Merged</h3>
 <p><strong>Task:</strong></p>
 <p>Once your PR is merged (you’ll get a notification), update your local repository:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does this accomplish?</p>
 <details>
 <summary>
@@ -1292,8 +1326,8 @@ Now all three locations (local, origin, upstream) have the same code.
 <section id="see-everyones-contributions" class="level3" data-number="5.2.8">
 <h3 data-number="5.2.8" class="anchored" data-anchor-id="see-everyones-contributions"><span class="header-section-number">5.2.8</span> See Everyone’s Contributions</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice/gitnames</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice/gitnames</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> How many files are there now?</p>
 <details>
 <summary>
@@ -1307,7 +1341,7 @@ If there were any conflicts (two people editing the same line), the maintainer w
 <section id="view-merged-commit" class="level3" data-number="5.2.9">
 <h3 data-number="5.2.9" class="anchored" data-anchor-id="view-merged-commit"><span class="header-section-number">5.2.9</span> View Merged Commit</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--all</span> <span class="at">--graph</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--all</span> <span class="at">--graph</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Can you identify the merge commit that brought your changes into the original repository?</p>
 <details>
 <summary>
@@ -1568,8 +1602,8 @@ This creates a traceable history: from problem identification (issue) to solutio
 <section id="create-a-work-branch-optional-advanced" class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="create-a-work-branch-optional-advanced"><span class="header-section-number">5.4.1</span> 8.1 Create a Work Branch (Optional Advanced)</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> my-experiments</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace/p390Practice</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> my-experiments</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What did this do?</p>
 <details>
 <summary>
@@ -1583,10 +1617,10 @@ This is optional but common in professional workflows. Changes on this branch do
 <section id="practice-making-changes" class="level3" data-number="5.4.2">
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="practice-making-changes"><span class="header-section-number">5.4.2</span> 8.2 Practice Making Changes</h3>
 <p><strong>Task:</strong> Create a practice file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> experiments</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Experiment 1: Testing git workflow"</span> <span class="op">&gt;</span> experiments/notes.txt</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add experiments/notes.txt</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add experiment notes"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> experiments</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Experiment 1: Testing git workflow"</span> <span class="op">&gt;</span> experiments/notes.txt</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add experiments/notes.txt</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add experiment notes"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Is this change on your main branch?</p>
 <details>
 <summary>
@@ -1601,9 +1635,9 @@ Branches are independent lines of development.
 <section id="merge-branch-into-main-optional-advanced" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="merge-branch-into-main-optional-advanced"><span class="header-section-number">5.4.3</span> 8.3 Merge Branch into Main (Optional Advanced)</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge my-experiments</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge my-experiments</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Is the experiments directory now in main?</p>
 <details>
 <summary>
@@ -1617,17 +1651,17 @@ Delete the branch if done: <code>git branch -d my-experiments</code>
 <section id="simulate-regular-workflow" class="level3" data-number="5.4.4">
 <h3 data-number="5.4.4" class="anchored" data-anchor-id="simulate-regular-workflow"><span class="header-section-number">5.4.4</span> 8.4 Simulate Regular Workflow</h3>
 <p><strong>Task:</strong> Practice this sequence (which you’ll do often):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start of work session</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main  <span class="co"># Get latest from course repo</span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Update your fork</span></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Do your work</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"New learning point"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add new learning point"</span></span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a><span class="co"># End of work session</span></span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Save your work to GitHub</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start of work session</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main  <span class="co"># Get latest from course repo</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Update your fork</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Do your work</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"New learning point"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add my_practice/learning_notes.txt</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add new learning point"</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co"># End of work session</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Save your work to GitHub</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Why is this sequence important?</p>
 <details>
 <summary>
@@ -1674,8 +1708,8 @@ When conflicts do occur, git marks them in the file and you manually choose whic
 <section id="check-remote-relationship" class="level3" data-number="5.4.6">
 <h3 data-number="5.4.6" class="anchored" data-anchor-id="check-remote-relationship"><span class="header-section-number">5.4.6</span> 8.6 Check Remote Relationship</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-vv</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-vv</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does <code>-vv</code> show you?</p>
 <details>
 <summary>
@@ -1688,7 +1722,7 @@ Expected output
 <li><p>Which remote branch it tracks</p></li>
 </ul>
 <p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">*</span> main abc1234 <span class="pp">[</span><span class="ss">origin/main</span><span class="pp">]</span> Latest commit message</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="ex">*</span> main abc1234 <span class="pp">[</span><span class="ss">origin/main</span><span class="pp">]</span> Latest commit message</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 This confirms your local main tracks origin/main (your fork’s main branch).
 </details>
 </section>
@@ -1713,8 +1747,8 @@ Common states
 <section id="view-what-changed" class="level3" data-number="5.4.8">
 <h3 data-number="5.4.8" class="anchored" data-anchor-id="view-what-changed"><span class="header-section-number">5.4.8</span> 8.8 View What Changed</h3>
 <p><strong>Task:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Another line"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff my_practice/learning_notes.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Another line"</span> <span class="op">&gt;&gt;</span> my_practice/learning_notes.txt</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff my_practice/learning_notes.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> What does <code>git diff</code> show?</p>
 <details>
 <summary>
@@ -1739,11 +1773,11 @@ Expected output
 <h3 data-number="5.4.9" class="anchored" data-anchor-id="undo-mistakes-safely"><span class="header-section-number">5.4.9</span> 8.9 Undo Mistakes Safely</h3>
 <p><strong>Task:</strong> Learn these safety commands (don’t run them unless needed):</p>
 <p><strong>Discard unstaged changes to a file:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--</span> filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--</span> filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Unstage a file (keep the changes):</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset HEAD filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset HEAD filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Amend the last commit (before pushing):</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> <span class="at">-m</span> <span class="st">"New message"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> <span class="at">-m</span> <span class="st">"New message"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Question to answer:</strong> Why is it important to know how to undo changes?</p>
 <details>
 <summary>
@@ -1864,25 +1898,25 @@ This is professional version control!
 <h2 data-number="5.7" class="anchored" data-anchor-id="git-commands-quick-reference"><span class="header-section-number">5.7</span> Git Commands Quick Reference</h2>
 <section id="setup" class="level3" data-number="5.7.1">
 <h3 data-number="5.7.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">5.7.1</span> Setup</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"email@example.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"email@example.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="daily-workflow" class="level3" data-number="5.7.2">
 <h3 data-number="5.7.2" class="anchored" data-anchor-id="daily-workflow"><span class="header-section-number">5.7.2</span> Daily Workflow</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status              <span class="co"># Check what's changed</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main  <span class="co"># Get latest from course repo</span></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add filename        <span class="co"># Stage a file</span></span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"msg"</span>     <span class="co"># Save changes locally</span></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Upload to your fork</span></span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span>       <span class="co"># View history</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status              <span class="co"># Check what's changed</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull upstream main  <span class="co"># Get latest from course repo</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add filename        <span class="co"># Stage a file</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"msg"</span>     <span class="co"># Save changes locally</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main    <span class="co"># Upload to your fork</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span>       <span class="co"># View history</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="repository-management" class="level3" data-number="5.7.3">
 <h3 data-number="5.7.3" class="anchored" data-anchor-id="repository-management"><span class="header-section-number">5.7.3</span> Repository Management</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone url           <span class="co"># Download a repository</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span>           <span class="co"># List remotes</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add name url <span class="co"># Add a remote</span></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch              <span class="co"># List branches</span></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff                <span class="co"># See unstaged changes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone url           <span class="co"># Download a repository</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span>           <span class="co"># List remotes</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add name url <span class="co"># Add a remote</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch              <span class="co"># List branches</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff                <span class="co"># See unstaged changes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="collaboration" class="level3" data-number="5.7.4">
 <h3 data-number="5.7.4" class="anchored" data-anchor-id="collaboration"><span class="header-section-number">5.7.4</span> Collaboration</h3>
@@ -1896,9 +1930,9 @@ This is professional version control!
 <h2 data-number="5.8" class="anchored" data-anchor-id="getting-help"><span class="header-section-number">5.8</span> Getting Help</h2>
 <section id="in-the-terminal" class="level3" data-number="5.8.1">
 <h3 data-number="5.8.1" class="anchored" data-anchor-id="in-the-terminal"><span class="header-section-number">5.8.1</span> In the Terminal</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> help <span class="op">&lt;</span>command<span class="op">&gt;</span>      <span class="co"># Full manual</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="op">&lt;</span>command<span class="op">&gt;</span> --help    <span class="co"># Same as above</span></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="op">&lt;</span>command<span class="op">&gt;</span> -h        <span class="co"># Brief help</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> help <span class="op">&lt;</span>command<span class="op">&gt;</span>      <span class="co"># Full manual</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="op">&lt;</span>command<span class="op">&gt;</span> --help    <span class="co"># Same as above</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="op">&lt;</span>command<span class="op">&gt;</span> -h        <span class="co"># Brief help</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="online-resources" class="level3" data-number="5.8.2">
 <h3 data-number="5.8.2" class="anchored" data-anchor-id="online-resources"><span class="header-section-number">5.8.2</span> Online Resources</h3>
@@ -1924,14 +1958,14 @@ This is professional version control!
 <h2 data-number="5.9" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">5.9</span> Troubleshooting</h2>
 <section id="need-to-start-over" class="level3" data-number="5.9.1">
 <h3 data-number="5.9.1" class="anchored" data-anchor-id="need-to-start-over"><span class="header-section-number">5.9.1</span> Need to Start Over?</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete local repository</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> p390Practice</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone again</span></span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/YOUR-USERNAME/p390Practice.git</span>
-<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> p390Practice</span>
-<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/brittAnderson/p390Practice.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete local repository</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/git_workspace</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> p390Practice</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone again</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/YOUR-USERNAME/p390Practice.git</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> p390Practice</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add upstream https://github.com/brittAnderson/p390Practice.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="completely-lost" class="level3" data-number="5.9.2">
 <h3 data-number="5.9.2" class="anchored" data-anchor-id="completely-lost"><span class="header-section-number">5.9.2</span> Completely Lost?</h3>
