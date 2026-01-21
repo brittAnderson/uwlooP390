@@ -177,13 +177,59 @@ Your GitHub profile is essentially your coding resume. Many employers and grad p
 
 #### Creating an ssh key with your terminal 
 
-[Detailed instructions on ssh-keygen](https://www.ssh.com/academy/ssh/keygen)
+Using SSH keys is the preferred method for authenticating with GitHub. It saves you from typing your username and password every time you push code.
 
-[A slower walk through with some github specifics](https://www.freecodecamp.org/news/the-ultimate-guide-to-ssh-setting-up-ssh-keys/)
+**Step 1: Generate the key pair**
 
-[The offical instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+Open your terminal and run the following command (substituting your email):
 
+```bash
+ssh-keygen -t ed25519 -C "your.email@uwaterloo.ca"
+```
 
+1.  When asked where to save the key, just press Enter to accept the default location (usually `~/.ssh/id_ed25519`).
+2.  When asked for a passphrase, you can press Enter for no passphrase (easier) or type a password for extra security.
+
+**Step 2: Copy the public key**
+
+You need to copy the contents of the public key file you just created.
+
+Run this command to display the key:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Select and copy the entire output string (it starts with `ssh-ed25519` and ends with your email).
+
+**Step 3: Add the key to GitHub**
+
+1.  Go to [GitHub.com](https://github.com) and sign in.
+2.  Click your profile photo in the top-right corner and select **Settings**.
+3.  In the "Access" section of the sidebar, click **SSH and GPG keys**.
+4.  Click the green **New SSH key** button.
+5.  **Title**: Give it a name like "My Laptop".
+6.  **Key type**: Leave as "Authentication Key".
+7.  **Key**: Paste the key you copied in Step 2.
+8.  Click **Add SSH key**.
+
+**Step 4: Test the connection**
+
+Back in your terminal, type:
+
+```bash
+ssh -T git@github.com
+```
+
+-   If you see a warning about authenticity (`The authenticity of host...`), type `yes` and press Enter.
+-   You should see a success message: `Hi username! You've successfully authenticated...`
+
+**Important Note for Future Cloning:**
+
+Now that you have SSH set up, when you clone repositories, always select the **SSH** tab (instead of HTTPS) to get the URL. It will look like:
+`git@github.com:username/repository.git`
+
+If you use the HTTPS URL, git will ask for your username/password instead of using your new key.
 
 ### Using Git and Github --- Practice
 #### Fork the Course Repository
