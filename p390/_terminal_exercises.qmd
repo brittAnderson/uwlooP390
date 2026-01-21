@@ -556,6 +556,8 @@ You created a standard research project structure. `-R` shows recursive listing 
 </details>
 
 #### 5.2 Create a Data Log
+
+The task is illustrated with the use of `echo`. This will work and requires no additional tools to get familiar with. However, it can be tedious. Most systems will come with a very minimalist word processor built in. You might find that more convenient and you are welcome to use it if you prefer. A very common minimal text editor that launches in the terminal is "nano". To see if you have this just type `nano` at the prompt. The "^" character in the menu displayed at the problem means your control (aka CTRL) key. To save a file for example you would type `Ctrl-o` at the same time. Then you would enter the name of the file and hit enter to save. 
 **Task:**
 ```sh
 cd ~/psych_study
