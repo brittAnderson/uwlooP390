@@ -430,7 +430,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>While an academic website presents a polished professional identity, a blog serves a different purpose: regular, less formal expression of ideas, reflections on research, or documentation of learning. This tutorial builds on the website deployment skills you’ve already developed, but configures Quarto as a blog platform instead.</p>
 <section id="why-a-separate-blog-site" class="level4" data-number="7.3.2.1">
 <h4 data-number="7.3.2.1" class="anchored" data-anchor-id="why-a-separate-blog-site"><span class="header-section-number">7.3.2.1</span> Why a Separate Blog Site?</h4>
-<p>Github limits you to one github pages website, but we don’t want to overwrite the one you already made. The solution is to create a new “project” that also has a github-pages output, and then it will show up under your github name. That is why I can have a website at brittAnderson.github.io and put these course notes as brittanderson.github.io/uwlooP390.</p>
+<p>Github limits you to one github pages website, but we don’t want to overwrite the one you already made. The solution is to create a new “project” that also has a github-pages output, and then it will show up under your github name. That is why I can have a website at <a href="https://brittAnderson.github.io">brittAnderson.github.io</a> and put these course notes as <a href="https://brittanderson.github.io/uwlooP390">brittanderson.github.io/uwlooP390</a>.</p>
 <p>This separation also allows you to keep a clean, professional look for your public facing personal site, and also other sites that are more project specific or experimental.</p>
 </section>
 <section id="creating-the-blog-repository" class="level4" data-number="7.3.2.2">
@@ -550,13 +550,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>Write an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to a real manuscript when you compile it to pdf. It should have all the components of an article, at least one figure, and at least one reference. You can use some of the example code in these notes for ideas so that you can a section of embedded code that creates a figure.</p>
+<p>Before you begin you will want to make sure you have a LaTeX system installed. You will find some instructions in the operating system specific appendices, but for convenience a short instruction is to:</p>
+<p>For the WSL people (in your WSL/Ubuntu terminal)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install texlive-full</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And for the Mac people</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> mactex</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to PATH:</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'export PATH="/Library/TeX/texbin:$PATH"'</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>I find this easier to do from a terminal.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template quarto-journals/elsevier</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template quarto-journals/elsevier</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going.</p>
+<p>Note Bene (Jan 2026). I ran into a bug when trying to render. You will need to navigate to the <code>./_extensions/quarto-journals/elsevier/elsarticle.cls</code> and delete that first <code>%</code> on line 1368. You only need to do this if you get an error that talks about <code>bibsection</code> and <code>bmsection</code>. See this <a href="https://github.com/quarto-journals/elsevier/issues/41">issue</a></p>
 </section>
 <section id="presentations" class="level3" data-number="7.3.4">
 <h3 data-number="7.3.4" class="anchored" data-anchor-id="presentations"><span class="header-section-number">7.3.4</span> Presentations</h3>
