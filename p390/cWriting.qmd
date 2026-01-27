@@ -94,7 +94,7 @@ While an academic website presents a polished professional identity, a blog serv
 
 #### Why a Separate Blog Site?
 
-Github limits you to one github pages website, but we don't want to overwrite the one you already made. The solution is to create a new "project" that also has a github-pages output, and then it will show up under your github name. That is why I can have a website at brittAnderson.github.io and put these course notes as brittanderson.github.io/uwlooP390.
+Github limits you to one github pages website, but we don't want to overwrite the one you already made. The solution is to create a new "project" that also has a github-pages output, and then it will show up under your github name. That is why I can have a website at [brittAnderson.github.io](https://brittAnderson.github.io) and put these course notes as [brittanderson.github.io/uwlooP390](https://brittanderson.github.io/uwlooP390).
 
 This separation also allows you to keep a clean, professional look for your public facing personal site, and also other sites that are more project specific or experimental. 
 
@@ -256,6 +256,23 @@ After creating each post, run `quarto preview` to see how the homepage listing u
 
 Write an article with quarto/qmd and using any of the linked article formats. Each has instructions on their use. Your article should look similar to a real manuscript when you compile it to pdf. It should have all the components of an article, at least one figure, and at least one reference. You can use some of the example code in these notes for ideas so that you can a section of embedded code that creates a figure.
 
+Before you begin you will want to make sure you have a LaTeX system installed. You will find some instructions in the operating system specific appendices, but for convenience a short instruction is to: 
+
+For the WSL people (in your WSL/Ubuntu terminal)
+```sh
+sudo apt update
+sudo apt install texlive-full
+```
+
+And for the Mac people
+```sh
+brew install --cask mactex
+# Add to PATH:
+echo 'export PATH="/Library/TeX/texbin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+
 :::
 
 I find this easier to do from a terminal. 
@@ -267,6 +284,10 @@ quarto use template quarto-journals/elsevier
 ```
 
 This will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going. 
+
+Note Bene (Jan 2026). I ran into a bug when trying to render. You will need to navigate to the `./_extensions/quarto-journals/elsevier/elsarticle.cls` and delete that first `%` on line 1368. You only need to do this if you get an error that talks about `bibsection` and `bmsection`. See this [issue](https://github.com/quarto-journals/elsevier/issues/41)
+
+
 
 ### Presentations 
 Presentations are a standard component of professional life. Despite that importance the materials are often developed in a casual way that does not give the best impact to the material. There are many more versatile tools than contemporary Power Point. Though power point can make an effective presentation its default use does not typically achieve that goal. Quarto provides easy access to two other presentation tools that will expand one's recognition of what an effective presentation tool can do. 
