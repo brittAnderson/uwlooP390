@@ -26,11 +26,13 @@ To create an R interpreter in VS Code you can simply launch a new terminal and t
 
 ```r
 install.packages("tidyverse",repos='https://mirror.csclub.uwaterloo.ca/CRAN/')
-library{tidyverse}
+library(tidyverse)
 ```
 :::
 
 The [tidyverse](https://www.tidyverse.org/) is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not.
+
+Note that you do not want to install packages repeatedly. Once you have installed a package you only need to load it, import it, or in the case of R call it with the `library` function.
 
 ## Mix R Code with Text for Reproducible and Documented Workflows 
 
@@ -54,6 +56,11 @@ ggplot(
   geom_point() +
   geom_smooth(method = "lm")
 ```
+
+::: {.callout-warning}
+If you are reading this please do not move on until you can verify that you can produce the plot above when previewing or rendering your qmd file. The way to learn to code is to practice. If your system is ill-configured or you do not know how to use it properly then you will not be able to try out the following practice code snippets. 
+
+:::
 
 ## R Types
 As mentioned in the code chapter, programming language values are typically typed. R in particular has many complicated data types that represent the output of functions and statistical analyses. If things are getting confusing you might want to check on the type of your data.
@@ -81,12 +88,12 @@ df = data.frame('fn' = c("bob","jane","griffin"),"gndr" = c('m','f','o'))
 df
 ```
 
-Each of three datatypes in R are demonstrated. 
+Each of three datatypes in R are demonstrated. In your interpreter type each of the above and make sure there are no errors when you hit the enter key. Then use the `typeof` function to figure out what R thinks the type of each variable is. 
 :::
 
 ## Data.Frames
 
-`Data.Frames` are particularly central to the R analysis model and are a killer feature. Think of `data.frames` as a supercharged spreadsheet with columnn names.
+`Data.Frames` are particularly central to the R analysis model and are a killer feature. Think of `data.frame`s as a supercharged spreadsheet with columnn names. You can gain some familiarity with  `data.frame`s by examining some of the built-in `data.frame`s that come with the basic R installation. 
 
 
 ```{r}
@@ -94,7 +101,7 @@ is.data.frame(cars)
 head(cars)
 ```
 
-`cars` is a data set built in the R language. We use the `is.data.frame` command to ask if a variable is or is not a data.frame.
+`cars` is an example of the data sets built in the R language. We use the `is.data.frame` command to ask if a variable is or is not a data.frame. There are other `is.<fillintheblank>` functions for other data types.
 
 ## Selecting Data
 
@@ -120,11 +127,12 @@ What is going on here?
 
 ## Practice
 
-While qmd files and Quarto are great for writing documents with code in it, they are not idea for exploring in a quick and interactive way. For that use a terminal or console. In VSCode you have a menu that will create a new terminal where you can start R with the command `R`.
+While qmd files and Quarto are great for writing documents with code in it, they are not idea for exploring in a quick and interactive way. For that use a terminal or console (basically synonyms; you may also hear "command line"). In VSCode you have a menu that will create a new terminal where you can start R with the command `R`.
 
 1. Sort (or `order`) cars by the `dist` variable.
-2. Find the mean and standard deviation of the speed of the cars.
-3. Are there other datasets?   
+2. Find the mean and standard deviation of the speed of the cars. Yes, you will have to search for the correct commands.
+3. Are there other datasets?
+
    ```{{r}} 
    library(help="datasets")
    
@@ -201,3 +209,5 @@ Now we can use the function we defined with particular inputs.
 ```{r} 
 myadd(2,3)
 ```
+
+What next? Take a look for the homework "quarto, code, and R". You will write a quarto file (.qmd). That combines text with R code, and when rendered produces a pdf or html that contains text, code and data plot. 
