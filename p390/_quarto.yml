@@ -20,8 +20,8 @@ book:
     - cCode.qmd
     - cR.qmd
     - cPython.qmd
-    - cProgExp.qmd
     - cHandlingData.qmd
+    - cProgExp.qmd
     - cLabNotebooks.qmd
     - cLabNoteBookQuartoExample.qmd
     - cWriting.qmd
