@@ -15,7 +15,7 @@ You should see some information about you R version.
 Restart VS Code and install the R extension (look to the left panel for the extension launcher; it looks like a little set of squares).
 
 ### Resources
-[R for Data Science](https://r4ds.hadley.nz/) is a text book on data science that uses R. The author is a prolific R package author and the itself written in Quarto. It includes many examples that you can test by cutting and pasting into your IDE.
+[R for Data Science](https://r4ds.hadley.nz/) is a text book on data science that uses R. The author is a prolific R package author and the book itself written in Quarto. It includes many examples that you can test by cutting and pasting into your IDE.
 
 ## Installing R Packages
 There are many tools for this. Some of them are GUI tools, and they will at first appear easier. But if your library starts to grow, or you need to install particular versions of packages, old packages, or packages from Github and not on CRAN, then you will be much happier in a R interpreter.
