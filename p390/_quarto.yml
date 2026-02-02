@@ -17,14 +17,14 @@ book:
     - cTerminal.qmd
     - cGit.qmd
     - cWebSite.qmd  
-    - cWriting.qmd
     - cCode.qmd
     - cR.qmd
     - cPython.qmd
-    - cLabNotebooks.qmd
-    - cLabNoteBookQuartoExample.qmd
     - cProgExp.qmd
     - cHandlingData.qmd
+    - cLabNotebooks.qmd
+    - cLabNoteBookQuartoExample.qmd
+    - cWriting.qmd
     - cBiblio.qmd
     - cLLM.qmd
     - summary.qmd
