@@ -25,14 +25,6 @@ library(reticulate)
 
 ## Dataframe Self-Learning Exercises: R and Python Pandas
 
-### Prerequisites
-- You have R installed and can run R code
-- You have Python installed with pandas library (`pip install pandas` or `uv pip install pandas`)
-- You can execute code in either RStudio, Jupyter notebooks, or your preferred IDE
-
-### Learning Philosophy
-These exercises are designed to help you discover similarities and differences between R dataframes and Python pandas dataframes through hands-on experimentation. You'll work with the same dataset in both languages to build intuition about how each handles common data analysis tasks.
-
 ---
 
 ## Part 1: R Dataframe Exercises
@@ -798,7 +790,4 @@ Once comfortable with these basics, explore:
 
 
 
-## Learning Philosophy
-
-These exercises are designed to help you discover similarities and differences between R dataframes and Python pandas dataframes through hands-on experimentation. You'll work with the same dataset in both languages to build intuition about how each handles common data analysis tasks.
 
