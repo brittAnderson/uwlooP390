@@ -1,4 +1,4 @@
-# R and Pandas Dataframe Comparison
+# Introductory Data Analysis in R and Python (Pandas)
 
 ## Introduction
 
