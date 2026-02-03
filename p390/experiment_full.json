@@ -1,0 +1,24 @@
+{
+  "experiment_name": "Posner Cueing Task",
+  "date": "2024-01-15",
+  "experimenter": "Dr. Smith",
+  "parameters": {
+    "stimulus_duration_ms": 100,
+    "cue_stimulus_interval_ms": 200,
+    "valid_cue_probability": 0.8
+  },
+  "trials": [
+    {
+      "participant_id": 1,
+      "side": "left",
+      "valid": true,
+      "rt": 342.7
+    },
+    {
+      "participant_id": 1,
+      "side": "right",
+      "valid": false,
+      "rt": 412.3
+    }
+  ]
+}

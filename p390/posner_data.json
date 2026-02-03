@@ -1,0 +1,20 @@
+[
+  {
+    "participant_id": 1,
+    "age": 22,
+    "side": "left",
+    "cue": "left",
+    "valid": true,
+    "correct": true,
+    "rt": 342.7
+  },
+  {
+    "participant_id": 1,
+    "age": 22,
+    "side": "right",
+    "cue": "left",
+    "valid": false,
+    "correct": true,
+    "rt": 412.3
+  }
+]

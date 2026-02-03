@@ -1,0 +1,5 @@
+participant_id,age,side,cue,valid,correct,rt
+1,22,left,left,True,True,342.7
+1,22,right,left,False,True,412.3
+1,22,left,right,False,False,523.1
+2,19,left,left,True,True,298.4
