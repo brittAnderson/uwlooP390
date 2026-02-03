@@ -208,7 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cHandlingData.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Experimental Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,38 +219,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./cRPandasComparison.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Introductory Data Analysis in R and Python (Pandas)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./cLabNotebooks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lab Notebooks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lab Notebooks</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cLabNoteBookQuartoExample.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">An Example Lab Notebook</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An Example Lab Notebook</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cWriting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Writing Scientific Documents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Writing Scientific Documents</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cBiblio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Knowledge Management</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Knowledge Management</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cLLM.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Large Language Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Large Language Models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -296,7 +302,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#testing-github-pages" id="toc-testing-github-pages" class="nav-link" data-scroll-target="#testing-github-pages"><span class="header-section-number">6.0.2</span> Testing Github Pages</a></li>
   <li><a href="#converting-to-quarto" id="toc-converting-to-quarto" class="nav-link" data-scroll-target="#converting-to-quarto"><span class="header-section-number">6.0.3</span> Converting to Quarto</a></li>
   <li><a href="#quarto-setup" id="toc-quarto-setup" class="nav-link" data-scroll-target="#quarto-setup"><span class="header-section-number">6.0.4</span> Quarto Setup</a></li>
-  <li><a href="#customization-exercise" id="toc-customization-exercise" class="nav-link" data-scroll-target="#customization-exercise"><span class="header-section-number">6.1</span> Customization Exercise</a></li>
+  <li><a href="#blog-project-in-quarto" id="toc-blog-project-in-quarto" class="nav-link" data-scroll-target="#blog-project-in-quarto"><span class="header-section-number">6.0.5</span> Blog Project in Quarto</a></li>
+  <li><a href="#creating-a-blog-with-quarto-and-github-pages" id="toc-creating-a-blog-with-quarto-and-github-pages" class="nav-link" data-scroll-target="#creating-a-blog-with-quarto-and-github-pages"><span class="header-section-number">6.0.6</span> Creating a Blog with Quarto and GitHub Pages</a></li>
   </ul>
 </nav>
     </div>
@@ -381,9 +388,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Configure GitHub Pages</strong>: Navigate to your repository Settings → Pages → Source: Deploy from branch → Branch: main → Folder: /docs → Save</p></li>
 </ol>
 <p>Your website should be available at <username>.github.io within a few minutes.</username></p>
-</section>
-<section id="customization-exercise" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="customization-exercise"><span class="header-section-number">6.1</span> Customization Exercise</h2>
+<section id="customization-exercise" class="level4" data-number="6.0.4.1">
+<h4 data-number="6.0.4.1" class="anchored" data-anchor-id="customization-exercise"><span class="header-section-number">6.0.4.1</span> Customization Exercise</h4>
 <p>Practice modifying your website by completing these tasks:</p>
 <ul>
 <li>Create an About page by adding a new file called <code>about.qmd</code></li>
@@ -392,8 +398,126 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Include an image or figure on your homepage</li>
 </ul>
 <p>Use <code>quarto preview</code> to test changes locally before committing and pushing to GitHub.</p>
+</section>
+</section>
+<section id="blog-project-in-quarto" class="level3" data-number="6.0.5">
+<h3 data-number="6.0.5" class="anchored" data-anchor-id="blog-project-in-quarto"><span class="header-section-number">6.0.5</span> Blog Project in Quarto</h3>
+<p>In <a href="#sec-make-website" class="quarto-xref"><span>Chapter 6</span></a> we created a basic academic website with Quarto. In this variant you can make a blog.</p>
+<p>The advantage of managing your blog in Quarto is that you get to take advantage of all the markdown language features. This is much more convenient than writing in html directly. You can also embed code and output just as you have been doing when you export your R code to html.</p>
+</section>
+<section id="creating-a-blog-with-quarto-and-github-pages" class="level3" data-number="6.0.6">
+<h3 data-number="6.0.6" class="anchored" data-anchor-id="creating-a-blog-with-quarto-and-github-pages"><span class="header-section-number">6.0.6</span> Creating a Blog with Quarto and GitHub Pages</h3>
+<p>While an academic website presents a polished professional identity, a blog serves a different purpose: regular, less formal expression of ideas, reflections on research, or documentation of learning. This tutorial builds on the website deployment skills you’ve already developed, but configures Quarto as a blog platform instead.</p>
+<section id="why-a-separate-blog-site" class="level4" data-number="6.0.6.1">
+<h4 data-number="6.0.6.1" class="anchored" data-anchor-id="why-a-separate-blog-site"><span class="header-section-number">6.0.6.1</span> Why a Separate Blog Site?</h4>
+<p>Github limits you to one github pages website, but we don’t want to overwrite the one you already made. The solution is to create a new “project” that also has a github-pages output, and then it will show up under your github name. That is why I can have a website at <a href="https://brittAnderson.github.io">brittAnderson.github.io</a> and put these course notes as <a href="https://brittanderson.github.io/uwlooP390">brittanderson.github.io/uwlooP390</a>.</p>
+<p>This separation also allows you to keep a clean, professional look for your public facing personal site, and also other sites that are more project specific or experimental.</p>
+</section>
+<section id="creating-the-blog-repository" class="level4" data-number="6.0.6.2">
+<h4 data-number="6.0.6.2" class="anchored" data-anchor-id="creating-the-blog-repository"><span class="header-section-number">6.0.6.2</span> Creating the Blog Repository</h4>
+<p>Unlike your academic website which required the specific name <code>username.github.io</code>, a project site can have any repository name. We’ll use <code>blog</code> for clarity.</p>
+<ol type="1">
+<li><p><strong>Create a new repository</strong> on GitHub named <code>blog</code> (not <code>username.github.io</code>). Make it public.</p></li>
+<li><p><strong>Clone the repository</strong> to your local machine:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/blog.git</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> blog</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Initialize a Quarto blog project</strong>: Note that we will be using a specific keyword here to clue quarto into the correct template. We are making a <em>blog</em> not a <em>website</em>. At least as far as Quarto is concerned. We know that a blog is a website.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create project blog .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Choose “blog” when prompted, and confirm overwriting the directory.</p></li>
+<li><p><strong>Preview your blog locally</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Your browser should open displaying the default Quarto blog with sample posts.</p></li>
+</ol>
+</section>
+<section id="understanding-blog-vs.-website-structure" class="level4" data-number="6.0.6.3">
+<h4 data-number="6.0.6.3" class="anchored" data-anchor-id="understanding-blog-vs.-website-structure"><span class="header-section-number">6.0.6.3</span> Understanding Blog vs.&nbsp;Website Structure</h4>
+<p>The key architectural difference between a blog and a website is content organization:</p>
+<p><strong>Website</strong> (your academic site): - Static pages at the root level (<code>index.qmd</code>, <code>about.qmd</code>, <code>cv.qmd</code>) - Content rarely changes - Navigation via navbar links</p>
+<p><strong>Blog</strong> (this project): - A <code>posts/</code> directory containing individual posts - Each post lives in its own subfolder: <code>posts/post-name/index.qmd</code> - Homepage automatically generates a listing of posts - Posts have metadata (date, author, categories) that enables automation</p>
+</section>
+<section id="configuring-for-github-pages" class="level4" data-number="6.0.6.4">
+<h4 data-number="6.0.6.4" class="anchored" data-anchor-id="configuring-for-github-pages"><span class="header-section-number">6.0.6.4</span> Configuring for GitHub Pages</h4>
+<p>Because this is a project site (not your user site), Quarto needs to know the base URL to generate correct links.</p>
+<p>Be careful here. This is of “type” blog, but you will have a section “website.”</p>
+<ol type="1">
+<li><p><strong>Edit <code>_quarto.yml</code></strong> to add the site URL and configure output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> blog</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">site-url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://username.github.io/blog"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Blog Title"</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"A place for thinking out loud"</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Home"</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">file</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"About"</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">file</span><span class="kw">:</span><span class="at"> about.qmd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace <code>username</code> with your actual GitHub username. The <code>site-url</code> field ensures RSS feeds and internal links use the correct base path (<code>/blog</code>).</p></li>
+<li><p><strong>Customize the about page</strong> by editing <code>about.qmd</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"About This Blog"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="at">Explain what you plan to write about</span><span class="kw">,</span><span class="at"> why you</span><span class="st">'re maintaining this blog, or what readers can expect]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="creating-blog-posts" class="level4" data-number="6.0.6.5">
+<h4 data-number="6.0.6.5" class="anchored" data-anchor-id="creating-blog-posts"><span class="header-section-number">6.0.6.5</span> Creating Blog Posts</h4>
+<p>Each post is a separate Quarto document with structured metadata. The metadata isn’t just decorative—it enables automatic listing pages, RSS feeds, and category filtering.</p>
+<ol type="1">
+<li><p><strong>Create a new post directory</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> posts/first-post</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Create the post file</strong> <code>posts/first-post/index.qmd</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My First Blog Post"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2024-01-15"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">thoughts</span><span class="kw">,</span><span class="at"> meta</span><span class="kw">]</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">## Why I'm Starting This Blog</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="at">Your content here</span><span class="kw">]</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="at">This is a space for less polished thinking than my academic work requires. I plan to use it for...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Preview the post</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Navigate to your new post from the homepage listing.</p></li>
+</ol>
+<p>The homepage (<code>index.qmd</code>) automatically generates a listing of all posts in the <code>posts/</code> directory, sorted by date. You don’t need to manually maintain this list—Quarto reads the YAML metadata from each post.</p>
+</section>
+<section id="deployment" class="level4" data-number="6.0.6.6">
+<h4 data-number="6.0.6.6" class="anchored" data-anchor-id="deployment"><span class="header-section-number">6.0.6.6</span> Deployment</h4>
+<p>The deployment process is identical to your academic website:</p>
+<ol type="1">
+<li><p><strong>Build the site</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Commit and push</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initial blog setup"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Configure GitHub Pages</strong>: Navigate to repository Settings → Pages → Source: Deploy from branch → Branch: main → Folder: /docs → Save</p></li>
+</ol>
+<p>Your blog will be available at <code>https://username.github.io/blog</code> within a few minutes.</p>
+</section>
+<section id="exercise" class="level4" data-number="6.0.6.7">
+<h4 data-number="6.0.6.7" class="anchored" data-anchor-id="exercise"><span class="header-section-number">6.0.6.7</span> Exercise</h4>
+<p>Create three blog posts with different metadata configurations to understand how Quarto uses this information:</p>
+<ol type="1">
+<li><p><strong>A post without categories</strong>: Observe that it still appears in the listing but has no category tags.</p></li>
+<li><p><strong>Two posts with overlapping categories</strong>: Create posts tagged with <code>[research, methods]</code> and <code>[research, teaching]</code>. Notice how the category system creates implicit connections between posts.</p></li>
+<li><p><strong>Posts with different dates</strong>: Create posts dated a week apart. Verify that the listing page automatically orders them chronologically.</p></li>
+</ol>
+<p>After creating each post, run <code>quarto preview</code> to see how the homepage listing updates automatically.</p>
+<p><strong>Why the <code>/docs</code> output directory?</strong> GitHub Pages expects site files in either the repository root or a <code>/docs</code> folder. Using <code>/docs</code> keeps your source files (<code>.qmd</code>) separate from generated HTML, making the repository more maintainable.</p>
+<p><strong>Why <code>site-url</code> matters:</strong> Without this field, Quarto assumes your site deploys at the domain root. For a project site at a subpath (<code>/blog</code>), links would break. The <code>site-url</code> tells Quarto to prepend <code>/blog</code> to all internal links and configure RSS feeds correctly.</p>
+<p><strong>Directory structure philosophy:</strong> Each post in its own folder allows you to keep related files (images, data files) co-located with the post content. This modular organization scales better than dumping everything in a single directory.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
