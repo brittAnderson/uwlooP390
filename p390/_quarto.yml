@@ -22,6 +22,7 @@ book:
     - cPython.qmd
     - cHandlingData.qmd
     - cProgExp.qmd
+    - cRPandasComparison.qmd
     - cLabNotebooks.qmd
     - cLabNoteBookQuartoExample.qmd
     - cWriting.qmd
