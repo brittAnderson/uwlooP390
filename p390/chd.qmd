@@ -1,0 +1,1010 @@
+## Handling Data
+
+Before we can analyze data, we have to have some data. Broadly speaking our data may come from experiments we run ourselves, or it may come from data that is shared with us. In the first case we have some freedom to choose the format. In the later, we simply have to take what we are given. Therefore, we need to consider both how to save and convert data that we collect from an experiment. And we also need to be broadly familiar with common formats of data storage that others may use. 
+
+### Common Data Formats And Some Advantages of Each
+
+- Plain Text
+
+  Plain text is easy to do and human readable. It usually will require a unique parser, and forces all items to be text. Thus, things like numbers lose their specificity, and things like lists can become painful to retrieve.
+
+- CSV
+- TSV
+
+  CSV and TSV view all data as rows and a unique character (commas or tabs) separates the cells of the rows. Another character, typically a new line (often seen written as `\n`) is what distinguishes one row from the next. These file types are, largely, human readable if the number of columns and rows are not too large. They are not as space efficient as other formats, but that may be a reasonable tradeoff when the size of the data files is small. It can be a challenge with this format to deal with some sorts of data, because often numbers can be coerced to strings making the analysis more cumbersome. 
+
+- JSON
+
+  JSON stands for Java Script Object Notation. Although, as the name implies, it had its origin in javascript it is largely language agnostic and is a common format for the storage of data of all types. Its being used as a standard means it has wide support from many programming languages and that means there are good tools for exporting and storing for most programming languages. It can be quite flexible in the type of data stored. It is not friendly for writing by hand, but the use of tools makes it fairly easy to take experimentally collected data created in, say, a python dictionary and convert it to a json format. 
+
+- Pickle
+
+  This is a binary format particular to the python programming language. It can be quicker and more efficient on storage space, but it is not human readable unless you convert it from the binary format to a textual format. It is also limited to the python world. If you choose this data storage format you are making a firm choice that you will be a python user, and so must your collaborators.
+  
+- Dat (R)
+
+  This is an R data format. Like pickle it is binary and like pickle it is language specific, but rather than python the language is R. Maybe it is because I feel more comfortable doing data analysis in R, but I don't view this as hard to use as pickle. Usually my data is small enough to fit in a single workspace and I use the .dat format to save work at the end of a day, but I don't use it as my primary storage format when generating data experimentally.
+
+### A JSON Illustration
+
+```{r}
+#| echo: false
+
+library(reticulate)
+```
+
+::: {#fig-minimaljson}
+
+```{python}
+import random as r
+import json as j
+a = {'name': 'John Doe', 'age': 24, 'rt': r.random()}
+js = j.dumps(a)
+js
+```
+
+The `dumps` command will output the json version as a string. Note this example is using python, but you can do the same thing with R. Thus JSON is more portable.
+Note there is a very similar python function without the terminal *s*, `json.dump`, that will save the json data to a file. Some other code is needed to create the file pointer. But once that is done, and the json data saved, you can read it back with `json.load()`
+
+:::
+
+::: {#fig-jsonfileexample}
+
+```{python}
+#| eval: false
+
+import json
+a = {'name': 'John Doe', 'age': 24}
+js = json.dumps(a)
+
+# Open new json file if not exist it will create
+fp = open('test.json', 'a')
+
+# write to json file
+fp.write(js)
+
+# close the connection
+fp.close()
+```
+
+This example was taken from [[StackOverflow](https://stackoverflow.com/questions/42825102/how-to-save-python-dictionary-into-json-files)] shows a working example.
+
+:::
+
+A JSON tutorial can be found [here](https://www.w3schools.com/js/js_json_intro.asp).
+
+### A Pickle Python Example
+
+
+Pickling is a data serialization [library](https://docs.python.org/3/library/pickle.html) specific to the python ecosystem. That makes it useful if you are coding your experiment in python, but not in any other language. However, it can be very efficient on space, and there is good support for it in the python language so many experimental coding libraries built around python use pickle for data storage. 
+
+This [code](#pickle-example) from a [GeeksforGeeks article](https://www.geeksforgeeks.org/understanding-python-pickling-example/) provides a nice minimal working example. 
+
+:::{#pickle-example}
+```{python}
+#| eval: false
+
+import pickle
+
+def storeData():
+    # initializing data to be stored in db
+    Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak',
+    'age' : 21, 'pay' : 40000}
+    Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',
+    'age' : 50, 'pay' : 50000}
+
+    # database
+    db = {}
+    db['Omkar'] = Omkar
+    db['Jagdish'] = Jagdish
+    
+    # Its important to use binary mode
+    dbfile = open('examplePickle', 'ab')
+    
+    # source, destination
+    pickle.dump(db, dbfile)                    
+    dbfile.close()
+
+def loadData():
+    # for reading also binary mode is important
+    dbfile = open('examplePickle', 'rb')    
+    db = pickle.load(dbfile)
+    for keys in db:
+        print(keys, '=>', db[keys])
+    dbfile.close()
+
+if __name__ == '__main__':
+    storeData()
+    loadData()
+
+```
+
+Note that `__name__` at the end. That is a clever way to handle python files that allows you to use them as either a library or a script. 
+
+### A Simple R Example
+
+When working in the R environment the `save` and `load` function provide convenient ways to save your data and variables in their current state so that you can make available in your next interactive session what was available in your current one. However, this may not be the most interoperable way to work with your data if you need to share with collaborators who may not use R or if you yourself are open to the possibility of changing your analysis software. R offers two main functions for reading and writing data called `read` and `write`. Each of these has several specialization that target particular file types (e.g. `read.csv`) and also allow a number of customizations (e.g. whether to ignore a number of lines at the top of a file if there is a plain text header). Usually one of these variants will allow you to read your data into R or write data to a file that can be read by others.
+
+::: {.callout-tip title="Class Question"}
+Can you figure out how to write R data to a json format? R has several built in data sets. A common one is `cars`. Can you write the `cars` data to a file storing it in json format?
+:::
+
+```{r}
+data(cars)
+library(jsonlite)
+write_json(cars, "cars.json")
+print(toJSON(head(cars,10), pretty = TRUE))
+cars_from_json <- read_json("cars.json")
+```
+
+### Considering Pandas and Interoperability with R 
+
+[Pandas](https://pandas.pydata.org/) is a major python library and effort to provide cutting edge tools for statistics and analysis to match what is on offer elsewhere. In my experience they are not the first place that statisticians develop their cutting edge tools, R remains most popular, but for all else the choice between the two, R and Python, is really a matter of preference and comfort. Pandas is a very powerful tool and if you are more likely to use python in the future you will want to explore Pandas fully. 
+
+Pandas can usually be installed with `pip install pandas`. Because of the size and complexity of python installations a virtual environment is recommended. If you are using `uv` and a virtual environment as recommended make sure you activate that environment and use prefix with `uv`. 
+
+Even if you are not thinking of doing your data analysis in python, if you are writing your experiments in python you might want to take advantage of some of the pandas tooling to make saving your data more convenient.
+
+IAMHERE -- need to test the following and fix the level of headers. -- Britt Jan 6 2026
+
+### Pandas and R Dataframes Illustrated.
+
+Since these two methods of handling data are so common we will run through a series of illustrative exercises that will teach you their differences and help you understand and compare their syntax.
+
+## Dataframe Self-Learning Exercises: R and Python Pandas
+
+### Prerequisites
+- You have R installed and can run R code
+- You have Python installed with pandas library (`pip install pandas` or `uv pip install pandas`)
+- You can execute code in either RStudio, Jupyter notebooks, or your preferred IDE
+
+### Learning Philosophy
+These exercises are designed to help you discover similarities and differences between R dataframes and Python pandas dataframes through hands-on experimentation. You'll work with the same dataset in both languages to build intuition about how each handles common data analysis tasks.
+
+---
+
+## Part 1: R Dataframe Exercises
+
+### Exercise Set R1: Creating and Exploring Dataframes
+
+#### R1.1 Create a Research Dataset
+**Task:** Create a dataframe with experimental data.
+
+```{r}
+#| eval: false
+
+# Create a dataframe with participant data
+participants <- data.frame(
+  subject_id = c(101, 102, 103, 104, 105, 106, 107, 108, 109, 110),
+  age = c(22, 25, 23, 28, 21, 24, 26, 23, 27, 22),
+  condition = c("control", "treatment", "control", "treatment", "control", 
+                "treatment", "control", "treatment", "control", "treatment"),
+  reaction_time = c(450, 380, 470, 360, 490, 370, 460, 350, 480, 365),
+  accuracy = c(0.85, 0.92, 0.83, 0.95, 0.80, 0.93, 0.84, 0.96, 0.82, 0.94)
+)
+
+# View the dataframe
+print(participants)
+
+# Check structure
+str(participants)
+```
+
+**Questions to answer:** 
+- How many rows and columns does your dataframe have?
+- What data types are in each column?
+- Is `condition` stored as a character or factor?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see a dataframe with 10 rows and 5 columns. The `str()` function shows that `condition` is stored as a character vector by default in modern R. You can see the data types: numeric for age, reaction_time, and accuracy; character for condition; numeric for subject_id.
+</details>
+
+#### R1.2 Basic Dataframe Information
+**Task:** Explore your dataframe's properties.
+
+```{r}
+#| eval: false
+
+# Number of rows
+nrow(participants)
+
+# Number of columns
+ncol(participants)
+
+# Dimensions (rows, columns)
+dim(participants)
+
+# Column names
+names(participants)
+# or
+colnames(participants)
+
+# First few rows
+head(participants)
+
+# Last few rows
+tail(participants)
+
+# Summary statistics
+summary(participants)
+```
+
+**Questions to answer:**
+- What does `summary()` tell you about each column?
+- How does it handle numeric vs. character columns differently?
+
+<details>
+<summary>Expected outcome</summary>
+
+`summary()` provides descriptive statistics (min, max, mean, median, quartiles) for numeric columns and counts for character/factor columns. This is a quick way to check your data for outliers or data entry errors.
+</details>
+
+#### R1.3 Selecting Columns
+**Task:** Practice different ways to access columns.
+
+```{r}
+#| eval: false
+
+# Method 1: Dollar sign notation
+participants$reaction_time
+
+# Method 2: Square brackets with column name
+participants[, "reaction_time"]
+
+# Method 3: Square brackets with column number
+participants[, 4]
+
+# Select multiple columns
+participants[, c("subject_id", "reaction_time", "accuracy")]
+
+# Using subset to select columns
+subset(participants, select = c(subject_id, reaction_time))
+```
+
+**Questions to answer:**
+- Which method do you find most readable?
+- What's the difference between `participants$reaction_time` and `participants[, "reaction_time"]`?
+- What happens if you use single brackets: `participants["reaction_time"]`?
+
+<details>
+<summary>Expected outcome</summary>
+
+`$` returns a vector, while `[, "column"]` returns a vector by default but can return a dataframe if you use `drop=FALSE`. Single brackets `["column"]` returns a dataframe with one column. Understanding these differences is important for avoiding errors in your analysis code.
+</details>
+
+#### R1.4 Filtering Rows
+**Task:** Select subsets of your data based on conditions.
+
+```{r}
+#| eval: false
+
+# Filter for treatment condition only
+treatment_group <- participants[participants$condition == "treatment", ]
+print(treatment_group)
+
+# Filter for participants younger than 25
+young_participants <- participants[participants$age < 25, ]
+print(young_participants)
+
+# Multiple conditions: treatment AND age < 25
+young_treatment <- participants[participants$condition == "treatment" & 
+                                participants$age < 25, ]
+print(young_treatment)
+
+# Using subset function (often more readable)
+treatment_group2 <- subset(participants, condition == "treatment")
+young_treatment2 <- subset(participants, condition == "treatment" & age < 25)
+```
+
+**Questions to answer:**
+- How many participants are in the treatment group?
+- How many young participants (age < 25) received treatment?
+- Which syntax do you find clearer: bracket notation or `subset()`?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should find 5 participants in treatment group, and 2 young participants in treatment. The `subset()` function is often more readable because you don't need to repeat the dataframe name and the comma notation is less error-prone.
+</details>
+
+#### R1.5 Computing Condition Means
+**Task:** Calculate mean reaction time by condition.
+
+```{r}
+#| eval: false
+
+# Method 1: Manual filtering
+control_rt <- participants[participants$condition == "control", "reaction_time"]
+treatment_rt <- participants[participants$condition == "treatment", "reaction_time"]
+
+mean(control_rt)
+mean(treatment_rt)
+
+# Method 2: Using aggregate
+aggregate(reaction_time ~ condition, data = participants, FUN = mean)
+
+# Method 3: Using tapply
+tapply(participants$reaction_time, participants$condition, mean)
+
+# Get both mean and median
+aggregate(reaction_time ~ condition, data = participants, 
+          FUN = function(x) c(mean = mean(x), median = median(x)))
+```
+
+**Questions to answer:**
+- Which condition has faster reaction times on average?
+- Which method do you find most intuitive?
+- What's the difference between the output formats of `aggregate()` and `tapply()`?
+
+<details>
+<summary>Expected outcome</summary>
+
+Treatment group should have faster reaction times (lower values). `aggregate()` returns a dataframe which is often easier to work with, while `tapply()` returns a named vector. The formula syntax in `aggregate()` (`reaction_time ~ condition`) is very readable and common in R statistical functions.
+</details>
+
+#### R1.6 Adding and Modifying Columns
+**Task:** Create new variables in your dataframe.
+
+```{r}
+#| eval: false
+
+# Add a new column: convert RT from ms to seconds
+participants$rt_seconds <- participants$reaction_time / 1000
+
+# Create a categorical age group
+participants$age_group <- ifelse(participants$age < 25, "young", "older")
+
+# Create a performance score (combining RT and accuracy)
+# Lower RT and higher accuracy = better performance
+participants$performance <- participants$accuracy / (participants$reaction_time / 1000)
+
+# View the updated dataframe
+head(participants)
+
+# Check the new columns
+summary(participants)
+```
+
+**Questions to answer:**
+- How many columns does your dataframe have now?
+- What are the mean performance scores for each condition?
+- How would you create a three-level age group (young, middle, older)?
+
+<details>
+<summary>Expected outcome</summary>
+
+Your dataframe now has 8 columns. You can calculate condition means for performance using the methods from R1.5. For three-level grouping, you'd use nested `ifelse()` or the `cut()` function.
+</details>
+
+#### R1.7 Basic Statistical Tests
+**Task:** Perform a t-test comparing conditions.
+
+```{r}
+#| eval: false
+
+# T-test: Does treatment affect reaction time?
+t.test(reaction_time ~ condition, data = participants)
+
+# Alternative: manual specification
+control_rt <- participants$reaction_time[participants$condition == "control"]
+treatment_rt <- participants$reaction_time[participants$condition == "treatment"]
+t.test(control_rt, treatment_rt)
+
+# Correlation: Age and reaction time
+cor.test(participants$age, participants$reaction_time)
+
+# Correlation: Reaction time and accuracy
+cor.test(participants$reaction_time, participants$accuracy)
+```
+
+**Questions to answer:**
+- Is there a significant difference in reaction time between conditions?
+- What is the correlation between reaction time and accuracy?
+- What does a negative correlation between RT and accuracy suggest?
+
+<details>
+<summary>Expected outcome</summary>
+
+You should see a significant difference between conditions (treatment faster). The correlation between RT and accuracy should be negative (faster responses = higher accuracy in this dataset), suggesting a speed-accuracy tradeoff is NOT present - participants who are faster are also more accurate.
+</details>
+
+---
+
+## Part 2: Python Pandas Dataframe Exercises
+
+### Exercise Set P1: Creating and Exploring Dataframes
+
+#### P1.1 Create the Same Research Dataset
+**Task:** Create an identical dataframe in pandas.
+
+```{python}
+#| eval: false
+
+import pandas as pd
+import numpy as np
+
+# Create a dataframe with participant data
+participants = pd.DataFrame({
+    'subject_id': [101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
+    'age': [22, 25, 23, 28, 21, 24, 26, 23, 27, 22],
+    'condition': ['control', 'treatment', 'control', 'treatment', 'control',
+                  'treatment', 'control', 'treatment', 'control', 'treatment'],
+    'reaction_time': [450, 380, 470, 360, 490, 370, 460, 350, 480, 365],
+    'accuracy': [0.85, 0.92, 0.83, 0.95, 0.80, 0.93, 0.84, 0.96, 0.82, 0.94]
+})
+
+# View the dataframe
+print(participants)
+
+# Check structure
+print(participants.info())
+print(participants.dtypes)
+```
+
+**Questions to answer:**
+- How does the pandas output compare to R's `print()`?
+- What data types does pandas assign to each column?
+- How is `info()` similar to or different from R's `str()`?
+
+<details>
+<summary>Expected outcome</summary>
+
+Pandas displays the dataframe with row indices (0-9) on the left. The `info()` method shows similar information to R's `str()`: column names, non-null counts, and data types. Pandas uses `int64`, `float64`, and `object` (for strings) as data types.
+</details>
+
+#### P1.2 Basic Dataframe Information
+**Task:** Explore your dataframe's properties.
+
+```{python}
+#| eval: false
+
+# Number of rows and columns
+print(participants.shape)  # Returns (rows, columns)
+
+# Number of rows
+print(len(participants))
+
+# Column names
+print(participants.columns)
+
+# First few rows
+print(participants.head())
+
+# Last few rows
+print(participants.tail())
+
+# Summary statistics
+print(participants.describe())
+
+# More detailed summary including non-numeric columns
+print(participants.describe(include='all'))
+```
+
+**Questions to answer:**
+- How does `shape` compare to R's `dim()`?
+- What does `describe()` show you? How is it different from R's `summary()`?
+- What happens when you use `describe(include='all')`?
+
+<details>
+<summary>Expected outcome</summary>
+
+`shape` is a tuple (10, 5) similar to R's `dim()`. `describe()` shows statistics for numeric columns only by default, while R's `summary()` includes all columns. Using `include='all'` shows statistics for all column types, including count, unique values, and most frequent value for categorical data.
+</details>
+
+#### P1.3 Selecting Columns
+**Task:** Practice different ways to access columns.
+
+```{python}
+#| eval: false
+
+# Method 1: Bracket notation with column name
+print(participants['reaction_time'])
+
+# Method 2: Dot notation (only works if column name has no spaces/special chars)
+print(participants.reaction_time)
+
+# Select multiple columns - returns a dataframe
+print(participants[['subject_id', 'reaction_time', 'accuracy']])
+
+# Using loc for label-based selection
+print(participants.loc[:, 'reaction_time'])
+
+# Using iloc for position-based selection
+print(participants.iloc[:, 3])  # 4th column (0-indexed)
+```
+
+**Questions to answer:**
+- What's the difference between `participants['reaction_time']` and `participants[['reaction_time']]`?
+- When would you use `loc` vs `iloc`?
+- How does pandas column selection compare to R's methods?
+
+<details>
+<summary>Expected outcome</summary>
+
+Single brackets with one column name returns a Series (like a vector), double brackets returns a DataFrame. `loc` uses labels (column/row names), `iloc` uses integer positions. This is similar to R's distinction between `$` (returns vector) and `[, "col"]` (can return vector or dataframe).
+</details>
+
+#### P1.4 Filtering Rows
+**Task:** Select subsets of your data based on conditions.
+
+```{python}
+#| eval: false
+
+# Filter for treatment condition only
+treatment_group = participants[participants['condition'] == 'treatment']
+print(treatment_group)
+
+# Filter for participants younger than 25
+young_participants = participants[participants['age'] < 25]
+print(young_participants)
+
+# Multiple conditions: treatment AND age < 25
+young_treatment = participants[(participants['condition'] == 'treatment') & 
+                               (participants['age'] < 25)]
+print(young_treatment)
+
+# Using query method (often more readable)
+treatment_group2 = participants.query('condition == "treatment"')
+young_treatment2 = participants.query('condition == "treatment" and age < 25')
+print(young_treatment2)
+```
+
+**Questions to answer:**
+- Why do you need parentheses around each condition when using `&`?
+- How many participants are in the treatment group?
+- How does `query()` compare to R's `subset()`?
+
+<details>
+<summary>Expected outcome</summary>
+
+Parentheses are needed because of operator precedence in Python. You should find 5 treatment participants and 2 young treatment participants. The `query()` method is similar to R's `subset()` in readability, using string expressions instead of boolean indexing.
+</details>
+
+#### P1.5 Computing Condition Means
+**Task:** Calculate mean reaction time by condition.
+
+```{python}
+#| eval: false
+
+# Method 1: Manual filtering
+control_rt = participants[participants['condition'] == 'control']['reaction_time']
+treatment_rt = participants[participants['condition'] == 'treatment']['reaction_time']
+
+print(f"Control mean: {control_rt.mean()}")
+print(f"Treatment mean: {treatment_rt.mean()}")
+
+# Method 2: Using groupby
+print(participants.groupby('condition')['reaction_time'].mean())
+
+# Method 3: Using groupby with agg for multiple statistics
+print(participants.groupby('condition')['reaction_time'].agg(['mean', 'median', 'std']))
+
+# Multiple columns at once
+print(participants.groupby('condition')[['reaction_time', 'accuracy']].mean())
+```
+
+**Questions to answer:**
+- Which condition has faster reaction times?
+- How does `groupby()` compare to R's `aggregate()` or `tapply()`?
+- What does the `agg()` method allow you to do?
+
+<details>
+<summary>Expected outcome</summary>
+
+Treatment group has faster reaction times. `groupby()` is similar to R's `aggregate()` but often more flexible. The `agg()` method lets you apply multiple functions at once, returning a nice summary table. This is very powerful for exploratory data analysis.
+</details>
+
+#### P1.6 Adding and Modifying Columns
+**Task:** Create new variables in your dataframe.
+
+```{python}
+#| eval: false
+
+# Add a new column: convert RT from ms to seconds
+participants['rt_seconds'] = participants['reaction_time'] / 1000
+
+# Create a categorical age group
+participants['age_group'] = participants['age'].apply(
+    lambda x: 'young' if x < 25 else 'older'
+)
+
+# Alternative using numpy where (similar to ifelse)
+participants['age_group2'] = np.where(participants['age'] < 25, 'young', 'older')
+
+# Create a performance score
+participants['performance'] = participants['accuracy'] / (participants['reaction_time'] / 1000)
+
+# View the updated dataframe
+print(participants.head())
+
+# Check the new columns
+print(participants.describe())
+```
+
+**Questions to answer:**
+- How many columns does your dataframe have now?
+- What's the difference between using `apply()` with a lambda vs `np.where()`?
+- How does adding columns in pandas compare to R?
+
+<details>
+<summary>Expected outcome</summary>
+
+Your dataframe now has 9 columns (one more than R because we created age_group twice). `apply()` with lambda is more flexible but can be slower; `np.where()` is vectorized and faster, similar to R's `ifelse()`. Both languages make it easy to add columns with simple assignment.
+</details>
+
+#### P1.7 Basic Statistical Tests
+**Task:** Perform a t-test comparing conditions.
+
+```{python}
+#| eval: false
+
+from scipy import stats
+
+# T-test: Does treatment affect reaction time?
+control_rt = participants[participants['condition'] == 'control']['reaction_time']
+treatment_rt = participants[participants['condition'] == 'treatment']['reaction_time']
+
+t_stat, p_value = stats.ttest_ind(control_rt, treatment_rt)
+print(f"T-test results: t={t_stat:.3f}, p={p_value:.4f}")
+
+# Correlation: Age and reaction time
+corr_age_rt, p_age_rt = stats.pearsonr(participants['age'], participants['reaction_time'])
+print(f"Correlation (age, RT): r={corr_age_rt:.3f}, p={p_age_rt:.4f}")
+
+# Correlation: Reaction time and accuracy
+corr_rt_acc, p_rt_acc = stats.pearsonr(participants['reaction_time'], participants['accuracy'])
+print(f"Correlation (RT, accuracy): r={corr_rt_acc:.3f}, p={p_rt_acc:.4f}")
+
+# Using pandas corr() for correlation matrix
+print(participants[['age', 'reaction_time', 'accuracy']].corr())
+```
+
+**Questions to answer:**
+- Are the statistical results the same as in R?
+- How does scipy's output format differ from R's?
+- What does the correlation matrix show you?
+
+<details>
+<summary>Expected outcome</summary>
+
+Results should be identical to R (within rounding). Scipy returns tuples (statistic, p-value) rather than R's detailed output objects. The correlation matrix shows all pairwise correlations at once, which is useful for exploring relationships in your data.
+</details>
+
+---
+
+## Part 3: Comparative Exercises
+
+### Exercise C1: Side-by-Side Comparison
+**Task:** Work through the same analysis in both languages and compare.
+
+**Scenario:** You want to know if there's a relationship between age and performance, separately for each condition.
+
+**R Version:**
+```{r}
+#| eval: false
+
+# Calculate correlation for each condition
+by(participants[, c("age", "performance")], 
+   participants$condition, 
+   function(x) cor(x$age, x$performance))
+
+# Or using aggregate with a custom function
+aggregate(cbind(age, performance) ~ condition, 
+          data = participants,
+          FUN = function(x) cor(x[,1], x[,2]))
+```
+
+**Python Version:**
+```{python}
+#| eval: false
+
+# Calculate correlation for each condition
+participants.groupby('condition').apply(
+    lambda x: x['age'].corr(x['performance'])
+)
+
+# Alternative: manual calculation
+for condition in participants['condition'].unique():
+    subset = participants[participants['condition'] == condition]
+    corr = subset['age'].corr(subset['performance'])
+    print(f"{condition}: {corr:.3f}")
+```
+
+**Questions to answer:**
+- Which approach feels more natural to you?
+- How do the syntax patterns differ?
+- Which language makes this task easier?
+
+<details>
+<summary>Expected outcome</summary>
+
+Both accomplish the same task but with different syntax. R's formula interface (`~ condition`) is very concise. Python's `groupby().apply()` is explicit about the grouping and function application. Neither is objectively "better" - it depends on your background and preferences.
+</details>
+
+### Exercise C2: Data Reshaping Challenge
+**Task:** Create a summary table showing mean RT and accuracy by condition.
+
+**R Version:**
+```{r}
+#| eval: false
+
+# Using aggregate
+summary_table <- aggregate(cbind(reaction_time, accuracy) ~ condition,
+                          data = participants,
+                          FUN = mean)
+print(summary_table)
+
+# Using dplyr (if available)
+# library(dplyr)
+# participants %>%
+#   group_by(condition) %>%
+#   summarise(mean_rt = mean(reaction_time),
+#            mean_acc = mean(accuracy))
+```
+
+**Python Version:**
+```{python}
+#| eval: false
+
+# Using groupby with agg
+summary_table = participants.groupby('condition')[['reaction_time', 'accuracy']].mean()
+print(summary_table)
+
+# Reset index to make condition a column instead of index
+summary_table_reset = participants.groupby('condition')[['reaction_time', 'accuracy']].mean().reset_index()
+print(summary_table_reset)
+
+# Rename columns for clarity
+summary_table_renamed = participants.groupby('condition').agg({
+    'reaction_time': 'mean',
+    'accuracy': 'mean'
+}).rename(columns={'reaction_time': 'mean_rt', 'accuracy': 'mean_acc'}).reset_index()
+print(summary_table_renamed)
+```
+
+**Questions to answer:**
+- How do the default outputs differ between R and pandas?
+- What is the pandas "index" and how does it compare to R's row names?
+- When would you use `reset_index()`?
+
+<details>
+<summary>Expected outcome</summary>
+
+R returns a dataframe with condition as a regular column. Pandas makes condition the index by default. The index is similar to R's row names but more powerful. Use `reset_index()` when you want the grouping variable as a regular column for further analysis or export.
+</details>
+
+### Exercise C3: Saving Your Work
+**Task:** Save your dataframe to a CSV file in both languages.
+
+**R Version:**
+```{r}
+#| eval: false
+
+# Save to CSV
+write.csv(participants, "participants_r.csv", row.names = FALSE)
+
+# Read it back
+participants_loaded <- read.csv("participants_r.csv")
+
+# Check if it's the same
+identical(participants, participants_loaded)
+```
+
+**Python Version:**
+```{python}
+#| eval: false
+
+# Save to CSV
+participants.to_csv("participants_python.csv", index=False)
+
+# Read it back
+participants_loaded = pd.read_csv("participants_python.csv")
+
+# Check if it's the same
+print(participants.equals(participants_loaded))
+
+# Check what's different if not equal
+print(participants.dtypes)
+print(participants_loaded.dtypes)
+```
+
+**Questions to answer:**
+- Why do we use `row.names = FALSE` in R and `index=False` in pandas?
+- Are the loaded dataframes identical to the originals?
+- What happens to data types when you save and reload?
+
+<details>
+<summary>Expected outcome</summary>
+
+Both languages can save/load CSV files easily. Setting `row.names/index = FALSE` prevents writing row numbers to the file. Data types might change slightly (e.g., integers might become floats) depending on the CSV format, but the data values should be the same.
+</details>
+
+---
+
+## Reflection Questions
+
+After completing all exercises, consider:
+
+1. **Syntax Patterns:**
+   - R uses `$` for column access; pandas uses `[]` or `.`
+   - R uses formula notation (`y ~ x`); pandas uses method chaining
+   - Which feels more intuitive to you?
+
+2. **Indexing:**
+   - R uses 1-based indexing; Python uses 0-based indexing
+   - R has row names; pandas has a more powerful index system
+   - How does this affect your code?
+
+3. **Function vs. Method:**
+   - R: `mean(df$column)` - function applied to vector
+   - Pandas: `df['column'].mean()` - method called on object
+   - What are the advantages of each approach?
+
+4. **Grouping Operations:**
+   - R: `aggregate()`, `tapply()`, `by()`
+   - Pandas: `groupby()` with method chaining
+   - Which is more flexible? Which is more readable?
+
+5. **Statistical Functions:**
+   - R has statistics built into the base language
+   - Python requires importing scipy
+   - Does this matter for your workflow?
+
+---
+
+## Summary: Key Similarities and Differences
+
+### Similarities
+- Both have dataframe structures with rows and columns
+- Both can filter, select, and transform data
+- Both can compute grouped statistics
+- Both can save/load common file formats
+- Both have extensive statistical capabilities
+
+### Key Differences
+
+| Aspect | R | Pandas |
+|--------|---|--------|
+| Column access | `df$col` or `df[, "col"]` | `df['col']` or `df.col` |
+| Multiple columns | `df[, c("a", "b")]` | `df[['a', 'b']]` |
+| Filtering | `df[df$x > 5, ]` | `df[df['x'] > 5]` |
+| Grouping | `aggregate(y ~ group, df, mean)` | `df.groupby('group')['y'].mean()` |
+| Adding columns | `df$new <- value` | `df['new'] = value` |
+| Method vs function | Functions: `mean(df$x)` | Methods: `df['x'].mean()` |
+| Indexing | 1-based | 0-based |
+| Missing values | `NA` | `NaN` or `None` |
+
+---
+
+## Next Steps
+
+Once comfortable with these basics, explore:
+
+**R:**
+- `dplyr` package for data manipulation (very popular)
+- `tidyr` for reshaping data
+- `ggplot2` for visualization
+- `data.table` for large datasets
+
+**Python Pandas:**
+- Advanced groupby operations
+- Merging and joining dataframes
+- Time series functionality
+- Integration with scikit-learn for machine learning
+
+**Both:**
+- Handling missing data
+- Working with dates and times
+- Merging datasets
+- Pivot tables and cross-tabulations
+
+---
+
+## Common Pitfalls
+
+### R
+- Forgetting the comma in `df[condition, ]`
+- Factor vs. character confusion
+- Recycling rules can cause unexpected behavior
+
+### Pandas
+- Forgetting that many operations return a copy, not modifying in place
+- Index alignment can cause unexpected results
+- Chained indexing warnings (`df[df['x'] > 5]['y'] = 10` is problematic)
+
+### Both
+- Not checking data types after loading from files
+- Assuming missing values are handled the same way
+- Not verifying results with small test cases first
+
+---
+
+**License:** This document is released under CC BY 4.0. Feel free to adapt for your courses.
+
+
+
+
+### Old School: Storing data as a csv file with Python.
+
+But before we show a pandas method let's see a lower tech, more old school method. 
+
+It is possible to manually write a csv file in python using a print command where you explicitly coerce everything to a string and intercalate commas along the way. For example, 
+
+```{python}
+a = 1 
+b = "britt"
+c = 2.3
+mycolumnheadings = "a," + "b," + "c" + "\n"
+mystring = str(a) + "," + b + "," + str(c) + "\n"
+print(mycolumnheadings + mystring)
+```
+
+shows how to create a string from one's data. It is complicated and error prone. It may work for a start or for a very small project, but it does not scale well. In this example I am just printing for display, but if this was being used to save experimental data we would want to use a file handler. 
+
+##### Opening and Closing a File in Python
+
+```{python}
+#| output: false
+
+a = 1 
+b = "britt"
+c = 2.3
+mycolumnheadings = "a," + "b," + "c" + "\n"
+mystring = str(a) + "," + b + "," + str(c) + "\n"
+with open('/home/britt/gitRepos/uwlooP390/p390/myfile.csv','w+') as f:
+    f.write(mycolumnheadings)
+    f.write(mystring)
+
+
+```
+
+Now you can see if you can read that csv into R.
+
+```{r}
+mydata = as.data.frame(read.csv("/home/britt/gitRepos/uwlooP390/p390/myfile.csv"))
+mydata
+```
+
+##### A Better Way: Dictionaries
+
+Python dictionaries (which have their counterparts in most programming languages though they may be called something different) are a convenient way to store data where you can give it a meaningful name. For example, in an experiment with numerous trials and conditions you could have a *key* in your dictionary for "trial no." and another for "condition". The *values* for these would then be updated as your experiment unfolded. 
+
+A first pass to using dictionaries is to blend this with a python library for [CSV files](https://docs.python.org/3/library/csv.html). Then you can create the column headings from your keys and then each trial that you loop through you can use the dictionary to write a new row to your csv file. Some of the functions you might want to use are:
+
+- `csv.DictWriter`
+- `writeheader`
+- `writerows`
+
+If you set up and define your dictionary at the start of the file you only need to update the changing values as they occur. 
+
+Another approach that will start you getting some familiarity with python pandas library is to make to make a distinct dictionary for each of the trials in your experiment. Then you can concatenate these dictionaries to a list and use that list to create a pandas dataframe. That could then be used in analysis python code or for importing into R. Here is a short example to illustrate the principle. 
+
+```{python}
+import random as r
+import pandas as pd
+
+mylistofkeys=["name","v1","v2","v3","v4"]
+
+mydictlist = []
+for i in range(5):
+    mydictlist.append({key:value for key,value in zip(["name","v1","v2","v3","v4"],["britt"] + [r.random() for i in range(5)])})
+
+df = pd.DataFrame(mydictlist)
+
+df.loc[:,'v3'].mean()
+
+myfilename = "mypandastest.csv"
+df.to_csv(myfilename)
+```
+
+You can save pandas dataframes as a pickle file, but then you will not be able to easily read it into R. CSV remains the easiest and most direct way to do this. It is probably all you need for most use cases. Though there are other options.
+
+```{r}
+rdf = read.csv("mypandastest.csv")
+mean(rdf$v3)
+```
+
+#### Some Analysis Tools
+
