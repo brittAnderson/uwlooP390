@@ -41,7 +41,7 @@ Assuming you have created your Github account you should be able to create a min
 
 2. **Initialize a Quarto website project** in your repository folder (using the command in your terminal):
    ```bash
-   quarto create project website .
+   quarto create project
    ```
    Choose "website" when prompted, and confirm overwriting the directory.
 
@@ -109,7 +109,7 @@ Use `quarto preview` to test changes locally before committing and pushing to Gi
 
 ### Blog Project in Quarto
 
-In @sec-make-website we created a basic academic website with Quarto. In this variant you can make a blog. 
+We just created a basic academic website with Quarto. In this variant you can make a blog as either a standalone website or something you can link to from the website you just created.  
 
 The advantage of managing your blog in Quarto is that you get to take advantage of all the markdown language features. This is much more convenient than writing in html directly. You can also embed code and output just as you have been doing when you export your R code to html. 
 
@@ -123,31 +123,39 @@ Github limits you to one github pages website, but we don't want to overwrite th
 
 This separation also allows you to keep a clean, professional look for your public facing personal site, and also other sites that are more project specific or experimental. 
 
-#### Creating the Blog Repository
+#### Creating the Blog Repository -- You do this on Github. 
 
 Unlike your academic website which required the specific name `username.github.io`, a project site can have any repository name. We'll use `blog` for clarity.
 
 1. **Create a new repository** on GitHub named `blog` (not `username.github.io`). Make it public.
 
+:::callout-warning
+Do **not** make the blog repository a subdirectory of your website repository. Having a git repository inside another git repository will cause great confusion for you, Github, git and me. 
+
+:::
+
 2. **Clone the repository** to your local machine:
    ```bash
+   #pick the location where you want the respository to be
+   cd <path>/somewhere-i-keep-my-repos/
    git clone https://github.com/username/blog.git
    cd blog
    ```
+   
 
 3. **Initialize a Quarto blog project**:
-Note that we will be using a specific keyword here to clue quarto into the correct template. We are making a *blog* not a *website*. At least as far as Quarto is concerned. We know that a blog is a website. 
+On your laptop, in either VS Code or terminal (which I find easier), cd to the directory that holds the "blog" repo you just created. Note that we will be using a specific keyword here to clue quarto into the correct template. We are making a *blog* not a *website*. At least as far as Quarto is concerned. We know that a blog is a website. 
 
    ```bash
-   quarto create project blog .
+   quarto create project
    ```
-   Choose "blog" when prompted, and confirm overwriting the directory.
+   Choose "blog" when prompted. If you are in the directory where the blog is to be located you can simply type a . here. If you want a new subdirectory to be created or use a new location you can adjust that here.
 
 4. **Preview your blog locally**:
    ```bash
    quarto preview
    ```
-   Your browser should open displaying the default Quarto blog with sample posts.
+   Your browser should open displaying localhost in the address bar and the default Quarto blog with sample posts.
 
 #### Understanding Blog vs. Website Structure
 
@@ -173,19 +181,25 @@ Be careful here. This is of "type" blog, but you will have a section "website."
 1. **Edit `_quarto.yml`** to add the site URL and configure output:
    ```yaml
    project:
-     type: blog
+     type: website
+	 site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
      output-dir: docs
 
    website:
      site-url: "https://username.github.io/blog"
      title: "Your Blog Title"
      description: "A place for thinking out loud"
-     navbar:
-       left:
-         - text: "Home"
-           file: index.qmd
-         - text: "About"
-           file: about.qmd
+     right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+		
+   format:
+     html:
+       theme:
+         - cosmo
+         - brand
+       css: styles.css	
    ```
    
    Replace `username` with your actual GitHub username. The `site-url` field ensures RSS feeds and internal links use the correct base path (`/blog`).
@@ -201,16 +215,21 @@ Be careful here. This is of "type" blog, but you will have a section "website."
 
 #### Creating Blog Posts
 
-Each post is a separate Quarto document with structured metadata. The metadata isn't just decorative—it enables automatic listing pages, RSS feeds, and category filtering.
+You need to be careful now whether you are in your website repository or in your blog repository. Each is its own entity. 
+
+Posts are just separate Quarto documents with structured metadata. The metadata isn't just decorative—it enables automatic listing pages, RSS feeds, and category filtering.
 
 1. **Create a new post directory**:
 
+	This command assumes you are alread in the base directory for you blog repository. 
+	
    ```bash
    mkdir -p posts/first-post
    ```
 
 2. **Create the post file** `posts/first-post/index.qmd`:
-
+   Be careful about cutting and pasting. A missing set of hyphens or changes in white space can break the yaml structure. 
+   
    ```yaml
    ---
    title: "My First Blog Post"
@@ -225,15 +244,18 @@ Each post is a separate Quarto document with structured metadata. The metadata i
 
    This is a space for less polished thinking than my academic work requires. I plan to use it for...
    ```
+   
+   Before you start writing an essay just create a minimal entry and confirm that things are working before you proceed. 
 
 3. **Preview the post**:
-
+   on your localhost laptop
+   
    ```bash
    quarto preview
    ```
    Navigate to your new post from the homepage listing.
 
-The homepage (`index.qmd`) automatically generates a listing of all posts in the `posts/` directory, sorted by date. You don't need to manually maintain this list—Quarto reads the YAML metadata from each post.
+The homepage (`index.qmd`) **automatically** generates a listing of all posts in the `posts/` directory, sorted by date. You don't need to manually maintain this list—Quarto reads the YAML metadata from each post.
 
 #### Deployment
 
@@ -257,9 +279,11 @@ The deployment process is identical to your academic website:
 
 Your blog will be available at `https://username.github.io/blog` within a few minutes.
 
-#### Exercise
+#### Practice Exercises
 
-Create three blog posts with different metadata configurations to understand how Quarto uses this information:
+For reference you can always consult the web page for blogs on the Quarto [website](https://quarto.org/docs/websites/website-blog.html).
+
+Create three minimal blog posts with different metadata configurations to understand how Quarto uses this information:
 
 1. **A post without categories**: Observe that it still appears in the listing but has no category tags.
 

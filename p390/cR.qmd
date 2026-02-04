@@ -5,11 +5,22 @@ See the operating system specific appendices.
 
 ### Test your installation
 
+You must have R, VS Code, and Quarto installed where they can all see each other. This is more important for Windows users using WSL. You may well have all these programs on your Windows computer already, but you will not be able to use them on the Ubuntu side if they are not installed in your "linux" system. The easiest way to accomplish this is to use your Ubuntu terminal. 
+
+First, test if you have R installed
+
 ```{sh}
-R cmd --version
+R --version
 ```
 
 You should see some information about you R version.
+
+:::callout-tip 
+When you try to install packages in R you may find error messages telling you you are missing some Ubuntu packages. Typically it will tell you exactly what package you need to install. To install it you use the `sudo apt install <packagename>` invocation in your terminal. Occassionally you will also need to run `sudo apt update` to make sure your list of avaialble packages is current. 
+
+Next, see if you have VS code accessible from Ubuntu. Type `code` in the Ubuntu terminal and see if VSCode launches. To have VS Code see all your Ubuntu programs you must start it from the Ubuntu side. 
+
+Lastly, make sure you have installed Quarto on the linux side. This is a variation on the above themes, but be careful there are detail differences. This [page](https://quarto.org/docs/download/index.html) will guide you to the available downloads. Download the one for Ubuntu. Wherever you choose to download the file make sure it is visible from your Ubuntu terminal. Then for a "deb" file you will need a slightly different installation command: `dpkg -i <namequartofile>`. You can verify the installation with `quarto --version` at your Ubuntu terminal command line. 
 
 ## Interfacing with VS Code
 Restart VS Code and install the R extension (look to the left panel for the extension launcher; it looks like a little set of squares).
@@ -30,6 +41,8 @@ library(tidyverse)
 ```
 :::
 
+Occassionally, the csclub mirror goes down. Just pick one that isn't. 
+
 The [tidyverse](https://www.tidyverse.org/) is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not.
 
 Note that you do not want to install packages repeatedly. Once you have installed a package you only need to load it, import it, or in the case of R call it with the `library` function.
@@ -40,12 +53,9 @@ Here is an example of embedding R code in a qmd document. In this code we downlo
 
 ```{r}
 #| warning: false
-if(!require(tidyverse)){
-    install.packages("tidyverse",repos='https://mirror.csclub.uwaterloo.ca/CRAN/')
-}
-if(!require(palmerpenguins)){
-    install.packages("palmerpenguins",repos='https://mirror.csclub.uwaterloo.ca/CRAN/')
-}
+## I am assuming that you have previously installed the tidyverse
+## and palmerpenguins for this example
+
 library(tidyverse)
 library(palmerpenguins)
 
