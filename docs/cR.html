@@ -302,19 +302,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#test-your-installation" id="toc-test-your-installation" class="nav-link" data-scroll-target="#test-your-installation"><span class="header-section-number">8.1.1</span> Test your installation</a></li>
   </ul></li>
-  <li><a href="#interfacing-with-vs-code" id="toc-interfacing-with-vs-code" class="nav-link" data-scroll-target="#interfacing-with-vs-code"><span class="header-section-number">8.2</span> Interfacing with VS Code</a>
-  <ul class="collapse">
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">8.2.1</span> Resources</a></li>
-  </ul></li>
-  <li><a href="#installing-r-packages" id="toc-installing-r-packages" class="nav-link" data-scroll-target="#installing-r-packages"><span class="header-section-number">8.3</span> Installing R Packages</a></li>
-  <li><a href="#mix-r-code-with-text-for-reproducible-and-documented-workflows" id="toc-mix-r-code-with-text-for-reproducible-and-documented-workflows" class="nav-link" data-scroll-target="#mix-r-code-with-text-for-reproducible-and-documented-workflows"><span class="header-section-number">8.4</span> Mix R Code with Text for Reproducible and Documented Workflows</a></li>
-  <li><a href="#r-types" id="toc-r-types" class="nav-link" data-scroll-target="#r-types"><span class="header-section-number">8.5</span> R Types</a></li>
-  <li><a href="#data.frames" id="toc-data.frames" class="nav-link" data-scroll-target="#data.frames"><span class="header-section-number">8.6</span> Data.Frames</a></li>
-  <li><a href="#selecting-data" id="toc-selecting-data" class="nav-link" data-scroll-target="#selecting-data"><span class="header-section-number">8.7</span> Selecting Data</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice"><span class="header-section-number">8.8</span> Practice</a></li>
-  <li><a href="#looping-in-r" id="toc-looping-in-r" class="nav-link" data-scroll-target="#looping-in-r"><span class="header-section-number">8.9</span> Looping in R</a></li>
-  <li><a href="#more-practice" id="toc-more-practice" class="nav-link" data-scroll-target="#more-practice"><span class="header-section-number">8.10</span> More Practice</a></li>
-  <li><a href="#writing-a-function-in-r" id="toc-writing-a-function-in-r" class="nav-link" data-scroll-target="#writing-a-function-in-r"><span class="header-section-number">8.11</span> Writing a Function in R</a></li>
   </ul>
 </nav>
     </div>
@@ -344,9 +331,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="8.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">8.1</span> Installation</h2>
 <p>See the operating system specific appendices.</p>
 <section id="test-your-installation" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="test-your-installation"><span class="header-section-number">8.1.1</span> Test your installation</h3>
+<h3 data-number="8.1.1" class="anchored"><span class="header-section-number">8.1.1</span> Test your installation</h3>
+<p>You must have R, VS Code, and Quarto installed where they can all see each other. This is more important for Windows users using WSL. You may well have all these programs on your Windows computer already, but you will not be able to use them on the Ubuntu side if they are not installed in your “linux” system. The easiest way to accomplish this is to use your Ubuntu terminal.</p>
+<p>First, test if you have R installed</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> cmd <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
 Copyright (C) 2025 The R Foundation for Statistical Computing
@@ -360,8 +349,19 @@ https://www.gnu.org/licenses/.</code></pre>
 </div>
 </div>
 <p>You should see some information about you R version.</p>
-</section>
-</section>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you try to install packages in R you may find error messages telling you you are missing some Ubuntu packages. Typically it will tell you exactly what package you need to install. To install it you use the <code>sudo apt install &lt;packagename&gt;</code> invocation in your terminal. Occassionally you will also need to run <code>sudo apt update</code> to make sure your list of avaialble packages is current.</p>
+<p>Next, see if you have VS code accessible from Ubuntu. Type <code>code</code> in the Ubuntu terminal and see if VSCode launches. To have VS Code see all your Ubuntu programs you must start it from the Ubuntu side.</p>
+<p>Lastly, make sure you have installed Quarto on the linux side. This is a variation on the above themes, but be careful there are detail differences. This <a href="https://quarto.org/docs/download/index.html">page</a> will guide you to the available downloads. Download the one for Ubuntu. Wherever you choose to download the file make sure it is visible from your Ubuntu terminal. Then for a “deb” file you will need a slightly different installation command: <code>dpkg -i &lt;namequartofile&gt;</code>. You can verify the installation with <code>quarto --version</code> at your Ubuntu terminal command line.</p>
 <section id="interfacing-with-vs-code" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="interfacing-with-vs-code"><span class="header-section-number">8.2</span> Interfacing with VS Code</h2>
 <p>Restart VS Code and install the R extension (look to the left panel for the extension launcher; it looks like a little set of squares).</p>
@@ -385,6 +385,7 @@ Figure&nbsp;8.1
 </figcaption>
 </figure>
 </div>
+<p>Occassionally, the csclub mirror goes down. Just pick one that isn’t.</p>
 <p>The <a href="https://www.tidyverse.org/">tidyverse</a> is a very popular collection of R code that itself will depend on many additional pieces of R code and other packages, some R and some not.</p>
 <p>Note that you do not want to install packages repeatedly. Once you have installed a package you only need to load it, import it, or in the case of R call it with the <code>library</code> function.</p>
 </section>
@@ -392,21 +393,18 @@ Figure&nbsp;8.1
 <h2 data-number="8.4" class="anchored" data-anchor-id="mix-r-code-with-text-for-reproducible-and-documented-workflows"><span class="header-section-number">8.4</span> Mix R Code with Text for Reproducible and Documented Workflows</h2>
 <p>Here is an example of embedding R code in a qmd document. In this code we download and install a package if necessary (the <code>if</code> statement). Then we use that package to load some data and generate a plot. The plot you see in this document is the result of that code. I did not cut and paste a png.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(tidyverse)){</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>,<span class="at">repos=</span><span class="st">'https://mirror.csclub.uwaterloo.ca/CRAN/'</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(palmerpenguins)){</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"palmerpenguins"</span>,<span class="at">repos=</span><span class="st">'https://mirror.csclub.uwaterloo.ca/CRAN/'</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## I am assuming that you have previously installed the tidyverse</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="do">## and palmerpenguins for this example</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> penguins,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -596,18 +594,18 @@ Tip
 <section id="writing-a-function-in-r" class="level2" data-number="8.11">
 <h2 data-number="8.11" class="anchored" data-anchor-id="writing-a-function-in-r"><span class="header-section-number">8.11</span> Writing a Function in R</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-7"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-7-1" class="code-annotation-target"><a href="#annotated-cell-7-1" aria-hidden="true" tabindex="-1"></a>myadd  <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y) {</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-7-2" class="code-annotation-target"><a href="#annotated-cell-7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">+</span>y)</span>
-<span id="annotated-cell-7-3"><a href="#annotated-cell-7-3" aria-hidden="true" tabindex="-1"></a>  }</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-8-1" class="code-annotation-target"><a href="#annotated-cell-8-1" aria-hidden="true" tabindex="-1"></a>myadd  <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y) {</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-8-2" class="code-annotation-target"><a href="#annotated-cell-8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">+</span>y)</span>
+<span id="annotated-cell-8-3"><a href="#annotated-cell-8-3" aria-hidden="true" tabindex="-1"></a>  }</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-7" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-8" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-7" data-code-lines="1" data-code-annotation="1">The arrow is used to assign something to a name. Other languages usually use the equals sign. The keyword <code>function</code> tells R you are creating a function, and the parentheses following establishes the number of inputs and the nicknames you will use in your function.</span>
+<span data-code-cell="annotated-cell-8" data-code-lines="1" data-code-annotation="1">The arrow is used to assign something to a name. Other languages usually use the equals sign. The keyword <code>function</code> tells R you are creating a function, and the parentheses following establishes the number of inputs and the nicknames you will use in your function.</span>
 </dd>
-<dt data-target-cell="annotated-cell-7" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-8" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-7" data-code-lines="2" data-code-annotation="2"><code>return</code> specifies what we want to get back from the function.</span>
+<span data-code-cell="annotated-cell-8" data-code-lines="2" data-code-annotation="2"><code>return</code> specifies what we want to get back from the function.</span>
 </dd>
 </dl>
 </div>
@@ -622,6 +620,10 @@ Tip
 <p>What next? Take a look for the homework “quarto, code, and R”. You will write a quarto file (.qmd). That combines text with R code, and when rendered produces a pdf or html that contains text, code and data plot.</p>
 
 
+</section>
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
