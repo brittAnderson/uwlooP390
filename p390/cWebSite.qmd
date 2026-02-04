@@ -6,20 +6,33 @@ Having a [professional website](https://doi.org/10.1038/s41562-025-02310-6) is i
 To have a website viewable by the world it must be hosted on a server that is viewable by the world. For example, it cannot be behind an institutional firewall (as are most of the computers at the University of Waterloo). And if you host on a University or Company server you have the potential of being limited in what you can share, how often you can update, or you may be required to adhere to certain styles and formats mandated by the institution's brand. One way to avoid this is to find an external hosting site. A modest fee would allow you to have a virtual server in the cloud, but the example we will use here to get you started is a free service available to those with Github accounts: [Github Pages](https://pages.github.com/). 
 
 ### Testing Github Pages
-Assuming you have an account you should be able to create a minimal webpage in a few steps. 
 
-1. Go to personal dashboard and create a new repo as instructed on the Github Pages website. The repo must be named your username.github.io. 
-2. Use your terminal to clone this repo to your local computer. 
-3. cd into the correct directory using your terminal (inside VS Code is fine). And using the *terminal* do `echo "hello world" > index.html.`
-4. Do the usual add, commit, and push and verify your web site works at <username.github.io>.
+:::callout-warning
+Github and Quarto can change their procedures from time to time, and even minor changes in the file format can have big effects on whether things work or you get an error. Go slow. Read error messages. Your first assumption should be that you made a mistake, but if you are careful and verify that things are exactly as depicted here then you could consider if some process has changed. The error message will be your guide. If you do find that something is out of date please generate an issue (if not a pull request) so that I can fix it, and others do not have to share your pain. 
 
-You now have a website! To view it go to yourusername.github.io
+Also, you must be careful to distinguish what is running where. You will have a repository on github **and** on your laptop. Changes propagate between the two only when send them from one to the other. Changes are your laptop must be pushed to Github. Github changes must be pulled to your laptop. 
 
-### Converting to Quarto
+Make sure you know what the `localhost` means. Quarto can run a web server on your laptop and open the page in your browser. It will look like a web page from the internet, but it isn't. It is what the internet would see if you sent things to Github. If the address bar in your browser shows `localhost` you are running locally. If it shows <username>.github.io you are on the internet. 
 
-While a basic HTML page demonstrates that GitHub Pages is working, Quarto provides a more powerful framework for creating professional websites. Quarto allows you to write content in Markdown, automatically generates navigation, and provides professional themes. The following steps will convert your basic site to a Quarto website.
+:::
 
-### Quarto Setup
+Assuming you have created your Github account you should be able to create a minimal webpage in a few steps. 
+
+1. Go to your Github personal dashboard and create a new repository. The repo **must** be named your username.github.io. 
+2. Use your terminal on your laptop to clone this repo to your local computer. 
+   If you are using an ssh key for your authentication make sure you copy the ssh clone address and not the "https" one. 
+3. On your laptop cd into the correct directory using a terminal (inside VS Code is fine, but I find it much more difficult to keep track of where I am when I do that). Using your *terminal* do `echo "hello world" > index.html.`
+4. Verify that you can see that file in your directory. You can look with the `ls` command in your terminal.
+5. Then `git add`, `git commit` , and `git push` that file to your Github remote. 
+6. Open up your dashboard on github. Look at the repo. Refresh your browser, and verify you see `index.html` in the code window.
+7. You should now have a website. To view it open up a *new* tab and type `<yourusername>.github.io` in the address bar. If you see anything other than "hello world" something went wrong. Figure that out now before proceeding or your life will get even more confusing. 
+
+
+### Making a real website
+
+    A "real" website will have many files in many folders. They will generally have an ending of `html`, at least for a basic, static, website. Writing html directly is tedious and we want to use our computer to avoid the tedium. Therefore we will use quarto so that we can write `qmd` files that are easier to write and understand, and where, if using VS Code, we can get lots of real time help and prompts. Then we will use the preview and render functions of quarto to convert our qmd files to html files. We will need to make sure that the location of the html files is distinct from our qmd for clarity. Thus, we will have to be careful in configuing both the files on our laptop that tell quarto what to do. And the repository on Github that tells Github what to do when it receives our pushed files. 
+	
+### Quarto Setup (you are doing this to the files on your laptop)
 
 1. **Remove the test HTML file**:
    ```bash
@@ -37,8 +50,10 @@ While a basic HTML page demonstrates that GitHub Pages is working, Quarto provid
    quarto preview
    ```
    Your browser should open displaying the default Quarto website.
+   
+   This will say `localhost` in your address bar. This is a local version. This is not a version that someone on the internet can see. 
 
-4. **Customize the homepage** by editing `index.qmd` in VS Code. Replace the default content with your information:
+4. **Customize the homepage** by editing the `index.qmd` file on your laptop. You can use VS Code. Replace the default content with your information:
    ```yaml
    ---
    title: "[Your Name]"
@@ -57,22 +72,27 @@ While a basic HTML page demonstrates that GitHub Pages is working, Quarto provid
    [Your professional contact information]
    ```
 
-5. **Configure for GitHub Pages deployment** by editing `_quarto.yml`:
+5. **Configure for GitHub Pages deployment** by editing the `_quarto.yml` on your laptop. The key change here is the output_dir variable. We want to make sure that when quarto turns our qmd files into html that it stores those html files in a directory called "docs":
    ```yaml
    project:
      type: website
      output-dir: docs
    ```
 
-6. **Build and deploy your site**:
+6. **Build and deploy your site**. You are still doing this on your laptop.:
    ```bash
-   quarto render
-   git add .
-   git commit -m "Initial Quarto website"
-   git push
+   quarto render  # <1> 
+   git add . # <2>
+   git commit -m "Initial Quarto website" # <3>
+   git push # <4>
    ```
+   
+   1. This is where quarto reads our `_quarto.yml` file and all our `qmd` files and converts them to html and stores them in the docs directory.
+   2. The dot here is a shortcut telling git to add everything new or changed.
+   3. The `-m` means expect a message. Use short, but meaningful commit messages.
+   4. This is the command that sends all our new and changed files to github. The default is `origin` for the remote name and `main` for the default branch. You can use other names, but then you have to list them explicitly. 
 
-7. **Configure GitHub Pages**: Navigate to your repository Settings → Pages → Source: Deploy from branch → Branch: main → Folder: /docs → Save
+7. **Configure GitHub Pages** this you do through your browser on the Github page for your repository on Github; not your laptop: Navigate to your repository Settings → Pages → Source: Deploy from branch → Branch: main → Folder: /docs → Save
 
 Your website should be available at <username>.github.io within a few minutes.
 
