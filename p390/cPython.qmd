@@ -175,3 +175,7 @@ def my_add(x, y):
 3. Matplotlib
 4. Pillow
 5. Sympy
+
+
+
+What is next? Take a look for the homework "quarto, code, and python". You will make a python version of what you did for R. You will write a quarto file (.qmd). That combines text with python code, and when rendered produces a pdf or html that contains text, code and data plot. 
