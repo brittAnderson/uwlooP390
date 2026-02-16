@@ -397,7 +397,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="10.2" class="anchored" data-anchor-id="the-brittle-way"><span class="header-section-number">10.2</span> The Brittle Way</h2>
 <p>A frequent and useful way to store small datafiles is as a <em>CSV</em> file. CSV stands for comma separated values. Each entry is separated by a comma from the next one, and the row of data is built up until the end when a newline (often indicated as <code>\n</code>) marks the end of one row and the return to the beginning of the next. However, there is a right way and a naive, or brittle way, to do this.</p>
 <p>Suppose you want to save a single trial as a line in a text file. You could just manually construct this in your code like so:</p>
-<div id="ea04b717" class="cell" data-execution_count="1">
+<div id="7334fff4" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>participant_id <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">22</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>side <span class="op">=</span> <span class="st">"left"</span></span>
@@ -434,7 +434,7 @@ Note
 <p>What are all those <code>str</code> calls doing? Why might that be inconvenient?</p>
 </div>
 </div>
-<div id="430a2920" class="cell" data-execution_count="2">
+<div id="27fe4cd5" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Forgot the comma after age - silent bug</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>broken_line <span class="op">=</span> <span class="bu">str</span>(participant_id) <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(age) <span class="op">+</span> side <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> cue <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(valid) <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(correct) <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(rt)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(broken_line)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -447,7 +447,7 @@ Note
 <section id="dictionaries" class="level2" data-number="10.3">
 <h2 data-number="10.3" class="anchored" data-anchor-id="dictionaries"><span class="header-section-number">10.3</span> Dictionaries</h2>
 <p>A dictionary stores data as key-value pairs. The keys are names (strings), and the values can be anything. This maps naturally onto experimental data where each variable has a name.</p>
-<div id="f9c03182" class="cell" data-execution_count="3">
+<div id="0fc2adf9" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>trial <span class="op">=</span> {</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"participant_id"</span>: <span class="dv">1</span>,</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>: <span class="dv">22</span>,</span>
@@ -466,7 +466,7 @@ Note
 </div>
 </div>
 <p>A single trial is one dictionary. Multiple trials are a list of dictionaries:</p>
-<div id="b7aa0278" class="cell" data-execution_count="4">
+<div id="6e4a2398" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> [</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"participant_id"</span>: <span class="dv">1</span>, <span class="st">"age"</span>: <span class="dv">22</span>, <span class="st">"side"</span>: <span class="st">"left"</span>, <span class="st">"cue"</span>: <span class="st">"left"</span>, <span class="st">"valid"</span>: <span class="va">True</span>, <span class="st">"correct"</span>: <span class="va">True</span>, <span class="st">"rt"</span>: <span class="fl">342.7</span>},</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"participant_id"</span>: <span class="dv">1</span>, <span class="st">"age"</span>: <span class="dv">22</span>, <span class="st">"side"</span>: <span class="st">"right"</span>, <span class="st">"cue"</span>: <span class="st">"left"</span>, <span class="st">"valid"</span>: <span class="va">False</span>, <span class="st">"correct"</span>: <span class="va">True</span>, <span class="st">"rt"</span>: <span class="fl">412.3</span>},</span>
@@ -484,7 +484,7 @@ Note
 <h3 data-number="10.3.1" class="anchored" data-anchor-id="filtering-data"><span class="header-section-number">10.3.1</span> Filtering Data</h3>
 <p><em>List comprehensions</em> are a nice features of many programming languages, including python. The basic syntax is square brackets with a declared variable, a source for generating it and optionally some tests. For example, you could create a list of even numbers by testing a range of numbers. <code>[x for x in range(12) if (x%2 == 0)]</code></p>
 <p>You can use list comprehensions to filter:</p>
-<div id="f295bda5" class="cell" data-execution_count="5">
+<div id="ab2a9a60" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get all RTs from valid trials</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>valid_rts <span class="op">=</span> [t[<span class="st">"rt"</span>] <span class="cf">for</span> t <span class="kw">in</span> trials <span class="cf">if</span> t[<span class="st">"valid"</span>] <span class="op">==</span> <span class="va">True</span>]</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(valid_rts)</span>
@@ -501,7 +501,7 @@ Note
 <section id="practice-dictionaries" class="level3" data-number="10.3.2">
 <h3 data-number="10.3.2" class="anchored" data-anchor-id="practice-dictionaries"><span class="header-section-number">10.3.2</span> Practice: Dictionaries</h3>
 <p>Test your understanding of dictionaries by computing the mean RT for correct trials only.</p>
-<div id="a56d50a5" class="cell" data-execution_count="6">
+<div id="8f1cf1bc" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>correct_rts <span class="op">=</span> [t[<span class="st">"rt"</span>] <span class="cf">for</span> t <span class="kw">in</span> trials <span class="cf">if</span> t[<span class="st">"correct"</span>] <span class="op">==</span> <span class="va">True</span>]</span>
@@ -518,7 +518,7 @@ Note
 <section id="writing-csv" class="level3" data-number="10.4.1">
 <h3 data-number="10.4.1" class="anchored" data-anchor-id="writing-csv"><span class="header-section-number">10.4.1</span> Writing CSV</h3>
 <p>The <code>DictWriter</code> class takes a list of dictionaries and writes them to a file. You specify the column names (fieldnames), and it handles the rest:</p>
-<div id="535aa6f6" class="cell" data-execution_count="7">
+<div id="81f77cb6" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> [</span>
@@ -536,11 +536,12 @@ Note
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    writer.writerows(trials)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Notice: no string concatenation, no manual commas, no <code>str()</code> calls. The module handles all of it. If you add a column, you add it to the dictionary and the fieldnames list—done.</p>
+<p>In the examples above you have been writing and reading from files. Python has some nice, simple ways for handling files. Files are dealt with by something called a handler. You use open to create or open a file. When you do this there are some required fields, such as the name of the file, and the mode (read, write, both) that you want the file dealth with. Then it is customary to give it a temporary name you can use to refer to this handler. You will often see “f”, but you can use anything, e.g.&nbsp;<code>posner_data_f</code> might help you keep track of what this handle points to.</p>
 </section>
 <section id="reading-csv" class="level3" data-number="10.4.2">
 <h3 data-number="10.4.2" class="anchored" data-anchor-id="reading-csv"><span class="header-section-number">10.4.2</span> Reading CSV</h3>
 <p>Reading is just as clean:</p>
-<div id="768e4a06" class="cell" data-execution_count="8">
+<div id="83ed75f6" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"posner_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    reader <span class="op">=</span> csv.DictReader(f)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    loaded_trials <span class="op">=</span> <span class="bu">list</span>(reader)</span>
@@ -561,7 +562,7 @@ Warning
 </div>
 <div class="callout-body-container callout-body">
 <p>Notice that everything comes back as strings. CSV has no type information. The <code>"342.7"</code> is now the string <code>"342.7"</code>, not the float <code>342.7</code>. You must convert:</p>
-<div id="83286da1" class="cell" data-execution_count="9">
+<div id="589c816e" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> trial <span class="kw">in</span> loaded_trials:</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    trial[<span class="st">"rt"</span>] <span class="op">=</span> <span class="bu">float</span>(trial[<span class="st">"rt"</span>])</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    trial[<span class="st">"age"</span>] <span class="op">=</span> <span class="bu">int</span>(trial[<span class="st">"age"</span>])</span>
@@ -582,7 +583,7 @@ Warning
 <section id="practice-csv" class="level3" data-number="10.4.3">
 <h3 data-number="10.4.3" class="anchored" data-anchor-id="practice-csv"><span class="header-section-number">10.4.3</span> Practice: CSV</h3>
 <p>Test your understanding of CSV by adding a new column called <code>trial_number</code> to each trial (1, 2, 3, 4) and writing a new CSV file.</p>
-<div id="977a54ec" class="cell" data-execution_count="10">
+<div id="1a1422ca" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, trial <span class="kw">in</span> <span class="bu">enumerate</span>(trials):</span>
@@ -602,7 +603,7 @@ Warning
 <h2 data-number="10.5" class="anchored" data-anchor-id="json"><span class="header-section-number">10.5</span> JSON</h2>
 <p>JSON (JavaScript Object Notation) is a text format that looks almost identical to Python dictionaries and lists. It has become the standard for web data, configuration files, and APIs.</p>
 <p>The <code>json</code> module is in the standard library.</p>
-<div id="838323f8" class="cell" data-execution_count="11">
+<div id="8359f553" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> [</span>
@@ -629,7 +630,7 @@ Warning
 <section id="when-to-use-json-over-csv" class="level3" data-number="10.5.1">
 <h3 data-number="10.5.1" class="anchored" data-anchor-id="when-to-use-json-over-csv"><span class="header-section-number">10.5.1</span> When to Use JSON Over CSV</h3>
 <p>JSON handles nested data naturally. Suppose you want to store metadata about the experiment alongside the trials:</p>
-<div id="ee52dccf" class="cell" data-execution_count="12">
+<div id="11de634e" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>experiment <span class="op">=</span> {</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"experiment_name"</span>: <span class="st">"Posner Cueing Task"</span>,</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"date"</span>: <span class="st">"2024-01-15"</span>,</span>
@@ -653,7 +654,7 @@ Warning
 <section id="practice-json" class="level3" data-number="10.5.2">
 <h3 data-number="10.5.2" class="anchored" data-anchor-id="practice-json"><span class="header-section-number">10.5.2</span> Practice: JSON</h3>
 <p>Test your understanding of JSON by loading the experiment file and printing only the stimulus duration.</p>
-<div id="af56aa07" class="cell" data-execution_count="13">
+<div id="3a3d04ec" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"experiment_full.json"</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
@@ -667,7 +668,7 @@ Warning
 <section id="pickle" class="level2" data-number="10.6">
 <h2 data-number="10.6" class="anchored" data-anchor-id="pickle"><span class="header-section-number">10.6</span> Pickle</h2>
 <p>Pickle serializes Python objects to bytes. You can save nearly any Python object—lists, dictionaries, custom classes, even functions—and load them back exactly as they were.</p>
-<div id="e100b394" class="cell" data-execution_count="14">
+<div id="083b2774" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> [</span>
@@ -719,7 +720,7 @@ Warning
 <section id="practice-pickle" class="level3" data-number="10.6.3">
 <h3 data-number="10.6.3" class="anchored" data-anchor-id="practice-pickle"><span class="header-section-number">10.6.3</span> Practice: Pickle</h3>
 <p>Test your understanding of pickle by saving the <code>experiment</code> dictionary from the JSON section to a pickle file, then loading it back and verifying the experimenter name.</p>
-<div id="bcf092e6" class="cell" data-execution_count="15">
+<div id="5661767d" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>experiment <span class="op">=</span> {</span>
@@ -762,7 +763,7 @@ Warning
 <section id="creating-a-database-and-table" class="level3" data-number="10.7.1">
 <h3 data-number="10.7.1" class="anchored" data-anchor-id="creating-a-database-and-table"><span class="header-section-number">10.7.1</span> Creating a Database and Table</h3>
 <p>A database contains tables. A table is like a CSV file with a defined structure called a schema. The schema specifies column names and types.</p>
-<div id="d98a4662" class="cell" data-execution_count="16">
+<div id="bc06306d" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Connect to database (creates file if it doesn't exist)</span></span>
@@ -796,7 +797,7 @@ Warning
 </section>
 <section id="inserting-data" class="level3" data-number="10.7.2">
 <h3 data-number="10.7.2" class="anchored" data-anchor-id="inserting-data"><span class="header-section-number">10.7.2</span> Inserting Data</h3>
-<div id="a14d9598" class="cell" data-execution_count="17">
+<div id="6e0b264c" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> [</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">22</span>, <span class="st">"left"</span>, <span class="st">"left"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">342.7</span>),</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">22</span>, <span class="st">"right"</span>, <span class="st">"left"</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">412.3</span>),</span>
@@ -814,28 +815,41 @@ Warning
 <span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>conn.commit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The <code>?</code> placeholders protect against SQL injection and handle type conversion.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you try to create the table multiple times you may get some errors. If that happens just delete the db file and start fresh.</p>
+</div>
+</div>
 </section>
 <section id="querying-data" class="level3" data-number="10.7.3">
 <h3 data-number="10.7.3" class="anchored" data-anchor-id="querying-data"><span class="header-section-number">10.7.3</span> Querying Data</h3>
 <p>SQL lets you ask specific questions without loading everything:</p>
-<div id="2bb3da47" class="cell" data-execution_count="18">
+<div id="47818242" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get all trials</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>cursor.execute(<span class="st">"SELECT * FROM trials"</span>)</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cursor.fetchall())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[(1, 1, 22, 'left', 'left', 1, 1, 342.7), (2, 1, 22, 'right', 'left', 0, 1, 412.3), (3, 1, 22, 'left', 'right', 0, 0, 523.1), (4, 2, 19, 'left', 'left', 1, 1, 298.4), (5, 2, 19, 'right', 'right', 1, 1, 287.2), (6, 2, 19, 'left', 'right', 0, 1, 445.6), (7, 1, 22, 'left', 'left', 1, 1, 342.7), (8, 1, 22, 'right', 'left', 0, 1, 412.3), (9, 1, 22, 'left', 'right', 0, 0, 523.1), (10, 2, 19, 'left', 'left', 1, 1, 298.4), (11, 2, 19, 'right', 'right', 1, 1, 287.2), (12, 2, 19, 'left', 'right', 0, 1, 445.6), (13, 1, 22, 'left', 'left', 1, 1, 342.7), (14, 1, 22, 'right', 'left', 0, 1, 412.3), (15, 1, 22, 'left', 'right', 0, 0, 523.1), (16, 2, 19, 'left', 'left', 1, 1, 298.4), (17, 2, 19, 'right', 'right', 1, 1, 287.2), (18, 2, 19, 'left', 'right', 0, 1, 445.6), (19, 1, 22, 'left', 'left', 1, 1, 342.7), (20, 1, 22, 'right', 'left', 0, 1, 412.3), (21, 1, 22, 'left', 'right', 0, 0, 523.1), (22, 2, 19, 'left', 'left', 1, 1, 298.4), (23, 2, 19, 'right', 'right', 1, 1, 287.2), (24, 2, 19, 'left', 'right', 0, 1, 445.6), (25, 1, 22, 'left', 'left', 1, 1, 342.7), (26, 1, 22, 'right', 'left', 0, 1, 412.3), (27, 1, 22, 'left', 'right', 0, 0, 523.1), (28, 2, 19, 'left', 'left', 1, 1, 298.4), (29, 2, 19, 'right', 'right', 1, 1, 287.2), (30, 2, 19, 'left', 'right', 0, 1, 445.6), (31, 1, 22, 'left', 'left', 1, 1, 342.7), (32, 1, 22, 'right', 'left', 0, 1, 412.3), (33, 1, 22, 'left', 'right', 0, 0, 523.1), (34, 2, 19, 'left', 'left', 1, 1, 298.4), (35, 2, 19, 'right', 'right', 1, 1, 287.2), (36, 2, 19, 'left', 'right', 0, 1, 445.6), (37, 1, 22, 'left', 'left', 1, 1, 342.7), (38, 1, 22, 'right', 'left', 0, 1, 412.3), (39, 1, 22, 'left', 'right', 0, 0, 523.1), (40, 2, 19, 'left', 'left', 1, 1, 298.4), (41, 2, 19, 'right', 'right', 1, 1, 287.2), (42, 2, 19, 'left', 'right', 0, 1, 445.6), (43, 1, 22, 'left', 'left', 1, 1, 342.7), (44, 1, 22, 'right', 'left', 0, 1, 412.3), (45, 1, 22, 'left', 'right', 0, 0, 523.1), (46, 2, 19, 'left', 'left', 1, 1, 298.4), (47, 2, 19, 'right', 'right', 1, 1, 287.2), (48, 2, 19, 'left', 'right', 0, 1, 445.6), (49, 1, 22, 'left', 'left', 1, 1, 342.7), (50, 1, 22, 'right', 'left', 0, 1, 412.3), (51, 1, 22, 'left', 'right', 0, 0, 523.1), (52, 2, 19, 'left', 'left', 1, 1, 298.4), (53, 2, 19, 'right', 'right', 1, 1, 287.2), (54, 2, 19, 'left', 'right', 0, 1, 445.6), (55, 1, 22, 'left', 'left', 1, 1, 342.7), (56, 1, 22, 'right', 'left', 0, 1, 412.3), (57, 1, 22, 'left', 'right', 0, 0, 523.1), (58, 2, 19, 'left', 'left', 1, 1, 298.4), (59, 2, 19, 'right', 'right', 1, 1, 287.2), (60, 2, 19, 'left', 'right', 0, 1, 445.6), (61, 1, 22, 'left', 'left', 1, 1, 342.7), (62, 1, 22, 'right', 'left', 0, 1, 412.3), (63, 1, 22, 'left', 'right', 0, 0, 523.1), (64, 2, 19, 'left', 'left', 1, 1, 298.4), (65, 2, 19, 'right', 'right', 1, 1, 287.2), (66, 2, 19, 'left', 'right', 0, 1, 445.6), (67, 1, 22, 'left', 'left', 1, 1, 342.7), (68, 1, 22, 'right', 'left', 0, 1, 412.3), (69, 1, 22, 'left', 'right', 0, 0, 523.1), (70, 2, 19, 'left', 'left', 1, 1, 298.4), (71, 2, 19, 'right', 'right', 1, 1, 287.2), (72, 2, 19, 'left', 'right', 0, 1, 445.6)]</code></pre>
+<pre><code>[(1, 1, 22, 'left', 'left', 1, 1, 342.7), (2, 1, 22, 'right', 'left', 0, 1, 412.3), (3, 1, 22, 'left', 'right', 0, 0, 523.1), (4, 2, 19, 'left', 'left', 1, 1, 298.4), (5, 2, 19, 'right', 'right', 1, 1, 287.2), (6, 2, 19, 'left', 'right', 0, 1, 445.6), (7, 1, 22, 'left', 'left', 1, 1, 342.7), (8, 1, 22, 'right', 'left', 0, 1, 412.3), (9, 1, 22, 'left', 'right', 0, 0, 523.1), (10, 2, 19, 'left', 'left', 1, 1, 298.4), (11, 2, 19, 'right', 'right', 1, 1, 287.2), (12, 2, 19, 'left', 'right', 0, 1, 445.6), (13, 1, 22, 'left', 'left', 1, 1, 342.7), (14, 1, 22, 'right', 'left', 0, 1, 412.3), (15, 1, 22, 'left', 'right', 0, 0, 523.1), (16, 2, 19, 'left', 'left', 1, 1, 298.4), (17, 2, 19, 'right', 'right', 1, 1, 287.2), (18, 2, 19, 'left', 'right', 0, 1, 445.6), (19, 1, 22, 'left', 'left', 1, 1, 342.7), (20, 1, 22, 'right', 'left', 0, 1, 412.3), (21, 1, 22, 'left', 'right', 0, 0, 523.1), (22, 2, 19, 'left', 'left', 1, 1, 298.4), (23, 2, 19, 'right', 'right', 1, 1, 287.2), (24, 2, 19, 'left', 'right', 0, 1, 445.6), (25, 1, 22, 'left', 'left', 1, 1, 342.7), (26, 1, 22, 'right', 'left', 0, 1, 412.3), (27, 1, 22, 'left', 'right', 0, 0, 523.1), (28, 2, 19, 'left', 'left', 1, 1, 298.4), (29, 2, 19, 'right', 'right', 1, 1, 287.2), (30, 2, 19, 'left', 'right', 0, 1, 445.6), (31, 1, 22, 'left', 'left', 1, 1, 342.7), (32, 1, 22, 'right', 'left', 0, 1, 412.3), (33, 1, 22, 'left', 'right', 0, 0, 523.1), (34, 2, 19, 'left', 'left', 1, 1, 298.4), (35, 2, 19, 'right', 'right', 1, 1, 287.2), (36, 2, 19, 'left', 'right', 0, 1, 445.6), (37, 1, 22, 'left', 'left', 1, 1, 342.7), (38, 1, 22, 'right', 'left', 0, 1, 412.3), (39, 1, 22, 'left', 'right', 0, 0, 523.1), (40, 2, 19, 'left', 'left', 1, 1, 298.4), (41, 2, 19, 'right', 'right', 1, 1, 287.2), (42, 2, 19, 'left', 'right', 0, 1, 445.6), (43, 1, 22, 'left', 'left', 1, 1, 342.7), (44, 1, 22, 'right', 'left', 0, 1, 412.3), (45, 1, 22, 'left', 'right', 0, 0, 523.1), (46, 2, 19, 'left', 'left', 1, 1, 298.4), (47, 2, 19, 'right', 'right', 1, 1, 287.2), (48, 2, 19, 'left', 'right', 0, 1, 445.6), (49, 1, 22, 'left', 'left', 1, 1, 342.7), (50, 1, 22, 'right', 'left', 0, 1, 412.3), (51, 1, 22, 'left', 'right', 0, 0, 523.1), (52, 2, 19, 'left', 'left', 1, 1, 298.4), (53, 2, 19, 'right', 'right', 1, 1, 287.2), (54, 2, 19, 'left', 'right', 0, 1, 445.6), (55, 1, 22, 'left', 'left', 1, 1, 342.7), (56, 1, 22, 'right', 'left', 0, 1, 412.3), (57, 1, 22, 'left', 'right', 0, 0, 523.1), (58, 2, 19, 'left', 'left', 1, 1, 298.4), (59, 2, 19, 'right', 'right', 1, 1, 287.2), (60, 2, 19, 'left', 'right', 0, 1, 445.6), (61, 1, 22, 'left', 'left', 1, 1, 342.7), (62, 1, 22, 'right', 'left', 0, 1, 412.3), (63, 1, 22, 'left', 'right', 0, 0, 523.1), (64, 2, 19, 'left', 'left', 1, 1, 298.4), (65, 2, 19, 'right', 'right', 1, 1, 287.2), (66, 2, 19, 'left', 'right', 0, 1, 445.6), (67, 1, 22, 'left', 'left', 1, 1, 342.7), (68, 1, 22, 'right', 'left', 0, 1, 412.3), (69, 1, 22, 'left', 'right', 0, 0, 523.1), (70, 2, 19, 'left', 'left', 1, 1, 298.4), (71, 2, 19, 'right', 'right', 1, 1, 287.2), (72, 2, 19, 'left', 'right', 0, 1, 445.6), (73, 1, 22, 'left', 'left', 1, 1, 342.7), (74, 1, 22, 'right', 'left', 0, 1, 412.3), (75, 1, 22, 'left', 'right', 0, 0, 523.1), (76, 2, 19, 'left', 'left', 1, 1, 298.4), (77, 2, 19, 'right', 'right', 1, 1, 287.2), (78, 2, 19, 'left', 'right', 0, 1, 445.6)]</code></pre>
 </div>
 </div>
-<div id="9f80d20c" class="cell" data-execution_count="19">
+<div id="2b34e474" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get only valid trials</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>cursor.execute(<span class="st">"SELECT * FROM trials WHERE valid = 1"</span>)</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>valid_trials <span class="op">=</span> cursor.fetchall()</span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(valid_trials)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[(1, 1, 22, 'left', 'left', 1, 1, 342.7), (4, 2, 19, 'left', 'left', 1, 1, 298.4), (5, 2, 19, 'right', 'right', 1, 1, 287.2), (7, 1, 22, 'left', 'left', 1, 1, 342.7), (10, 2, 19, 'left', 'left', 1, 1, 298.4), (11, 2, 19, 'right', 'right', 1, 1, 287.2), (13, 1, 22, 'left', 'left', 1, 1, 342.7), (16, 2, 19, 'left', 'left', 1, 1, 298.4), (17, 2, 19, 'right', 'right', 1, 1, 287.2), (19, 1, 22, 'left', 'left', 1, 1, 342.7), (22, 2, 19, 'left', 'left', 1, 1, 298.4), (23, 2, 19, 'right', 'right', 1, 1, 287.2), (25, 1, 22, 'left', 'left', 1, 1, 342.7), (28, 2, 19, 'left', 'left', 1, 1, 298.4), (29, 2, 19, 'right', 'right', 1, 1, 287.2), (31, 1, 22, 'left', 'left', 1, 1, 342.7), (34, 2, 19, 'left', 'left', 1, 1, 298.4), (35, 2, 19, 'right', 'right', 1, 1, 287.2), (37, 1, 22, 'left', 'left', 1, 1, 342.7), (40, 2, 19, 'left', 'left', 1, 1, 298.4), (41, 2, 19, 'right', 'right', 1, 1, 287.2), (43, 1, 22, 'left', 'left', 1, 1, 342.7), (46, 2, 19, 'left', 'left', 1, 1, 298.4), (47, 2, 19, 'right', 'right', 1, 1, 287.2), (49, 1, 22, 'left', 'left', 1, 1, 342.7), (52, 2, 19, 'left', 'left', 1, 1, 298.4), (53, 2, 19, 'right', 'right', 1, 1, 287.2), (55, 1, 22, 'left', 'left', 1, 1, 342.7), (58, 2, 19, 'left', 'left', 1, 1, 298.4), (59, 2, 19, 'right', 'right', 1, 1, 287.2), (61, 1, 22, 'left', 'left', 1, 1, 342.7), (64, 2, 19, 'left', 'left', 1, 1, 298.4), (65, 2, 19, 'right', 'right', 1, 1, 287.2), (67, 1, 22, 'left', 'left', 1, 1, 342.7), (70, 2, 19, 'left', 'left', 1, 1, 298.4), (71, 2, 19, 'right', 'right', 1, 1, 287.2)]</code></pre>
+<pre><code>[(1, 1, 22, 'left', 'left', 1, 1, 342.7), (4, 2, 19, 'left', 'left', 1, 1, 298.4), (5, 2, 19, 'right', 'right', 1, 1, 287.2), (7, 1, 22, 'left', 'left', 1, 1, 342.7), (10, 2, 19, 'left', 'left', 1, 1, 298.4), (11, 2, 19, 'right', 'right', 1, 1, 287.2), (13, 1, 22, 'left', 'left', 1, 1, 342.7), (16, 2, 19, 'left', 'left', 1, 1, 298.4), (17, 2, 19, 'right', 'right', 1, 1, 287.2), (19, 1, 22, 'left', 'left', 1, 1, 342.7), (22, 2, 19, 'left', 'left', 1, 1, 298.4), (23, 2, 19, 'right', 'right', 1, 1, 287.2), (25, 1, 22, 'left', 'left', 1, 1, 342.7), (28, 2, 19, 'left', 'left', 1, 1, 298.4), (29, 2, 19, 'right', 'right', 1, 1, 287.2), (31, 1, 22, 'left', 'left', 1, 1, 342.7), (34, 2, 19, 'left', 'left', 1, 1, 298.4), (35, 2, 19, 'right', 'right', 1, 1, 287.2), (37, 1, 22, 'left', 'left', 1, 1, 342.7), (40, 2, 19, 'left', 'left', 1, 1, 298.4), (41, 2, 19, 'right', 'right', 1, 1, 287.2), (43, 1, 22, 'left', 'left', 1, 1, 342.7), (46, 2, 19, 'left', 'left', 1, 1, 298.4), (47, 2, 19, 'right', 'right', 1, 1, 287.2), (49, 1, 22, 'left', 'left', 1, 1, 342.7), (52, 2, 19, 'left', 'left', 1, 1, 298.4), (53, 2, 19, 'right', 'right', 1, 1, 287.2), (55, 1, 22, 'left', 'left', 1, 1, 342.7), (58, 2, 19, 'left', 'left', 1, 1, 298.4), (59, 2, 19, 'right', 'right', 1, 1, 287.2), (61, 1, 22, 'left', 'left', 1, 1, 342.7), (64, 2, 19, 'left', 'left', 1, 1, 298.4), (65, 2, 19, 'right', 'right', 1, 1, 287.2), (67, 1, 22, 'left', 'left', 1, 1, 342.7), (70, 2, 19, 'left', 'left', 1, 1, 298.4), (71, 2, 19, 'right', 'right', 1, 1, 287.2), (73, 1, 22, 'left', 'left', 1, 1, 342.7), (76, 2, 19, 'left', 'left', 1, 1, 298.4), (77, 2, 19, 'right', 'right', 1, 1, 287.2)]</code></pre>
 </div>
 </div>
-<div id="714a1c0a" class="cell" data-execution_count="20">
+<div id="d088f360" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get mean RT for valid vs invalid trials</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>cursor.execute(<span class="st">"""</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT valid, AVG(rt) as mean_rt</span></span>
@@ -844,10 +858,10 @@ Warning
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
 <span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cursor.fetchall())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[(0, 460.3333333333333), (1, 309.4333333333333)]</code></pre>
+<pre><code>[(0, 460.3333333333333), (1, 309.43333333333334)]</code></pre>
 </div>
 </div>
-<div id="6d01f415" class="cell" data-execution_count="21">
+<div id="1b5dfb11" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get mean RT for correct trials by participant</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>cursor.execute(<span class="st">"""</span></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT participant_id, AVG(rt) as mean_rt</span></span>
@@ -864,7 +878,7 @@ Warning
 <section id="reading-into-dictionaries" class="level3" data-number="10.7.4">
 <h3 data-number="10.7.4" class="anchored" data-anchor-id="reading-into-dictionaries"><span class="header-section-number">10.7.4</span> Reading Into Dictionaries</h3>
 <p>By default, queries return tuples. You can get dictionaries:</p>
-<div id="f1cfe026" class="cell" data-execution_count="22">
+<div id="cd79906d" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>conn.row_factory <span class="op">=</span> sqlite3.Row</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>cursor <span class="op">=</span> conn.cursor()</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -910,20 +924,23 @@ RT: 412.3, Valid: 0
 RT: 523.1, Valid: 0
 RT: 342.7, Valid: 1
 RT: 412.3, Valid: 0
+RT: 523.1, Valid: 0
+RT: 342.7, Valid: 1
+RT: 412.3, Valid: 0
 RT: 523.1, Valid: 0</code></pre>
 </div>
 </div>
 </section>
 <section id="closing-the-connection" class="level3" data-number="10.7.5">
 <h3 data-number="10.7.5" class="anchored" data-anchor-id="closing-the-connection"><span class="header-section-number">10.7.5</span> Closing the Connection</h3>
-<div id="b47e0248" class="cell" data-execution_count="23">
+<div id="0c10e4b4" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>conn.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="practice-sqlite" class="level3" data-number="10.7.6">
 <h3 data-number="10.7.6" class="anchored" data-anchor-id="practice-sqlite"><span class="header-section-number">10.7.6</span> Practice: SQLite</h3>
 <p>Test your understanding of SQLite by writing a query that returns the minimum and maximum RT for each participant.</p>
-<div id="b34a5e83" class="cell" data-execution_count="24">
+<div id="5516b9de" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"posner.db"</span>)</span>
@@ -948,7 +965,7 @@ RT: 523.1, Valid: 0</code></pre>
 <li>What type is each column?</li>
 </ol>
 <p>Here is a systematic approach:</p>
-<div id="f37e7186" class="cell" data-execution_count="25">
+<div id="1a1dcfab" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Suppose you have a CSV file and want to figure out the schema</span></span>
@@ -999,7 +1016,7 @@ First row: {'participant_id': '101', 'age': '23', 'response': 'agree', 'score': 
 S01,F,control,456.2,0.94
 S02,M,experimental,423.8,0.88
 S03,F,experimental,398.1,0.92</code></pre>
-<div id="e3005256" class="cell" data-execution_count="26">
+<div id="f7ac7181" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Schema:</span></span>
@@ -1023,12 +1040,7 @@ S03,F,experimental,398.1,0.92</code></pre>
 <section id="the-dataset" class="level3" data-number="10.8.1">
 <h3 data-number="10.8.1" class="anchored" data-anchor-id="the-dataset"><span class="header-section-number">10.8.1</span> The Dataset</h3>
 <p>We will use data from the <strong>Big Five Personality Test</strong> available at <a href="https://openpsychometrics.org/_rawdata/">Open Psychometrics</a>. This dataset contains responses from over 1 million participants answering 50 questions measuring five personality dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN).</p>
-<ol type="1">
-<li>Go to <a href="https://openpsychometrics.org/_rawdata/">https://openpsychometrics.org/_rawdata/</a></li>
-<li>Download the <strong>BIG5</strong> dataset (codebook is included)</li>
-<li>Extract the ZIP file</li>
-<li>Locate <code>data.csv</code></li>
-</ol>
+<p>o2. Download the <strong>BIG5</strong> dataset (codebook is included) 3. Extract the ZIP file 4. Locate <code>data.csv</code></p>
 </section>
 <section id="examine-the-data" class="level3" data-number="10.8.2">
 <h3 data-number="10.8.2" class="anchored" data-anchor-id="examine-the-data"><span class="header-section-number">10.8.2</span> Examine the Data</h3>
@@ -1037,7 +1049,7 @@ S03,F,experimental,398.1,0.92</code></pre>
 <section id="task-1-create-the-database" class="level3" data-number="10.8.3">
 <h3 data-number="10.8.3" class="anchored" data-anchor-id="task-1-create-the-database"><span class="header-section-number">10.8.3</span> Task 1: Create the Database</h3>
 <p>Here is a starter schema. You need to complete it by adding the remaining personality columns.</p>
-<div id="d4236488" class="cell" data-execution_count="27">
+<div id="fd64770e" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"bigfive.db"</span>)</span>
@@ -1055,26 +1067,40 @@ S03,F,experimental,398.1,0.92</code></pre>
 <span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a><span class="st">        engnat INTEGER,</span></span>
 <span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a><span class="st">        gender INTEGER,</span></span>
 <span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a><span class="st">        hand INTEGER,</span></span>
-<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a><span class="st">        country TEXT,</span></span>
-<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="st">        E1 INTEGER,</span></span>
-<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="st">        E2 INTEGER,</span></span>
-<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a><span class="st">        E3 INTEGER</span></span>
-<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a><span class="st">        -- ADD THE REMAINING COLUMNS HERE</span></span>
-<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a><span class="st">        -- E4 through E10</span></span>
-<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a><span class="st">        -- N1 through N10</span></span>
-<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a><span class="st">        -- A1 through A10</span></span>
-<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a><span class="st">        -- C1 through C10</span></span>
-<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a><span class="st">        -- O1 through O10</span></span>
-<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a><span class="st">    )</span></span>
-<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
-<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>conn.commit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a><span class="st">        source INTEGER,</span></span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="st">        country TEXT,</span></span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="st">        E1 INTEGER,</span></span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a><span class="st">        E2 INTEGER,</span></span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a><span class="st">        E3 INTEGER</span></span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a><span class="st">        -- ADD THE REMAINING COLUMNS HERE</span></span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a><span class="st">        -- E4 through E10</span></span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a><span class="st">        -- N1 through N10</span></span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a><span class="st">        -- A1 through A10</span></span>
+<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a><span class="st">        -- C1 through C10</span></span>
+<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a><span class="st">        -- O1 through O10</span></span>
+<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a><span class="st">    )</span></span>
+<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>)</span>
+<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a>conn.commit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="task-2-import-the-data" class="level3" data-number="10.8.4">
 <h3 data-number="10.8.4" class="anchored" data-anchor-id="task-2-import-the-data"><span class="header-section-number">10.8.4</span> Task 2: Import the Data</h3>
-<p>Load the CSV and insert rows into your database. With over 1 million rows, this may take a minute.</p>
-<div id="3f361e3f" class="cell" data-execution_count="28">
+<p>Load the CSV and insert rows into your database. With a large number of rows, this may take a minute.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Never trust the data. Always look and inspect. Sometimes the datafile extension may be csv, but the data may in fact be space or tab separated. Always try to look at the first few lines.</p>
+</div>
+</div>
+<div id="2b39393d" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data.csv"</span>, <span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
@@ -1095,7 +1121,7 @@ S03,F,experimental,398.1,0.92</code></pre>
 <p>Write SQL queries to answer:</p>
 <ol type="1">
 <li>How many participants are there?</li>
-<li>What is the mean age?</li>
+<li>What is the mean age? Note you may have to control for some odd numbers here.</li>
 <li>What is the mean score on E1 (first extraversion question) by gender?</li>
 </ol>
 </section>
@@ -1103,64 +1129,17 @@ S03,F,experimental,398.1,0.92</code></pre>
 <h3 data-number="10.8.6" class="anchored" data-anchor-id="task-4-compute-and-plot"><span class="header-section-number">10.8.6</span> Task 4: Compute and Plot</h3>
 <ol type="1">
 <li>Compute a total Extraversion score for each participant (sum of E1 through E10)</li>
-<li>Plot a histogram of Extraversion scores</li>
 <li>Create a scatter plot of age vs Extraversion score</li>
 </ol>
 <p>You may use SQL for computation, or load query results into Python and compute there.</p>
-<div id="fa73ec81" class="cell" data-execution_count="29">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Query the database</span></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute scores</span></span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create plots</span></span>
-<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
-<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram</span></span>
-<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.hist(...)</span></span>
-<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Extraversion Score"</span>)</span>
-<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span>
-<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Extraversion"</span>)</span>
-<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot</span></span>
-<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.scatter(...)</span></span>
-<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Age"</span>)</span>
-<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Extraversion Score"</span>)</span>
-<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Age vs Extraversion"</span>)</span>
-<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb46-25"><a href="#cb46-25" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"bigfive_plots.png"</span>)</span>
-<span id="cb46-26"><a href="#cb46-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<p>You almost certainly will have to do some internet consultation to find the right way to format the SQL commands in the python friendly format.</p>
 </section>
 <section id="what-to-submit" class="level3" data-number="10.8.7">
 <h3 data-number="10.8.7" class="anchored" data-anchor-id="what-to-submit"><span class="header-section-number">10.8.7</span> What to Submit</h3>
 <ol type="1">
-<li>Your completed Python script or Jupyter/Quarto notebook</li>
-<li>The two plots (histogram and scatter)</li>
-<li>A brief (2-3 sentence) observation about what you see in the data</li>
+<li>Your completed Python script that will work when I run it on my computer. That means you cannot assume that I will have exactly the same path as you. Use relative paths when you can.</li>
+<li>The scatter plot</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This dataset is large. If your computer struggles, you can work with a subset. Load only the first 100,000 rows:</p>
-<div id="64ec4b7b" class="cell" data-execution_count="30">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data.csv"</span>, <span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    reader <span class="op">=</span> csv.DictReader(f)</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    rows <span class="op">=</span> [<span class="bu">next</span>(reader) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100000</span>)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 <section id="summary" class="level2" data-number="10.9">
