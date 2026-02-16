@@ -14,9 +14,17 @@ This chapter introduces several approaches to storing and retrieving experimenta
 - `correct`: whether the response was correct (True/False)
 - `rt`: reaction time in milliseconds
 
+::: {.callout}
+
+Do you know what a [Posner Cuing Task](https://en.wikipedia.org/wiki/Posner_cueing_task) is? If not, you should look it up. You cannot program or analyze what you do not understand.
+
+:::
+
 ## The Brittle Way
 
-Before learning the right way, let us see the wrong way. Suppose you want to save a single trial as a line in a text file:
+A frequent and useful way to store small datafiles is as a *CSV* file. CSV stands for comma separated values. Each entry is separated by a comma from the next one, and the row of data is built up until the end when a newline (often indicated as `\n`) marks the end of one row and the return to the beginning of the next. However, there is a right way and a naive, or brittle way, to do this. 
+
+Suppose you want to save a single trial as a line in a text file. You could just manually construct this in your code like so:
 
 ```{python}
 participant_id = 1
@@ -39,6 +47,10 @@ This works. But consider what happens when:
 - You add a new variable but forget to update the string
 - Your string value contains a comma
 - You need to read it back and parse all those types
+
+::: {.callout-note}
+What are all those `str` calls doing? Why might that be inconvenient?
+:::
 
 ```{python}
 # Forgot the comma after age - silent bug
@@ -82,6 +94,8 @@ print(trials[1]["rt"])
 ```
 
 ### Filtering Data
+
+*List comprehensions* are a nice features of many programming languages, including python. The basic syntax is square brackets with a declared variable, a source for generating it and optionally some tests. For example, you could create a list of even numbers by testing a range of numbers. `[x for x in range(12) if (x%2 == 0)]`
 
 You can use list comprehensions to filter:
 
@@ -137,6 +151,8 @@ with open("posner_data.csv", "w", newline="") as f:
 ```
 
 Notice: no string concatenation, no manual commas, no `str()` calls. The module handles all of it. If you add a column, you add it to the dictionary and the fieldnames list—done.
+
+In the examples above you have been writing and reading from files. Python has some nice, simple ways for handling files. Files are dealt with by something called a handler. You use open to create or open a file. When you do this there are some required fields, such as the name of the file, and the mode (read, write, both) that you want the file dealth with. Then it is customary to give it a temporary name you can use to refer to this handler. You will often see "f", but you can use anything, e.g. `posner_data_f` might help you keep track of what this handle points to.
 
 ### Reading CSV
 
@@ -399,6 +415,10 @@ conn.commit()
 
 The `?` placeholders protect against SQL injection and handle type conversion.
 
+::: {.callout-warning}
+If you try to create the table multiple times you may get some errors. If that happens just delete the db file and start fresh. 
+:::
+
 ### Querying Data
 
 SQL lets you ask specific questions without loading everything:
@@ -569,8 +589,7 @@ For this homework, you will download a real dataset, create a SQLite database, i
 
 We will use data from the **Big Five Personality Test** available at [Open Psychometrics](https://openpsychometrics.org/_rawdata/). This dataset contains responses from over 1 million participants answering 50 questions measuring five personality dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN).
 
-1. Go to [https://openpsychometrics.org/_rawdata/](https://openpsychometrics.org/_rawdata/)
-2. Download the **BIG5** dataset (codebook is included)
+o2. Download the **BIG5** dataset (codebook is included)
 3. Extract the ZIP file
 4. Locate `data.csv`
 
@@ -602,6 +621,7 @@ cursor.execute("""
         engnat INTEGER,
         gender INTEGER,
         hand INTEGER,
+        source INTEGER,
         country TEXT,
         E1 INTEGER,
         E2 INTEGER,
@@ -620,7 +640,11 @@ conn.commit()
 
 ### Task 2: Import the Data
 
-Load the CSV and insert rows into your database. With over 1 million rows, this may take a minute.
+Load the CSV and insert rows into your database. With a large number of rows, this may take a minute. 
+
+::: {.callout-important}
+Never trust the data. Always look and inspect. Sometimes the datafile extension may be csv, but the data may in fact be space or tab separated. Always try to look at the first few lines.
+:::
 
 ```{python}
 #| eval: false
@@ -645,65 +669,22 @@ conn.commit()
 Write SQL queries to answer:
 
 1. How many participants are there?
-2. What is the mean age?
+2. What is the mean age? Note you may have to control for some odd numbers here.
 3. What is the mean score on E1 (first extraversion question) by gender?
 
 ### Task 4: Compute and Plot
 
 1. Compute a total Extraversion score for each participant (sum of E1 through E10)
-2. Plot a histogram of Extraversion scores
-3. Create a scatter plot of age vs Extraversion score
+2. Create a scatter plot of age vs Extraversion score
 
-You may use SQL for computation, or load query results into Python and compute there.
+You may use SQL for computation, or load query results into Python and compute there. 
 
-```{python}
-#| eval: false
-
-import matplotlib.pyplot as plt
-
-# Your code here
-# Query the database
-# Compute scores
-# Create plots
-
-plt.figure(figsize=(10, 4))
-
-# Histogram
-plt.subplot(1, 2, 1)
-# plt.hist(...)
-plt.xlabel("Extraversion Score")
-plt.ylabel("Count")
-plt.title("Distribution of Extraversion")
-
-# Scatter plot
-plt.subplot(1, 2, 2)
-# plt.scatter(...)
-plt.xlabel("Age")
-plt.ylabel("Extraversion Score")
-plt.title("Age vs Extraversion")
-
-plt.tight_layout()
-plt.savefig("bigfive_plots.png")
-plt.show()
-```
+You almost certainly will have to do some internet consultation to find the right way to format the SQL commands in the python friendly format. 
 
 ### What to Submit
 
-1. Your completed Python script or Jupyter/Quarto notebook
-2. The two plots (histogram and scatter)
-3. A brief (2-3 sentence) observation about what you see in the data
-
-::: {.callout-note}
-This dataset is large. If your computer struggles, you can work with a subset. Load only the first 100,000 rows:
-
-```{python}
-#| eval: false
-
-with open("data.csv", "r", encoding="utf-8") as f:
-    reader = csv.DictReader(f)
-    rows = [next(reader) for _ in range(100000)]
-```
-:::
+1. Your completed Python script that will work when I run it on my computer. That means you cannot assume that I will have exactly the same path as you. Use relative paths when you can.
+2. The scatter plot
 
 ## Summary
 
