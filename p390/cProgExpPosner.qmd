@@ -1,0 +1,414 @@
+Then (making sure you have your virtual environment activated)
+
+```python
+uv pip install pygame # <1>
+
+python -m pygame.examples.aliens # <2>
+```
+1. This line installs the library.
+2. This launches a test game. If you see the game, you have installed pygame. I find this game plays a little fast on modern hardware.
+
+::: {#fig-basicimports}
+
+```python
+import sys,pygame
+pygame.init()
+
+mywindow = pygame.display.set_mode([800,800])
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    mywindow.fill((128,15,15))
+    pygame.display.flip()
+        
+pygame.quit()
+sys.exit()
+
+```
+
+This python program will, assuming you have installed pygame, launch a window and close it when you click the "x". Can you change the window size and background color?
+
+:::
+
+One of the better ways to get started is to gradually hand in functionality one step at a time until you have the basics of what you need on a trial and then to refine that to loop through the multiple trials you will probably need. 
+
+Here is an example of a bit of code that shows some elementary use of the mouse, response time, shape and text functionality. 
+
+```python
+from itertools import compress
+import sys,pygame
+pygame.init()
+
+
+my_font = pygame.font.Font(None,72)
+test_text = my_font.render("Hello P390", 1, (200,10,200))
+test_text_pos = test_text.get_rect(centerx = 400)
+
+#Helper functions
+def which_buttons (bs):
+    return(list(compress(range(len(bs)),bs)))
+
+#button colors
+clrs = [(0,0,255),(0,225,0),(225,0,0)]
+actv_clr = 0
+rslts = {'trial_num': -1,'color' : None ,'time' : None}
+
+mywindow = pygame.display.set_mode([800,800])
+running = True
+myrt_clock = pygame.time.Clock()
+t1 = myrt_clock.tick(60)
+anew = pygame.mouse.get_pressed()
+trl = -1,
+clr = clrs[0]
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    mywindow.fill((128,15,15))
+    pygame.draw.circle(mywindow, clrs[actv_clr], (400,400), 75)
+    mywindow.blit(test_text, test_text_pos)
+    pygame.display.flip()
+    aold = pygame.mouse.get_pressed()
+    if(any(aold) and (aold != anew)):
+        t2 = myrt_clock.tick(60)
+        rslts['time'] = t2 - t1
+        rslts['trial_num'] = rslts['trial_num'] + 1
+        actv_clr = which_buttons(aold)[0]
+        rslts['color'] = actv_clr
+        anew = aold
+        print(rslts)
+        
+pygame.quit()
+sys.exit()
+```
+
+## Building a Posner Cueing Task
+
+Now you'll work in groups to build a simple Posner cueing task. This classic attention task presents a cue (square) on one side of the screen, then a target (dot) that appears either on the same side (valid trial) or opposite side (invalid trial). Participants respond to the target location.
+
+Build this incrementally:
+
+### Step 1: Draw a Square on One Side
+
+Start by drawing a square that can appear on either the left or right side of the screen.
+
+```python
+import sys, pygame, random
+pygame.init()
+
+# Setup
+mywindow = pygame.display.set_mode([800, 600])
+running = True
+
+# Position parameters
+left_x = 200
+right_x = 600
+center_y = 300
+square_size = 100
+
+# Randomly choose left or right
+cue_side = random.choice(['left', 'right'])
+cue_x = left_x if cue_side == 'left' else right_x
+
+# Main loop
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    
+    mywindow.fill((128, 128, 128))  # Gray background
+    
+    # Draw the square cue
+    pygame.draw.rect(mywindow, (255, 255, 0), 
+                     (cue_x - square_size//2, center_y - square_size//2, 
+                      square_size, square_size), 3)  # 3 = outline width
+    
+    pygame.display.flip()
+
+pygame.quit()
+sys.exit()
+```
+
+**Challenge**: Can you make the square appear in different colors? Can you add a fixation cross in the center?
+
+### Step 2: Add a Target Dot (Valid/Invalid Trials)
+
+Now add a dot that appears after the cue. On valid trials, it appears in the cued location. On invalid trials, it appears on the opposite side.
+
+```python
+import sys, pygame, random
+pygame.init()
+
+# Setup
+mywindow = pygame.display.set_mode([800, 600])
+clock = pygame.time.Clock()
+running = True
+
+# Position parameters
+left_x = 200
+right_x = 600
+center_y = 300
+square_size = 100
+dot_radius = 15
+
+# Trial setup
+cue_side = random.choice(['left', 'right'])
+is_valid = random.choice([True, False])  # Valid or invalid trial
+
+# Determine positions
+cue_x = left_x if cue_side == 'left' else right_x
+
+if is_valid:
+    target_x = cue_x  # Same side as cue
+else:
+    target_x = right_x if cue_side == 'left' else left_x  # Opposite side
+
+# Timing
+show_cue_time = pygame.time.get_ticks()
+cue_duration = 200  # ms
+show_target = False
+
+# Main loop
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    
+    mywindow.fill((128, 128, 128))
+    
+    # Draw fixation cross
+    pygame.draw.line(mywindow, (255, 255, 255), (390, 300), (410, 300), 2)
+    pygame.draw.line(mywindow, (255, 255, 255), (400, 290), (400, 310), 2)
+    
+    # Show cue for specified duration
+    if pygame.time.get_ticks() - show_cue_time < cue_duration:
+        pygame.draw.rect(mywindow, (255, 255, 0), 
+                        (cue_x - square_size//2, center_y - square_size//2, 
+                         square_size, square_size), 3)
+    else:
+        show_target = True
+    
+    # Show target dot
+    if show_target:
+        pygame.draw.circle(mywindow, (255, 0, 0), (target_x, center_y), dot_radius)
+    
+    pygame.display.flip()
+    clock.tick(60)
+
+pygame.quit()
+sys.exit()
+```
+
+**Challenge**: Can you add a variable to control the delay between cue offset and target onset?
+
+### Step 3: Capture Keyboard Response and Measure RT/Accuracy
+
+Now add keyboard input to respond to the target location: 'z' for left, '/' for right.
+
+```python
+import sys, pygame, random
+pygame.init()
+
+# Setup
+mywindow = pygame.display.set_mode([800, 600])
+clock = pygame.time.Clock()
+running = True
+
+# Position parameters
+left_x = 200
+right_x = 600
+center_y = 300
+square_size = 100
+dot_radius = 15
+
+# Trial setup
+cue_side = random.choice(['left', 'right'])
+is_valid = random.choice([True, False])
+
+cue_x = left_x if cue_side == 'left' else right_x
+if is_valid:
+    target_x = cue_x
+    target_side = cue_side
+else:
+    target_x = right_x if cue_side == 'left' else left_x
+    target_side = 'right' if cue_side == 'left' else 'left'
+
+# Timing
+show_cue_time = pygame.time.get_ticks()
+cue_duration = 200
+show_target = False
+target_onset_time = None
+response_made = False
+rt = None
+accuracy = None
+
+# Main loop
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        
+        # Capture keyboard response
+        if event.type == pygame.KEYDOWN and show_target and not response_made:
+            response_time = pygame.time.get_ticks()
+            rt = response_time - target_onset_time
+            
+            if event.key == pygame.K_z:
+                response_side = 'left'
+            elif event.key == pygame.K_SLASH:
+                response_side = 'right'
+            else:
+                continue  # Ignore other keys
+            
+            accuracy = 1 if response_side == target_side else 0
+            response_made = True
+            
+            # Print results
+            print(f"Valid: {is_valid}, RT: {rt}ms, Accuracy: {accuracy}")
+            
+            # Wait a bit then quit (for now)
+            pygame.time.wait(500)
+            running = False
+    
+    mywindow.fill((128, 128, 128))
+    
+    # Draw fixation cross
+    pygame.draw.line(mywindow, (255, 255, 255), (390, 300), (410, 300), 2)
+    pygame.draw.line(mywindow, (255, 255, 255), (400, 290), (400, 310), 2)
+    
+    # Show cue
+    if pygame.time.get_ticks() - show_cue_time < cue_duration:
+        pygame.draw.rect(mywindow, (255, 255, 0), 
+                        (cue_x - square_size//2, center_y - square_size//2, 
+                         square_size, square_size), 3)
+    else:
+        if not show_target:
+            show_target = True
+            target_onset_time = pygame.time.get_ticks()
+    
+    # Show target
+    if show_target:
+        pygame.draw.circle(mywindow, (255, 0, 0), (target_x, center_y), dot_radius)
+    
+    pygame.display.flip()
+    clock.tick(60)
+
+pygame.quit()
+sys.exit()
+```
+
+**Challenge**: Can you add feedback after each response (correct/incorrect)?
+
+### Step 4: Loop Through 10 Trials
+
+Finally, wrap everything in a loop to run multiple trials.
+
+```python
+import sys, pygame, random
+pygame.init()
+
+# Setup
+mywindow = pygame.display.set_mode([800, 600])
+clock = pygame.time.Clock()
+
+# Position parameters
+left_x = 200
+right_x = 600
+center_y = 300
+square_size = 100
+dot_radius = 15
+
+# Experiment parameters
+n_trials = 10
+cue_duration = 200  # ms
+
+# Run trials
+for trial_num in range(n_trials):
+    # Trial setup
+    cue_side = random.choice(['left', 'right'])
+    is_valid = random.choice([True, False])
+    
+    cue_x = left_x if cue_side == 'left' else right_x
+    if is_valid:
+        target_x = cue_x
+        target_side = cue_side
+    else:
+        target_x = right_x if cue_side == 'left' else left_x
+        target_side = 'right' if cue_side == 'left' else 'left'
+    
+    # Timing
+    show_cue_time = pygame.time.get_ticks()
+    show_target = False
+    target_onset_time = None
+    response_made = False
+    
+    # Trial loop
+    running_trial = True
+    while running_trial:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            
+            # Capture keyboard response
+            if event.type == pygame.KEYDOWN and show_target and not response_made:
+                response_time = pygame.time.get_ticks()
+                rt = response_time - target_onset_time
+                
+                if event.key == pygame.K_z:
+                    response_side = 'left'
+                elif event.key == pygame.K_SLASH:
+                    response_side = 'right'
+                else:
+                    continue
+                
+                accuracy = 1 if response_side == target_side else 0
+                response_made = True
+                
+                # Print results
+                print(f"Trial {trial_num + 1}: Valid={is_valid}, RT={rt}ms, Acc={accuracy}")
+                
+                # Inter-trial interval
+                pygame.time.wait(1000)
+                running_trial = False
+        
+        mywindow.fill((128, 128, 128))
+        
+        # Draw fixation cross
+        pygame.draw.line(mywindow, (255, 255, 255), (390, 300), (410, 300), 2)
+        pygame.draw.line(mywindow, (255, 255, 255), (400, 290), (400, 310), 2)
+        
+        # Show cue
+        if pygame.time.get_ticks() - show_cue_time < cue_duration:
+            pygame.draw.rect(mywindow, (255, 255, 0), 
+                            (cue_x - square_size//2, center_y - square_size//2, 
+                             square_size, square_size), 3)
+        else:
+            if not show_target:
+                show_target = True
+                target_onset_time = pygame.time.get_ticks()
+        
+        # Show target
+        if show_target:
+            pygame.draw.circle(mywindow, (255, 0, 0), (target_x, center_y), dot_radius)
+        
+        pygame.display.flip()
+        clock.tick(60)
+
+print("Experiment complete!")
+pygame.quit()
+sys.exit()
+```
+
+**Challenges for Groups**:
+1. Can you vary the proportion of valid vs invalid trials (e.g., 80% valid)?
+2. Can you add a timeout if the participant doesn't respond within 2 seconds?
+3. Can you display "Too slow!" or "Incorrect!" feedback messages?
+4. Can you calculate and display average RT for valid vs invalid trials at the end?
+5. Can you add an instruction screen at the beginning?
+
+#### Future Steps
+
+You will want to save your data. As a first step see if you can [open a file](https://www.w3schools.com/python/python_file_handling.asp), and the if you can use the dictionary created to [add lines to a csv file](https://docs.python.org/3/library/csv.html). 
