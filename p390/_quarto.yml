@@ -21,7 +21,7 @@ book:
     - cR.qmd
     - cPython.qmd
     - cHandlingData.qmd
-    - cProgExp.qmd
+    - cProgExpPosner.qmd
     - cRPandasComparison.qmd
     - cLabNotebooks.qmd
     - cLabNoteBookQuartoExample.qmd
