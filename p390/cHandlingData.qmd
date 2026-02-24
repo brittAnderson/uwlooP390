@@ -587,7 +587,7 @@ For this homework, you will download a real dataset, create a SQLite database, i
 
 ### The Dataset
 
-We will use data from the **Big Five Personality Test** available at [Open Psychometrics](https://openpsychometrics.org/_rawdata/). This dataset contains responses from over 1 million participants answering 50 questions measuring five personality dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN).
+We will use data from the **Big Five Personality Test** available at [Open Psychometrics](https://openpsychometrics.org/_rawdata/). This dataset contains responses from a large number of participants answering 50 questions measuring five personality dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN).
 
 o2. Download the **BIG5** dataset (codebook is included)
 3. Extract the ZIP file
@@ -595,7 +595,7 @@ o2. Download the **BIG5** dataset (codebook is included)
 
 ### Examine the Data
 
-Open the CSV in a text editor or load the first few rows in Python. The dataset has 50 question columns (E1, E2, ... N10) plus demographic columns.
+Open the CSV in a text editor or load the first few rows in Python. The dataset has 50 question columns (E1, E2, ... N10) plus demographic columns. Be very careful here. Sometimes file name extensions can lie.
 
 ### Task 1: Create the Database
 
