@@ -120,9 +120,82 @@ This will result in several questions for you to answer. When you are done you h
 
 Note Bene (Jan 2026). I ran into a bug when trying to render. You will need to navigate to the `./_extensions/quarto-journals/elsevier/elsarticle.cls` and delete that first `%` on line 1368. You only need to do this if you get an error that talks about `bibsection` and `bmsection`. See this [issue](https://github.com/quarto-journals/elsevier/issues/41)
 
+### Citations and References
 
+Scientific writing requires citing prior work, and computers can automate the tedious parts of formatting those citations. The standard file format for storing reference data is BibTeX, a plain-text database where each entry looks like this:
 
-### Presentations 
+```bibtex
+@article{smith2020attention,
+  author  = {Smith, Jane and Jones, Robert},
+  title   = {Attention and Working Memory in Young Adults},
+  journal = {Journal of Cognitive Psychology},
+  year    = {2020},
+  volume  = {32},
+  number  = {4},
+  pages   = {411--428},
+  doi     = {10.1080/20445911.2020.123456}
+}
+```
+
+The string immediately after the `@article{` is the **citation key** (`smith2020attention` above), which is what you use when citing in the text. Common entry types include `@article`, `@book`, `@inproceedings`, and `@misc`.
+
+#### Getting BibTeX entries
+
+You rarely need to write these by hand:
+
+- **Google Scholar**: search for the paper, click "Cite" below the result, then choose "BibTeX".
+- **DOI lookup**: tools like [doi2bib.org](https://www.doi2bib.org/) will generate a BibTeX entry from a DOI.
+- **Zotero**: a free reference manager. The [Better BibTeX](https://retorque.re/zotero-better-bibtex/) plugin lets you export your library (or a collection) directly to a `.bib` file that stays in sync.
+
+Save your entries in a file named something like `references.bib` in the same directory as your `.qmd` file.
+
+#### Connecting the `.bib` file to your `.qmd`
+
+Add a `bibliography` field to your YAML front matter:
+
+```yaml
+---
+title: "My Paper"
+author: "Your Name"
+bibliography: references.bib
+---
+```
+
+To use a specific citation style (e.g., APA, AMA, a journal's own style), download the corresponding `.csl` file from the [Zotero Style Repository](https://www.zotero.org/styles) and add:
+
+```yaml
+csl: apa.csl
+```
+
+#### Citing in the text
+
+Quarto uses Pandoc citation syntax. The most common patterns are:
+
+| Syntax | Output |
+|---|---|
+| `[@smith2020attention]` | (Smith & Jones, 2020) |
+| `@smith2020attention` | Smith & Jones (2020) |
+| `[@smith2020attention; @jones2021]` | (Smith & Jones, 2020; Jones, 2021) |
+| `[-@smith2020attention]` | (2020) — suppresses author name |
+
+The narrative form (`@smith2020attention`) is useful when the author is already the grammatical subject: *"Smith & Jones (2020) found that..."*
+
+#### The bibliography list
+
+Quarto automatically appends the formatted reference list at the end of the document. If you want it to appear at a specific location — for example, before an appendix — place a heading where you want it:
+
+```markdown
+## References
+
+::: {#refs}
+:::
+```
+
+::: {.callout-tip title="Exercise"}
+Add a `references.bib` file to your journal article project from the exercise above. Include at least two real references (use Google Scholar or doi2bib to get the BibTeX). Cite both somewhere in the text using the appropriate syntax and confirm they appear in the rendered bibliography.
+:::
+
+### Presentations
 Presentations are a standard component of professional life. Despite that importance the materials are often developed in a casual way that does not give the best impact to the material. There are many more versatile tools than contemporary Power Point. Though power point can make an effective presentation its default use does not typically achieve that goal. Quarto provides easy access to two other presentation tools that will expand one's recognition of what an effective presentation tool can do. 
 
 #### Reveal.JS
