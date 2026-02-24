@@ -313,8 +313,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#things-you-can-do-with-quarto-and-qmd-files" id="toc-things-you-can-do-with-quarto-and-qmd-files" class="nav-link" data-scroll-target="#things-you-can-do-with-quarto-and-qmd-files"><span class="header-section-number">15.3</span> Things You Can Do With Quarto and Qmd files</a>
   <ul class="collapse">
   <li><a href="#journal-article-authoring" id="toc-journal-article-authoring" class="nav-link" data-scroll-target="#journal-article-authoring"><span class="header-section-number">15.3.1</span> Journal Article Authoring</a></li>
-  <li><a href="#presentations" id="toc-presentations" class="nav-link" data-scroll-target="#presentations"><span class="header-section-number">15.3.2</span> Presentations</a></li>
-  <li><a href="#academic-posters" id="toc-academic-posters" class="nav-link" data-scroll-target="#academic-posters"><span class="header-section-number">15.3.3</span> Academic Posters</a></li>
+  <li><a href="#citations-and-references" id="toc-citations-and-references" class="nav-link" data-scroll-target="#citations-and-references"><span class="header-section-number">15.3.2</span> Citations and References</a></li>
+  <li><a href="#presentations" id="toc-presentations" class="nav-link" data-scroll-target="#presentations"><span class="header-section-number">15.3.3</span> Presentations</a></li>
+  <li><a href="#academic-posters" id="toc-academic-posters" class="nav-link" data-scroll-target="#academic-posters"><span class="header-section-number">15.3.4</span> Academic Posters</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -455,21 +456,113 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This will result in several questions for you to answer. When you are done you have starter versions of all the pieces you will need to get going.</p>
 <p>Note Bene (Jan 2026). I ran into a bug when trying to render. You will need to navigate to the <code>./_extensions/quarto-journals/elsevier/elsarticle.cls</code> and delete that first <code>%</code> on line 1368. You only need to do this if you get an error that talks about <code>bibsection</code> and <code>bmsection</code>. See this <a href="https://github.com/quarto-journals/elsevier/issues/41">issue</a></p>
 </section>
-<section id="presentations" class="level3" data-number="15.3.2">
-<h3 data-number="15.3.2" class="anchored" data-anchor-id="presentations"><span class="header-section-number">15.3.2</span> Presentations</h3>
+<section id="citations-and-references" class="level3" data-number="15.3.2">
+<h3 data-number="15.3.2" class="anchored" data-anchor-id="citations-and-references"><span class="header-section-number">15.3.2</span> Citations and References</h3>
+<p>Scientific writing requires citing prior work, and computers can automate the tedious parts of formatting those citations. The standard file format for storing reference data is BibTeX, a plain-text database where each entry looks like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">smith2020attention</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>  = {Smith, Jane and Jones, Robert},</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>   = {Attention and Working Memory in Young Adults},</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">journal</span> = {Journal of Cognitive Psychology},</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>    = {2020},</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">volume</span>  = {32},</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">number</span>  = {4},</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span>   = {411--428},</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span>     = {10.1080/20445911.2020.123456}</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The string immediately after the <code>@article{</code> is the <strong>citation key</strong> (<code>smith2020attention</code> above), which is what you use when citing in the text. Common entry types include <code>@article</code>, <code>@book</code>, <code>@inproceedings</code>, and <code>@misc</code>.</p>
+<section id="getting-bibtex-entries" class="level4" data-number="15.3.2.1">
+<h4 data-number="15.3.2.1" class="anchored" data-anchor-id="getting-bibtex-entries"><span class="header-section-number">15.3.2.1</span> Getting BibTeX entries</h4>
+<p>You rarely need to write these by hand:</p>
+<ul>
+<li><strong>Google Scholar</strong>: search for the paper, click “Cite” below the result, then choose “BibTeX”.</li>
+<li><strong>DOI lookup</strong>: tools like <a href="https://www.doi2bib.org/">doi2bib.org</a> will generate a BibTeX entry from a DOI.</li>
+<li><strong>Zotero</strong>: a free reference manager. The <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> plugin lets you export your library (or a collection) directly to a <code>.bib</code> file that stays in sync.</li>
+</ul>
+<p>Save your entries in a file named something like <code>references.bib</code> in the same directory as your <code>.qmd</code> file.</p>
+</section>
+<section id="connecting-the-.bib-file-to-your-.qmd" class="level4" data-number="15.3.2.2">
+<h4 data-number="15.3.2.2" class="anchored" data-anchor-id="connecting-the-.bib-file-to-your-.qmd"><span class="header-section-number">15.3.2.2</span> Connecting the <code>.bib</code> file to your <code>.qmd</code></h4>
+<p>Add a <code>bibliography</code> field to your YAML front matter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Paper"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>To use a specific citation style (e.g., APA, AMA, a journal’s own style), download the corresponding <code>.csl</code> file from the <a href="https://www.zotero.org/styles">Zotero Style Repository</a> and add:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> apa.csl</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="citing-in-the-text" class="level4" data-number="15.3.2.3">
+<h4 data-number="15.3.2.3" class="anchored" data-anchor-id="citing-in-the-text"><span class="header-section-number">15.3.2.3</span> Citing in the text</h4>
+<p>Quarto uses Pandoc citation syntax. The most common patterns are:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>[@smith2020attention]</code></td>
+<td>(Smith &amp; Jones, 2020)</td>
+</tr>
+<tr class="even">
+<td><code>@smith2020attention</code></td>
+<td>Smith &amp; Jones (2020)</td>
+</tr>
+<tr class="odd">
+<td><code>[@smith2020attention; @jones2021]</code></td>
+<td>(Smith &amp; Jones, 2020; Jones, 2021)</td>
+</tr>
+<tr class="even">
+<td><code>[-@smith2020attention]</code></td>
+<td>(2020) — suppresses author name</td>
+</tr>
+</tbody>
+</table>
+<p>The narrative form (<code>@smith2020attention</code>) is useful when the author is already the grammatical subject: <em>“Smith &amp; Jones (2020) found that…”</em></p>
+</section>
+<section id="the-bibliography-list" class="level4" data-number="15.3.2.4">
+<h4 data-number="15.3.2.4" class="anchored" data-anchor-id="the-bibliography-list"><span class="header-section-number">15.3.2.4</span> The bibliography list</h4>
+<p>Quarto automatically appends the formatted reference list at the end of the document. If you want it to appear at a specific location — for example, before an appendix — place a heading where you want it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Add a <code>references.bib</code> file to your journal article project from the exercise above. Include at least two real references (use Google Scholar or doi2bib to get the BibTeX). Cite both somewhere in the text using the appropriate syntax and confirm they appear in the rendered bibliography.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="presentations" class="level3" data-number="15.3.3">
+<h3 data-number="15.3.3" class="anchored" data-anchor-id="presentations"><span class="header-section-number">15.3.3</span> Presentations</h3>
 <p>Presentations are a standard component of professional life. Despite that importance the materials are often developed in a casual way that does not give the best impact to the material. There are many more versatile tools than contemporary Power Point. Though power point can make an effective presentation its default use does not typically achieve that goal. Quarto provides easy access to two other presentation tools that will expand one’s recognition of what an effective presentation tool can do.</p>
-<section id="reveal.js" class="level4" data-number="15.3.2.1">
-<h4 data-number="15.3.2.1" class="anchored" data-anchor-id="reveal.js"><span class="header-section-number">15.3.2.1</span> Reveal.JS</h4>
+<section id="reveal.js" class="level4" data-number="15.3.3.1">
+<h4 data-number="15.3.3.1" class="anchored" data-anchor-id="reveal.js"><span class="header-section-number">15.3.3.1</span> Reveal.JS</h4>
 <p><a href="https://revealjs.com/">Reveal.js</a> is a javascript library for the creating presentations that work as well on the web as they do in person. Quarto also <a href="https://quarto.org/docs/presentations/revealjs/">supports</a> Reveal.js.</p>
 </section>
-<section id="beamer" class="level4" data-number="15.3.2.2">
-<h4 data-number="15.3.2.2" class="anchored" data-anchor-id="beamer"><span class="header-section-number">15.3.2.2</span> Beamer</h4>
+<section id="beamer" class="level4" data-number="15.3.3.2">
+<h4 data-number="15.3.3.2" class="anchored" data-anchor-id="beamer"><span class="header-section-number">15.3.3.2</span> Beamer</h4>
 <p><a href="https://ctan.org/pkg/beamer">Beamer</a> is a package for LaTeX that allows professional quality typesetting. It is particularly relevant for presentations that have a lot of mathematical material, though it is quite capable of supporting any general presentation as well. It is less flexible for the web since it produces PDFs. These can be shared on the web, but they require the intermediate step of downloading them rather than just playing them. Beamer also has a “Poster” variant that can be used to make high quality academic posters.</p>
 <p>Quarto also <a href="https://quarto.org/docs/presentations/beamer.html">supports</a> Beamer.</p>
 </section>
 </section>
-<section id="academic-posters" class="level3" data-number="15.3.3">
-<h3 data-number="15.3.3" class="anchored" data-anchor-id="academic-posters"><span class="header-section-number">15.3.3</span> Academic Posters</h3>
+<section id="academic-posters" class="level3" data-number="15.3.4">
+<h3 data-number="15.3.4" class="anchored" data-anchor-id="academic-posters"><span class="header-section-number">15.3.4</span> Academic Posters</h3>
 <p><a href="https://github.com/quarto-ext/typst-templates/tree/main/poster">Typest</a></p>
 <p><a href="https://quarto.org/docs/output-formats/typst-custom.html">Scientific Posters with Quarto</a></p>
 
