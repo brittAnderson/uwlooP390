@@ -22,3 +22,5 @@ mypandastest.csv
 .aider*
 
 syllabusBrittPSYCH390W2026_files/libs
+
+/__pycache__/
