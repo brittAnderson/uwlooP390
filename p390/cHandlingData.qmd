@@ -585,6 +585,10 @@ CREATE TABLE experiment (
 
 For this homework, you will download a real dataset, create a SQLite database, import the data, run queries, and make plots.
 
+SQL is often used directly, without a python intermediary, but we are going to leverage our python knowledge to be able to use SQL without having to install a large program and with less learning of another programming language.
+
+It is also quite common to use SQL to talk to remote computers (servers) for accessing data. That would give us an extra level of complication. To avoid that we are going to create our own local SQL database and then we will use that local database for our analysis. The steps we will do is to download a csv file with  some data. Unzip it. Read it in to a python dictionary and then populate our SQL database with this data. At that point we leave the world of CSV and work only with our SQL data. 
+
 ### The Dataset
 
 We will use data from the **Big Five Personality Test** available at [Open Psychometrics](https://openpsychometrics.org/_rawdata/). This dataset contains responses from a large number of participants answering 50 questions measuring five personality dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN).
@@ -685,6 +689,10 @@ You almost certainly will have to do some internet consultation to find the righ
 
 1. Your completed Python script that will work when I run it on my computer. That means you cannot assume that I will have exactly the same path as you. Use relative paths when you can.
 2. The scatter plot
+
+### Life Raft
+
+In this directory (assuming you have cloned the course repository and kept it up to date) you can find a file called `hwSqlStarter.py`. This shows you a basic outline of how to get things working. I encourage you to try and find things on your own first. If you do look at this file use it as inspiration, and then close it and try to write your own code. But if you do use it directly I recommend starting in an empty directory. If you already have a big5.db or BIG5.zip file it may confuse things. Note that this file does not do all the homework asks. You will still have to do some digging on your own for learning the right way to access and analyze the data (though one example is shown), and generate a scatter plot. 
 
 ## Summary
 
