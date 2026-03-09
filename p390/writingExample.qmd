@@ -1,0 +1,60 @@
+---
+title: Starter File to Demo Making a Journal Article
+author: Britt
+format:
+  html: default
+  pdf: default
+---
+
+# Useful Information
+
+Go to the journal [reference site](https://quarto.org/docs/journals/).
+
+# Which Journal?
+
+Choose whichever you prefer, but I will demonstrate the Elsevier since this is a very big scientific publisher in the fields of neuroscience and psychology. 
+
+## Let quarto do the work
+
+I really recommend doing this in a terminal.
+
+```sh
+quarto use template quarto-journal/elsevier
+```
+Follow the instructions, and I recommend you heed the recommendation to create a subdirectory as it makes it easier to delete everything and start over. You do not have to do this in the folder where you have written all you other quarto documents. 
+
+**Demo this**
+
+## Make sure the default works
+
+To make a pdf you will need a LaTeX distribution. Do you have one? This came up earlier in the course. If you do not have the way to make a pdf you can look in the appendices of the course notes for pointers on what to install and how. 
+
+Before you start making changes make sure you can compile the example. That way you can tell what errors are yours and which are mine/quarto documentation.
+
+One way to do this is to `cd` into the subdirectory in your terminal and try `quarto render <filename>.qmd`. Don't type "filename" or the <>; type the actual name of the file. It will vary with your template. 
+
+When I did this I got an error. "Undefined control sequence bibsection" or such. Read the errors. Figuring out how to work around them is part of being on the bleeding edge instead of another sheep in the herd. 
+
+Sometimes if you go to the github of the involved template you can find someone with the same error and how to fix it. 
+
+Checkout this [issue](https://github.com/quarto-journals/elsevier/issues/41).
+
+That is, delete that first % on line 1368 of the article cls file. 
+
+### I don't want to fuss with a broken elsevier template!
+
+Then use a different one. But I know this one works. It will be on you to make sure that the one you chooses works. 
+
+You can find some additional templates on line, e.g. [Christopher Kenny](https://christophertkenny.com/posts/2023-07-01-creating-quarto-journal-articles/).
+
+And some more [here](https://project-awesome.org/mcanouil/awesome-quarto#journals).
+## Make some changes to the qmd
+
+Try to alter the title and authors. Add a graph of something you did earlier in the term. Think about writing your final report and think about what you want the paper to look like and how you might change things. 
+
+# This is to make sure you know the hw is doable.
+
+But it should not discourage you from exploring all the other material in this section. Note that there ia nice discussion of how to do presentations and templates you can use to make those pretty as well (and reproducible by having your code embedded in the qmd file you compile to make your slides). [Here](https://github.com/beatrizmilz/quarto-rladies-theme) is one example.
+
+
+What my compiled file looked like for the [here](edemo.pdf)
