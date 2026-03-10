@@ -19,7 +19,6 @@ Choose whichever you prefer, but I will demonstrate the Elsevier since this is a
 I really recommend doing this in a terminal.
 
 ```sh
-quarto use template quarto-journal/elsevier
 ```
 Follow the instructions, and I recommend you heed the recommendation to create a subdirectory as it makes it easier to delete everything and start over. You do not have to do this in the folder where you have written all you other quarto documents. 
 
