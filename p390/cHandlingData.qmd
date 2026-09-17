@@ -346,6 +346,11 @@ print(loaded["experimenter"])
 
 ## SQLite
 
+<!-- Note to self: add in some material for the SQL Murder Mystery game -->
+<!-- https://mystery.knightlab.com/walkthrough.html -->
+<!-- https://mystery.knightlab.com/ -->
+
+
 As datasets grow, the approaches above start to strain. Loading a million-row CSV into memory as a list of dictionaries is slow and wasteful. What if you only need the data from participant 47? You still have to load everything.
 
 Databases solve this problem. They store data on disk in a format optimized for queries. You ask for what you need, and only that data is loaded.
